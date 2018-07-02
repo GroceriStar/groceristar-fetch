@@ -12,4 +12,4 @@ script:
 deploy:
   provider: npm
   email: "arthur.tkachenko.netweight@gmail.com"
-  api_key: "b45a57d2-b02c-4551-9291-96b8fee0ca8e"
+  api_key: "10444ac3-6796-4c88-bde0-4953b637aea0"
