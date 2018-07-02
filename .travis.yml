@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - stable
+
+install:
+  - npm install
+
+script:
+  - npm test
+
+deploy:
+  provider: npm
+  email: "arthur.tkachenko.netweight@gmail.com"
+  api_key: "b45a57d2-b02c-4551-9291-96b8fee0ca8e"
