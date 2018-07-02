@@ -1,0 +1,24 @@
+{
+  "name": "groceristar-fetch",
+  "version": "1.0.0",
+  "description": "npm module required to fetch static data required for recipe search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "ingredients",
+    "allergies",
+    "diet",
+    "cuisines"
+  ],
+  "author": "nishith chauhan",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
