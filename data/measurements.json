@@ -6,68 +6,70 @@
   },
   {
     "singular": "slice",
-    "plural": "slices" 
+    "plural": "slices"
   },
   {
     "singular": "teaspoon",
-    "plural": "teaspoons", 
+    "plural": "teaspoons",
     "abbreviation": "tspn"
   },
   {
     "singular": "tablespoon",
-    "plural": "tablespoons", "abbreviation": "tbsp"
+    "plural": "tablespoons",
+    "abbreviation": "tbsp"
   },
   {
     "singular": "dash",
-    "plural": "dashes" 
+    "plural": "dashes"
   },
   {
     "singular": "pinch",
-    "plural": "pinches" 
+    "plural": "pinches"
   },
   {
     "singular": "cup",
-    "plural": "cups" 
+    "plural": "cups"
   },
   {
     "singular": "pint",
-    "plural": "pints" 
+    "plural": "pints"
   },
   {
     "singular": "litre",
-    "plural": "litres", 
-    "abbreviation": "l" 
+    "plural": "litres",
+    "abbreviation": "l"
   },
   {
     "singular": "millilitre",
-    "plural": "millilitres", 
-    "abbreviation": "ml" 
+    "plural": "millilitres",
+    "abbreviation": "ml"
   },
   {
     "singular": "ounce",
-    "plural": "ounces", 
-    "abbreviation": "oz" 
+    "plural": "ounces",
+    "abbreviation": "oz"
   },
   {
     "singular": "pint",
-    "plural": "pints", 
-    "abbreviation": "pt" 
+    "plural": "pints",
+    "abbreviation": "pt"
   },
   {
     "singular": "quart",
-    "plural": "quarts", 
-    "abbreviation": "qt" 
+    "plural": "quarts",
+    "abbreviation": "qt"
   },
   {
     "singular": "pound",
-    "plural": "pounds", 
-    "abbreviation": "lb" 
+    "plural": "pounds",
+    "abbreviation": "lb"
   },
   {
     "singular": "pinch",
-    "plural": "pinches" 
+    "plural": "pinches"
   },
   {
     "singular": "inch",
-    "plural": "inches" }
+    "plural": "inches"
+  }
 ]

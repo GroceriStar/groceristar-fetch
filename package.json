@@ -1,10 +1,11 @@
 {
-  "name": "groceristar-fetch",
+  "name": "@groceristar/groceristar-fetch",
   "version": "1.0.0",
   "description": "npm module required to fetch static data required for recipe search",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test1": "echo \"Error: no test specified\" && exit 1",
+    "test":  "jest",
     "watch": "nodemon index.js"
   },
   "engines": {

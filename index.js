@@ -1,23 +1,22 @@
 const fs = require('fs');
-const allergies = './data/allergies.json';
-const courses = './data/courses.json';
-const cuisines = './data/cuisines.json';
-const diets = './data/diets.json';
-const holidays = './data/holidays.json';
-const ingredients = './data/ingredients.json';
+const allergies    = './data/allergies.json';
+const courses      = './data/courses.json';
+const cuisines     = './data/cuisines.json';
+const diets        = './data/diets.json';
+const holidays     = './data/holidays.json';
+const ingredients  = './data/ingredients.json';
 const ingredients2 = './data/ingredients2.json';
 const measurements = './data/measurements.json';
 
 module.getAllergies = () => {
 	var x = fs.readFileSync(allergies, 'utf-8')
-	if(x === ''){
+	if( x === '' ){
 		console.log('File does not exist')
 		return 'error';
-	}
-	else{
+	}	else {
 		// console.log(x)
 		return JSON.parse(x);
-		}
+	}
 }
 
 module.getCourses = () => {
@@ -25,8 +24,7 @@ module.getCourses = () => {
 	if(x === ''){
 		console.log('File does not exist')
 		return 'error';
-	}
-	else{
+	} else {
 		// console.log(x)
 		return JSON.parse(x);
 	}
@@ -37,8 +35,7 @@ module.getCuisines = () => {
 	if(x === ''){
 		console.log('File does not exist')
 		return 'error';
-	}
-	else{
+	} else {
 		// console.log(x)
 		return JSON.parse(x);
 	}
@@ -49,8 +46,7 @@ module.getDiets = () => {
 	if(x === ''){
 		console.log('File does not exist')
 		return 'error';
-	}
-	else{
+	} else {
 		// console.log(x)
 		return JSON.parse(x);
 	}
@@ -61,8 +57,7 @@ module.getHolidays = () => {
 	if(x === ''){
 		console.log('File does not exist')
 		return 'error';
-	}
-	else{
+	} else {
 		// console.log(x)
 		return JSON.parse(x);
 	}
@@ -73,8 +68,7 @@ module.getIngredients = () => {
 	if(x === ''){
 		console.log('File does not exist')
 		return 'error';
-	}
-	else{
+	} else {
 		// console.log(x)
 		return JSON.parse(x);
 	}
@@ -85,11 +79,10 @@ module.getIngredients2 = () => {
 	if(x === ''){
 		console.log('File does not exist')
 		return 'error';
-	}
-	else{
+	} else {
 		// console.log(x)
 		return JSON.parse(x);
-		}
+	}
 }
 
 module.getMeasurements = () => {
@@ -97,8 +90,7 @@ module.getMeasurements = () => {
 	if(x === ''){
 		console.log('File does not exist')
 		return 'error';
-	}
-	else{
+	} else {
 		// console.log(x)
 		return JSON.parse(x);
 	}
