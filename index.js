@@ -1,107 +1,116 @@
 const fs = require('fs');
-const allergies = './data/allergies.json';
-const courses = './data/courses.json';
-const cuisines = './data/cuisines.json';
-const diets = './data/diets.json';
-const holidays = './data/holidays.json';
-const ingredients = './data/ingredients.json';
-const ingredients2 = './data/ingredients2.json';
-const measurements = './data/measurements.json';
+const allergies = require('./data/allergies.json');
+const courses = require('./data/courses.json');
+const cuisines = require('./data/cuisines.json');
+const diets = require('./data/diets.json');
+const holidays = require('./data/holidays.json');
+const ingredients = require('./data/ingredients.json');
+const ingredients2 = require('./data/ingredients2.json');
+const measurements = require('./data/measurements.json');
 
 module.getAllergies = () => {
-	var x = fs.readFileSync(allergies, 'utf-8')
-	if(x === ''){
-		console.log('File does not exist')
-		return 'error';
-	}
-	else{
-		// console.log(x)
-		return JSON.parse(x);
-		}
+	// var x = fs.readFileSync(allergies, 'utf-8')
+	// if(x === ''){
+	// 	console.log('File does not exist')
+	// 	return 'error';
+	// }
+	// else{
+	// 	// console.log(x)
+	// 	return JSON.parse(x);
+	// }
+	
+	return JSON.parse(JSON.stringify(allergies))
 }
 
 module.getCourses = () => {
-	var x = fs.readFileSync(courses, 'utf-8')
-	if(x === ''){
-		console.log('File does not exist')
-		return 'error';
-	}
-	else{
-		// console.log(x)
-		return JSON.parse(x);
-	}
+	// var x = fs.readFileSync(courses, 'utf-8')
+	// if(x === ''){
+	// 	console.log('File does not exist')
+	// 	return 'error';
+	// }
+	// else{
+	// 	// console.log(x)
+	// 	return JSON.parse(x);
+	// }
+	return JSON.parse(JSON.stringify(courses))
 }
 
 module.getCuisines = () => {
-	var x = fs.readFileSync(cuisines, 'utf-8')
-	if(x === ''){
-		console.log('File does not exist')
-		return 'error';
-	}
-	else{
-		// console.log(x)
-		return JSON.parse(x);
-	}
+	// var x = fs.readFileSync(cuisines, 'utf-8')
+	// if(x === ''){
+	// 	console.log('File does not exist')
+	// 	return 'error';
+	// }
+	// else{
+	// 	// console.log(x)
+	// 	return JSON.parse(x);
+	// }
+	return JSON.parse(JSON.stringify(cuisines))
 }
 
 module.getDiets = () => {
-	var x = fs.readFileSync(diets, 'utf-8')
-	if(x === ''){
-		console.log('File does not exist')
-		return 'error';
-	}
-	else{
-		// console.log(x)
-		return JSON.parse(x);
-	}
+	// var x = fs.readFileSync(diets, 'utf-8')
+	// if(x === ''){
+	// 	console.log('File does not exist')
+	// 	return 'error';
+	// }
+	// else{
+	// 	// console.log(x)
+	// 	return JSON.parse(x);
+	// }
+	return JSON.parse(JSON.stringify(diets))
 }
 
 module.getHolidays = () => {
-	var x = fs.readFileSync(holidays, 'utf-8')
-	if(x === ''){
-		console.log('File does not exist')
-		return 'error';
-	}
-	else{
-		// console.log(x)
-		return JSON.parse(x);
-	}
+	// var x = fs.readFileSync(holidays, 'utf-8')
+	// if(x === ''){
+	// 	console.log('File does not exist')
+	// 	return 'error';
+	// }
+	// else{
+	// 	// console.log(x)
+	// 	return JSON.parse(x);
+	// }
+	return JSON.parse(JSON.stringify(holidays))
 }
 
 module.getIngredients = () => {
-	var x = fs.readFileSync(ingredients, 'utf-8')
-	if(x === ''){
-		console.log('File does not exist')
-		return 'error';
-	}
-	else{
-		// console.log(x)
-		return JSON.parse(x);
-	}
+	// var x = fs.readFileSync(ingredients, 'utf-8')
+	// if(x === ''){
+	// 	console.log('File does not exist')
+	// 	return 'error';
+	// }
+	// else{
+	// 	// console.log(x)
+	// 	return JSON.parse(x);
+	// }
+	return JSON.parse(JSON.stringify(ingredients))
 }
 
 module.getIngredients2 = () => {
-	var x = fs.readFileSync(ingredients2, 'utf-8')
-	if(x === ''){
-		console.log('File does not exist')
-		return 'error';
-	}
-	else{
-		// console.log(x)
-		return JSON.parse(x);
-		}
+	// var x = fs.readFileSync(ingredients2, 'utf-8')
+	// if(x === ''){
+	// 	console.log('File does not exist')
+	// 	return 'error';
+	// }
+	// else{
+	// 	// console.log(x)
+	// 	return JSON.parse(x);
+	// 	}
+	return JSON.parse(JSON.stringify(ingredients2))
 }
 
 module.getMeasurements = () => {
-	var x = fs.readFileSync(measurements, 'utf-8')
-	if(x === ''){
-		console.log('File does not exist')
-		return 'error';
-	}
-	else{
-		// console.log(x)
-		return JSON.parse(x);
-	}
+	// var x = fs.readFileSync(measurements, 'utf-8')
+	// if(x === ''){
+	// 	console.log('File does not exist')
+	// 	return 'error';
+	// }
+	// else{
+	// 	// console.log(x)
+	// 	return JSON.parse(x);
+	// }
+	return JSON.parse(JSON.stringify(measurements))
 }
 
 // var test = module.getAllergies();
