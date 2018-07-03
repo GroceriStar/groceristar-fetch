@@ -8,7 +8,7 @@ const ingredients = require('./data/ingredients.json');
 const ingredients2 = require('./data/ingredients2.json');
 const measurements = require('./data/measurements.json');
 
-module.getAllergies = () => {
+module.getAllergies = function () {
 	// var x = fs.readFileSync(allergies, 'utf-8')
 	// if(x === ''){
 	// 	console.log('File does not exist')
@@ -22,7 +22,7 @@ module.getAllergies = () => {
 	return JSON.parse(JSON.stringify(allergies))
 }
 
-module.getCourses = () => {
+module.getCourses = function () {
 	// var x = fs.readFileSync(courses, 'utf-8')
 	// if(x === ''){
 	// 	console.log('File does not exist')
@@ -35,7 +35,7 @@ module.getCourses = () => {
 	return JSON.parse(JSON.stringify(courses))
 }
 
-module.getCuisines = () => {
+module.getCuisines = function () {
 	// var x = fs.readFileSync(cuisines, 'utf-8')
 	// if(x === ''){
 	// 	console.log('File does not exist')
@@ -48,7 +48,7 @@ module.getCuisines = () => {
 	return JSON.parse(JSON.stringify(cuisines))
 }
 
-module.getDiets = () => {
+module.getDiets = function () {
 	// var x = fs.readFileSync(diets, 'utf-8')
 	// if(x === ''){
 	// 	console.log('File does not exist')
@@ -61,7 +61,7 @@ module.getDiets = () => {
 	return JSON.parse(JSON.stringify(diets))
 }
 
-module.getHolidays = () => {
+module.getHolidays = function () {
 	// var x = fs.readFileSync(holidays, 'utf-8')
 	// if(x === ''){
 	// 	console.log('File does not exist')
@@ -74,7 +74,7 @@ module.getHolidays = () => {
 	return JSON.parse(JSON.stringify(holidays))
 }
 
-module.getIngredients = () => {
+module.getIngredients = function () {
 	// var x = fs.readFileSync(ingredients, 'utf-8')
 	// if(x === ''){
 	// 	console.log('File does not exist')
@@ -87,7 +87,7 @@ module.getIngredients = () => {
 	return JSON.parse(JSON.stringify(ingredients))
 }
 
-module.getIngredients2 = () => {
+module.getIngredients2 = function () {
 	// var x = fs.readFileSync(ingredients2, 'utf-8')
 	// if(x === ''){
 	// 	console.log('File does not exist')
@@ -100,7 +100,7 @@ module.getIngredients2 = () => {
 	return JSON.parse(JSON.stringify(ingredients2))
 }
 
-module.getMeasurements = () => {
+module.getMeasurements = function () {
 	// var x = fs.readFileSync(measurements, 'utf-8')
 	// if(x === ''){
 	// 	console.log('File does not exist')
