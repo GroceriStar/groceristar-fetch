@@ -1,11 +1,15 @@
 {
-  "name": "groceristar-fetch",
-  "version": "1.0.0",
+  "name": "@groceristar/groceristar-fetch",
+  "version": "1.0.1",
   "description": "npm module required to fetch static data required for recipe search",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "test1": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "watch": "nodemon index.js"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   },
   "keywords": [
     "ingredients",
@@ -13,12 +17,18 @@
     "diet",
     "cuisines"
   ],
-  "author": "nishith chauhan",
-  "license": "MIT",
+  "author": "Nishith Chauhan",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/GroceriStar/groceristar-fetch/issues"
+  },
+  "homepage": "https://github.com/GroceriStar/groceristar-fetch#readme",
   "dependencies": {
     "fs": "0.0.1-security"
   },
   "devDependencies": {
-    "nodemon": "^1.17.5"
+    "jest": "^23.2.0",
+    "nodemon": "^1.17.5",
+    "travis": "^0.1.1"
   }
 }

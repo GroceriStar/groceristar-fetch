@@ -1,4 +1,5 @@
 const fs = require('fs');
+<<<<<<< HEAD
 const allergies = require('./data/allergies.json');
 const courses = require('./data/courses.json');
 const cuisines = require('./data/cuisines.json');
