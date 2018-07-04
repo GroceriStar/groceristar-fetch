@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/GroceriStar/groceristar-fetch#readme",
   "dependencies": {
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "underscore": "^1.9.1"
   },
   "devDependencies": {
     "jest": "^23.2.0",
