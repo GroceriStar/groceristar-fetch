@@ -1,12 +1,18 @@
 // const fs = require('fs');
-const allergies = require('./data/allergies.json');
-const courses = require('./data/courses.json');
-const cuisines = require('./data/cuisines.json');
-const diets = require('./data/diets.json');
-const holidays = require('./data/holidays.json');
-const ingredients = require('./data/ingredients.json');
-const ingredients2 = require('./data/ingredients2.json');
-const measurements = require('./data/measurements.json');
+const allergies    = require('./data/Allergy/allergies.json');
+const courses      = require('./data/Course/courses.json');
+const cuisines     = require('./data/Cuisine/cuisines.json');
+const diets        = require('./data/Diet/diets.json');
+const holidays     = require('./data/Holiday/holidays.json');
+const ingredients  = require('./data/Ingredient/ingredients.json');
+const ingredients2 = require('./data/Ingredient/ingredients2.json');
+const measurements = require('./data/Measurement/measurements.json');
+
+const parser = function ( filename ){
+
+	return JSON.parse( JSON.stringify(filename) )
+
+}
 
 module.getAllergies = function () {
 	// var x = fs.readFileSync(allergies, 'utf-8')
@@ -18,8 +24,8 @@ module.getAllergies = function () {
 	// 	// console.log(x)
 	// 	return JSON.parse(x);
 	// }
-	
-	return JSON.parse(JSON.stringify(allergies))
+
+	return parser( allergies );
 }
 
 module.getCourses = function () {
@@ -32,7 +38,7 @@ module.getCourses = function () {
 	// 	// console.log(x)
 	// 	return JSON.parse(x);
 	// }
-	return JSON.parse(JSON.stringify(courses))
+	return parser( courses );
 }
 
 module.getCuisines = function () {
@@ -45,7 +51,7 @@ module.getCuisines = function () {
 	// 	// console.log(x)
 	// 	return JSON.parse(x);
 	// }
-	return JSON.parse(JSON.stringify(cuisines))
+	return parser( cuisines );
 }
 
 module.getDiets = function () {
@@ -58,7 +64,7 @@ module.getDiets = function () {
 	// 	// console.log(x)
 	// 	return JSON.parse(x);
 	// }
-	return JSON.parse(JSON.stringify(diets))
+	return parser( diets );
 }
 
 module.getHolidays = function () {
@@ -71,7 +77,7 @@ module.getHolidays = function () {
 	// 	// console.log(x)
 	// 	return JSON.parse(x);
 	// }
-	return JSON.parse(JSON.stringify(holidays))
+	return parser( holidays );
 }
 
 module.getIngredients = function () {
@@ -84,7 +90,7 @@ module.getIngredients = function () {
 	// 	// console.log(x)
 	// 	return JSON.parse(x);
 	// }
-	return JSON.parse(JSON.stringify(ingredients))
+	return parser( ingredients );
 }
 
 module.getIngredients2 = function () {
@@ -97,7 +103,7 @@ module.getIngredients2 = function () {
 	// 	// console.log(x)
 	// 	return JSON.parse(x);
 	// 	}
-	return JSON.parse(JSON.stringify(ingredients2))
+	return parser( ingredients2 );
 }
 
 module.getMeasurements = function () {
@@ -110,7 +116,7 @@ module.getMeasurements = function () {
 	// 	// console.log(x)
 	// 	return JSON.parse(x);
 	// }
-	return JSON.parse(JSON.stringify(measurements))
+	return parser( measurements );
 }
 
 // var test = module.getAllergies();
