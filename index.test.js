@@ -1,12 +1,12 @@
 const fs = require('fs');
-const allergies    = './data/allergies.json';
-const courses      = './data/courses.json';
-const cuisines     = './data/cuisines.json';
-const diets        = './data/diets.json';
-const holidays     = './data/holidays.json';
-const ingredients  = './data/ingredients.json';
-const ingredients2 = './data/ingredients2.json';
-const measurements = './data/measurements.json';
+const allergies    = require('./data/Allergy/allergies.json');
+const courses      = require('./data/Course/courses.json');
+const cuisines     = require('./data/Cuisine/cuisines.json');
+const diets        = require('./data/Diet/diets.json');
+const holidays     = require('./data/Holiday/holidays.json');
+const ingredients  = require('./data/Ingredient/ingredients.json');
+const ingredients2 = require('./data/Ingredient/ingredients2.json');
+const measurements = require('./data/Measurement/measurements.json');
 
 test('allergies file isset', () => {
   var stream = fs.readFileSync(allergies, 'utf-8')
