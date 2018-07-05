@@ -1,908 +1,908 @@
 [
   {
-    name: "Asparagus",
-    departmentId: departmentsData[0].name
+    "name": "Asparagus",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Broccoli",
-    departmentId: departmentsData[0].name
+    "name": "Broccoli",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Carrots",
-    departmentId: departmentsData[0].name
+    "name": "Carrots",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Cauliflower",
-    departmentId: departmentsData[0].name
+    "name": "Cauliflower",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Celery",
-    departmentId: departmentsData[0].name
+    "name": "Celery",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Corn",
-    departmentId: departmentsData[0].name
+    "name": "Corn",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Cucumbers",
-    departmentId: departmentsData[0].name
+    "name": "Cucumbers",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Lettuce / Greens",
-    departmentId: departmentsData[0].name
+    "name": "Lettuce  Greens",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Mushrooms",
-    departmentId: departmentsData[0].name
+    "name": "Mushrooms",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Onions",
-    departmentId: departmentsData[0].name
+    "name": "Onions",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Peppers",
-    departmentId: departmentsData[0].name
+    "name": "Peppers",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Potatoes",
-    departmentId: departmentsData[0].name
+    "name": "Potatoes",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Spinach",
-    departmentId: departmentsData[0].name
+    "name": "Spinach",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Squash",
-    departmentId: departmentsData[0].name
+    "name": "Squash",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Zucchini",
-    departmentId: departmentsData[0].name
+    "name": "Zucchini",
+    "departmentId": "Fresh vegetables"
   },
   {
-    name: "Tomatoes*",
-    departmentId: departmentsData[0].name
-  },
-
-  /////
-
-
-  {
-    name: "BBQ sauce",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Gravy",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Honey",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Hot sauce",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Jam / Jelly / Preserves",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Ketchup / Mustard",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Pasta sauce",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Relish",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Salad dressin",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Salsa",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Soy sauce",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Steak sauce",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Syrup",
-    departmentId: departments[1].id
-  },
-  {
-    name: "Worcestershire sauce",
-    departmentId: departments[1].id
+    "name": "Tomatoes*",
+    "departmentId": "Fresh vegetables"
   },
 
-  //////
-  {
-    name: "Butter / Margarine",
-    departmentId: departments[2].id
-  },
-  {
-    name: "Cottage cheese",
-    departmentId: departments[2].id
-  },
-  {
-    name: "Half & half",
-    departmentId: departments[2].id
-  },
-  {
-    name: "Milk",
-    departmentId: departments[2].id
-  },
-  {
-    name: "Sour cream",
-    departmentId: departments[2].id
-  },
+
+
 
   {
-    name: "Whipped cream",
-    departmentId: departments[2].id
+    "name": "BBQ sauce",
+    "departmentId": "Condiments / Sauces"
   },
   {
-    name: "Yogurt",
-    departmentId: departments[2].id
-  },
-
-  ////
-  {
-    name: "Bleu cheese",
-    departmentId: departments[3].id
+    "name": "Gravy",
+    "departmentId": "Condiments / Sauces"
   },
   {
-    name: "Cheddar",
-    departmentId: departments[3].id
+    "name": "Honey",
+    "departmentId": "Condiments / Sauces"
   },
   {
-    name: "Cottage cheese",
-    departmentId: departments[3].id
+    "name": "Hot sauce",
+    "departmentId": "Condiments / Sauces"
   },
   {
-    name: "Cream cheese",
-    departmentId: departments[3].id
+    "name": "Jam  Jelly  Preserves",
+    "departmentId": "Condiments / Sauces"
   },
   {
-    name: "Feta",
-    departmentId: departments[3].id
+    "name": "Ketchup  Mustard",
+    "departmentId": "Condiments / Sauces"
   },
   {
-    name: "Goat cheese",
-    departmentId: departments[3].id
+    "name": "Pasta sauce",
+    "departmentId": "Condiments / Sauces"
   },
   {
-    name: "Mozzarella",
-    departmentId: departments[3].id
+    "name": "Relish",
+    "departmentId": "Condiments / Sauces"
   },
   {
-      name: "Parmesan",
-      departmentId: departments[3].id
+    "name": "Salad dressin",
+    "departmentId": "Condiments / Sauces"
   },
   {
-      name: "Provolone",
-      departmentId: departments[3].id
+    "name": "Salsa",
+    "departmentId": "Condiments / Sauces"
   },
   {
-      name: "Ricotta",
-      departmentId: departments[3].id
+    "name": "Soy sauce",
+    "departmentId": "Condiments / Sauces"
   },
   {
-      name: "Sandwich slices",
-      departmentId: departments[3].id
+    "name": "Steak sauce",
+    "departmentId": "Condiments / Sauces"
   },
   {
-      name: "Swiss",
-      departmentId: departments[3].id
+    "name": "Syrup",
+    "departmentId": "Condiments / Sauces"
+  },
+  {
+    "name": "Worcestershire sauce",
+    "departmentId": "Condiments / Sauces"
   },
 
-  ////
+
   {
-      name: "Bacon / Sausage",
-      departmentId: departments[4].id
+    "name": "Butter  Margarine",
+    "departmentId": "Dairy"
   },
   {
-      name: "Beef",
-      departmentId: departments[4].id
+    "name": "Cottage cheese",
+    "departmentId": "Dairy"
   },
   {
-      name: "Chicken",
-      departmentId: departments[4].id
+    "name": "Half & half",
+    "departmentId": "Dairy"
   },
   {
-      name: "Ground beef / Turkey",
-      departmentId: departments[4].id
+    "name": "Milk",
+    "departmentId": "Dairy"
   },
   {
-      name: "Ham / Pork",
-      departmentId: departments[4].id
-  },
-  {
-      name: "Hot dogs",
-      departmentId: departments[4].id
-  },
-  {
-      name: "Lunchmeat",
-      departmentId: departments[4].id
+    "name": "Sour cream",
+    "departmentId": "Dairy"
   },
 
   {
-      name: "Turkey",
-      departmentId: departments[4].id
+    "name": "Whipped cream",
+    "departmentId": "Dairy"
+  },
+  {
+    "name": "Yogurt",
+    "departmentId": "Dairy"
   },
 
-  /////
+
   {
-      name: "Catfish",
-      departmentId: departments[5].id
+    "name": "Bleu cheese",
+    "departmentId": "Cheese"
   },
   {
-      name: "Crab",
-      departmentId: departments[5].id
+    "name": "Cheddar",
+    "departmentId": "Cheese"
   },
   {
-      name: "Lobster",
-      departmentId: departments[5].id
+    "name": "Cottage cheese",
+    "departmentId": "Cheese"
   },
   {
-      name: "Mussels",
-      departmentId: departments[5].id
+    "name": "Cream cheese",
+    "departmentId": "Cheese"
   },
   {
-      name: "Oysters",
-      departmentId: departments[5].id
+    "name": "Feta",
+    "departmentId": "Cheese"
   },
   {
-      name: "Salmon",
-      departmentId: departments[5].id
+    "name": "Goat cheese",
+    "departmentId": "Cheese"
   },
   {
-      name: "Shrimp",
-      departmentId: departments[5].id
+    "name": "Mozzarella",
+    "departmentId": "Cheese"
   },
   {
-      name: "Tilapia",
-      departmentId: departments[5].id
+      "name": "Parmesan",
+      "departmentId": "Cheese"
   },
   {
-      name: "Tuna",
-      departmentId: departments[5].id
-  },
-  ///
-  {
-      name: "Beer",
-      departmentId: departments[6].id
+      "name": "Provolone",
+      "departmentId": "Cheese"
   },
   {
-      name: "Club soda / Tonic",departmentId: departments[6].id
+      "name": "Ricotta",
+      "departmentId": "Cheese"
   },
   {
-      name: "Champagne",departmentId: departments[6].id
+      "name": "Sandwich slices",
+      "departmentId": "Cheese"
   },
   {
-      name: "Gin",departmentId: departments[6].id
-  },
-  {
-      name: "Juice",departmentId: departments[6].id
-  },
-  {
-      name: "Mixers",departmentId: departments[6].id
-  },
-  {
-      name: "Red wine / White wine",departmentId: departments[6].id
-  },
-  {
-      name: "Rum",departmentId: departments[6].id
-  },
-  {
-      name: "Saké",departmentId: departments[6].id
-  },
-  {
-      name: "Soda pop",departmentId: departments[6].id
-  },
-  {
-      name: "Sports drink",departmentId: departments[6].id
-  },
-  {
-      name: "Whiskey",departmentId: departments[6].id
-  },
-  {
-      name: "Vodka",departmentId: departments[6].id
+      "name": "Swiss",
+      "departmentId": "Cheese"
   },
 
-  ///
-  {
-      name: "Bagels / Croissants",departmentId: departments[7].id
-  },
-  {
-      name: "Buns / Rolls",departmentId: departments[7].id
-  },
-  {
-      name: "Cake / Cookies",departmentId: departments[7].id
-  },
-  {
-      name: "Donuts / Pastries",departmentId: departments[7].id
-  },
-  {
-      name: "Fresh bread",departmentId: departments[7].id
-  },
-  {
-      name: "Pie! Pie! Pie!",departmentId: departments[7].id
-  },
-  {
-      name: "Pita bread",departmentId: departments[7].id
-  },
-  {
-      name: "Sliced bread",departmentId: departments[7].id
-  },
 
-  ////
   {
-      name:'Baking powder / Soda',departmentId: departments[8].id
+      "name": "Bacon  Sausage",
+      "departmentId": "Meat"
   },
   {
-      name:'Bread crumbs',departmentId: departments[8].id
+      "name": "Beef",
+      "departmentId": "Meat"
   },
   {
-      name:'Cake / Brownie mix',departmentId: departments[8].id
+      "name": "Chicken",
+      "departmentId": "Meat"
   },
   {
-      name:'Cake icing / Decorations',departmentId: departments[8].id
-
+      "name": "Ground beef  Turkey",
+      "departmentId": "Meat"
   },
   {
-      name:'Chocolate chips / Cocoa',departmentId: departments[8].id
-
+      "name": "Ham  Pork",
+      "departmentId": "Meat"
   },
   {
-      name:'Flour',departmentId: departments[8].id
+      "name": "Hot dogs",
+      "departmentId": "Meat"
   },
   {
-      name:'Shortening',departmentId: departments[8].id
-  },
-  {
-      name:'Sugar',departmentId: departments[8].id
-  },
-  {
-     name:'Sugar substitute',departmentId: departments[8].id
-  },
-  {
-      name:'Yeast',departmentId: departments[8].id
-  },
-  ///
-  {
-      name:'Candy / Gum',departmentId: departments[9].id
-  },
-  {
-      name:'Cookies',departmentId: departments[9].id
-  },
-  {
-         name:'Crackers',departmentId: departments[9].id
-  },
-  {
-       name:'Dried fruit',departmentId: departments[9].id
+      "name": "Lunchmeat",
+      "departmentId": "Meat"
   },
 
   {
-       name:'Granola bars / Mix',departmentId: departments[9].id
-  },
-  {
-      name:'Nuts / Seeds',departmentId: departments[9].id
-  },
-  {
-     name: 'Oatmeal',departmentId: departments[9].id
-  },
-  {
-      name:'Popcorn',departmentId: departments[9].id
-  },
-  {
-     name:'Potato / Corn chips',departmentId: departments[9].id
-  },
-  {
-
-    name:'Pretzels',departmentId: departments[9].id
-  },
-  ////
-  {
-
-    name:'Burger night',departmentId: departments[10].id
-  },
-  {
-
-    name:'Chili night',departmentId: departments[10].id
-  },
-  {
-
-    name:'Pizza night',departmentId: departments[10].id
-  },
-  {
-
-   name:'Spaghetti night',departmentId: departments[10].id
-  },
-  {
-
-    name:'Taco night',departmentId: departments[10].id
-  },
-  {
-   name:'Take-out deli food',departmentId: departments[10].id
-  },
-  ////
-  {
-
-   name:'Baby food',departmentId: departments[11].id
-  },
-  {
-
-   name:'Diapers',departmentId: departments[11].id
-  },
-  {
-
-      name:'Formula',departmentId: departments[11].id
-  },
-  {
-
-    name:'Lotion',departmentId: departments[11].id
-  },
-  {
-
-    name:'Baby wash',departmentId: departments[11].id
-  },
-  {
-
-   name:'Wipes',departmentId: departments[11].id
+      "name": "Turkey",
+      "departmentId": "Meat"
   },
 
-  ///
-  {
-     name:'Cat food / Treats',departmentId: departments[12].id
-  },
-  {
 
-    name:'Cat litter',departmentId: departments[12].id
+  {
+      "name": "Catfish",
+      "departmentId": "Seafood"
   },
   {
-
-    name:'Dog food / Treats',departmentId: departments[12].id
+      "name": "Crab",
+      "departmentId": "Seafood"
   },
   {
-   name:'Flea treatment',departmentId: departments[12].id
+      "name": "Lobster",
+      "departmentId": "Seafood"
   },
   {
-
-    name:'Pet shampoo',departmentId: departments[12].id
-  },
-//////
-  {
-
-   name:'Apples',departmentId: departments[13].id
+      "name": "Mussels",
+      "departmentId": "Seafood"
   },
   {
-
-   name:'Avocados',departmentId: departments[13].id
+      "name": "Oysters",
+      "departmentId": "Seafood"
+  },
+  {
+      "name": "Salmon",
+      "departmentId": "Seafood"
+  },
+  {
+      "name": "Shrimp",
+      "departmentId": "Seafood"
+  },
+  {
+      "name": "Tilapia",
+      "departmentId": "Seafood"
+  },
+  {
+      "name": "Tuna",
+      "departmentId": "Seafood"
   },
 
   {
-   name:'Bananas',departmentId: departments[13].id
+      "name": "Beer",
+      "departmentId": "Beverages"
+  },
+  {
+      "name": "Club soda  Tonic","departmentId": "Beverages"
+  },
+  {
+      "name": "Champagne","departmentId": "Beverages"
+  },
+  {
+      "name": "Gin","departmentId": "Beverages"
+  },
+  {
+      "name": "Juice","departmentId": "Beverages"
+  },
+  {
+      "name": "Mixers","departmentId": "Beverages"
+  },
+  {
+      "name": "Red wine  White wine","departmentId": "Beverages"
+  },
+  {
+      "name": "Rum","departmentId": "Beverages"
+  },
+  {
+      "name": "Saké","departmentId": "Beverages"
+  },
+  {
+      "name": "Soda pop","departmentId": "Beverages"
+  },
+  {
+      "name": "Sports drink","departmentId": "Beverages"
+  },
+  {
+      "name": "Whiskey","departmentId": "Beverages"
+  },
+  {
+      "name": "Vodka","departmentId": "Beverages"
+  },
+
+
+  {
+      "name": "Bagels  Croissants","departmentId": "Baked goods"
+  },
+  {
+      "name": "Buns  Rolls","departmentId": "Baked goods"
+  },
+  {
+      "name": "Cake  Cookies","departmentId": "Baked goods"
+  },
+  {
+      "name": "Donuts  Pastries","departmentId": "Baked goods"
+  },
+  {
+      "name": "Fresh bread","departmentId": "Baked goods"
+  },
+  {
+      "name": "Pie! Pie! Pie!","departmentId": "Baked goods"
+  },
+  {
+      "name": "Pita bread","departmentId": "Baked goods"
+  },
+  {
+      "name": "Sliced bread","departmentId": "Baked goods"
+  },
+
+
+  {
+      "name":"Baking powder  Soda","departmentId": "Baking"
+  },
+  {
+      "name":"Bread crumbs","departmentId": "Baking"
+  },
+  {
+      "name":"Cake  Brownie mix","departmentId": "Baking"
+  },
+  {
+      "name":"Cake icing  Decorations","departmentId": "Baking"
+
+  },
+  {
+      "name":"Chocolate chips  Cocoa","departmentId": "Baking"
+
+  },
+  {
+      "name":"Flour","departmentId": "Baking"
+  },
+  {
+      "name":"Shortening","departmentId": "Baking"
+  },
+  {
+      "name":"Sugar","departmentId": "Baking"
+  },
+  {
+     "name":"Sugar substitute","departmentId": "Baking"
+  },
+  {
+      "name":"Yeast","departmentId": "Baking"
+  },
+
+  {
+      "name":"Candy  Gum","departmentId": "Snacks"
+  },
+  {
+      "name":"Cookies","departmentId": "Snacks"
+  },
+  {
+         "name":"Crackers","departmentId": "Snacks"
+  },
+  {
+       "name":"Dried fruit","departmentId": "Snacks"
+  },
+
+  {
+       "name":"Granola bars  Mix","departmentId": "Snacks"
+  },
+  {
+      "name":"Nuts  Seeds","departmentId": "Snacks"
+  },
+  {
+     "name": "Oatmeal","departmentId": "Snacks"
+  },
+  {
+      "name":"Popcorn","departmentId": "Snacks"
+  },
+  {
+     "name":"Potato  Corn chips","departmentId": "Snacks"
   },
   {
 
-  name:'Berries',departmentId: departments[13].id
+    "name":"Pretzels","departmentId": "Snacks"
   },
 
   {
 
-    name:'Cherries',departmentId: departments[13].id
+    "name":"Burger night","departmentId": "Themed meals"
   },
   {
 
-   name:'Grapefruit',departmentId: departments[13].id
-  },
-  {
-   name:'Grapes',departmentId: departments[13].id
-  },
-  {
-    name:'Kiwis',departmentId: departments[13].id
-  },
-  {
-       name:'Lemons / Limes',departmentId: departments[13].id
-  },
-
-  {
-      name:'Melon',departmentId: departments[13].id
-  },
-  {
-  name:'Nectarines',departmentId: departments[13].id
-  },
-  {
-     name:'Oranges',departmentId: departments[13].id
+    "name":"Chili night","departmentId": "Themed meals"
   },
   {
 
-   name:'Peaches',departmentId: departments[13].id
-  },
-
-  {
-    name:'Pears',departmentId: departments[13].id
+    "name":"Pizza night","departmentId": "Themed meals"
   },
   {
 
-name:'Plums',departmentId: departments[13].id
-  },
-  ////////
-  {
-
-    name:'Bagels',departmentId: departments[14].id
+   "name":"Spaghetti night","departmentId": "Themed meals"
   },
   {
 
-   name:'Chip dip',departmentId: departments[14].id
+    "name":"Taco night","departmentId": "Themed meals"
+  },
+  {
+   "name":"Take-out deli food","departmentId": "Themed meals"
+  },
+
+  {
+
+   "name":"Baby food","departmentId": "Baby stuff"
   },
   {
 
-    name:'Eggs',departmentId: departments[14].id
+   "name":"Diapers","departmentId": "Baby stuff"
   },
   {
 
-   name:'English muffins',departmentId: departments[14].id
+      "name":"Formula","departmentId": "Baby stuff"
   },
   {
 
- name:'Fruit juice',departmentId: departments[14].id
+    "name":"Lotion","departmentId": "Baby stuff"
   },
   {
 
-name:'Hummus',departmentId: departments[14].id
-  },
-  {
-      name:'Ready-bake breads',departmentId: departments[14].id
-  },
-  {
-       name:'Tofu',departmentId: departments[14].id
+    "name":"Baby wash","departmentId": "Baby stuff"
   },
   {
 
-name:'Tortillas',departmentId: departments[14].id
+   "name":"Wipes","departmentId": "Baby stuff"
   },
 
-  ///
+
   {
-   name:'Breakfasts',departmentId: departments[15].id
-  },
-  {
-    name:'Burritos',departmentId: departments[15].id
+     "name":"Cat food  Treats","departmentId": "Pets"
   },
   {
 
-name:'Fish sticks',departmentId: departments[15].id
+    "name":"Cat litter","departmentId": "Pets"
   },
   {
-    name:'Fries / Tater tots',departmentId: departments[15].id
+
+    "name":"Dog food  Treats","departmentId": "Pets"
   },
   {
-    name:'Ice cream / Sorbet',departmentId: departments[15].id
+   "name":"Flea treatment","departmentId": "Pets"
   },
   {
-      name:'Juice concentrate',departmentId: departments[15].id
+
+    "name":"Pet shampoo","departmentId": "Pets"
+  },
+
+  {
+
+   "name":"Apples","departmentId": "Pets""Fresh fruits"
   },
   {
-   name:'Pizza',departmentId: departments[15].id
+
+   "name":"Avocados","departmentId": "Pets""Fresh fruits"
+  },
+
+  {
+   "name":"Bananas","departmentId": "Pets""Fresh fruits"
   },
   {
-    name:'Pizza Rolls',departmentId: departments[15].id
+
+  "name":"Berries","departmentId": "Pets""Fresh fruits"
+  },
+
+  {
+
+    "name":"Cherries","departmentId": "Pets""Fresh fruits"
+  },
+  {
+
+   "name":"Grapefruit","departmentId": "Pets""Fresh fruits"
+  },
+  {
+   "name":"Grapes","departmentId": "Pets""Fresh fruits"
+  },
+  {
+    "name":"Kiwis","departmentId": "Pets""Fresh fruits"
+  },
+  {
+       "name":"Lemons  Limes","departmentId": "Pets""Fresh fruits"
+  },
+
+  {
+      "name":"Melon","departmentId": "Pets""Fresh fruits"
+  },
+  {
+  "name":"Nectarines","departmentId": "Pets""Fresh fruits"
+  },
+  {
+     "name":"Oranges","departmentId": "Pets""Fresh fruits"
+  },
+  {
+
+   "name":"Peaches","departmentId": "Pets""Fresh fruits"
+  },
+
+  {
+    "name":"Pears","departmentId": "Pets""Fresh fruits"
+  },
+  {
+
+"name":"Plums","departmentId": "Pets""Fresh fruits"
+  },
+
+  {
+
+    "name":"Bagels","departmentId": "Refrigerated items"
+  },
+  {
+
+   "name":"Chip dip","departmentId": "Refrigerated items"
+  },
+  {
+
+    "name":"Eggs","departmentId": "Refrigerated items"
+  },
+  {
+
+   "name":"English muffins","departmentId": "Refrigerated items"
+  },
+  {
+
+ "name":"Fruit juice","departmentId": "Refrigerated items"
+  },
+  {
+
+"name":"Hummus","departmentId": "Refrigerated items"
+  },
+  {
+      "name":"Ready-bake breads","departmentId": "Refrigerated items"
+  },
+  {
+       "name":"Tofu","departmentId": "Refrigerated items"
+  },
+  {
+
+"name":"Tortillas","departmentId": "Refrigerated items"
+  },
+
+
+  {
+   "name":"Breakfasts","departmentId": "Frozen"
+  },
+  {
+    "name":"Burritos","departmentId": "Frozen"
+  },
+  {
+
+"name":"Fish sticks","departmentId": "Frozen"
+  },
+  {
+    "name":"Fries  Tater tots","departmentId": "Frozen"
+  },
+  {
+    "name":"Ice cream  Sorbet","departmentId": "Frozen"
+  },
+  {
+      "name":"Juice concentrate","departmentId": "Frozen"
+  },
+  {
+   "name":"Pizza","departmentId": "Frozen"
+  },
+  {
+    "name":"Pizza Rolls","departmentId": "Frozen"
   },{
-    name:'Popsicles',departmentId: departments[15].id
-  },{
-
-name:'TV dinners',departmentId: departments[15].id
-  },
-  {
-
-name:'Vegetables',departmentId: departments[15].id
-  },
-  //////
-  {
-    name:'Bouillon cubes',departmentId: departments[16].id
+    "name":"Popsicles","departmentId": "Frozen"
   },{
 
-    name:'Cereal',departmentId: departments[16].id
-  },{
-
-   name:'Coffee / Filters',departmentId: departments[16].id
-  },
-  {
-    name:'Instant potatoes',departmentId: departments[16].id
-  },
-  {
-    name:'Lemon / Lime juice',departmentId: departments[16].id
-  },
-  {
-    name:'Mac & cheese',departmentId: departments[16].id
-  },{
-    name:'Olive oil',departmentId: departments[16].id
-  },{
-
-    name:'Packaged meals',departmentId: departments[16].id
-  },
-  {
-   name:'Pancake / Waffle mix',departmentId: departments[16].id
-  },
-  {
-    name:'Pasta',departmentId: departments[16].id
-  },
-  {
-     name:'Peanut butter',departmentId: departments[16].id
-  },{
-    name:'Pickles',departmentId: departments[16].id
-  },{
-     name:'Rice',departmentId: departments[16].id
-  },
-  {
-     name:'Tea',departmentId: departments[16].id
-  },
-  {
-     name:'Vegetable oil',departmentId: departments[16].id
+"name":"TV dinners","departmentId": "Frozen"
   },
   {
 
-name:'Vinegar',departmentId: departments[16].id
-  },
-  /////
-  {
-
-    name:'Applesauce',departmentId: departments[17].id
-  },{
-    name:'Baked beans',departmentId: departments[17].id
-  },
-  {
-     name:'Broth',departmentId: departments[17].id
-  },
-  {
-     name:'Fruit',departmentId: departments[17].id
-  },
-  {
-      name:'Olives',departmentId: departments[17].id
-  },{
-    name:'Tinned meats',departmentId: departments[17].id
-  },{
-      name:'Tuna / Chicken',departmentId: departments[17].id
-  },
-  {
-    name:'Soup / Chili',departmentId: departments[17].id
-  },
-  {
-    name:'Tomatoes',departmentId: departments[17].id
-  },
-  {
-
-    name:'Veggies',departmentId: departments[17].id
-  },
-  ////
-  {
-    name:'Basil',departmentId: departments[18].id
-  },{
-    name:'Black pepper',departmentId: departments[18].id
-  },
-  {
-    name:'Cilantro',departmentId: departments[18].id
-  },
-  {
-
-name:'Cinnamon',departmentId: departments[18].id
-  },
-  {
-       name:'Garlic',departmentId: departments[18].id
-  },{
-     name:'Ginger',departmentId: departments[18].id
-  },{
-       name:'Mint',departmentId: departments[18].id
-  },
-  {
-       name:'Oregano',departmentId: departments[18].id
-  },
-  {
-       name:'Paprika',departmentId: departments[18].id
-  },
-  {
-     name:'Parsley',departmentId: departments[18].id
-  },{
-    name:'Red pepper',departmentId: departments[18].id
-  },{
-    name:'Salt',departmentId: departments[18].id
-  },
-  {
-  name:'Vanilla extract',departmentId: departments[18].id
-  },
-  //////
-  //////
-  {
-  name:'Antiperspirant / Deodorant',
-  departmentId: departments[19].id
-  },
-  {
-  name:'Bath soap / Hand soap',departmentId: departments[19].id
-  },
-  {
-  name:'Condoms / Other b.c.',departmentId: departments[19].id
-  },
-  {
-  name:'Cosmetics',departmentId: departments[19].id
-  },
-  {
-  name:'Cotton swabs / Balls',departmentId: departments[19].id
-  },
-  {
-  name:'Facial cleanser',departmentId: departments[19].id
-  },
-  {
-  name:'Facial tissue',departmentId: departments[19].id
-  },
-  {
-  name:'Feminine products',departmentId: departments[19].id
-  },
-  {
-  name:'Floss',departmentId: departments[19].id
-  },
-  {
-  name:'Hair gel / Spray',departmentId: departments[19].id
-  },
-  {
-  name:'Lip balm',departmentId: departments[19].id
-  },
-  {
-  name:'Moisturizing lotion',departmentId: departments[19].id
-  },
-  {
-  name:'Mouthwash',departmentId: departments[19].id
-  },
-  {
-  name:'Razors / Shaving cream',departmentId: departments[19].id
-  },
-  {
-  name:'Shampoo / Conditioner',departmentId: departments[19].id
-  },
-  {
-  name:'Sunblock',departmentId: departments[19].id
-  },
-  {
-  name:'Toilet paper',departmentId: departments[19].id
-  },
-  {
-  name:'Toothpaste',departmentId: departments[19].id
-  },
-  {
-  name:'Vitamins / Supplements',departmentId: departments[19].id
-  },
-  ///
-  {
-  name:'Allergy',departmentId: departments[20].id
-  },
-  {
-  name:'Antibiotic',departmentId: departments[20].id
-  },
-  {
-  name:'Antidiarrheal',departmentId: departments[20].id
-  },
-  {
-  name:'Aspirin',departmentId: departments[20].id
-  },
-  {
-  name:'Antacid',departmentId: departments[20].id
-  },
-  {
-  name:'Band-aids / Medical',departmentId: departments[20].id
-  },
-  {
-  name:'Cold / Flu / Sinus',departmentId: departments[20].id
-  },
-  {
-  name:'Pain reliever',departmentId: departments[20].id
-  },
-  {
-  name:'Prescription pick-up',departmentId: departments[20].id
-  },
-  ////
-  {
-  name:'Aluminum foil',departmentId: departments[21].id
-  },
-  {
-  name:'Napkins',departmentId: departments[21].id
-  },
-  {
-  name:'Non-stick spray',departmentId: departments[21].id
-  },
-  {
- name:'Paper towels',departmentId: departments[21].id
-  },
-  {
-  name:'Plastic wrap',departmentId: departments[21].id
-  },
-  {
-  name:'Sandwich / Freezer bags',departmentId: departments[21].id
-  },
-  {
-  name:'Wax paper',departmentId: departments[21].id
+"name":"Vegetables","departmentId": "Frozen"
   },
 
   {
-  name:'Air freshener',departmentId: departments[23].id
-  },
-  {
-  name:'Bathroom cleaner',departmentId: departments[23].id
-  },
-  {
-  name:'Bleach / Detergent',departmentId: departments[23].id
-  },
-  {
-  name:'Dish / Dishwasher soap',departmentId: departments[23].id
-  },
-  {
-  name:'Garbage bags',departmentId: departments[23].id
-  },
-  {
-  name:'Glass cleaner',departmentId: departments[23].id
-  },
-  {
-  name:'Mop head / Vacuum bags',departmentId: departments[23].id
-  },
-  {
-  name:'Sponges / Scrubbers',departmentId: departments[23].id
-  },
-  ////
-  {
-  name:'CDRs / DVDRs',departmentId: departments[24].id
-  },
-  {
-  name:'Notepad / Envelopes',departmentId: departments[24].id
-  },
-  {
-  name:'Glue / Tape',departmentId: departments[24].id
-  },
-  {
-  name:'Printer paper',departmentId: departments[24].id
-  },
-  {
-  name:'Pens / Pencils',departmentId: departments[24].id
-  },
-  {
-  name:'Postage stamps',departmentId: departments[24].id
-  },
-  ///
+    "name":"Bouillon cubes","departmentId": "Various groceries"
+  },{
 
-  ///
+    "name":"Cereal","departmentId": "Various groceries"
+  },{
+
+   "name":"Coffee  Filters","departmentId": "Various groceries"
+  },
   {
-  name:'Automotive',departmentId: departments[25].id
+    "name":"Instant potatoes","departmentId": "Various groceries"
+  },
+  {
+    "name":"Lemon  Lime juice","departmentId": "Various groceries"
+  },
+  {
+    "name":"Mac & cheese","departmentId": "Various groceries"
+  },{
+    "name":"Olive oil","departmentId": "Various groceries"
+  },{
+
+    "name":"Packaged meals","departmentId": "Various groceries"
+  },
+  {
+   "name":"Pancake  Waffle mix","departmentId": "Various groceries"
+  },
+  {
+    "name":"Pasta","departmentId": "Various groceries"
+  },
+  {
+     "name":"Peanut butter","departmentId": "Various groceries"
+  },{
+    "name":"Pickles","departmentId": "Various groceries"
+  },{
+     "name":"Rice","departmentId": "Various groceries"
+  },
+  {
+     "name":"Tea","departmentId": "Various groceries"
+  },
+  {
+     "name":"Vegetable oil","departmentId": "Various groceries"
+  },
+  {
+
+"name":"Vinegar","departmentId": "Various groceries"
+  },
+
+  {
+
+    "name":"Applesauce","departmentId": "Canned foods"
+  },{
+    "name":"Baked beans","departmentId": "Canned foods"
+  },
+  {
+     "name":"Broth","departmentId": "Canned foods"
+  },
+  {
+     "name":"Fruit","departmentId": "Canned foods"
+  },
+  {
+      "name":"Olives","departmentId": "Canned foods"
+  },{
+    "name":"Tinned meats","departmentId": "Canned foods"
+  },{
+      "name":"Tuna  Chicken","departmentId": "Canned foods"
+  },
+  {
+    "name":"Soup  Chili","departmentId": "Canned foods"
+  },
+  {
+    "name":"Tomatoes","departmentId": "Canned foods"
+  },
+  {
+
+    "name":"Veggies","departmentId": "Canned foods"
+  },
+
+  {
+    "name":"Basil","departmentId": "Spices & herbs"
+  },{
+    "name":"Black pepper","departmentId": "Spices & herbs"
+  },
+  {
+    "name":"Cilantro","departmentId": "Spices & herbs"
+  },
+  {
+
+"name":"Cinnamon","departmentId": "Spices & herbs"
+  },
+  {
+       "name":"Garlic","departmentId": "Spices & herbs"
+  },{
+     "name":"Ginger","departmentId": "Spices & herbs"
+  },{
+       "name":"Mint","departmentId": "Spices & herbs"
+  },
+  {
+       "name":"Oregano","departmentId": "Spices & herbs"
+  },
+  {
+       "name":"Paprika","departmentId": "Spices & herbs"
+  },
+  {
+     "name":"Parsley","departmentId": "Spices & herbs"
+  },{
+    "name":"Red pepper","departmentId": "Spices & herbs"
+  },{
+    "name":"Salt","departmentId": "Spices & herbs"
+  },
+  {
+  "name":"Vanilla extract","departmentId": "Spices & herbs"
+  },
+
+
+  {
+  "name":"Antiperspirant  Deodorant",
+  "departmentId": "Personal care"
+  },
+  {
+  "name":"Bath soap  Hand soap","departmentId": "Personal care"
+  },
+  {
+  "name":"Condoms  Other b.c.","departmentId": "Personal care"
+  },
+  {
+  "name":"Cosmetics","departmentId": "Personal care"
+  },
+  {
+  "name":"Cotton swabs  Balls","departmentId": "Personal care"
+  },
+  {
+  "name":"Facial cleanser","departmentId": "Personal care"
+  },
+  {
+  "name":"Facial tissue","departmentId": "Personal care"
+  },
+  {
+  "name":"Feminine products","departmentId": "Personal care"
+  },
+  {
+  "name":"Floss","departmentId": "Personal care"
+  },
+  {
+  "name":"Hair gel  Spray","departmentId": "Personal care"
+  },
+  {
+  "name":"Lip balm","departmentId": "Personal care"
+  },
+  {
+  "name":"Moisturizing lotion","departmentId": "Personal care"
+  },
+  {
+  "name":"Mouthwash","departmentId": "Personal care"
+  },
+  {
+  "name":"Razors  Shaving cream","departmentId": "Personal care"
+  },
+  {
+  "name":"Shampoo  Conditioner","departmentId": "Personal care"
+  },
+  {
+  "name":"Sunblock","departmentId": "Personal care"
+  },
+  {
+  "name":"Toilet paper","departmentId": "Personal care"
+  },
+  {
+  "name":"Toothpaste","departmentId": "Personal care"
+  },
+  {
+  "name":"Vitamins  Supplements","departmentId": "Personal care"
+  },
+
+  {
+  "name":"Allergy","departmentId": "Medicine"
+  },
+  {
+  "name":"Antibiotic","departmentId": "Medicine"
+  },
+  {
+  "name":"Antidiarrheal","departmentId": "Medicine"
+  },
+  {
+  "name":"Aspirin","departmentId": "Medicine"
+  },
+  {
+  "name":"Antacid","departmentId": "Medicine"
+  },
+  {
+  "name":"Band-aids  Medical","departmentId": "Medicine"
+  },
+  {
+  "name":"Cold  Flu  Sinus","departmentId": "Medicine"
+  },
+  {
+  "name":"Pain reliever","departmentId": "Medicine"
+  },
+  {
+  "name":"Prescription pick-up","departmentId": "Medicine"
+  },
+
+  {
+  "name":"Aluminum foil","departmentId": "Kitchen"
+  },
+  {
+  "name":"Napkins","departmentId": "Kitchen"
+  },
+  {
+  "name":"Non-stick spray","departmentId": "Kitchen"
+  },
+  {
+ "name":"Paper towels","departmentId": "Kitchen"
+  },
+  {
+  "name":"Plastic wrap","departmentId": "Kitchen"
+  },
+  {
+  "name":"Sandwich  Freezer bags","departmentId": "Kitchen"
+  },
+  {
+  "name":"Wax paper","departmentId": "Kitchen"
+  },
+
+  {
+  "name":"Air freshener","departmentId": "Other"
+  },
+  {
+  "name":"Bathroom cleaner","departmentId": "Other"
+  },
+  {
+  "name":"Bleach  Detergent","departmentId": "Other"
+  },
+  {
+  "name":"Dish  Dishwasher soap","departmentId": "Other"
+  },
+  {
+  "name":"Garbage bags","departmentId": "Other"
+  },
+  {
+  "name":"Glass cleaner","departmentId": "Other"
+  },
+  {
+  "name":"Mop head  Vacuum bags","departmentId": "Other"
+  },
+  {
+  "name":"Sponges  Scrubbers","departmentId": "Other"
+  },
+
+  {
+  "name":"CDRs  DVDRs","departmentId": "Cleaning products"
+  },
+  {
+  "name":"Notepad  Envelopes","departmentId": "Cleaning products"
+  },
+  {
+  "name":"Glue  Tape","departmentId": "Cleaning products"
+  },
+  {
+  "name":"Printer paper","departmentId": "Cleaning products"
+  },
+  {
+  "name":"Pens  Pencils","departmentId": "Cleaning products"
+  },
+  {
+  "name":"Postage stamps","departmentId": "Cleaning products"
+  },
+
+
+
+  {
+  "name":"Automotive","departmentId": "Office supplies"
 
   },
   {
-  name:'Batteries',departmentId: departments[25].id
+  "name":"Batteries","departmentId": "Office supplies"
 
   },
   {
-  name:'Charcoal / Propane',departmentId: departments[25].id
+  "name":"Charcoal  Propane","departmentId": "Office supplies"
   },
   {
-  name:'Flowers / Greeting card',departmentId: departments[25].id
+  "name":"Flowers  Greeting card","departmentId": "Office supplies"
   },
   {
-  name:'Insect repellent',departmentId: departments[25].id
+  "name":"Insect repellent","departmentId": "Office supplies"
   },
   {
-  name:'Light bulbs',departmentId: departments[25].id
+  "name":"Light bulbs","departmentId": "Office supplies"
   },
   {
-  name:'Newspaper / Magazine',departmentId: departments[25].id
+  "name":"Newspaper  Magazine","departmentId": "Office supplies"
   },
   {
-  name:'Random impulse buy',departmentId: departments[25].id
+  "name":"Random impulse buy","departmentId": "Office supplies"
   }
-  ///
+
  ]
