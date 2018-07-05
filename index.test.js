@@ -1,45 +1,37 @@
-const fs = require('fs');
-const allergies    = require('./data/Allergy/allergies.json');
-const courses      = require('./data/Course/courses.json');
-const cuisines     = require('./data/Cuisine/cuisines.json');
-const diets        = require('./data/Diet/diets.json');
-const holidays     = require('./data/Holiday/holidays.json');
-const ingredients  = require('./data/Ingredient/ingredients.json');
-const ingredients2 = require('./data/Ingredient/ingredients2.json');
-const measurements = require('./data/Measurement/measurements.json');
+const index = require('./index.js')
 
-test('allergies file isset', () => {
-  var stream = fs.readFileSync(allergies, 'utf-8')
+test('allergies file is set', () => {
+  var stream = index.getAllergies()//fs.readFileSync(allergies, 'utf-8')
   expect(stream).not.toBe('')
 
 })
 
-test('courses file isset', () => {
-  var stream = fs.readFileSync(courses, 'utf-8')
+test('courses file is set', () => {
+  var stream = index.getCourses()//fs.readFileSync(courses, 'utf-8')
   expect(stream).not.toBe('')
 })
 
-test('cuisines file isset', () => {
-  var stream = fs.readFileSync(cuisines, 'utf-8')
+test('cuisines file is set', () => {
+  var stream = index.getCuisines()//fs.readFileSync(cuisines, 'utf-8')
   expect(stream).not.toBe('')
 })
 
-test('diets file isset', () => {
-  var stream = fs.readFileSync(diets, 'utf-8')
+test('diets file is set', () => {
+  var stream = index.getDiets()//fs.readFileSync(diets, 'utf-8')
   expect(stream).not.toBe('')
 })
 
-test('holidays file isset', () => {
-  var stream = fs.readFileSync(holidays, 'utf-8')
+test('holidays file is set', () => {
+  var stream = index.getHolidays()//fs.readFileSync(holidays, 'utf-8')
   expect(stream).not.toBe('')
 })
 
-test('ingredients file isset', () => {
-  var stream = fs.readFileSync(ingredients, 'utf-8')
+test('ingredients file is set', () => {
+  var stream = index.getIngredients()//fs.readFileSync(ingredients, 'utf-8')
   expect(stream).not.toBe('')
 })
 
-test('measurements file isset', () => {
-  var stream = fs.readFileSync(measurements, 'utf-8')
+test('measurements file is set', () => {
+  var stream = index.getMeasurements()//fs.readFileSync(measurements, 'utf-8')
   expect(stream).not.toBe('')
 })

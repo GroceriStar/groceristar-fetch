@@ -1,4 +1,4 @@
-// const fs = require('fs');
+// const fs = require('fs'); will work for backend uses
 const allergies    = require('./data/Allergy/allergies.json');
 const courses      = require('./data/Course/courses.json');
 const cuisines     = require('./data/Cuisine/cuisines.json');
