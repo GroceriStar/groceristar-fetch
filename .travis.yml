@@ -13,3 +13,6 @@ deploy:
   provider: npm
   email: "arthur.tkachenko.netweight@gmail.com"
   api_key: "10444ac3-6796-4c88-bde0-4953b637aea0"
+  on:
+    all_branches: true
+    tags: true
