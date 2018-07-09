@@ -24,7 +24,7 @@ returns array of primary ingredients
 var ingredients2 = gf.getIngredients2();
 returns array of some more ingredients
 
-var Measurements = gf.getMeasurements();
+var measurements = gf.getMeasurements();
 returns array of measurements object containing singular, plural and abbreviation
 example
 {
@@ -34,17 +34,33 @@ example
 }
 
 
-var test = module.getIngredientsData();
+var ingredientsData = gf.getIngredientsData();
 returns array of objects containing ingredients with their departments
+example
+{
+    "name": "Butter  Margarine",
+    "department": "Dairy"
+}
 
-var test = module.getGroceryData();
+var groceryData = gf.getGroceryData();
 return array of grocery data
 
-var test = module.getusersData();
-return array of users
+var usersData = gf.getUsersData();
+return array of users objects
+example
+{
+    "name": "john",
+    "email": "john.doe@ibm.com",
+    "password": "john1"
+}
 
-var test = module.getDepartmentsData();
-return array of departments
+var departmentsData = gf.getDepartmentsData();
+return array of departments object
+example
+{
+   "name": "Fresh vegetables",
+   "type": "food"
+}
 
 
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)
