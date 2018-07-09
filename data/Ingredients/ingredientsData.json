@@ -63,10 +63,6 @@
     "name": "Tomatoes*",
     "department": "Fresh vegetables"
   },
-
-
-
-
   {
     "name": "BBQ sauce",
     "department": "Condiments / Sauces"
@@ -123,8 +119,6 @@
     "name": "Worcestershire sauce",
     "department": "Condiments / Sauces"
   },
-
-
   {
     "name": "Butter  Margarine",
     "department": "Dairy"
@@ -145,7 +139,6 @@
     "name": "Sour cream",
     "department": "Dairy"
   },
-
   {
     "name": "Whipped cream",
     "department": "Dairy"
@@ -154,8 +147,6 @@
     "name": "Yogurt",
     "department": "Dairy"
   },
-
-
   {
     "name": "Bleu cheese",
     "department": "Cheese"
@@ -185,382 +176,397 @@
     "department": "Cheese"
   },
   {
-      "name": "Parmesan",
-      "department": "Cheese"
+    "name": "Parmesan",
+    "department": "Cheese"
   },
   {
-      "name": "Provolone",
-      "department": "Cheese"
+    "name": "Provolone",
+    "department": "Cheese"
   },
   {
-      "name": "Ricotta",
-      "department": "Cheese"
+    "name": "Ricotta",
+    "department": "Cheese"
   },
   {
-      "name": "Sandwich slices",
-      "department": "Cheese"
+    "name": "Sandwich slices",
+    "department": "Cheese"
   },
   {
-      "name": "Swiss",
-      "department": "Cheese"
+    "name": "Swiss",
+    "department": "Cheese"
   },
+  {
+    "name": "Bacon  Sausage",
+    "department": "Meat"
+  },
+  {
+    "name": "Beef",
+    "department": "Meat"
+  },
+  {
+    "name": "Chicken",
+    "department": "Meat"
+  },
+  {
+    "name": "Ground beef  Turkey",
+    "department": "Meat"
+  },
+  {
+    "name": "Ham  Pork",
+    "department": "Meat"
+  },
+  {
+    "name": "Hot dogs",
+    "department": "Meat"
+  },
+  {
+    "name": "Lunchmeat",
+    "department": "Meat"
+  },
+  {
+    "name": "Turkey",
+    "department": "Meat"
+  },
+  {
+    "name": "Catfish",
+    "department": "Seafood"
+  },
+  {
+    "name": "Crab",
+    "department": "Seafood"
+  },
+  {
+    "name": "Lobster",
+    "department": "Seafood"
+  },
+  {
+    "name": "Mussels",
+    "department": "Seafood"
+  },
+  {
+    "name": "Oysters",
+    "department": "Seafood"
+  },
+  {
+    "name": "Salmon",
+    "department": "Seafood"
+  },
+  {
+    "name": "Shrimp",
+    "department": "Seafood"
+  },
+  {
+    "name": "Tilapia",
+    "department": "Seafood"
+  },
+  {
+    "name": "Tuna",
+    "department": "Seafood"
+  },
+  {
+    "name": "Beer",
+    "department": "Beverages"
+  },
+  {
+    "name": "Club soda  Tonic",
+    "department": "Beverages"
+  },
+  {
+    "name": "Champagne",
+    "department": "Beverages"
+  },
+  {
+    "name": "Gin",
+    "department": "Beverages"
+  },
+  {
+    "name": "Juice",
+    "department": "Beverages"
+  },
+  {
+    "name": "Mixers",
+    "department": "Beverages"
+  },
+  {
+    "name": "Red wine  White wine",
+    "department": "Beverages"
+  },
+  {
+    "name": "Rum",
+    "department": "Beverages"
+  },
+  {
+    "name": "Saké",
+    "department": "Beverages"
+  },
+  {
+    "name": "Soda pop",
+    "department": "Beverages"
+  },
+  {
+    "name": "Sports drink",
+    "department": "Beverages"
+  },
+  {
+    "name": "Whiskey",
+    "department": "Beverages"
+  },
+  {
+    "name": "Vodka",
+    "department": "Beverages"
+  },
+  {
+    "name": "Bagels  Croissants",
+    "department": "Baked goods"
+  },
+  {
+    "name": "Buns  Rolls",
+    "department": "Baked goods"
+  },
+  {
+    "name": "Cake  Cookies",
+    "department": "Baked goods"
+  },
+  {
+    "name": "Donuts  Pastries",
+    "department": "Baked goods"
+  },
+  {
+    "name": "Fresh bread",
+    "department": "Baked goods"
+  },
+  {
+    "name": "Pie! Pie! Pie!",
+    "department": "Baked goods"
+  },
+  {
+    "name": "Pita bread",
+    "department": "Baked goods"
+  },
+  {
+    "name": "Sliced bread",
+    "department": "Baked goods"
+  },
+  {
+    "name":"Baking powder  Soda",
+    "department": "Baking"
+  },
+  {
+    "name":"Bread crumbs",
+    "department": "Baking"
+  },
+  {
+    "name":"Cake  Brownie mix",
+    "department": "Baking"
+  },
+  {
+    "name":"Cake icing Decorations",
+    "department": "Baking"
 
-
-  {
-      "name": "Bacon  Sausage",
-      "department": "Meat"
   },
   {
-      "name": "Beef",
-      "department": "Meat"
+    "name":"Chocolate chips  Cocoa",
+    "department": "Baking"
   },
   {
-      "name": "Chicken",
-      "department": "Meat"
+    "name":"Flour",
+    "department": "Baking"
   },
   {
-      "name": "Ground beef  Turkey",
-      "department": "Meat"
+    "name":"Shortening",
+    "department": "Baking"
   },
   {
-      "name": "Ham  Pork",
-      "department": "Meat"
+    "name":"Sugar",
+    "department": "Baking"
   },
   {
-      "name": "Hot dogs",
-      "department": "Meat"
+    "name":"Sugar substitute",
+    "department": "Baking"
   },
   {
-      "name": "Lunchmeat",
-      "department": "Meat"
-  },
-
-  {
-      "name": "Turkey",
-      "department": "Meat"
-  },
-
-
-  {
-      "name": "Catfish",
-      "department": "Seafood"
-  },
-  {
-      "name": "Crab",
-      "department": "Seafood"
-  },
-  {
-      "name": "Lobster",
-      "department": "Seafood"
-  },
-  {
-      "name": "Mussels",
-      "department": "Seafood"
-  },
-  {
-      "name": "Oysters",
-      "department": "Seafood"
-  },
-  {
-      "name": "Salmon",
-      "department": "Seafood"
-  },
-  {
-      "name": "Shrimp",
-      "department": "Seafood"
-  },
-  {
-      "name": "Tilapia",
-      "department": "Seafood"
-  },
-  {
-      "name": "Tuna",
-      "department": "Seafood"
-  },
-
-  {
-      "name": "Beer",
-      "department": "Beverages"
-  },
-  {
-      "name": "Club soda  Tonic","department": "Beverages"
-  },
-  {
-      "name": "Champagne","department": "Beverages"
-  },
-  {
-      "name": "Gin","department": "Beverages"
-  },
-  {
-      "name": "Juice","department": "Beverages"
-  },
-  {
-      "name": "Mixers","department": "Beverages"
-  },
-  {
-      "name": "Red wine  White wine","department": "Beverages"
-  },
-  {
-      "name": "Rum","department": "Beverages"
-  },
-  {
-      "name": "Saké","department": "Beverages"
-  },
-  {
-      "name": "Soda pop","department": "Beverages"
-  },
-  {
-      "name": "Sports drink","department": "Beverages"
-  },
-  {
-      "name": "Whiskey","department": "Beverages"
-  },
-  {
-      "name": "Vodka","department": "Beverages"
-  },
-
-
-  {
-      "name": "Bagels  Croissants","department": "Baked goods"
-  },
-  {
-      "name": "Buns  Rolls","department": "Baked goods"
-  },
-  {
-      "name": "Cake  Cookies","department": "Baked goods"
-  },
-  {
-      "name": "Donuts  Pastries","department": "Baked goods"
-  },
-  {
-      "name": "Fresh bread","department": "Baked goods"
-  },
-  {
-      "name": "Pie! Pie! Pie!","department": "Baked goods"
-  },
-  {
-      "name": "Pita bread","department": "Baked goods"
-  },
-  {
-      "name": "Sliced bread","department": "Baked goods"
-  },
-
-
-  {
-      "name":"Baking powder  Soda","department": "Baking"
-  },
-  {
-      "name":"Bread crumbs","department": "Baking"
-  },
-  {
-      "name":"Cake  Brownie mix","department": "Baking"
-  },
-  {
-      "name":"Cake icing  Decorations","department": "Baking"
-
-  },
-  {
-      "name":"Chocolate chips  Cocoa","department": "Baking"
-
-  },
-  {
-      "name":"Flour","department": "Baking"
-  },
-  {
-      "name":"Shortening","department": "Baking"
-  },
-  {
-      "name":"Sugar","department": "Baking"
-  },
-  {
-     "name":"Sugar substitute","department": "Baking"
-  },
-  {
-      "name":"Yeast","department": "Baking"
-  },
-
-  {
-      "name":"Candy  Gum","department": "Snacks"
-  },
-  {
-      "name":"Cookies","department": "Snacks"
-  },
-  {
-         "name":"Crackers","department": "Snacks"
-  },
-  {
-       "name":"Dried fruit","department": "Snacks"
-  },
-
-  {
-       "name":"Granola bars  Mix","department": "Snacks"
-  },
-  {
-      "name":"Nuts  Seeds","department": "Snacks"
-  },
-  {
-     "name": "Oatmeal","department": "Snacks"
-  },
-  {
-      "name":"Popcorn","department": "Snacks"
-  },
-  {
-     "name":"Potato  Corn chips","department": "Snacks"
-  },
-  {
-
-    "name":"Pretzels","department": "Snacks"
+    "name":"Yeast",
+    "department": "Baking"
   },
 
   {
-
-    "name":"Burger night","department": "Themed meals"
+    "name":"Candy  Gum",
+    "department": "Snacks"
   },
   {
-
-    "name":"Chili night","department": "Themed meals"
+    "name":"Cookies",
+    "department": "Snacks"
   },
   {
-
-    "name":"Pizza night","department": "Themed meals"
+    "name":"Crackers",
+    "department": "Snacks"
   },
   {
+    "name":"Dried fruit",
+    "department": "Snacks"
+  },
 
-   "name":"Spaghetti night","department": "Themed meals"
+  {
+    "name":"Granola bars  Mix",
+    "department": "Snacks"
   },
   {
-
-    "name":"Taco night","department": "Themed meals"
+    "name":"Nuts  Seeds",
+    "department": "Snacks"
+  },
+  {
+    "name": "Oatmeal",
+    "department": "Snacks"
+  },
+  {
+    "name":"Popcorn",
+    "department": "Snacks"
+  },
+  {
+    "name":"Potato  Corn chips",
+    "department": "Snacks"
+  },
+  {
+    "name":"Pretzels",
+    "department": "Snacks"
+  },
+  {
+    "name":"Burger night",
+    "department": "Themed meals"
+  },
+  {
+    "name":"Chili night",
+    "department": "Themed meals"
+  },
+  {
+    "name":"Pizza night",
+    "department": "Themed meals"
+  },
+  {
+   "name":"Spaghetti night",
+   "department": "Themed meals"
+  },
+  {
+    "name":"Taco night",
+    "department": "Themed meals"
   },
   {
    "name":"Take-out deli food","department": "Themed meals"
   },
-
   {
-
-   "name":"Baby food","department": "Baby stuff"
+   "name":"Baby food",
+   "department": "Baby stuff"
   },
   {
-
-   "name":"Diapers","department": "Baby stuff"
+   "name":"Diapers",
+   "department": "Baby stuff"
   },
   {
-
-      "name":"Formula","department": "Baby stuff"
+    "name":"Formula",
+    "department": "Baby stuff"
   },
   {
-
-    "name":"Lotion","department": "Baby stuff"
+    "name":"Lotion",
+    "department": "Baby stuff"
   },
   {
-
-    "name":"Baby wash","department": "Baby stuff"
+    "name":"Baby wash",
+    "department": "Baby stuff"
   },
   {
-
-   "name":"Wipes","department": "Baby stuff"
-  },
-
-
-  {
-     "name":"Cat food  Treats","department": "Pets"
+   "name":"Wipes",
+   "department": "Baby stuff"
   },
   {
-
-    "name":"Cat litter","department": "Pets"
+    "name":"Cat food  Treats",
+    "department": "Pets"
   },
   {
-
-    "name":"Dog food  Treats","department": "Pets"
+    "name":"Cat litter",
+    "department": "Pets"
+  },
+  {
+    "name":"Dog food  Treats",
+    "department": "Pets"
   },
   {
    "name":"Flea treatment","department": "Pets"
   },
   {
-
-    "name":"Pet shampoo","department": "Pets"
+    "name":"Pet shampoo",
+    "department": "Pets"
+  },
+  {
+   "name":"Apples",
+   "department": "Fresh fruits"
+  },
+  {
+   "name":"Avocados",
+   "department": "Fresh fruits"
   },
 
   {
-
-   "name":"Apples","department": "Pets""Fresh fruits"
+   "name":"Bananas",
+   "department": "Fresh fruits"
   },
   {
-
-   "name":"Avocados","department": "Pets""Fresh fruits"
-  },
-
-  {
-   "name":"Bananas","department": "Pets""Fresh fruits"
+    "name":"Berries",
+    "department": "Fresh fruits"
   },
   {
-
-  "name":"Berries","department": "Pets""Fresh fruits"
-  },
-
-  {
-
-    "name":"Cherries","department": "Pets""Fresh fruits"
+    "name":"Cherries",
+    "department": "Fresh fruits"
   },
   {
-
-   "name":"Grapefruit","department": "Pets""Fresh fruits"
+   "name":"Grapefruit","department": "Fresh fruits"
   },
   {
-   "name":"Grapes","department": "Pets""Fresh fruits"
+   "name":"Grapes","department": "Fresh fruits"
   },
   {
-    "name":"Kiwis","department": "Pets""Fresh fruits"
+    "name":"Kiwis","department": "Fresh fruits"
   },
   {
-       "name":"Lemons  Limes","department": "Pets""Fresh fruits"
+       "name":"Lemons  Limes","department": "Fresh fruits"
   },
 
   {
-      "name":"Melon","department": "Pets""Fresh fruits"
+      "name":"Melon","department": "Fresh fruits"
   },
   {
-  "name":"Nectarines","department": "Pets""Fresh fruits"
+  "name":"Nectarines","department": "Fresh fruits"
   },
   {
-     "name":"Oranges","department": "Pets""Fresh fruits"
-  },
-  {
-
-   "name":"Peaches","department": "Pets""Fresh fruits"
-  },
-
-  {
-    "name":"Pears","department": "Pets""Fresh fruits"
+     "name":"Oranges","department": "Fresh fruits"
   },
   {
 
-"name":"Plums","department": "Pets""Fresh fruits"
+   "name":"Peaches","department": "Fresh fruits"
   },
 
   {
-
+    "name":"Pears","department": "Fresh fruits"
+  },
+  {
+    "name":"Plums","department": "Fresh fruits"
+  },
+  {
     "name":"Bagels","department": "Refrigerated items"
   },
   {
-
    "name":"Chip dip","department": "Refrigerated items"
   },
   {
-
     "name":"Eggs","department": "Refrigerated items"
   },
   {
-
    "name":"English muffins","department": "Refrigerated items"
   },
   {
-
- "name":"Fruit juice","department": "Refrigerated items"
+    "name":"Fruit juice","department": "Refrigerated items"
   },
   {
-
-"name":"Hummus","department": "Refrigerated items"
+    "name":"Hummus","department": "Refrigerated items"
   },
   {
       "name":"Ready-bake breads","department": "Refrigerated items"
@@ -880,7 +886,6 @@
 
   {
   "name":"Automotive","department": "Office supplies"
-
   },
   {
   "name":"Batteries","department": "Office supplies"

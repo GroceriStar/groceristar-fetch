@@ -34,4 +34,17 @@ example
 }
 
 
+var test = module.getIngredientsData();
+returns array of objects containing ingredients with their departments
+
+var test = module.getGroceryData();
+return array of grocery data
+
+var test = module.getusersData();
+return array of users
+
+var test = module.getDepartmentsData();
+return array of departments
+
+
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)

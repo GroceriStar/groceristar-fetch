@@ -1,45 +1,65 @@
 const index = require('./index.js')
 
 
-describe('testing index.js file', () => {
+describe('testing static data files are set', () => {
   test('allergies file is set', () => {
-    var stream = index.getAllergies()//fs.readFileSync(allergies, 'utf-8')
+    var stream = index.getAllergies()
     expect(stream).not.toBe('')
 
   })
 
   test('courses file is set', () => {
-    var stream = index.getCourses()//fs.readFileSync(courses, 'utf-8')
+    var stream = index.getCourses()
     expect(stream).not.toBe('')
   })
 
   test('cuisines file is set', () => {
-    var stream = index.getCuisines()//fs.readFileSync(cuisines, 'utf-8')
+    var stream = index.getCuisines()
     expect(stream).not.toBe('')
   })
 
   test('diets file is set', () => {
-    var stream = index.getDiets()//fs.readFileSync(diets, 'utf-8')
+    var stream = index.getDiets()
     expect(stream).not.toBe('')
   })
 
   test('holidays file is set', () => {
-    var stream = index.getHolidays()//fs.readFileSync(holidays, 'utf-8')
+    var stream = index.getHolidays()
     expect(stream).not.toBe('')
   })
 
   test('ingredients file is set', () => {
-    var stream = index.getIngredients()//fs.readFileSync(ingredients, 'utf-8')
+    var stream = index.getIngredients()
     expect(stream).not.toBe('')
   })
 
   test('ingredients2 file is set', () => {
-    var stream = index.getIngredients2()//fs.readFileSync(ingredients, 'utf-8')
+    var stream = index.getIngredients2()
     expect(stream).not.toBe('')
   })
 
   test('measurements file is set', () => {
-    var stream = index.getMeasurements()//fs.readFileSync(measurements, 'utf-8')
+    var stream = index.getMeasurements()
+    expect(stream).not.toBe('')
+  })
+
+  test('ingredientsData file is set', () => {
+    var stream = index.getIngredientsData()
+    expect(stream).not.toBe('')
+  })
+
+  test('groderyData file is set', () => {
+    var stream = index.getGroceryData()
+    expect(stream).not.toBe('')
+  })
+
+  test('usersData file is set', () => {
+    var stream = index.getUsersData()
+    expect(stream).not.toBe('')
+  })
+
+  test('departmentsData file is set', () => {
+    var stream = index.getDepartmentsData()
     expect(stream).not.toBe('')
   })
 })
