@@ -6,25 +6,25 @@ var gf = require('@groceristar/groceristar-fetch')
 var allergies = gf.getAllergies();
 returns array of allergies
 
-var courses = module.getCourses();
+var courses = gf.getCourses();
 returns array of courses
 
-var cuisines = module.getCuisines();
+var cuisines = gf.getCuisines();
 returns array of cuisines
 
-var diets = module.getDiets();
+var diets = gf.getDiets();
 returns array of diets
 
-var holidays = module.getHolidays();
+var holidays = gf.getHolidays();
 returns array of holidays
 
-var ingredients = module.getIngredients();
+var ingredients = gf.getIngredients();
 returns array of primary ingredients
 
-var ingredients2 = module.getIngredients2();
+var ingredients2 = gf.getIngredients2();
 returns array of some more ingredients
 
-var Measurements = module.getMeasurements();
+var Measurements = gf.getMeasurements();
 returns array of measurements object containing singular, plural and abbreviation
 example
 {
