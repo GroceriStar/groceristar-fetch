@@ -3,14 +3,14 @@ const allergies    = require('./data/Allergy/allergies.json');
 const courses      = require('./data/Course/courses.json');
 const cuisines     = require('./data/Cuisine/cuisines.json');
 const diets        = require('./data/Diet/diets.json');
-const departmentsData = require('./data/Departments/departmentsData.json');
-const groceryData = require('./data/Grocery/groceryData.json');
+const departments = require('./data/Departments/departments.json');
+const grocery = require('./data/Grocery/grocery.json');
 const holidays     = require('./data/Holiday/holidays.json');
-const ingredients  = require('./data/Ingredient/ingredients.json');
-const ingredientsData  = require('./data/Ingredients/ingredientsData.json');
+const ingredientsData  = require('./data/Ingredient/ingredientsData.json');
+const ingredients  = require('./data/Ingredients/ingredients.json');
 const ingredients2 = require('./data/Ingredient/ingredients2.json');
 const measurements = require('./data/Measurement/measurements.json');
-const usersData = require('./data/Users/usersData.json');
+const users = require('./data/Users/users.json');
 
 const parser = function ( filename ){
 
@@ -127,15 +127,15 @@ module.getIngredientsData = function() {
 	return parser( ingredientsData )
 }
 
-module.getGroceryData = function() {
+module.getGrocery = function() {
 	return parser( groceryData )
 }
 
-module.getUsersData = function() {
+module.getUsers = function() {
 	return parser( usersData )
 }
 
-module.getDepartmentsData = function() {
+module.getDepartments = function() {
 	return parser( departmentsData )
 }
 
@@ -149,7 +149,7 @@ module.getAllDepartments = function(){
 
 
 module.getAllIngredientsByOneDepartment = function(department){
-	
+
   return _.filter(getIngredientsData(),function(o){return o.department === department; })
 }
 // var test = module.getAllergies();
