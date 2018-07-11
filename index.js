@@ -139,7 +139,19 @@ module.getDepartmentsData = function() {
 	return parser( departmentsData )
 }
 
+module.getAllDepartments = function(){
+	let departments = getDepartmentsData();
+// return _.reduce(grocery[0]["departments"],function(acc,value){
+// 	  return acc + ", " + value;
+// 	});
+	return _.map(departments[0]["departments"])
+}
 
+
+module.getAllIngredientsByOneDepartment = function(department){
+	
+  return _.filter(getIngredientsData(),function(o){return o.department === department; })
+}
 // var test = module.getAllergies();
 // console.log(test[2])
 
