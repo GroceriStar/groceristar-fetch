@@ -3,7 +3,7 @@
 
 [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
 
-[![npm](https://img.shields.io/npm/dw/localeval.svg)](@groceristar/groceristar-fetch)
+
 
 
 - Fetch static data from files and return array to use in recipe search
