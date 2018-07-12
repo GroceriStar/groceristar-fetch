@@ -49,17 +49,17 @@ describe('testing static data files are set', () => {
   })
 
   test('groderyData file is set', () => {
-    var stream = index.getGroceryData()
+    var stream = index.getGrocery()
     expect(stream).not.toBe('')
   })
 
   test('usersData file is set', () => {
-    var stream = index.getUsersData()
+    var stream = index.getUsers()
     expect(stream).not.toBe('')
   })
 
   test('departmentsData file is set', () => {
-    var stream = index.getDepartmentsData()
+    var stream = index.getDepartments()
     expect(stream).not.toBe('')
   })
 })
