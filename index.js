@@ -6,7 +6,7 @@ const diets        = require('./data/Diet/diets.json');
 const departments = require('./data/Departments/departments.json');
 const grocery = require('./data/Grocery/grocery.json');
 const holidays     = require('./data/Holiday/holidays.json');
-const ingredientsData  = require('./data/Ingredient/ingredientsData.json');
+const ingredients1  = require('./data/Ingredient/ingredients1.json');
 const ingredients  = require('./data/Ingredients/ingredients.json');
 const ingredients2 = require('./data/Ingredient/ingredients2.json');
 const measurements = require('./data/Measurement/measurements.json');
@@ -84,7 +84,7 @@ module.getHolidays = function () {
 	return parser( holidays );
 }
 
-module.getIngredients = function () {
+module.getIngredients1 = function () {
 	// var x = fs.readFileSync(ingredients, 'utf-8')
 	// if(x === ''){
 	// 	console.log('File does not exist')
@@ -94,7 +94,7 @@ module.getIngredients = function () {
 	// 	// console.log(x)
 	// 	return JSON.parse(x);
 	// }
-	return parser( ingredients );
+	return parser( ingredients1 );
 }
 
 module.getIngredients2 = function () {
@@ -123,24 +123,24 @@ module.getMeasurements = function () {
 	return parser( measurements );
 }
 
-module.getIngredientsData = function() {
-	return parser( ingredientsData )
+module.getIngredients = function() {
+	return parser( ingredients )
 }
 
 module.getGrocery = function() {
-	return parser( groceryData )
+	return parser( grocery )
 }
 
 module.getUsers = function() {
-	return parser( usersData )
+	return parser( users )
 }
 
 module.getDepartments = function() {
-	return parser( departmentsData )
+	return parser( departments )
 }
 
 module.getAllDepartments = function(){
-	let departments = getDepartmentsData();
+	let departments = getDepartments();
 // return _.reduce(grocery[0]["departments"],function(acc,value){
 // 	  return acc + ", " + value;
 // 	});
@@ -150,7 +150,7 @@ module.getAllDepartments = function(){
 
 module.getAllIngredientsByOneDepartment = function(department){
 
-  return _.filter(getIngredientsData(),function(o){return o.department === department; })
+  return _.filter(getIngredients(),function(o){return o.department === department; })
 }
 // var test = module.getAllergies();
 // console.log(test[2])

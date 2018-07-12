@@ -29,7 +29,7 @@ describe('testing static data files are set', () => {
   })
 
   test('ingredients file is set', () => {
-    var stream = index.getIngredients()
+    var stream = index.getIngredients1()
     expect(stream).not.toBe('')
   })
 
@@ -44,7 +44,7 @@ describe('testing static data files are set', () => {
   })
 
   test('ingredientsData file is set', () => {
-    var stream = index.getIngredientsData()
+    var stream = index.getIngredients()
     expect(stream).not.toBe('')
   })
 
