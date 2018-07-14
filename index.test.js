@@ -1,4 +1,5 @@
-const index = require('./index.js')
+const search = require('./search.js')
+const grocerystar = require('./grocerystar.js')
 
 
 describe('testing static data files are set', () => {

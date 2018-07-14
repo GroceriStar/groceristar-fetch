@@ -1,4 +1,5 @@
-require('./methods.js');
+const search = require('./search.js');
+const grocerystar = require('./grocerystar.js');
 
 // const fs = require('fs'); will work for backend uses
 
