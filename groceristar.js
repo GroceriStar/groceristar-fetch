@@ -30,7 +30,7 @@ module.getAllDepartments = function(){
 // return _.reduce(grocery[0]["departments"],function(acc,value){
 // 	  return acc + ", " + value;
 // 	});
-	return _.map(departments[0]["departments"])
+	return _.map(grocery[0]["departments"])
 }
 
 

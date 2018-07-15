@@ -121,6 +121,36 @@ return array of departments object
    "type": "food"
 }
 ```
+---
+```
+var getAllDepartments = gf.getAllDepartments();
+```
+
+return array of all departments
+```example
+[
+		"Fresh vegetables",
+    "Condiments / Sauces",
+    "Dairy",
+    "Cheese",
+    "Meat"
+]
+```
+---
+```
+var getAllIngredientsByOneDepartment = getAllIngredientsByOneDepartment("Fresh vegetables");
+
+return array of ingredients by one department
+```example
+[
+	"Asparagus",
+	"Broccoli",
+	"Carrots"
+]
+```
+
+---
+```
 
 ## Recipes static data
 
@@ -226,3 +256,4 @@ const get = () => {
 };
 module.exports.get   = get;
 ```
+>>>>>>> ff7bbf17b3373eae77d2aa9dfb020c2ea29bfc10
