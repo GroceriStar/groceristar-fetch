@@ -1,7 +1,16 @@
-## Recipes static data
+# groceristar-fetch
+[![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)
 
-![Static-data](https://travis-ci.org/GroceriStar/static-data.svg?branch=master!:https://travis-ci.org/GroceriStar/static-data)
+[![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
 
+[![Dependabot compatibility score](https://api.dependabot.com/badges/compatibility_score?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)](https://dependabot.com/compatibility-score.html?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)
+
+
+- Fetch static data from files and return array to use in Food Tech projects
+
+![Alt Text](https://media.giphy.com/media/4TcRVUzpZzsvo9fVlu/giphy.gif)
+
+### Recipes static data
 
 @TODO use different flags for one command in order to call different imports
 
@@ -28,26 +37,26 @@
 "s2": "npm run migrate-search  && node bin/search/import.js"
 ```
 
-## Synopsis
+#### Synopsis
 
 Recipe related static data, like ingredients, recipes, diets, allergies, etc.
 
-## Code Example
+#### Code Example
 
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
-## Motivation
+#### Motivation
 
 In a few our projects we have a similar files. And we always copy-paste code between them. So by moving this code into separated place - i hope we'll make our projects better.
 
 
-## Installation
+#### Installation
 
 Provide code examples and explanations of how to get the project.
 
 `npm install @groceristar/static-data`
 
-## Usage
+#### Usage
 
 ```
 var data = require('@groceristar/static-data');
@@ -65,7 +74,7 @@ Depending on the size of the project, if it is small and simple enough the refer
 ```npm test```
 
 
-## Contributors
+#### Contributors
 
 Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
 
@@ -73,10 +82,7 @@ Let people know how they can dive into the project, include important links to t
 
 Tasks:
 - [ ] [Search Form static data](https://github.com/GroceriStar/static-data/issues/14)
-- [ ] [Recipes exports for recipe app](https://github.com/GroceriStar/static-data/issues/11)
 - [ ] [ChickenKyiv Free Menu Release import data](https://github.com/GroceriStar/static-data/issues/10)
-- [ ] [Groceristar import data](https://github.com/GroceriStar/static-data/issues/9)
-- [ ] [Search API import data](https://github.com/GroceriStar/static-data/issues/8)
 
 
 
@@ -105,23 +111,7 @@ const get = () => {
 };
 module.exports.get   = get;
 ```
-> ff7bbf17b3373eae77d2aa9dfb020c2ea29bfc10
-
-
-# groceristar-fetch
-[![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)
-
-[![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
-
-[![Dependabot compatibility score](https://api.dependabot.com/badges/compatibility_score?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)](https://dependabot.com/compatibility-score.html?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)
-
-
-- Fetch static data from files and return array to use in Food Tech projects
-
-![Alt Text](https://media.giphy.com/media/4TcRVUzpZzsvo9fVlu/giphy.gif)
-
-
-
+---
 #### Get an array of Allergies
 
 ```
