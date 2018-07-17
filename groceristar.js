@@ -35,8 +35,9 @@ module.getAllDepartments = function(){
 
 
 module.getAllIngredientsByOneDepartment = function(department){
+	var ingredientsByOneDepartment = _.filter(getIngredients(),function(o){return o.department === department; });
 
-  return _.filter(getIngredients(),function(o){return o.department === department; })
+	return _.map(ingredientsByOneDepartment,'name');
 }
 
 module.exports = module;
