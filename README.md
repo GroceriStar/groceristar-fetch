@@ -1,9 +1,10 @@
 # groceristar-fetch
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)
-
 [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
-
 [![Dependabot compatibility score](https://api.dependabot.com/badges/compatibility_score?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)](https://dependabot.com/compatibility-score.html?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![forthebadge](https://forthebadge.com/images/badges/oooo-kill-em.svg)](https://forthebadge.com)
 
 
 - Fetch static data from files and return array to use in Food Tech projects
@@ -12,11 +13,23 @@
 
 #### Synopsis
 
-Recipe related static data, like ingredients, recipes, diets, allergies, etc.
+Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
+
 
 #### Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+var gf = require('@groceristar/groceristar-fetch')
+var measurements = gf.getMeasurements();
+
+// returns array of measurements object containing singular, plural and abbreviation
+
+example
+{
+    "singular": "gram",
+    "plural": "grams",
+    "abbreviation": "g"
+}
+```
 
 #### Motivation
 
@@ -27,20 +40,18 @@ In a few our projects we have a similar files. And we always copy-paste code bet
 
 Provide code examples and explanations of how to get the project.
 
-`npm install @groceristar/static-data`
+`npm install @groceristar/static-fetch`
+or
+`yarn add @groceristar/static-fetch`
 
 #### Usage
 
 ```
-var data = require('@groceristar/groceristar-fetch')
+var gf = require('@groceristar/groceristar-fetch')
 console.log(data);
 
-import data from '@groceristar/groceristar-fetch'
+import gf from '@groceristar/groceristar-fetch'
 ```
-
-#### API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README.md. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
 #### Tests
 
@@ -52,11 +63,11 @@ Depending on the size of the project, if it is small and simple enough the refer
 Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
 
 
-
+---
 Tasks:
 - [ ] [Search Form static data](https://github.com/GroceriStar/static-data/issues/14)
 - [ ] [ChickenKyiv Free Menu Release import data](https://github.com/GroceriStar/static-data/issues/10)
-
+---
 
 
 ---
