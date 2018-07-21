@@ -1,20 +1,14 @@
-# groceristar-fetch
+# Groceristar-fetch module
+
+#### Synopsis
+Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
+
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)
 [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
 [![Dependabot compatibility score](https://api.dependabot.com/badges/compatibility_score?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)](https://dependabot.com/compatibility-score.html?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-[![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![forthebadge](https://forthebadge.com/images/badges/oooo-kill-em.svg)](https://forthebadge.com)
 
-
-- Fetch static data from files and return array to use in Food Tech projects
-
 ![Alt Text](https://media.giphy.com/media/4TcRVUzpZzsvo9fVlu/giphy.gif)
-
-#### Synopsis
-
-Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
-
 
 #### Code Example
 
@@ -108,13 +102,13 @@ var holidays = gf.getHolidays();
 ---
 #### Get an array of Ingredients (Search part)
 ```
-var ingredients = gf.getIngredients();
+var ingredients1 = gf.getIngredients1();
 ```
 
 
 ---
 
-#### Get an array of Ingredients (Groceristar part)
+#### Get an array of Ingredients (Search part)
 ```
 var ingredients2 = gf.getIngredients2();
 ```
@@ -137,7 +131,7 @@ example
 
 ---
 ```
-var ingredientsData = gf.getIngredientsData();
+var ingredients = gf.getIngredients();
 ```
 returns array of objects containing ingredients with their departments
 
@@ -150,13 +144,13 @@ returns array of objects containing ingredients with their departments
 
 ---
 ```
-var groceryData = gf.getGroceryData();
+var grocery = gf.getGrocery();
 ```
 return array of grocery data
 
 ---
 ```
-var usersData = gf.getUsersData();
+var users = gf.getUsers();
 ```
 ```example
 {
@@ -168,7 +162,7 @@ var usersData = gf.getUsersData();
 
 ---
 ```
-var departmentsData = gf.getDepartmentsData();
+var departments = gf.getDepartments();
 ```
 ```example
 {
@@ -178,7 +172,7 @@ var departmentsData = gf.getDepartmentsData();
 ```
 ---
 ```
-var getAllDepartments = gf.getAllDepartments();
+var allDepartments = gf.getAllDepartments();
 ```
 
 ```example
@@ -192,7 +186,7 @@ var getAllDepartments = gf.getAllDepartments();
 ```
 ---
 ```
-var getAllIngredientsByOneDepartment = getAllIngredientsByOneDepartment("Fresh vegetables");
+var allIngredientsByOneDepartment = getAllIngredientsByOneDepartment("Fresh vegetables");
 ```
 
 ```example
