@@ -102,13 +102,13 @@ var holidays = gf.getHolidays();
 ---
 #### Get an array of Ingredients (Search part)
 ```
-var ingredients = gf.getIngredients();
+var ingredients1 = gf.getIngredients1();
 ```
 
 
 ---
 
-#### Get an array of Ingredients (Groceristar part)
+#### Get an array of Ingredients (Search part)
 ```
 var ingredients2 = gf.getIngredients2();
 ```
@@ -131,7 +131,7 @@ example
 
 ---
 ```
-var ingredientsData = gf.getIngredientsData();
+var ingredients = gf.getIngredients();
 ```
 returns array of objects containing ingredients with their departments
 
@@ -144,13 +144,13 @@ returns array of objects containing ingredients with their departments
 
 ---
 ```
-var groceryData = gf.getGroceryData();
+var grocery = gf.getGrocery();
 ```
 return array of grocery data
 
 ---
 ```
-var usersData = gf.getUsersData();
+var users = gf.getUsers();
 ```
 ```example
 {
@@ -162,7 +162,7 @@ var usersData = gf.getUsersData();
 
 ---
 ```
-var departmentsData = gf.getDepartmentsData();
+var departments = gf.getDepartments();
 ```
 ```example
 {
@@ -172,7 +172,7 @@ var departmentsData = gf.getDepartmentsData();
 ```
 ---
 ```
-var getAllDepartments = gf.getAllDepartments();
+var allDepartments = gf.getAllDepartments();
 ```
 
 ```example
@@ -186,7 +186,7 @@ var getAllDepartments = gf.getAllDepartments();
 ```
 ---
 ```
-var getAllIngredientsByOneDepartment = getAllIngredientsByOneDepartment("Fresh vegetables");
+var allIngredientsByOneDepartment = getAllIngredientsByOneDepartment("Fresh vegetables");
 ```
 
 ```example
