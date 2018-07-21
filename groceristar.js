@@ -2,6 +2,7 @@ const departments = require('./data/Departments/departments.json');
 const grocery = require('./data/Grocery/grocery.json');
 const ingredients  = require('./data/Ingredients/ingredients.json');
 const users = require('./data/Users/users.json');
+var _ = require('lodash');
 
 const parser = function ( filename ){
 
@@ -26,17 +27,15 @@ module.getDepartments = function() {
 }
 
 module.getAllDepartments = function(){
-	let departments = getDepartments();
-// return _.reduce(grocery[0]["departments"],function(acc,value){
-// 	  return acc + ", " + value;
-// 	});
 	return _.map(grocery[0]["departments"])
 }
 
-
 module.getAllIngredientsByOneDepartment = function(department){
-	var ingredientsByOneDepartment = _.filter(getIngredients(),function(o){return o.department === department; });
 
+	var ingredientsByOneDepartment =
+									_.filter(parser(ingredients),function(o){
+										return o.department === department;
+									});
 	return _.map(ingredientsByOneDepartment,'name');
 }
 

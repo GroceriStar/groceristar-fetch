@@ -29,7 +29,7 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
-  test('ingredients file is set', () => {
+  test('ingredients1 file is set', () => {
     var stream = search.getIngredients1()
     expect(stream).not.toBe('')
   })
@@ -44,22 +44,22 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
-  test('ingredientsData file is set', () => {
+  test('ingredients file is set', () => {
     var stream = groceristar.getIngredients()
     expect(stream).not.toBe('')
   })
 
-  test('groderyData file is set', () => {
+  test('grocery file is set', () => {
     var stream = groceristar.getGrocery()
     expect(stream).not.toBe('')
   })
 
-  test('usersData file is set', () => {
+  test('users file is set', () => {
     var stream = groceristar.getUsers()
     expect(stream).not.toBe('')
   })
 
-  test('departmentsData file is set', () => {
+  test('departments file is set', () => {
     var stream = groceristar.getDepartments()
     expect(stream).not.toBe('')
   })
