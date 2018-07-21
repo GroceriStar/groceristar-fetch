@@ -12,6 +12,7 @@ Food Tech related static data in json arrays, like recipes, ingredients, recipes
 
 #### Code Example
 
+```
 var gf = require('@groceristar/groceristar-fetch')
 var measurements = gf.getMeasurements();
 
@@ -49,7 +50,7 @@ import gf from '@groceristar/groceristar-fetch'
 
 #### Tests
 
-```npm test```
+`npm test`
 
 
 #### Contributors
@@ -175,7 +176,8 @@ var departments = gf.getDepartments();
 var allDepartments = gf.getAllDepartments();
 ```
 
-```example
+```
+example
 [
     "Fresh vegetables",
     "Condiments / Sauces",
@@ -189,7 +191,8 @@ var allDepartments = gf.getAllDepartments();
 var allIngredientsByOneDepartment = getAllIngredientsByOneDepartment("Fresh vegetables");
 ```
 
-```example
+```
+example
 [
 	"Asparagus",
 	"Broccoli",
