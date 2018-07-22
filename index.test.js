@@ -70,7 +70,7 @@ describe('testing static data files are set', () => {
   })
 
   test('menu file is set', () => {
-    var stream = groceristar.getmenu()
+    var stream = groceristar.getMenu()
     expect(stream).not.toBe('')
   })
 
@@ -78,4 +78,5 @@ describe('testing static data files are set', () => {
     var stream = groceristar.getRecipe()
     expect(stream).not.toBe('')
   })
+  
 })
