@@ -229,7 +229,8 @@ example
 "s2": "npm run migrate-search  && node bin/search/import.js"
 ```
 
-
+https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
+https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
 
 #### Old
 

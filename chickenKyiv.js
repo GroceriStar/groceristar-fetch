@@ -1,6 +1,6 @@
 const ingredients3 = require('./data/Ingredients/ingredients3.json');
-const menu = require('./data/Menu/menu.json');
-const recipe = require('./data/Recipe4/recipe.json');
+const menu         = require('./data/Menu/menu.json');
+const recipe       = require('./data/Recipe4/recipe.json');
 
 const parser = function ( filename ){
 

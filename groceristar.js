@@ -1,10 +1,11 @@
-const departments = require('./data/Departments/departments.json');
-const grocery = require('./data/Grocery/grocery.json');
+const _            = require('lodash');
+const departments  = require('./data/Departments/departments.json');
+const grocery      = require('./data/Grocery/grocery.json');
 const ingredients  = require('./data/Ingredients/ingredients.json');
-const users = require('./data/Users/users.json');
+const users        = require('./data/Users/users.json');
 
 
-var _ = require('lodash');
+
 
 const parser = function ( filename ){
 
