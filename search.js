@@ -1,15 +1,15 @@
-const allergies    = require('./data/Allergy/allergies.json');
-const courses      = require('./data/Course/courses.json');
-const cuisines     = require('./data/Cuisine/cuisines.json');
-const diets        = require('./data/Diet/diets.json');
-const holidays     = require('./data/Holiday/holidays.json');
+const allergies     = require('./data/Allergy/allergies.json');
+const courses       = require('./data/Course/courses.json');
+const cuisines      = require('./data/Cuisine/cuisines.json');
+const diets         = require('./data/Diet/diets.json');
+const holidays      = require('./data/Holiday/holidays.json');
 const ingredients1  = require('./data/Ingredient/ingredients1.json');
-const ingredients2 = require('./data/Ingredient/ingredients2.json');
-const measurements = require('./data/Measurement/measurements.json');
+const ingredients2  = require('./data/Ingredient/ingredients2.json');
+const measurements  = require('./data/Measurement/measurements.json');
 
 const parser = function ( filename ){
 
-	return JSON.parse( JSON.stringify(filename) )
+    return JSON.parse( JSON.stringify(filename) )
 
 }
 
