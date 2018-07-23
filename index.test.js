@@ -1,6 +1,6 @@
 const search = require('./search.js')
 const groceristar = require('./groceristar.js')
-
+const chickenKyiv = require('./chickenKyiv.js')
 
 describe('testing static data files are set', () => {
   test('allergies file is set', () => {
@@ -63,4 +63,20 @@ describe('testing static data files are set', () => {
     var stream = groceristar.getDepartments()
     expect(stream).not.toBe('')
   })
+
+  test('ingredients file is set', () => {
+    var stream = chickenKyiv.getIngredients3()
+    expect(stream).not.toBe('')
+  })
+
+  test('menu file is set', () => {
+    var stream = chickenKyiv.getMenu()
+    expect(stream).not.toBe('')
+  })
+
+  test('recipe file is set', () => {
+    var stream = chickenKyiv.getRecipe()
+    expect(stream).not.toBe('')
+  })
+
 })

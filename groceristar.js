@@ -2,6 +2,8 @@ const departments = require('./data/Departments/departments.json');
 const grocery = require('./data/Grocery/grocery.json');
 const ingredients  = require('./data/Ingredients/ingredients.json');
 const users = require('./data/Users/users.json');
+
+
 var _ = require('lodash');
 
 const parser = function ( filename ){
@@ -38,5 +40,7 @@ module.getAllIngredientsByOneDepartment = function(department){
 									});
 	return _.map(ingredientsByOneDepartment,'name');
 }
+
+
 
 module.exports = module;
