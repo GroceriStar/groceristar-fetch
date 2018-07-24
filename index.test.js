@@ -1,8 +1,7 @@
-const search      = require('./search.js')
-const groceristar = require('./groceristar.js')
-const chickenKyiv = require('./chickenKyiv.js')
 
-describe('testing static data files are set', () => {
+
+
+
   // test('allergies file is set', () => {
   //   var stream = search.getAllergies()
   //   expect(stream).not.toBe('')
@@ -28,59 +27,3 @@ describe('testing static data files are set', () => {
   //   var stream = search.getHolidays()
   //   expect(stream).not.toBe('')
   // })
-  test('getAttribute("allergy")', ()=> {
-    var stream = search.getAttribute('allergy')
-    expect(stream).not.toBe('')
-  })
-  
-  test('ingredients1 file is set', () => {
-    var stream = search.getIngredients1()
-    expect(stream).not.toBe('')
-  })
-
-  test('ingredients2 file is set', () => {
-    var stream = search.getIngredients2()
-    expect(stream).not.toBe('')
-  })
-
-  test('measurements file is set', () => {
-    var stream = search.getMeasurements()
-    expect(stream).not.toBe('')
-  })
-
-  test('ingredients file is set', () => {
-    var stream = groceristar.getIngredients()
-    expect(stream).not.toBe('')
-  })
-
-  test('grocery file is set', () => {
-    var stream = groceristar.getGrocery()
-    expect(stream).not.toBe('')
-  })
-
-  test('users file is set', () => {
-    var stream = groceristar.getUsers()
-    expect(stream).not.toBe('')
-  })
-
-  test('departments file is set', () => {
-    var stream = groceristar.getDepartments()
-    expect(stream).not.toBe('')
-  })
-
-  test('ingredients file is set', () => {
-    var stream = chickenKyiv.getIngredients3()
-    expect(stream).not.toBe('')
-  })
-
-  test('menu file is set', () => {
-    var stream = chickenKyiv.getMenu()
-    expect(stream).not.toBe('')
-  })
-
-  test('recipe file is set', () => {
-    var stream = chickenKyiv.getRecipe()
-    expect(stream).not.toBe('')
-  })
-
-})
