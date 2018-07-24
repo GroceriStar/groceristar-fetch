@@ -188,7 +188,7 @@ example
 ```
 ---
 ```
-var allIngredientsByOneDepartment = getAllIngredientsByOneDepartment("Fresh vegetables");
+var allIngredientsByOneDepartment = gf.getAllIngredientsByOneDepartment("Fresh vegetables");
 ```
 
 ```
@@ -201,7 +201,73 @@ example
 ```
 
 ---
+```
+var ingredients3 = gf.getIngredients3();
+```
 
+```
+example
+[
+    {
+      "name": "medium russet potatoes, sliced into sticks",
+      "departmentId": "department_id"
+    },
+    {
+      "name": "tablespoons vegetable oil, divided",
+      "departmentId": "department_id"
+    },
+    {
+      "name": "salt & freshly ground black pepper, to taste",
+      "departmentId": "department_id"
+    }
+]
+```
+---
+```
+var menu = gf.getMenu();
+```
+
+```
+example
+[{
+    "title": "Weekly menu #9",
+    "date": "new Date",
+    "description": "string",
+    "notes": "This is notes6"
+  },
+  {
+    "title": "Weekly menu #6",
+    "date": "new Date",
+    "description": "string1",
+    "notes": "This is notes5"
+}]
+```
+
+---
+```
+var recipe = gf.getRecipe();
+```
+
+```
+example
+[{
+
+    "title": "Crock Pot Roast12",
+    "directions": [
+      "Place beef roast in crock pot.",
+      "Mix the dried mixes together in a bowl and sprinkle over the roast.",
+      "Pour the water around the roast.",
+      "Cook on low for 7-9 hours."
+    ],
+    "prep_time": "30min",
+    "total_time": "3h",
+    "recipe_yield": "8",
+    "img": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg",
+    "url": "http://www.food.com/recipe/to-die-for-crock-pot-roast-27208"
+
+}]
+```
+---
 
 
 @TODO use different flags for one command in order to call different imports

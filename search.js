@@ -13,25 +13,48 @@ const parser = function ( filename ){
 
 }
 
-module.getAllergies = function () {
-	return parser( allergies );
+module.getAttribute = function (attrib) {
+  switch (attrib) {
+    case 'allergy':
+      return parser(allergies);
+      break;
+    case 'cuisine':
+      return parser(cuisines);
+      break;
+    case 'course':
+      return parser(courses);
+      break;
+    case 'holidays':
+      return parser(holidays);
+      break;
+    case 'diets':
+      return parser(diets);
+      break;
+
+    default: return "Incorrect attribute or empty argument";
+
+  }
 }
 
-module.getCourses = function () {
-	return parser( courses );
-}
-
-module.getCuisines = function () {
-	return parser( cuisines );
-}
-
-module.getDiets = function () {
-	return parser( diets );
-}
-
-module.getHolidays = function () {
-	return parser( holidays );
-}
+// module.getAllergies = function () {
+// 	return parser( allergies );
+// }
+//
+// module.getCourses = function () {
+// 	return parser( courses );
+// }
+//
+// module.getCuisines = function () {
+// 	return parser( cuisines );
+// }
+//
+// module.getDiets = function () {
+// 	return parser( diets );
+// }
+//
+// module.getHolidays = function () {
+// 	return parser( holidays );
+// }
 
 module.getIngredients1 = function () {
 	return parser( ingredients1 );
