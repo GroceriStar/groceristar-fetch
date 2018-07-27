@@ -33,7 +33,7 @@ In a few our projects we have a similar files. And we always copy-paste code bet
 
 #### Installation
 
-Provide code examples and explanations of how to get the project.
+
 
 `npm install @groceristar/static-fetch`
 or
@@ -42,10 +42,10 @@ or
 #### Usage
 
 ```
-var gf = require('@groceristar/groceristar-fetch')
+var data = require('@groceristar/groceristar-fetch')
 console.log(data);
 
-import gf from '@groceristar/groceristar-fetch'
+import data from '@groceristar/groceristar-fetch'
 ```
 
 #### Tests
@@ -55,7 +55,7 @@ import gf from '@groceristar/groceristar-fetch'
 
 #### Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+@vadim9999, @MinkoJ2, @chauhannishith, @atherdon 
 
 
 ---
@@ -136,7 +136,8 @@ var ingredients = gf.getIngredients();
 ```
 returns array of objects containing ingredients with their departments
 
-```example
+```
+example
 {
     "name": "Butter  Margarine",
     "department": "Dairy"
@@ -153,7 +154,8 @@ return array of grocery data
 ```
 var users = gf.getUsers();
 ```
-```example
+```
+example
 {
     "name": "john",
     "email": "john.doe@ibm.com",
@@ -165,7 +167,8 @@ var users = gf.getUsers();
 ```
 var departments = gf.getDepartments();
 ```
-```example
+```
+example
 {
    "name": "Fresh vegetables",
    "type": "food"
