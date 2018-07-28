@@ -35,9 +35,9 @@ In a few our projects we have a similar files. And we always copy-paste code bet
 
 
 
-`npm install @groceristar/static-fetch`
+`npm install @groceristar/groceristar-fetch`
 or
-`yarn add @groceristar/static-fetch`
+`yarn add @groceristar/groceristar-fetch`
 
 #### Usage
 
