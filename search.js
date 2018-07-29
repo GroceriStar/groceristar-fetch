@@ -15,63 +15,72 @@ const parser = function ( filename ){
 
 }
 
-module.pathToJson = function (){
-  // path.dirname(__filename)
-  return path.dirname('./data/Allergy/allergies.json');
-};
-
-module.getAttribute = function (attribute) {
-  switch (attribute) {
-    case 'allergy':
-      return parser(allergies);
-      break;
-    case 'cuisine':
-      return parser(cuisines);
-      break;
-    case 'course':
-      return parser(courses);
-      break;
-    case 'holidays':
-      return parser(holidays);
-      break;
-    case 'diets':
-      return parser(diets);
-      break;
-
-    default: return "Incorrect attribute or empty argument";
-
-  }
+const zi = function(){
+  return 'faggot';
 }
 
-// module.getAllergies = function () {
-// 	return parser( allergies );
-// }
-//
-// module.getCourses = function () {
-// 	return parser( courses );
-// }
-//
-// module.getCuisines = function () {
-// 	return parser( cuisines );
-// }
-//
-// module.getDiets = function () {
-// 	return parser( diets );
-// }
-//
-// module.getHolidays = function () {
-// 	return parser( holidays );
+// module.pathToJson = function (){
+//   // path.dirname(__filename)
+//   return path.dirname('./data/Allergy/allergies.json');
+// };
+
+// module.getAttribute = function (attribute) {
+//   switch (attribute) {
+//     case 'allergy':
+//       return parser(allergies);
+//       break;
+//     case 'cuisine':
+//       return parser(cuisines);
+//       break;
+//     case 'course':
+//       return parser(courses);
+//       break;
+//     case 'holidays':
+//       return parser(holidays);
+//       break;
+//     case 'diets':
+//       return parser(diets);
+//       break;
+
+//     default: return "Incorrect attribute or empty argument";
+
+//   }
 // }
 
-module.getIngredients1 = function () {
-	return parser( ingredients1 );
-}
+// // module.getAllergies = function () {
+// // 	return parser( allergies );
+// // }
+// //
+// // module.getCourses = function () {
+// // 	return parser( courses );
+// // }
+// //
+// // module.getCuisines = function () {
+// // 	return parser( cuisines );
+// // }
+// //
+// // module.getDiets = function () {
+// // 	return parser( diets );
+// // }
+// //
+// // module.getHolidays = function () {
+// // 	return parser( holidays );
+// // }
 
-module.getIngredients2 = function () {
-	return parser( ingredients2 );
-}
+// module.getIngredients1 = function () {
+// 	return parser( ingredients1 );
+// }
 
-module.getMeasurements = function () {
-	return parser( measurements );
+// module.getIngredients2 = function () {
+// 	return parser( ingredients2 );
+// }
+
+// module.getMeasurements = function () {
+// 	return parser( measurements );
+// }
+
+// module.exports = module;
+
+module.exports = {
+  zaza: zi
 }
-module.exports = module;
