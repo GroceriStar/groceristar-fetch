@@ -58,12 +58,6 @@ import gf from '@groceristar/groceristar-fetch'
 Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
 
 
----
-Tasks:
-- [ ] [Search Form static data](https://github.com/GroceriStar/static-data/issues/14)
-- [ ] [ChickenKyiv Free Menu Release import data](https://github.com/GroceriStar/static-data/issues/10)
----
-
 
 ---
 #### Get an array of Allergies
