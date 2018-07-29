@@ -1,6 +1,8 @@
 const search = require('./search.js');
 const groceristar = require('./groceristar.js');
 
+
+console.log(search.pathToJson())
 // console.log(groceristar.getAllergies())
 
 // const fs = require('fs'); will work for backend uses

@@ -7,14 +7,21 @@ const ingredients1  = require('./data/Ingredient/ingredients1.json');
 const ingredients2  = require('./data/Ingredient/ingredients2.json');
 const measurements  = require('./data/Measurement/measurements.json');
 
+const path = require('path')
+
 const parser = function ( filename ){
 
     return JSON.parse( JSON.stringify(filename) )
 
 }
 
-module.getAttribute = function (attrib) {
-  switch (attrib) {
+module.pathToJson = function (){
+  // path.dirname(__filename)
+  return path.dirname('./data/Allergy/allergies.json');
+};
+
+module.getAttribute = function (attribute) {
+  switch (attribute) {
     case 'allergy':
       return parser(allergies);
       break;
