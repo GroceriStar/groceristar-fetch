@@ -21,17 +21,17 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site' /* title for your website */,
+  title: 'Groceristar Fetch Module' /* title for your website */,
   tagline: 'A website for testing',
-  url: 'https://your-docusaurus-test-site.com' /* your website url */,
-  baseUrl: '/' /* base url for your project */,
+  //url: 'https://your-docusaurus-test-site.com' /* your website url */,
+  //baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
+     url: 'https://facebook.github.io',
+     baseUrl: '/test-site/',
 
   // Used for publishing and more
   projectName: 'test-site',
-  organizationName: 'facebook',
+  organizationName: 'Groceristar',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -48,6 +48,7 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
+  // https://raw.githubusercontent.com/GroceriStar/creative/master/logo/LOGO1.png
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',
   favicon: 'img/favicon.png',
@@ -93,7 +94,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+    repoUrl: 'https://github.com/GroceriStar/groceristar-fetch',
 };
 
 module.exports = siteConfig;
