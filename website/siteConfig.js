@@ -74,7 +74,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Your Name or Your Company Name',
+    ' Groceristar company',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
