@@ -29,17 +29,18 @@ module.getDepartments = function() {
 	return parser( departments )
 }
 
+// @TODO will work only when we have one grocery list
 module.getAllDepartments = function(){
 	return _.map(grocery[0]["departments"])
 }
 
 module.getAllIngredientsByOneDepartment = function(department){
 
-	var ingredientsByOneDepartment =
-									_.filter(parser(ingredients),function(o){
-										return o.department === department;
-									});
-	return _.map(ingredientsByOneDepartment,'name');
+	var ingredientsList = 
+		_.filter(parser(ingredients),function(item){
+			return item.department === department;
+		});
+	return _.map(ingredientsList,'name');
 }
 
 
