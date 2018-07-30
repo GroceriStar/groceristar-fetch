@@ -55,7 +55,7 @@ import data from '@groceristar/groceristar-fetch'
 
 #### Contributors
 
-@vadim9999, @MinkoJ2, @chauhannishith, @atherdon 
+@vadim9999, @MinkoJ2, @chauhannishith, @atherdon
 
 
 ---
@@ -69,34 +69,56 @@ Tasks:
 #### Get an array of Allergies
 
 ```
-var allergies = gf.getAllergies();
+var allergies = gf.getAttribute('allergy');
+
+example
+[
+  "Gluten-Free",
+  "Peanut-Free",
+  "Seafood-Free"
+]
 ```
 
 ---
 #### Get an array of Courses
 ```
-var courses = gf.getCourses();
+var courses = gf.getAttribute('course');
+
+example
+[
+  "Main Dishes",
+  "Desserts",
+  "Side Dishes",
+  "Appetizers"
+]
 ```
 
 
 ---
 #### Get an array of Cuisines
 ```
-var cuisines = gf.getCuisines();
+var cuisines = gf.getAttribute('cuisine');
 ```
 
 
 ---
 #### Get an array of Diets
 ```
-var diets = gf.getDiets();
+var diets = gf.getAttribute('diets');
+
+example
+[
+  "Lacto vegetarian",
+  "Ovo vegetarian",
+  "Pescetarian"
+]
 ```
 
 
 ---
 #### Get an array of Holidays
 ```
-var holidays = gf.getHolidays();
+var holidays = gf.getAttribute('holidays');
 ```
 
 
@@ -116,7 +138,7 @@ var ingredients2 = gf.getIngredients2();
 
 
 ---
-#### Get an arrray of Measurements
+#### Get an array of Measurements
 ```
 var measurements = gf.getMeasurements();
 
@@ -130,13 +152,14 @@ example
 }
 ```
 
+
 ---
+#### Get an array of Ingredients
 ```
 var ingredients = gf.getIngredients();
-```
-returns array of objects containing ingredients with their departments
 
-```
+//returns array of objects containing ingredients with their departments
+
 example
 {
     "name": "Butter  Margarine",
@@ -144,17 +167,21 @@ example
 }
 ```
 
----
-```
-var grocery = gf.getGrocery();
-```
-return array of grocery data
 
 ---
+#### Get an array of Grocery
+```
+var grocery = gf.getGrocery();
+
+//returns array of grocery data
+```
+
+
+---
+#### Get an array of Users
 ```
 var users = gf.getUsers();
-```
-```
+
 example
 {
     "name": "john",
@@ -163,23 +190,25 @@ example
 }
 ```
 
+
 ---
+#### Get an array of Departments
 ```
 var departments = gf.getDepartments();
-```
-```
+
 example
 {
    "name": "Fresh vegetables",
    "type": "food"
 }
 ```
+
+
 ---
+#### Get an array of all Departments
 ```
 var allDepartments = gf.getAllDepartments();
-```
 
-```
 example
 [
     "Fresh vegetables",
@@ -189,12 +218,13 @@ example
     "Meat"
 ]
 ```
+
+
 ---
+#### Get an array of all ingredients by one department
 ```
 var allIngredientsByOneDepartment = gf.getAllIngredientsByOneDepartment("Fresh vegetables");
-```
 
-```
 example
 [
 	"Asparagus",
@@ -203,12 +233,12 @@ example
 ]
 ```
 
+
 ---
+#### Get an array of Ingredients3
 ```
 var ingredients3 = gf.getIngredients3();
-```
 
-```
 example
 [
     {
@@ -225,12 +255,13 @@ example
     }
 ]
 ```
+
+
 ---
+#### Get an array of Menu
 ```
 var menu = gf.getMenu();
-```
 
-```
 example
 [{
     "title": "Weekly menu #9",
@@ -246,12 +277,12 @@ example
 }]
 ```
 
+
 ---
+#### Get an array of Recipe
 ```
 var recipe = gf.getRecipe();
-```
 
-```
 example
 [{
 
@@ -270,9 +301,42 @@ example
 
 }]
 ```
+
+
 ---
+#### Get an array of nutritions1
+```
+var nutritions1 = gf.getNutritions1();
+
+example
+[
+ {
+   "calories"  : 450,
+   "fat_calories" : 430,
+   "total_fat" : 48,
+   "sat_fat"
+ }
+ ]
+```
 
 
+---
+#### Get an array of nutritions2
+```
+var nutritions2 = gf.getNutritions2();
+
+example
+[{
+         "type": "Vitamins",
+         "items": [
+           "Vitamin A (retinol)",
+           "Vitamin B1 (thiamin)"
+           ]
+}]
+```
+
+
+---
 @TODO use different flags for one command in order to call different imports
 
 [npm-run-script](https://docs.npmjs.com/cli/run-script)

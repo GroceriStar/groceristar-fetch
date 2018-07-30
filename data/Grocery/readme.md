@@ -12,5 +12,5 @@
 3) http://dietitiandebbie.com/2015/05/28/healthy-vegetarian-grocery-list/
 4) https://www.nogettingoffthistrain.com/wp-content/uploads/2017/03/Grocery-list-essentials-498x1024.png
 5) https://www.ketovale.com/ketogenic-diet-food-list/
-6) Clean Fatirig Grocery Listhttps://ind5.ccio.co/BA/85/SE/99dabe54ad2906a6f34a2d1313ab979a.jpg
+6) Clean Fatirig Grocery List https://ind5.ccio.co/BA/85/SE/99dabe54ad2906a6f34a2d1313ab979a.jpg
 7) https://www.blackdiamondbuzz.com/keto-diet-plan-recipes/?epik=0IIg5EvIW3xx8
