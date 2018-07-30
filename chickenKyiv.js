@@ -22,7 +22,7 @@ module.getRecipe = function(){
 	return parser(recipe)
 }
 
-module.getNutritions1() = function(){
+module.getNutritions1 = function(){
 	return parser(nutritions1)
 }
 

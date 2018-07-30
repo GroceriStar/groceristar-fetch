@@ -15,10 +15,6 @@ const parser = function ( filename ){
 
 }
 
-const zi = function(){
-  return 'faggot';
-}
-
 module.pathToJson = function (){
   // path.dirname(__filename)
   return path.dirname('./data/Allergy/allergies.json');
@@ -80,7 +76,3 @@ module.getMeasurements = function () {
 }
 
 module.exports = module;
-
-module.exports = {
-  zaza: zi
-}
