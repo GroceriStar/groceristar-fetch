@@ -55,7 +55,7 @@ import data from '@groceristar/groceristar-fetch'
 
 #### Contributors
 
-@vadim9999, @MinkoJ2, @chauhannishith, @atherdon 
+@vadim9999, @MinkoJ2, @chauhannishith, @atherdon
 
 
 ---
@@ -71,7 +71,7 @@ Tasks:
 ```
 var allergies = gf.getAttribute('allergy');
 
-example 
+example
 [
   "Gluten-Free",
   "Peanut-Free",
@@ -304,8 +304,39 @@ example
 
 
 ---
+#### Get an array of nutritions1
+```
+var nutritions1 = gf.getNutritions1();
+
+example
+[
+ {
+   "calories"  : 450,
+   "fat_calories" : 430,
+   "total_fat" : 48,
+   "sat_fat"
+ }
+ ]
+```
 
 
+---
+#### Get an array of nutritions2
+```
+var nutritions2 = gf.getNutritions2();
+
+example
+[{
+         "type": "Vitamins",
+         "items": [
+           "Vitamin A (retinol)",
+           "Vitamin B1 (thiamin)"
+           ]
+}]
+```
+
+
+---
 @TODO use different flags for one command in order to call different imports
 
 [npm-run-script](https://docs.npmjs.com/cli/run-script)
