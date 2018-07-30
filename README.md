@@ -69,7 +69,7 @@ Tasks:
 #### Get an array of Allergies
 
 ```
-var allergies = gf.getAttribute('allergy');
+var allergies = gf.getAttribute('allergies');
 
 example
 [
@@ -82,7 +82,7 @@ example
 ---
 #### Get an array of Courses
 ```
-var courses = gf.getAttribute('course');
+var courses = gf.getAttribute('courses');
 
 example
 [
@@ -97,7 +97,7 @@ example
 ---
 #### Get an array of Cuisines
 ```
-var cuisines = gf.getAttribute('cuisine');
+var cuisines = gf.getAttribute('cuisines');
 ```
 
 

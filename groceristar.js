@@ -1,6 +1,6 @@
 const _            = require('lodash');
 const departments  = require('./data/Departments/departments.json');
-const grocery      = require('./data/Grocery/grocery.json');
+const groceries    = require('./data/Grocery/grocery.json');
 const ingredients  = require('./data/Ingredients/ingredients.json');
 const users        = require('./data/Users/users.json');
 
@@ -18,7 +18,7 @@ module.getIngredients = function() {
 }
 
 module.getGrocery = function() {
-	return parser( grocery )
+	return parser( groceries )
 }
 
 module.getUsers = function() {
@@ -31,12 +31,12 @@ module.getDepartments = function() {
 
 // @TODO will work only when we have one grocery list
 module.getAllDepartments = function(){
-	return _.map(grocery[0]["departments"])
+	return _.map(groceries[0]["departments"])
 }
 
 module.getAllIngredientsByOneDepartment = function(department){
 
-	var ingredientsList = 
+	var ingredientsList =
 		_.filter(parser(ingredients),function(item){
 			return item.department === department;
 		});
