@@ -31,7 +31,7 @@ module.getDepartments = function() {
 
 // @TODO will work only when we have one grocery list
 module.getAllDepartments = function(){
-	return _.map(grocery[0]["departments"])
+	return _.map(groceries[0]["departments"])
 }
 
 module.getAllIngredientsByOneDepartment = function(department){
