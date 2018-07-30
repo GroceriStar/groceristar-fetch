@@ -36,10 +36,94 @@
 },
 {
   "departments": [
+    "PROTEIN",
+    "STARCH",
+    "HEALTHY FATS",
+    "VEGGIES",
+    "BEVERAGES",
+    "FRUITS",
+    "OILS AND SEEDS",
+    "SEASONINGS"
    ],
-  "name": "",
+  "name": "Clean Fatiring",
   "img": false,
   "desc": false,
   "slug": false
-} 
+},
+{
+  "departments": [
+    "MEAT/PROTEIN",
+    "DAIRY",
+    "FRUITS",
+    "SNACKS",
+    "VEGETABLES",
+    "BAKING",
+    "GRIS"
+   ],
+  "name": "Grocery List Essentials",
+  "img": false,
+  "desc": false,
+  "slug": false
+},
+{
+  "departments": [
+    "Produce",
+    "Protein",
+    "Bulk Foods",
+    "Canned Goods/Pantry",
+    "Herbs/Spices",
+    "Frozen Foods",
+    "Oils, Vinegars, and Condiments"
+   ],
+  "name": "Healthy Vegetarian",
+  "img": false,
+  "desc": false,
+  "slug": false
+},
+{
+  "departments": [
+    "FATS",
+    "KETO SNACKS",
+    "PROTEIN",
+    "VEGGIES",
+    "CONDIMENTS",
+    "DRINKS",
+    "FLOUR",
+    "FRUITS"
+   ],
+  "name": "Keto Diet Food",
+  "img": false,
+  "desc": false,
+  "slug": false
+},
+{
+  "departments": [
+    "Vegatables",
+    "Meat/Fish Poultry",
+    "Cheese/Dairy",
+    "Cheses In 1 Ounce Portions",
+    "Seafood",
+    "Fruits",
+    "Fats and Dressings",
+    "Zero Carb Drinks",
+    "Nuts/Seeds",
+    "Miscellaneous",
+    "Soy Vegan Protein",
+    "Herbs/Spices",
+    "Zero Carb Alcoholic Drinks"
+   ],
+  "name": "Low Carb Food",
+  "img": false,
+  "desc": false,
+  "slug": false
+},
+{
+  "departments": [
+
+   ],
+  "name": "Rabel Dietitian",
+  "img": false,
+  "desc": false,
+  "slug": false
+}
 ]
