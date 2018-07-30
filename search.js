@@ -15,6 +15,7 @@ const parser = function ( filename ){
 
 }
 
+
 module.pathToJson = function (){
   // path.dirname(__filename)
   return path.dirname('./data/Allergy/allergies.json');
@@ -22,13 +23,13 @@ module.pathToJson = function (){
 
 module.getAttribute = function (attribute) {
   switch (attribute) {
-    case 'allergy':
+    case 'allergies':
       return parser(allergies);
       break;
-    case 'cuisine':
+    case 'cuisines':
       return parser(cuisines);
       break;
-    case 'course':
+    case 'courses':
       return parser(courses);
       break;
     case 'holidays':
