@@ -4,7 +4,7 @@ describe('testing static data files are set', () => {
 
   test('ingredients file is set', () => {
     var stream = groceristar.getIngredients()
-    expect(stream).not.toBe('')
+    expect(stream).not.....toBe('')
   })
 
   test('grocery file is set', () => {
