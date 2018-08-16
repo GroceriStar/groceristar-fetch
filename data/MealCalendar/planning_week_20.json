@@ -1,0 +1,37 @@
+[
+  {
+    "tag": "enchilada",
+    "text": "Enchiladas with Refried Beans and Chips & Salsa",
+    "day": "Sunday"
+  },
+  {
+    "tag": "chicken",
+    "text": "Chicken Fried Rice and Egg Rolls",
+    "day": "Monday"
+  },
+  {
+    "tag": "beef",
+    "text": "Slow Cooker Beef Stew with Tossed Salad and Rolls",
+    "day": "Tuesday"
+  },
+  {
+    "tag": "beef",
+    "text": "Broccoli Beef with Steamed Rice and Pineapple",
+    "day": "Wednesday"
+  },
+  {
+    "tag": "pizza",
+    "text": "Pizza Quesadillas with Carrot Sticks and Apple Slices",
+    "day": "Thursday"
+  },
+  {
+    "tag": "pie",
+    "text": "Shepherd’s Pie with Tossed Salad and Clementines",
+    "day": "Friday"
+  },
+  {
+    "tag": "steak",
+    "text": "Grilled Steaks with Mashed Potato Puffs and Green Beans",
+    "day": "Saturday"
+  }
+]

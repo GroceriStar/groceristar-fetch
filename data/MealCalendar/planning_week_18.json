@@ -1,0 +1,37 @@
+[
+  {
+    "tag": "chicken",
+    "text": "Barbecue Chicken with Corn on Cob, Coleslaw and Peaches",
+    "day": "Sunday"
+  },
+  {
+    "tag": "spaghetti",
+    "text": "Spaghetti & Meat Sauce with Salad and Breadsticks",
+    "day": "Monday"
+  },
+  {
+    "tag": "salmon",
+    "text": "Teriyaki Salmon with Mashed Potatoes, Steamed Asparagus/Green and Beans Pears",
+    "day": "Tuesday"
+  },
+  {
+    "tag": "joe",
+    "text": "Sloppy Joes with French Fries, Veggies & Ranch and Apple Slices",
+    "day": "Wednesday"
+  },
+  {
+    "tag": "chicken meatball",
+    "text": "Baked Orange Chicken Meatballs with Steamed Rice and Broccoli",
+    "day": "Thursday"
+  },
+  {
+    "tag": "taco",
+    "text": "Tacos with Refried Beans and Chips & Salsa",
+    "day": "Friday"
+  },
+  {
+    "tag": "brat/hot dog",
+    "text": "Grilled Brats/Hot Dogs with Potato Salad, Macoroni & Cheese and Strawberries",
+    "day": "Saturday"
+  }
+]
