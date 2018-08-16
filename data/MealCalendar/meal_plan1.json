@@ -1,0 +1,37 @@
+[
+  {
+    "tag": "steak",
+    "text": "Grilled Honey & Ginger Marinated Flank Steaks with Mashed Potatoes, Tossed Salad and Rolls",
+    "day": "Sunday"
+  },
+  {
+    "tag": "chicken",
+    "text": "Chicken Parmesan Balls & Spaghetti with Caesar Salad and Breadsticks",
+    "day": "Monday"
+  },
+  {
+    "tag": "chicken",
+    "text": "Slow Cooker Cola Chicken with Leftover Mashed Potato Puff, Green Beans and Peaches",
+    "day": "Tuesday"
+  },
+  {
+    "tag": "pork",
+    "text": "Grilled Pork Chocps with Baked Potato, Steamed Broccoli and Strawberries",
+    "day": "Wednesday"
+  },
+  {
+    "tag": "pasta",
+    "text": "Skillet Goulash with Cornbread, Corn and Apple Slices",
+    "day": "Thursday"
+  },
+  {
+    "tag": "fish",
+    "text": "Tilapia with Corn on the Cob, Couscous and Pears",
+    "day": "Friday"
+  },
+  {
+    "tag": "chicken",
+    "text": "Teriyaki Chicken with Fried Rice, Peas and Pineapple",
+    "day": "Saturday"
+  }
+]

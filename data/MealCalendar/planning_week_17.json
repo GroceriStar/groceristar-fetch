@@ -1,0 +1,37 @@
+[
+  {
+    "tag": "chicken",
+    "text": "Sweet and Sour Chicken with Rice and Pineapple",
+    "day": "Sunday"
+  },
+  {
+    "tag": "spaghetti",
+    "text": "Spaghetti Pie with Salad and Breadsticks",
+    "day": "Monday"
+  },
+  {
+    "tag": "pork",
+    "text": "Shake N Bake Pork Chops with Twice Baked Potatoes, Corn on Cob and Applesauce",
+    "day": "Tuesday"
+  },
+  {
+    "tag": "goulash",
+    "text": "Goulash with Salad, Peaches and Biscuit",
+    "day": "Wednesday"
+  },
+  {
+    "tag": "chicken",
+    "text": "Slow Cooker Pop Chicken with Mashed Potatoes and Green Beans",
+    "day": "Thursday"
+  },
+  {
+    "tag": "pizza",
+    "text": "Pizza Quesadillas with Carrot Sticks and Grapes",
+    "day": "Friday"
+  },
+  {
+    "tag": "chicken",
+    "text": "Baked Teriyaki Chicken Meatballs with Rice, Peas and Pears",
+    "day": "Saturday"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "tag": "beef",
+    "text": "Skillet Cube Steaks with Mashed Potatoes, Caesar Salad and Pears (make extra mashed potatoes)",
+    "day": "Sunday"
+  },
+  {
+    "tag": "chicken",
+    "text": "Sweet-n-Sour Chicken with Fried Rice, Broccolie & Rice Dip and Pineapple",
+    "day": "Monday"
+  },
+  {
+    "tag": "casserole",
+    "text": "Shepard's Pie with Deviled Eggs, Rolls and Peaches",
+    "day": "Tuesday"
+  },
+  {
+    "tag": "chicken",
+    "text": "Chicken Quesadillas with Salsa & Chips and Refried Beans",
+    "day": "Wednesday"
+  },
+  {
+    "tag": "beef",
+    "text": "Roast with Potatoes, Carrots and Rolls",
+    "day": "Thursday"
+  },
+  {
+    "tag": "seafood",
+    "text": "Shrimp Scampi with Steamed Rice, Tossed Salad and Rice",
+    "day": "Friday"
+  },
+  {
+    "tag": "beef",
+    "text": "Barbecue Meatballs with French Fries, Green Beans and Apple Slices",
+    "day": "Saturday"
+  }
+]
