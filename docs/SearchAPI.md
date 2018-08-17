@@ -1,5 +1,7 @@
-
 ---
 id: searchapi-project
-title: searchapi-project
+title: SearchAPI project
+sidebar_label: SearchAPI project
 ---
+
+` `
