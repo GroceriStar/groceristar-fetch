@@ -1,4 +1,5 @@
-const mealCalendar = require('./mealCalendar.js')
+const mealCalendar = require('./mealCalendar.js');
+const mealcalendar = require('./data/MealCalendar/mealcalendar.json');
 
 describe('testing static data files are set', () => {
 
@@ -13,8 +14,10 @@ describe('testing static data files are set', () => {
   })
 
   test('getDishByWeek', () => {
-    var stream = mealCalendar.getDishByWeek('week18')
-    expect(stream).not.toBe('')
+    mealcalendar.map(meal => {
+      var stream = mealCalendar.getDishByWeek(meal.id)
+      expect(stream).not.toBe('')
+    })
   })
 
 })
