@@ -38,8 +38,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
+     {doc: 'summary', label: 'Summary'},
+    // {doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
@@ -49,9 +49,9 @@ const siteConfig = {
 
   /* path to images for header/footer */
   // https://raw.githubusercontent.com/GroceriStar/creative/master/logo/LOGO1.png
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
-  favicon: 'img/favicon.png',
+  headerIcon: 'img/LOGO1.png',
+  footerIcon: 'img/LOGO1.png',
+  favicon: 'img/LOGO1.png',
 
   /* colors for website */
   colors: {

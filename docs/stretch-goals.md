@@ -1,5 +1,7 @@
-
 ---
 id: stretch-goals
-title: stretch-goals
+title: Stretch Goals
+sidebar_label: Stretch Goals
 ---
+
+` `

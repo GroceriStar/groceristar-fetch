@@ -1,5 +1,7 @@
-
 ---
 id: chickenkyiv-project
-title: chickenkyiv-project
+title: ChickenKyiv project
+sidebar_label: ChickenKyiv project
 ---
+
+` `
