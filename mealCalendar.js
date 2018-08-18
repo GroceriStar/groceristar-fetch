@@ -9,11 +9,19 @@ module.getMealCalendar = function () {
 }
 
 module.getDishByDay = function (day) {
-  return parser(mealCalendar.filter(meal => meal.day === day));
+  const dishes = [];
+  mealCalendar.map(meal =>
+    meal.recipes.map(recipe => {
+      if (recipe.day === day) {
+        dishes.push({ id: meal.id, recipes: [recipe] });
+      }
+    })
+  );
+  return dishes;
 }
 
 module.getDishByWeek = function (week) {
-  return parser(mealCalendar.filter(meal => meal.id === week));
+  return parser(mealCalendar).filter(meal => meal.id === week);
 }
 
 module.exports = module;
