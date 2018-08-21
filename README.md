@@ -395,6 +395,48 @@ example
 ]
 ```
 
+## Intergration with React
+```
+import data from '@groceristar/groceristar-fetch/search';
+function toOpt(arr) {
+    let Opt= arr.reduce((intermediate, item, index) => {
+        intermediate[index]={};
+        intermediate[index].value = index;
+        intermediate[index].label = item;
+        return intermediate;
+    }, []);
+    return Opt;
+}
+
+const Options = toOpt(data.getAllergies());
+
+```
+or
+
+```
+import data from '@groceristar/groceristar-fetch/search';
+
+  getAttributeData(type){
+    // this.props.type
+
+    if (this.props.type == 'Allergy') {
+      return data.getAttribute('allergies');
+    }
+    if (this.props.type == 'Diet') {
+      return data.getAttribute('diets');
+    }
+    if (this.props.type == 'Cuisine') {
+      return data.getAttribute('cuisines');
+    }
+    if (this.props.type == 'Course') {
+      return data.getAttribute('courses');
+    }
+    if (this.props.type == 'Holiday') {
+      return data.getAttribute('holidays');
+    }
+  }
+```
+
 
 ---
 @TODO use different flags for one command in order to call different imports
