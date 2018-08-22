@@ -39,6 +39,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
      {doc: 'summary', label: 'Summary'},
+       {href : 'https://github.com/GroceriStar/groceristar-fetch/', label: 'GitHub'},
     {page: 'help', label: 'Help'},
   ],
 
