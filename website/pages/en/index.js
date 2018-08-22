@@ -76,13 +76,10 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
+        <Logo img_src={imgUrl('LOGO1.png')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html', language)}>Example Link</Button>
-            <Button href={docUrl('doc2.html', language)}>Example Link 2</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -95,7 +92,7 @@ const Block = props => (
     padding={['bottom', 'top']}
     id={props.id}
     background={props.background}>
-    <GridBlock align="center" contents={props.children} layout={props.layout} />
+    <GridBlock align="left" contents={props.children} layout={props.layout} />
   </Container>
 );
 
@@ -117,16 +114,74 @@ const Features = props => (
     ]}
   </Block>
 );
+const MainPage = props => (
+  <div
+    className="productShowcaseSection paddingBottom"
+    style={{textAlign: 'center'}}>
 
+        <div className = "tableofcontents">
+
+      <br/>Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
+      <br/>In a few our projects we have a similar files. And we always copy-paste code between them. So by moving this code into separated place - i hope we'll make our projects better.
+      </div>
+
+
+  </div>
+);
 const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
+    <h2>Table of contents</h2>
+        <div className = "tableofcontents">
+
+          <ul>
+  <li><a href="/groceristar-fetch/docs/intro.html">Getting Started</a></li>
+  <li><a href="/groceristar-fetch/docs/chickenkyiv-project.html">ChickenKyiv</a></li>
+  <li><a href="/groceristar-fetch/docs/code-sample.html">Code sample</a></li>
+  <li><a href="/groceristar-fetch/docs/groceristar-project.html">Groceristar</a></li>
+  <li><a href="/groceristar-fetch/docs/mealcalendar-project.html">Meal Calendar</a></li>
+  <li><a href="/groceristar-fetch/docs/searchapi-project.html">Search API</a></li>
+  <li><a href="/groceristar-fetch/docs/searchform-project.html">Search Form</a></li>
+  <li><a href="/groceristar-fetch/docs/stretch-goals.html">Stretch goals</a></li>
+  <li><a href="/groceristar-fetch/docs/tests.html">Tests</a></li>
+  </ul>
+
+      </div>
+
+
   </div>
 );
+const FeatureCallout2 = props => (
 
+  <div className = "ogg" style={{textAlign: 'left'}}>
+    <div className="wrapper">
+      <div className="gridBlock">
+        <div className="blockElement imageAlignSide imageAlignLeft twoByGridBlock">
+          <div className="blockImage">
+            <img src="/recipe-app-react-native/img/54A84DCB-F7EE-49E3-8DA1-1EF07F873622.png">
+
+            </img>
+          </div>
+          <div className="blockContent"><h2><div><span><p>Description</p>
+    </span></div></h2><div><span><p>
+        Build with: Angular, Ionic Framework v.1
+      <ul>
+        <h3>Basic functionality:</h3>
+        <li>Screen with recipes list</li>
+        <li>Recipe details</li>
+        <li>Basic grocery list</li>
+        <li>Login screen.</li>
+    </ul>
+
+
+
+      </p>
+    </span></div></div></div>
+      </div>
+    </div>
+  </div>
+);
 const LearnHow = props => (
   <Block background="light">
     {[
@@ -144,8 +199,8 @@ const TryOut = props => (
   <Block id="try">
     {[
       {
-        content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
+        content: 'Release #1 completed(Free Menu) ^ Build with: Angular, Ionic Framework v.1 Note: soon I’ll redo an app from scratch.',
+        image: imgUrl('54A84DCB-F7EE-49E3-8DA1-1EF07F873622.png'),
         imageAlign: 'left',
         title: 'Try it Out',
       },
@@ -202,14 +257,18 @@ class Index extends React.Component {
 
     return (
       <div>
-        {/* <HomeSplash language={language} /> */}
+        <HomeSplash language={language} />
         <div className="mainContainer">
-          {/* <Features />
+          {/* <Features /> */}
+           {/* <TryOut /> */}
+
+          <MainPage />
           <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase language={language} /> */}
+
+           {/* <LearnHow /> */}
+
+          {/* <Description />  */}
+           {/* <Showcase language={language} /> */}
         </div>
       </div>
     );

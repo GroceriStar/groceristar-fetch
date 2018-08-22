@@ -1,6 +1,6 @@
 {
   "docs": {
-  "Getting started":["intro"],
+  " ":["intro"],
   "Chicken Kyiv":["chickenkyiv-project"],
   "Code sample":["code-sample"],
   "GroceriStar project":["groceristar-project"],
@@ -8,7 +8,7 @@
   "SearchAPI project":["searchapi-project"],
   "Search Form project":["searchform-project"],
   "Stretch Goals":["stretch-goals"],
-  "Tests":["tests"]
+  "  ":["tests"]
 
   }
 

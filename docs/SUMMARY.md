@@ -12,4 +12,3 @@ title: Table of contents
 * [Search Form](SearchForm.md)
 * [Stretch goals](stretch-goals.md)
 * [Tests](tests.md)
-* [Trash](trash.md)

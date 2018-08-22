@@ -14,3 +14,20 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+.toc .toggleNav ul li a{
+  font-size: 18px !important;
+}
+
+li a {
+  font-size:18px;
+}
+
+.mainBlock {
+  margin-left: 40px;
+  margin-right: 40px;
+
+}
+.tableofcontents{
+  text-align: left;
+}

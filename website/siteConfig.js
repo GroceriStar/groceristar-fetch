@@ -21,17 +21,17 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Groceristar Fetch Module' /* title for your website */,
-  tagline: 'A website for testing',
+  title: 'GroceriStar Fetch Module' /* title for your website */,
+  tagline: 'Documentation',
   //url: 'https://your-docusaurus-test-site.com' /* your website url */,
   //baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
-     url: 'https://facebook.github.io',
-     baseUrl: '/test-site/',
+     url: 'https://groceristar.github.io',
+     baseUrl: '/groceristar-fetch/',
 
   // Used for publishing and more
-  projectName: 'test-site',
-  organizationName: 'Groceristar',
+  projectName: 'groceristar-fetch',
+  organizationName: 'groceristar',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -39,9 +39,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
      {doc: 'summary', label: 'Summary'},
-    // {doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:
@@ -75,7 +73,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Groceristar company',
+    ' GroceriStar company',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
