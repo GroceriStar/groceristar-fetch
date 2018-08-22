@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>GroceriStar project · GroceriStar Fetch Module</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="---"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="GroceriStar project · GroceriStar Fetch Module"/><meta property="og:type" content="website"/><meta property="og:url" content="https://groceristar.github.io/groceristar-fetch/index.html"/><meta property="og:description" content="---"/><meta property="og:image" content="https://groceristar.github.io/groceristar-fetch/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://groceristar.github.io/groceristar-fetch/img/docusaurus.png"/><link rel="shortcut icon" href="/groceristar-fetch/img/LOGO1.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/groceristar-fetch/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/groceristar-fetch/"><img class="logo" src="/groceristar-fetch/img/LOGO1.png" alt="GroceriStar Fetch Module"/><h2 class="headerTitleWithLogo">GroceriStar Fetch Module</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/groceristar-fetch/docs/summary.html" target="_self">Summary</a></li><li class=""><a href="https://github.com/GroceriStar/groceristar-fetch/" target="_self">GitHub</a></li><li class=""><a href="/groceristar-fetch/en/help.html" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>GroceriStar project</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle"> </h3><ul><li class="navListItem"><a class="navItem" href="/groceristar-fetch/docs/intro.html">Getting Started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Chicken Kyiv</h3><ul><li class="navListItem"><a class="navItem" href="/groceristar-fetch/docs/chickenkyiv-project.html">ChickenKyiv project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Code sample</h3><ul><li class="navListItem"><a class="navItem" href="/groceristar-fetch/docs/code-sample.html">Code sample</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">GroceriStar project</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/groceristar-fetch/docs/groceristar-project.html">GroceriStar project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Meal Calendar project</h3><ul><li class="navListItem"><a class="navItem" href="/groceristar-fetch/docs/mealcalendar-project.html">Meal Calendar project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">SearchAPI project</h3><ul><li class="navListItem"><a class="navItem" href="/groceristar-fetch/docs/searchapi-project.html">SearchAPI project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Search Form project</h3><ul><li class="navListItem"><a class="navItem" href="/groceristar-fetch/docs/searchform-project.html">Search Form project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Stretch Goals</h3><ul><li class="navListItem"><a class="navItem" href="/groceristar-fetch/docs/stretch-goals.html">Stretch Goals</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">  </h3><ul><li class="navListItem"><a class="navItem" href="/groceristar-fetch/docs/tests.html">Test</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">GroceriStar project</h1></header><article><div><span><hr>
+<h4><a class="anchor" aria-hidden="true" id="get-an-array-of-ingredients"></a><a href="#get-an-array-of-ingredients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get an array of Ingredients</h4>
+<pre><code class="hljs">var ingredients = gf.getIngredients();
+
+//returns<span class="hljs-built_in"> array </span>of objects containing ingredients with their departments
+
+example
+{
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Butter  Margarine"</span>,
+    <span class="hljs-string">"department"</span>: <span class="hljs-string">"Dairy"</span>
+}
+</code></pre>
+<hr>
+<h4><a class="anchor" aria-hidden="true" id="get-an-array-of-grocery"></a><a href="#get-an-array-of-grocery" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get an array of Grocery</h4>
+<pre><code class="hljs">var grocery = gf.getGrocery();
+
+//returns<span class="hljs-built_in"> array </span>of grocery data
+</code></pre>
+<hr>
+<h4><a class="anchor" aria-hidden="true" id="get-an-array-of-users"></a><a href="#get-an-array-of-users" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get an array of Users</h4>
+<pre><code class="hljs">var<span class="hljs-built_in"> users </span>= gf.getUsers();
+
+example
+{
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"john"</span>,
+    <span class="hljs-string">"email"</span>: <span class="hljs-string">"john.doe@ibm.com"</span>,
+    <span class="hljs-string">"password"</span>: <span class="hljs-string">"john1"</span>
+}
+</code></pre>
+<hr>
+<h4><a class="anchor" aria-hidden="true" id="get-an-array-of-departments"></a><a href="#get-an-array-of-departments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get an array of Departments</h4>
+<pre><code class="hljs"><span class="hljs-built_in">var</span> departments = gf.getDepartments();
+
+<span class="hljs-built_in">example</span>
+{
+   <span class="hljs-string">"name"</span>: <span class="hljs-string">"Fresh vegetables"</span>,
+   <span class="hljs-string">"type"</span>: <span class="hljs-string">"food"</span>
+}
+</code></pre>
+<hr>
+<h4><a class="anchor" aria-hidden="true" id="get-an-array-of-all-departments"></a><a href="#get-an-array-of-all-departments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get an array of all Departments</h4>
+<pre><code class="hljs"><span class="hljs-keyword">var</span> allDepartments = gf.getAllDepartments();
+
+example
+[<span class="hljs-meta">
+    <span class="hljs-meta-string">"Fresh vegetables"</span>,
+    <span class="hljs-meta-string">"Condiments / Sauces"</span>,
+    <span class="hljs-meta-string">"Dairy"</span>,
+    <span class="hljs-meta-string">"Cheese"</span>,
+    <span class="hljs-meta-string">"Meat"</span>
+</span>]
+</code></pre>
+<hr>
+<h4><a class="anchor" aria-hidden="true" id="get-an-array-of-all-ingredients-by-one-department"></a><a href="#get-an-array-of-all-ingredients-by-one-department" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get an array of all ingredients by one department</h4>
+<pre><code class="hljs"><span class="hljs-keyword">var</span> allIngredientsByOneDepartment = gf.getAllIngredientsByOneDepartment(<span class="hljs-string">"Fresh vegetables"</span>);
+
+example
+[<span class="hljs-meta">
+    <span class="hljs-meta-string">"Asparagus"</span>,
+    <span class="hljs-meta-string">"Broccoli"</span>,
+    <span class="hljs-meta-string">"Carrots"</span>
+</span>]
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/groceristar-fetch/docs/code-sample.html">← Code sample</a><a class="docs-next button" href="/groceristar-fetch/docs/mealcalendar-project.html">Meal Calendar project →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/groceristar-fetch/" class="nav-home"><img src="/groceristar-fetch/img/LOGO1.png" alt="GroceriStar Fetch Module" width="66" height="58"/></a><div><h5>Docs</h5><a href="/groceristar-fetch/docs/en/intro.html">Getting Started</a><a href="/groceristar-fetch/docs/en/groceristar-project.html">GroceriStar</a><a href="/groceristar-fetch/docs/en/chickenkyiv-project.html">ChickenKyiv</a></div><div></div><div><h5>More</h5><a href="https://medium.com/groceristar">Blog</a><a href="https://github.com/GroceriStar/groceristar-fetch">GitHub</a><a class="github-button" href="https://github.com/GroceriStar/groceristar-fetch" data-icon="octicon-star" data-count-href="GroceriStar/groceristar-fetch/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 GroceriStar company</section></footer></div></body></html>
