@@ -395,6 +395,26 @@ example
 ]
 ```
 
+---
+### Get an array of dishes by month
+```
+var dishesOfMonth3 = gf.getDishByMonth(3);
+Obs: for now, 5 is the max number of month
+
+example
+[
+  {
+    "id": "week9",
+    "recipes": [
+      {
+        "tag": "pork",
+        "text": "Grilled Pork Chops with Twice Baked Potatoes, Green Beans Strawberries",
+        "day": "Sunday"
+      }
+    ]
+  }
+]
+```
 
 ---
 @TODO use different flags for one command in order to call different imports
