@@ -20,6 +20,16 @@ module.getDishByDay = function (day) {
   return dishes;
 }
 
+module.getDishByMonth = function (monthNumb) {
+  if (monthNumb < 1 || monthNumb > 5) return [];
+  const totalWeeks = monthNumb * 4 + 1;
+  const dishes = [];
+  for (let i = totalWeeks - 4; i < totalWeeks; i++) {
+    dishes.push(this.getDishByWeek(`week${i}`)[0]);
+  }
+  return dishes;
+}
+
 module.getDishByWeek = function (week) {
   return parser(mealCalendar).filter(meal => meal.id === week);
 }

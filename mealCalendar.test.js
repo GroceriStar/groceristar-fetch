@@ -20,4 +20,11 @@ describe('testing static data files are set', () => {
     })
   })
 
+  test('getDishByMonth', () => {
+    for (let i = 1; i <= 5; i++) {
+      var stream = mealCalendar.getDishByMonth(i)
+      expect(stream).not.toBe('')
+    }
+  })
+
 })
