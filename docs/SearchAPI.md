@@ -4,6 +4,7 @@ title: SearchAPI project
 sidebar_label: SearchAPI project
 ---
 
+Search API repository: https://github.com/ChickenKyiv/recipe-search-api
 ---
 #### Get an array of Allergies
 

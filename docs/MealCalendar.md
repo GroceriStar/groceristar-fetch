@@ -4,6 +4,8 @@ title: Meal Calendar project
 sidebar_label: Meal Calendar project
 ---
 
+Meal Calendar repository: https://github.com/GroceriStar/calendar
+
 ---
 ### Get an array of dishes by day
 ```
