@@ -4,11 +4,10 @@ title: Table of contents
 ---
 
 * [Getting Started](README.md)
-* [ChickenKyiv](ChickenKyiv.md)
-* [Code sample](code-sample.md)
-* [Groceristar](Groceristar.md)
-* [Meal Calendar](MealCalendar.md)
-* [Search API](SearchAPI.md)
-* [Search Form](SearchForm.md)
+* [ChickenKyiv project section](ChickenKyiv.md)
+* [Groceristar project section](Groceristar.md)
+* [Meal Calendar project section](MealCalendar.md)
+* [Search API project section](SearchAPI.md)
+* [Search Form project section](SearchForm.md)
 * [Stretch goals](stretch-goals.md)
 * [Tests](tests.md)

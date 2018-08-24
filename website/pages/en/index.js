@@ -129,36 +129,57 @@ const Features = props => (
 
 const MainPage = props => (
   <div
-    className="productShowcaseSection paddingBottom"
+    className="showcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
 
-        <div className = "tableofcontents">
+      <div className = "tableofcontents">
 
-      <br/>Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
-      <br/>In a few our projects we have a similar files. And we always copy-paste code between them. So by moving this code into separated place - i hope we'll make our projects better.
+      <p>
+      Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
+      </p>
+      <p>
+      In a few our projects we have a similar files. And we always copy-paste code between them. So by moving this code into separated place - i hope we'll make our projects better.
+      </p>
       </div>
-
-
   </div>
 );
+
 const FeatureCallout = props => (
   <div
-    className="productShowcaseSection paddingBottom"
+    className="showcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
     <h2>Table of contents</h2>
-        <div className = "tableofcontents">
+      <div className = "tableofcontents" style={{margin: '0px 150px'}}>
 
-          <ul>
-  <li><a href="/groceristar-fetch/docs/intro.html">Getting Started</a></li>
-  <li><a href="/groceristar-fetch/docs/chickenkyiv-project.html">ChickenKyiv</a></li>
-  <li><a href="/groceristar-fetch/docs/code-sample.html">Code sample</a></li>
-  <li><a href="/groceristar-fetch/docs/groceristar-project.html">Groceristar</a></li>
-  <li><a href="/groceristar-fetch/docs/mealcalendar-project.html">Meal Calendar</a></li>
-  <li><a href="/groceristar-fetch/docs/searchapi-project.html">Search API</a></li>
-  <li><a href="/groceristar-fetch/docs/searchform-project.html">Search Form</a></li>
-  <li><a href="/groceristar-fetch/docs/stretch-goals.html">Stretch goals</a></li>
-  <li><a href="/groceristar-fetch/docs/tests.html">Tests</a></li>
-  </ul>
+        <ul>
+          <li>
+            <a href="/groceristar-fetch/docs/intro.html">Getting Started</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/chickenkyiv-project.html">ChickenKyiv</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/code-sample.html">Code sample</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/groceristar-project.html">Groceristar</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/mealcalendar-project.html">Meal Calendar</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/searchapi-project.html">Search API</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/searchform-project.html">Search Form</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/stretch-goals.html">Stretch goals</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/tests.html">Tests</a>
+          </li>
+        </ul>
 
       </div>
 
@@ -274,15 +295,17 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           {/* <Features /> */}
-           {/* <TryOut /> */}
+          {/* <TryOut /> */}
+          <Container padding={['bottom']}>
+            <MainPage />
+            <FeatureCallout />
+          </Container>
 
-          <MainPage />
-          <FeatureCallout />
 
-           {/* <LearnHow /> */}
+          {/* <LearnHow /> */}
 
           {/* <Description />  */}
-           {/* <Showcase language={language} /> */}
+          {/* <Showcase language={language} /> */}
         </div>
       </div>
     );
