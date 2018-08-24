@@ -14,6 +14,12 @@ const GridBlock = CompLibrary.GridBlock;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
+
+// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Banana.png
+// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Orange.png
+// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Stawberry.png
+// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Tomato%20(1).png
+
 function imgUrl(img) {
   return siteConfig.baseUrl + 'img/' + img;
 }
@@ -45,7 +51,9 @@ Button.defaultProps = {
 const SplashContainer = props => (
   <div className="homeContainer">
     <div className="homeSplashFade">
-      <div className="wrapper homeWrapper">{props.children}</div>
+      <div className="wrapper homeWrapper">
+        {props.children}
+      </div>
     </div>
   </div>
 );
@@ -59,14 +67,18 @@ const Logo = props => (
 const ProjectTitle = props => (
   <h2 className="projectTitle">
     {siteConfig.title}
-    <small>{siteConfig.tagline}</small>
+    <small>
+    {siteConfig.tagline}
+    </small>
   </h2>
 );
 
 const PromoSection = props => (
   <div className="section promoSection">
     <div className="promoRow">
-      <div className="pluginRowBlock">{props.children}</div>
+      <div className="pluginRowBlock">
+      {props.children}
+      </div>
     </div>
   </div>
 );
@@ -114,6 +126,7 @@ const Features = props => (
     ]}
   </Block>
 );
+
 const MainPage = props => (
   <div
     className="productShowcaseSection paddingBottom"
@@ -182,6 +195,7 @@ const FeatureCallout2 = props => (
     </div>
   </div>
 );
+
 const LearnHow = props => (
   <Block background="light">
     {[
