@@ -44,6 +44,24 @@ module.getAttribute = function (attribute) {
   }
 }
 
+module.getPlaceholder = function(attribute) {
+  if (attribute == 'Allergy') {
+    return "Allergies";
+  }
+  if (attribute == 'Diets') {
+    return "Specific Diets";
+  }
+  if (attribute == 'Cuisine') {
+    return "Specific Cuisine ";
+  }
+  if (attribute == 'Course') {
+    return "Course";
+  }
+  if (attribute == 'Holidays') {
+    return "Holiday";
+  }
+}
+
 // module.getAllergies = function () {
 // 	return parser( allergies );
 // }

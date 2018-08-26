@@ -42,4 +42,29 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
+  test('getPlaceholder("Allergy")', ()=> {
+    var stream = search.getPlaceholder('Allergy')
+    expect(stream).not.toBe('')
+  })
+
+  test('getPlaceholder("Diets")', ()=> {
+    var stream = search.getPlaceholder('Diets')
+    expect(stream).not.toBe('')
+  })
+
+  test('getPlaceholder("Cuisine")', ()=> {
+    var stream = search.getPlaceholder('Cuisine')
+    expect(stream).not.toBe('')
+  })
+
+  test('getPlaceholder("Course")', ()=> {
+    var stream = search.getPlaceholder('Course')
+    expect(stream).not.toBe('')
+  })
+
+  test('getPlaceholder("Holidays")', ()=> {
+    var stream = search.getPlaceholder('Holidays')
+    expect(stream).not.toBe('')
+  })
+
 })
