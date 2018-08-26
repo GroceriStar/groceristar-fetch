@@ -416,6 +416,14 @@ example
 ]
 ```
 
+---
+### Get a placeholder
+```
+var allergy = gf.getPlaceholder('Allergy');
+// will return "Allergies"
+
+```
+
 ## Intergration with React
 ```
 import data from '@groceristar/groceristar-fetch/search';
