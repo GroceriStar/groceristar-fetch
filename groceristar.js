@@ -29,10 +29,29 @@ module.getDepartments = function() {
 	return parser( departments )
 }
 
-// @TODO will work only when we have one grocery list
-module.getAllDepartments = function(){
-	return _.map(groceries[0]["departments"])
-}
+module.getGroceryById = function(id) {
+  return [_.find(parser(groceries), ['id', id])];
+};
+
+module.getGroceryListsWithCountDepartments = function() {
+  return _.map(parser(groceries), glist => {
+    const obj = {
+      id: glist.id,
+      name: glist.name,
+      departmentsCount: glist.departments.length
+    };
+    delete obj.departments;
+    return obj;
+  });
+};
+
+module.getAllDepartments = function() {
+  const departments = [];
+  _.forEach(_.range(0, groceries.length), value =>
+    departments.push(..._.map(groceries[value]['departments']))
+  );
+  return departments;
+};
 
 module.getAllIngredientsByOneDepartment = function(department){
 
