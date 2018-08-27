@@ -32,4 +32,16 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
+  test('getGroceryById()', () => {
+    for (let i = 1; i <= 7 ; i++) {
+      var stream = groceristar.getGroceryById(i)
+      expect(stream).not.toBe('')
+    }
+  })
+
+  test('getGroceryListsWithCountDepartments()', () => {
+    var stream = groceristar.getGroceryListsWithCountDepartments()
+    expect(stream).not.toBe('')
+  })
+  
 })
