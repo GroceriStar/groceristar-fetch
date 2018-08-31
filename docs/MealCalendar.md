@@ -10,6 +10,8 @@ Meal Calendar repository: https://github.com/GroceriStar/calendar
 ### Get an array of dishes by day
 ```
 var dishesOfTuesday = gf.getDishByDay('Tuesday');
+// if you want a limit of dishes, you can pass as parameter:
+// var dishesOfTuesdayLimit5 = gf.getDishByDay('Tuesday', 5);
 
 example
 [
@@ -38,6 +40,27 @@ example
       {
         "tag": "pork",
         "text": "Ham with Cheesy Potato Casserole, Green Bean Casserole, Deviled Eggs and Rolls",
+        "day": "Sunday"
+      }
+    ]
+  }
+]
+```
+
+---
+### Get an array of dishes by month
+```
+var dishesOfMonth3 = gf.getDishByMonth(3);
+Obs: for now, 5 is the max number of month
+
+example
+[
+  {
+    "id": "week9",
+    "recipes": [
+      {
+        "tag": "pork",
+        "text": "Grilled Pork Chops with Twice Baked Potatoes, Green Beans Strawberries",
         "day": "Sunday"
       }
     ]

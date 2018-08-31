@@ -83,3 +83,50 @@ example
 	"Carrots"
 ]
 ```
+
+---
+### Get an array of grocery by id
+```
+var groceryId5 = gf.getGroceryById(5);
+
+example
+[
+  {
+    "departments": [
+      "FATS",
+      "KETO SNACKS",
+      "PROTEIN",
+      "VEGGIES",
+      "CONDIMENTS",
+      "DRINKS",
+      "FLOUR",
+      "FRUITS"
+    ],
+    "id": 5,
+    "name": "Keto Diet Food",
+    "img": false,
+    "desc": false,
+    "slug": false
+  }
+]
+```
+
+---
+### Get an array of grocery lists with count of departments
+```
+var groceryLists = gf.getGroceryListsWithCountDepartments();
+
+example
+[
+  {
+    "id": 1,
+    "name": "Ultimate Grocery List",
+    "departmentsCount": 27
+  },
+  {
+    "id": 2,
+    "name": "Clean Fatiring",
+    "departmentsCount": 8
+  },
+]
+```
