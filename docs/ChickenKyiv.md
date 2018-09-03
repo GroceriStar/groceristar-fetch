@@ -1,6 +1,6 @@
 ---
 id: chickenkyiv-project
-title: ChickenKyiv project
+title: Methods, related to ChickenKyiv project
 sidebar_label: ChickenKyiv project
 ---
 
