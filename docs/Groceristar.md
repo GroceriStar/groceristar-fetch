@@ -10,8 +10,10 @@ sidebar_label: GroceriStar project
 var ingredients = gf.getIngredients();
 
 //returns array of objects containing ingredients with their departments
+```
 
-example
+Return
+```
 {
     "name": "Butter  Margarine",
     "department": "Dairy"
@@ -32,8 +34,10 @@ var grocery = gf.getGrocery();
 #### Get an array of Users
 ```
 var users = gf.getUsers();
+```
 
-example
+Return
+```
 {
     "name": "john",
     "email": "john.doe@ibm.com",
@@ -46,8 +50,10 @@ example
 #### Get an array of Departments
 ```
 var departments = gf.getDepartments();
+```
 
-example
+Return
+```
 {
    "name": "Fresh vegetables",
    "type": "food"
@@ -59,8 +65,9 @@ example
 #### Get an array of all Departments
 ```
 var allDepartments = gf.getAllDepartments();
-
-example
+```
+Return
+```
 [
     "Fresh vegetables",
     "Condiments / Sauces",
@@ -75,8 +82,10 @@ example
 #### Get an array of all ingredients by one department
 ```
 var allIngredientsByOneDepartment = gf.getAllIngredientsByOneDepartment("Fresh vegetables");
+```
 
-example
+Return
+```
 [
 	"Asparagus",
 	"Broccoli",
@@ -88,8 +97,10 @@ example
 ### Get an array of grocery by id
 ```
 var groceryId5 = gf.getGroceryById(5);
+```
 
-example
+Return
+```
 [
   {
     "departments": [
@@ -115,8 +126,10 @@ example
 ### Get an array of grocery lists with count of departments
 ```
 var groceryLists = gf.getGroceryListsWithCountDepartments();
+```
 
-example
+Return
+```
 [
   {
     "id": 1,
