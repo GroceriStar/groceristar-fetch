@@ -7,7 +7,7 @@
           "tag":"breakfast",
            "text":"Grilled Honey & Ginger Marinated Flank Steaks with Mashed Potatoes, Tossed Salad and Rolls",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }
       ],
      [{
@@ -21,14 +21,14 @@
            "tag":"dinner",
            "text":"Slow Cooker Cola Chicken with Leftover Mashed Potato Puff, Green Beans and Peaches",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Grilled Pork Chocps with Baked Potato, Steamed Broccoli and Strawberries",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -42,14 +42,14 @@
            "tag":"dinner",
            "text":"Tilapia with Corn on the Cob, Couscous and Pears",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Teriyaki Chicken with Fried Rice, Peas and Pineapple",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week2",
@@ -58,7 +58,7 @@
            "tag":"breakfast",
            "text":"Skillet Cube Steaks with Mashed Potatoes, Caesar Salad and Pears (make extra mashed potatoes)",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -72,14 +72,14 @@
            "tag":"dinner",
            "text":"Shepard's Pie with Deviled Eggs, Rolls and Peaches",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Chicken Quesadillas with Salsa & Chips and Refried Beans",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -93,14 +93,14 @@
            "tag":"dinner",
            "text":"Shrimp Scampi with Steamed Rice, Tossed Salad and Rice",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Barbecue Meatballs with French Fries, Green Beans and Apple Slices",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week3",
@@ -109,7 +109,7 @@
            "tag":"breakfast",
            "text":"Grilled Steak with Twice Baked Potatoes, Steamed Asparagus and Mandarin Oranges",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -123,14 +123,14 @@
            "tag":"dinner",
            "text":"Spaghetti & Meatballs with Tossed Salad and Breadsticks",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Slow Cooker Country Style Barbecue Ribs with French Fries, Pototoe Salad, Carrot Sticks, Grapes and Apple Slices",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -144,14 +144,14 @@
            "tag":"dinner",
            "text":"Salmon with Steamed Rice, Steamed Broccoli and Pears",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Fried Chicken with Leftover Mashed Potatoes, Carrot Sticks, Broccoli, & Ranch Dip and Rolls",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week4",
@@ -160,7 +160,7 @@
            "tag":"breakfast",
            "text":"Chicken Parmesan with Spaghetti, Tossed Salad and Garlic Bread",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -174,14 +174,14 @@
            "tag":"dinner",
            "text":"Shake-N-Bake Pork Chops with Twice Baked Potoates, Green Beans and Broccoli Salad",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Tacos with Refried Beans and Mexican Tomato and Corn Salad",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -195,14 +195,14 @@
            "tag":"dinner",
            "text":"Shrimp Scampi with Roasted Potatoes and Steamed Broccoli",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Turkey Cutlets with Mashed Potatoes, Microwave Fresh Asparagus and Rolls",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week5",
@@ -211,7 +211,7 @@
            "tag":"breakfast",
            "text":"Ham with Cheesy Potato Casserole, Green Bean Casserole, Deviled Eggs and Rolls",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -225,14 +225,14 @@
            "tag":"dinner",
            "text":"Potato & Ham Casserole with Tossed Salad and Mandarin Oranges",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Ground Turkey or Beef Stroganoff with Green Beans, Peaches and Rolls",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -246,14 +246,14 @@
            "tag":"dinner",
            "text":"Sweet & Sour Meatballs with Steamed Rice, Steamed Broccoli and Pineapple",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Baked Ziti with Caesar Salad and Garlic Bread",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week6",
@@ -262,7 +262,7 @@
            "tag":"breakfast",
            "text":"Chicken Marsala with Mashed Potatoes and Steamed Asparagus",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -276,14 +276,14 @@
            "tag":"dinner",
            "text":"Grilled Pork Chops with Buttered Noodles, Corn on Cob and Applesauce",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Asian Tilapia & Veggie Foil Packets with Steamed Rice and Pears",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -297,14 +297,14 @@
            "tag":"dinner",
            "text":"Meatloaf with Sweet Potatoes, Green Beans and Mandarin Oranges",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Pot Roast with Roasted Potatoes, Roasted Carrots and Rolls",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week7",
@@ -313,7 +313,7 @@
            "tag":"breakfast",
            "text":"Lasagna with Tossed Salad and Garlic Bread",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -327,14 +327,14 @@
            "tag":"dinner",
            "text":"Slow Cocker Barbecue Chicken with Roasted Sweet Potatoes, Corn on Cob and Cucumber Salad",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Shrimp Fettucine Alfredo with Steamed Broccoli and Breadsticks",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -348,14 +348,14 @@
            "tag":"dinner",
            "text":"Pizza with Tossed Salad and Mandarin Oranges",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Pork Tenderloin with Mashed Potatoes, Green Beans and Rolls",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week8",
@@ -364,7 +364,7 @@
            "tag":"breakfast",
            "text":"Smoked Brisket with Potato Salad, Baked Beans and Texas Toast",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -378,14 +378,14 @@
            "tag":"dinner",
            "text":"Chopped Beef Sandwiches with Chips, Broccoli Salad Carrot Sticks and Strawberries",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Chicken & Pepper Stir Fry with Steamed Rice and Pineapple",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -399,14 +399,14 @@
            "tag":"dinner",
            "text":"Spaghetti & Meatballs with Caesar Salad and Breadsticks",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Grilled Sausage with Corn on Cob, Coleslaw and Strawberries",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week9",
@@ -415,7 +415,7 @@
            "tag":"breakfast",
            "text":"Grilled Pork Chops with Twice Baked Potatoes, Green Beans Strawberries",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -429,14 +429,14 @@
            "tag":"dinner",
            "text":"Manicotti with Tossed Salad and Garlic Bread",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Asian Salmon in Foil with Roasted Vegetables and Strawberries",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -450,14 +450,14 @@
            "tag":"dinner",
            "text":"Chicken Fried Rice with Egg Rolls",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Smoked Pork Roast with Mashed Potatoes, Corn on Cob and Peaches",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week10",
@@ -466,7 +466,7 @@
            "tag":"breakfast",
            "text":"Grilled Honey Mustard Chicken with Mustard Chicken, Green Beans and Rolls",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -480,14 +480,14 @@
            "tag":"dinner",
            "text":"Beef Taco Casserole with Corn and Peaches",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Classic Baked Ziti with Tossed Salad and Garlic Bread",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -501,14 +501,14 @@
            "tag":"dinner",
            "text":"Grilled Brats with Corn on Cob, Baked Beans and  Strawberries & Blueberries",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Broccoli Beef with Steamed Rice",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week11",
@@ -517,7 +517,7 @@
            "tag":"breakfast",
            "text":"Smoked Chicken with Potato Salad, Cucumber Salad and Strawberries",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -531,14 +531,14 @@
            "tag":"dinner",
            "text":"Smoked Sausage & Potatoes with Tossed Salad",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Chicken Quesadillas with Refried Beans and Chips & Salsa",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -552,14 +552,14 @@
            "tag":"dinner",
            "text":"Cheeseburgers with French Fries, Carrot Sticks and Strawberries",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Grilled Steaks with Baked Potatoes and Grilled Vegetable Kabobs",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week12",
@@ -568,7 +568,7 @@
            "tag":"breakfast",
            "text":"Grilled Honey Mustard Chicken with Green Bean & Potato Salad and Fresh Fruit",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -582,14 +582,14 @@
            "tag":"dinner",
            "text":"Teriyaki Chicken Meatballs with Hibachi Noodles, Steamed Broccoli and Pineapple",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Beef Taco Bake with Corn and Peaches",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -603,14 +603,14 @@
            "tag":"dinner",
            "text":"Chicken Parmigiana with Spaghetti, Tossed Salad and Garlic Bread",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Beef Kabobs w/ mushrooms, red onion & bell peppers with Baked Potato and Fresh Fruit",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week13",
@@ -619,7 +619,7 @@
            "tag":"breakfast",
            "text":"Meatloaf with  Mashed Potatoes, Corn on Cob and Fresh Fruit",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -633,14 +633,14 @@
            "tag":"dinner",
            "text":"Grilled Sausage with Potato Salad, Baked Beans and Fresh Fruit",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"BLTs/ PBJ for kids with Carrots & bell peppers and Fresh Fruit",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -654,14 +654,14 @@
            "tag":"dinner",
            "text":"Barbecue Meatballs with Pasta Salad",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Poached Salmon with Steamed Rice, Cucumber Salad and Fresh Fruit",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week14",
@@ -670,7 +670,7 @@
            "tag":"breakfast",
            "text":"Cheeseburgers with French Fries, Peas and Applesauce",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -684,14 +684,14 @@
            "tag":"dinner",
            "text":"Slow Cooker Tasty Drumsticks with Coleslaw and Fruit Salad",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Italian Sausage Pasta with Caesar Salad",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -705,14 +705,14 @@
            "tag":"dinner",
            "text":"Campfire Hot Dogs with Baked Beans, Fresh Fruit and S’mores",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Grilled Pork Chops with Potato Salad, Corn of Cob and Watermelon",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week15",
@@ -721,7 +721,7 @@
            "tag":"breakfast",
            "text":"Pork Loin with Potato Casserole and Grilled Vegetable Kabob",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -735,14 +735,14 @@
            "tag":"dinner",
            "text":"Baked Turkey Breast with Mashed Potatoes and Green Beans",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Chicken Strips with French Fries, Carrot Sticks and Fresh Fruit",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -756,14 +756,14 @@
            "tag":"dinner",
            "text":"Sloppy Joes with Cucumber Salad and Fresh Fruit",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Smoked Whole Chicken with Broccoli Salad, Baked Beans and Fresh Fruit",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week16",
@@ -772,7 +772,7 @@
            "tag":"breakfast",
            "text":"Slow Cooker Roast with Potatoes, Carrots and Rolls",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -786,14 +786,14 @@
            "tag":"dinner",
            "text":"Shrimp Scampi with Spaghetti and Caesar Salad",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Beef Taco Bake with Corn, Tossed Salad and Peaches",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -807,14 +807,14 @@
            "tag":"dinner",
            "text":"Baked Salmon with Mashed Potatoes and Peas",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Barbecue Meatballs with Potato Salad, Corn on Cob and Fresh Fruit",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week17",
@@ -823,7 +823,7 @@
            "tag":"breakfast",
            "text":"Sweet and Sour Chicken with Rice and Pineapple",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -837,14 +837,14 @@
            "tag":"dinner",
            "text":"Shake N Bake Pork Chops with Twice Baked Potatoes, Corn on Cob and Applesauce",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Goulash with Salad, Peaches and Biscuit",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -858,14 +858,14 @@
            "tag":"dinner",
            "text":"Pizza Quesadillas with Carrot Sticks and Grapes",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Baked Teriyaki Chicken Meatballs with Rice, Peas and Pears",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week18",
@@ -874,7 +874,7 @@
            "tag":"breakfast",
            "text":"Barbecue Chicken with Corn on Cob, Coleslaw and Peaches",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -888,14 +888,14 @@
            "tag":"dinner",
            "text":"Teriyaki Salmon with Mashed Potatoes, Steamed Asparagus/Green and Beans Pears",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Sloppy Joes with French Fries, Veggies & Ranch and Apple Slices",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -909,14 +909,14 @@
            "tag":"dinner",
            "text":"Tacos with Refried Beans and Chips & Salsa",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Grilled Brats/Hot Dogs with Potato Salad, Macoroni & Cheese and Strawberries",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week19",
@@ -925,7 +925,7 @@
            "tag":"breakfast",
            "text":"Smoked Sausage & Potatoes with Green Beans and Tossed Sala",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -939,14 +939,14 @@
            "tag":"dinner",
            "text":"Slow Cooker Barbecue Pork Ribs with Potato Salad and Baked Beans",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Chicken Quesadillas with Corn and Chips & Salsa",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -960,14 +960,14 @@
            "tag":"dinner",
            "text":"Meatloaf with Mashed Potatoes, Green Beans and Peaches",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Pizza with Tossed Salad and Apple Slices",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]},
+           "time":"7:00-8:30"}]]},
 
   {
     "id":"week20",
@@ -976,7 +976,7 @@
            "tag":"breakfast",
            "text":"Enchiladas with Refried Beans and Chips & Salsa",
            "day":"Sunday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -990,14 +990,14 @@
            "tag":"dinner",
            "text":"Slow Cooker Beef Stew with Tossed Salad and Rolls",
            "day":"Tuesday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Broccoli Beef with Steamed Rice and Pineapple",
            "day":"Wednesday",
-           "time":"09:00-10:30"
+           "time":"7:00-8:30"
      }],
 
      [{
@@ -1011,12 +1011,12 @@
            "tag":"dinner",
            "text":"Shepherd’s Pie with Tossed Salad and Clementines",
            "day":"Friday",
-           "time":"17:00-18:00"
+           "time":"18:00-19:30"
      }],
 
      [{
            "tag":"breakfast",
            "text":"Grilled Steaks with Mashed Potato Puffs and Green Beans",
            "day":"Saturday",
-           "time":"09:00-10:30"}]]}
+           "time":"7:00-8:30"}]]}
 ]

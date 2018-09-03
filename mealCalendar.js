@@ -9,11 +9,15 @@ module.getMealCalendar = function () {
   return parser(mealCalendar);
 }
 
-module.getDishByDay = function(day) {
-  return _.map(parser(mealCalendar), meal => ({
-    ...meal,
-    recipes: _.filter(meal.recipes, { day })
-  }));
+module.getDishByDay = function(day, maxDishes = mealCalendar.length) {
+  return _.filter(parser(mealCalendar), (meal, index) => {
+    if (index < maxDishes) {
+      return {
+        ...meal,
+        recipes: _.filter(meal.recipes, { day })
+      };
+    }
+  });
 };
 
 module.getDishByMonth = function(monthNumb) {
