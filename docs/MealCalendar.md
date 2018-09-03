@@ -36,7 +36,7 @@ Result
 var dishesOfWeek5 = gf.getDishByWeek('week5');
 ```
 
-return
+Result
 ```
 [
   {
@@ -59,7 +59,7 @@ var dishesOfMonth3 = gf.getDishByMonth(3);
 //Obs: for now, 5 is the max number of month
 ```
 
-return
+Result
 ```
 [
   {
