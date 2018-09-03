@@ -4,16 +4,19 @@ title: Methods, related to Meal Calendar project
 sidebar_label: Meal Calendar project
 ---
 
-Meal Calendar repository: https://github.com/GroceriStar/calendar
+Meal Calendar project repository: https://github.com/GroceriStar/calendar
 
 ---
 ### Get an array of dishes by day
+
 ```
 var dishesOfTuesday = gf.getDishByDay('Tuesday');
 // if you want a limit of dishes, you can pass as parameter:
 // var dishesOfTuesdayLimit5 = gf.getDishByDay('Tuesday', 5);
+```
 
-example
+Result
+```
 [
   {
     "id": "week1",
@@ -31,8 +34,10 @@ example
 ### Get an array of dishes by week
 ```
 var dishesOfWeek5 = gf.getDishByWeek('week5');
+```
 
-example
+return
+```
 [
   {
     "id": "week5",
@@ -51,9 +56,11 @@ example
 ### Get an array of dishes by month
 ```
 var dishesOfMonth3 = gf.getDishByMonth(3);
-Obs: for now, 5 is the max number of month
+//Obs: for now, 5 is the max number of month
+```
 
-example
+return
+```
 [
   {
     "id": "week9",
