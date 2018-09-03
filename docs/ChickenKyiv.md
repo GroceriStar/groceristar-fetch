@@ -8,8 +8,10 @@ sidebar_label: ChickenKyiv project
 #### Get an array of Ingredients3
 ```
 var ingredients3 = gf.getIngredients3();
+```
 
-example
+Result
+```
 [
     {
       "name": "medium russet potatoes, sliced into sticks",
@@ -31,8 +33,10 @@ example
 #### Get an array of Menu
 ```
 var menu = gf.getMenu();
+```
 
-example
+Result
+```
 [{
     "title": "Weekly menu #9",
     "date": "new Date",
@@ -52,8 +56,10 @@ example
 #### Get an array of Recipe
 ```
 var recipe = gf.getRecipe();
+```
 
-example
+Result
+```
 [{
 
     "title": "Crock Pot Roast12",
@@ -77,8 +83,10 @@ example
 #### Get an array of nutritions1
 ```
 var nutritions1 = gf.getNutritions1();
+```
 
-example
+Return
+```
 [
  {
    "calories"  : 450,
@@ -94,8 +102,10 @@ example
 #### Get an array of nutritions2
 ```
 var nutritions2 = gf.getNutritions2();
+```
 
-example
+Return
+```
 [{
          "type": "Vitamins",
          "items": [
@@ -109,8 +119,10 @@ example
 ### Get an array of meal calendar
 ```
 var mealCalendar = gf.getMealCalendar();
+```
 
-example
+Return
+```
 [
   {
     "id": "week1",
