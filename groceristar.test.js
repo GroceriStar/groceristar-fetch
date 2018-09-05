@@ -12,6 +12,11 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
+  test('groceryByName file is set', () => {
+    var stream = groceristar.getGroceryByName("Clean Fatiring")
+    expect(stream).not.toBe('')
+  })
+
   test('users file is set', () => {
     var stream = groceristar.getUsers()
     expect(stream).not.toBe('')
@@ -43,5 +48,5 @@ describe('testing static data files are set', () => {
     var stream = groceristar.getGroceryListsWithCountDepartments()
     expect(stream).not.toBe('')
   })
-  
+
 })

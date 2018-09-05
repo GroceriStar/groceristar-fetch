@@ -33,6 +33,12 @@ module.getGroceryById = function(id) {
   return [_.find(parser(groceries), ['id', id])];
 };
 
+module.getGroceryByName = function(name){
+	return _.filter(parser(groceries),function(item){
+		return item.name === name;
+	})
+}
+
 module.getGroceryListsWithCountDepartments = function() {
   return _.map(parser(groceries), glist => {
     const obj = {
