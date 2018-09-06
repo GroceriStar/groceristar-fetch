@@ -14,6 +14,12 @@ const GridBlock = CompLibrary.GridBlock;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
+
+// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Banana.png
+// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Orange.png
+// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Stawberry.png
+// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Tomato%20(1).png
+
 function imgUrl(img) {
   return siteConfig.baseUrl + 'img/' + img;
 }
@@ -45,7 +51,9 @@ Button.defaultProps = {
 const SplashContainer = props => (
   <div className="homeContainer">
     <div className="homeSplashFade">
-      <div className="wrapper homeWrapper">{props.children}</div>
+      <div className="wrapper homeWrapper">
+        {props.children}
+      </div>
     </div>
   </div>
 );
@@ -59,14 +67,18 @@ const Logo = props => (
 const ProjectTitle = props => (
   <h2 className="projectTitle">
     {siteConfig.title}
-    <small>{siteConfig.tagline}</small>
+    <small>
+    {siteConfig.tagline}
+    </small>
   </h2>
 );
 
 const PromoSection = props => (
   <div className="section promoSection">
     <div className="promoRow">
-      <div className="pluginRowBlock">{props.children}</div>
+      <div className="pluginRowBlock">
+      {props.children}
+      </div>
     </div>
   </div>
 );
@@ -114,38 +126,60 @@ const Features = props => (
     ]}
   </Block>
 );
+
 const MainPage = props => (
   <div
-    className="productShowcaseSection paddingBottom"
+    className="showcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
 
-        <div className = "tableofcontents">
+      <div className = "tableofcontents">
 
-      <br/>Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
-      <br/>In a few our projects we have a similar files. And we always copy-paste code between them. So by moving this code into separated place - i hope we'll make our projects better.
+      <p>
+      Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
+      </p>
+      <p>
+      In a few our projects we have a similar files. And we always copy-paste code between them. So by moving this code into separated place - i hope we'll make our projects better.
+      </p>
       </div>
-
-
   </div>
 );
+
 const FeatureCallout = props => (
   <div
-    className="productShowcaseSection paddingBottom"
+    className="showcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
     <h2>Table of contents</h2>
-        <div className = "tableofcontents">
+      <div className = "tableofcontents" style={{margin: '0px 150px'}}>
 
-          <ul>
-  <li><a href="/groceristar-fetch/docs/intro.html">Getting Started</a></li>
-  <li><a href="/groceristar-fetch/docs/chickenkyiv-project.html">ChickenKyiv</a></li>
-  <li><a href="/groceristar-fetch/docs/code-sample.html">Code sample</a></li>
-  <li><a href="/groceristar-fetch/docs/groceristar-project.html">Groceristar</a></li>
-  <li><a href="/groceristar-fetch/docs/mealcalendar-project.html">Meal Calendar</a></li>
-  <li><a href="/groceristar-fetch/docs/searchapi-project.html">Search API</a></li>
-  <li><a href="/groceristar-fetch/docs/searchform-project.html">Search Form</a></li>
-  <li><a href="/groceristar-fetch/docs/stretch-goals.html">Stretch goals</a></li>
-  <li><a href="/groceristar-fetch/docs/tests.html">Tests</a></li>
-  </ul>
+        <ul>
+          <li>
+            <a href="/groceristar-fetch/docs/intro.html">Getting Started</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/chickenkyiv-project.html">ChickenKyiv</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/code-sample.html">Code sample</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/groceristar-project.html">Groceristar</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/mealcalendar-project.html">Meal Calendar</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/searchapi-project.html">Search API</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/searchform-project.html">Search Form</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/stretch-goals.html">Stretch goals</a>
+          </li>
+          <li>
+            <a href="/groceristar-fetch/docs/tests.html">Tests</a>
+          </li>
+        </ul>
 
       </div>
 
@@ -182,6 +216,7 @@ const FeatureCallout2 = props => (
     </div>
   </div>
 );
+
 const LearnHow = props => (
   <Block background="light">
     {[
@@ -260,15 +295,17 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           {/* <Features /> */}
-           {/* <TryOut /> */}
+          {/* <TryOut /> */}
+          <Container padding={['bottom']}>
+            <MainPage />
+            <FeatureCallout />
+          </Container>
 
-          <MainPage />
-          <FeatureCallout />
 
-           {/* <LearnHow /> */}
+          {/* <LearnHow /> */}
 
           {/* <Description />  */}
-           {/* <Showcase language={language} /> */}
+          {/* <Showcase language={language} /> */}
         </div>
       </div>
     );

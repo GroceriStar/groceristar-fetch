@@ -4,13 +4,16 @@ title: SearchAPI project
 sidebar_label: SearchAPI project
 ---
 
+#### Search API repository: https://github.com/ChickenKyiv/recipe-search-api
 ---
 #### Get an array of Allergies
 
 ```
 var allergies = gf.getAttribute('allergies');
+```
 
-example
+Return
+```
 [
   "Gluten-Free",
   "Peanut-Free",
@@ -22,8 +25,9 @@ example
 #### Get an array of Courses
 ```
 var courses = gf.getAttribute('courses');
-
-example
+```
+Return
+```
 [
   "Main Dishes",
   "Desserts",
@@ -44,8 +48,10 @@ var cuisines = gf.getAttribute('cuisines');
 #### Get an array of Diets
 ```
 var diets = gf.getAttribute('diets');
+```
 
-example
+Return
+```
 [
   "Lacto vegetarian",
   "Ovo vegetarian",
@@ -82,8 +88,9 @@ var ingredients2 = gf.getIngredients2();
 var measurements = gf.getMeasurements();
 
 // returns array of measurements object containing singular, plural and abbreviation
-
-example
+```
+Return
+```
 {
     "singular": "gram",
     "plural": "grams",
