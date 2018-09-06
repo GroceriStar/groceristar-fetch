@@ -44,13 +44,13 @@ module.getGroceryByNameWithDepAndIng = function(name){
 	function(item){
 		return item.name === name;
 	});
-	
+
 	let result = [];
 	grocery[0]["departments"].forEach(
 		function(department){
 		result.push(
-			{
-				[department] : module.getAllIngredientsByOneDepartment(department)
+			{	"department": department,
+				"ingredients" : module.getAllIngredientsByOneDepartment(department)
 			});
 	});
 	return result;
