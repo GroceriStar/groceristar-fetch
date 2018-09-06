@@ -12,6 +12,17 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
+  test('method getGroceryByName("Clean Fatiring")', () => {
+    var stream = groceristar.getGroceryByName("Clean Fatiring")
+    expect(stream).not.toBe('')
+  })
+
+  test('method getGroceryByNameWithDepAndIng("Clean Fatiring")', () => {
+    var stream = groceristar.getGroceryByNameWithDepAndIng("Clean Fatiring")
+    expect(stream).not.toBe('')
+  })
+
+
   test('users file is set', () => {
     var stream = groceristar.getUsers()
     expect(stream).not.toBe('')
@@ -43,5 +54,5 @@ describe('testing static data files are set', () => {
     var stream = groceristar.getGroceryListsWithCountDepartments()
     expect(stream).not.toBe('')
   })
-  
+
 })
