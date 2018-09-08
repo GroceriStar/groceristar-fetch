@@ -1,5 +1,5 @@
 const React = require('react');
-const Block = require('./sections/Block');
+const Block = require('Block');
 
 // import Block from './section/Block';
 
