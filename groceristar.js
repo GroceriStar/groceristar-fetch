@@ -21,6 +21,15 @@ module.getGrocery = function() {
 	return parser( groceries )
 }
 
+module.getGroceryShowcase = function() {
+
+	return parser( groceries ).map((item)=>{
+		item.height = 200;
+		item.css = "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)"
+		return item;
+	})
+}
+
 module.getUsers = function() {
 	return parser( users )
 }
