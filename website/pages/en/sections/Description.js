@@ -1,4 +1,7 @@
 const React = require('react');
+const Block = require('./sections/Block');
+
+// import Block from './section/Block';
 
 const Description = props => (
   <Block background="dark">

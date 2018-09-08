@@ -31,3 +31,7 @@ li a {
 .tableofcontents{
   text-align: left;
 }
+
+article {
+  font-size:18px;
+}

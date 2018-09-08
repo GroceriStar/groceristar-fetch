@@ -1,4 +1,5 @@
 const React = require('react');
+const Block = require('./Block');
 
 const TryOut = props => (
   <Block id="try">
