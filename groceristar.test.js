@@ -12,6 +12,11 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
+  test('method getGroceryShowcase()', () => {
+    var stream = groceristar.getGroceryShowcase()
+    expect(stream).not.toBe('')
+  })
+
   test('method getGroceryByName("Clean Fatiring")', () => {
     var stream = groceristar.getGroceryByName("Clean Fatiring")
     expect(stream).not.toBe('')
