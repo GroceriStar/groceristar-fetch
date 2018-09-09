@@ -1,9 +1,7 @@
-[
-  {
+[{
     "id": "1",
     "name": "BAKERY/BREAD",
-    "items": [
-      {
+    "items": [{
         "id": "1",
         "name": "hamburger buns",
         "recipeId": ["1"],
@@ -26,8 +24,7 @@
   {
     "id": "2",
     "name": "BAKING",
-    "items": [
-      {
+    "items": [{
         "id": "4",
         "name": "all-purpose flour",
         "recipeId": ["1"],
@@ -50,8 +47,7 @@
   {
     "id": "3",
     "name": "PANTRY STAPLES",
-    "items": [
-      {
+    "items": [{
         "id": "6",
         "name": "black pepper",
         "recipeId": ["1", "2"],
