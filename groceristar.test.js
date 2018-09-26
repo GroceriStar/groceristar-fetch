@@ -1,16 +1,35 @@
 const groceristar = require('./groceristar.js')
 
-describe('testing static data files are set', () => {
+// @TODO separate methods, related to different datasets.
+// So methods related to ingredients should have a
+// separated describe, with departments methods
 
-  test('ingredients file is set', () => {
+describe('testing static data files are not empty', () => {
+
+  test('ingredients file is not empty', () => {
     var stream = groceristar.getIngredients()
     expect(stream).not.toBe('')
   })
 
-  test('grocery file is set', () => {
+  test('grocery file is not empty', () => {
     var stream = groceristar.getGrocery()
     expect(stream).not.toBe('')
   })
+
+  test('users file is set', () => {
+    var stream = groceristar.getUsers()
+    expect(stream).not.toBe('')
+  })
+
+  test('departments file is set', () => {
+    var stream = groceristar.getDepartments()
+    expect(stream).not.toBe('')
+  })
+
+
+});
+
+describe('Groceristar project methods should return data', () => {
 
   test('method getGroceryShowcase()', () => {
     var stream = groceristar.getGroceryShowcase()
@@ -28,15 +47,9 @@ describe('testing static data files are set', () => {
   })
 
 
-  test('users file is set', () => {
-    var stream = groceristar.getUsers()
-    expect(stream).not.toBe('')
-  })
 
-  test('departments file is set', () => {
-    var stream = groceristar.getDepartments()
-    expect(stream).not.toBe('')
-  })
+
+
 
   test('getAllDepartments()', () => {
     var stream = groceristar.getAllDepartments()
