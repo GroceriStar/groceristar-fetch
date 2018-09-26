@@ -13,6 +13,17 @@ const parser = function ( filename ){
 
 }
 
+// module.count = function() {
+//
+// 	console.log('ingredient ' +  _.size() )
+// 	console.log('department ' +  _.size() )
+// 	console.log('grocery ' +  _.size() )
+// 	console.log('users ' +  _.size() )
+// 	console.log('ingredient ' +  _.size() )
+//
+//
+// };
+
 module.getIngredients = function() {
 	return parser( ingredients )
 }
@@ -21,6 +32,8 @@ module.getGrocery = function() {
 	return parser( groceries )
 }
 
+// @TODO i think as showcase is a separated project, we can move this method to
+// a separated place, in order to make it cleaner
 module.getGroceryShowcase = function() {
 
 	return parser( groceries ).map((item)=>{
