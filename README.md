@@ -10,6 +10,9 @@ Food Tech related static data in json arrays, like recipes, ingredients, recipes
 
 ![Alt Text](https://media.giphy.com/media/4TcRVUzpZzsvo9fVlu/giphy.gif)
 
+[Trello board](https://trello.com/b/U2Jm8JWX/fetch-plugin)
+[Website](https://groceristar.github.io/groceristar-fetch/)
+
 #### Code Example
 
 ```
