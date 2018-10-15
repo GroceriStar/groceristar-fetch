@@ -1,8 +1,10 @@
 const _            = require('lodash');
 const departments  = require('./data/Departments/departments.json');
-const groceries    = require('./data/Grocery/grocery.json');
+let groceries      = require('./data/Grocery/grocery.json');
 const ingredients  = require('./data/Ingredients/ingredients.json');
 const users        = require('./data/Users/users.json');
+const fs           = require('fs');
+const uuid         = require('uuid');
 
 
 
@@ -107,6 +109,51 @@ module.getAllIngredientsByOneDepartment = function(department){
 	return _.map(ingredientsList,'name');
 }
 
+module.getAllDepartmentList = function() {
+  return _.map(this.getDepartments(), item => ({
+    key: uuid(),
+    departmentName: item
+  }));
+};
 
+module.getAllIngredientsList = function(department) {
+  const ings = this.getAllIngredientsByOneDepartment(department);
+  return ings.map(item => ({
+    key: uuid(),
+    name: item.name,
+    isChecked: false
+  }));
+};
+
+module.getAllGrocery = function() {
+  return _.map(parser(groceries), item => ({
+    key: uuid(),
+    ...item
+  }));
+};
+
+module.getAllGroceryDepartment = function(departmentArray) {
+  const departmentArrayObject = departmentArray.map(item => ({
+    key: uuid(),
+    departmentName: item,
+    isChecked: false
+  }));
+  return departmentArrayObject;
+};
+
+module.createNewGroceryList = function(newDepartment) {
+  const nameExists = _.find(
+    groceries,
+    item => item.name === newDepartment.name
+  );
+  !nameExists && newGroceryList(newDepartment);
+};
+
+function newGroceryList(newDepartment) {
+  const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json');
+  const newGrocery = [...parser(groceries), newDepartment];
+  groceriesFile.write(JSON.stringify(newGrocery, null, 2));
+  groceries = newGrocery;
+}
 
 module.exports = module;

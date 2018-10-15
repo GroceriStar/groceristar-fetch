@@ -174,4 +174,25 @@ describe("Groceristar project methods should return data", () => {
     var stream = groceristar.getGroceryListsWithCountDepartments();
     expect(stream).not.toBe("");
   });
+
+  test('getAllDepartmentList()', () => {
+    var stream = groceristar.getAllDepartmentList();
+    expect(stream).not.toBe('');
+  });
+
+  test('getAllIngredientsList()', () => {
+    var stream = groceristar.getAllIngredientsList('Fresh vegetables');
+    expect(stream).not.toBe('');
+  });
+
+  test('getAllGrocery()', () => {
+    var stream = groceristar.getAllGrocery();
+    expect(stream).not.toBe('');
+  });
+
+  test('getAllGroceryDepartment()', () => {
+    var stream = groceristar.getAllGroceryDepartment(groceristar.getDepartments());
+    expect(stream).not.toBe('');
+  });
+
 });
