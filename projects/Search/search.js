@@ -62,36 +62,4 @@ module.getPlaceholder = function(attribute) {
   }
 }
 
-// module.getAllergies = function () {
-// 	return parser( allergies );
-// }
-//
-// module.getCourses = function () {
-// 	return parser( courses );
-// }
-//
-// module.getCuisines = function () {
-// 	return parser( cuisines );
-// }
-//
-// module.getDiets = function () {
-// 	return parser( diets );
-// }
-//
-// module.getHolidays = function () {
-// 	return parser( holidays );
-// }
-
-module.getIngredients1 = function () {
-	return parser( ingredients1 );
-}
-
-module.getIngredients2 = function () {
-	return parser( ingredients2 );
-}
-
-module.getMeasurements = function () {
-	return parser( measurements );
-}
-
 module.exports = module;
