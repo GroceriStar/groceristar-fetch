@@ -4,7 +4,6 @@ const cuisines      = require('../../data/Cuisine/cuisines.json');
 const diets         = require('../../data/Diet/diets.json');
 const holidays      = require('../../data/Holiday/holidays.json');
 const ingredients1  = require('../../data/Ingredients/ingredients1.json');
-const ingredients2  = require('../../data/Ingredients/ingredients2.json');
 const measurements  = require('../../data/Measurement/measurements.json');
 
 const path = require('path')
