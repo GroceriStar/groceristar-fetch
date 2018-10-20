@@ -1,6 +1,6 @@
 //const chickenKyiv = require('./chickenKyiv.js')
-const groceristar = require("./groceristar.js");
-const search = require("./search.js");
+const groceristar = require("./projects/GroceriStar/groceristar.js");
+const search = require("./projects/Search/search.js");
 
 describe("testing if methods inside the files are accessible from the outside", () => {
   test("[ChickenKyiv] recipe file is set", () => {

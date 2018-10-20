@@ -137,6 +137,7 @@ module.createNewGroceryList = function(newDepartment) {
   !nameExists && newGroceryList(newDepartment);
 };
 
+//@TODO should work now.
 function newGroceryList(newDepartment) {
   const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json');
   const newGrocery = [...parser(groceries), newDepartment];
