@@ -27,20 +27,20 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
-  test('ingredients1 file is set', () => {
-    var stream = search.getIngredients1()
-    expect(stream).not.toBe('')
-  })
+  // test('ingredients1 file is set', () => {
+  //   var stream = search.getIngredients1()
+  //   expect(stream).not.toBe('')
+  // })
 
-  test('ingredients2 file is set', () => {
-    var stream = search.getIngredients2()
-    expect(stream).not.toBe('')
-  })
+  // test('ingredients2 file is set', () => {
+  //   var stream = search.getIngredients2()
+  //   expect(stream).not.toBe('')
+  // })
 
-  test('measurements file is set', () => {
-    var stream = search.getMeasurements()
-    expect(stream).not.toBe('')
-  })
+  // test('measurements file is set', () => {
+  //   var stream = search.getMeasurements()
+  //   expect(stream).not.toBe('')
+  // })
 
   test('getPlaceholder("Allergy")', ()=> {
     var stream = search.getPlaceholder('Allergy')

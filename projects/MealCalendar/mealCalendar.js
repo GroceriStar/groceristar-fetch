@@ -1,4 +1,4 @@
-const mealCalendar = require('./data/MealCalendar/mealcalendar.json');
+const mealCalendar = require('../../data/MealCalendar/mealcalendar.json');
 const _            = require('lodash');
 
 const parser = function (filename) {

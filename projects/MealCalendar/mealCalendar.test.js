@@ -1,5 +1,5 @@
 const mealCalendar = require('./mealCalendar.js');
-const mealcalendar = require('./data/MealCalendar/mealcalendar.json');
+const mealcalendar = require('../../data/MealCalendar/mealcalendar.json');
 
 describe('testing static data files are set', () => {
 
