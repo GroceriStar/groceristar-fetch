@@ -6,25 +6,13 @@ const users        = require('./data/Users/users.json');
 const fs           = require('fs');
 const uuid         = require('uuid');
 
-
-
-
 const parser = function ( filename ){
 
 	return JSON.parse( JSON.stringify(filename) )
 
 }
 
-// module.count = function() {
-//
-// 	console.log('ingredient ' +  _.size() )
-// 	console.log('department ' +  _.size() )
-// 	console.log('grocery ' +  _.size() )
-// 	console.log('users ' +  _.size() )
-// 	console.log('ingredient ' +  _.size() )
-//
-//
-// };
+
 
 module.getIngredients = function() {
 	return parser( ingredients )
