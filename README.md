@@ -5,14 +5,17 @@ Food Tech related static data in json arrays, like recipes, ingredients, recipes
 
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)
 [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
-[![Dependabot compatibility score](https://api.dependabot.com/badges/compatibility_score?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)](https://dependabot.com/compatibility-score.html?dependency-name=@groceristar/groceristar-fetch&package-manager=npm_and_yarn&previous-version=1.1.5&new-version=1.1.6)
-[![forthebadge](https://forthebadge.com/images/badges/oooo-kill-em.svg)](https://forthebadge.com)
 
-![Alt Text](https://media.giphy.com/media/4TcRVUzpZzsvo9fVlu/giphy.gif)
 
-[Trello board](https://trello.com/b/U2Jm8JWX/fetch-plugin)
+![Alt Text](https://github.com/GroceriStar/creative/blob/master/app-video/fetch-inside.gif)
 
-[Website](https://groceristar.github.io/groceristar-fetch/)
+[Introduction Article](https://medium.com/groceristar/groceristar-fetch-small-module-that-weve-created-8b4a62bd5d7b)
+
+[Trello board with current tasks](https://trello.com/b/U2Jm8JWX/fetch-plugin)
+
+[Documentation Website](https://groceristar.github.io/groceristar-fetch/)
+
+
 
 #### Code Example
 
@@ -72,6 +75,7 @@ Tasks:
 ---
 ### SearchAPI project examples
 https://groceristar.github.io/groceristar-fetch/docs/searchapi-project.html
+
 ---
 
 ### GroceriStar project examples
