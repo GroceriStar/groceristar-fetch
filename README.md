@@ -20,17 +20,22 @@ Food Tech related static data in json arrays, like recipes, ingredients, recipes
 #### Code Example
 
 ```
-var gf = require('@groceristar/groceristar-fetch')
-var measurements = gf.getMeasurements();
+const { groceristar } = require('@groceristar/groceristar-fetch')
+const departments = groceristar.getDepartments();
 
-// returns array of measurements object containing singular, plural and abbreviation
+// returns an array of all departments
 
 example
-{
-    "singular": "gram",
-    "plural": "grams",
-    "abbreviation": "g"
-}
+[
+  {
+    "name": "Fresh vegetables",
+    "type": "food"
+  },
+  {
+    "name": "Condiments / sauces",
+    "type": "food"
+  }
+]
 ```
 
 #### Motivation
@@ -49,10 +54,11 @@ or
 #### Usage
 
 ```
-var data = require('@groceristar/groceristar-fetch')
-console.log(data);
+const { groceristar, search } = require('@groceristar/groceristar-fetch');
+console.log(groceristar.getDepartments());
+console.log(search.getAttribute('diets'));
 
-import data from '@groceristar/groceristar-fetch'
+import { groceristar, mealCalendar } from '@groceristar/groceristar-fetch'
 ```
 
 #### Tests
@@ -146,7 +152,7 @@ var allergy = gf.getPlaceholder('Allergy');
 
 ## Intergration with React
 ```
-import data from '@groceristar/groceristar-fetch/search';
+import { search } from '@groceristar/groceristar-fetch';
 function toOpt(arr) {
     let Opt= arr.reduce((intermediate, item, index) => {
         intermediate[index]={};
@@ -157,13 +163,13 @@ function toOpt(arr) {
     return Opt;
 }
 
-const Options = toOpt(data.getAllergies());
+const Options = toOpt(search.getAllergies());
 
 ```
 or
 
 ```
-import data from '@groceristar/groceristar-fetch/search';
+import { search as data } from '@groceristar/groceristar-fetch';
 
   getAttributeData(type){
     // this.props.type
