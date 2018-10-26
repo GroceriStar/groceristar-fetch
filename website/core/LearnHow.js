@@ -1,4 +1,5 @@
 const React = require('react');
+const Block = require('./Block');
 
 const LearnHow = props => (
   <Block background="light">

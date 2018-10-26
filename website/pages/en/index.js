@@ -14,10 +14,6 @@ const GridBlock = CompLibrary.GridBlock;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
-
-// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Banana.png
-// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Orange.png
-// https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Stawberry.png
 // https://raw.githubusercontent.com/GroceriStar/creative/master/illustrations/Vegetables_Tomato%20(1).png
 
 function imgUrl(img) {
@@ -99,41 +95,20 @@ class HomeSplash extends React.Component {
   }
 }
 
-const Block = props => (
-  <Container
-    padding={['bottom', 'top']}
-    id={props.id}
-    background={props.background}>
-    <GridBlock align="left" contents={props.children} layout={props.layout} />
-  </Container>
-);
-
-const Features = props => (
-  <Block layout="fourColumn">
-    {[
-      {
-        content: 'This is the content of my feature',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'top',
-        title: 'Feature One',
-      },
-      {
-        content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'top',
-        title: 'Feature Two',
-      },
-    ]}
-  </Block>
-);
+// const Block = props => (
+//   <Container
+//     padding={['bottom', 'top']}
+//     id={props.id}
+//     background={props.background}>
+//     <GridBlock align="left" contents={props.children} layout={props.layout} />
+//   </Container>
+// );
 
 const MainPage = props => (
   <div
     className="showcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
-
       <div className = "tableofcontents">
-
       <p>
       Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
       </p>
@@ -159,9 +134,6 @@ const FeatureCallout = props => (
             <a href="/groceristar-fetch/docs/chickenkyiv-project.html">ChickenKyiv</a>
           </li>
           <li>
-            <a href="/groceristar-fetch/docs/code-sample.html">Code sample</a>
-          </li>
-          <li>
             <a href="/groceristar-fetch/docs/groceristar-project.html">Groceristar</a>
           </li>
           <li>
@@ -180,12 +152,11 @@ const FeatureCallout = props => (
             <a href="/groceristar-fetch/docs/tests.html">Tests</a>
           </li>
         </ul>
-
       </div>
-
 
   </div>
 );
+
 const FeatureCallout2 = props => (
 
   <div className = "ogg" style={{textAlign: 'left'}}>
@@ -207,9 +178,6 @@ const FeatureCallout2 = props => (
         <li>Basic grocery list</li>
         <li>Login screen.</li>
     </ul>
-
-
-
       </p>
     </span></div></div></div>
       </div>
@@ -217,74 +185,6 @@ const FeatureCallout2 = props => (
   </div>
 );
 
-const LearnHow = props => (
-  <Block background="light">
-    {[
-      {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Learn How',
-      },
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: 'Release #1 completed(Free Menu) ^ Build with: Angular, Ionic Framework v.1 Note: soon I’ll redo an app from scratch.',
-        image: imgUrl('54A84DCB-F7EE-49E3-8DA1-1EF07F873622.png'),
-        imageAlign: 'left',
-        title: 'Try it Out',
-      },
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Description',
-      },
-    ]}
-  </Block>
-);
-
-const Showcase = props => {
-  if ((siteConfig.users || []).length === 0) {
-    return null;
-  }
-  const showcase = siteConfig.users
-    .filter(user => {
-      return user.pinned;
-    })
-    .map((user, i) => {
-      return (
-        <a href={user.infoLink} key={i}>
-          <img src={user.image} alt={user.caption} title={user.caption} />
-        </a>
-      );
-    });
-
-  return (
-    <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
-      <p>This project is used by all these people</p>
-      <div className="logos">{showcase}</div>
-      <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
-        </a>
-      </div>
-    </div>
-  );
-};
 
 class Index extends React.Component {
   render() {
@@ -294,18 +194,12 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          {/* <Features /> */}
-          {/* <TryOut /> */}
+
           <Container padding={['bottom']}>
             <MainPage />
             <FeatureCallout />
           </Container>
 
-
-          {/* <LearnHow /> */}
-
-          {/* <Description />  */}
-          {/* <Showcase language={language} /> */}
         </div>
       </div>
     );

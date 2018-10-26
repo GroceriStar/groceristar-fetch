@@ -2,7 +2,6 @@
   "docs": {
   " ":["intro"],
   "Chicken Kyiv":["chickenkyiv-project"],
-  "Code sample":["code-sample"],
   "GroceriStar project":["groceristar-project"],
   "Meal Calendar project":["mealcalendar-project"],
   "SearchAPI project":["searchapi-project"],
