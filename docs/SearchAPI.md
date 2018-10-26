@@ -6,10 +6,19 @@ sidebar_label: SearchAPI project
 
 #### Search API repository: https://github.com/ChickenKyiv/recipe-search-api
 ---
+
+#### Importing Search module
+```
+const { search } = require('@groceristar/groceristar-fetch');
+// or 
+import { search } from '@groceristar/groceristar-fetch';
+```
+
+---
 #### Get an array of Allergies
 
 ```
-var allergies = gf.getAttribute('allergies');
+var allergies = search.getAttribute('allergies');
 ```
 
 Return
@@ -24,7 +33,7 @@ Return
 ---
 #### Get an array of Courses
 ```
-var courses = gf.getAttribute('courses');
+var courses = search.getAttribute('courses');
 ```
 Return
 ```
@@ -40,14 +49,14 @@ Return
 ---
 #### Get an array of Cuisines
 ```
-var cuisines = gf.getAttribute('cuisines');
+var cuisines = search.getAttribute('cuisines');
 ```
 
 
 ---
 #### Get an array of Diets
 ```
-var diets = gf.getAttribute('diets');
+var diets = search.getAttribute('diets');
 ```
 
 Return
@@ -63,14 +72,14 @@ Return
 ---
 #### Get an array of Holidays
 ```
-var holidays = gf.getAttribute('holidays');
+var holidays = search.getAttribute('holidays');
 ```
 
 
 ---
 #### Get an array of Ingredients (Search part)
 ```
-var ingredients1 = gf.getIngredients1();
+var ingredients1 = search.getIngredients1();
 ```
 
 
@@ -78,14 +87,14 @@ var ingredients1 = gf.getIngredients1();
 
 #### Get an array of Ingredients (Search part)
 ```
-var ingredients2 = gf.getIngredients2();
+var ingredients2 = search.getIngredients2();
 ```
 
 
 ---
 #### Get an array of Measurements
 ```
-var measurements = gf.getMeasurements();
+var measurements = search.getMeasurements();
 
 // returns array of measurements object containing singular, plural and abbreviation
 ```

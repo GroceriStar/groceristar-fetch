@@ -4,10 +4,17 @@ title: Methods, related to GroceriStar project
 sidebar_label: GroceriStar project
 ---
 
+#### Importing Groceristar module
+```
+const { groceristar } = require('@groceristar/groceristar-fetch');
+// or 
+import { groceristar } from '@groceristar/groceristar-fetch';
+```
+
 ---
 #### Get an array of Ingredients
 ```
-var ingredients = gf.getIngredients();
+var ingredients = groceristar.getIngredients();
 
 //returns array of objects containing ingredients with their departments
 ```
@@ -24,7 +31,7 @@ Return
 ---
 #### Get an array of Grocery
 ```
-var grocery = gf.getGrocery();
+var grocery = groceristar.getGrocery();
 
 //returns array of grocery data
 ```
@@ -33,7 +40,7 @@ var grocery = gf.getGrocery();
 ---
 #### Get an array of Users
 ```
-var users = gf.getUsers();
+var users = groceristar.getUsers();
 ```
 
 Return
@@ -49,7 +56,7 @@ Return
 ---
 #### Get an array of Departments
 ```
-var departments = gf.getDepartments();
+var departments = groceristar.getDepartments();
 ```
 
 Return
@@ -64,7 +71,7 @@ Return
 ---
 #### Get an array of all Departments
 ```
-var allDepartments = gf.getAllDepartments();
+var allDepartments = groceristar.getAllDepartments();
 ```
 Return
 ```
@@ -81,7 +88,7 @@ Return
 ---
 #### Get an array of all ingredients by one department
 ```
-var allIngredientsByOneDepartment = gf.getAllIngredientsByOneDepartment("Fresh vegetables");
+var allIngredientsByOneDepartment = groceristar.getAllIngredientsByOneDepartment("Fresh vegetables");
 ```
 
 Return
@@ -96,7 +103,7 @@ Return
 ---
 ### Get an array of grocery by id
 ```
-var groceryId5 = gf.getGroceryById(5);
+var groceryId5 = groceristar.getGroceryById(5);
 ```
 
 Return
@@ -125,7 +132,7 @@ Return
 ---
 ### Get an array of grocery lists with count of departments
 ```
-var groceryLists = gf.getGroceryListsWithCountDepartments();
+var groceryLists = groceristar.getGroceryListsWithCountDepartments();
 ```
 
 Return
