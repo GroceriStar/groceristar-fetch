@@ -4,33 +4,35 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-
 # Groceristar-fetch module
 
 #### Synopsis
 Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.
 
-
 #### Code Example
 
 ```
-var gf = require('@groceristar/groceristar-fetch')
-var measurements = gf.getMeasurements();
+const { groceristar } = require('@groceristar/groceristar-fetch')
+const departments = groceristar.getDepartments();
 
-// returns array of measurements object containing singular, plural and abbreviation
+// returns an array of all departments
 
 example
-{
-    "singular": "gram",
-    "plural": "grams",
-    "abbreviation": "g"
-}
+[
+  {
+    "name": "Fresh vegetables",
+    "type": "food"
+  },
+  {
+    "name": "Condiments / sauces",
+    "type": "food"
+  }
+]
 ```
 
 #### Motivation
 
 In a few our projects we have a similar files. And we always copy-paste code between them. So by moving this code into separated place - i hope we'll make our projects better.
-
 
 #### Installation
 
@@ -43,16 +45,18 @@ or
 #### Usage
 
 ```
-var gf = require('@groceristar/groceristar-fetch')
-console.log(data);
+const { groceristar, search } = require('@groceristar/groceristar-fetch');
+console.log(groceristar.getDepartments());
+console.log(search.getAttribute('diets'));
 
-import gf from '@groceristar/groceristar-fetch'
+//or
+ 
+import { groceristar, mealCalendar } from '@groceristar/groceristar-fetch'
 ```
 
 #### Tests
 
 `npm test`
-
 
 #### Contributors
 
