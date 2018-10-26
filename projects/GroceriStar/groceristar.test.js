@@ -302,7 +302,7 @@ describe("testing static data files returns array", () => {
 describe("testing static data files have array length", () => {
   test("ingredients array count", () => {
     var result = groceristar.getIngredients();
-    expect(result).toHaveLength(1956);
+    expect(result).toHaveLength(13634);
   });
   test("department array count", () => {
     var result = groceristar.getDepartments();
