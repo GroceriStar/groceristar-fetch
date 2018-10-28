@@ -25,17 +25,22 @@
 <h4><a class="anchor" aria-hidden="true" id="synopsis"></a><a href="#synopsis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Synopsis</h4>
 <p>Food Tech related static data in json arrays, like recipes, ingredients, recipes, diets, allergies, etc.</p>
 <h4><a class="anchor" aria-hidden="true" id="code-example"></a><a href="#code-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Example</h4>
-<pre><code class="hljs"><span class="hljs-keyword">var</span> gf = require('@groceristar/groceristar-fetch')
-<span class="hljs-keyword">var</span> measurements = gf.getMeasurements();
+<pre><code class="hljs"><span class="hljs-keyword">const</span> { groceristar } = require(<span class="hljs-string">'@groceristar/groceristar-fetch'</span>)
+<span class="hljs-keyword">const</span> departments = groceristar.getDepartments();
 
-// returns <span class="hljs-built_in">array</span> <span class="hljs-keyword">of</span> measurements <span class="hljs-keyword">object</span> containing singular, plural <span class="hljs-keyword">and</span> abbreviation
+<span class="hljs-comment">// returns an array of all departments</span>
 
 example
-{
-    <span class="hljs-string">"singular"</span>: <span class="hljs-string">"gram"</span>,
-    <span class="hljs-string">"plural"</span>: <span class="hljs-string">"grams"</span>,
-    <span class="hljs-string">"abbreviation"</span>: <span class="hljs-string">"g"</span>
-}
+[<span class="hljs-meta">
+  {
+    <span class="hljs-meta-string">"name"</span>: <span class="hljs-meta-string">"Fresh vegetables"</span>,
+    <span class="hljs-meta-string">"type"</span>: <span class="hljs-meta-string">"food"</span>
+  },
+  {
+    <span class="hljs-meta-string">"name"</span>: <span class="hljs-meta-string">"Condiments / sauces"</span>,
+    <span class="hljs-meta-string">"type"</span>: <span class="hljs-meta-string">"food"</span>
+  }
+</span>]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="motivation"></a><a href="#motivation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Motivation</h4>
 <p>In a few our projects we have a similar files. And we always copy-paste code between them. So by moving this code into separated place - i hope we'll make our projects better.</p>
@@ -45,10 +50,13 @@ example
 or
 <code>yarn add @groceristar/static-fetch</code></p>
 <h4><a class="anchor" aria-hidden="true" id="usage"></a><a href="#usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h4>
-<pre><code class="hljs"><span class="hljs-keyword">var</span> gf = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@groceristar/groceristar-fetch'</span>)
-<span class="hljs-built_in">console</span>.log(data);
+<pre><code class="hljs"><span class="hljs-keyword">const</span> { groceristar, search } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@groceristar/groceristar-fetch'</span>);
+<span class="hljs-built_in">console</span>.log(groceristar.getDepartments());
+<span class="hljs-built_in">console</span>.log(search.getAttribute(<span class="hljs-string">'diets'</span>));
 
-<span class="hljs-keyword">import</span> gf <span class="hljs-keyword">from</span> <span class="hljs-string">'@groceristar/groceristar-fetch'</span>
+<span class="hljs-comment">//or</span>
+ 
+<span class="hljs-keyword">import</span> { groceristar, mealCalendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'@groceristar/groceristar-fetch'</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="tests"></a><a href="#tests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tests</h4>
 <p><code>npm test</code></p>
