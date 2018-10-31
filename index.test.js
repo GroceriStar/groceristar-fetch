@@ -7,6 +7,16 @@ describe("testing if methods inside the files are accessible from the outside", 
     var stream = chickenKyiv.getRecipe();
     expect(stream).not.toBe("");
   });
+
+  test("[ChickenKyiv] overloaded recipe file is set", () => {
+    var stream = chickenKyiv.getRecipe('Lemonade');
+    expect(stream).not.toBe("");
+  });
+
+  test("[ChickenKyiv] fetch random recipe file is set", () => {
+    var stream = chickenKyiv.getRandomRecipe();
+    expect(stream).not.toBe("");
+  });
   //@TODO format it later
   test("[Groceristar] departments file is set", () => {
     var stream = groceristar.getDepartments();
