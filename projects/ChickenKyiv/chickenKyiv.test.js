@@ -17,6 +17,16 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
+  test('fetching random recipe method is set', () => {
+    var stream = chickenKyiv.getRandomRecipe()
+    expect(stream).not.toBe('')
+  })
+
+  test('recipe method overloaded is set', () => {
+    var stream = chickenKyiv.getRecipe('Lemonade')
+    expect(stream).not.toBe('')
+  })
+
   test('nutritions1 file is set', () => {
     var stream = chickenKyiv.getNutritions1()
     expect(stream).not.toBe('')
@@ -26,5 +36,5 @@ describe('testing static data files are set', () => {
     var stream = chickenKyiv.getNutritions2()
     expect(stream).not.toBe('')
   })
-
+console.log('entered here');
 })

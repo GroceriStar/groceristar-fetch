@@ -22,6 +22,27 @@ module.getRecipe = function(){
 	return parser(recipes)
 }
 
+/**
+ * Fetches one recipe by title
+ * @param  {string} title title of the recipe
+ * @return {object}       recipe object
+ */
+module.getRecipe = title => {
+  let recipe, parsedRecipes = parser(recipes);
+  recipe = parsedRecipes.filter(recipe => recipe.title === title)
+  return recipe[0];
+}
+
+/**
+ * Fetches random recipe
+ * @return {object} recipe object
+ */
+module.getRandomRecipe = () => {
+	let parsedRecipes = parser(recipes);
+	const randomInt = Math.floor(Math.random() * (parsedRecipes.length - 1) );
+	return parsedRecipes[randomInt];
+}
+
 module.getNutritions1 = function(){
 	return parser(nutritions1)
 }
