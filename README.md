@@ -54,6 +54,7 @@ console.log(search.getAttribute('diets'));
 
 import { groceristar, mealCalendar } from '@groceristar/groceristar-fetch'
 ```
+To Find out about all the functionality use https://groceristar.github.io/groceristar-fetch/.
 
 #### Tests
 
