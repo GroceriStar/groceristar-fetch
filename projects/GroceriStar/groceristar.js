@@ -137,6 +137,23 @@ module.createNewGroceryList = function(newDepartment) {
   !nameExists && newGroceryList(newDepartment);
 };
 
+module.getGroceryListsByDepartment = department => {
+	let parsedGroceries = parser(groceries),groceryList = [];
+  if (department){
+		capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
+	parsedGroceries.map(grocery => {
+		if(grocery.departments.includes(department.toLowerCase()) ||
+        grocery.departments.includes(department.toUpperCase()) ||
+        grocery.departments.includes(capitalisedDepartment)
+      ) {
+        groceryList.push({name: grocery.name, id: grocery.id});
+      }
+	});
+	return groceryList;
+}
+  return groceryList;
+}
+
 //@TODO should work now.
 function newGroceryList(newDepartment) {
   const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json');
