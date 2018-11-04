@@ -22,8 +22,8 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
-  test('recipe method overloaded is set', () => {
-    var stream = chickenKyiv.getRecipe('Lemonade')
+  test('recipe method getting by Title is set', () => {
+    var stream = chickenKyiv.getRecipeByTitle('Lemonade')
     expect(stream).not.toBe('')
   })
 
@@ -36,5 +36,5 @@ describe('testing static data files are set', () => {
     var stream = chickenKyiv.getNutritions2()
     expect(stream).not.toBe('')
   })
-console.log('entered here');
+
 })

@@ -39,7 +39,6 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "lodash": "^4.17.10",
-    "underscore": "^1.9.1",
     "uuid": "3.3.2"
   },
   "jest": {
