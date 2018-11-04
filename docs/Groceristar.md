@@ -143,3 +143,19 @@ Return
   },
 ]
 ```
+
+
+---
+### Get an array of grocery lists based on department
+```
+var groceryLists = gf.getGroceryListsByDepartment('Protein');
+```
+
+Return
+```
+[
+  { name: 'Clean Fatiring', id: 2 },
+  { name: 'Healthy Vegetarian', id: 4 },
+  { name: 'Keto Diet Food', id: 5 }
+]
+```
