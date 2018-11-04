@@ -4,10 +4,17 @@ title: Methods, related to ChickenKyiv project
 sidebar_label: ChickenKyiv project
 ---
 
+#### Importing ChickenKyiv module
+```
+const { chickenKyiv } = require('@groceristar/groceristar-fetch');
+// or 
+import { chickenKyiv } from '@groceristar/groceristar-fetch';
+```
+
 ---
 #### Get an array of Ingredients3
 ```
-var ingredients3 = gf.getIngredients3();
+var ingredients3 = chickenKyiv.getIngredients3();
 ```
 
 Result
@@ -32,7 +39,7 @@ Result
 ---
 #### Get an array of Menu
 ```
-var menu = gf.getMenu();
+var menu = chickenKyiv.getMenu();
 ```
 
 Result
@@ -55,7 +62,7 @@ Result
 ---
 #### Get an array of Recipe
 ```
-var recipe = gf.getRecipe();
+var recipe = chickenKyiv.getRecipe();
 ```
 
 Result
@@ -82,7 +89,7 @@ Result
 ---
 #### Get an array of nutritions1
 ```
-var nutritions1 = gf.getNutritions1();
+var nutritions1 = chickenKyiv.getNutritions1();
 ```
 
 Return
@@ -97,11 +104,10 @@ Return
  ]
 ```
 
-
 ---
 #### Get an array of nutritions2
 ```
-var nutritions2 = gf.getNutritions2();
+var nutritions2 = chickenKyiv.getNutritions2();
 ```
 
 Return
@@ -118,7 +124,7 @@ Return
 ---
 ### Get an array of meal calendar
 ```
-var mealCalendar = gf.getMealCalendar();
+var mealCalendar = chickenKyiv.getMealCalendar();
 ```
 
 Return

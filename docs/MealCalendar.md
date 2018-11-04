@@ -7,12 +7,20 @@ sidebar_label: Meal Calendar project
 Meal Calendar project repository: https://github.com/GroceriStar/calendar
 
 ---
+#### Importing MealCalendar module
+```
+const { mealCalendar } = require('@groceristar/groceristar-fetch');
+// or 
+import { mealCalendar } from '@groceristar/groceristar-fetch';
+```
+
+---
 ### Get an array of dishes by day
 
 ```
-var dishesOfTuesday = gf.getDishByDay('Tuesday');
+var dishesOfTuesday = mealCalendar.getDishByDay('Tuesday');
 // if you want a limit of dishes, you can pass as parameter:
-// var dishesOfTuesdayLimit5 = gf.getDishByDay('Tuesday', 5);
+// var dishesOfTuesdayLimit5 = mealCalendar.getDishByDay('Tuesday', 5);
 ```
 
 Result
@@ -33,7 +41,7 @@ Result
 ---
 ### Get an array of dishes by week
 ```
-var dishesOfWeek5 = gf.getDishByWeek('week5');
+var dishesOfWeek5 = mealCalendar.getDishByWeek('week5');
 ```
 
 Result
@@ -55,7 +63,7 @@ Result
 ---
 ### Get an array of dishes by month
 ```
-var dishesOfMonth3 = gf.getDishByMonth(3);
+var dishesOfMonth3 = mealCalendar.getDishByMonth(3);
 //Obs: for now, 5 is the max number of month
 ```
 
