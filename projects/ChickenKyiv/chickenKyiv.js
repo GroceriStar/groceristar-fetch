@@ -27,7 +27,7 @@ module.getRecipe = function(){
  * @param  {string} title title of the recipe
  * @return {object}       recipe object
  */
-module.getRecipe = title => {
+module.getRecipeByTitle = title => {
   let recipe, parsedRecipes = parser(recipes);
   recipe = parsedRecipes.filter(recipe => recipe.title === title)
   return recipe[0];

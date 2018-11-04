@@ -426,4 +426,24 @@ describe("Groceristar project methods should return data", () => {
     expect(stream).not.toBe('');
   });
 
+  test('getGroceryListsByDepartment', ()=> {
+    var stream = groceristar.getGroceryListsByDepartment();
+    expect(stream).not.toBe('');
+  })
+
+  test('getGroceryListsByDepartment to return a grocery list if string is lower case', () => {
+    var stream = groceristar.getGroceryListsByDepartment('protein');
+    expect(stream.length).toBeGreaterThan(1);
+  })
+
+  test('getGroceryListsByDepartment to return a grocery list if string is upper case', () => {
+    var stream = groceristar.getGroceryListsByDepartment('PROTEIN');
+    expect(stream.length).toBeGreaterThan(1);
+  })
+
+  test('getGroceryListsByDepartment to return a grocery list if string is capitalised', () => {
+    var stream = groceristar.getGroceryListsByDepartment('Protein');
+    expect(stream.length).toBeGreaterThan(1);
+  })
+
 });
