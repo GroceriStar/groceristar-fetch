@@ -12,20 +12,22 @@ const parser = function ( filename ){
 
 }
 
-getGroceryListsByDepartment = department => {
-  capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
-	let parsedGroceries = parser(groceries),groceryList = [];
-	parsedGroceries.map(grocery => {
-		if(grocery.departments.includes(department.toLowerCase()) ||
-        grocery.departments.includes(department.toUpperCase()) ||
-        grocery.departments.includes(capitalisedDepartment)
-      ) {
-        groceryList.push({name: grocery.name, id: grocery.id});
-      }
-
-	})
-  return groceryList;
-}
 
 
-console.log(getGroceryListsByDepartment('protein'));
+// getGroceryListsByDepartment = department => {
+//   capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
+// 	let parsedGroceries = parser(groceries),groceryList = [];
+// 	parsedGroceries.map(grocery => {
+// 		if(grocery.departments.includes(department.toLowerCase()) ||
+//         grocery.departments.includes(department.toUpperCase()) ||
+//         grocery.departments.includes(capitalisedDepartment)
+//       ) {
+//         groceryList.push({name: grocery.name, id: grocery.id});
+//       }
+//
+// 	})
+//   return groceryList;
+// }
+//
+//
+// console.log(getGroceryListsByDepartment('protein'));

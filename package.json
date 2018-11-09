@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "jest",
-    "watch": "nodemon index.js"
+    "watch": "nodemon index.js",
+    "playground": "nodemon projects/GroceriStar/playground.js"
+    
   },
   "repository": {
     "type": "git",

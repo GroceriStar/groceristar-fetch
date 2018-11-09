@@ -17,11 +17,19 @@ describe("testing if methods inside the files are accessible from the outside", 
     var stream = chickenKyiv.getRandomRecipe();
     expect(stream).not.toBe("");
   });
+
   //@TODO format it later
   test("[Groceristar] departments file is set", () => {
     var stream = groceristar.getDepartments();
     expect(stream).not.toBe("");
   });
+
+  test("[Groceristar] showcase checking", () => {
+    var data = groceristar.getGroceryShowcase();
+    expect(data).not.toBe("");
+  });
+
+
   //@TODO format it later
   test('[Search Form] getAttribute("allergy")', () => {
     var stream = search.getAttribute("allergy");
