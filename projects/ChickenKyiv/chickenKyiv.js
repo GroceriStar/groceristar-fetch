@@ -43,6 +43,23 @@ module.getRandomRecipe = () => {
 	return parsedRecipes[randomInt];
 }
 
+module.getFiveRandomIngredients = () => {
+	let ingredients = parser(recipes);
+	let result = [];
+	let random_key = 0;
+	let countIngredients = 5;
+
+	for(var i = 0; i < countIngredients; i++){
+	 random_key = Math.floor(Math.random() * 101);
+		let ingredient = {
+			"id" : random_key,
+			"ingredient" : ingredients[random_key]["ingredients"]
+		}
+		result.push(ingredient);
+	}
+	return result;
+}
+
 module.getNutritions1 = function(){
 	return parser(nutritions1)
 }
