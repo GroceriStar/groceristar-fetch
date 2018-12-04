@@ -101,3 +101,7 @@ Tasks:
 Trello Board: https://trello.com/b/U2Jm8JWX/fetch-plugin
 
 Sandbox Editor: https://codesandbox.io/s/mzknoy0rnp
+
+Created with help of this articles:
+https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
+https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
