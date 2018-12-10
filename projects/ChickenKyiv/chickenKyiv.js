@@ -43,6 +43,22 @@ module.getRandomRecipe = () => {
 	return parsedRecipes[randomInt];
 }
 
+/**
+ * Fetches first five recipes
+ * @return {array} recipe objects
+ */
+ //@TODO can be updated in order to change the number of recipes that we can return
+module.getFirstFiveRecipes = () => {
+	let parsedRecipes = parser(recipes);
+
+	let result = _.map(parsedRecipes.slice(0, 5), item => ({
+		key:uuid(),
+		recipe: item
+	}))
+
+	return result;
+}
+
 module.getFiveRandomIngredients = () => {
 	let ingredients = parser(recipes);
 	let result = [];
