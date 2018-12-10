@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/GroceriStar/groceristar-fetch/issues"
   },
-  "homepage": "https://github.com/GroceriStar/groceristar-fetch#readme",
+  "homepage": "https://groceristar.github.io/groceristar-fetch/",
   "devDependencies": {
     "jest": "^23.2.0",
     "nodemon": "^1.17.5",
