@@ -1,3 +1,6 @@
+const _            = require('lodash');
+const uuid         = require('uuid');
+
 const ingredients3 = require('../../data/Ingredients/ingredients3.json');
 const menus        = require('../../data/Menu/menu.json');
 const recipes      = require('../../data/Recipe4/recipe.json');
