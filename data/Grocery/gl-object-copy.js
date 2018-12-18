@@ -4,7 +4,6 @@
 
 {
     "departments": [
-      "Fresh vegetables",  
       "Other"
     ],
     
