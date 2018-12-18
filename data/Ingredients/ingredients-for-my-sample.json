@@ -1,20 +1,82 @@
-Beans
-Hummus
-Brown Rice
-Oats
-Quinoa
-Dehydrated or Baked Vegetable and Fruit Chips
-Unprocessed Nuts
-Cornmeal
-Flax
-Gluten-Free Flour
-Fresh Fruit
-Fresh Vegetables
-Lean Ground Chicken
-Lean Chicken Breast
-Fresh Fish
-Eggs
-Shrimp
-Greek Yogurt
-Milk
-Cheese
+[
+  {
+    "name": "Beans",
+    "department": "Other"
+  },
+  {
+    "name": "Hummus",
+    "department": "Other"
+  },
+  {
+    "name": "Brown Rice",
+    "department": "Other"
+  },
+  {
+    "name": "Oats",
+    "department": "Other"
+  },
+  {
+    "name": "Quinoa",
+    "department": "Other"
+  },
+  {
+    "name": "Dehydrated or Baked Vegetable and Fruit Chips",
+    "department": "Other"
+  },
+  {
+    "name": "Unprocessed Nuts",
+    "department": "Other"
+  },
+  {
+    "name": "Cornmeal",
+    "department": "Other"
+  },
+  {
+    "name": "Flax",
+    "department": "Other"
+  },
+  {
+    "name": "Gluten-Free Flour",
+    "department": "Other"
+  },
+  {
+    "name": "Fresh Fruit",
+    "department": "Other"
+  },
+  {
+    "name": "Fresh Vegetables",
+    "department": "Other"
+  },
+  {
+    "name": "Lean Ground Chicken",
+    "department": "Other"
+  },
+  {
+    "name": "Lean Chicken Breast",
+    "department": "Other"
+  },
+  {
+    "name": "Fresh Fish",
+    "department": "Other"
+  },
+  {
+    "name": "Eggs",
+    "department": "Other"
+  },
+  {
+    "name": "Shrimp",
+    "department": "Other"
+  },
+  {
+    "name": "Greek Yogurt",
+    "department": "Other"
+  },
+  {
+    "name": "Milk",
+    "department": "Other"
+  },
+  {
+    "name": "Cheese",
+    "department": "Other"
+  }
+]
