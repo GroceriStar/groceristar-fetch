@@ -6,13 +6,10 @@
     "departments": [
       "Other"
     ],
-    
-    
-    "id": ,
+    "id": 8,
     "name": "19 Gluten-Free Foods Shopping List",
     "img": false,
     "desc": false,
     "slug": false
  }
- 
- //later coma will be important. keep it in mind.
+ // as we add our object to the end of array - we don't need comma
