@@ -7,7 +7,9 @@
 [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
 
 
-![Alt Text](https://github.com/GroceriStar/creative/blob/master/app-video/fetch-inside.gif)
+<!-- 
+![Alt Text](https://github.com/GroceriStar/creative/blob/master/app-video/fetch-inside.gif)/ 
+-->
 
 [Introduction Article](https://medium.com/groceristar/groceristar-fetch-small-module-that-weve-created-8b4a62bd5d7b)
 
