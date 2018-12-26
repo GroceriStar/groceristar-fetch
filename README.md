@@ -49,8 +49,9 @@ example
 ```
 
 The above code can be re-written as 
+
 ```
-const { groceristar, search } = require('@groceristar/groceristar-fetch');
+const { groceristar, search, chiCkenKyiv, mealCalendar } = require('@groceristar/groceristar-fetch');
 console.log(groceristar.getDepartments());
 console.log(search.getAttribute('diets'));
 
