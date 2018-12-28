@@ -11,3 +11,7 @@ title: Table of contents
 * [Search Form project section](SearchForm.md)
 * [Stretch goals](stretch-goals.md)
 * [Tests](tests.md)
+* [list1](GroceryLists/1.md)
+* [list2](GroceryLists/2.md)
+* [list3](GroceryLists/3.md)
+* [list4](GroceryLists/4.md)
