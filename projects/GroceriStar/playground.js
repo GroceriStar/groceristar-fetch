@@ -18,17 +18,18 @@ const parser = function ( filename ){
 
 //can be used in order to count stuff and adjust tests, that we have here:
 
-module.count = function() {
+const count = function() {
 
-	console.log('ingredient ' +  _.size() )
-	console.log('department ' +  _.size() )
-	console.log('grocery ' +  _.size() )
-	console.log('users ' +  _.size() )
-	console.log('ingredient ' +  _.size() )
+	// console.log('ingredient ' +  _.size(departments) )
+	console.log('department ' +  _.size(departments) )
+	console.log('grocery '    +  _.size(groceries) )
+	console.log('users '      +  _.size(users) )
+	console.log('ingredient ' +  _.size(ingredients) )
 
 
 };
 
+count();
 
 // getGroceryListsByDepartment = department => {
 //   capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);

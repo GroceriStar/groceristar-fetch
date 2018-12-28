@@ -283,94 +283,7 @@ describe("testing objects inside ingredients", () => {
 
 })
 
-describe("testing static data files returns array", () => {
-  test("ingredients are array", () =>{
-    var result = groceristar.getIngredients();
-    expect(Array.isArray(result)).toBe(true);
-  })
-  test("groceries are array", () =>{
-    var result = groceristar.getGrocery();
-    expect(Array.isArray(result)).toBe(true);
-  })
-  test("departments are array", () =>{
-    var result = groceristar.getDepartments();
-    expect(Array.isArray(result)).toBe(true);
-  })
-  test("users are array", () =>{
-    var result = groceristar.getUsers();
-    expect(Array.isArray(result)).toBe(true);
-  })
-})
 
-describe("comparing length of arrays that we have inside of our static data files. If you receive this error", () => {
-
-  test("ingredients array count", () => {
-    var result = groceristar.getIngredients();
-    expect(result).toHaveLength(13634);
-  });
-
-  test("department array count", () => {
-    var result = groceristar.getDepartments();
-    expect(result).toHaveLength(58);
-  });
-
-  test("grocery array count", () => {
-    var result = groceristar.getGrocery();
-    expect(result).toHaveLength(7);
-  });
-
-  test("users array count", () => {
-    var result = groceristar.getUsers();
-    expect(result).toHaveLength(3);
-  });
-  
-});
-
-describe("testing static data files are not empty", () => {
-  test("ingredients file is not empty", () => {
-    var result = groceristar.getIngredients();
-    expect(result).not.toBe("");
-  });
-
-  // test("array have length", () => {
-  //   expect(['apple', 'milk', 'bread']).toHaveLength(3);
-  // });
-  //
-  // test("array contain 'milk'", () => {
-  //   expect(['apple', 'milk', 'bread']).toContain('milk');
-  // });
-
-
-  // expect(['apple', 'milk', 'bread']).toHaveLength(3);
-  // expect(['apple', 'milk', 'bread']).toContain('milk');
-  // expect(['apple', 'milk', 'bread']).toEqual(
-  // expect.arrayContaining(['milk','apple'])
-  // );
-  // expect([{name: 'apple'}, {name: 'milk'}, {name: 'bread'}]).toContainEqual(
-  // {name: 'bread'}
-  // );
-
-  // expect(result).toEqual([
-  //   expect
-  //   // expect.objectContaining({})
-  // ]);
-
-
-  test("grocery file is not empty", () => {
-    var stream = groceristar.getGrocery();
-    expect(stream).not.toBe("");
-  });
-
-  test("users file is set", () => {
-    var stream = groceristar.getUsers();
-    expect(stream).not.toBe("");
-  });
-
-  test("departments file is set", () => {
-    var stream = groceristar.getDepartments();
-    expect(stream).not.toBe("");
-  });
-});
 
 describe("Groceristar project methods should return data", () => {
   test("method getGroceryShowcase()", () => {
@@ -437,6 +350,9 @@ describe("Groceristar project methods should return data", () => {
     expect(stream).not.toBe('');
   })
 
+
+
+
   test('getGroceryListsByDepartment to return a grocery list if string is lower case', () => {
     var stream = groceristar.getGroceryListsByDepartment('protein');
     expect(stream.length).toBeGreaterThan(1);
@@ -451,5 +367,7 @@ describe("Groceristar project methods should return data", () => {
     var stream = groceristar.getGroceryListsByDepartment('Protein');
     expect(stream.length).toBeGreaterThan(1);
   })
+
+  
 
 });
