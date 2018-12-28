@@ -8,6 +8,9 @@ const users        = require('../../data/Users/users.json');
 const fs           = require('fs');
 
 
+const groceristar = require('../GroceriStar/groceristar');
+const search      = require('../Search/search');
+
 
 const parser = function ( filename ){
 
@@ -28,8 +31,14 @@ const count = function() {
 
 
 };
-
 count();
+
+// const data = search.getIngredients();
+// const data = search.getAttribute('diets');
+
+// console.log(_.isObject(data));
+// console.log(  search.toOpt(data)  );
+
 
 // getGroceryListsByDepartment = department => {
 //   capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
