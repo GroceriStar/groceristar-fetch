@@ -1,10 +1,13 @@
 const _            = require('lodash');
+const uuidv1         = require('uuid/v1');
+
 const departments  = require('../../data/Departments/departments.json');
 let groceries      = require('../../data/Grocery/grocery.json');
 const ingredients  = require('../../data/Ingredients/ingredients.json');
 const users        = require('../../data/Users/users.json');
 const fs           = require('fs');
-const uuid         = require('uuid');
+
+
 
 const parser = function ( filename ){
 
@@ -12,6 +15,19 @@ const parser = function ( filename ){
 
 }
 
+
+//can be used in order to count stuff and adjust tests, that we have here:
+
+module.count = function() {
+
+	console.log('ingredient ' +  _.size() )
+	console.log('department ' +  _.size() )
+	console.log('grocery ' +  _.size() )
+	console.log('users ' +  _.size() )
+	console.log('ingredient ' +  _.size() )
+
+
+};
 
 
 // getGroceryListsByDepartment = department => {

@@ -14,7 +14,7 @@ describe("testing objects inside our static data files", () => {
     expect({ name1: 'apple', name2: 'milk', name3: 'bread', id: 333 }).toMatchObject({
       name1: expect.any(String),
       name2: expect.any(String),
-      id: expect.any(Number)
+      id:    expect.any(Number)
     });
   });
 
@@ -40,6 +40,7 @@ describe("testing objects inside our static data files", () => {
 
     expect(result[0]).toHaveProperty("department");
   });
+
     // expect(result).toEqual([
     //   expect.objectContaining({name: expect.any(String), department: expect.any(String)})
     // ]);
@@ -87,6 +88,8 @@ describe("testing objects inside our static data files", () => {
       expect(keys).toEqual(expect.arrayContaining(["name", "department"]));
     });
   });
+
+
 
 describe("testing objects inside users", () => {
   test("each object have property 'name'",() =>{
@@ -163,7 +166,7 @@ describe("testing objects inside departments", () => {
     })
   })
 
-  test("objects property 'type' is String", () =>{
+  test("objects property 'type' is String", () => {
     var result = groceristar.getDepartments();
     result.forEach((obj) => {
       expect(obj).toMatchObject({
@@ -173,57 +176,57 @@ describe("testing objects inside departments", () => {
   })
 })
 
-describe("testing objects inside groceries", () =>{
-    test("each object have property 'departments'", () =>{
+describe("testing objects inside groceries", () => {
+    test("each object have property 'departments'", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(obj).toHaveProperty("departments");
       })
     })
 
-    test("each object have property 'id'", () =>{
+    test("each object have property 'id'", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(obj).toHaveProperty("id");
       })
     })
 
-    test("each object have property 'name'", () =>{
+    test("each object have property 'name'", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(obj).toHaveProperty("name");
       })
     })
 
-    test("each object have property 'img'", () =>{
+    test("each object have property 'img'", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(obj).toHaveProperty("img");
       })
     })
 
-    test("each object have property 'desc'", () =>{
+    test("each object have property 'desc'", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(obj).toHaveProperty("desc");
       })
     })
 
-    test("each object have property 'slug'", () =>{
+    test("each object have property 'slug'", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(obj).toHaveProperty("slug");
       })
     })
 
-    test("objects propery 'departments' have Array", () =>{
+    test("objects propery 'departments' have Array", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(Array.isArray(obj.departments)).toBe(true)
       })
     })
 
-    test("objects property 'id' is Number", () =>{
+    test("objects property 'id' is Number", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(obj).toMatchObject({
@@ -232,7 +235,7 @@ describe("testing objects inside groceries", () =>{
       })
     })
 
-    test("objects property 'name' is String", () =>{
+    test("objects property 'name' is String", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(obj).toMatchObject({
@@ -241,7 +244,7 @@ describe("testing objects inside groceries", () =>{
       })
     })
 
-    test("objects properties 'img' 'desc' 'slug' are boolean", () =>{
+    test("objects properties 'img' 'desc' 'slug' are boolean", () => {
       var result = groceristar.getGrocery();
       result.forEach((obj) => {
         expect(obj).toMatchObject({
@@ -299,11 +302,13 @@ describe("testing static data files returns array", () => {
   })
 })
 
-describe("testing static data files have array length", () => {
+describe("comparing length of arrays that we have inside of our static data files. If you receive this error", () => {
+
   test("ingredients array count", () => {
     var result = groceristar.getIngredients();
     expect(result).toHaveLength(13634);
   });
+
   test("department array count", () => {
     var result = groceristar.getDepartments();
     expect(result).toHaveLength(58);
@@ -318,6 +323,7 @@ describe("testing static data files have array length", () => {
     var result = groceristar.getUsers();
     expect(result).toHaveLength(3);
   });
+  
 });
 
 describe("testing static data files are not empty", () => {
