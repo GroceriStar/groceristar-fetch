@@ -69,14 +69,18 @@ module.getGroceryByNameWithDepAndIng = function(name){
 	let result = [];
 	grocery[0]["departments"].forEach(
 		function(department){
+
+			//@TODO add let ingredients = module.getAllIngredientsByOneDepartment(department)
+
 		result.push(
-			{	"department": department,
+			{	"department"  : department,
 				"ingredients" : module.getAllIngredientsByOneDepartment(department)
 			});
 	});
 	return result;
 }
 
+// strange turnaround. @TODO can we 
 module.getGroceryListsWithCountDepartments = function() {
   return _.map(parser(groceries), item => {
     const object = {

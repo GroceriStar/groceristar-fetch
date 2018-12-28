@@ -1,3 +1,4 @@
+const _            = require('lodash');
 const allergies     = require('../../data/Allergy/allergies.json');
 const courses       = require('../../data/Course/courses.json');
 const cuisines      = require('../../data/Cuisine/cuisines.json');
@@ -23,6 +24,9 @@ module.pathToJson = function (){
   return path.dirname('./data/Allergy/allergies.json');
 };
 
+
+// return data, related to recipe attributes by name of attribute(read category of meal)
+// maybe it's better to name it getAttributeData....
 module.getAttribute = function (attribute) {
   switch (attribute) {
     case 'allergies':
@@ -91,10 +95,11 @@ module.getPlaceholder = function(attribute, flag = false) {
 
 }
 
-
-module.getIngredientsRelatedToSearch = function() {
+// this method can have a duplicates..... related to another project
+module.getIngredients = function() {
 	return parser( ingredients1 )
 }
+
 
 // for antD version of select field we should have a method that return values as this example
 // const options = [
@@ -115,10 +120,61 @@ module.getIngredientsRelatedToSearch = function() {
 // @TODO check if this structure can be passed at React-Select module as well and
 // will it generate a working select or not - I assume no, but we should test it
 // we'll use it at recipe-search-react/SearchForm.js
+
+// how to test? getOptionsForSelectFieldV1('diets') or getOptionsForSelectFieldV1('holidays')
 module.getOptionsForSelectFieldV1 = function(attribute){
     const data = getAttribute(attribute);
     console.log(data);
     //....
 }
+
+
+
+// toOpt is a method from react-select plugin
+// @TODO change name later and also buzz me - so we'll replace the name at our other sources....
+// I don't like that we converting index into string. I understand the reason, but better to use uuidv1
+// @TODO update it
+// i like this name - Prepare Data for Select Field
+module.toOpt = function (data, nameOfDisabledProperty) {
+
+    // in antD case we have `isDisabled` property
+    // in react-select case we have `disabled` property
+    // false is equal to skipping it
+
+    let result
+    if( _.isArray( data ) ) {
+        object =
+          _.reduce(data, (result, value, key) => {
+            result[key] = {};
+            result[key].value = key.toString();
+            result[key].label = value;
+
+            //here we should put an option, when we can pass
+            // if( nameOfDisabledProperty ){
+            //   result[key].nameOfDisabledProperty = true;
+            // }
+
+            return result;
+          })
+
+
+
+
+      return object;
+    }
+
+    // for cases with issues.
+    return [];
+}
+
+
+// similar to previous method, but we have this structure.
+// i think it's better to split it into 2 methods and don't f**k with brain
+// antD receive this for select option: { key, label, disabled }
+// react-select receive this for option: { value, label, disabled }
+module.toOptAntD = (data) => {
+  console.log('antD case');
+}
+
 
 module.exports = module;

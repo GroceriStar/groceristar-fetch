@@ -8,7 +8,8 @@ const users        = require('../../data/Users/users.json');
 const fs           = require('fs');
 
 
-const methods = require('../GroceriStar/groceristar');
+const groceristar = require('../GroceriStar/groceristar');
+const search      = require('../Search/search');
 
 
 const parser = function ( filename ){
@@ -32,8 +33,11 @@ const count = function() {
 };
 count();
 
+// const data = search.getIngredients();
+// const data = search.getAttribute('diets');
 
-// console.log( _.size( methods.getGrocery() ) );
+// console.log(_.isObject(data));
+// console.log(  search.toOpt(data)  );
 
 
 // getGroceryListsByDepartment = department => {
