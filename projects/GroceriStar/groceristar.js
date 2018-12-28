@@ -4,7 +4,8 @@ let groceries      = require('../../data/Grocery/grocery.json');
 const ingredients  = require('../../data/Ingredients/ingredients.json');
 const users        = require('../../data/Users/users.json');
 const fs           = require('fs');
-const uuid         = require('uuid');
+
+const uuidv1         = require('uuid/v1');
 
 const parser = function ( filename ){
 
@@ -77,14 +78,14 @@ module.getGroceryByNameWithDepAndIng = function(name){
 }
 
 module.getGroceryListsWithCountDepartments = function() {
-  return _.map(parser(groceries), glist => {
-    const obj = {
-      id: glist.id,
-      name: glist.name,
-      departmentsCount: glist.departments.length
+  return _.map(parser(groceries), item => {
+    const object = {
+      id: item.id,
+      name: item.name,
+      departmentsCount: item.departments.length
     };
-    delete obj.departments;
-    return obj;
+    delete object.departments;
+    return object;
   });
 };
 
@@ -107,15 +108,15 @@ module.getAllIngredientsByOneDepartment = function(department){
 
 module.getAllDepartmentList = function() {
   return _.map(this.getDepartments(), item => ({
-    key: uuid(),
+    key: uuidv1(),
     departmentName: item
   }));
 };
 
 module.getAllIngredientsList = function(department) {
-  const ings = this.getAllIngredientsByOneDepartment(department);
-  return ings.map(item => ({
-    key: uuid(),
+  const ingredients = this.getAllIngredientsByOneDepartment(department);
+  return ingredients.map(item => ({
+    key: uuidv1(),
     name: item.name,
     isChecked: false
   }));
@@ -123,14 +124,14 @@ module.getAllIngredientsList = function(department) {
 
 module.getAllGrocery = function() {
   return _.map(parser(groceries), item => ({
-    key: uuid(),
+    key: uuidv1(),
     ...item
   }));
 };
 
 module.getAllGroceryDepartment = function(departmentArray) {
   const departmentArrayObject = departmentArray.map(item => ({
-    key: uuid(),
+    key: uuidv1(),
     departmentName: item,
     isChecked: false
   }));
@@ -145,6 +146,7 @@ module.createNewGroceryList = function(newDepartment) {
   !nameExists && newGroceryList(newDepartment);
 };
 
+//TODO OMG, this method looks so sad...
 module.getGroceryListsByDepartment = department => {
 	let parsedGroceries = parser(groceries),groceryList = [];
   if (department){

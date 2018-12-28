@@ -1,5 +1,5 @@
 const _            = require('lodash');
-const uuid         = require('uuid');
+const uuidv1       = require('uuid//v1');
 
 const ingredients3 = require('../../data/Ingredients/ingredients3.json');
 const menus        = require('../../data/Menu/menu.json');
@@ -65,13 +65,14 @@ module.getFirstFiveRecipes = () => {
 module.getFiveRandomIngredients = () => {
 	let ingredients = parser(recipes);
 	let result = [];
-	let random_key = 0;
 	let countIngredients = 5;
 
 	for(var i = 0; i < countIngredients; i++){
-	 random_key = Math.floor(Math.random() * 101);
+
+	 // random_key = Math.floor(Math.random() * 101);
+
 		let ingredient = {
-			"id" : random_key,
+			"id" : uuidv1(),
 			"ingredient" : ingredients[random_key]["ingredients"]
 		}
 		result.push(ingredient);

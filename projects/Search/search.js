@@ -6,6 +6,9 @@ const holidays      = require('../../data/Holiday/holidays.json');
 const ingredients1  = require('../../data/Ingredients/ingredients1.json');
 const measurements  = require('../../data/Measurement/measurements.json');
 
+
+
+
 const path = require('path')
 
 const parser = function ( filename ){
@@ -59,12 +62,12 @@ module.getPlaceholder = function(attribute, flag = false) {
   if (attribute == 'holidays') {
     return "Holiday";
   }
-  // case for ingredients, not for attributes...  
+  // case for ingredients, not for attributes...
   if( attribute == 'ingredient' ) {
      return  ( flag ) ? "Ingredients you have" : "Ingredients you don't have";
-  }  
-    
-    
+  }
+
+
 // @TODO use this instead of ifs
 // switch (attribute) {
 //   case 'allergies':
@@ -82,10 +85,10 @@ module.getPlaceholder = function(attribute, flag = false) {
 //   case 'diets':
 //     return parser(diets);
 //     break;
-// 
+//
 //   default: return "Incorrect attribute or empty argument";
 // }
-    
+
 }
 
 
@@ -105,11 +108,11 @@ module.getIngredientsRelatedToSearch = function() {
 // ];
 // Note: let's discuss a a different ways to handle values.
 // we can keep it as in our example - but for some cases you'll need to have a function that will convert a label into a value.
-// or we can connect an key-generator and use it similar to read ID values. 
+// or we can connect an key-generator and use it similar to read ID values.
 // Both options are ok for me.
 
 // @TODO check if this method will work fine with situation where we have disabled values.
-// @TODO check if this structure can be passed at React-Select module as well and 
+// @TODO check if this structure can be passed at React-Select module as well and
 // will it generate a working select or not - I assume no, but we should test it
 // we'll use it at recipe-search-react/SearchForm.js
 module.getOptionsForSelectFieldV1(attribute) = function(){
