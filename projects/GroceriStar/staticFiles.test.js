@@ -1,6 +1,9 @@
 const groceristar = require("./groceristar.js");
 
-
+const INGREDIENT_COUNT = 13634;
+const DEPARTMENT_COUNT = 58;
+const GROCERY_COUNT    = 8;
+const USER_COUNT       = 3;
 
 describe("testing static data files returns array", () => {
   test("ingredients.json are array", () =>{
@@ -72,30 +75,28 @@ describe("comparing length of arrays that we have inside of our static data file
 
   // this is a place that should be updated in order to fix build issue.
   // in order to get a new count of items from our files, you need to run `playground` script
-  const ingredientCount = 13634;
-  const departmentCount = 58;
-  const groceryCount    = 8;
-  const userCount       = 3;
+
+
 
   test("ingredients array count", () => {
     var result = groceristar.getIngredients();
-    expect(result).toHaveLength(ingredientCount);
+    expect(result).toHaveLength(INGREDIENT_COUNT);
   });
 
   test("department array count", () => {
     var result = groceristar.getDepartments();
-    expect(result).toHaveLength(departmentCount);
+    expect(result).toHaveLength(DEPARTMENT_COUNT);
   });
 
   test("grocery array count", () => {
     var result = groceristar.getGrocery();
-    
-    expect(result).toHaveLength(groceryCount);
+
+    expect(result).toHaveLength(GROCERY_COUNT);
   });
 
   test("users array count", () => {
     var result = groceristar.getUsers();
-    expect(result).toHaveLength(userCount);
+    expect(result).toHaveLength(USER_COUNT);
   });
 
 });

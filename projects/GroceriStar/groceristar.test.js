@@ -4,6 +4,12 @@ const groceristar = require("./groceristar.js");
 // So methods related to ingredients should have a
 // separated describe, with departments methods
 
+const INGREDIENT_COUNT = 13634;
+const DEPARTMENT_COUNT = 58;
+const GROCERY_COUNT    = 8;
+const USER_COUNT       = 3;
+
+
 describe("testing objects inside our static data files", () => {
 
   test("testing object that have property name1", () => {
@@ -314,7 +320,7 @@ describe("Groceristar project methods should return data", () => {
   });
 
   test("getGroceryById()", () => {
-    for (let i = 1; i <= 7; i++) {
+    for (let i = 1; i <= GROCERY_COUNT; i++) {
       var stream = groceristar.getGroceryById(i);
       expect(stream).not.toBe("");
     }
@@ -345,14 +351,15 @@ describe("Groceristar project methods should return data", () => {
     expect(stream).not.toBe('');
   });
 
-  test('getGroceryListsByDepartment', ()=> {
+  test('getGroceryListsByDepartment', () => {
     var stream = groceristar.getGroceryListsByDepartment();
     expect(stream).not.toBe('');
   })
 
 
 
-
+ // @TODO use this case as sample of how duplicates are stored in our datasets.
+ // we have a task for it https://github.com/GroceriStar/groceristar-fetch/issues/157
   test('getGroceryListsByDepartment to return a grocery list if string is lower case', () => {
     var stream = groceristar.getGroceryListsByDepartment('protein');
     expect(stream.length).toBeGreaterThan(1);
@@ -368,6 +375,6 @@ describe("Groceristar project methods should return data", () => {
     expect(stream.length).toBeGreaterThan(1);
   })
 
-  
+
 
 });
