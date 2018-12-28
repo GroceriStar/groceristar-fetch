@@ -8,6 +8,8 @@ const users        = require('../../data/Users/users.json');
 const fs           = require('fs');
 
 
+const methods = require('../GroceriStar/groceristar');
+
 
 const parser = function ( filename ){
 
@@ -28,8 +30,11 @@ const count = function() {
 
 
 };
+// count();
 
-count();
+
+console.log( _.size( methods.getGrocery() ) );
+
 
 // getGroceryListsByDepartment = department => {
 //   capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);

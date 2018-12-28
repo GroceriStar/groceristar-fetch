@@ -1,20 +1,21 @@
 const groceristar = require("./groceristar.js");
 
 
+
 describe("testing static data files returns array", () => {
-  test("ingredients are array", () =>{
+  test("ingredients.json are array", () =>{
     var result = groceristar.getIngredients();
     expect(Array.isArray(result)).toBe(true);
   })
-  test("groceries are array", () =>{
+  test("groceries.json are array", () =>{
     var result = groceristar.getGrocery();
     expect(Array.isArray(result)).toBe(true);
   })
-  test("departments are array", () =>{
+  test("departments.json are array", () =>{
     var result = groceristar.getDepartments();
     expect(Array.isArray(result)).toBe(true);
   })
-  test("users are array", () =>{
+  test("users.json are array", () =>{
     var result = groceristar.getUsers();
     expect(Array.isArray(result)).toBe(true);
   })
@@ -88,6 +89,7 @@ describe("comparing length of arrays that we have inside of our static data file
 
   test("grocery array count", () => {
     var result = groceristar.getGrocery();
+    
     expect(result).toHaveLength(groceryCount);
   });
 

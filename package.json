@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest",
     "watch": "nodemon index.js",
-    "playground": "nodemon projects/GroceriStar/playground.js"
+    "playground": "nodemon projects/GroceriStar/playground.js",
+    "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest  projects/GroceriStar/staticFiles.test.js"
   },
   "repository": {
     "type": "git",

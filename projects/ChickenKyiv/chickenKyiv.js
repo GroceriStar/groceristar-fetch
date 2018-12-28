@@ -55,21 +55,23 @@ module.getFirstFiveRecipes = () => {
 	let parsedRecipes = parser(recipes);
 
 	let result = _.map(parsedRecipes.slice(0, 5), item => ({
-		key:uuid(),
+		key:uuidv1(),
 		recipe: item
 	}))
 
 	return result;
 }
 
+// @TODO there should be another way to do this. less complitated at least
 module.getFiveRandomIngredients = () => {
 	let ingredients = parser(recipes);
 	let result = [];
+	let random_key = -1;
 	let countIngredients = 5;
 
 	for(var i = 0; i < countIngredients; i++){
 
-	 // random_key = Math.floor(Math.random() * 101);
+	 random_key = Math.floor(Math.random() * 101);
 
 		let ingredient = {
 			"id" : uuidv1(),

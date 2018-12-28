@@ -115,7 +115,7 @@ module.getIngredientsRelatedToSearch = function() {
 // @TODO check if this structure can be passed at React-Select module as well and
 // will it generate a working select or not - I assume no, but we should test it
 // we'll use it at recipe-search-react/SearchForm.js
-module.getOptionsForSelectFieldV1(attribute) = function(){
+module.getOptionsForSelectFieldV1 = function(attribute){
     const data = getAttribute(attribute);
     console.log(data);
     //....
