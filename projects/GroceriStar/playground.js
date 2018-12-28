@@ -30,10 +30,10 @@ const count = function() {
 
 
 };
-// count();
+count();
 
 
-console.log( _.size( methods.getGrocery() ) );
+// console.log( _.size( methods.getGrocery() ) );
 
 
 // getGroceryListsByDepartment = department => {
