@@ -12,6 +12,22 @@ const measurements  = require('../../data/Measurement/measurements.json');
 
 const path = require('path')
 
+
+// @TODO why we name files as plurals but attributes as singular noun?
+// please advice
+module.getRawFiles = function() {
+  return {
+    'allergy': allergies,
+    'course': course,
+    'cuisine': cuisines,
+    'diet': diets,
+    'holiday': holiday,
+    'ingredient': ingredients1,
+    'measurement': measurements
+  }
+}
+
+
 const parser = function ( filename ){
 
     return JSON.parse( JSON.stringify(filename) )
