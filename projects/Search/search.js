@@ -151,11 +151,7 @@ module.getOptionsForSelectFieldV1 = function(attribute){
 // I don't like that we converting index into string. I understand the reason, but better to use uuidv1
 // @TODO update it
 // i like this name - Prepare Data for Select Field
-module.toOpt = function (data, nameOfDisabledProperty) {
-
-    // in antD case we have `isDisabled` property
-    // in react-select case we have `disabled` property
-    // false is equal to skipping it
+module.toOpt = function (data) {
 
     let result
     if( _.isArray( data ) ) {
@@ -165,16 +161,9 @@ module.toOpt = function (data, nameOfDisabledProperty) {
             result[key].value = key.toString();
             result[key].label = value;
 
-            //here we should put an option, when we can pass
-            // if( nameOfDisabledProperty ){
-            //   result[key].nameOfDisabledProperty = true;
-            // }
-
+            result[key].disabled =
             return result;
-          })
-
-
-
+          }, [])
 
       return object;
     }
@@ -190,6 +179,28 @@ module.toOpt = function (data, nameOfDisabledProperty) {
 // react-select receive this for option: { value, label, disabled }
 module.toOptAntD = (data) => {
   console.log('antD case');
+  let result
+  if( _.isArray( data ) ) {
+      object =
+        _.reduce(data, (result, value, key) => {
+
+          let object = {
+            'key': key.toString(),
+            label: value,
+            isDisabled: ( value.disabled ) ? true : false
+          }
+          result[key] = {};
+          result[key].value = key.toString();
+          result[key].label = value;
+
+          return result;
+        }, [])
+
+    return object;
+  }
+
+  // for cases with issues.
+  return [];
 }
 
 

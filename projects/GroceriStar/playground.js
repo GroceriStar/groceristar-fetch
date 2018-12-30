@@ -1,5 +1,5 @@
 const _            = require('lodash');
-const uuidv1         = require('uuid/v1');
+// const uuidv1         = require('uuid/v1');
 
 const departments  = require('../../data/Departments/departments.json');
 let groceries      = require('../../data/Grocery/grocery.json');
@@ -19,8 +19,7 @@ const parser = function ( filename ){
 }
 
 
-//can be used in order to count stuff and adjust tests, that we have here:
-
+//can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
 const count = function() {
 
 	// console.log('ingredient ' +  _.size(departments) )
@@ -33,11 +32,7 @@ const count = function() {
 };
 count();
 
-// const data = search.getIngredients();
-// const data = search.getAttribute('diets');
 
-// console.log(_.isObject(data));
-// console.log(  search.toOpt(data)  );
 
 
 // getGroceryListsByDepartment = department => {
