@@ -157,11 +157,12 @@ module.toOpt = function (data) {
     if( _.isArray( data ) ) {
         object =
           _.reduce(data, (result, value, key) => {
+
             result[key] = {};
             result[key].value = key.toString();
             result[key].label = value;
 
-            result[key].disabled =
+            result[key].disabled = value.disabled;
             return result;
           }, [])
 
@@ -189,9 +190,11 @@ module.toOptAntD = (data) => {
             label: value,
             isDisabled: ( value.disabled ) ? true : false
           }
+          
           result[key] = {};
           result[key].value = key.toString();
           result[key].label = value;
+
 
           return result;
         }, [])
