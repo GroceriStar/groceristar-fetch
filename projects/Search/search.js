@@ -1,4 +1,6 @@
-const _            = require('lodash');
+const _             = require('lodash');
+const uuidv1         = require('uuid/v1');
+
 const allergies     = require('../../data/Allergy/allergies.json');
 const courses       = require('../../data/Course/courses.json');
 const cuisines      = require('../../data/Cuisine/cuisines.json');
@@ -148,25 +150,20 @@ module.getOptionsForSelectFieldV1 = function(attribute){
 
 // toOpt is a method from react-select plugin
 // @TODO change name later and also buzz me - so we'll replace the name at our other sources....
-// I don't like that we converting index into string. I understand the reason, but better to use uuidv1
-// @TODO update it
 // i like this name - Prepare Data for Select Field
 module.toOpt = function (data) {
 
-    let result
+    console.log('react-select case');
+
+
     if( _.isArray( data ) ) {
-        object =
-          _.reduce(data, (result, value, key) => {
 
-            result[key] = {};
-            result[key].value = key.toString();
-            result[key].label = value;
+      const result = _.map(data, ({ value, label, disabled }) => ({
+        key: uuidv1(), value, label, disabled: (disabled) ? disabled : false
+      })
+     )
 
-            result[key].disabled = value.disabled;
-            return result;
-          }, [])
-
-      return object;
+     return result;
     }
 
     // for cases with issues.
@@ -180,26 +177,16 @@ module.toOpt = function (data) {
 // react-select receive this for option: { value, label, disabled }
 module.toOptAntD = (data) => {
   console.log('antD case');
-  let result
+
+
   if( _.isArray( data ) ) {
-      object =
-        _.reduce(data, (result, value, key) => {
 
-          let object = {
-            'key': key.toString(),
-            label: value,
-            isDisabled: ( value.disabled ) ? true : false
-          }
-          
-          result[key] = {};
-          result[key].value = key.toString();
-          result[key].label = value;
+    const result = _.map(data, ({ value, label, disabled }) => ({
+      key: uuidv1(), value, label, isDisabled: (disabled) ? disabled : false
+    })
+   )
 
-
-          return result;
-        }, [])
-
-    return object;
+   return result;
   }
 
   // for cases with issues.

@@ -3,15 +3,15 @@ const _            = require('lodash');
 const groceristar  = require('../GroceriStar/groceristar');
 const search       = require('../Search/search');
 
-// const options = [
-//   { value: 'chocolate',  label: 'Chocolate'},
-//   { value: 'strawberry', label: 'Strawberry'},
-//   { value: 'vanilla',    label: 'Vanilla'  },
-//   { value: 'vanilla-ice',    label: 'Vanilla Ice'},
-//   { value: 'vanilla latte',    label: 'Vanilla Latte'},
-//   { value: 'vanilla Chino',    label: 'Vanilla Chino'},
-//   { value: 'vanilla double',    label: 'Vanilla Double' }
-// ];
+const options = [
+  { value: 'chocolate',  label: 'Chocolate'},
+  { value: 'strawberry', label: 'Strawberry'},
+  { value: 'vanilla',    label: 'Vanilla'  },
+  { value: 'vanilla-ice',    label: 'Vanilla Ice'},
+  { value: 'vanilla latte',    label: 'Vanilla Latte'},
+  { value: 'vanilla Chino',    label: 'Vanilla Chino'},
+  { value: 'vanilla double',    label: 'Vanilla Double' }
+];
 
 // const options = [
 //   { value: 'chocolate',  label: 'Chocolate', disabled: true},
@@ -25,7 +25,13 @@ const search       = require('../Search/search');
 
 
 // const data = search.getIngredients();
+
 // const data = search.getAttribute('diets');
 
+// console.log(data);
+
+
+
+// console.log(search.toOpt(options));
 // console.log(_.isObject(data));
 // console.log(  search.toOpt(data)  );
