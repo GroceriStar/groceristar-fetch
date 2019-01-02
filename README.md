@@ -1,5 +1,19 @@
 # Groceristar-fetch module
-    
+
+Table of Contents
+=================
+
+ * [Synopsis](#synopsis)
+ * [Additional information](#additional-information)
+ * [Installation](#installation)
+ * [Code Example](#code-example)
+ * [Test](#tests)
+ * [Contributors](#contributors)
+ * [Credits](#credits)
+ * [Junk](#junk) 
+
+
+
 #### Synopsis
   This is a module for using API like wrappers for getting food data for use in many projects. Just Like an database and fetch API in JS
     
@@ -11,12 +25,14 @@
 ![Alt Text](https://github.com/GroceriStar/creative/blob/master/app-video/fetch-inside.gif)/ 
 -->
 
+#### Additional information
 [Introduction Article](https://medium.com/groceristar/groceristar-fetch-small-module-that-weve-created-8b4a62bd5d7b)
 
 [Trello board with current tasks](https://trello.com/b/U2Jm8JWX/fetch-plugin)
 
 [Documentation Website](https://groceristar.github.io/groceristar-fetch/)
-
+[Sandbox Editor](https://codesandbox.io/s/mzknoy0rnp)
+ 
 
 #### Installation
 
@@ -68,7 +84,14 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 
 @vadim9999, @MinkoJ2, @chauhannishith, @atherdon
 
+#### Credits
 
+Created with help of this articles:
+https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
+https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
+
+
+#### Unprocessed 'junk' - things that we should keep here.
 ---
 Tasks:
 - [ ] [Search Form static data](https://github.com/GroceriStar/static-data/issues/14)
@@ -101,10 +124,4 @@ Tasks:
 ```
 
 
-Trello Board: https://trello.com/b/U2Jm8JWX/fetch-plugin
 
-Sandbox Editor: https://codesandbox.io/s/mzknoy0rnp
-
-Created with help of this articles:
-https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
-https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
