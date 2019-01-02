@@ -14,7 +14,6 @@ const measurements  = require('../../data/Measurement/measurements.json');
 
 const path = require('path')
 
-
 // @TODO why we name files as plurals but attributes as singular noun?
 // please advice
 module.getRawFiles = function() {
@@ -30,14 +29,14 @@ module.getRawFiles = function() {
 }
 
 
-const parser = function ( filename ){
+const parser = function(filename) {
 
-    return JSON.parse( JSON.stringify(filename) )
+  return JSON.parse(JSON.stringify(filename))
 
 }
 
 
-module.pathToJson = function (){
+module.pathToJson = function() {
   // path.dirname(__filename)
   return path.dirname('./data/Allergy/allergies.json');
 };
@@ -45,7 +44,7 @@ module.pathToJson = function (){
 
 // return data, related to recipe attributes by name of attribute(read category of meal)
 // maybe it's better to name it getAttributeData....
-module.getAttribute = function (attribute) {
+module.getAttribute = function(attribute) {
   switch (attribute) {
     case 'allergies':
       return parser(allergies);
@@ -63,7 +62,8 @@ module.getAttribute = function (attribute) {
       return parser(diets);
       break;
 
-    default: return "Incorrect attribute or empty argument";
+    default:
+      return "Incorrect attribute or empty argument";
 
   }
 }
@@ -85,37 +85,37 @@ module.getPlaceholder = function(attribute, flag = false) {
     return "Holiday";
   }
   // case for ingredients, not for attributes...
-  if( attribute == 'ingredient' ) {
-     return  ( flag ) ? "Ingredients you have" : "Ingredients you don't have";
+  if (attribute == 'ingredient') {
+    return (flag) ? "Ingredients you have" : "Ingredients you don't have";
   }
 
 
-// @TODO use this instead of ifs
-// switch (attribute) {
-//   case 'allergies':
-//     return parser(allergies);
-//     break;
-//   case 'cuisines':
-//     return parser(cuisines);
-//     break;
-//   case 'courses':
-//     return parser(courses);
-//     break;
-//   case 'holidays':
-//     return parser(holidays);
-//     break;
-//   case 'diets':
-//     return parser(diets);
-//     break;
-//
-//   default: return "Incorrect attribute or empty argument";
-// }
+  // @TODO use this instead of ifs
+  // switch (attribute) {
+  //   case 'allergies':
+  //     return parser(allergies);
+  //     break;
+  //   case 'cuisines':
+  //     return parser(cuisines);
+  //     break;
+  //   case 'courses':
+  //     return parser(courses);
+  //     break;
+  //   case 'holidays':
+  //     return parser(holidays);
+  //     break;
+  //   case 'diets':
+  //     return parser(diets);
+  //     break;
+  //
+  //   default: return "Incorrect attribute or empty argument";
+  // }
 
 }
 
 // this method can have a duplicates..... related to another project
 module.getIngredients = function() {
-	return parser( ingredients1 )
+  return parser(ingredients1)
 }
 
 
@@ -140,10 +140,10 @@ module.getIngredients = function() {
 // we'll use it at recipe-search-react/SearchForm.js
 
 // how to test? getOptionsForSelectFieldV1('diets') or getOptionsForSelectFieldV1('holidays')
-module.getOptionsForSelectFieldV1 = function(attribute){
-    const data = getAttribute(attribute);
-    console.log(data);
-    //....
+module.getOptionsForSelectFieldV1 = function(attribute) {
+  const data = getAttribute(attribute);
+  console.log(data);
+  //....
 }
 
 
@@ -151,23 +151,29 @@ module.getOptionsForSelectFieldV1 = function(attribute){
 // toOpt is a method from react-select plugin
 // @TODO change name later and also buzz me - so we'll replace the name at our other sources....
 // i like this name - Prepare Data for Select Field
-module.toOpt = function (data) {
+module.toOpt = function(data) {
 
-    console.log('react-select case');
+  console.log('react-select case');
 
 
-    if( _.isArray( data ) ) {
+  if (_.isArray(data)) {
 
-      const result = _.map(data, ({ value, label, disabled }) => ({
-        key: uuidv1(), value, label, disabled: (disabled) ? disabled : false
-      })
-     )
+    const result = _.map(data, ({
+      value,
+      label,
+      disabled
+    }) => ({
+      key: uuidv1(),
+      value,
+      label,
+      disabled: (disabled) ? disabled : false
+    }))
 
-     return result;
-    }
+    return result;
+  }
 
-    // for cases with issues.
-    return [];
+  // for cases with issues.
+  return [];
 }
 
 
@@ -179,14 +185,20 @@ module.toOptAntD = (data) => {
   console.log('antD case');
 
 
-  if( _.isArray( data ) ) {
+  if (_.isArray(data)) {
 
-    const result = _.map(data, ({ value, label, disabled }) => ({
-      key: uuidv1(), value, label, isDisabled: (disabled) ? disabled : false
-    })
-   )
+    const result = _.map(data, ({
+      value,
+      label,
+      disabled
+    }) => ({
+      key: uuidv1(),
+      value,
+      label,
+      isDisabled: (disabled) ? disabled : false
+    }))
 
-   return result;
+    return result;
   }
 
   // for cases with issues.

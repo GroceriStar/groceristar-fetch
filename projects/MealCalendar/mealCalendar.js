@@ -1,11 +1,10 @@
 const mealCalendar = require('../../data/MealCalendar/mealcalendar.json');
 const _            = require('lodash');
-
-const parser = function (filename) {
+const parser = function(filename) {
   return JSON.parse(JSON.stringify(filename))
 }
 
-module.getMealCalendar = function () {
+module.getMealCalendar = function() {
   return parser(mealCalendar);
 }
 
@@ -20,14 +19,14 @@ module.getMealCalendar = function () {
 //   });
 // };
 
-module.getDishByDay = function(day){
-  let result =[];
-   _.map(mealCalendar, function(item){
-    return _.filter(item["recipes"],function(arr){
-      if(arr[0].day === day){
+module.getDishByDay = function(day) {
+  let result = [];
+  _.map(mealCalendar, function(item) {
+    return _.filter(item["recipes"], function(arr) {
+      if (arr[0].day === day) {
         arr[0].id = item.id;
         result.push(arr[0])
-        }
+      }
     })
 
   })
@@ -42,7 +41,9 @@ module.getDishByMonth = function(monthNumb) {
 };
 
 module.getDishByWeek = function(week) {
-  return _.filter(parser(mealCalendar), { id: week });
+  return _.filter(parser(mealCalendar), {
+    id: week
+  });
 };
 
 module.exports = module;

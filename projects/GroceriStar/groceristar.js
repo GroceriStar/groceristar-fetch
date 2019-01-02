@@ -5,82 +5,81 @@ const ingredients  = require('../../data/Ingredients/ingredients.json');
 const users        = require('../../data/Users/users.json');
 const fs           = require('fs');
 
-const uuidv1         = require('uuid/v1');
+const uuidv1       = require('uuid/v1');
+const parser = function(filename) {
 
-const parser = function ( filename ){
-
-	return JSON.parse( JSON.stringify(filename) )
+  return JSON.parse(JSON.stringify(filename))
 
 }
 
 
 
 module.getIngredients = function() {
-	return parser( ingredients )
+  return parser(ingredients)
 }
 
 module.getGrocery = function() {
-	return parser( groceries )
+  return parser(groceries)
 }
 
 // @TODO i think as showcase is a separated project, we can move this method to
 // a separated place, in order to make it cleaner
 module.getGroceryShowcase = function() {
-	//@TODO can we just merge together 2 arrays instead of adding this 2 values?
-	//maybe it can be better
+  //@TODO can we just merge together 2 arrays instead of adding this 2 values?
+  //maybe it can be better
 
-	let parsedGroceries = parser( groceries );
-	// console.log(parsedGroceries);
+  let parsedGroceries = parser(groceries);
+  // console.log(parsedGroceries);
 
-	let groceriesWithCss = parsedGroceries.map( (item) => {
-		item.height = 200;
-		item.css = "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)"
-		return item;
-	});
-	// console.log(groceriesWithCss);
+  let groceriesWithCss = parsedGroceries.map((item) => {
+    item.height = 200;
+    item.css = "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)"
+    return item;
+  });
+  // console.log(groceriesWithCss);
 
-	return groceriesWithCss;
+  return groceriesWithCss;
 }
 
 module.getUsers = function() {
-	return parser( users )
+  return parser(users)
 }
 
 module.getDepartments = function() {
-	return parser( departments )
+  return parser(departments)
 }
 
 module.getGroceryById = function(id) {
   return [_.find(parser(groceries), ['id', id])];
 };
 
-module.getGroceryByName = function(name){
-	return _.filter(parser(groceries),function(item){
-		return item.name === name;
-	})
+module.getGroceryByName = function(name) {
+  return _.filter(parser(groceries), function(item) {
+    return item.name === name;
+  })
 }
 
-module.getGroceryByNameWithDepAndIng = function(name){
-	let grocery = _.filter(parser(groceries),
-	function(item){
-		return item.name === name;
-	});
+module.getGroceryByNameWithDepAndIng = function(name) {
+  let grocery = _.filter(parser(groceries),
+    function(item) {
+      return item.name === name;
+    });
 
-	let result = [];
-	grocery[0]["departments"].forEach(
-		function(department){
+  let result = [];
+  grocery[0]["departments"].forEach(
+    function(department) {
 
-			//@TODO add let ingredients = module.getAllIngredientsByOneDepartment(department)
+      //@TODO add let ingredients = module.getAllIngredientsByOneDepartment(department)
 
-		result.push(
-			{	"department"  : department,
-				"ingredients" : module.getAllIngredientsByOneDepartment(department)
-			});
-	});
-	return result;
+      result.push({
+        "department": department,
+        "ingredients": module.getAllIngredientsByOneDepartment(department)
+      });
+    });
+  return result;
 }
 
-// strange turnaround. @TODO can we 
+// strange turnaround. @TODO can we
 module.getGroceryListsWithCountDepartments = function() {
   return _.map(parser(groceries), item => {
     const object = {
@@ -101,13 +100,13 @@ module.getAllDepartments = function() {
   return departments;
 };
 
-module.getAllIngredientsByOneDepartment = function(department){
+module.getAllIngredientsByOneDepartment = function(department) {
 
-	var ingredientsList =
-		_.filter(parser(ingredients),function(item){
-			return item.department === department;
-		});
-	return _.map(ingredientsList,'name');
+  var ingredientsList =
+    _.filter(parser(ingredients), function(item) {
+      return item.department === department;
+    });
+  return _.map(ingredientsList, 'name');
 }
 
 module.getAllDepartmentList = function() {
@@ -152,19 +151,23 @@ module.createNewGroceryList = function(newDepartment) {
 
 //TODO OMG, this method looks so sad...
 module.getGroceryListsByDepartment = department => {
-	let parsedGroceries = parser(groceries),groceryList = [];
-  if (department){
-		capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
-	parsedGroceries.map(grocery => {
-		if(grocery.departments.includes(department.toLowerCase()) ||
+  let parsedGroceries = parser(groceries),
+    groceryList = [];
+  if (department) {
+    capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
+    parsedGroceries.map(grocery => {
+      if (grocery.departments.includes(department.toLowerCase()) ||
         grocery.departments.includes(department.toUpperCase()) ||
         grocery.departments.includes(capitalisedDepartment)
       ) {
-        groceryList.push({name: grocery.name, id: grocery.id});
+        groceryList.push({
+          name: grocery.name,
+          id: grocery.id
+        });
       }
-	});
-	return groceryList;
-}
+    });
+    return groceryList;
+  }
   return groceryList;
 }
 
