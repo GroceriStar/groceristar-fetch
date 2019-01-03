@@ -11,6 +11,7 @@
     "watch": "nodemon index .js",
     "play:g": "nodemon projects/GroceriStar/playground.js",
     "play:s": "nodemon projects/Search/playground.js",
+    "play:r": "nodemon projects/ChickenKyiv/play.js",
     "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest  projects/GroceriStar/staticFiles.test.js"
   },
   "repository": {

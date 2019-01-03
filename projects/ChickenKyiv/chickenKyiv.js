@@ -69,11 +69,11 @@ module.getShowcaseFiveRecipes = () => {
 
   let result = _.map(parsedRecipes.slice(0, 5), item => ({
     key: uuidv1(),
-    item.title,
-    item.img,
-    item.prep_time,
-    item.total_time,
-    item.url
+    title: item.title,
+    img: item.img,
+    prep_time: item.prep_time,
+    total_time: item.total_time,
+    url: item.url
   }))
 
   return result;
