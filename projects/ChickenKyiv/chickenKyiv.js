@@ -61,24 +61,6 @@ module.getFirstFiveRecipes = () => {
   return result;
 }
 
-// this method is just a copy of getFirstFiveRecipes, in order to make things quickly works at showcase project.
-// for some reasons, it didn't work at this case, so i'm creating second way to pull data.
-// i also making a short version because for this time it's ok. but we should be aware that this is not a complete version of data that we have
-module.getShowcaseFiveRecipes = () => {
-  let parsedRecipes = parser(recipes);
-
-  let result = _.map(parsedRecipes.slice(0, 5), item => ({
-    key: uuidv1(),
-    title: item.title,
-    img: item.img,
-    prep_time: item.prep_time,
-    total_time: item.total_time,
-    url: item.url
-  }))
-
-  return result;
-}
-
 
 // @TODO there should be another way to do this. less complitated at least
 module.getFiveRandomIngredients = () => {
