@@ -10,7 +10,7 @@
     "test": "jest",
     "watch": "nodemon index .js",
     "play:g": "nodemon projects/GroceriStar/playground.js",
-    "play:s": "nodemon projects/Search/playground.js",
+    "play:s": "nodemon projects/Search/play.js",
     "play:r": "nodemon projects/ChickenKyiv/play.js",
     "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest  projects/GroceriStar/staticFiles.test.js"
   },

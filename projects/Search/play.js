@@ -24,14 +24,17 @@ const options = [
 // ];
 
 
-// const data = search.getIngredients();
+const data = search.getFormattedIngredients();
 
-// const data = search.getAttribute('diets');
+// const data = search.getFormattedAttributes('diets');
 
 // console.log(data);
 
 
 
 // console.log(search.toOpt(options));
+// console.log(search.toOpt(data));
+// console.log(search.toOptAntD(data));
+
 // console.log(_.isObject(data));
 // console.log(  search.toOpt(data)  );
