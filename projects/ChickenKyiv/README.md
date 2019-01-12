@@ -10,3 +10,6 @@ List of methods that we have:
 - getFiveRandomIngredients
 - getNutritions1
 - getNutritions2
+- getNRecipes
+- getDepartments
+- getUsers

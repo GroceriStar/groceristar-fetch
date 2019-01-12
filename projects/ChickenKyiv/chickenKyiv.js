@@ -133,7 +133,8 @@ module.exports = {
   getNutritions1,
   getNutritions2,
 
-  getDepartments
+  getDepartments,
+  getUsers
 }
 
 
