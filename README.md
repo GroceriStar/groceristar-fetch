@@ -10,19 +10,19 @@ Table of Contents
  * [Test](#tests)
  * [Contributors](#contributors)
  * [Credits](#credits)
- * [Junk](#junk) 
+ * [Junk](#junk)
 
 
 
 #### Synopsis
   This is a module for using API like wrappers for getting food data for use in many projects. Just Like an database and fetch API in JS
-    
+
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)
 [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
 
 
-<!-- 
-![Alt Text](https://github.com/GroceriStar/creative/blob/master/app-video/fetch-inside.gif)/ 
+<!--
+![Alt Text](https://github.com/GroceriStar/creative/blob/master/app-video/fetch-inside.gif)/
 -->
 
 #### Additional information
@@ -32,7 +32,7 @@ Table of Contents
 
 [Documentation Website](https://groceristar.github.io/groceristar-fetch/)
 [Sandbox Editor](https://codesandbox.io/s/mzknoy0rnp)
- 
+
 
 #### Installation
 
@@ -64,7 +64,7 @@ example
 ]
 ```
 
-The above code can be re-written as 
+The above code can be re-written as
 
 ```
 const { groceristar, search, chiCkenKyiv, mealCalendar } = require('@groceristar/groceristar-fetch');
@@ -98,9 +98,21 @@ Tasks:
 - [ ] [ChickenKyiv Free Menu Release import data](https://github.com/GroceriStar/static-data/issues/10)
 ---
 
+ - Proposal: add to each `get` method an attribute, related to debug.
+I assume we'll need to have one `get` method, with cases, where we return a different data.
+And when we pass a debug flag into our method - we'll get console.log with result, before returning it.
+
+ - Proposal: have a one common place for common methods, that we're using quite often. Example: we need departments at CK and at GS. we need recipes at CK and S. We need menus at CK and MC
+
+- Proposal: random stuff use lodash functions...
+
+- Proposal: use module resolver.... with a new babel 7 core
+
 @TODO use different flags for one command in order to call different imports
 
 [npm-run-script](https://docs.npmjs.com/cli/run-script)
+
+
 
 [Introduction to NPM Scripts](https://medium.freecodecamp.org/introduction-to-npm-scripts-1dbb2ae01633)
 
@@ -122,6 +134,3 @@ Tasks:
 "r2": "npm run migrate-recipes && node bin/recipes/import.js",
 "s2": "npm run migrate-search  && node bin/search/import.js"
 ```
-
-
-
