@@ -4,6 +4,7 @@ const chickenKyiv  = require('./projects/ChickenKyiv/chickenKyiv.js');
 // @TODO change path later, duh?
 const { migrateFunc } = require('./111/import/000002-automigrate');
 
+// const {  } = require('./HELPER.js')
 
 
 
@@ -50,5 +51,8 @@ const get = (tableName) => {
 }
 
 module.exports = {
-  get:get
+  get:get,
+  // helper: {
+  //
+  // }
 }
