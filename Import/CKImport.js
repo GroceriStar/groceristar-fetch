@@ -1,5 +1,5 @@
 const _            = require('lodash');
-const chickenKyiv  = require('./projects/ChickenKyiv/chickenKyiv.js');
+const chickenKyiv  = require('../projects/ChickenKyiv/chickenKyiv.js');
 
 // @TODO change path later, duh?
 const { migrateFunc } = require('./111/import/0002-migrate');

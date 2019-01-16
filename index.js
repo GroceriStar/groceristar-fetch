@@ -6,7 +6,7 @@ const mealCalendar = require("./projects/MealCalendar/mealCalendar.js");
 
 
 // i'm separating this file because it's not fit to logic of this module very well.
-const CKImport     = require("./Import/CKImport")
+const CKImport     = require("./Import/CKImport");
 
 module.exports = {
   search: search,
