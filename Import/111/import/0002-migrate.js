@@ -1,8 +1,8 @@
 // this will be our next version of automigrate script for loopback.
-var path     = require('path');
-let server      = require(path.resolve(__dirname, '../server/server'));
 
-const { db_name, lbTables } = require ('./0005-config.js');
+// var path     = require('path');
+// let server      = require(path.resolve(__dirname, '../server/server'));
+// const { db_name, lbTables } = require ('./0005-config.js');
 // var database = app.datasources.searchDS;
 // var lbTables = [
 //   'Attribute',
