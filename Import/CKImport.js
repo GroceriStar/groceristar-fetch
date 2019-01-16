@@ -25,7 +25,7 @@ const get = (tableName) => {
   let result
   switch (tableName) {
     case 'menu':
-      result = chickenKyiv.getMenus();
+      result = chickenKyiv.getMenu();
       break;
 
     case 'recipe':
