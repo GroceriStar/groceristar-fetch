@@ -2,7 +2,7 @@ const _            = require('lodash');
 const chickenKyiv  = require('./projects/ChickenKyiv/chickenKyiv.js');
 
 // @TODO change path later, duh?
-const { migrateFunc } = require('./111/import/000002-automigrate');
+const { migrateFunc } = require('./111/import/0002-migrate');
 
 // const {  } = require('./HELPER.js')
 
@@ -52,6 +52,7 @@ const get = (tableName) => {
 
 module.exports = {
   get:get,
+  migrateFunc: migrateFunc
   // helper: {
   //
   // }
