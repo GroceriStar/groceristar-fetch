@@ -6,7 +6,11 @@ const { migrateFunc } = require('./111/import/0002-migrate');
 
 // const {  } = require('./HELPER.js')
 
-
+const {
+  get_id_array,
+  create,
+  attach
+} = require('./hellper.js')
 
 
 
@@ -51,9 +55,11 @@ const get = (tableName) => {
 }
 
 module.exports = {
-  get:get,
-  migrateFunc: migrateFunc
-  // helper: {
-  //
-  // }
+  get: get,
+  migrateFunc: migrateFunc,
+  helper: {
+    get_id_array : get_id_array,
+    create : create,
+    attach  : attach
+  }
 }
