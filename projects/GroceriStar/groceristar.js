@@ -180,4 +180,24 @@ function newGroceryList(newDepartment) {
   groceries = newGrocery;
 }
 
+module.getDepartmentsGraphQL = function(){
+  let results = parser(departments);
+  return results.map((item, index) =>({
+    department_id: ++index,
+    name: item.name,
+    desc:"desc for department1",
+    created_at: Date.now(),
+    updated_at: Date.now()
+    }))
+};
+module.getDepartmentsGraphQLKey = function(){
+  let results = parser(departments);
+  return results.map((item, index) =>({
+    department_id: uuidv1(),
+    name: item.name,
+    desc:"desc for department1",
+    created_at: Date.now(),
+    updated_at: Date.now()
+    }))
+};
 module.exports = module;
