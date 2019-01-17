@@ -273,4 +273,23 @@ module.getIngredientsGraphQLKey = function(){
     department_id: 1
     }))
 };
+
+module.getUsersGraphQL = function(){
+  let results = parser(users);
+  return results.map((item, index) =>({
+    userId: ++index,
+    favs: false,
+    ingredient_id: 1,
+    grocery_id: 1
+    }))
+};
+module.getUsersGraphQLKey = function(){
+  let results = parser(users);
+  return results.map((item, index) =>({
+    userId: uuidv1(),
+    favs: false,
+    ingredient_id: 1,
+    grocery_id: 1
+    }))
+};
 module.exports = module;
