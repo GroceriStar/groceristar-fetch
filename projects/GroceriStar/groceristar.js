@@ -214,4 +214,18 @@ module.getDepartmentsGraphQLKey = function(){
     }))
 };
 
+module.getGroceryGraphQLKey = function(){
+  let results = parser(groceries);
+  return results.map((item, index) =>({
+    grocery_id: uuidv1(),
+    name: item.name,
+    img:  item.img,
+    desc: item.desc,
+    slug: item.slug,
+    created_at: Date.now(),
+    updated_at: Date.now(),
+    id_1: 1,
+    favs: false
+    }))
+};
 module.exports = module;
