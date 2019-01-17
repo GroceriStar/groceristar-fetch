@@ -11,6 +11,7 @@ const get_id_array = (array) => {
   if ( !array ){
     raven.captureException('Cannot attach an empty array of ids');
   }
+  console.log('strong debug process - get_id_array')
 
   return _.map( _.pluck(array, 'id'), item => item.toString() );
 
@@ -38,6 +39,9 @@ const create = (options, wrapper, cb) => {
   // let raven
   // let predata
   const { server, database, raven, predata } = options ;
+
+
+  console.log('strong debug process - create')
 
   let Model      = server.models[wrapper.table_name];
   let table_name = wrapper.table_name;
@@ -70,14 +74,16 @@ const create = (options, wrapper, cb) => {
 // attribute - key at collection
 const attach = ( array_ids, collection, attribute ) => {
 
-     var arrayWithIds = get_id_array( array_ids );
+   var arrayWithIds = get_id_array( array_ids );
 
-     // if attribute is string then use it. if attribute is array with count 1 - use it
-     // if attribute have more elements - we need to pick stuff. @TODO
+   // if attribute is string then use it. if attribute is array with count 1 - use it
+   // if attribute have more elements - we need to pick stuff. @TODO
 
+   console.log('strong debug process - attach')
 
-          //@TODO check if collection is simple item, not an array
-          _.map( collection, item => item.updateAttribute(attribute, arrayWithIds) )
+   //@TODO check if collection is simple item, not an array
+
+   _.map( collection, item => item.updateAttribute(attribute, arrayWithIds) )
 
 
 
@@ -88,7 +94,7 @@ const attach = ( array_ids, collection, attribute ) => {
 
 
 module.exports = {
-  get_id_array : get_id_array,
-  create : create,
-  attach  : attach
+  get_id_array,
+  create,
+  attach
 };
