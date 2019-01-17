@@ -1,5 +1,6 @@
 const _             = require('lodash');
-const uuidv1         = require('uuid/v1');
+const uuidv1        = require('uuid/v1');
+const path          = require('path');
 
 const allergies     = require('../../data/Allergy/allergies.json');
 const courses       = require('../../data/Course/courses.json');
@@ -12,7 +13,7 @@ const measurements  = require('../../data/Measurement/measurements.json');
 
 
 
-const path = require('path')
+
 
 // @TODO why we name files as plurals but attributes as singular noun?
 // please advice
@@ -173,7 +174,7 @@ const getOptionsForSelectFieldV1 = function(attribute) {
 // i like this name - Prepare Data for Select Field
 const toOpt = function(data) {
 
-  console.log('react-select case');
+  // console.log('react-select case');
 
 
   if (_.isArray(data)) {
@@ -203,7 +204,7 @@ const toOpt = function(data) {
 // antD receive this for select option: { key, label, disabled }
 // react-select receive this for option: { value, label, disabled }
 const toOptAntD = (data) => {
-  console.log('antD case');
+  // console.log('antD case');
 
 
   if (_.isArray(data)) {
@@ -243,7 +244,7 @@ module.exports = {
   getFormattedIngredients,
 
   getOptionsForSelectFieldV1,
-  
+
   toOpt,
   toOptAntD
 }

@@ -25,6 +25,31 @@ or move and will return to me this stuff.
 
 Put this methods into CK.
 
+maybe we can use some current methods.
+i just don't remember if we have something similar here....
+
+```
+let result = _.map(recipes, item => ({
+  key: uuidv1(),
+  recipe: item
+}))
+```
+
+```
+const result = _.map(data, ({
+  value,
+  label,
+  disabled
+}) => ({
+  key: uuidv1(),
+  value,
+  label,
+  disabled: (disabled) ? disabled : false
+}))
+
+return result;
+```
+
 
 
 ```

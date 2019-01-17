@@ -1,12 +1,17 @@
 const _            = require('lodash');
+
+
+const fs           = require('fs');
+
+const uuidv1       = require('uuid/v1');
+
+
 const departments  = require('../../data/Departments/departments.json');
 let groceries      = require('../../data/Grocery/grocery.json');
 const ingredients  = require('../../data/Ingredients/ingredients.json');
 const users        = require('../../data/Users/users.json');
 
-const fs           = require('fs');
 
-const uuidv1       = require('uuid/v1');
 const parser = function(filename) {
 
   return JSON.parse(JSON.stringify(filename))
@@ -29,6 +34,7 @@ module.getGroceryShowcase = function() {
   //@TODO can we just merge together 2 arrays instead of adding this 2 values?
   //maybe it can be better
 
+  //parser replace
   let parsedGroceries = parser(groceries);
   // console.log(parsedGroceries);
 
@@ -51,16 +57,19 @@ module.getDepartments = function() {
 }
 
 module.getGroceryById = function(id) {
+  //parser replace
   return [_.find(parser(groceries), ['id', id])];
 };
 
 module.getGroceryByName = function(name) {
+  //parser replace
   return _.filter(parser(groceries), function(item) {
     return item.name === name;
   })
 }
 
-module.getGroceryByNameWithDepAndIng = function(name) {
+module.getGroceryByNameWithDepAndIng = function( name ) {
+  //parser replace
   let grocery = _.filter(parser(groceries),
     function(item) {
       return item.name === name;
@@ -82,6 +91,7 @@ module.getGroceryByNameWithDepAndIng = function(name) {
 
 // strange turnaround. @TODO can we
 module.getGroceryListsWithCountDepartments = function() {
+  //parser replace
   return _.map(parser(groceries), item => {
     const object = {
       id: item.id,
@@ -119,6 +129,7 @@ module.getAllDepartmentList = function() {
 
 module.getAllIngredientsList = function(department) {
   const ingredients = this.getAllIngredientsByOneDepartment(department);
+
   return ingredients.map(item => ({
     key: uuidv1(),
     name: item.name,
@@ -127,6 +138,7 @@ module.getAllIngredientsList = function(department) {
 };
 
 module.getAllGrocery = function() {
+  //parser replace
   return _.map(parser(groceries), item => ({
     key: uuidv1(),
     ...item
@@ -185,19 +197,21 @@ module.getDepartmentsGraphQL = function(){
   return results.map((item, index) =>({
     department_id: ++index,
     name: item.name,
-    desc:"desc for department1",
+    desc: "description for department1",
     created_at: Date.now(),
     updated_at: Date.now()
     }))
 };
+
 module.getDepartmentsGraphQLKey = function(){
   let results = parser(departments);
   return results.map((item, index) =>({
     department_id: uuidv1(),
     name: item.name,
-    desc:"desc for department1",
+    desc: "description for department1",
     created_at: Date.now(),
     updated_at: Date.now()
     }))
 };
+
 module.exports = module;
