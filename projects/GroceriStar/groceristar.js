@@ -243,4 +243,34 @@ module.getGroceryGraphQLKey = function(){
     favs: false
     }))
 };
+
+module.getIngredientsGraphQL = function(){
+  let results = parser(ingredients);
+  return results.map((item, index) =>({
+    ingredient_id: ++index,
+    favs:'',
+    name: item.name,
+    description: "description",
+    custom: false,
+    created_at: Date.now(),
+    updated_at: Date.now(),
+    id_1: 1,
+    department_id: 1
+    }))
+};
+
+module.getIngredientsGraphQLKey = function(){
+  let results = parser(ingredients);
+  return results.map((item, index) =>({
+    ingredient_id: uuidv1(),
+    favs:'',
+    name: item.name,
+    description: "description",
+    custom: false,
+    created_at: Date.now(),
+    updated_at: Date.now(),
+    id_1: 1,
+    department_id: 1
+    }))
+};
 module.exports = module;
