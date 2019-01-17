@@ -1,52 +1,69 @@
-function attachGroceryToAdmin(admin, grocery){
-	// console.log(grocery);
-    var options = {
-      userId: admin.id,
-      secondArray: [ grocery.id ]
-    };
-    User.addGrocery(options);
+'use strict';
 
+const debug   = require('debug');
+
+let table_name = 'user'
+
+let attributes  = [
+    'userId'
+];
+
+
+
+// @TODO this is a duplicate
+function assignAdmin( options, admin_id ){
+  let server
+  let database
+  let raven
+
+  { server, database, raven } = options;
+
+  // User        = server.models.user;
+  let Role        = server.models.Role;
+  let RoleMapping = server.models.RoleMapping;
+  // database    = server.datasources.recipeDS;
+
+	database.automigrate('Role', function(err){
+		if (err) return cb(err);
+
+		Role.create({ name:'admin' })
+		.then(function(role){
+
+			role.principals.create({
+                  principalType: RoleMapping.USER,
+                  principalId: admin_id
+              }, function(err, principal){
+                console.log('Principal', principal);
+              });
+
+		}).catch(function(err){
+      raven.captureException("admin was not assigned");
+      throw err;
+    });
+	});
+  debug('admin was created');
+};
+
+
+const attachRecipesToUsers = () => {
+  // 	recipes.forEach(function(recipe){
+  // 		recipe.updateAttribute('userId', users[2].id);
+
+  // 	});
 };
 
 
 
-
-function getAdminGroceries ( User ){
-	// this is a custom method for user model,
-	// which I decided to move from main model definition to this place
-
-	User.withAdmin = function(cb){
-        User.findOne({
-        	where: {
-				username: 'admin'
-			},
-
-	        include: {
-	             relation: 'groceries',
-	             scope: {
-	                 // where: {
-	                 //     id: groceryId
-	                 // },
-	                 // include: {
-	                 //     relation: 'departmentsList',
-	                 // }
-	             }
-	        }
-        }, cb);
-    };
-
-	User.getAdminData = function(){
-
-
-		User.withAdmin(function(err, admin){
-			console.log(admin);
-		});
-
-
-
-	};
-
+const attachMenusToUsers = (users, menus) => {
+  helper.attach(users, menus, attributes[0])
 };
 
-module.exports.attachGroceryToAdmin     = attachGroceryToAdmin;
-module.exports.getAdminGroceries = getAdminGroceries;
+
+
+module.exports = {
+  // get: get,
+  table_name: table_name,
+  assignAdmin: assignAdmin,
+  attachRecipesToUsers: attachRecipesToUsers,
+  attachMenusToUsers: attachMenusToUsers
+}

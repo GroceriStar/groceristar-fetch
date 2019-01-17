@@ -29,7 +29,7 @@ const get = (tableName) => {
       break;
 
     case 'recipe':
-      result = chickenKyiv.getRecipes();
+      result = chickenKyiv.getRecipe();
       break;
 
     case 'ingredient':

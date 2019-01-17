@@ -108,6 +108,8 @@ And when we pass a debug flag into our method - we'll get console.log with resul
 
 - Proposal: use module resolver.... with a new babel 7 core
 
+- Proposal: use lodash methods for returninh random elements
+
 @TODO use different flags for one command in order to call different imports
 
 [npm-run-script](https://docs.npmjs.com/cli/run-script)
