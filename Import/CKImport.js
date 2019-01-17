@@ -41,7 +41,7 @@ const get = (tableName) => {
       break;
 
     case 'department':
-      result = chickenKyiv.getDepartment();
+      result = chickenKyiv.getDepartments();
       break;
 
 

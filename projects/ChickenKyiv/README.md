@@ -15,6 +15,17 @@ List of methods that we have:
 - getUsers
 
 
+---
+
+Separate ingredients by departments.
+So we have a |Departments array|
+We have an |Ingredients array|
+I need to have a method that will receive a dep_id
+or move and will return to me this stuff.
+
+Put this methods into CK.
+
+
 
 ```
 

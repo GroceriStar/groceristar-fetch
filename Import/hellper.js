@@ -1,9 +1,11 @@
 // const Raven   = require('raven');
+
 const debug   = require('debug');
 const _       = require('underscore');
+
 // @TODO move id to config file. or we use it in a lot of places.
 // Raven.config('https://c1e3b55e6a1a4723b9cae2eb9ce56f2e:57e853a74f0e4db98e69a9cf034edcdd@sentry.io/265540').install();
-let raven
+// let raven
 
 const get_id_array = (array) => {
   if ( !array ){
@@ -31,11 +33,11 @@ const create = (options, wrapper, cb) => {
   if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
 
 
-  let server
-  let database
-  let raven
-  let predata
-  ( {server, database, raven, predata} = options );
+  // let server
+  // let database
+  // let raven
+  // let predata
+  const { server, database, raven, predata } = options ;
 
   let Model      = server.models[wrapper.table_name];
   let table_name = wrapper.table_name;
@@ -72,9 +74,16 @@ const attach = ( array_ids, collection, attribute ) => {
 
      // if attribute is string then use it. if attribute is array with count 1 - use it
      // if attribute have more elements - we need to pick stuff. @TODO
-     _.map( collection, item => item.updateAttribute(attribute, arrayWithIds) )
 
-     debug('attach attached!'); // @TODO
+
+          //@TODO check if collection is simple item, not an array
+          _.map( collection, item => item.updateAttribute(attribute, arrayWithIds) )
+
+
+
+
+          // console.log(collection);
+          // debug('attach attached!'); // @TODO
 };
 
 
