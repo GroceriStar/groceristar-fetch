@@ -1,7 +1,10 @@
 // const Raven   = require('raven');
 
 const debug   = require('debug');
-const _       = require('underscore');
+
+// const _       = require('underscore');
+
+const _       = require('lodash');
 
 // @TODO move id to config file. or we use it in a lot of places.
 // Raven.config('https://c1e3b55e6a1a4723b9cae2eb9ce56f2e:57e853a74f0e4db98e69a9cf034edcdd@sentry.io/265540').install();
@@ -12,6 +15,10 @@ const get_id_array = (array) => {
     raven.captureException('Cannot attach an empty array of ids');
   }
   console.log('strong debug process - get_id_array')
+
+
+
+
 
   return _.map( _.pluck(array, 'id'), item => item.toString() );
 
