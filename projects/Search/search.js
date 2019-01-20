@@ -1,4 +1,7 @@
-const _            = require('lodash');
+const _             = require('lodash');
+const uuidv1        = require('uuid/v1');
+const path          = require('path');
+
 const allergies     = require('../../data/Allergy/allergies.json');
 const courses       = require('../../data/Course/courses.json');
 const cuisines      = require('../../data/Cuisine/cuisines.json');
@@ -10,24 +13,50 @@ const measurements  = require('../../data/Measurement/measurements.json');
 
 
 
-const path = require('path')
 
-const parser = function ( filename ){
 
-    return JSON.parse( JSON.stringify(filename) )
+// @TODO why we name files as plurals but attributes as singular noun?
+// please advice
+const getRawFiles = function() {
+  return {
+    'allergy': allergies,
+    'course': course,
+    'cuisine': cuisines,
+    'diet': diets,
+    'holiday': holiday,
+    'ingredient': ingredients1,
+    'measurement': measurements
+  }
+}
+
+
+const parser = function(filename) {
+
+  return JSON.parse(JSON.stringify(filename))
 
 }
 
 
-module.pathToJson = function (){
+const pathToJson = function() {
   // path.dirname(__filename)
   return path.dirname('./data/Allergy/allergies.json');
 };
 
+// we got this array [ one, two, three ]
+// return [ { label: one, value:one } ]
+const proceedData = (array) => {
+  const result = _.map(array, item => {
+    return {
+      label: item,
+      value: _.camelCase(item)
+    }
+  })
+  return result;
+}
 
 // return data, related to recipe attributes by name of attribute(read category of meal)
 // maybe it's better to name it getAttributeData....
-module.getAttribute = function (attribute) {
+const getAttribute = function(attribute) {
   switch (attribute) {
     case 'allergies':
       return parser(allergies);
@@ -45,12 +74,18 @@ module.getAttribute = function (attribute) {
       return parser(diets);
       break;
 
-    default: return "Incorrect attribute or empty argument";
+    default:
+      return "Incorrect attribute or empty argument";
 
   }
 }
 
-module.getPlaceholder = function(attribute, flag = false) {
+const getFormattedAttributes = function(attribute) {
+  return proceedData( getAttribute(attribute) );
+}
+
+
+const getPlaceholder = function(attribute, flag = false) {
   if (attribute == 'allergy') {
     return "Allergies";
   }
@@ -67,39 +102,43 @@ module.getPlaceholder = function(attribute, flag = false) {
     return "Holiday";
   }
   // case for ingredients, not for attributes...
-  if( attribute == 'ingredient' ) {
-     return  ( flag ) ? "Ingredients you have" : "Ingredients you don't have";
+  if (attribute == 'ingredient') {
+    return (flag) ? "Ingredients you have" : "Ingredients you don't have";
   }
 
 
-// @TODO use this instead of ifs
-// switch (attribute) {
-//   case 'allergies':
-//     return parser(allergies);
-//     break;
-//   case 'cuisines':
-//     return parser(cuisines);
-//     break;
-//   case 'courses':
-//     return parser(courses);
-//     break;
-//   case 'holidays':
-//     return parser(holidays);
-//     break;
-//   case 'diets':
-//     return parser(diets);
-//     break;
-//
-//   default: return "Incorrect attribute or empty argument";
-// }
+  // @TODO use this instead of ifs
+  // switch (attribute) {
+  //   case 'allergies':
+  //     return parser(allergies);
+  //     break;
+  //   case 'cuisines':
+  //     return parser(cuisines);
+  //     break;
+  //   case 'courses':
+  //     return parser(courses);
+  //     break;
+  //   case 'holidays':
+  //     return parser(holidays);
+  //     break;
+  //   case 'diets':
+  //     return parser(diets);
+  //     break;
+  //
+  //   default: return "Incorrect attribute or empty argument";
+  // }
 
 }
 
 // this method can have a duplicates..... related to another project
-module.getIngredients = function() {
-	return parser( ingredients1 )
+const  getIngredients = function() {
+  return parser(ingredients1)
 }
 
+
+const getFormattedIngredients = function() {
+  return proceedData( getIngredients() );
+}
 
 // for antD version of select field we should have a method that return values as this example
 // const options = [
@@ -122,59 +161,92 @@ module.getIngredients = function() {
 // we'll use it at recipe-search-react/SearchForm.js
 
 // how to test? getOptionsForSelectFieldV1('diets') or getOptionsForSelectFieldV1('holidays')
-module.getOptionsForSelectFieldV1 = function(attribute){
-    const data = getAttribute(attribute);
-    console.log(data);
-    //....
+const getOptionsForSelectFieldV1 = function(attribute) {
+  const data = getAttribute(attribute);
+  console.log(data);
+  //....
 }
 
 
 
 // toOpt is a method from react-select plugin
 // @TODO change name later and also buzz me - so we'll replace the name at our other sources....
-// I don't like that we converting index into string. I understand the reason, but better to use uuidv1
-// @TODO update it
 // i like this name - Prepare Data for Select Field
-module.toOpt = function (data, nameOfDisabledProperty) {
+const toOpt = function(data) {
 
-    // in antD case we have `isDisabled` property
-    // in react-select case we have `disabled` property
-    // false is equal to skipping it
-
-    let result
-    if( _.isArray( data ) ) {
-        object =
-          _.reduce(data, (result, value, key) => {
-            result[key] = {};
-            result[key].value = key.toString();
-            result[key].label = value;
-
-            //here we should put an option, when we can pass
-            // if( nameOfDisabledProperty ){
-            //   result[key].nameOfDisabledProperty = true;
-            // }
-
-            return result;
-          })
+  // console.log('react-select case');
 
 
+  if (_.isArray(data)) {
 
+    const result = _.map(data, ({
+      value,
+      label,
+      disabled
+    }) => ({
+      key: uuidv1(),
+      value,
+      label,
+      disabled: (disabled) ? disabled : false
+    }))
 
-      return object;
-    }
+    return result;
+  }
 
-    // for cases with issues.
-    return [];
+  // for cases with issues.
+  return [];
 }
+
 
 
 // similar to previous method, but we have this structure.
 // i think it's better to split it into 2 methods and don't f**k with brain
 // antD receive this for select option: { key, label, disabled }
 // react-select receive this for option: { value, label, disabled }
-module.toOptAntD = (data) => {
-  console.log('antD case');
+const toOptAntD = (data) => {
+  // console.log('antD case');
+
+
+  if (_.isArray(data)) {
+
+    // const a = _.map(data, item => {
+    //   console.log(item);
+    // })
+
+    const result = _.map(data, ({
+      value,
+      label,
+      disabled
+    }) => ({
+      key: uuidv1(),
+      value,
+      label,
+      isDisabled: (disabled) ? disabled : false
+    }))
+
+    return result;
+    // return 0;
+  }
+
+  // for cases with issues.
+  return [];
 }
 
 
-module.exports = module;
+module.exports = {
+  getRawFiles,
+  pathToJson,
+  proceedData,
+  getAttribute,
+  getFormattedAttributes,
+  getPlaceholder,
+  getIngredients,
+  getFormattedIngredients,
+
+  getOptionsForSelectFieldV1,
+
+  toOpt,
+  toOptAntD
+}
+
+// module.exports = module;
