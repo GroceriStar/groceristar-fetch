@@ -6,3 +6,4 @@ describe("Showcase project methods should return data", () => {
     expect(stream).not.toBe("");
   });
 }
+)
