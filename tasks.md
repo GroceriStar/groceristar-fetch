@@ -6,20 +6,6 @@ Tasks:
 - [ ] [ChickenKyiv Free Menu Release import data](https://github.com/GroceriStar/static-data/issues/10)
 ---
 
- - Proposal: add to each `get` method an attribute, related to debug.
-I assume we'll need to have one `get` method, with cases, where we return a different data.
-And when we pass a debug flag into our method - we'll get console.log with result, before returning it.
-
- - Proposal: have a one common place for common methods, that we're using quite often. Example: we need departments at CK and at GS. we need recipes at CK and S. We need menus at CK and MC
-
-- Proposal: random stuff use lodash functions...
-
-- Proposal: use module resolver.... with a new babel 7 core
-
-- Proposal: use lodash methods for returninh random elements
-
-- Proposal: does staticFiles.test works only at groceristar case? if no, why it's at projects folder?
-
 @TODO use different flags for one command in order to call different imports
 
 [npm-run-script](https://docs.npmjs.com/cli/run-script)
@@ -66,8 +52,7 @@ https://medium.com/groceristar/chicken-kyiv-recipe-db-schema-part3-b80f33ec5d96
 
 
 
-```
-```
+https://github.com/ChickenKyiv/creative/tree/master/database-schemes
 
 ---
 
