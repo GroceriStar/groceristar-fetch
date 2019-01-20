@@ -1,4 +1,4 @@
-# Groceristar-fetch module
+#### Groceristar-fetch module
 
 Table of Contents
 =================
@@ -37,7 +37,9 @@ Table of Contents
 #### Installation
 
 `npm install @groceristar/groceristar-fetch`
+
 or
+
 `yarn add @groceristar/groceristar-fetch`
 
 
@@ -82,7 +84,7 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 
 #### Contributors
 
-@vadim9999, @MinkoJ2, @chauhannishith, @atherdon
+@vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah
 
 #### Credits
 
@@ -90,36 +92,3 @@ Created with help of this articles:
 https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
 https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
 
-
-#### Unprocessed 'junk' - things that we should keep here.
----
-Tasks:
-- [ ] [Search Form static data](https://github.com/GroceriStar/static-data/issues/14)
-- [ ] [ChickenKyiv Free Menu Release import data](https://github.com/GroceriStar/static-data/issues/10)
----
-
- - Proposal: add to each `get` method an attribute, related to debug.
-I assume we'll need to have one `get` method, with cases, where we return a different data.
-And when we pass a debug flag into our method - we'll get console.log with result, before returning it.
-
- - Proposal: have a one common place for common methods, that we're using quite often. Example: we need departments at CK and at GS. we need recipes at CK and S. We need menus at CK and MC
-
-- Proposal: random stuff use lodash functions...
-
-- Proposal: use module resolver.... with a new babel 7 core
-
-- Proposal: use lodash methods for returninh random elements
-
-- Proposal: does staticFiles.test works only at groceristar case? if no, why it's at projects folder?
-
-@TODO use different flags for one command in order to call different imports
-
-[npm-run-script](https://docs.npmjs.com/cli/run-script)
-
-
-
-[Introduction to NPM Scripts](https://medium.freecodecamp.org/introduction-to-npm-scripts-1dbb2ae01633)
-
-```npm run test -- --arg="search"```
-
-@TODO add tests
