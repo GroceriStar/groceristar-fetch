@@ -140,6 +140,7 @@
     "desc": false,
     "slug": false
   },
+<<<<<<< HEAD
     {
     "departments": [
       "staples",
@@ -154,6 +155,11 @@
       "drinks",
       "pastry",
       "sweets"
+=======
+     {
+    "departments": [
+      "Other"
+>>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6
     ],
     "id": 9,
     "name": "basic-grocery-list",
@@ -173,6 +179,7 @@
   },
     {
     "departments": [
+<<<<<<< HEAD
       "grains and flours",
       "single ingredient food",
       "produce",
@@ -180,6 +187,9 @@
       "dairy like stuff",
       "dry stuff",
       "other"
+=======
+      "Other"
+>>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6
     ],
     "id": 11,
     "name": "gluten-free-diet",
@@ -189,6 +199,7 @@
   },
     {
     "departments": [
+<<<<<<< HEAD
       "breads-and-grains",
       "dairy-and-eggs",
       "meats",
@@ -196,6 +207,9 @@
       "frozen items",
       "pantry staples",
       "other"
+=======
+      "Other"
+>>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6
     ],
     "id": 12,
     "name": "health-article",
@@ -205,6 +219,7 @@
   },
     {
     "departments": [
+<<<<<<< HEAD
       "other"
     ],
     "id": 13,
@@ -285,10 +300,17 @@
     ],
     "id": 19,
     "name": "healthy-diet-vegetarian-paleo-shopping-list",
+=======
+      "Other"
+    ],
+    "id": 13,
+    "name": "How-i-spent-40-at-trader-joes-and-ate-healthy-for-a-week",
+>>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6
     "img": false,
     "desc": false,
     "slug": false
   },
+<<<<<<< HEAD
       {
     "departments": [
       "other"
@@ -390,3 +412,16 @@
   },
 
 ]
+=======
+    {
+    "departments": [
+      "Other"
+    ],
+    "id": 14,
+    "name": "number-four",
+    "img": false,
+    "desc": false,
+    "slug": false
+  }
+ ]
+>>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6
