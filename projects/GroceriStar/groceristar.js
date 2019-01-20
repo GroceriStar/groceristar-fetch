@@ -22,26 +22,6 @@ const getGrocery = function() {
   return parser(groceries)
 }
 
-// @TODO i think as showcase is a separated project, we can move this method to
-// a separated place, in order to make it cleaner
-const getGroceryShowcase = function() {
-  //@TODO can we just merge together 2 arrays instead of adding this 2 values?
-  //maybe it can be better
-
-  //parser replace
-  let parsedGroceries = getGrocery();
-  // console.log(parsedGroceries);
-
-  let groceriesWithCss = parsedGroceries.map((item) => {
-    item.height = 200;
-    item.css = "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)"
-    return item;
-  });
-  // console.log(groceriesWithCss);
-
-  return groceriesWithCss;
-}
-
 const getUsers = function() {
   return parser(users)
 }
@@ -296,111 +276,11 @@ function newGroceryList(newDepartment) {
   groceries = newGrocery;
 }
 
-const getDepartmentsGraphQL = function(){
-  let results = getDepartments();
-  return results.map((item, index) =>({
-    department_id: ++index,
-    name: item.name,
-    desc: "description for department1",
-    created_at: Date.now(),
-    updated_at: Date.now()
-    }))
-};
 
-const getDepartmentsGraphQLKey = function(){
-  let results = getDepartments();
-  return results.map((item, index) =>({
-    department_id: uuidv1(),
-    name: item.name,
-    desc: "description for department1",
-    created_at: Date.now(),
-    updated_at: Date.now()
-    }))
-};
-
-const getGroceryGraphQL = function(){
-  let results = getGrocery();
-  return results.map((item, index) =>({
-    grocery_id: ++index,
-    name: item.name,
-    img:  item.img,
-    desc: item.desc,
-    slug: item.slug,
-    created_at: Date.now(),
-    updated_at: Date.now(),
-    id_1: 1,
-    favs: false
-    }))
-};
-
-const getGroceryGraphQLKey = function(){
-  let results = getGrocery();
-  return results.map((item, index) =>({
-    grocery_id: uuidv1(),
-    name: item.name,
-    img:  item.img,
-    desc: item.desc,
-    slug: item.slug,
-    created_at: Date.now(),
-    updated_at: Date.now(),
-    id_1: 1,
-    favs: false
-    }))
-};
-
-const getIngredientsGraphQL = function(){
-  let results = getIngredients();
-  return results.map((item, index) =>({
-    ingredient_id: ++index,
-    favs:'',
-    name: item.name,
-    description: "description",
-    custom: false,
-    created_at: Date.now(),
-    updated_at: Date.now(),
-    id_1: 1,
-    department_id: 1
-    }))
-};
-
-const getIngredientsGraphQLKey = function(){
-  let results = getIngredients();
-  return results.map((item, index) =>({
-    ingredient_id: uuidv1(),
-    favs:'',
-    name: item.name,
-    description: "description",
-    custom: false,
-    created_at: Date.now(),
-    updated_at: Date.now(),
-    id_1: 1,
-    department_id: 1
-    }))
-};
-
-const getUsersGraphQL = function(){
-  let results = getUsers();
-  return results.map((item, index) =>({
-    userId: ++index,
-    favs: false,
-    ingredient_id: 1,
-    grocery_id: 1
-    }))
-};
-const getUsersGraphQLKey = function(){
-  let results = getUsers();
-  return results.map((item, index) =>({
-    userId: uuidv1(),
-    favs: false,
-    ingredient_id: 1,
-    grocery_id: 1
-    }))
-};
 
 module.exports = {
   getIngredients,
   getGrocery,
-  getGroceryShowcase,
   getUsers,
   getDepartments,
   getGroceryById,
@@ -416,14 +296,7 @@ module.exports = {
   createNewGroceryList,
   getGroceryListsByDepartment,
   newGroceryList,
-  getDepartmentsGraphQL,
-  getDepartmentsGraphQLKey,
-  getGroceryGraphQL,
-  getGroceryGraphQLKey,
-  getIngredientsGraphQL,
-  getIngredientsGraphQLKey,
-  getUsersGraphQL,
-  getUsersGraphQLKey,
+
   getAllIngredientsByOneDepartmentKey,
   getGroceryByNameWithDepAndIngKey,
   getGroceriesWithDepIngKey,
