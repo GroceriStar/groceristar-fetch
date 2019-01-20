@@ -139,5 +139,65 @@
     "img": false,
     "desc": false,
     "slug": false
+  },
+     {
+    "departments": [
+      "Other"
+    ],
+    "id": 9,
+    "name": "basic-grocery-list",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+    {
+    "departments": [
+      "Other"
+    ],
+    "id": 10,
+    "name": "first-vegan-grocery-list",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+    {
+    "departments": [
+      "Other"
+    ],
+    "id": 11,
+    "name": "gluten-free-diet",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+    {
+    "departments": [
+      "Other"
+    ],
+    "id": 12,
+    "name": "health-article",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+    {
+    "departments": [
+      "Other"
+    ],
+    "id": 13,
+    "name": "How-i-spent-40-at-trader-joes-and-ate-healthy-for-a-week",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+    {
+    "departments": [
+      "Other"
+    ],
+    "id": 14,
+    "name": "number-four",
+    "img": false,
+    "desc": false,
+    "slug": false
   }
-]
+ ]
