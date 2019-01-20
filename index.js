@@ -14,7 +14,7 @@ const CKImport     = require("./Import/CKImport");
 // console.log(groceristar.getAllIngredientsWithId());
 // console.log(groceristar.getAllDepartmentsWithId());
 
-console.log(groceristar.getKeyArray());
+// console.log(groceristar.getKeyArray());
 
 
 
