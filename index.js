@@ -11,6 +11,11 @@ const CKImport     = require("./Import/CKImport");
 // console.log(groceristar.getGroceryByNameWithDepAndIngKey("Ultimate Grocery List"));
 // console.log(groceristar.getGroceriesWithDepIngKey());
 
+// console.log(groceristar.getAllIngredientsWithId());
+// console.log(groceristar.getAllDepartmentsWithId());
+
+console.log(groceristar.getKeyArray());
+
 
 
 module.exports = {

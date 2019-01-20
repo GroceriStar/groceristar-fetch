@@ -168,13 +168,68 @@ const getAllIngredientsByOneDepartment = function(department) {
   return _.map(ingredientsList, 'name');
 }
 
+const getKeyArray = function(){
+  let keys =[];
+  let departments = getAllDepartmentsWithId();
+  let ingredients = getAllIngredientsWithId();
+  // _.map(ingredients, ingredient => {
+  //   _.forEach(departments,function(department){
+  //     if(ingredient.department === department.name) {
+  //       keys.push({
+  //       [department.key] : ingredient.key,
+  //       })
+  //     }
+  //   })
+  //   return;
+  // })
+    _.forEach(departments,function(department){
 
+      _.forEach(ingredients,function(ingredient){
+
+        if(ingredient.department === department.name) {
+          keys.push({
+          [department.key] : ingredient.key,
+          })
+        }
+      })
+    })
+
+  return keys;
+}
+// --------------------------------------------
 const getAllDepartmentList = function() {
-  return _.map(this.getDepartments(), item => ({
+  return _.map(getDepartments(), item => ({
     key: uuidv1(),
     departmentName: item
   }));
 };
+
+const getAllIngredientsWithId = function(){
+  let ingredients = getIngredients();
+
+  let result = _.map(ingredients, function(ingredient){
+    return {
+      key: uuidv1(),
+      ingredient: ingredient.name
+    }
+  })
+
+  return result;
+}
+
+const getAllDepartmentsWithId = function(){
+  let departments = getDepartments();
+
+  let result = _.map(departments, function(department){
+    return {
+      key: uuidv1(),
+      department: department.name
+    }
+  })
+
+  return result;
+}
+//------------------------------
 
 const getAllIngredientsList = function(department) {
   const ingredients = this.getAllIngredientsByOneDepartment(department);
@@ -371,6 +426,10 @@ module.exports = {
   getUsersGraphQLKey,
   getAllIngredientsByOneDepartmentKey,
   getGroceryByNameWithDepAndIngKey,
-  getGroceriesWithDepIngKey
+  getGroceriesWithDepIngKey,
+  getAllIngredientsWithId,
+  getKeyArray,
+  getAllDepartmentsWithId
+
 
 }
