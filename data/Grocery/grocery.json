@@ -131,498 +131,262 @@
     "slug": false
   },
   {
-    "Fresh vegetables":[
-      "Asparagus",
-      "Broccoli",
-      "Carrots",
-      "Cauliflower",
-      "Celery",
-      "Corn",
-      "Cucumbers",
-      "Lettuce / Greens",
-      "Mushrooms",
-      "Onions",
-      "Peppers",
-      "Potatoes",
-      "Spinach",
-      "Squash",
-      "Zucchini",
-      "Tomatoes"
+    "departments": [
+      "Other"
     ],
     "id": 8,
-    "name": "Fresh vegetables",
+    "name": "19 Gluten-Free Foods Shopping List",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Fresh fruits":[
-      "Apples",
-      "Avocados",
-      "Bananas",
-      "Berries",
-      "Cherries",
-      "Grapefruit",
-      "Grapes",
-      "Kiwis",
-      "Lemons / Limes",
-      "Melon",
-      "Oranges",
-      "Peaches",
-      "Nectarines",
-      "Pears",
-      "Plums"
+    {
+    "departments": [
+      "staples",
+      "tinnedFood",
+      "vegetables",
+      "fruits",
+      "meat",
+      "condiments"
+      "dairy",
+      "spreads",
+      "cookingBaking",
+      "drinks",
+      "pastry",
+      "sweets"
     ],
     "id": 9,
-    "name": "Fresh fruits",
+    "name": "basic-grocery-list",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Refrigerated items":[
-      "Bagels",
-      "Chip dip",
-      "English muffins",
-      "Eggs / Fake eggs",
-      "Fruit juice",
-      "Hummus",
-      "Ready-bake breads",
-      "Tofu",
-      "Tortillas"
+    {
+    "departments": [
+      "Other"
     ],
     "id": 10,
-    "name": "Refrigerated items",
+    "name": "first-vegan-grocery-list",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Frozen":[
-      "Breakfasts",
-      "Burritos",
-      "Fish sticks",
-      "Ice cream / Sorbet",
-      "Juice concentrate",
-      "Pizza / Pizza Rolls",
-      "Popsicles",
-      "Fries / Tater tots",
-      "TV dinners",
-      "Vegetables",
-      "Veggie burgers"
+    {
+    "departments": [
+      "grains and flours",
+      "single ingredient food",
+      "produce",
+      "vegetarian protein source",
+      "dairy like stuff",
+      "dry stuff",
+      "other"
     ],
     "id": 11,
-    "name": "Frozen",
+    "name": "gluten-free-diet",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Condiments / Sauces":[
-      "BBQ sauce",
-      "Gravy",
-      "Honey",
-      "Hot sauce",
-      "Jam / Jelly / Preserves",
-      "Ketchup / Mustard",
-      "Mayonnaise",
-      "Pasta sauce",
-      "Relish",
-      "Salad dressing",
-      "Salsa",
-      "Soy sauce",
-      "Steak sauce",
-      "Syrup",
-      "Worcestershire sauce"
-      ],
+    {
+    "departments": [
+      "breads-and-grains",
+      "dairy-and-eggs",
+      "meats",
+      "fresh produce",
+      "frozen items",
+      "pantry staples",
+      "other"
+    ],
     "id": 12,
-    "name": "Condiments / Sauces",
+    "name": "health-article",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Various groceries":[
-      "Bouillon cubes",
-      "Cereal",
-      "Coffee / Filters",
-      "Instant potatoes",
-      "Lemon / Lime juice",
-      "Mac & cheese",
-      "Olive oil",
-      "Pancake / Waffle mix",
-      "Pasta",
-      "Peanut butter",
-      "Pickles",
-      "Rice",
-      "Tea",
-      "Vegetable oil",
-      "Vinegar"
-      ],
+    {
+    "departments": [
+      "other"
+    ],
     "id": 13,
-    "name": "Various groceries",
+    "name": "How-i-spent-40-at-trader-joes-and-ate-healthy-for-a-week",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Canned foods":[
-      "Applesauce",
-      "Baked beans",
-      "Chili",
-      "Fruit",
-      "Olives",
-      "Tinned meats",
-      "Tuna / Chicken",
-      "Soups",
-      "Tomatoes",
-      "Veggies"
-      ],
+    {
+    "departments": [
+      "carbs",
+      "ProteinSources",
+      "DairyMilk",
+      "produce",
+      "CondimentsMiscellaneous",
+      "FrozenFoods"
+    ],
     "id": 14,
-    "name": "Canned foods",
+    "name": "number-four",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Spices & herbs":[
-      "Basil",
-      "Black pepper",
-      "Cilantro",
-      "Cinnamon",
-      "Garlic",
-      "Ginger",
-      "Mint",
-      "Oregano",
-      "Paprika",
-      "Parsley",
-      "Red pepper",
-      "Salt",
-      "Spice mix",
-      "Vanilla extract"
-      ],
+      {
+    "departments": [
+      "produce",
+      "herbs",
+      "meat, fish and soy proteins",
+      "grocery items",
+      "oils, vinegar and condiments",
+      "spices",
+      "nuts and seeds"
+    ],
     "id": 15,
-    "name": "Spices & herbs",
+    "name": "dr-ozs-21-day-weight-loss-breakthrough-shopping-list",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Dairy":[
-      "Butter / Margarine",
-      "Cottage cheese",
-      "Half & half",
-      "Milk",
-      "Sour cream",
-      "Whipped cream",
-      "Yogurt"
-      ],
+      {
+    "departments": [
+      "other"
+    ],
     "id": 16,
-    "name": "Dairy",
+    "name": "healthy-diet-for-20-week-list",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Cheese":[
-      "Bleu cheese",
-      "Cheddar",
-      "Cottage cheese",
-      "Cream cheese",
-      "Feta",
-      "Goat cheese",
-      "Mozzarella / Provolone",
-      "Parmesan",
-      "Provolone",
-      "Ricotta",
-      "Sandwich slices",
-      "Swiss"
-      ],
+      {
+    "departments": [
+      "fruits",
+      "vegetables",
+      "grains",
+      "protein",
+      "dairy",
+      "pantry"
+    ],
     "id": 17,
-    "name": "Cheese",
+    "name": "1-week-healthy-budget-grocery-list",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Meat":[
-      "Bacon / Sausage",
-      "Beef",
-      "Chicken",
-      "Ground beef / Turkey",
-      "Ham / Pork",
-      "Hot dogs",
-      "Lunchmeat",
-      "Turkey"
-      ],
+      {
+    "departments": [
+      "other"
+    ],
     "id": 18,
-    "name": "Meat",
+    "name": "the-fitness-dollar-menu-budget-friendly-groceries",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Seafood":[
-      "Catfish",
-      "Crab",
-      "Lobster",
-      "Mussels",
-      "Oysters",
-      "Salmon",
-      "Shrimp",
-      "Tilapia",
-      "Tuna"
-      ],
+      {
+    "departments": [
+      "other"
+    ],
     "id": 19,
-    "name": "Seafood",
+    "name": "healthy-diet-vegetarian-paleo-shopping-list",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Beverages":[
-      "Beer",
-      "Club soda / Tonic",
-      "Champagne",
-      "Gin",
-      "Juice",
-      "Mixers",
-      "Red wine / White wine",
-      "Rum",
-      "Saké",
-      "Soda pop",
-      "Sports drink",
-      "Whiskey",
-      "Vodka"
+      {
+    "departments": [
+      "other"
     ],
     "id": 20,
-    "name": "Beverages",
+    "name": "essential-groceries-for-single-guys",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Baked goods":[
-      "Bagels / Croissants",
-      "Buns / Rolls",
-      "Cake / Cookies",
-      "Donuts / Pastries",
-      "Fresh bread",
-      "Sliced bread",
-      "Pie! Pie! Pie!",
-      "Pita bread"
-      ],
+      {
+    "departments": [
+      "pantry ingredients",
+      "other"
+    ],
     "id": 21,
-    "name": "Baked goods",
+    "name": "grocery-budget-for-4-people",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Baking":[
-      "Baking powder / Soda",
-      "Bread crumbs",
-      "Cake / Brownie mix",
-      "Cake icing / Decorations",
-      "Chocolate chips / Cocoa",
-      "Flour",
-      "Shortening",
-      "Sugar",
-      "Sugar substitute",
-      "Yeast"
-      ],
+        {
+    "departments": [
+      "other"
+    ],
     "id": 22,
-    "name": "Baking",
+    "name": "27-dollar-grocery-challenge",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Snacks":[
-      "Candy / Gum",
-      "Cookies",
-      "Crackers",
-      "Dried fruit",
-      "Granola bars / Mix",
-      "Nuts / Seeds",
-      "Oatmeal",
-      "Popcorn",
-      "Potato / Corn chips",
-      "Pretzels"
-      ],
+      {
+    "departments": [
+      "beans",
+      "rice",
+      "pasta",
+      "other grains",
+      "canned tomatoes",
+      "canned vegetables",
+      "canned and dried fruits",
+      "sauces",
+      "soups",
+      "meats",
+      "other",
+      "vinegars",
+      "oils",
+      "reduced fat cheeses",
+      "dairy",
+      "breads",
+      "fish"
+    ],
     "id": 23,
-    "name": "Snacks",
+    "name": "shopping-list-basic-ingredients-for-a-healthy-kitchen",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Themed meals":[
-      "Burger night",
-      "Chili night",
-      "Pizza night",
-      "Spaghetti night",
-      "Taco night",
-      "Take-out deli food"
-      ],
+          {
+    "departments": [
+      "other"
+    ],
     "id": 24,
-    "name": "Themed meals",
+    "name": "19-items-you-need-on-your-next-grocery-list",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Baby stuff":[
-      "Baby food",
-      "Diapers",
-      "Formula",
-      "Lotion",
-      "Baby wash",
-      "Wipes"
-      ],
+          {
+    "departments": [
+      "other"
+    ],
     "id": 25,
-    "name": "Baby stuff",
+    "name": "14-grocery-staples-I-always-have-as-a-20-something-on-a-budget",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Pets":[
-      "Cat food / Treats",
-      "Cat litter",
-      "Dog food / Treats",
-      "Flea treatment",
-      "Pet shampoo"
-      ],
+    {
+    "departments": [
+      "Other"
+    ],
     "id": 26,
-    "name": "Pets",
+    "name": "building-a-healthy-vegan-grocery-list",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Personal care":[
-      "Antiperspirant / Deodorant",
-      "Bath soap / Hand soap",
-      "Condoms / Other b.c.",
-      "Cosmetics",
-      "Cotton swabs / Balls",
-      "Facial cleanser",
-      "Facial tissue",
-      "Feminine products",
-      "Floss",
-      "Hair gel / Spray",
-      "Lip balm",
-      "Moisturizing lotion",
-      "Mouthwash",
-      "Razors / Shaving cream",
-      "Shampoo / Conditioner",
-      "Sunblock",
-      "Toilet paper",
-      "Toothpaste",
-      "Vitamins / Supplements"
-      ],
+      {
+    "departments": [
+      "shopping list",
+      "each week buy",
+      "detox vegetable broth ingredients"
+    ],
     "id": 27,
-    "name": "Personal care",
+    "name": "dr-ozs-rapid-weight-loss-plan-shopping-list",
     "img": false,
     "desc": false,
     "slug": false
   },
-  {
-    "Medicine":[
-      "Allergy",
-      "Antibiotic",
-      "Antidiarrheal",
-      "Aspirin",
-      "Antacid",
-      "Band-aids / Medical",
-      "Cold / Flu / Sinus",
-      "Pain reliever",
-      "Prescription pick-up"
-      ],
-    "id": 28,
-    "name": "Medicine",
-    "img": false,
-    "desc": false,
-    "slug": false
-  },
-  {
-    "Kitchen":[
-      "Aluminum foil",
-      "Napkins",
-      "Non-stick spray",
-      "Paper towels",
-      "Plastic wrap",
-      "Sandwich / Freezer bags",
-      "Wax paper"
-      ],
-    "id": 29,
-    "name": "Kitchen",
-    "img": false,
-    "desc": false,
-    "slug": false
-  },
-  {
-    "Cleaning products":[
-      "Air freshener",
-      "Bathroom cleaner",
-      "Bleach / Detergent",
-      "Dish / Dishwasher soap",
-      "Garbage bags",
-      "Glass cleaner",
-      "Mop head / Vacuum bags",
-      "Sponges / Scrubbers"
-      ],
-    "id": 30,
-    "name": "Cleaning products",
-    "img": false,
-    "desc": false,
-    "slug": false
-  },
-  {
-    "Office supplies":[
-      "CDRs / DVDRs",
-      "Notepad / Envelopes",
-      "Glue / Tape",
-      "Printer paper",
-      "Pens / Pencils",
-      "Postage stamps"
-      ],
-    "id": 31,
-    "name": "Office supplies",
-    "img": false,
-    "desc": false,
-    "slug": false
-  },
-  {
-    "Other stuff":[
-      "Automotive",
-      "Batteries",
-      "Charcoal / Propane",
-      "Flowers / Greeting card",
-      "Insect repellent",
-      "Light bulbs",
-      "Newspaper / Magazine",
-      "Random impulse buy"
-      ],
-    "id": 32,
-    "name": "Other stuff",
-    "img": false,
-    "desc": false,
-    "slug": false
-  },
-  {
-    "Carcinogens":[
-      "Arsenic",
-      "Asbestos",
-      "Cigarettes",
-      "Radionuclides",
-      "Vinyl chloride"
-      ],
-    "id": 33,
-    "name": "Carcinogens",
-    "img": false,
-    "desc": false,
-    "slug": false
-  }
+
 ]
