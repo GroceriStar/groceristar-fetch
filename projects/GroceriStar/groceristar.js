@@ -77,7 +77,7 @@ const getGroceryByNameWithDepAndIng = function( name ) {
 
       result.push({
         "department": department,
-        "ingredients": const getAllIngredientsByOneDepartment(department)
+        "ingredients": getAllIngredientsByOneDepartment(department)
       });
     });
   return result;
