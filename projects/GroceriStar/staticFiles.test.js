@@ -95,7 +95,7 @@ describe("comparing length of arrays that we have inside of our static data file
   test("grocery array count", () => {
     var result = groceristar.getGrocery();
 
-    expect(result).toHaveLength(groceryCount);
+    expect(result).toHaveLength(GROCERY_COUNT);
   });
 
   test("users array count", () => {
