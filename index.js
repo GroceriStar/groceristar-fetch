@@ -7,7 +7,9 @@ const mealCalendar = require("./projects/MealCalendar/mealCalendar.js");
 
 // i'm separating this file because it's not fit to logic of this module very well.
 const CKImport     = require("./Import/CKImport");
-// console.log(groceristar.getUsersGraphQLKey());
+// console.log(groceristar.getAllIngredientsByOneDepartmentKey("Fresh vegetables"));
+// console.log(groceristar.getGroceryByNameWithDepAndIngKey("Ultimate Grocery List"));
+// console.log(groceristar.getGroceriesWithDepIngKey());
 
 
 

@@ -83,6 +83,60 @@ const getGroceryByNameWithDepAndIng = function( name ) {
   return result;
 }
 
+const getGroceriesWithDepIngKey = function(){
+  let groceries = getGrocery();
+  let result = _.map(groceries, function(grocery) {
+    let groceryDepIng = getGroceryByNameWithDepAndIngKey(grocery.name);
+    // grocery.id = uuidv1();
+    // grocery.departments = groceryDepIng;
+    return {
+      ...grocery,
+      id: uuidv1(),
+      departments: groceryDepIng,
+    }
+  });
+
+  return result;
+}
+
+const getGroceryByNameWithDepAndIngKey = function( name ) {
+  //parser replace
+  let groceries = getGrocery();
+
+  let grocery = _.filter(groceries,
+    function(item) {
+      return item.name === name;
+    });
+
+  let result = [];
+  grocery[0]["departments"].forEach(
+    function(department) {
+
+      let ingredients = getAllIngredientsByOneDepartmentKey(department)
+      result.push({
+        "id": uuidv1(),
+        "department": department,
+        "ingredients": ingredients
+      });
+    });
+  return result;
+}
+
+const getAllIngredientsByOneDepartmentKey = function(department) {
+  let ingredients = getIngredients();
+  var ingredientsList =
+    _.filter(ingredients, function(item) {
+      return item.department === department;
+    });
+
+  return _.map(ingredientsList, item => {
+    return {
+      id:uuidv1(),
+      name: item.name,
+      };
+  });
+}
+
 // strange turnaround. @TODO can we
 const getGroceryListsWithCountDepartments = function() {
   //parser replace
@@ -113,6 +167,7 @@ const getAllIngredientsByOneDepartment = function(department) {
     });
   return _.map(ingredientsList, 'name');
 }
+
 
 const getAllDepartmentList = function() {
   return _.map(this.getDepartments(), item => ({
@@ -313,6 +368,9 @@ module.exports = {
   getIngredientsGraphQL,
   getIngredientsGraphQLKey,
   getUsersGraphQL,
-  getUsersGraphQLKey
+  getUsersGraphQLKey,
+  getAllIngredientsByOneDepartmentKey,
+  getGroceryByNameWithDepAndIngKey,
+  getGroceriesWithDepIngKey
 
 }
