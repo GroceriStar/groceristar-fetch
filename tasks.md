@@ -55,6 +55,59 @@ https://medium.com/groceristar/chicken-kyiv-recipe-db-schema-part3-b80f33ec5d96
 https://github.com/ChickenKyiv/creative/tree/master/database-schemes
 
 ---
+https://github.com/GroceriStar/groceristar-fetch/issues/26
+https://github.com/GroceriStar/groceristar-fetch/issues/60
+https://github.com/GroceriStar/groceristar-fetch/issues/140
+
+---
+
+
+I think that i don't want to have a `default` classes like below.
+by my experience they not perfect. and usually easy to be outdated.
+if we need get or set - we can use lodast _.get, _.set
+
+ex from: https://github.com/andrewgrewell/structy
+
+```
+class Burger extends Model {
+    constructor(data) {
+        // call Model constructor and pass the burger data and fieldConfig
+        super(data, burgerConfig);
+    }
+
+    // even though the consumer of this Burger Model could use Burger.name, it is better
+    // to document the shape of your data via getters and setters.
+    getName() {
+        return this.name;
+    }
+
+    isFavorite() {
+        return this.favorite;
+    }
+
+    setFavorite(fav) {
+        // note: setters are required since the data is immutable
+        // this.favorite = fav will throw
+        return this.set('favorite', fav);
+    }
+```
+
+I was also thinking about incorporating immutablejs stuff, but it's not a good option for us too.
+
+
+https://github.com/GroceriStar/graphql-server/issues/3
+https://github.com/GroceriStar/graphql-server/issues/23
+https://github.com/GroceriStar/graphql-server/issues/18
+https://github.com/GroceriStar/graphql-server/issues/11
+https://github.com/GroceriStar/graphql-server/issues/9
+https://github.com/GroceriStar/graphql-server/issues/6
+https://github.com/GroceriStar/graphql-server/issues/4
+
+
+
+
+
+
 
 
 
