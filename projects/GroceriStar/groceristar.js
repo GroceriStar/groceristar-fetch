@@ -64,7 +64,7 @@ const getGroceryByName = function(name) {
 
 const getGroceryByNameWithDepAndIng = function( name ) {
   //parser replace
-  let grocery = _.filter(parser(groceries),
+  let grocery = _.filter(getGrocery(),
     function(item) {
       return item.name === name;
     });
@@ -86,7 +86,7 @@ const getGroceryByNameWithDepAndIng = function( name ) {
 // strange turnaround. @TODO can we
 const getGroceryListsWithCountDepartments = function() {
   //parser replace
-  return _.map(parser(groceries), item => {
+  return _.map(getGrocery(), item => {
     const object = {
       id: item.id,
       name: item.name,
@@ -108,7 +108,7 @@ const getAllDepartments = function() {
 const getAllIngredientsByOneDepartment = function(department) {
 
   var ingredientsList =
-    _.filter(parser(ingredients), function(item) {
+    _.filter(getIngredients(), function(item) {
       return item.department === department;
     });
   return _.map(ingredientsList, 'name');
@@ -133,7 +133,7 @@ const getAllIngredientsList = function(department) {
 
 const getAllGrocery = function() {
   //parser replace
-  return _.map(parser(groceries), item => ({
+  return _.map(getGrocery(), item => ({
     key: uuidv1(),
     ...item
   }));
@@ -158,7 +158,7 @@ const createNewGroceryList = function(newDepartment) {
 
 //TODO OMG, this method looks so sad...
 const getGroceryListsByDepartment = department => {
-  let parsedGroceries = parser(groceries),
+  let parsedGroceries = getGrocery(),
     groceryList = [];
   if (department) {
     capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
@@ -181,13 +181,13 @@ const getGroceryListsByDepartment = department => {
 //@TODO should work now.
 function newGroceryList(newDepartment) {
   const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json');
-  const newGrocery = [...parser(groceries), newDepartment];
+  const newGrocery = [...getGrocery(), newDepartment];
   groceriesFile.write(JSON.stringify(newGrocery, null, 2));
   groceries = newGrocery;
 }
 
 const getDepartmentsGraphQL = function(){
-  let results = parser(departments);
+  let results = getDepartments();
   return results.map((item, index) =>({
     department_id: ++index,
     name: item.name,
@@ -198,7 +198,7 @@ const getDepartmentsGraphQL = function(){
 };
 
 const getDepartmentsGraphQLKey = function(){
-  let results = parser(departments);
+  let results = getDepartments();
   return results.map((item, index) =>({
     department_id: uuidv1(),
     name: item.name,
@@ -209,7 +209,7 @@ const getDepartmentsGraphQLKey = function(){
 };
 
 const getGroceryGraphQL = function(){
-  let results = parser(groceries);
+  let results = getGrocery();
   return results.map((item, index) =>({
     grocery_id: ++index,
     name: item.name,
@@ -224,7 +224,7 @@ const getGroceryGraphQL = function(){
 };
 
 const getGroceryGraphQLKey = function(){
-  let results = parser(groceries);
+  let results = getGrocery();
   return results.map((item, index) =>({
     grocery_id: uuidv1(),
     name: item.name,
@@ -239,7 +239,7 @@ const getGroceryGraphQLKey = function(){
 };
 
 const getIngredientsGraphQL = function(){
-  let results = parser(ingredients);
+  let results = getIngredients();
   return results.map((item, index) =>({
     ingredient_id: ++index,
     favs:'',
@@ -254,7 +254,7 @@ const getIngredientsGraphQL = function(){
 };
 
 const getIngredientsGraphQLKey = function(){
-  let results = parser(ingredients);
+  let results = getIngredients();
   return results.map((item, index) =>({
     ingredient_id: uuidv1(),
     favs:'',
@@ -269,7 +269,7 @@ const getIngredientsGraphQLKey = function(){
 };
 
 const getUsersGraphQL = function(){
-  let results = parser(users);
+  let results = getUsers();
   return results.map((item, index) =>({
     userId: ++index,
     favs: false,
@@ -278,7 +278,7 @@ const getUsersGraphQL = function(){
     }))
 };
 const getUsersGraphQLKey = function(){
-  let results = parser(users);
+  let results = getUsers();
   return results.map((item, index) =>({
     userId: uuidv1(),
     favs: false,
