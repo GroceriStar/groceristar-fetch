@@ -36,16 +36,19 @@ const get_id_array = (array) => {
 
 const create = (options, wrapper, cb) => {
 
+  // let server
+  // let database
+  // let raven
+  // let predata
+  
+  const { server, database, raven, predata } = options ;
+
   if( !options ){ raven.captureException('Options was not specified'); }
   if ( !cb ) { raven.captureException('Callback was not specified'); }
   if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
 
 
-  // let server
-  // let database
-  // let raven
-  // let predata
-  const { server, database, raven, predata } = options ;
+
 
 
   console.log('strong debug process - create')
