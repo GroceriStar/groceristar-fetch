@@ -110,6 +110,8 @@ And when we pass a debug flag into our method - we'll get console.log with resul
 
 - Proposal: use lodash methods for returninh random elements
 
+- Proposal: does staticFiles.test works only at groceristar case? if no, why it's at projects folder?
+
 @TODO use different flags for one command in order to call different imports
 
 [npm-run-script](https://docs.npmjs.com/cli/run-script)

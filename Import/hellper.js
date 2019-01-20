@@ -11,9 +11,15 @@ const _       = require('lodash');
 // let raven
 
 const get_id_array = (array) => {
+
   if ( !array ){
-    raven.captureException('Cannot attach an empty array of ids');
+    return { error: 'Cannot attach an empty array of ids' }
+    // raven.captureException();
   }
+
+  // if ( !array ){
+  //   raven.captureException('Cannot attach an empty array of ids');
+  // }
   console.log('strong debug process - get_id_array')
 
 
@@ -40,12 +46,16 @@ const create = (options, wrapper, cb) => {
   // let database
   // let raven
   // let predata
-  
+
   const { server, database, raven, predata } = options ;
 
-  if( !options ){ raven.captureException('Options was not specified'); }
-  if ( !cb ) { raven.captureException('Callback was not specified'); }
-  if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
+  if( !options ){  return { error: 'Options was not specified' }}
+  if ( !cb ) {     return { error: 'Callback was not specified' }}
+  if ( !wrapper && !wrapper.table_name ) {  return { error: 'Model was not specified' }}
+
+  // if( !options ){ raven.captureException('Options was not specified'); }
+  // if ( !cb ) { raven.captureException('Callback was not specified'); }
+  // if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
 
 
 
@@ -61,7 +71,7 @@ const create = (options, wrapper, cb) => {
 
   database.autoupdate(table_name, function(err){
     if (err) {
-      raven.captureException(err);
+      // raven.captureException(err);
       return cb(err);
     }
 
