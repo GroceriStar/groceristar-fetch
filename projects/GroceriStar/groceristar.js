@@ -22,26 +22,6 @@ const getGrocery = function() {
   return parser(groceries)
 }
 
-// @TODO i think as showcase is a separated project, we can move this method to
-// a separated place, in order to make it cleaner
-const getGroceryShowcase = function() {
-  //@TODO can we just merge together 2 arrays instead of adding this 2 values?
-  //maybe it can be better
-
-  //parser replace
-  let parsedGroceries = getGrocery();
-  // console.log(parsedGroceries);
-
-  let groceriesWithCss = parsedGroceries.map((item) => {
-    item.height = 200;
-    item.css = "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)"
-    return item;
-  });
-  // console.log(groceriesWithCss);
-
-  return groceriesWithCss;
-}
-
 const getUsers = function() {
   return parser(users)
 }
@@ -83,6 +63,60 @@ const getGroceryByNameWithDepAndIng = function( name ) {
   return result;
 }
 
+const getGroceriesWithDepIngKey = function(){
+  let groceries = getGrocery();
+  let result = _.map(groceries, function(grocery) {
+    let groceryDepIng = getGroceryByNameWithDepAndIngKey(grocery.name);
+    // grocery.id = uuidv1();
+    // grocery.departments = groceryDepIng;
+    return {
+      ...grocery,
+      id: uuidv1(),
+      departments: groceryDepIng,
+    }
+  });
+
+  return result;
+}
+
+const getGroceryByNameWithDepAndIngKey = function( name ) {
+  //parser replace
+  let groceries = getGrocery();
+
+  let grocery = _.filter(groceries,
+    function(item) {
+      return item.name === name;
+    });
+
+  let result = [];
+  grocery[0]["departments"].forEach(
+    function(department) {
+
+      let ingredients = getAllIngredientsByOneDepartmentKey(department)
+      result.push({
+        "id": uuidv1(),
+        "department": department,
+        "ingredients": ingredients
+      });
+    });
+  return result;
+}
+
+const getAllIngredientsByOneDepartmentKey = function(department) {
+  let ingredients = getIngredients();
+  var ingredientsList =
+    _.filter(ingredients, function(item) {
+      return item.department === department;
+    });
+
+  return _.map(ingredientsList, item => {
+    return {
+      id:uuidv1(),
+      name: item.name,
+      };
+  });
+}
+
 // strange turnaround. @TODO can we
 const getGroceryListsWithCountDepartments = function() {
   //parser replace
@@ -114,12 +148,68 @@ const getAllIngredientsByOneDepartment = function(department) {
   return _.map(ingredientsList, 'name');
 }
 
+const getKeyArray = function(){
+  let keys =[];
+  let departments = getAllDepartmentsWithId();
+  let ingredients = getAllIngredientsWithId();
+  // _.map(ingredients, ingredient => {
+  //   _.forEach(departments,function(department){
+  //     if(ingredient.department === department.name) {
+  //       keys.push({
+  //       [department.key] : ingredient.key,
+  //       })
+  //     }
+  //   })
+  //   return;
+  // })
+    _.forEach(departments,function(department){
+
+      _.forEach(ingredients,function(ingredient){
+
+        if(ingredient.department === department.name) {
+          keys.push({
+          [department.key] : ingredient.key,
+          })
+        }
+      })
+    })
+
+  return keys;
+}
+// --------------------------------------------
 const getAllDepartmentList = function() {
-  return _.map(this.getDepartments(), item => ({
+  return _.map(getDepartments(), item => ({
     key: uuidv1(),
     departmentName: item
   }));
 };
+
+const getAllIngredientsWithId = function(){
+  let ingredients = getIngredients();
+
+  let result = _.map(ingredients, function(ingredient){
+    return {
+      key: uuidv1(),
+      ingredient: ingredient.name
+    }
+  })
+
+  return result;
+}
+
+const getAllDepartmentsWithId = function(){
+  let departments = getDepartments();
+
+  let result = _.map(departments, function(department){
+    return {
+      key: uuidv1(),
+      department: department.name
+    }
+  })
+
+  return result;
+}
+//------------------------------
 
 const getAllIngredientsList = function(department) {
   const ingredients = this.getAllIngredientsByOneDepartment(department);
@@ -186,111 +276,11 @@ function newGroceryList(newDepartment) {
   groceries = newGrocery;
 }
 
-const getDepartmentsGraphQL = function(){
-  let results = getDepartments();
-  return results.map((item, index) =>({
-    department_id: ++index,
-    name: item.name,
-    desc: "description for department1",
-    created_at: Date.now(),
-    updated_at: Date.now()
-    }))
-};
 
-const getDepartmentsGraphQLKey = function(){
-  let results = getDepartments();
-  return results.map((item, index) =>({
-    department_id: uuidv1(),
-    name: item.name,
-    desc: "description for department1",
-    created_at: Date.now(),
-    updated_at: Date.now()
-    }))
-};
-
-const getGroceryGraphQL = function(){
-  let results = getGrocery();
-  return results.map((item, index) =>({
-    grocery_id: ++index,
-    name: item.name,
-    img:  item.img,
-    desc: item.desc,
-    slug: item.slug,
-    created_at: Date.now(),
-    updated_at: Date.now(),
-    id_1: 1,
-    favs: false
-    }))
-};
-
-const getGroceryGraphQLKey = function(){
-  let results = getGrocery();
-  return results.map((item, index) =>({
-    grocery_id: uuidv1(),
-    name: item.name,
-    img:  item.img,
-    desc: item.desc,
-    slug: item.slug,
-    created_at: Date.now(),
-    updated_at: Date.now(),
-    id_1: 1,
-    favs: false
-    }))
-};
-
-const getIngredientsGraphQL = function(){
-  let results = getIngredients();
-  return results.map((item, index) =>({
-    ingredient_id: ++index,
-    favs:'',
-    name: item.name,
-    description: "description",
-    custom: false,
-    created_at: Date.now(),
-    updated_at: Date.now(),
-    id_1: 1,
-    department_id: 1
-    }))
-};
-
-const getIngredientsGraphQLKey = function(){
-  let results = getIngredients();
-  return results.map((item, index) =>({
-    ingredient_id: uuidv1(),
-    favs:'',
-    name: item.name,
-    description: "description",
-    custom: false,
-    created_at: Date.now(),
-    updated_at: Date.now(),
-    id_1: 1,
-    department_id: 1
-    }))
-};
-
-const getUsersGraphQL = function(){
-  let results = getUsers();
-  return results.map((item, index) =>({
-    userId: ++index,
-    favs: false,
-    ingredient_id: 1,
-    grocery_id: 1
-    }))
-};
-const getUsersGraphQLKey = function(){
-  let results = getUsers();
-  return results.map((item, index) =>({
-    userId: uuidv1(),
-    favs: false,
-    ingredient_id: 1,
-    grocery_id: 1
-    }))
-};
 
 module.exports = {
   getIngredients,
   getGrocery,
-  getGroceryShowcase,
   getUsers,
   getDepartments,
   getGroceryById,
@@ -306,13 +296,13 @@ module.exports = {
   createNewGroceryList,
   getGroceryListsByDepartment,
   newGroceryList,
-  getDepartmentsGraphQL,
-  getDepartmentsGraphQLKey,
-  getGroceryGraphQL,
-  getGroceryGraphQLKey,
-  getIngredientsGraphQL,
-  getIngredientsGraphQLKey,
-  getUsersGraphQL,
-  getUsersGraphQLKey
+
+  getAllIngredientsByOneDepartmentKey,
+  getGroceryByNameWithDepAndIngKey,
+  getGroceriesWithDepIngKey,
+  getAllIngredientsWithId,
+  getKeyArray,
+  getAllDepartmentsWithId
+
 
 }

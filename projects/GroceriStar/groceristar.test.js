@@ -290,12 +290,7 @@ describe("testing objects inside ingredients", () => {
 })
 
 
-
 describe("Groceristar project methods should return data", () => {
-  test("method getGroceryShowcase()", () => {
-    var stream = groceristar.getGroceryShowcase();
-    expect(stream).not.toBe("");
-  });
 
   test('method getGroceryByName("Clean Fatiring")', () => {
     var stream = groceristar.getGroceryByName("Clean Fatiring");
