@@ -12,7 +12,7 @@
     "play:g": "nodemon projects/GroceriStar/play.js",
     "play:s": "nodemon projects/Search/play.js",
     "play:r": "nodemon projects/ChickenKyiv/play.js",
-    "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest  projects/GroceriStar/staticFiles.test.js"
+    "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest projects/GroceriStar/staticFiles.test.js"
   },
   "repository": {
     "type": "git",

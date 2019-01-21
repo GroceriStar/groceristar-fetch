@@ -1,5 +1,6 @@
 const _            = require('lodash');
 const uuidv1       = require('uuid//v1');
+const { parser }   = require('../../helper');
 
 const ingredients3 = require('../../data/Ingredients/ingredients3.json');
 // const ingredients  = require('../../data/Ingredients/ingredients.json');
@@ -12,12 +13,6 @@ const nutritions2  = require('../../data/Nutrition/nutritions2.json');
 
 const departments  = require('../../data/Departments/departments.json');
 const users        = require('../../data/Users/users.json');
-
-
-const parser = function(filename) {
-
-  return JSON.parse(JSON.stringify(filename))
-}
 
 const getIngredients3 = function() {
   return parser(ingredients3)
@@ -136,6 +131,3 @@ module.exports = {
   getDepartments,
   getUsers
 }
-
-
-// module.exports = module;

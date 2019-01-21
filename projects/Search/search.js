@@ -1,6 +1,9 @@
 const _             = require('lodash');
 const uuidv1        = require('uuid/v1');
 const path          = require('path');
+const {
+  parser, pathToJson
+}   = require('../../helper');
 
 const allergies     = require('../../data/Allergy/allergies.json');
 const courses       = require('../../data/Course/courses.json');
@@ -9,10 +12,6 @@ const diets         = require('../../data/Diet/diets.json');
 const holidays      = require('../../data/Holiday/holidays.json');
 const ingredients1  = require('../../data/Ingredients/ingredients1.json');
 const measurements  = require('../../data/Measurement/measurements.json');
-
-
-
-
 
 
 // @TODO why we name files as plurals but attributes as singular noun?
@@ -30,27 +29,14 @@ const getRawFiles = function() {
 }
 
 
-const parser = function(filename) {
-
-  return JSON.parse(JSON.stringify(filename))
-
-}
-
-
-const pathToJson = function() {
-  // path.dirname(__filename)
-  return path.dirname('./data/Allergy/allergies.json');
-};
 
 // we got this array [ one, two, three ]
 // return [ { label: one, value:one } ]
 const proceedData = (array) => {
-  const result = _.map(array, item => {
-    return {
+  const result = _.map(array, item => ({
       label: item,
       value: _.camelCase(item)
-    }
-  })
+  }))
   return result;
 }
 
