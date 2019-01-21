@@ -19,7 +19,7 @@ Table of Contents
 
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)
 [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
-
+[![Coverage Status](https://coveralls.io/repos/github/GroceriStar/groceristar-fetch/badge.svg?branch=master)](https://coveralls.io/github/GroceriStar/groceristar-fetch?branch=master)
 
 <!--
 ![Alt Text](https://github.com/GroceriStar/creative/blob/master/app-video/fetch-inside.gif)/
@@ -31,6 +31,7 @@ Table of Contents
 [Trello board with current tasks](https://trello.com/b/U2Jm8JWX/fetch-plugin)
 
 [Documentation Website](https://groceristar.github.io/groceristar-fetch/)
+
 [Sandbox Editor](https://codesandbox.io/s/mzknoy0rnp)
 
 
@@ -91,4 +92,3 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 Created with help of this articles:
 https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
 https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
-
