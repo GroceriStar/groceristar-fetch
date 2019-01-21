@@ -72,6 +72,7 @@ const create = (options, wrapper, cb) => {
   console.log('strong debug process - before')
 
   database.autoupdate(table_name, function(err){
+    console.log('strong debug process - inside1')
     if (err) {
       // raven.captureException(err);
       return cb(err);
