@@ -92,3 +92,9 @@ scripts
 https://medium.com/groceristar/ocr-project-part1-simple-introduction-ab7b64bf1864
 https://medium.com/groceristar/ocr-project-part2-details-85739239f42
 https://medium.com/groceristar/ocr-project-part3-links-collection-2cfc58904caf
+
+
+---
+
+About data structures.
+Maybe there is some rules, plugins, tools, to create separated files/Nodes/Tables from one big file or create big one from separated. I find some interesting approach at graphql documents. But it's still early to start to use it.
