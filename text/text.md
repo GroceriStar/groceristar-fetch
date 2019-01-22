@@ -41,6 +41,10 @@ Big part discussion is also about structure. But it's not on easy to think about
 I also thinking about having a separate npm package and move away our methods so like json stored at one place -> methods in others.
 it give us an ability to split development process into few ways.
 
+
+
+
+
 ---
 
 Поняв, что эти обновления сделать будет не просто - я решил отделить часть проекта в fetch2. Идея этого проекта проста, обновить проект по частямб когда доделаем все -> тогда и можно будет перенести все в основной репозиторий и обновить наши проекты
@@ -74,6 +78,7 @@ the new way for connecting array at GL - this is a good example of how our curre
 Calendar(Meal Calendar) or food log(Recipes + dates from calendar) can be our next goals after GS.
 At GS we have a lot of methods, related to updates of our data. It's plain JS, but i'm not sure how to move this information directly to other hands. Partially it's explained [article] & [docs] ...
 
+
 Большинство этих методов связанных с изменениями JS objects aka one id replaced with other id, or unshift id from array of ids...
 before sending them to db
 
@@ -83,7 +88,11 @@ And this was our other problem, and the reason why we migrating Frontend to Reac
 
 (!I) Ask Audax to help us too. But after cards???
 
-Moving away our JSON files, мы получаем более удачное имя для static data, it will
+
+---
+
+#### Moving away JSON files
+By Moving away our JSON files, мы получаем более удачное имя для static data, it will
 be easy to test and compile. An additional plus for promotion and clearing stuff.
 Ex: Marina updating json files, and build generate an error. And this is good, but it can be done in more automatically way. Split also will help us with plugin transition into next major release...
 
@@ -94,6 +103,15 @@ https://medium.com/groceristar/ocr-project-part2-details-85739239f42
 https://medium.com/groceristar/ocr-project-part3-links-collection-2cfc58904caf
 
 
+We actually have another repo where we have old version of fetch plugin:
+https://www.npmjs.com/package/@groceristar/static-data
+https://github.com/GroceriStar/static-data
+
+it was a just a storage for us, but lately we move into our fetch repository.
+If we'll go into separation way(I assume that we should move our data into that repo). But we'll need to clean it up, and update the json files. And connect that plugin with `fetch` plugin.
+
+I find some cool plugins, like : https://www.npmjs.com/package/gray-matter
+it can help us with parcing method i think. It also have some intersections with another project that i want to build, so maybe we should review it too and decide to use or not rigth now.
 ---
 
 About data structures.
