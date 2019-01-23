@@ -91,27 +91,7 @@ And this was our other problem, and the reason why we migrating Frontend to Reac
 
 ---
 
-#### Moving away JSON files
-By Moving away our JSON files, мы получаем более удачное имя для static data, it will
-be easy to test and compile. An additional plus for promotion and clearing stuff.
-Ex: Marina updating json files, and build generate an error. And this is good, but it can be done in more automatically way. Split also will help us with plugin transition into next major release...
 
-Also separation for data until make it more easy for ML team, that working out OCR
-scripts
-https://medium.com/groceristar/ocr-project-part1-simple-introduction-ab7b64bf1864
-https://medium.com/groceristar/ocr-project-part2-details-85739239f42
-https://medium.com/groceristar/ocr-project-part3-links-collection-2cfc58904caf
-
-
-We actually have another repo where we have old version of fetch plugin:
-https://www.npmjs.com/package/@groceristar/static-data
-https://github.com/GroceriStar/static-data
-
-it was a just a storage for us, but lately we move into our fetch repository.
-If we'll go into separation way(I assume that we should move our data into that repo). But we'll need to clean it up, and update the json files. And connect that plugin with `fetch` plugin.
-
-I find some cool plugins, like : https://www.npmjs.com/package/gray-matter
-it can help us with parcing method i think. It also have some intersections with another project that i want to build, so maybe we should review it too and decide to use or not rigth now.
 ---
 
 About data structures.
