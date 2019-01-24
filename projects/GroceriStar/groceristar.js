@@ -155,8 +155,21 @@ const getAllIngredientsByOneDepartment = function(department) {
   return _.map(ingredientsList, 'name');
 }
 
-const getKeyArray = function(){
-  let keys = [];
+const getCountIngOfDepartment = function(){
+  let departments = getDepartments();
+  let result = _.map(departments, function(department){
+      let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name);
+    return {
+      ...department,
+      countIngredients: ingredientsByOneDepartment.length
+    }
+  })
+
+  return result;
+}
+
+const getKeyArrayDepAndIng = function(){
+  let keys =[];
 
   //@TODO does this functions doing a similar thing or not?
   let departments = getAllDepartmentsWithId();
@@ -202,7 +215,7 @@ const getAllIngredientsWithId = function(){
   let result = _.map(ingredients, function(ingredient){
     return {
       key: uuidv1(),
-      ingredient: ingredient.name
+      ...ingredient
     }
   })
 
@@ -215,7 +228,7 @@ const getAllDepartmentsWithId = function(){
   let result = _.map(departments, function(department){
     return {
       key: uuidv1(),
-      department: department.name
+      ...department
     }
   })
 
@@ -229,7 +242,9 @@ const getAllIngredientsList = function(department) {
   return ingredients.map(item => ({
     key: uuidv1(),
     name: item.name,
-    isChecked: false
+    isChecked: false,
+    departmentID: uuidv1(),
+    order: 0
   }));
 };
 
@@ -319,8 +334,9 @@ module.exports = {
   getGroceryByNameWithDepAndIngKey,
   getGroceriesWithDepIngKey,
   getAllIngredientsWithId,
-  getKeyArray,
-  getAllDepartmentsWithId
+  getKeyArrayDepAndIng,
+  getAllDepartmentsWithId,
+  getCountIngOfDepartment
 
 
 }
