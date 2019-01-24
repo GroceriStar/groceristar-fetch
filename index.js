@@ -12,9 +12,9 @@ const CKImport     = require("./Import/CKImport");
 // console.log(groceristar.getGroceriesWithDepIngKey());
 
 // console.log(groceristar.getAllIngredientsWithId());
-// console.log(groceristar.getAllDepartmentsWithId());
+// console.log(groceristar.getCountIngOfDepartment());
 
-// console.log(groceristar.getKeyArray());
+// console.log(groceristar.getKeyArrayDepAndIng().length);
 
 
 

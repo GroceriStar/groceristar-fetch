@@ -148,10 +148,24 @@ const getAllIngredientsByOneDepartment = function(department) {
   return _.map(ingredientsList, 'name');
 }
 
-const getKeyArray = function(){
+const getCountIngOfDepartment = function(){
+  let departments = getDepartments();
+  let result = _.map(departments, function(department){
+      let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name);
+    return {
+      ...department,
+      countIngredients: ingredientsByOneDepartment.length
+    }
+  })
+
+  return result;
+}
+
+const getKeyArrayDepAndIng = function(){
   let keys =[];
   let departments = getAllDepartmentsWithId();
   let ingredients = getAllIngredientsWithId();
+
   // _.map(ingredients, ingredient => {
   //   _.forEach(departments,function(department){
   //     if(ingredient.department === department.name) {
@@ -190,7 +204,7 @@ const getAllIngredientsWithId = function(){
   let result = _.map(ingredients, function(ingredient){
     return {
       key: uuidv1(),
-      ingredient: ingredient.name
+      ...ingredient
     }
   })
 
@@ -203,7 +217,7 @@ const getAllDepartmentsWithId = function(){
   let result = _.map(departments, function(department){
     return {
       key: uuidv1(),
-      department: department.name
+      ...department
     }
   })
 
@@ -301,8 +315,9 @@ module.exports = {
   getGroceryByNameWithDepAndIngKey,
   getGroceriesWithDepIngKey,
   getAllIngredientsWithId,
-  getKeyArray,
-  getAllDepartmentsWithId
+  getKeyArrayDepAndIng,
+  getAllDepartmentsWithId,
+  getCountIngOfDepartment
 
 
 }
