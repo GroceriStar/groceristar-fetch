@@ -242,7 +242,9 @@ const getAllIngredientsList = function(department) {
   return ingredients.map(item => ({
     key: uuidv1(),
     name: item.name,
-    isChecked: false
+    isChecked: false,
+    departmentID: uuidv1(),
+    order: 0
   }));
 };
 
