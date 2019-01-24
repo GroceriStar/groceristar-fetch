@@ -1,9 +1,9 @@
-
+```
 let Ingredients  = require(path.resolve(__dirname, 'ingredients'));
 let Groceries    = require(path.resolve(__dirname, 'grocery'));
 let Departments  = require(path.resolve(__dirname, 'departments'));
 let Users        = require(path.resolve(__dirname, 'users'));
-
+```
 
 i also need another one object, related to users.
 like we have a big number of Groceries
@@ -17,7 +17,7 @@ like one method that calling .... and creating users with ids and adding to user
 Search version of big object
 
 files that we're using:
-
+```
 let Attribute = require(path.resolve(__dirname, 'attributes'));
 
 //@TODO move that to attribute wrapper
@@ -33,21 +33,21 @@ let Recipe    = require(path.resolve(__dirname, 'recipes'));
 let Ingredient= require(path.resolve(__dirname, 'ingredients'));
 
 let Departments  = require(path.resolve(__dirname, 'departments'));
-
+```
 
 attribute is actually united thing, that includes allergy, course, cuisine, diet, holidays
-you can use _.unite or _.merge  - don't remember which is works
+you can use `_.unite` or `_.merge`  - don't remember which is works
 
 so recipe has ingredients and attributes inside. and each ingredient has department.
 
 ----
-
+```
 let Users        = require(path.resolve(__dirname, 'users'));
 let Recipes      = require(path.resolve(__dirname, 'recipes'));
 let Menus        = require(path.resolve(__dirname, 'menus'));
 
 and Ingredients (we don't need departments for this actuall case)
-
+```
 ---
 
 

@@ -18,6 +18,7 @@ Import to Loopback -> current technology behind our servers(RAPI-CK, GS, Search 
 Import into MongoDB without the middleman(Loopback in our case).
 It will give us a lot of mobility, that we don't have with Loopback for some reasons.
 
+
 As we plan to migrate our server to graphQL - I assume we'll pick deploy to AWS, so it will need also
 be imported to DynamoDB.
 
@@ -44,6 +45,10 @@ I have a set of tasks, related to testing, so at sometime later it will be done.
 At fetch we have a few database files, that should be imported into the recipe-API server.
 We didn't import this amount of data before, so it'll be a good improvement -> create a new version of the import
 and push into DB many recipes...
+
+
+
+
 
 The big topic is to find out and clean up our files. Some at them have not just duplicates, but same things in different names.
 But it's like "pOtato - potAto".
