@@ -238,10 +238,10 @@ const getAllDepartmentsWithId = function(){
 
 const getAllIngredientsList = function(department) {
   const ingredients = this.getAllIngredientsByOneDepartment(department);
-
+  
   return ingredients.map(item => ({
     key: uuidv1(),
-    name: item.name,
+    name: item,
     isChecked: false,
     departmentID: uuidv1(),
     order: 0

@@ -40,7 +40,7 @@ const parser = function ( filename ){
 // console.log(groceristar.getAllIngredientsWithId());
 // console.log(groceristar.getAllDepartmentsWithId());
 
-// console.log(groceristar.getKeyArray());
+// console.log(groceristar.getAllIngredientsList("Fresh vegetables"));
 
 
 
