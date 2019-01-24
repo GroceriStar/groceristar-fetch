@@ -1,9 +1,7 @@
-const mealCalendar = require('../../data/MealCalendar/mealcalendar.json');
+// const mealCalendar = require('../../data/MealCalendar/mealcalendar.json');
+const { mealCalendar }  = require('./files');
 const _            = require('lodash');
-
-const parser = function(filename) {
-  return JSON.parse(JSON.stringify(filename))
-}
+const { parser }   = require('../../helper');
 
 const getMealCalendar = function() {
   return parser(mealCalendar);

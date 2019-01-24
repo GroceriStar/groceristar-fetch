@@ -1,28 +1,29 @@
-const mealCalendar = require('./mealCalendar.js');
-const mealcalendar = require('../../data/MealCalendar/mealcalendar.json');
+const mealCalendarMethods = require('./mealCalendar.js');
+
+const { mealCalendar }  = require('./files');
 
 describe('testing static data files are set', () => {
 
   test('getMealCalendar', () => {
-    var stream = mealCalendar.getMealCalendar()
+    var stream = mealCalendarMethods.getMealCalendar()
     expect(stream).not.toBe('')
   })
 
   test('getDishByDay', () => {
-    var stream = mealCalendar.getDishByDay('Monday')
+    var stream = mealCalendarMethods.getDishByDay('Monday')
     expect(stream).not.toBe('')
   })
 
   test('getDishByWeek', () => {
-    mealcalendar.map(meal => {
-      var stream = mealCalendar.getDishByWeek(meal.id)
+    mealCalendar.map(meal => {
+      var stream = mealCalendarMethods.getDishByWeek(meal.id)
       expect(stream).not.toBe('')
     })
   })
 
   test('getDishByMonth', () => {
     for (let i = 1; i <= 5; i++) {
-      var stream = mealCalendar.getDishByMonth(i)
+      var stream = mealCalendarMethods.getDishByMonth(i)
       expect(stream).not.toBe('')
     }
   })

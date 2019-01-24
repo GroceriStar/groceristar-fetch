@@ -69,13 +69,19 @@ const create = (options, wrapper, cb) => {
 
   let data       = ( !predata ) ? wrapper.get() : wrapper.get(predata) ;
 
+  console.log('strong debug process - before')
+
   database.autoupdate(table_name, function(err){
+    console.log('strong debug process - inside1')
     if (err) {
       // raven.captureException(err);
       return cb(err);
     }
 
+    console.log('strong debug process - inside')
+
     Model.create(data, cb);
+    console.log(Model);
     // Model.create(data, (err,d) => {
     //   console.log(d)
     // });
