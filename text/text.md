@@ -96,3 +96,6 @@ And this was our other problem, and the reason why we migrating Frontend to Reac
 
 About data structures.
 Maybe there is some rules, plugins, tools, to create separated files/Nodes/Tables from one big file or create big one from separated. I find some interesting approach at graphql documents. But it's still early to start to use it.
+
+
+---

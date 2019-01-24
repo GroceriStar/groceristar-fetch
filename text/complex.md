@@ -41,6 +41,7 @@ you can use `_.unite` or `_.merge`  - don't remember which is works
 so recipe has ingredients and attributes inside. and each ingredient has department.
 
 ----
+
 ```
 let Users        = require(path.resolve(__dirname, 'users'));
 let Recipes      = require(path.resolve(__dirname, 'recipes'));
@@ -48,7 +49,14 @@ let Menus        = require(path.resolve(__dirname, 'menus'));
 
 and Ingredients (we don't need departments for this actuall case)
 ```
+
 ---
+
+
+Attach users with Favorites -> get 5-10 random ingredients - { id, name }
+Get users array with id from an outside method(pass it as function attribute)
+then pick an admin and attach favs to him only.
+Other users just get an empty array of favs.
 
 
 https://carbon.now.sh/?bg=rgba(29%2C70%2C103%2C1)&t=3024-night&wt=none&l=application%2Fjson&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=18px&lh=158%25&si=false&es=2x&wm=false
