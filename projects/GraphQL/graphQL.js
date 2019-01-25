@@ -5,6 +5,88 @@ const { parser, sliceArray }   = require('../../helper');
 
 const groceristar = require('../GroceriStar/groceristar');
 
+const favorites   = require('../../data/Ingredients/favorites.json');
+const items       = require('../../data/Ingredients/items.json');
+const userGrocery = require('../../data/Users/userGrocery.json');
+
+const getFavorites = function(){
+  return parser(favorites)
+}
+
+const getItems = function(){
+  return parser(items)
+}
+
+const getUserGrocery = function(){
+  return parser(userGrocery)
+}
+
+const getFavoritesGraphQL = function(){
+  let favorites = getFavorites();
+
+  return _.map(favorites, (favorite, index) => {
+    return {
+      key: ++index,
+      ...favorite
+    }
+  })
+}
+
+const getFavoritesGraphQLKey = function(){
+  let favorites = getFavorites();
+
+  return _.map(favorites, (favorite, index) => {
+    return {
+      key: uuidv1(),
+      ...favorite
+    }
+  })
+}
+
+const getItemsGraphQL = function(){
+  let favorites = getItems();
+
+  return _.map(items, (item, index) => {
+    return {
+      key: ++index,
+      ...item
+    }
+  })
+}
+
+const getItemsGraphQLKey = function(){
+  let items = getItems();
+
+  return _.map(items, (item, index) => {
+    return {
+      key: uuidv1(),
+      ...item
+    }
+  })
+}
+
+const getUserGroceryGraphQL = function(){
+  let userGroceries = getUserGrocery();
+
+  return _.map(userGroceries, (userGrocery, index) => {
+    return {
+      key: ++index,
+      ...userGrocery
+    }
+  })
+}
+
+const getUserGroceryGraphQLKey = function(){
+  let userGroceries = getUserGrocery();
+
+  return _.map(userGroceries, (userGrocery, index) => {
+    return {
+      key: uuidv1(),
+      ...userGrocery
+    }
+  })
+}
+
 const getDepartmentsGraphQL = function(){
 
   let results = groceristar.getDepartments();
@@ -150,5 +232,16 @@ module.exports = {
   getUsersGraphQLKey,
 
   getUsersGrocery,
-  getUsersGroceryKey
+  getUsersGroceryKey,
+
+  getFavorites,
+  getItems,
+  getUserGrocery,
+
+  getFavoritesGraphQL,
+  getFavoritesGraphQLKey,
+  getItemsGraphQL,
+  getItemsGraphQLKey,
+  getUserGroceryGraphQL,
+  getUserGroceryGraphQLKey
 }
