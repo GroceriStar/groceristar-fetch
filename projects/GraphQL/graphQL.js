@@ -5,6 +5,22 @@ const { parser, sliceArray }   = require('../../helper');
 
 const groceristar = require('../GroceriStar/groceristar');
 
+const favorites   = require('../../data/Favorite/favorites.json');
+const items       = require('../../data/Item/items.json');
+const userGrocery = require('../../data/UserGrocery/userGrocery.json');
+
+const getFavorites = function(){
+  return parser(favorites)
+}
+
+const getItems = function(){
+  return parser(items)
+}
+
+const getUserGrocery = function(){
+  return parser(userGrocery)
+}
+
 const getDepartmentsGraphQL = function(){
 
   let results = groceristar.getDepartments();
@@ -150,5 +166,9 @@ module.exports = {
   getUsersGraphQLKey,
 
   getUsersGrocery,
-  getUsersGroceryKey
+  getUsersGroceryKey,
+
+  getFavorites,
+  getItems,
+  getUserGrocery
 }
