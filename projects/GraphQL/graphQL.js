@@ -5,9 +5,9 @@ const { parser, sliceArray }   = require('../../helper');
 
 const groceristar = require('../GroceriStar/groceristar');
 
-const favorites   = require('../../data/Favorite/favorites.json');
-const items       = require('../../data/Item/items.json');
-const userGrocery = require('../../data/UserGrocery/userGrocery.json');
+const favorites   = require('../../data/Ingredients/favorites.json');
+const items       = require('../../data/Ingredients/items.json');
+const userGrocery = require('../../data/Users/userGrocery.json');
 
 const getFavorites = function(){
   return parser(favorites)
