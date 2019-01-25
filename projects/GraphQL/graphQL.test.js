@@ -3,6 +3,8 @@ const graphQL = require('./graphQL.js');
 describe("graphQL methods should return data",() => {
   test("getFavorites()", () => {
     var stream = graphQL.getFavorites();
+    // console.log(graphQL.getUserGroceryGraphQL());
+    // console.log(graphQL.getUserGroceryGraphQLKey());
     expect(stream).not.toBe("");
   })
 
