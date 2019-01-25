@@ -1,6 +1,6 @@
 const _            = require('lodash');
 const uuidv1       = require('uuid//v1');
-const { parser }   = require('../../helper');
+const { parser, sliceArray }   = require('../../helper');
 
 const ingredients3 = require('../../data/Ingredients/ingredients3.json');
 // const ingredients  = require('../../data/Ingredients/ingredients.json');
@@ -26,10 +26,11 @@ const getRecipe = function() {
   return parser(recipes)
 }
 
+// @TODO replace it later. we don't need it after introducing sliceArray method.
 const getNRecipes = (n) => {
   let recipes = getRecipe();
 
-  return recipes.slice(0, n);
+  return sliceArray(recipes, n);
 }
 
 /**

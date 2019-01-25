@@ -1,13 +1,14 @@
 const _            = require('lodash');
 const fs           = require('fs');
 const uuidv1       = require('uuid/v1');
-const { parser }   = require('../../helper');
+const { parser, sliceArray }   = require('../../helper');
 
 const groceristar = require('../GroceriStar/groceristar');
 
 const getDepartmentsGraphQL = function(){
+
   let results = groceristar.getDepartments();
-  return results.map((item, index) =>({
+  return results.map((item, index) => ({
     department_id: ++index,
     name: item.name,
     desc: "description for department1",
@@ -18,7 +19,7 @@ const getDepartmentsGraphQL = function(){
 
 const getDepartmentsGraphQLKey = function(){
   let results = groceristar.getDepartments();
-  return results.map((item, index) =>({
+  return results.map((item, index) => ({
     department_id: uuidv1(),
     name: item.name,
     desc: "description for department1",
@@ -29,7 +30,7 @@ const getDepartmentsGraphQLKey = function(){
 
 const getGroceryGraphQL = function(){
   let results = groceristar.getGrocery();
-  return results.map((item, index) =>({
+  return results.map((item, index) => ({
     grocery_id: ++index,
     name: item.name,
     img:  item.img,
@@ -44,7 +45,7 @@ const getGroceryGraphQL = function(){
 
 const getGroceryGraphQLKey = function(){
   let results = groceristar.getGrocery();
-  return results.map((item, index) =>({
+  return results.map((item, index) => ({
     grocery_id: uuidv1(),
     name: item.name,
     img:  item.img,
@@ -57,9 +58,13 @@ const getGroceryGraphQLKey = function(){
     }))
 };
 
-const getIngredientsGraphQL = function(){
+const getIngredientsGraphQL = function(limit = false){
   let results = groceristar.getIngredients();
-  return results.map((item, index) =>({
+  if( limit ){
+    results = sliceArray(results, 100);
+  }
+  
+  return results.map((item, index) => ({
     ingredient_id: ++index,
     favs:'',
     name: item.name,
@@ -72,9 +77,14 @@ const getIngredientsGraphQL = function(){
     }))
 };
 
-const getIngredientsGraphQLKey = function(){
+const getIngredientsGraphQLKey = function(limit = false){
   let results = groceristar.getIngredients();
-  return results.map((item, index) =>({
+  if( limit ){
+    results = sliceArray(results, 100);
+  }
+
+
+  return results.map((item, index) => ({
     ingredient_id: uuidv1(),
     favs:'',
     name: item.name,
@@ -89,16 +99,17 @@ const getIngredientsGraphQLKey = function(){
 
 const getUsersGraphQL = function(){
   let results = groceristar.getUsers();
-  return results.map((item, index) =>({
+  return results.map((item, index) => ({
     userId: ++index,
     favs: false,
     ingredient_id: 1,
     grocery_id: 1
     }))
 };
+
 const getUsersGraphQLKey = function(){
   let results = groceristar.getUsers();
-  return results.map((item, index) =>({
+  return results.map((item, index) => ({
     userId: uuidv1(),
     favs: false,
     ingredient_id: 1,

@@ -7,6 +7,9 @@ const parser = function(filename) {
 
 }
 
+const sliceArray = ( array, number ) => {
+  return array.slice(0, number);
+}
 
 const pathToJson = function() {
   // path.dirname(__filename)
