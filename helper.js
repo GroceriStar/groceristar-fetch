@@ -18,5 +18,6 @@ const pathToJson = function() {
 
 module.exports = {
   parser,
-  pathToJson
+  pathToJson,
+  sliceArray
 }
