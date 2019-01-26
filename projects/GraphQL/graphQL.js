@@ -21,6 +21,11 @@ const getUserGrocery = function(){
   return parser(userGrocery)
 }
 
+
+//---------
+// As we move our methods away we don't need GraphQL in methods name anymore ...
+// @TODO update it
+
 const getFavoritesGraphQL = function(){
   let favorites = getFavorites();
 
@@ -199,9 +204,7 @@ const getUsersGraphQLKey = function(){
     }))
 };
 
-//---------
-// As we move our methods away we don't need GraphQL in methods name anymore ...
-const getUsersGrocery = function(){
+// const getUsersGrocery = function(){
   // let results = groceristar.getUsers();
   // return results.map((item, index) => ({
   //   userId: ++index,
@@ -209,9 +212,9 @@ const getUsersGrocery = function(){
   //   ingredient_id: 1,
   //   grocery_id: 1
   //   }))
-};
+// };
 
-const getUsersGroceryKey = function(){
+// const getUsersGroceryKey = function(){
   // let results = groceristar.getUsers();
   // return results.map((item, index) => ({
   //   userId: uuidv1(),
@@ -219,7 +222,7 @@ const getUsersGroceryKey = function(){
   //   ingredient_id: 1,
   //   grocery_id: 1
   //   }))
-};
+// };
 
 module.exports = {
   getDepartmentsGraphQL,
@@ -230,9 +233,9 @@ module.exports = {
   getIngredientsGraphQLKey,
   getUsersGraphQL,
   getUsersGraphQLKey,
-
-  getUsersGrocery,
-  getUsersGroceryKey,
+  //
+  // getUsersGrocery,
+  // getUsersGroceryKey,
 
   getFavorites,
   getItems,
