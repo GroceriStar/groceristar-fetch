@@ -6,7 +6,7 @@ Problems:
 - We didn't build our code, didn't using ESLint and tests
 
 #### Code organization and structure
-My goal was just to keep all static files/data in a same separated place at the begining.
+My goal was just to keep all static files/data in the same separated place at the beginning.
 So we didn't keep a lot of attention about what structure we have.
 right now we have 2 main folders: `data`, `projects`.
 
@@ -14,20 +14,20 @@ right now we have 2 main folders: `data`, `projects`.
 
 **Projects**  have sub-folders, each sub-folder
 
-**!idea** i don't like the way how we're debugging our new methods. we have a play.js file where we can console.log some of our functions, but it's not cool to have them into our npm published version.
-this can be fixed by moving to ES6 + Babel7 builds, where we extend \*.play.js files out, but still keeping them at our github repos.
+**!idea** I don't like the way how we're debugging our new methods. we have a play.js file where we can console.log some of our functions, but it's not cool to have them into our npm published version.
+this can be fixed by moving to ES6 + Babel7 builds, where we extend \*.play.js files out, but still keeping them at our GitHub repos.
 
 #### Projects
-Problem: Number of project/branches is growing, and we add a new methods and everything start to look overcomplicated.
+Problem: Number of project/branches is growing, and we add new methods and everything starts to look overcomplicated.
 
-Files and json structures have a legacy of my first Loopback servers(each of this servers are holding us back).
+Files and json structures have a legacy of my first Loopback servers(each of these servers are holding us back).
 
 And code that we have are 1.5 years old and a lot of things has changed.
 
-Priority: first priority for me: have cool working methods, that i need at this moment for CK server. I'm working on fixing import to our old servers.
+Priority: first priority for me: have cool working methods, that I need at this moment for CK server. I'm working on fixing import to our old servers.
 When it will be done, we will be able to import of big amount of data that we have here.
 
-We can separate most of tasks/discussion into 2 major things
+We can separate most of the tasks/discussion into 2 major things
 1) related to json data
 2) related to methods
 
@@ -35,11 +35,11 @@ After finishing with CK API we'll have also updated import script for GS + Searc
 
 Next priority is our GS project.
 
-Big part discussion is also about structure. But it's not on easy to think about for me, if someone wants -> let's file a separated issue and explore it too.
+The big part discussion is also about structure. But it's not on easy to think about for me if someone wants -> let's file a separated issue and explore it too.
 
 
-I also thinking about having a separate npm package and move away our methods so like json stored at one place -> methods in others.
-it give us an ability to split development process into few ways.
+I also thinking about having a separate npm package and move away from our methods so like json stored at one place -> methods in others.
+it gives us an ability to split the development process into few ways.
 
 
 
@@ -50,21 +50,21 @@ it give us an ability to split development process into few ways.
 Поняв, что эти обновления сделать будет не просто - я решил отделить часть проекта в fetch2. Идея этого проекта проста, обновить проект по частямб когда доделаем все -> тогда и можно будет перенести все в основной репозиторий и обновить наши проекты
 
 
-Testing is our big issue too. Right now any big updates can break things. For sure, some of our current test coverage preventing a lot of troubles, but i don't feeling secure, when merging our pull requests...
-It can be better. i'm 100% sure about it.
+Testing is our big issue too. Right now any big updates can break things. For sure, some of our current test coverage preventing a lot of troubles, but I don't feel secure when merging our pull requests...
+It can be better. I'm 100% sure about it.
 
 -----
 
-if we need to have a separate place, where i can specify quick and simple to do tasks, tell me.
+if we need to have a separate place, where I can specify quick and simple to do tasks, tell me.
 
 ---
 
-If right now we'll put our focus in releasing big major update(aka release 2) - we'll crash all of our small projects that we're working on.
+If right now we'll put our focus on releasing big major update(aka release 2) - we'll crash all of the small projects that we're working on.
 If it wouldn't crash anything - then we're doing bad :()
 But I think we can find a way - that will prevent from everything went down.
 But it's not a simple thing for sure.
 
-One of my ideas was to add Flow and Immutable.js, but right now i think that we're far away from moving our codebase into this way. I cannot do it on my own, and it'll take good amount of time.
+One of my ideas was to add Flow and Immutable.js, but right now I think that we're far away from moving our codebase into this way. I cannot do it on my own, and it'll take a good amount of time.
 
 
 1) Уменьшить количество methods
@@ -72,19 +72,19 @@ One of my ideas was to add Flow and Immutable.js, but right now i think that we'
 3) Обеспечить более простой способ доступа к данным и изменений их видов в 80% случаев мы берем данные, перебираем из в `map` - делаем новые структуры.
 4) вынести default getters out
 
-the new way for connecting array at GL - this is a good example of how our current way to connect data are not ideal.
+the new way for connecting array at GL - this is a good example of how our current way to connect data is not ideal.
 
 
-Calendar(Meal Calendar) or food log(Recipes + dates from calendar) can be our next goals after GS.
-At GS we have a lot of methods, related to updates of our data. It's plain JS, but i'm not sure how to move this information directly to other hands. Partially it's explained [article] & [docs] ...
+Calendar(Meal Calendar) or food log(Recipes + dates from the calendar) can be our next goals after GS.
+At GS we have a lot of methods, related to updates of our data. It's plain JS, but I'm not sure how to move this information directly to other hands. Partially it's explained [article] & [docs] ...
 
 
 Большинство этих методов связанных с изменениями JS objects aka one id replaced with other id, or unshift id from array of ids...
-before sending them to db
+before sending them to DB
 
 This API server also have our old frontend version and it's "dirty" after it ;)
 
-And this was our other problem, and the reason why we migrating Frontend to React.
+And this was our other problem and the reason why we migrating Frontend to React.
 
 (!I) Ask Audax to help us too. But after cards???
 
@@ -95,7 +95,7 @@ And this was our other problem, and the reason why we migrating Frontend to Reac
 ---
 
 About data structures.
-Maybe there is some rules, plugins, tools, to create separated files/Nodes/Tables from one big file or create big one from separated. I find some interesting approach at graphql documents. But it's still early to start to use it.
+Maybe there is some rules, plugins, tools, to create separated files/Nodes/Tables from one big file or create big one from separated. I find some interesting approach to graphql documents. But it's still early to start to use it.
 
 
 ---

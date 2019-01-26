@@ -5,16 +5,16 @@ let Departments  = require(path.resolve(__dirname, 'departments'));
 let Users        = require(path.resolve(__dirname, 'users'));
 ```
 
-i also need another one object, related to users.
+I also need another one object, related to users.
 like we have a big number of Groceries
 but all of them should be assigned with admin user.
 Can you do it?
-like one method that calling .... and creating users with ids and adding to user ids also an ids of groceries
+like one method that calling .... and creating users with ids and adding to user ids also ids of groceries
 (this is actually our full database for groceristar right now)
 
 ---
 
-Search version of big object
+Search version of the big object
 
 files that we're using:
 ```
@@ -35,10 +35,10 @@ let Ingredient= require(path.resolve(__dirname, 'ingredients'));
 let Departments  = require(path.resolve(__dirname, 'departments'));
 ```
 
-attribute is actually united thing, that includes allergy, course, cuisine, diet, holidays
+an attribute is actually united thing, that includes allergy, course, cuisine, diet, holidays
 you can use `_.unite` or `_.merge`  - don't remember which is works
 
-so recipe has ingredients and attributes inside. and each ingredient has department.
+so the recipe has ingredients and attributes inside. and each ingredient has a department.
 
 ----
 
@@ -47,7 +47,7 @@ let Users        = require(path.resolve(__dirname, 'users'));
 let Recipes      = require(path.resolve(__dirname, 'recipes'));
 let Menus        = require(path.resolve(__dirname, 'menus'));
 
-and Ingredients (we don't need departments for this actuall case)
+and Ingredients (we don't need departments for this actual case)
 ```
 
 ---

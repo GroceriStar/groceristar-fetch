@@ -37,7 +37,7 @@ it's a bad approach, I want to get information from the documentation. It's a mo
 ---
 
 tests are also our weak point. We have some test coverage. The test was written "partially"(mostly it's a boilerplate for more advanced tests)
-And they showing a great promise, especially when we have a few team members with different understanding of our projects and changes can break things.
+And they showing a great promise, especially when we have a few team members with a different understanding of our projects and changes can break things.
 (yeah, yeah - such small package also can be trouble).
 
 I have a set of tasks, related to testing, so at sometime later it will be done.

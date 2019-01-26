@@ -62,9 +62,9 @@ https://github.com/GroceriStar/groceristar-fetch/issues/140
 ---
 
 
-I think that i don't want to have a `default` classes like below.
-by my experience they not perfect. and usually easy to be outdated.
-if we need get or set - we can use lodast _.get, _.set
+I think that I don't want to have a `default` classes like below.
+by my experience, they not perfect. and usually easy to be outdated.
+if we need to get or set - we can use lodash _.get, _.set
 
 ex from: https://github.com/andrewgrewell/structy
 
@@ -102,12 +102,3 @@ https://github.com/GroceriStar/graphql-server/issues/11
 https://github.com/GroceriStar/graphql-server/issues/9
 https://github.com/GroceriStar/graphql-server/issues/6
 https://github.com/GroceriStar/graphql-server/issues/4
-
-
-
-
-
-
-
-
-
