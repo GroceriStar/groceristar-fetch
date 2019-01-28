@@ -9,12 +9,18 @@ describe('testing static data files are set', () => {
     expect(stream).not.toBe('')
   })
 
+  test('getFVGLMC', () => {
+    var stream = mealCalendarMethods.getFVGLMC()
+    expect(stream).not.toBe('')
+  })
+
   test('getDishByDay', () => {
     var stream = mealCalendarMethods.getDishByDay('Monday')
     expect(stream).not.toBe('')
   })
 
   test('getDishByWeek', () => {
+    //@TODO maybe we can remove include from files...
     mealCalendar.map(meal => {
       var stream = mealCalendarMethods.getDishByWeek(meal.id)
       expect(stream).not.toBe('')

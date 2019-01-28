@@ -1,10 +1,13 @@
-// const mealCalendar = require('../../data/MealCalendar/mealcalendar.json');
-const { mealCalendar }  = require('./files');
+const { mealCalendar, firstVeganGLMC }  = require('./files');
 const _            = require('lodash');
 const { parser }   = require('../../helper');
 
 const getMealCalendar = function() {
   return parser(mealCalendar);
+}
+
+const getFVGLMC = () => {
+  return parser(firstVeganGLMC);
 }
 
 // module.getDishByDay = function(day, maxDishes = mealCalendar.length) {
@@ -52,5 +55,6 @@ module.exports = {
   getDishByWeek,
   getDishByMonth,
   getDishByDay,
-  getMealCalendar
+  getMealCalendar,
+  getFVGLMC
 }
