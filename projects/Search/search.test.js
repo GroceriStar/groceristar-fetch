@@ -3,68 +3,68 @@ const search      = require('./search.js')
 describe('testing static data files are set', () => {
 
   test('getAttribute("allergy")', () => {
-    var stream = search.getAttribute('allergies')
-    expect(stream).not.toBe('')
+    var result = search.getAttribute('allergies')
+    expect(result).not.toBe('')
   })
 
   test('getAttribute("cuisine")', () => {
-    var stream = search.getAttribute('cuisines')
-    expect(stream).not.toBe('')
+    var result = search.getAttribute('cuisines')
+    expect(result).not.toBe('')
   })
 
   test('getAttribute("course")', () => {
-    var stream = search.getAttribute('courses')
-    expect(stream).not.toBe('')
+    var result = search.getAttribute('courses')
+    expect(result).not.toBe('')
   })
 
   test('getAttribute("holidays")', () => {
-    var stream = search.getAttribute('allergies')
-    expect(stream).not.toBe('')
+    var result = search.getAttribute('allergies')
+    expect(result).not.toBe('')
   })
 
   test('getAttribute("diets")', () => {
-    var stream = search.getAttribute('diets')
-    expect(stream).not.toBe('')
+    var result = search.getAttribute('diets')
+    expect(result).not.toBe('')
   })
 
   // test('ingredients1 file is set', () => {
-  //   var stream = search.getIngredients1()
-  //   expect(stream).not.toBe('')
+  //   var result = search.getIngredients1()
+  //   expect(result).not.toBe('')
   // })
 
   // test('ingredients2 file is set', () => {
-  //   var stream = search.getIngredients2()
-  //   expect(stream).not.toBe('')
+  //   var result = search.getIngredients2()
+  //   expect(result).not.toBe('')
   // })
 
   // test('measurements file is set', () => {
-  //   var stream = search.getMeasurements()
-  //   expect(stream).not.toBe('')
+  //   var result = search.getMeasurements()
+  //   expect(result).not.toBe('')
   // })
 
   test('getPlaceholder("Allergy")', () => {
-    var stream = search.getPlaceholder('Allergy')
-    expect(stream).not.toBe('')
+    var result = search.getPlaceholder('Allergy')
+    expect(result).not.toBe('')
   })
 
   test('getPlaceholder("Diets")', () => {
-    var stream = search.getPlaceholder('Diets')
-    expect(stream).not.toBe('')
+    var result = search.getPlaceholder('Diets')
+    expect(result).not.toBe('')
   })
 
   test('getPlaceholder("Cuisine")', () => {
-    var stream = search.getPlaceholder('Cuisine')
-    expect(stream).not.toBe('')
+    var result = search.getPlaceholder('Cuisine')
+    expect(result).not.toBe('')
   })
 
   test('getPlaceholder("Course")', () => {
-    var stream = search.getPlaceholder('Course')
-    expect(stream).not.toBe('')
+    var result = search.getPlaceholder('Course')
+    expect(result).not.toBe('')
   })
 
   test('getPlaceholder("Holidays")', () => {
-    var stream = search.getPlaceholder('Holidays')
-    expect(stream).not.toBe('')
+    var result = search.getPlaceholder('Holidays')
+    expect(result).not.toBe('')
   })
 
 })
