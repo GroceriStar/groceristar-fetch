@@ -49,17 +49,17 @@
   и перестанет происходить быть ошибка builds.
 
 ------
-  Тогда мы скорее всего перейдем от JSON files into JS arrays, because JSON have issues with our babel builds before
+ 
+if we move whole fetch plugin at ES6 version, we'll need to replace JSON files 
+into JS arrays, because JSON has issues with our babel builds before
 
   -----
-
-  Так что возможно идея разбития методов на части, хорошая и можно начать это делать сейчас.
+So maybe whole idea, realted to split are good and maybe we should start it right away.
 
   ----
 
-
-  Вопрос с импортом, который тоже можно поднять.
-  Это разработка простого, модульного (one table can be adjusted without breaking the whole import process)
+Question, related to import, that should be rased too.
+  I want to develop simple, modular approach for import script (one table can be adjusted without breaking the whole import process)
   approach для импорта.
 
   Что нам надо(let's check the simple DB schema, that we have at GS)
