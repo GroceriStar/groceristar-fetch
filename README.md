@@ -82,6 +82,13 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 
 `npm test`
 
+---
+https://github.com/americanexpress/jest-json-schema#tomatchschemaschema
+
+https://github.com/camsong/fetch-jsonp
+
+https://github.com/facebook/jest/blob/master/examples/module-mock/__tests__/full_mock.js
+
 
 #### Contributors
 

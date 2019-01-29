@@ -2,17 +2,8 @@ const mealCalendarMethods = require('./mealCalendar.js');
 
 const { mealCalendar }  = require('./files');
 
-describe('testing static data files are set', () => {
+describe('Meal Calendar. basic methods should work', () => {
 
-  test('getMealCalendar', () => {
-    var stream = mealCalendarMethods.getMealCalendar()
-    expect(stream).not.toBe('')
-  })
-
-  test('getFVGLMC', () => {
-    var stream = mealCalendarMethods.getFVGLMC()
-    expect(stream).not.toBe('')
-  })
 
   test('getDishByDay', () => {
     var stream = mealCalendarMethods.getDishByDay('Monday')

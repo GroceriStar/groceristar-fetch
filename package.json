@@ -38,6 +38,7 @@
   "devDependencies": {
     "coveralls": "^3.0.2",
     "jest": "^24.0.0",
+    "jest-json-schema": "^2.0.1",
     "nodemon": "^1.17.5",
     "travis": "^0.1.1"
   },
