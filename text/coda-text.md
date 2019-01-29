@@ -77,18 +77,14 @@ Question, related to import, that should be rased too.
 
   Также DepIDS нужно отправить и сохранить в нашей записи о GL(наверное обновив ее или сделать функции создания GL записи
   await -> пока все данные не соберуться вместе).
-
-  Данные о ингредиентов использование записей таблице Ingredients.
-
+  
+  Data about Ingredients, using mongoDB Ingredients
 
 
 ---
 
-
-fetch необходимо переименовать в другое имя - по причине того что npm имеет другое популярный модуль fetch.
-и я бы хотел отделить массивы со статическими данными от методов, которые выглядят stupid, но используются у нас в работе.
-
-Во вторых массивы смогу быть отделены от моих проекто и может ктото захочет их тоже отдельно использовать.
+I think soon or later we should change the package name. Because npm has other popular module with name fetch. it related to requests from API server. And i want to separate some methods, that looks stupid, but we using them in our work. 
+Separated files can have move popularity and can be used not just at JS projects.
 
 
 ---
