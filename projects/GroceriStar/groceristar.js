@@ -146,6 +146,7 @@ const getGroceryListsWithCountDepartments = function() {
 // i assume this cannot work, because we don't have groceries variable... @TODO
 const getAllDepartments = function() {
   const departments = [];
+  
   // @TODO this is an example what should be updated. loooooks so bad and unreadable
   _.forEach(_.range(0, groceries.length), value =>
     departments.push(..._.map(groceries[value]['departments']))

@@ -22,6 +22,20 @@ const getMenu = function() {
   return parser(menus)
 }
 
+//@TODO delete file menu.json from main set of files, but create a note at some place,
+// that Menu file is no longer needed because we replace it with fake data. you can use method ABC in order to generate that data.
+const getMenuGenerator = (number_of_weeks) => {
+  let result
+  result = _.map(number_of_weeks, ( index ) => {
+    id: uuidv1(),
+    title: "Weekly menu #{$index}",
+    date: ,
+    description: "description for Weekly menu #{$index}",
+    notes: "This is a chef notes for wm #{$index}"
+  })
+  return result;
+}
+
 const getRecipe = function() {
   return parser(recipes)
 }
