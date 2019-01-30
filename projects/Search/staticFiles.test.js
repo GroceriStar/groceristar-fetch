@@ -1,11 +1,13 @@
-const search       = require("./projects/Search/search.js");
+const search      = require('./search.js')
 
 describe("testing static data files returns array", () => {
 
-  test("method getDepartmentsGraphQL()", () => {
-    var result = graphQL.getDepartmentsGraphQL();
+  test("checking allergy attribute", () => {
+    var result = search.__get('allergy');
     expect(result).not.toBe("");
   })
+
+
     // test('ingredients1 file is set', () => {
   //   var result = search.getIngredients1()
   //   expect(result).not.toBe('')

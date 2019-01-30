@@ -19,15 +19,24 @@ const measurements  = require('../../data/Measurement/measurements.json');
 const getRawFiles = function() {
   return {
     'allergy': allergies,
-    'course': course,
+    'course': courses,
     'cuisine': cuisines,
     'diet': diets,
-    'holiday': holiday,
+    'holiday': holidays,
     'ingredient': ingredients1,
     'measurement': measurements
   }
 }
 
+// experimental method, like getRawFiles
+// first of all lodash has _.get method.
+// second - this method is not good, and it should be used only inside the plugin
+// @TODO update/change it later, when we'll separate files with business logic.
+const __get = ( alias ) => {
+  const files  = getRawFiles();
+  const result = files[alias];
+  return parser(result);
+}
 
 
 // we got this array [ one, two, three ]
@@ -221,6 +230,9 @@ const toOptAntD = (data) => {
 
 module.exports = {
   getRawFiles,
+  __get,
+
+
   pathToJson,
   proceedData,
   getAttribute,

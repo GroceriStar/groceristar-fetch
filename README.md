@@ -90,6 +90,11 @@ https://github.com/camsong/fetch-jsonp
 https://github.com/facebook/jest/blob/master/examples/module-mock/__tests__/full_mock.js
 
 
+code gen at `files`: create a hash map, similar that we have at search.js for returning all raw files.... it'll avoid issues with updating t by hands.
+
+create method that will `_.unite` all attributes into one file.
+as we need it...
+
 #### Contributors
 
 @vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah

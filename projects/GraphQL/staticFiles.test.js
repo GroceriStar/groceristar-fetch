@@ -9,24 +9,20 @@ const methodsList = {
 
 describe("testing static data files returns array", () => {
 
-  const testFileNotEmpty = ( method ) => {
+  const testFileIsNotEmpty = ( method ) => {
 
+    test("method {$method}()", () => {
+      var result = methodsList[method];
+
+      expect(result).not.toBe("");
+    })
   }
 
-  test("method getFavorites()", () => {
-    var stream = graphQL.getFavorites();
+  testFileIsNotEmpty('getFavorites')
+  testFileIsNotEmpty('getItems')
+  testFileIsNotEmpty('getUserGrocery')
 
-    expect(stream).not.toBe("");
-  })
 
-  test("method getItems()", () => {
-    var stream = graphQL.getItems();
-    expect(stream).not.toBe("");
-  })
 
-  test("method getUserGrocery()", () => {
-    var stream = graphQL.getUserGrocery();
-    expect(stream).not.toBe("");
-  })
 
 })
