@@ -9,10 +9,11 @@ const chickenKyiv  = require('../ChickenKyiv/chickenKyiv');
 // console.log( chickenKyiv. );
 
 
-console.log( count(chickenKyiv.getRecipes()) );
-console.log( chickenKyiv.getNRecipes(6) );
+// console.log( count(chickenKyiv.getRecipes()) );
+// console.log( chickenKyiv.getNRecipes(6) );
 
 
+console.log(chickenKyiv.getMenuGenerator(5))
 // console.log( chickenKyiv.getRandomRecipe() );
 
 // console.log( chickenKyiv.getFirstFiveRecipes() );

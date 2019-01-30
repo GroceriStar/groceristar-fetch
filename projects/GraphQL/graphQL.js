@@ -103,8 +103,8 @@ const getDepartmentsGraphQL = function(){
     name: item.name,
     desc: "description for department1",
 
-    created_at: dayjs(),
-    updated_at: dayjs()
+    created_at: dayjs().toDate(),
+    updated_at: dayjs().toDate()
     // created_at: Date.now(),
     // updated_at: Date.now()
     }))
@@ -116,8 +116,8 @@ const getDepartmentsGraphQLKey = function(){
     department_id: uuidv1(),
     name: item.name,
     desc: "description for department1",
-    created_at: dayjs(),
-    updated_at: dayjs()
+    created_at: dayjs().toDate(),
+    updated_at: dayjs().toDate()
     }))
 };
 
@@ -129,8 +129,8 @@ const getGroceryGraphQL = function(){
     img:  item.img,
     desc: item.desc,
     slug: item.slug,
-    created_at: dayjs(),
-    updated_at: dayjs(),
+    created_at: dayjs().toDate(),
+    updated_at: dayjs().toDate(),
     id_1: 1,
     favs: false
     }))
@@ -144,8 +144,8 @@ const getGroceryGraphQLKey = function(){
     img:  item.img,
     desc: item.desc,
     slug: item.slug,
-    created_at: dayjs(),
-    updated_at: dayjs(),
+    created_at: dayjs().toDate(),
+    updated_at: dayjs().toDate(),
     id_1: 1,
     favs: false
     }))
@@ -163,8 +163,8 @@ const getIngredientsGraphQL = function(limit = false){
     name: item.name,
     description: "description",
     custom: false,
-    created_at: dayjs(),
-    updated_at: dayjs(),
+    created_at: dayjs().toDate(),
+    updated_at: dayjs().toDate(),
     id_1: 1,
     department_id: 1
     }))
@@ -183,13 +183,13 @@ const getIngredientsGraphQLKey = function(limit = false){
     name: item.name,
     description: "description",
     custom: false,
-    created_at: dayjs(),
-    updated_at: dayjs(),
+    created_at: dayjs().toDate(),
+    updated_at: dayjs().toDate(),
     id_1: 1,
     department_id: 1
     }))
 };
-
+// add groceryIds, favs are arrays with ids...
 const getUsersGraphQL = function(){
   let results = groceristar.getUsers();
   return results.map((item, index) => ({
