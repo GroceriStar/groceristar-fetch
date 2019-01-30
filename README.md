@@ -95,6 +95,16 @@ code gen at `files`: create a hash map, similar that we have at search.js for re
 create method that will `_.unite` all attributes into one file.
 as we need it...
 
+files have work with json5 spec: https://json5.org/
+
+install and use: https://github.com/jprichardson/node-jsonfile
+
+or
+
+https://github.com/sindresorhus/load-json-file
+
+https://github.com/sindresorhus/parse-json
+
 #### Contributors
 
 @vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah
