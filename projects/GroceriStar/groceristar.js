@@ -26,7 +26,7 @@ const getDepartments = function() {
   return parser(departments)
 }
 
-const getGroceryById = function(id) {
+const getGroceryById = function( id ) {
 
   let groceries = getGrocery();
   return [ _.find(groceries, ['id', id]) ];
@@ -61,6 +61,11 @@ const getGroceryByNameWithDepAndIng = function( name ) {
     });
   return result;
 }
+
+
+
+// Where we're using this methods?
+// -----------------------------------
 
 const getGroceriesWithDepIngKey = function(){
   let groceries = getGrocery();
@@ -119,6 +124,9 @@ const getAllIngredientsByOneDepartmentKey = function(department) {
       };
   });
 }
+
+
+// -----------------------------------
 
 // strange turnaround. @TODO can we
 const getGroceryListsWithCountDepartments = function() {
@@ -201,6 +209,7 @@ const getKeyArrayDepAndIng = function(){
   return keys;
 }
 // --------------------------------------------
+
 const getAllDepartmentList = function() {
   let departments = getDepartments();
   return _.map(departments, item => ({
@@ -222,6 +231,8 @@ const getAllIngredientsWithId = function(){
   return result;
 }
 
+// @TODO we need to figure out why we have this method and getAllDepartmentList
+// i assume we using them in different react projects.
 const getAllDepartmentsWithId = function(){
   let departments = getDepartments();
 
@@ -238,7 +249,7 @@ const getAllDepartmentsWithId = function(){
 
 const getAllIngredientsList = function(department) {
   const ingredients = this.getAllIngredientsByOneDepartment(department);
-  
+
   return ingredients.map(item => ({
     key: uuidv1(),
     name: item,
