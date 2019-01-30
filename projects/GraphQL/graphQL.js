@@ -1,6 +1,8 @@
 const _            = require('lodash');
 const fs           = require('fs');
 const uuidv1       = require('uuid/v1');
+const dayjs        = require('dayjs');
+
 const { parser, sliceArray }   = require('../../helper');
 
 const groceristar = require('../GroceriStar/groceristar');
@@ -100,8 +102,11 @@ const getDepartmentsGraphQL = function(){
     department_id: ++index,
     name: item.name,
     desc: "description for department1",
-    created_at: Date.now(),
-    updated_at: Date.now()
+
+    created_at: dayjs(),
+    updated_at: dayjs()
+    // created_at: Date.now(),
+    // updated_at: Date.now()
     }))
 };
 
@@ -111,8 +116,8 @@ const getDepartmentsGraphQLKey = function(){
     department_id: uuidv1(),
     name: item.name,
     desc: "description for department1",
-    created_at: Date.now(),
-    updated_at: Date.now()
+    created_at: dayjs(),
+    updated_at: dayjs()
     }))
 };
 
@@ -124,8 +129,8 @@ const getGroceryGraphQL = function(){
     img:  item.img,
     desc: item.desc,
     slug: item.slug,
-    created_at: Date.now(),
-    updated_at: Date.now(),
+    created_at: dayjs(),
+    updated_at: dayjs(),
     id_1: 1,
     favs: false
     }))
@@ -139,8 +144,8 @@ const getGroceryGraphQLKey = function(){
     img:  item.img,
     desc: item.desc,
     slug: item.slug,
-    created_at: Date.now(),
-    updated_at: Date.now(),
+    created_at: dayjs(),
+    updated_at: dayjs(),
     id_1: 1,
     favs: false
     }))
@@ -158,8 +163,8 @@ const getIngredientsGraphQL = function(limit = false){
     name: item.name,
     description: "description",
     custom: false,
-    created_at: Date.now(),
-    updated_at: Date.now(),
+    created_at: dayjs(),
+    updated_at: dayjs(),
     id_1: 1,
     department_id: 1
     }))
@@ -178,8 +183,8 @@ const getIngredientsGraphQLKey = function(limit = false){
     name: item.name,
     description: "description",
     custom: false,
-    created_at: Date.now(),
-    updated_at: Date.now(),
+    created_at: dayjs(),
+    updated_at: dayjs(),
     id_1: 1,
     department_id: 1
     }))

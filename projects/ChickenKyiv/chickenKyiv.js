@@ -1,5 +1,7 @@
 const _            = require('lodash');
 const uuidv1       = require('uuid//v1');
+const dayjs        = require('dayjs');
+
 const { parser, sliceArray }   = require('../../helper');
 
 const ingredients3 = require('../../data/Ingredients/ingredients3.json');
@@ -26,13 +28,13 @@ const getMenu = function() {
 // that Menu file is no longer needed because we replace it with fake data. you can use method ABC in order to generate that data.
 const getMenuGenerator = (number_of_weeks) => {
   let result
-  result = _.map(number_of_weeks, ( index ) => {
+  result = _.map(number_of_weeks, ( index ) => ({
     id: uuidv1(),
-    title: "Weekly menu #{$index}",
-    date: ,
-    description: "description for Weekly menu #{$index}",
-    notes: "This is a chef notes for wm #{$index}"
-  })
+    title: "Weekly menu #${index}",
+    date: dayjs(),
+    description: "description for Weekly menu #${index}",
+    notes: "This is a chef notes for wm #${index}"
+  }))
   return result;
 }
 
