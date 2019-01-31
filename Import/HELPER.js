@@ -199,6 +199,19 @@ const is_imported = (results, tables) => {
   });
 
 }
+//
+// const is_imported = (results, tables) => {
+//
+//   _.map(tables, (item) => {
+//     if( !results.item ){
+//       return { error: "not imported well" }
+//     }
+//       // raven.captureException();
+//   });
+//
+// }
+
+
 
 module.exports = {
   // da_id    : da_id,
