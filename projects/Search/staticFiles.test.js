@@ -7,7 +7,7 @@ describe("testing static data files returns array", () => {
     expect(result).not.toBe("");
   })
 
-
+// @TODO replace this files with new version -  __.get() method
     // test('ingredients1 file is set', () => {
   //   var result = search.getIngredients1()
   //   expect(result).not.toBe('')
@@ -22,4 +22,5 @@ describe("testing static data files returns array", () => {
   //   var result = search.getMeasurements()
   //   expect(result).not.toBe('')
   // })
+
 });
