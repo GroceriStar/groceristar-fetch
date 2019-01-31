@@ -191,6 +191,8 @@ const find_all_data_copy_of_function_above = async (options, cb) => {
 
 };
 
+// i think it should return true at some cases...
+// or it's just for just catching an error...
 const is_imported = (results, tables) => {
 
   _.map(tables, (item) => {
@@ -200,7 +202,7 @@ const is_imported = (results, tables) => {
 
 }
 //
-// const is_imported = (results, tables) => {
+// const is_imported = ( results, tables ) => {
 //
 //   _.map(tables, (item) => {
 //     if( !results.item ){
