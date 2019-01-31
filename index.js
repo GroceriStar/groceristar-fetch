@@ -5,19 +5,36 @@ const mealCalendar = require("./projects/MealCalendar/mealCalendar.js");
 const showcase     = require("./projects/Showcase/showcase.js");
 const graphQL      = require("./projects/GraphQL/graphQL.js");
 
+const gsLoopback   = require("./projects/GS-Loopback/loopback.js");
+
 // i'm separating this file because it's not fit to logic of this module very well.
 const CKImport     = require("./Import/CKImport");
 
 
-
 module.exports = {
-  search: search,
-  groceristar: groceristar,
-  chickenKyiv: chickenKyiv,
-  mealCalendar: mealCalendar,
-  showcase: showcase,
-  graphQL: graphQL,
+  search,
+  groceristar,
+  chickenKyiv,
+  mealCalendar,
+  showcase,
+  graphQL,
 
 
-  CKImport: CKImport
+
+
+  CKImport
 }
+
+// module.exports = {
+//   search: search,
+//   groceristar: groceristar,
+//   chickenKyiv: chickenKyiv,
+//   mealCalendar: mealCalendar,
+//   showcase: showcase,
+//   graphQL: graphQL,
+//
+//
+//
+//
+//   CKImport: CKImport
+// }

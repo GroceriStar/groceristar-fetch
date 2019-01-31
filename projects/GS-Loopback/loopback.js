@@ -6,8 +6,20 @@ const { parser }   = require('../../helper');
 
 const ultimateGroceryList = require('../../data/Grocery/example/ultimate-gl-from-loopback-server-example.json');
 
+const groceryListWithUserRelations = require('../../data/Grocery/example/grocery-with-user-relations.json')
+
+const dbIngredients =  require('../../data/Ingredients/example/gs-loopback-sample.json');
+
 const getUltimateGrocery = function() {
   return parser(ultimateGroceryList)
+}
+
+const getGLwithUserRelations = () => {
+  return parser(groceryListWithUserRelations)
+}
+
+const getIngredientsSampleFromDB = () => {
+  return parser(dbIngredients)
 }
 
 // const getIngredients = function() {
@@ -68,5 +80,10 @@ const getUltimateGrocery = function() {
 // }
 
 module.exports = {
-  getUltimateGrocery
+  getUltimateGrocery,
+  getGLwithUserRelations
+
+  getIngredientsSampleFromDB
+
+
 }
