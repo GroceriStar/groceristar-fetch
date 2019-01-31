@@ -81,9 +81,9 @@ const getIngredientsSampleFromDB = () => {
 
 module.exports = {
   getUltimateGrocery,
-  getGLwithUserRelations
+  getGLwithUserRelations,
 
-  getIngredientsSampleFromDB
+  getIngredientsSampleFromDB,
 
 
 }
