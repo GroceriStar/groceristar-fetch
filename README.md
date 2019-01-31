@@ -109,6 +109,8 @@ https://github.com/sindresorhus/parse-json
 codegen of db with recipes. like we have a db-recipes and we actually convert the structure to match with our schema.
 but what if someone what to have a different scheme. for this case we can actually use graphql server that will return data in different ways. maybe we need to have a wizard, that will send updated query and by result we'll send a json file to user...
 
+check `node-csv`
+
 #### Contributors
 
 @vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah

@@ -56,3 +56,9 @@ But it's like "pOtato - potAto".
 I also think that some previous data, that was created before by ML members - we didn't move it and didn't start to use.
 
 we have data from different sources
+
+----
+
+
+Some files that we have are not really related to `food` files. they related to our structure and are very vulnarable to data structure changes. so if we'll have a separated repo - i want to have on it only basic files.
+and files that we'll need to have for our database related needs - we'll create them on fly.
