@@ -111,6 +111,10 @@ but what if someone what to have a different scheme. for this case we can actual
 
 check `node-csv`
 
+2nd generation of the plugin: https://github.com/GroceriStar/fetch2
+
+set of constants that we'll use: https://github.com/GroceriStar/fetch-constants
+
 #### Contributors
 
 @vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah
