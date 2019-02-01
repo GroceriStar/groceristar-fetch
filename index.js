@@ -18,7 +18,7 @@ module.exports = {
   mealCalendar,
   showcase,
   graphQL,
-
+  gsLoopback,
 
 
 
