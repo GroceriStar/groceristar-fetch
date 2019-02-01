@@ -145,6 +145,8 @@ const FeatureCallout = props => (
           <li>
             <a href="/groceristar-fetch/docs/searchform-project.html">Search Form</a>
           </li>
+          <li><a href="/groceristar-fetch/docs/GraphQL.html">GraphQL</a></li>
+          <li><a href="/groceristar-fetch/docs/Selector.html">Selector</a></li>
           <li>
             <a href="/groceristar-fetch/docs/stretch-goals.html">Stretch goals</a>
           </li>
