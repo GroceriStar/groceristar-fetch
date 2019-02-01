@@ -204,6 +204,10 @@ const is_imported = (results, tables) => {
 //
 // const is_imported = ( results, tables ) => {
 //
+    // if ( _.isEmpty( item ) ) {
+    //      return { error: "not imported well" }
+    // }
+
 //   _.map(tables, (item) => {
 //     if( !results.item ){
 //       return { error: "not imported well" }
