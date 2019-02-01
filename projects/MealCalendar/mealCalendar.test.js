@@ -1,29 +1,27 @@
-const mealCalendar = require('./mealCalendar.js');
-const mealcalendar = require('../../data/MealCalendar/mealcalendar.json');
+const mealCalendarMethods = require('./mealCalendar.js');
 
-describe('testing static data files are set', () => {
+const { mealCalendar }  = require('./files');
 
-  test('getMealCalendar', () => {
-    var stream = mealCalendar.getMealCalendar()
-    expect(stream).not.toBe('')
-  })
+describe('Meal Calendar. basic methods should work', () => {
+
 
   test('getDishByDay', () => {
-    var stream = mealCalendar.getDishByDay('Monday')
-    expect(stream).not.toBe('')
+    var result = mealCalendarMethods.getDishByDay('Monday')
+    expect(result).not.toBe('')
   })
 
   test('getDishByWeek', () => {
-    mealcalendar.map(meal => {
-      var stream = mealCalendar.getDishByWeek(meal.id)
-      expect(stream).not.toBe('')
+    //@TODO maybe we can remove include from files...
+    mealCalendar.map(meal => {
+      var result = mealCalendarMethods.getDishByWeek(meal.id)
+      expect(result).not.toBe('')
     })
   })
 
   test('getDishByMonth', () => {
     for (let i = 1; i <= 5; i++) {
-      var stream = mealCalendar.getDishByMonth(i)
-      expect(stream).not.toBe('')
+      var result = mealCalendarMethods.getDishByMonth(i)
+      expect(result).not.toBe('')
     }
   })
 
