@@ -9,6 +9,8 @@ title: Table of contents
 * [Meal Calendar project section](MealCalendar.md)
 * [Search API project section](SearchAPI.md)
 * [Search Form project section](SearchForm.md)
+* [GraphQL](GraphQL.md)
+* [Selector](Selector.md)
 * [Stretch goals](stretch-goals.md)
 * [Tests](tests.md)
 * [list1](GroceryLists/1.md)
