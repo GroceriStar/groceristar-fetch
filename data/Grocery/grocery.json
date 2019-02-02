@@ -142,9 +142,20 @@
     "desc": false,
     "slug": false
   },
-  {
+    {
     "departments": [
-      "Other"
+      "staples",
+      "tinnedFood",
+      "vegetables",
+      "fruits",
+      "meat",
+      "condiments"
+      "dairy",
+      "spreads",
+      "cookingBaking",
+      "drinks",
+      "pastry",
+      "sweets"
     ],
     "id": 9,
     "name": "basic-grocery-list",
@@ -164,7 +175,13 @@
   },
   {
     "departments": [
-      "Other"
+      "grains and flours",
+      "single ingredient food",
+      "produce",
+      "vegetarian protein source",
+      "dairy like stuff",
+      "dry stuff",
+      "other"
     ],
     "id": 11,
     "name": "gluten-free-diet",
@@ -174,7 +191,13 @@
   },
   {
     "departments": [
-      "Other"
+      "breads-and-grains",
+      "dairy-and-eggs",
+      "meats",
+      "fresh produce",
+      "frozen items",
+      "pantry staples",
+      "other"
     ],
     "id": 12,
     "name": "health-article",
@@ -184,6 +207,87 @@
   },
   {
     "departments": [
+      "other"
+    ],
+    "id": 13,
+    "name": "How-i-spent-40-at-trader-joes-and-ate-healthy-for-a-week",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+    {
+    "departments": [
+      "carbs",
+      "ProteinSources",
+      "DairyMilk",
+      "produce",
+      "CondimentsMiscellaneous",
+      "FrozenFoods"
+    ],
+    "id": 14,
+    "name": "number-four",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+      {
+    "departments": [
+      "produce",
+      "herbs",
+      "meat, fish and soy proteins",
+      "grocery items",
+      "oils, vinegar and condiments",
+      "spices",
+      "nuts and seeds"
+    ],
+    "id": 15,
+    "name": "dr-ozs-21-day-weight-loss-breakthrough-shopping-list",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+      {
+    "departments": [
+      "other"
+    ],
+    "id": 16,
+    "name": "healthy-diet-for-20-week-list",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+      {
+    "departments": [
+      "fruits",
+      "vegetables",
+      "grains",
+      "protein",
+      "dairy",
+      "pantry"
+    ],
+    "id": 17,
+    "name": "1-week-healthy-budget-grocery-list",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+      {
+    "departments": [
+      "other"
+    ],
+    "id": 18,
+    "name": "the-fitness-dollar-menu-budget-friendly-groceries",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+      {
+    "departments": [
+      "other"
+    ],
+    "id": 19,
+    "name": "healthy-diet-vegetarian-paleo-shopping-list",
+=======
       "Other"
     ],
     "id": 13,
@@ -192,7 +296,106 @@
     "desc": false,
     "slug": false
   },
-  {
+      {
+    "departments": [
+      "other"
+    ],
+    "id": 20,
+    "name": "essential-groceries-for-single-guys",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+      {
+    "departments": [
+      "pantry ingredients",
+      "other"
+    ],
+    "id": 21,
+    "name": "grocery-budget-for-4-people",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+        {
+    "departments": [
+      "other"
+    ],
+    "id": 22,
+    "name": "27-dollar-grocery-challenge",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+      {
+    "departments": [
+      "beans",
+      "rice",
+      "pasta",
+      "other grains",
+      "canned tomatoes",
+      "canned vegetables",
+      "canned and dried fruits",
+      "sauces",
+      "soups",
+      "meats",
+      "other",
+      "vinegars",
+      "oils",
+      "reduced fat cheeses",
+      "dairy",
+      "breads",
+      "fish"
+    ],
+    "id": 23,
+    "name": "shopping-list-basic-ingredients-for-a-healthy-kitchen",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+          {
+    "departments": [
+      "other"
+    ],
+    "id": 24,
+    "name": "19-items-you-need-on-your-next-grocery-list",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+          {
+    "departments": [
+      "other"
+    ],
+    "id": 25,
+    "name": "14-grocery-staples-I-always-have-as-a-20-something-on-a-budget",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+    {
+    "departments": [
+      "Other"
+    ],
+    "id": 26,
+    "name": "building-a-healthy-vegan-grocery-list",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+      {
+    "departments": [
+      "shopping list",
+      "each week buy",
+      "detox vegetable broth ingredients"
+    ],
+    "id": 27,
+    "name": "dr-ozs-rapid-weight-loss-plan-shopping-list",
+    "img": false,
+    "desc": false,
+    "slug": false
+  },
+    {
     "departments": [
       "Other"
     ],
@@ -202,4 +405,4 @@
     "desc": false,
     "slug": false
   }
-]
+ ]
