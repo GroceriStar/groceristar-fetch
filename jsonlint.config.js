@@ -3,5 +3,6 @@
 var shell = require('shelljs');
 var path  = require('path');
 
-console.log(path.resolve(__dirname, '../data/Grocery/grocery.json'));
-// shell.exec("jsonlint /data/Grocery/grocery.json");
+const groceryFilePath = path.resolve(__dirname, './data/Grocery/grocery.json')
+// console.log(path.resolve(__dirname, './data/Grocery/grocery.json'));
+shell.exec("jsonlint " + groceryFilePath );
