@@ -8,6 +8,7 @@ install:
 
 script:
   - npm test
+  - jsonlint /data/Grocery/grocery.json
 
 deploy:
   provider: npm
