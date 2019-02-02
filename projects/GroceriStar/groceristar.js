@@ -26,6 +26,9 @@ const getDepartments = function() {
   return parser(departments)
 }
 
+
+
+
 const getGroceryById = function( id ) {
 
   let groceries = getGrocery();
@@ -146,7 +149,7 @@ const getGroceryListsWithCountDepartments = function() {
 // i assume this cannot work, because we don't have groceries variable... @TODO
 const getAllDepartments = function() {
   const departments = [];
-  
+
   // @TODO this is an example what should be updated. loooooks so bad and unreadable
   _.forEach(_.range(0, groceries.length), value =>
     departments.push(..._.map(groceries[value]['departments']))
@@ -213,6 +216,7 @@ const getKeyArrayDepAndIng = function(){
 
 const getAllDepartmentList = function() {
   let departments = getDepartments();
+
   return _.map(departments, item => ({
     key: uuidv1(),
     departmentName: item

@@ -16,6 +16,8 @@ const nutritions2  = require('../../data/Nutrition/nutritions2.json');
 const departments  = require('../../data/Departments/departments.json');
 const users        = require('../../data/Users/users.json');
 
+
+
 const getIngredients3 = function() {
   return parser(ingredients3)
 }
@@ -23,6 +25,31 @@ const getIngredients3 = function() {
 const getMenu = function() {
   return parser(menus)
 }
+
+const getRecipe = function() {
+  return parser(recipes)
+}
+
+const getNutritions1 = function() {
+  return parser(nutritions1)
+}
+
+const getNutritions2 = function() {
+  return parser(nutritions2)
+}
+
+
+// duplicates from GS
+const getDepartments = function() {
+  return parser(departments)
+}
+
+const getUsers = function() {
+  return parser(users)
+}
+
+
+
 
 //@TODO delete file menu.json from main set of files, but create a note at some place,
 // that Menu file is no longer needed because we replace it with fake data. you can use method ABC in order to generate that data.
@@ -38,9 +65,6 @@ const getMenuGenerator = ( number_of_weeks ) => {
   return result;
 }
 
-const getRecipe = function() {
-  return parser(recipes)
-}
 
 // @TODO replace it later. we don't need it after introducing sliceArray method.
 const getNRecipes = (n) => {
@@ -113,23 +137,6 @@ const getFiveRandomIngredients = () => {
   return result;
 }
 
-const getNutritions1 = function() {
-  return parser(nutritions1)
-}
-
-const getNutritions2 = function() {
-  return parser(nutritions2)
-}
-
-
-// duplicates from GS
-const getDepartments = function() {
-  return parser(departments)
-}
-
-const getUsers = function() {
-  return parser(users)
-}
 
 
 module.exports = {

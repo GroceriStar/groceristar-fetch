@@ -10,6 +10,11 @@ const getFVGLMC = () => {
   return parser(firstVeganGLMC);
 }
 
+
+
+
+
+
 // module.getDishByDay = function(day, maxDishes = mealCalendar.length) {
 //   return _.filter(parser(mealCalendar), (meal, index) => {
 //     if (index < maxDishes) {
