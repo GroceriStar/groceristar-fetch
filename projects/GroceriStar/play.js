@@ -44,6 +44,10 @@ count();
 
 // console.log(groceristar.getAllIngredientsList("Fresh vegetables"));
 
+// console.log(groceristar.getGroceriesWithDepIngKey());
+
+// console.log(groceristar.getAllIngredientsByOneDepartmentKey("Condiments / Sauces", "888383883"));
+// console.log(groceristar.getGroceriesWithDepIngKey());
 
 
 // getGroceryListsByDepartment = department => {
