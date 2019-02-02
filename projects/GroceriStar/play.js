@@ -8,29 +8,31 @@ const users        = require('../../data/Users/users.json');
 const fs           = require('fs');
 
 
+const { parser }   = require('../../helper');
+
 const groceristar = require('../GroceriStar/groceristar');
 const search      = require('../Search/search');
 
-
-const parser = function ( filename ){
-
-	return JSON.parse( JSON.stringify(filename) )
-
-}
+//
+// const parser = function ( filename ){
+//
+// 	return JSON.parse( JSON.stringify(filename) )
+//
+// }
 
 
 //can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
-// const count = function() {
-//
-// 	// console.log('ingredient ' +  _.size(departments) )
-// 	console.log('department ' +  _.size(departments) )
-// 	console.log('grocery '    +  _.size(groceries) )
-// 	console.log('users '      +  _.size(users) )
-// 	console.log('ingredient ' +  _.size(ingredients) )
-//
-//
-// };
-// count();
+const count = function() {
+
+	// console.log('ingredient ' +  _.size(departments) )
+	console.log('department ' +  _.size(departments) )
+	console.log('grocery '    +  _.size(groceries) )
+	console.log('users '      +  _.size(users) )
+	console.log('ingredient ' +  _.size(ingredients) )
+
+
+};
+count();
 // -----
 
 // console.log(groceristar.getAllIngredientsByOneDepartmentKey("Fresh vegetables"));

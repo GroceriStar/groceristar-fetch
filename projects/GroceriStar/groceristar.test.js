@@ -3,10 +3,10 @@ const groceristar = require("./groceristar.js");
 // @TODO separate methods, related to different datasets.
 // So methods related to ingredients should have a
 // separated describe, with departments methods
-
+//
 const INGREDIENT_COUNT = 13634;
 const DEPARTMENT_COUNT = 58;
-const GROCERY_COUNT    = 8;
+const GROCERY_COUNT    = 28;
 const USER_COUNT       = 3;
 
 
