@@ -75,14 +75,9 @@ const getGroceriesWithDepIngKey = function(){
 
   let result = _.map(groceries, function(grocery) {
     //@TODO change variable name
-    let groceryDepIng = getGroceryByNameWithDepAndIngKey(grocery.name);
     // grocery.id = uuidv1();
     // grocery.departments = groceryDepIng;
-    return {
-      ...grocery,
-      id: uuidv1(),
-      departments: groceryDepIng,
-    }
+    return getGroceryByNameWithDepAndIngKey(grocery.name);
   });
 
   return result;
@@ -91,7 +86,7 @@ const getGroceriesWithDepIngKey = function(){
 const getGroceryByNameWithDepAndIngKey = function( name ) {
 
   let groceries = getGrocery();
-
+  let groceryId = uuidv1();
   let grocery = _.filter(groceries,
     item => {
       return item.name === name;
@@ -100,19 +95,34 @@ const getGroceryByNameWithDepAndIngKey = function( name ) {
   let result = [];
   grocery[0]["departments"].forEach(
     function(department) {
+      let departmentId = uuidv1();
+      let departmentType = "";
+      let dep = _.find(getDepartments(), (o) =>{
+        return o.name === department
+      });
 
-      let ingredients = getAllIngredientsByOneDepartmentKey(department)
+      if(dep != undefined){
+        departmentType = dep.type
+      }
+
+      let ingredients = getAllIngredientsByOneDepartmentKey(department, groceryId)
       result.push({
-        "id": uuidv1(),
-        "department": department,
+        "id": departmentId,
+        "name": department,
+        "type": departmentType,
         "ingredients": ingredients
       });
     });
 
-  return result;
+  return {
+    "name": name,
+    "groceryId": groceryId,
+    "messages": {},
+    "departments": result
+  };
 }
 
-const getAllIngredientsByOneDepartmentKey = function(department) {
+const getAllIngredientsByOneDepartmentKey = function(department, groceryId) {
   let ingredients = getIngredients();
 
   var ingredientsList =
@@ -121,10 +131,13 @@ const getAllIngredientsByOneDepartmentKey = function(department) {
     });
 
   return _.map(ingredientsList, item => {
-    return {
-      id:uuidv1(),
-      name: item.name,
-      };
+    let ingredientId = uuidv1();
+
+    return [
+      ingredientId,
+      item.name,
+      `/del/ing/${ingredientId}/${groceryId}`
+    ];
   });
 }
 
@@ -352,7 +365,6 @@ module.exports = {
   getAllIngredientsWithId,
   getKeyArrayDepAndIng,
   getAllDepartmentsWithId,
-  getCountIngOfDepartment
-
+  getCountIngOfDepartment,
 
 }
