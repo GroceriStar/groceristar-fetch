@@ -1,5 +1,8 @@
 const _            = require('lodash');
 const uuidv1       = require('uuid//v1');
+const dayjs        = require('dayjs');
+
+const { parser, sliceArray }   = require('../../helper');
 
 const ingredients3 = require('../../data/Ingredients/ingredients3.json');
 // const ingredients  = require('../../data/Ingredients/ingredients.json');
@@ -13,12 +16,6 @@ const nutritions2  = require('../../data/Nutrition/nutritions2.json');
 const departments  = require('../../data/Departments/departments.json');
 const users        = require('../../data/Users/users.json');
 
-
-const parser = function(filename) {
-
-  return JSON.parse(JSON.stringify(filename))
-}
-
 const getIngredients3 = function() {
   return parser(ingredients3)
 }
@@ -27,14 +24,29 @@ const getMenu = function() {
   return parser(menus)
 }
 
+//@TODO delete file menu.json from main set of files, but create a note at some place,
+// that Menu file is no longer needed because we replace it with fake data. you can use method ABC in order to generate that data.
+const getMenuGenerator = ( number_of_weeks ) => {
+  let result
+  result = _.times(number_of_weeks, ( index ) => ({
+    id: uuidv1(),
+    title: "Weekly menu #${index}",
+    date: dayjs().toDate(),
+    description: "description for Weekly menu #${index}",
+    notes: "This is a chef notes for wm #${index}"
+  }))
+  return result;
+}
+
 const getRecipe = function() {
   return parser(recipes)
 }
 
+// @TODO replace it later. we don't need it after introducing sliceArray method.
 const getNRecipes = (n) => {
   let recipes = getRecipe();
 
-  return recipes.slice(0, n);
+  return sliceArray(recipes, n);
 }
 
 /**
@@ -132,10 +144,8 @@ module.exports = {
   getFiveRandomIngredients,
   getNutritions1,
   getNutritions2,
+  getMenuGenerator,
 
   getDepartments,
   getUsers
 }
-
-
-// module.exports = module;

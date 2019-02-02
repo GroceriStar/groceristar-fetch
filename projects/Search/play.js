@@ -24,11 +24,11 @@ const options = [
 // ];
 
 
-const data = search.getFormattedIngredients();
+// const data = search.getFormattedIngredients();
 
-// const data = search.getFormattedAttributes('diets');
+const data = search.getFormattedAttributes('diets');
 
-// console.log(data);
+console.log(data);
 
 
 

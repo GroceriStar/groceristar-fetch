@@ -1,4 +1,4 @@
-# Groceristar-fetch module
+#### Groceristar-fetch module
 
 Table of Contents
 =================
@@ -19,7 +19,7 @@ Table of Contents
 
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch)
 [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch)
-
+[![Coverage Status](https://coveralls.io/repos/github/GroceriStar/groceristar-fetch/badge.svg?branch=master)](https://coveralls.io/github/GroceriStar/groceristar-fetch?branch=master)
 
 <!--
 ![Alt Text](https://github.com/GroceriStar/creative/blob/master/app-video/fetch-inside.gif)/
@@ -31,13 +31,16 @@ Table of Contents
 [Trello board with current tasks](https://trello.com/b/U2Jm8JWX/fetch-plugin)
 
 [Documentation Website](https://groceristar.github.io/groceristar-fetch/)
+
 [Sandbox Editor](https://codesandbox.io/s/mzknoy0rnp)
 
 
 #### Installation
 
 `npm install @groceristar/groceristar-fetch`
+
 or
+
 `yarn add @groceristar/groceristar-fetch`
 
 
@@ -79,45 +82,45 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 
 `npm test`
 
+---
+https://github.com/americanexpress/jest-json-schema#tomatchschemaschema
+
+https://github.com/camsong/fetch-jsonp
+
+https://github.com/facebook/jest/blob/master/examples/module-mock/__tests__/full_mock.js
+
+
+code gen at `files`: create a hash map, similar that we have at search.js for returning all raw files.... it'll avoid issues with updating t by hands.
+
+create method that will `_.unite` all attributes into one file.
+as we need it...
+
+files have work with json5 spec: https://json5.org/
+
+install and use: https://github.com/jprichardson/node-jsonfile
+
+or
+
+https://github.com/sindresorhus/load-json-file
+
+https://github.com/sindresorhus/parse-json
+
+
+codegen of db with recipes. like we have a db-recipes and we actually convert the structure to match with our schema.
+but what if someone what to have a different scheme. for this case we can actually use graphql server that will return data in different ways. maybe we need to have a wizard, that will send updated query and by result we'll send a json file to user...
+
+check `node-csv`
+
+2nd generation of the plugin: https://github.com/GroceriStar/fetch2
+
+set of constants that we'll use: https://github.com/GroceriStar/fetch-constants
 
 #### Contributors
 
-@vadim9999, @MinkoJ2, @chauhannishith, @atherdon
+@vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah
 
 #### Credits
 
 Created with help of this articles:
 https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
 https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
-
-
-#### Unprocessed 'junk' - things that we should keep here.
----
-Tasks:
-- [ ] [Search Form static data](https://github.com/GroceriStar/static-data/issues/14)
-- [ ] [ChickenKyiv Free Menu Release import data](https://github.com/GroceriStar/static-data/issues/10)
----
-
- - Proposal: add to each `get` method an attribute, related to debug.
-I assume we'll need to have one `get` method, with cases, where we return a different data.
-And when we pass a debug flag into our method - we'll get console.log with result, before returning it.
-
- - Proposal: have a one common place for common methods, that we're using quite often. Example: we need departments at CK and at GS. we need recipes at CK and S. We need menus at CK and MC
-
-- Proposal: random stuff use lodash functions...
-
-- Proposal: use module resolver.... with a new babel 7 core
-
-- Proposal: use lodash methods for returninh random elements
-
-@TODO use different flags for one command in order to call different imports
-
-[npm-run-script](https://docs.npmjs.com/cli/run-script)
-
-
-
-[Introduction to NPM Scripts](https://medium.freecodecamp.org/introduction-to-npm-scripts-1dbb2ae01633)
-
-```npm run test -- --arg="search"```
-
-@TODO add tests

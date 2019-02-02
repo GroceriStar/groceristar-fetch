@@ -20,6 +20,8 @@ const {
 // get('recipe2');
 // get('department');
 
+// @TODO we can use this function in our other projects
+
 const get = (tableName) => {
 
   let result

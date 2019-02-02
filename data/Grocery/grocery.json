@@ -123,7 +123,9 @@
     "slug": false
   },
   {
-    "departments": [],
+    "departments": [
+      "Other"
+    ],
     "id": 7,
     "name": "Rabel Dietitian",
     "img": false,
@@ -140,7 +142,6 @@
     "desc": false,
     "slug": false
   },
-<<<<<<< HEAD
     {
     "departments": [
       "staples",
@@ -155,11 +156,6 @@
       "drinks",
       "pastry",
       "sweets"
-=======
-     {
-    "departments": [
-      "Other"
->>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6
     ],
     "id": 9,
     "name": "basic-grocery-list",
@@ -167,7 +163,7 @@
     "desc": false,
     "slug": false
   },
-    {
+  {
     "departments": [
       "Other"
     ],
@@ -177,9 +173,8 @@
     "desc": false,
     "slug": false
   },
-    {
+  {
     "departments": [
-<<<<<<< HEAD
       "grains and flours",
       "single ingredient food",
       "produce",
@@ -187,9 +182,6 @@
       "dairy like stuff",
       "dry stuff",
       "other"
-=======
-      "Other"
->>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6
     ],
     "id": 11,
     "name": "gluten-free-diet",
@@ -197,9 +189,8 @@
     "desc": false,
     "slug": false
   },
-    {
+  {
     "departments": [
-<<<<<<< HEAD
       "breads-and-grains",
       "dairy-and-eggs",
       "meats",
@@ -207,9 +198,6 @@
       "frozen items",
       "pantry staples",
       "other"
-=======
-      "Other"
->>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6
     ],
     "id": 12,
     "name": "health-article",
@@ -217,9 +205,8 @@
     "desc": false,
     "slug": false
   },
-    {
+  {
     "departments": [
-<<<<<<< HEAD
       "other"
     ],
     "id": 13,
@@ -305,12 +292,10 @@
     ],
     "id": 13,
     "name": "How-i-spent-40-at-trader-joes-and-ate-healthy-for-a-week",
->>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6
     "img": false,
     "desc": false,
     "slug": false
   },
-<<<<<<< HEAD
       {
     "departments": [
       "other"
@@ -410,9 +395,6 @@
     "desc": false,
     "slug": false
   },
-
-]
-=======
     {
     "departments": [
       "Other"
@@ -424,4 +406,3 @@
     "slug": false
   }
  ]
->>>>>>> bc98655505f12d6ae781cad3fab984e42d4041f6

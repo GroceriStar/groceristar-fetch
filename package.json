@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/groceristar-fetch",
-  "version": "1.1.47",
+  "version": "1.1.59",
   "description": "npm module required to fetch static data required for recipe search",
   "main": "index.js",
   "engines": {
@@ -12,7 +12,8 @@
     "play:g": "nodemon projects/GroceriStar/play.js",
     "play:s": "nodemon projects/Search/play.js",
     "play:r": "nodemon projects/ChickenKyiv/play.js",
-    "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest  projects/GroceriStar/staticFiles.test.js"
+    "play:l": "nodemon projects/GS-loopback/play.js",
+    "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest projects/GroceriStar/staticFiles.test.js"
   },
   "repository": {
     "type": "git",
@@ -36,11 +37,14 @@
   },
   "homepage": "https://groceristar.github.io/groceristar-fetch/",
   "devDependencies": {
-    "jest": "^23.6.0",
+    "coveralls": "^3.0.2",
+    "jest": "^24.0.0",
+    "jest-json-schema": "^2.0.1",
     "nodemon": "^1.17.5",
     "travis": "^0.1.1"
   },
   "dependencies": {
+    "dayjs": "^1.8.0",
     "fs": "0.0.1-security",
     "lodash": "^4.17.10",
     "underscore": "^1.9.1",

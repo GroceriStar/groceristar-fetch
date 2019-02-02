@@ -20,18 +20,27 @@ const parser = function ( filename ){
 
 
 //can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
-const count = function() {
+// const count = function() {
+//
+// 	// console.log('ingredient ' +  _.size(departments) )
+// 	console.log('department ' +  _.size(departments) )
+// 	console.log('grocery '    +  _.size(groceries) )
+// 	console.log('users '      +  _.size(users) )
+// 	console.log('ingredient ' +  _.size(ingredients) )
+//
+//
+// };
+// count();
+// -----
 
-	// console.log('ingredient ' +  _.size(departments) )
-	console.log('department ' +  _.size(departments) )
-	console.log('grocery '    +  _.size(groceries) )
-	console.log('users '      +  _.size(users) )
-	console.log('ingredient ' +  _.size(ingredients) )
+// console.log(groceristar.getAllIngredientsByOneDepartmentKey("Fresh vegetables"));
+// console.log(groceristar.getGroceryByNameWithDepAndIngKey("Ultimate Grocery List"));
+// console.log(groceristar.getGroceriesWithDepIngKey());
 
+// console.log(groceristar.getAllIngredientsWithId());
+// console.log(groceristar.getAllDepartmentsWithId());
 
-};
-count();
-
+// console.log(groceristar.getAllIngredientsList("Fresh vegetables"));
 
 
 

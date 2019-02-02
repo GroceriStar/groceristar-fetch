@@ -1,6 +1,9 @@
 const _             = require('lodash');
 const uuidv1        = require('uuid/v1');
 const path          = require('path');
+const {
+  parser, pathToJson
+}   = require('../../helper');
 
 const allergies     = require('../../data/Allergy/allergies.json');
 const courses       = require('../../data/Course/courses.json');
@@ -11,46 +14,38 @@ const ingredients1  = require('../../data/Ingredients/ingredients1.json');
 const measurements  = require('../../data/Measurement/measurements.json');
 
 
-
-
-
-
 // @TODO why we name files as plurals but attributes as singular noun?
 // please advice
 const getRawFiles = function() {
   return {
     'allergy': allergies,
-    'course': course,
+    'course': courses,
     'cuisine': cuisines,
     'diet': diets,
-    'holiday': holiday,
+    'holiday': holidays,
     'ingredient': ingredients1,
     'measurement': measurements
   }
 }
 
-
-const parser = function(filename) {
-
-  return JSON.parse(JSON.stringify(filename))
-
+// experimental method, like getRawFiles
+// first of all lodash has _.get method.
+// second - this method is not good, and it should be used only inside the plugin
+// @TODO update/change it later, when we'll separate files with business logic.
+const __get = ( alias ) => {
+  const files  = getRawFiles();
+  const result = files[alias];
+  return parser(result);
 }
 
-
-const pathToJson = function() {
-  // path.dirname(__filename)
-  return path.dirname('./data/Allergy/allergies.json');
-};
 
 // we got this array [ one, two, three ]
 // return [ { label: one, value:one } ]
 const proceedData = (array) => {
-  const result = _.map(array, item => {
-    return {
+  const result = _.map(array, item => ({
       label: item,
       value: _.camelCase(item)
-    }
-  })
+  }))
   return result;
 }
 
@@ -235,6 +230,9 @@ const toOptAntD = (data) => {
 
 module.exports = {
   getRawFiles,
+  __get,
+
+
   pathToJson,
   proceedData,
   getAttribute,

@@ -1,9 +1,11 @@
 // const Raven   = require('raven');
 
-const debug   = require('debug');
+// const debug   = require('debug');
+
+
+
 
 // const _       = require('underscore');
-
 const _       = require('lodash');
 
 // @TODO move id to config file. or we use it in a lot of places.
@@ -11,9 +13,15 @@ const _       = require('lodash');
 // let raven
 
 const get_id_array = (array) => {
+
   if ( !array ){
-    raven.captureException('Cannot attach an empty array of ids');
+    return { error: 'Cannot attach an empty array of ids' }
+    // raven.captureException();
   }
+
+  // if ( !array ){
+  //   raven.captureException('Cannot attach an empty array of ids');
+  // }
   console.log('strong debug process - get_id_array')
 
 
@@ -36,16 +44,23 @@ const get_id_array = (array) => {
 
 const create = (options, wrapper, cb) => {
 
-  if( !options ){ raven.captureException('Options was not specified'); }
-  if ( !cb ) { raven.captureException('Callback was not specified'); }
-  if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
-
-
   // let server
   // let database
   // let raven
   // let predata
+
   const { server, database, raven, predata } = options ;
+
+  if( !options ){  return { error: 'Options was not specified' }}
+  if ( !cb ) {     return { error: 'Callback was not specified' }}
+  if ( !wrapper && !wrapper.table_name ) {  return { error: 'Model was not specified' }}
+
+  // if( !options ){ raven.captureException('Options was not specified'); }
+  // if ( !cb ) { raven.captureException('Callback was not specified'); }
+  // if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
+
+
+
 
 
   console.log('strong debug process - create')
@@ -56,13 +71,19 @@ const create = (options, wrapper, cb) => {
 
   let data       = ( !predata ) ? wrapper.get() : wrapper.get(predata) ;
 
+  console.log('strong debug process - before')
+
   database.autoupdate(table_name, function(err){
+    console.log('strong debug process - inside1')
     if (err) {
-      raven.captureException(err);
+      // raven.captureException(err);
       return cb(err);
     }
 
+    console.log('strong debug process - inside')
+
     Model.create(data, cb);
+    console.log(Model);
     // Model.create(data, (err,d) => {
     //   console.log(d)
     // });

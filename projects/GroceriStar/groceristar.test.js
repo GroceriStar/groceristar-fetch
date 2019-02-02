@@ -290,70 +290,65 @@ describe("testing objects inside ingredients", () => {
 })
 
 
-
 describe("Groceristar project methods should return data", () => {
-  test("method getGroceryShowcase()", () => {
-    var stream = groceristar.getGroceryShowcase();
-    expect(stream).not.toBe("");
-  });
 
   test('method getGroceryByName("Clean Fatiring")', () => {
-    var stream = groceristar.getGroceryByName("Clean Fatiring");
-    expect(stream).not.toBe("");
+    var result = groceristar.getGroceryByName("Clean Fatiring");
+    expect(result).not.toBe("");
   });
 
   test('method getGroceryByNameWithDepAndIng("Clean Fatiring")', () => {
-    var stream = groceristar.getGroceryByNameWithDepAndIng("Clean Fatiring");
-    expect(stream).not.toBe("");
+    var result = groceristar.getGroceryByNameWithDepAndIng("Clean Fatiring");
+    expect(result).not.toBe("");
   });
 
   test("getAllDepartments()", () => {
-    var stream = groceristar.getAllDepartments();
-    expect(stream).not.toBe("");
+    var result = groceristar.getAllDepartments();
+    expect(result).not.toBe("");
   });
 
   test('getAllIngredientsByOneDepartment("Fresh vegetables")', () => {
-    var stream = groceristar.getAllIngredientsByOneDepartment(
+    var result = groceristar.getAllIngredientsByOneDepartment(
       "Fresh vegetables"
     );
-    expect(stream).not.toBe("");
+    expect(result).not.toBe("");
   });
 
   test("getGroceryById()", () => {
     for (let i = 1; i <= GROCERY_COUNT; i++) {
-      var stream = groceristar.getGroceryById(i);
-      expect(stream).not.toBe("");
+      var result = groceristar.getGroceryById(i);
+      expect(result).not.toBe("");
     }
   });
 
   test("getGroceryListsWithCountDepartments()", () => {
-    var stream = groceristar.getGroceryListsWithCountDepartments();
-    expect(stream).not.toBe("");
+    var result = groceristar.getGroceryListsWithCountDepartments();
+    expect(result).not.toBe("");
   });
 
   test('getAllDepartmentList()', () => {
-    var stream = groceristar.getAllDepartmentList();
-    expect(stream).not.toBe('');
+    var result = groceristar.getAllDepartmentList();
+    expect(result).not.toBe('');
   });
 
   test('getAllIngredientsList()', () => {
-    var stream = groceristar.getAllIngredientsList('Fresh vegetables');
-    expect(stream).not.toBe('');
+    var result = groceristar.getAllIngredientsList('Fresh vegetables');
+    expect(result).not.toBe('');
   });
 
   test('getAllGrocery()', () => {
-    var stream = groceristar.getAllGrocery();
-    expect(stream).not.toBe('');
+    var result = groceristar.getAllGrocery();
+    expect(result).not.toBe('');
   });
 
   test('getAllGroceryDepartment()', () => {
-    var stream = groceristar.getAllGroceryDepartment(groceristar.getDepartments());
-    expect(stream).not.toBe('');
+    var result = groceristar.getAllGroceryDepartment(groceristar.getDepartments());
+    expect(result).not.toBe('');
   });
 
   test('getGroceryListsByDepartment', () => {
-    var stream = groceristar.getGroceryListsByDepartment();
-    expect(stream).not.toBe('');
+    var result = groceristar.getGroceryListsByDepartment();
+    expect(result).not.toBe('');
   })
 
 
@@ -361,18 +356,18 @@ describe("Groceristar project methods should return data", () => {
  // @TODO use this case as sample of how duplicates are stored in our datasets.
  // we have a task for it https://github.com/GroceriStar/groceristar-fetch/issues/157
   test('getGroceryListsByDepartment to return a grocery list if string is lower case', () => {
-    var stream = groceristar.getGroceryListsByDepartment('protein');
-    expect(stream.length).toBeGreaterThan(1);
+    var result = groceristar.getGroceryListsByDepartment('protein');
+    expect(result.length).toBeGreaterThan(1);
   })
 
   test('getGroceryListsByDepartment to return a grocery list if string is upper case', () => {
-    var stream = groceristar.getGroceryListsByDepartment('PROTEIN');
-    expect(stream.length).toBeGreaterThan(1);
+    var result = groceristar.getGroceryListsByDepartment('PROTEIN');
+    expect(result.length).toBeGreaterThan(1);
   })
 
   test('getGroceryListsByDepartment to return a grocery list if string is capitalised', () => {
-    var stream = groceristar.getGroceryListsByDepartment('Protein');
-    expect(stream.length).toBeGreaterThan(1);
+    var result = groceristar.getGroceryListsByDepartment('Protein');
+    expect(result.length).toBeGreaterThan(1);
   })
 
 
