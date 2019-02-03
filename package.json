@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/groceristar-fetch",
-  "version": "1.1.59",
+  "version": "1.1.60",
   "description": "npm module required to fetch static data required for recipe search",
   "main": "index.js",
   "engines": {
@@ -34,13 +34,13 @@
     "uuid": "3.3.2"
   },
   "files": [
-      "/data",
-      "/Import",
-      "/projects",
-      "/helper.js",
-      "/index.js",
-      "/index.test.js",
-      "/jsonlint.config.js"      
+    "/data",
+    "/Import",
+    "/projects",
+    "/helper.js",
+    "/index.js",
+    "/index.test.js",
+    "/jsonlint.config.js"
   ],
   "repository": {
     "type": "git",
@@ -63,7 +63,6 @@
     "url": "https://github.com/GroceriStar/groceristar-fetch/issues"
   },
   "homepage": "https://groceristar.github.io/groceristar-fetch/",
-
   "jest": {
     "verbose": true,
     "testURL": "http://localhost/"
