@@ -58,7 +58,7 @@ const getGroceryByNameWithDepAndIng = function( name ) {
       //@TODO add let ingredients = const getAllIngredientsByOneDepartment(department)
 
       result.push({
-        "department": department,
+        "department" : department,
         "ingredients": getAllIngredientsByOneDepartment(department)
       });
     });
@@ -93,11 +93,15 @@ const getGroceryByNameWithDepAndIngKey = function( name ) {
     });
 
   let result = [];
+  // @TODO this is not a clean turn around for this method
   grocery[0]["departments"].forEach(
     function(department) {
       let departmentId = uuidv1();
       let departmentType = "";
-      let dep = _.find(getDepartments(), (o) =>{
+      
+      //@TODO i don't like that we're searching for things by names, 
+      // we need to replace it later with separated methods that will assign items between files via id
+      let dep = _.find(getDepartments(), (o) => {
         return o.name === department
       });
 
@@ -105,7 +109,7 @@ const getGroceryByNameWithDepAndIngKey = function( name ) {
         departmentType = dep.type
       }
 
-      let ingredients = getAllIngredientsByOneDepartmentKey(department, groceryId)
+      let ingredients = getAllIngredientsByOneDepartmentKey( department, groceryId )
       result.push({
         "id": departmentId,
         "name": department,
@@ -125,6 +129,7 @@ const getGroceryByNameWithDepAndIngKey = function( name ) {
 const getAllIngredientsByOneDepartmentKey = function(department, groceryId) {
   let ingredients = getIngredients();
 
+  // @TODO it looks like a separated method for me
   var ingredientsList =
     _.filter(ingredients, function(item) {
       return item.department === department;
