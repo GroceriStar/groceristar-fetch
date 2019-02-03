@@ -124,5 +124,6 @@ set of constants that we'll use: https://github.com/GroceriStar/fetch-constants
 #### Credits
 
 Created with help of this articles:
-https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
-https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
+- https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
+- https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
+- https://medium.com/@jdxcode/for-the-love-of-god-dont-use-npmignore-f93c08909d8d

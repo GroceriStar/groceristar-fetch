@@ -16,6 +16,32 @@
     "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest projects/GroceriStar/staticFiles.test.js",
     "jsonlint": "node jsonlint.config.js"
   },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "jest": "^24.0.0",
+    "jest-json-schema": "^2.0.1",
+    "jsonlint": "^1.6.3",
+    "nodemon": "^1.17.5",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.3",
+    "travis": "^0.1.1"
+  },
+  "dependencies": {
+    "dayjs": "^1.8.0",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.10",
+    "underscore": "^1.9.1",
+    "uuid": "3.3.2"
+  },
+  "files": [
+      "/data",
+      "/Import",
+      "/projects",
+      "/helper.js",
+      "/index.js",
+      "/index.test.js",
+      "/jsonlint.config.js"      
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GroceriStar/groceristar-fetch"
@@ -37,23 +63,7 @@
     "url": "https://github.com/GroceriStar/groceristar-fetch/issues"
   },
   "homepage": "https://groceristar.github.io/groceristar-fetch/",
-  "devDependencies": {
-    "coveralls": "^3.0.2",
-    "jest": "^24.0.0",
-    "jest-json-schema": "^2.0.1",
-    "jsonlint": "^1.6.3",
-    "nodemon": "^1.17.5",
-    "path": "^0.12.7",
-    "shelljs": "^0.8.3",
-    "travis": "^0.1.1"
-  },
-  "dependencies": {
-    "dayjs": "^1.8.0",
-    "fs": "0.0.1-security",
-    "lodash": "^4.17.10",
-    "underscore": "^1.9.1",
-    "uuid": "3.3.2"
-  },
+
   "jest": {
     "verbose": true,
     "testURL": "http://localhost/"
