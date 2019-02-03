@@ -125,3 +125,5 @@ https://chickenkyiv.github.io/search-api-documentation/
 
 Additional attributes
 https://github.com/sanjeeb9853/recipe-search-api/commit/1f5ec909b675c8edaddcf3ede8d53bff61ca3415
+
+https://github.com/ChickenKyiv/recipe-api-only/blob/master/docs/SEARCH.md
