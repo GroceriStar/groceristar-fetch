@@ -79,7 +79,7 @@ describe("testing property departments",() =>{
 describe("testing property ingredients in department", ()=>{
     var result = groceristar.getGroceriesWithDepIngKey();
 
-    test('testing ingredients have length 3', ()=>{
+    test('testing ingredient have length 3', ()=>{
       result.forEach((grocery) =>{
         grocery.departments.forEach((department) =>{
           department.ingredients.forEach((ingredient) =>{
