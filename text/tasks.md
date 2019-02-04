@@ -102,3 +102,8 @@ https://github.com/GroceriStar/graphql-server/issues/11
 https://github.com/GroceriStar/graphql-server/issues/9
 https://github.com/GroceriStar/graphql-server/issues/6
 https://github.com/GroceriStar/graphql-server/issues/4
+
+
+
+https://codeburst.io/large-offline-datasets-with-apollo-client-c19c987e4a98
+https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
