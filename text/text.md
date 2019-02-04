@@ -103,3 +103,50 @@ Maybe there is some rules, plugins, tools, to create separated files/Nodes/Table
 Maybe we should use an aproach, that is similar to learna...
 Basically what i mean that we have a package, that have sub-packages, that can be our projects, each subpackage it is also a module, with aversion control, but without npm publish feature. But it'll require an implementation of a real-dev styles. Without gitflow, clear tasks explanation, extended number of contributors, task mainteners and clear goal setting it will be hard to do/manage/implement.
 it's also hard to keep everything in one github repo and maintain issues and explanation sane and up-to-date. Right now the half of tasks are in-process, half should be finished in order to move changes into all of our projects, etc. Same stuff with a testing tasks, that we want to cover about a half of the year.
+
+
+Pokemon API did a great job by creating a tool and showing how exactly their logic works
+https://github.com/PokeAPI
+at few of their sub-repositories
+
+other idea i saw at project that have OCaml types with this term Advancabe Type Definitions that are cross-language. Maybe it can be done with Reason ML help
+
+https://github.com/suddi/suddi.github.io
+
+https://github.com/eduardoboucas/static-api-generator
+
+https://github.com/benhughes/static-api
+
+https://github.com/kossnocorp/static-files-webpack-plugin
+
+https://github.com/demockjs/demock
+
+https://github.com/zth/json-to-flowtype-generator
+
+https://github.com/sathish316/APIfy
+
+https://github.com/jpweeks/grunt-csv-json
+
+https://github.com/kylesb/static
+
+https://github.com/Renbaozhan/jsonew
+
+https://github.com/enpit/static-json-microservice
+
+https://github.com/EdJoPaTo/csv2static-json
+
+https://github.com/k4d/api-json
+
+https://github.com/vijaysharm/json-supplier
+
+https://github.com/bcruddy/static-cv
+
+https://github.com/cdsimmons/staticmanager
+
+https://github.com/inmagik/world-countries
+
+https://github.com/pwambach/mini-mock-api
+
+https://github.com/justinwoo/json-file-stub-api
+
+https://github.com/matusmarcin/node-express-static
