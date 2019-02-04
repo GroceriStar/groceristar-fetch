@@ -99,3 +99,7 @@ Maybe there is some rules, plugins, tools, to create separated files/Nodes/Table
 
 
 ---
+
+Maybe we should use an aproach, that is similar to learna...
+Basically what i mean that we have a package, that have sub-packages, that can be our projects, each subpackage it is also a module, with aversion control, but without npm publish feature. But it'll require an implementation of a real-dev styles. Without gitflow, clear tasks explanation, extended number of contributors, task mainteners and clear goal setting it will be hard to do/manage/implement.
+it's also hard to keep everything in one github repo and maintain issues and explanation sane and up-to-date. Right now the half of tasks are in-process, half should be finished in order to move changes into all of our projects, etc. Same stuff with a testing tasks, that we want to cover about a half of the year.
