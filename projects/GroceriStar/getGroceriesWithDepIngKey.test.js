@@ -31,43 +31,43 @@ describe("testing getGroceriesWithDepIngKey()", () => {
       })
    })
 
-   test('Testing grocery has property departments', () =>{
+   test('Testing grocery has property departments', () => {
 
-     result.forEach((obj) =>{
+     result.forEach((obj) => {
        expect(obj).toHaveProperty("departments")
      })
    })
 })
 
-describe("testing property departments",() =>{
+describe("testing property departments",() => {
   var result = groceristar.getGroceriesWithDepIngKey();
-    test("testing property departments have property id", () =>{
-      result.forEach((grocery) =>{
-        grocery.departments.forEach((department)=>{
+    test("testing property departments have property id", () => {
+      result.forEach((grocery) => {
+        grocery.departments.forEach((department) => {
           expect(department).toHaveProperty("id")
         })
       })
     })
 
-    test('testing departments have property id', ()=>{
+    test('testing departments have property id', () => {
       result.forEach((grocery) => {
-        grocery.departments.forEach((department) =>{
+        grocery.departments.forEach((department) => {
           expect(department).toHaveProperty("name")
         })
       })
     })
 
-    test('testing departments have property type', ()=>{
+    test('testing departments have property type', () => {
         result.forEach((grocery) => {
-          grocery.departments.forEach((department) =>{
+          grocery.departments.forEach((department) => {
             expect(department).toHaveProperty("type")
           })
         })
     })
 
-    test('testing departments have property ingredients', () =>{
-      result.forEach((grocery) =>{
-        grocery.departments.forEach((department) =>{
+    test('testing departments have property ingredients', () => {
+      result.forEach((grocery) => {
+        grocery.departments.forEach((department) => {
           expect(department).toHaveProperty("ingredients")
         })
       })
@@ -76,13 +76,13 @@ describe("testing property departments",() =>{
 
 })
 
-describe("testing property ingredients in department", ()=>{
+describe("testing property ingredients in department", () => {
     var result = groceristar.getGroceriesWithDepIngKey();
 
-    test('testing ingredient have length 3', ()=>{
-      result.forEach((grocery) =>{
-        grocery.departments.forEach((department) =>{
-          department.ingredients.forEach((ingredient) =>{
+    test('testing ingredient have length 3', () => {
+      result.forEach((grocery) => {
+        grocery.departments.forEach((department) => {
+          department.ingredients.forEach((ingredient) => {
             expect(ingredient.length).toBe(3)
           })
         })
