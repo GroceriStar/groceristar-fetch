@@ -1,31 +1,27 @@
 
+The reason why we have 3 files, related to our Grocery Lists.
 
-Причина по которой мы имеем 3 файла, для наших Grocery Lists.
 
-1) К этой структуре я пришел сам. Основная задача этой иерархии/организации файлов ->
-не только убрать необходимость на ранних этапах подключения к серверу, настраивать все необходимые настройки и права доступа.
+1) I create this structure on my own. First goal for this hierarhy(file organization) was need to import
+data into groceristar database. But in order to remove connection to our server, for different reasons, like applying all imortant settings, setup access token generation, granting access, etc...
 
-В дальнейшем эти файлы(раньше тоже) - мы будем использовать их в скрипте импорта данных в базу нашего сервера.
-Вот пример импорта из прошлого.
+All of this time GL are used as part of import script.
 
-Т.е. логика  такая
-пуста database - connected to main project /  production / 0 users
+So logic was:
 
--> we move our server to heroku hosting
-  -> run our import script that move static data into database.
-  -> then we can run our project
+0) empty database, that connected to main project / production / 0 custom users
+1) we deploying our server to Heroku hosting
+1.1) run our clean up script that drop all tables and data at our database
+1.2) run our import script that move static data into database
+1.3) we can run our project
+1.4) all pages renders well and calls without any issues.
 
-  all is renders and calls without any issues.
 
 
   ====
-
-  Вторая задача
-  является тестирование и создание базовых компонентов в React проектах.
-  Эти компоненты мы используем в 5-8 проектах и стааемся делать их таким образом, чтобы они были independent и работали
-  в стрессовых условиях.
-
-  это пока только желание, но мы стараемся к этому прийти.
+Second task.
+Testing and development of basic components in React projects.
+We have 5-10 different projects and use components between them. We trying to make that components works independently and work well at stressed environment as well. Right now it's a wish, but we're working hard on it.
 
 ====
 
@@ -49,8 +45,8 @@
   и перестанет происходить быть ошибка builds.
 
 ------
- 
-if we move whole fetch plugin at ES6 version, we'll need to replace JSON files 
+
+if we move whole fetch plugin at ES6 version, we'll need to replace JSON files
 into JS arrays, because JSON has issues with our babel builds before
 
   -----
@@ -58,7 +54,7 @@ So maybe whole idea, realted to split are good and maybe we should start it righ
 
   ----
 
-Question, related to import, that should be rased too.
+Question, related to import, that should be raised too.
   I want to develop simple, modular approach for import script (one table can be adjusted without breaking the whole import process)
   approach для импорта.
 
@@ -77,13 +73,13 @@ Question, related to import, that should be rased too.
 
   Также DepIDS нужно отправить и сохранить в нашей записи о GL(наверное обновив ее или сделать функции создания GL записи
   await -> пока все данные не соберуться вместе).
-  
+
   Data about Ingredients, using mongoDB Ingredients
 
 
 ---
 
-I think soon or later we should change the package name. Because npm has other popular module with name fetch. it related to requests from API server. And i want to separate some methods, that looks stupid, but we using them in our work. 
+I think soon or later we should change the package name. Because npm has other popular module with name fetch. it related to requests from API server. And i want to separate some methods, that looks stupid, but we using them in our work.
 Separated files can have move popularity and can be used not just at JS projects.
 
 

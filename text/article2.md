@@ -11,7 +11,7 @@ And I actually forget about data, that our ML team member grabs before. Such sha
 
 Import 1500 ingredients inside grocery lists. We need to check for duplicates, because
 we have a few similar files aka ing.json, ings.json, ing1500.json.
-In the end, we should have filed with ingredients, but it should have intersections with GS, CK, Search at the same time.
+In the end, we should have file with ingredients, but it should have intersections with GS, CK, Search at the same time.
 We also need to remove stuff that we don't need. like unnecessary methods, files, etc. we should have one file? or not? debatable
 
 Import to Loopback -> current technology behind our servers(RAPI-CK, GS, Search )
