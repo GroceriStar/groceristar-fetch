@@ -1,31 +1,27 @@
 
+The reason why we have 3 files, related to our Grocery Lists.
 
-Причина по которой мы имеем 3 файла, для наших Grocery Lists.
 
-1) К этой структуре я пришел сам. Основная задача этой иерархии/организации файлов ->
-не только убрать необходимость на ранних этапах подключения к серверу, настраивать все необходимые настройки и права доступа.
+1) I create this structure on my own. First goal for this hierarhy(file organization) was need to import
+data into groceristar database. But in order to remove connection to our server, for different reasons, like applying all imortant settings, setup access token generation, granting access, etc...
 
-В дальнейшем эти файлы(раньше тоже) - мы будем использовать их в скрипте импорта данных в базу нашего сервера.
-Вот пример импорта из прошлого.
+All of this time GL are used as part of import script.
 
-Т.е. логика  такая
-пуста database - connected to main project /  production / 0 users
+So logic was:
 
--> we move our server to heroku hosting
-  -> run our import script that move static data into database.
-  -> then we can run our project
+0) empty database, that connected to main project / production / 0 custom users
+1) we deploying our server to Heroku hosting
+1.1) run our clean up script that drop all tables and data at our database
+1.2) run our import script that move static data into database
+1.3) we can run our project
+1.4) all pages renders well and calls without any issues.
 
-  all is renders and calls without any issues.
 
 
   ====
-
-  Вторая задача
-  является тестирование и создание базовых компонентов в React проектах.
-  Эти компоненты мы используем в 5-8 проектах и стааемся делать их таким образом, чтобы они были independent и работали
-  в стрессовых условиях.
-
-  это пока только желание, но мы стараемся к этому прийти.
+Second task.
+Testing and development of basic components in React projects.
+We have 5-10 different projects and use components between them. We trying to make that components works independently and work well at stressed environment as well. Right now it's a wish, but we're working hard on it.
 
 ====
 
