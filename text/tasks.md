@@ -1,5 +1,8 @@
 
 #### Unprocessed 'junk' - things that we should keep here.
+
+connect with https://github.com/GroceriStar/fetch-constants
+
 ---
 Tasks:
 - [ ] [Search Form static data](https://github.com/GroceriStar/static-data/issues/14)

@@ -117,7 +117,8 @@ set of constants that we'll use: https://github.com/GroceriStar/fetch-constants
 
 @TODO complete json validation at jsonlint.config.js right now i stuck with paths. And i'm on Windows and it's not an ideal conditions for package that works at unix systems
 
-
+Explore https://blog.usejournal.com/structurae-data-structures-for-high-performance-javascript-9b7da4c73f8
+https://github.com/zandaqo/structurae
 
 #### Contributors
 
