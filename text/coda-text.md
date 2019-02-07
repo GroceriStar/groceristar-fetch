@@ -18,61 +18,66 @@ So logic was:
 
 
 
-  ====
+====
+
 Second task.
 Testing and development of basic components in React projects.
 We have 5-10 different projects and use components between them. We trying to make that components works independently and work well at stressed environment as well. Right now it's a wish, but we're working hard on it.
 
 ====
 
-  Еще одна из задач: это упрощение логики работы скрипта импорта в базу данных.
-  До этого, раньше это был сложный процесс, а еще же нам надо предусмотреть то, что у нас есть graphQL сервер и в него тоже нужно будет делать импорт, когда мы уже откажемся от старой работы нашего сервера
+Just another task: simplifying logic of import at database.
+Before it was a complex thing. We need to be aware that we need import working with our old servers,
+but also we should prepare an updates, that will help with import, related to a new graphQL server.
+and we maybe will update our database totally, when we'll migrate to graphql.
+
+when our graphQL approach will work 100% i will be happy to remove our old import stuff.
+because we wouldn't need it at all.
 
 
-  Скрипт импорта предыдущий я тоже с радостью удалю. Он нам уже непонадобится.
-
-  Еще есть ML команда, которая тоже работает над тем, чтобы увеличить коллекцию наших
-  Grocery Lists и дальше они тоже будут добавленны в наш проект.
+We need to keep in mind that right now Machine Learning team working on increasing number of grocery lists.
+When they will finish it - our data will grow in 2-3x.
 
 
 
-  ===
+====
 
+At this time - our plugin generate an issue at builds of react projects, created with help of create-react-app boilerplate.
+Our new toolset will have a default setup of js libraries: babel, rollup.
+babel will help us to setup minification process and this will help us to avoid crashing at React projects.
 
-  Сказать что код этого плагина сейчас не ES6 и другие проекты изза этого делают ошибку в момент билда проекта и скорее
-  всего нам прийдется плагни переделывать под другой toolset, который позволит использовать babel,
-  который будет компилировать наш код и т.о. у нас заработает builds проектов - будет работать minifications
-  и перестанет происходить быть ошибка builds.
 
 ------
 
-if we move whole fetch plugin at ES6 version, we'll need to replace JSON files
+if we will move whole fetch plugin at ES6 version, we'll need to replace JSON files(only if we'll keep js code and files at the same plugin)
 into JS arrays, because JSON has issues with our babel builds before
 
-  -----
+-----
 So maybe whole idea, realted to split are good and maybe we should start it right away.
 
-  ----
+----
 
-Question, related to import, that should be raised too.
-  I want to develop simple, modular approach for import script (one table can be adjusted without breaking the whole import process)
-  approach для импорта.
+ Question, related to import, that should be raised too.
+  I want to develop a  simple, modular approach for import script (one table can be adjusted without breaking the whole import process)
 
-  Что нам надо(let's check the simple DB schema, that we have at GS)
+ What do we need to have for it?(let's check the simple DB schema, that we have at GS)
 
-  создаем - залили - добавили в базу записи о Grocery Lists ->
-   взяли все Departments, принадлежащие этому GL и добавили в базу(попутно проверяя эти Departments for duplicates)
-   (if duplicate -> avoid adding, but grabbing Dep Id of this field)
-   потому взяли все(смотреть схему тут) Ingredients(создаем или получаем их ID) ->
-   параллельно связывая Ingredients with Departments, которые были созданны
-
-
-  (можно как перебором по основной базе - long) или передать данные о Department IDS в функционал ---
-  создающую Ingredients.
+  Creating custom files - importing basic files without or with relations into db
+  then add rows, related to grocery lists, fetching all departments, related to one grocery list, add this departemnts to db
+  We can also check departments for duplicates. if it's a duplicate - we avoid adding it, but still need to relate department with groceryListId.
+  Then we grabbing all Ingredients(you can see it in details at our db schema)
+  Creating a new instances for Ingredients.
+  Create relations between ingredients and Departments, that was created before.
 
 
-  Также DepIDS нужно отправить и сохранить в нашей записи о GL(наверное обновив ее или сделать функции создания GL записи
-  await -> пока все данные не соберуться вместе).
+   We can do it with a simple loop , or we can make some sort of middleman, that will be responsible only of Department IDs, that was created in a custom way, that is helping with setting up relations at Ingredients.
+
+
+
+Same story with Department IDS and relation with grocery list.
+We need to save them at our GL. Maybe update preiously imported rows, or creating GL object after all manipulations...
+by await
+
 
   Data about Ingredients, using mongoDB Ingredients
 
