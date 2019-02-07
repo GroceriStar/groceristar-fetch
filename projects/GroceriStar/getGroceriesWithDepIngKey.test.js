@@ -91,3 +91,29 @@ describe("testing property ingredients in department", () => {
 
 
 })
+
+describe("testing ", () => {
+  var result = groceristar.getGroceriesWithDepIngKey();
+  test('testing groceryId is unique among groceryId(among other groceries), department id, ingredient id ', ()=>{
+    
+    result.forEach((mainGrocery) => {
+    let  groceryID = mainGrocery.groceryId;
+
+      result.forEach((grocery) =>{
+        if(grocery.name != mainGrocery.name){
+        expect(groceryID).not.toBe(grocery.groceryId)
+          }
+
+          grocery.departments.forEach((department) =>{
+            expect(groceryID).not.toBe(department.id)
+              department.ingredients.forEach((ingredient) => {
+                expect(groceryID).not.toBe(ingredient[0])
+              })
+        })
+
+
+      })
+    })
+
+  })
+})
