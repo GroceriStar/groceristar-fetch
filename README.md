@@ -83,43 +83,6 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 `npm test`
 
 ---
-https://github.com/americanexpress/jest-json-schema#tomatchschemaschema
-
-https://github.com/camsong/fetch-jsonp
-
-https://github.com/facebook/jest/blob/master/examples/module-mock/__tests__/full_mock.js
-
-
-code gen at `files`: create a hash map, similar that we have at search.js for returning all raw files.... it'll avoid issues with updating t by hands.
-
-create method that will `_.unite` all attributes into one file.
-as we need it...
-
-files have work with json5 spec: https://json5.org/
-
-install and use: https://github.com/jprichardson/node-jsonfile
-
-or
-
-https://github.com/sindresorhus/load-json-file
-
-https://github.com/sindresorhus/parse-json
-
-
-codegen of db with recipes. like we have a db-recipes and we actually convert the structure to match with our schema.
-but what if someone what to have a different scheme. for this case we can actually use graphql server that will return data in different ways. maybe we need to have a wizard, that will send updated query and by result we'll send a json file to user...
-
-check `node-csv`
-
-2nd generation of the plugin: https://github.com/GroceriStar/fetch2
-
-set of constants that we'll use: https://github.com/GroceriStar/fetch-constants
-
-@TODO complete json validation at jsonlint.config.js right now i stuck with paths. And i'm on Windows and it's not an ideal conditions for package that works at unix systems
-
-Explore https://blog.usejournal.com/structurae-data-structures-for-high-performance-javascript-9b7da4c73f8
-https://github.com/zandaqo/structurae
-
 #### Contributors
 
 @vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah

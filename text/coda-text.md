@@ -49,8 +49,8 @@
   и перестанет происходить быть ошибка builds.
 
 ------
- 
-if we move whole fetch plugin at ES6 version, we'll need to replace JSON files 
+
+if we move whole fetch plugin at ES6 version, we'll need to replace JSON files
 into JS arrays, because JSON has issues with our babel builds before
 
   -----
@@ -58,7 +58,7 @@ So maybe whole idea, realted to split are good and maybe we should start it righ
 
   ----
 
-Question, related to import, that should be rased too.
+Question, related to import, that should be raised too.
   I want to develop simple, modular approach for import script (one table can be adjusted without breaking the whole import process)
   approach для импорта.
 
@@ -77,13 +77,13 @@ Question, related to import, that should be rased too.
 
   Также DepIDS нужно отправить и сохранить в нашей записи о GL(наверное обновив ее или сделать функции создания GL записи
   await -> пока все данные не соберуться вместе).
-  
+
   Data about Ingredients, using mongoDB Ingredients
 
 
 ---
 
-I think soon or later we should change the package name. Because npm has other popular module with name fetch. it related to requests from API server. And i want to separate some methods, that looks stupid, but we using them in our work. 
+I think soon or later we should change the package name. Because npm has other popular module with name fetch. it related to requests from API server. And i want to separate some methods, that looks stupid, but we using them in our work.
 Separated files can have move popularity and can be used not just at JS projects.
 
 
