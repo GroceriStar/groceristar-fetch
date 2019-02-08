@@ -8,7 +8,7 @@ const users        = require('../../data/Users/users.json');
 const fs           = require('fs');
 
 
-const { parser }   = require('../../helper');
+const { parser, __l }   = require('../../helper');
 
 const groceristar = require('../GroceriStar/groceristar');
 const search      = require('../Search/search');
@@ -38,7 +38,7 @@ const search      = require('../Search/search');
 
 
 
-console.log(groceristar.getGroceriesWithDepIngKey())
+__l(groceristar.getGroceriesWithDepIngKey())
 
 
 

@@ -16,8 +16,13 @@ const pathToJson = function() {
   return path.dirname('./data/Allergy/allergies.json');
 };
 
+const __l = function( value ) {
+  return console.log( value );
+}
+
 module.exports = {
   parser,
   pathToJson,
-  sliceArray
+  sliceArray,
+  __l
 }
