@@ -18,6 +18,7 @@
     "jsonlint": "node jsonlint.config.js"
   },
   "devDependencies": {
+    "@groceristar/sd-wrapper": "^1.0.1",
     "coveralls": "^3.0.2",
     "jest": "^24.0.0",
     "jest-json-schema": "^2.0.1",

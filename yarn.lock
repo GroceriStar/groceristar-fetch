@@ -117,6 +117,13 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@groceristar/sd-wrapper@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.1.tgz#78382f66b8efa2297f1e65b599220003e6421aea"
+  integrity sha512-1rZls2EXBf0i8O0kiQSaQbnQoV44wbS285/9Tj4LuonYRnJaEV2d3kCPY6LUZ8PaxdDRYHVyack0JX4rT3144w==
+  dependencies:
+    uuid "^3.3.2"
+
 JSV@^4.0.x:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/JSV/-/JSV-4.0.2.tgz#d077f6825571f82132f9dffaed587b4029feff57"
