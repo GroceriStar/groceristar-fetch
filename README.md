@@ -78,8 +78,14 @@ import { groceristar, mealCalendar } from '@groceristar/groceristar-fetch'
 ```
 To Find out about all the functionality use https://groceristar.github.io/groceristar-fetch/.
 
+---
 
 https://github.com/0x80/yurnalist
+
+
+https://www.google.com/search?q=machine+learning+duplicate+detection
+
+---
 
 #### Tests
 
