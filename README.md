@@ -85,6 +85,16 @@ https://github.com/0x80/yurnalist
 
 https://www.google.com/search?q=machine+learning+duplicate+detection
 
+
+Explore tools that community has
+- https://github.com/jdorfman/awesome-json-datasets
+- https://exchangeratesapi.io/
+- https://github.com/burningtree/awesome-json
+- https://github.com/chrisdone/jl
+- https://github.com/konsultaner/jsonOdm
+- https://github.com/awesomedata/awesome-public-datasets
+- https://fixer.io/
+
 ---
 
 #### Tests
