@@ -80,10 +80,9 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 
 ---
 
-https://github.com/0x80/yurnalist
 
 
-https://www.google.com/search?q=machine+learning+duplicate+detection
+
 
 ---
 
