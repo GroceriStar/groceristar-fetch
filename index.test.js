@@ -3,7 +3,9 @@ const groceristar = require("./projects/GroceriStar/groceristar.js");
 const search      = require("./projects/Search/search.js");
 const showcase    = require("./projects/Showcase/showcase.js");
 
+
 describe("testing if methods inside the files are accessible from the outside", () => {
+  
   test("[ChickenKyiv] recipe file is set", () => {
     var stream = chickenKyiv.getRecipe();
     expect(stream).not.toBe("");
@@ -19,6 +21,13 @@ describe("testing if methods inside the files are accessible from the outside", 
     expect(stream).not.toBe("");
   });
 
+
+});
+
+
+
+describe('Groceristar methods check', () => {
+
   //@TODO format it later
   test("[Groceristar] departments file is set", () => {
     var stream = groceristar.getDepartments();
@@ -30,10 +39,14 @@ describe("testing if methods inside the files are accessible from the outside", 
     expect(data).not.toBe("");
   });
 
+});
+
+describe('Search Form methods check', () => {
 
   //@TODO format it later
   test('[Search Form] getAttribute("allergy")', () => {
     var stream = search.getAttribute("allergy");
     expect(stream).not.toBe("");
   });
+
 });

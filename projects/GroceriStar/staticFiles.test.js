@@ -2,7 +2,7 @@ const groceristar = require("./groceristar.js");
 
 const INGREDIENT_COUNT = 13634;
 const DEPARTMENT_COUNT = 58;
-const GROCERY_COUNT    = 14;
+const GROCERY_COUNT    = 28;
 const USER_COUNT       = 3;
 
 

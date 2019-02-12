@@ -10,6 +10,7 @@ const getGroceryShowcase = function() {
   //@TODO can we just merge together 2 arrays instead of adding this 2 values?
   //maybe it can be better
 
+  //@TODO can be replaced later when we'll have __.get methods
   let groceries = groceristar.getGrocery();
   // console.log(parsedGroceries);
 

@@ -3,10 +3,10 @@ const groceristar = require("./groceristar.js");
 // @TODO separate methods, related to different datasets.
 // So methods related to ingredients should have a
 // separated describe, with departments methods
-
+//
 const INGREDIENT_COUNT = 13634;
 const DEPARTMENT_COUNT = 58;
-const GROCERY_COUNT    = 8;
+const GROCERY_COUNT    = 28;
 const USER_COUNT       = 3;
 
 
@@ -87,12 +87,13 @@ describe("testing objects inside our static data files", () => {
      );
    });
 
-  test("array containing 'name','department'", () => {
+    test("array containing 'name','department'", () => {
       var result = groceristar.getIngredients();
       var keys = Object.keys(result[0]);
 
       expect(keys).toEqual(expect.arrayContaining(["name", "department"]));
     });
+
   });
 
 
@@ -148,6 +149,7 @@ describe("testing objects inside users", () => {
 
 })
 
+
 describe("testing objects inside departments", () => {
   test("each object have property 'name'", () =>{
     var result = groceristar.getDepartments();
@@ -183,101 +185,103 @@ describe("testing objects inside departments", () => {
 })
 
 describe("testing objects inside groceries", () => {
-    test("each object have property 'departments'", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(obj).toHaveProperty("departments");
-      })
-    })
 
-    test("each object have property 'id'", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(obj).toHaveProperty("id");
-      })
+  test("each object have property 'departments'", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(obj).toHaveProperty("departments");
     })
+  })
 
-    test("each object have property 'name'", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(obj).toHaveProperty("name");
-      })
+  test("each object have property 'id'", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(obj).toHaveProperty("id");
     })
+  })
 
-    test("each object have property 'img'", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(obj).toHaveProperty("img");
-      })
+  test("each object have property 'name'", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(obj).toHaveProperty("name");
     })
+  })
 
-    test("each object have property 'desc'", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(obj).toHaveProperty("desc");
-      })
+  test("each object have property 'img'", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(obj).toHaveProperty("img");
     })
+  })
 
-    test("each object have property 'slug'", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(obj).toHaveProperty("slug");
-      })
+  test("each object have property 'desc'", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(obj).toHaveProperty("desc");
     })
+  })
 
-    test("objects propery 'departments' have Array", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(Array.isArray(obj.departments)).toBe(true)
-      })
+  test("each object have property 'slug'", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(obj).toHaveProperty("slug");
     })
+  })
 
-    test("objects property 'id' is Number", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(obj).toMatchObject({
-          id: expect.any(Number)
-        })
-      })
+  test("objects propery 'departments' have Array", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(Array.isArray(obj.departments)).toBe(true)
     })
+  })
 
-    test("objects property 'name' is String", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(obj).toMatchObject({
-          name: expect.any(String)
-        })
+  test("objects property 'id' is Number", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(obj).toMatchObject({
+        id: expect.any(Number)
       })
     })
+  })
 
-    test("objects properties 'img' 'desc' 'slug' are boolean", () => {
-      var result = groceristar.getGrocery();
-      result.forEach((obj) => {
-        expect(obj).toMatchObject({
-          img: expect.any(Boolean),
-          desc: expect.any(Boolean),
-          slug: expect.any(Boolean)
-        })
+  test("objects property 'name' is String", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(obj).toMatchObject({
+        name: expect.any(String)
       })
     })
+  })
+
+  test("objects properties 'img' 'desc' 'slug' are boolean", () => {
+    var result = groceristar.getGrocery();
+    result.forEach((obj) => {
+      expect(obj).toMatchObject({
+        img: expect.any(Boolean),
+        desc: expect.any(Boolean),
+        slug: expect.any(Boolean)
+      })
+    })
+  })
+
 })
 
 describe("testing objects inside ingredients", () => {
-  test("each object have propery 'name'", ()=> {
+  test("each object have propery 'name'", () => {
     var result = groceristar.getIngredients();
      result.forEach((obj) => {
        expect(obj).toHaveProperty("name");
      })
   })
 
-  test("each object have propery 'department'", ()=> {
+  test("each object have propery 'department'", () => {
     var result = groceristar.getIngredients();
      result.forEach((obj) => {
        expect(obj).toHaveProperty("department");
      })
   })
 
-  test("objects propery values have String", ()=> {
+  test("objects propery values have String", () => {
     var result = groceristar.getIngredients();
     result.forEach((obj) => {
       expect(obj).toMatchObject({

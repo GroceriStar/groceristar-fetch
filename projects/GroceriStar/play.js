@@ -8,21 +8,23 @@ const users        = require('../../data/Users/users.json');
 const fs           = require('fs');
 
 
+const { parser, __l }   = require('../../helper');
+
 const groceristar = require('../GroceriStar/groceristar');
 const search      = require('../Search/search');
 
-
-const parser = function ( filename ){
-
-	return JSON.parse( JSON.stringify(filename) )
-
-}
+//
+// const parser = function ( filename ){
+//
+// 	return JSON.parse( JSON.stringify(filename) )
+//
+// }
 
 
 //can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
 // const count = function() {
 //
-// 	// console.log('ingredient ' +  _.size(departments) )
+
 // 	console.log('department ' +  _.size(departments) )
 // 	console.log('grocery '    +  _.size(groceries) )
 // 	console.log('users '      +  _.size(users) )
@@ -33,6 +35,14 @@ const parser = function ( filename ){
 // count();
 // -----
 
+
+
+
+__l(groceristar.getGroceriesWithDepIngKey())
+
+
+
+
 // console.log(groceristar.getAllIngredientsByOneDepartmentKey("Fresh vegetables"));
 // console.log(groceristar.getGroceryByNameWithDepAndIngKey("Ultimate Grocery List"));
 // console.log(groceristar.getGroceriesWithDepIngKey());
@@ -42,6 +52,10 @@ const parser = function ( filename ){
 
 // console.log(groceristar.getAllIngredientsList("Fresh vegetables"));
 
+// console.log(groceristar.getGroceriesWithDepIngKey());
+
+// console.log(groceristar.getAllIngredientsByOneDepartmentKey("Condiments / Sauces", "888383883"));
+// console.log(groceristar.getGroceriesWithDepIngKey());
 
 
 // getGroceryListsByDepartment = department => {

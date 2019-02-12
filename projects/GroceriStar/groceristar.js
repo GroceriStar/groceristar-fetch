@@ -26,6 +26,9 @@ const getDepartments = function() {
   return parser(departments)
 }
 
+
+
+
 const getGroceryById = function( id ) {
 
   let groceries = getGrocery();
@@ -55,7 +58,7 @@ const getGroceryByNameWithDepAndIng = function( name ) {
       //@TODO add let ingredients = const getAllIngredientsByOneDepartment(department)
 
       result.push({
-        "department": department,
+        "department" : department,
         "ingredients": getAllIngredientsByOneDepartment(department)
       });
     });
@@ -72,14 +75,9 @@ const getGroceriesWithDepIngKey = function(){
 
   let result = _.map(groceries, function(grocery) {
     //@TODO change variable name
-    let groceryDepIng = getGroceryByNameWithDepAndIngKey(grocery.name);
     // grocery.id = uuidv1();
     // grocery.departments = groceryDepIng;
-    return {
-      ...grocery,
-      id: uuidv1(),
-      departments: groceryDepIng,
-    }
+    return getGroceryByNameWithDepAndIngKey(grocery.name);
   });
 
   return result;
@@ -88,40 +86,63 @@ const getGroceriesWithDepIngKey = function(){
 const getGroceryByNameWithDepAndIngKey = function( name ) {
 
   let groceries = getGrocery();
-
+  let groceryId = uuidv1();
   let grocery = _.filter(groceries,
     item => {
       return item.name === name;
     });
 
   let result = [];
+  // @TODO this is not a clean turn around for this method
   grocery[0]["departments"].forEach(
     function(department) {
+      let departmentId = uuidv1();
+      let departmentType = "";
+      
+      //@TODO i don't like that we're searching for things by names, 
+      // we need to replace it later with separated methods that will assign items between files via id
+      let dep = _.find(getDepartments(), (o) => {
+        return o.name === department
+      });
 
-      let ingredients = getAllIngredientsByOneDepartmentKey(department)
+      if(dep != undefined){
+        departmentType = dep.type
+      }
+
+      let ingredients = getAllIngredientsByOneDepartmentKey( department, groceryId )
       result.push({
-        "id": uuidv1(),
-        "department": department,
+        "id": departmentId,
+        "name": department,
+        "type": departmentType,
         "ingredients": ingredients
       });
     });
 
-  return result;
+  return {
+    "name": name,
+    "groceryId": groceryId,
+    "messages": {},
+    "departments": result
+  };
 }
 
-const getAllIngredientsByOneDepartmentKey = function(department) {
+const getAllIngredientsByOneDepartmentKey = function(department, groceryId) {
   let ingredients = getIngredients();
 
+  // @TODO it looks like a separated method for me
   var ingredientsList =
     _.filter(ingredients, function(item) {
       return item.department === department;
     });
 
   return _.map(ingredientsList, item => {
-    return {
-      id:uuidv1(),
-      name: item.name,
-      };
+    let ingredientId = uuidv1();
+
+    return [
+      ingredientId,
+      item.name,
+      `/del/ing/${ingredientId}/${groceryId}`
+    ];
   });
 }
 
@@ -146,7 +167,7 @@ const getGroceryListsWithCountDepartments = function() {
 // i assume this cannot work, because we don't have groceries variable... @TODO
 const getAllDepartments = function() {
   const departments = [];
-  
+
   // @TODO this is an example what should be updated. loooooks so bad and unreadable
   _.forEach(_.range(0, groceries.length), value =>
     departments.push(..._.map(groceries[value]['departments']))
@@ -213,6 +234,7 @@ const getKeyArrayDepAndIng = function(){
 
 const getAllDepartmentList = function() {
   let departments = getDepartments();
+
   return _.map(departments, item => ({
     key: uuidv1(),
     departmentName: item
@@ -348,7 +370,6 @@ module.exports = {
   getAllIngredientsWithId,
   getKeyArrayDepAndIng,
   getAllDepartmentsWithId,
-  getCountIngOfDepartment
-
+  getCountIngOfDepartment,
 
 }
