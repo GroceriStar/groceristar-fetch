@@ -4,10 +4,18 @@ const uuidv1       = require('uuid/v1');
 
 const { parser }   = require('../../helper');
 
+
+
+
+
 const departments  = require('../../data/Departments/departments.json');
 let   groceries    = require('../../data/Grocery/grocery.json');
 const ingredients  = require('../../data/Ingredients/ingredients.json');
-const users        = require('../../data/Users/users.json');
+// const users        = require('../../data/Users/users.json');
+const users     = require('@groceristar/sd-wrapper/lib/data/Users/users.json');
+
+
+
 
 
 const getIngredients = function() {
@@ -98,8 +106,8 @@ const getGroceryByNameWithDepAndIngKey = function( name ) {
     function(department) {
       let departmentId = uuidv1();
       let departmentType = "";
-      
-      //@TODO i don't like that we're searching for things by names, 
+
+      //@TODO i don't like that we're searching for things by names,
       // we need to replace it later with separated methods that will assign items between files via id
       let dep = _.find(getDepartments(), (o) => {
         return o.name === department
