@@ -8,12 +8,13 @@ const { parser, sliceArray }   = require('../../helper');
 
 
 // const ingredients3 = require('../../data/Ingredients/ingredients3.json');
-const ingredients3     = require('@groceristar/sd-wrapper/lib/data/Ingredients/ingredients3.json');
+const ingredients3     =
+require('@groceristar/sd-wrapper/lib/data/Ingredients/ingredients3.json');
 // const ingredients  = require('../../data/Ingredients/ingredients.json');
 
 // const menus        = require('../../data/Menu/menu.json');
 // const recipes      = require('../../data/Recipe4/recipe.json');
-const menus     = require('@groceristar/sd-wrapper/lib/data/Menu/users.json');
+const menus     = require('@groceristar/sd-wrapper/lib/data/Menu/menu.json');
 const recipes   = require('@groceristar/sd-wrapper/lib/data/Recipe4/recipe.json');
 
 // const nutritions1  = require('../../data/Nutrition/nutritions1.json');
