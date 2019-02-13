@@ -82,7 +82,7 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 
 
 
-
+More uses for https://github.com/standard/standard
 
 
 Explore tools that community has
@@ -104,6 +104,8 @@ Explore tools that community has
 #### Contributors
 
 @vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah
+
+
 
 #### Credits
 
