@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "jest",
-    "test:prod":"standard && jest",
+    "test:prod": "standard && jest",
     "watch": "nodemon index.js",
     "play:g": "nodemon projects/GroceriStar/play.js",
     "play:s": "nodemon projects/Search/play.js",
@@ -20,7 +20,7 @@
     "code-fix": "standard --fix"
   },
   "devDependencies": {
-    "@groceristar/sd-wrapper": "^1.0.1",
+    "@groceristar/sd-wrapper": "^1.0.2",
     "coveralls": "^3.0.2",
     "jest": "^24.0.0",
     "jest-json-schema": "^2.0.1",
