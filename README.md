@@ -96,6 +96,17 @@ Explore tools that community has
 
 ---
 
+nodejs github automation stuff
+- https://github.com/GoogleCloudPlatform/nodejs-repo-tools or https://github.com/GoogleCloudPlatform/nodejs-repo-tools/blob/master/src/build_packs/nodejs.js
+- https://www.npmjs.com/package/download-git-repo !nice
+- https://www.npmjs.com/package/github-download
+- https://github.com/octokit/graphql.js
+-
+
+routes
+- https://octokit.github.io/routes/ https://github.com/octokit/routes
+
+
 #### Tests
 
 `npm test`
