@@ -8,15 +8,6 @@ const {
 
 
 
-// const allergies     = require('../../data/Allergy/allergies.json');
-
-// const courses       = require('../../data/Course/courses.json');
-// const cuisines      = require('../../data/Cuisine/cuisines.json');
-// const diets         = require('../../data/Diet/diets.json');
-// const holidays      = require('../../data/Holiday/holidays.json');
-// const ingredients1  = require('../../data/Ingredients/ingredients1.json');
-// const measurements  = require('../../data/Measurement/measurements.json');
-
 // yes it's bad, but it works, some sort of...
 //@TODO https://github.com/GroceriStar/sd/issues/3
 const allergies     = require('@groceristar/sd-wrapper/lib/data/Allergy/allergies.json');
@@ -26,11 +17,6 @@ const diets         = require('@groceristar/sd-wrapper/lib/data/Diet/diets.json'
 const holidays      = require('@groceristar/sd-wrapper/lib/data/Holiday/holidays.json');
 const ingredients1  = require('@groceristar/sd-wrapper/lib/data/Ingredients/ingredients1.json');
 const measurements  = require('@groceristar/sd-wrapper/lib/data/Measurement/measurements.json');
-
-
-
-
-
 
 
 
@@ -160,34 +146,11 @@ const getFormattedIngredients = function() {
   return proceedData( getIngredients() );
 }
 
-// for antD version of select field we should have a method that return values as this example
-// const options = [
-//   { value: 'chocolate',  label: 'Chocolate'},
-//   { value: 'strawberry', label: 'Strawberry'},
-//   { value: 'vanilla',    label: 'Vanilla'  },
-//   { value: 'vanilla-ice',    label: 'Vanilla Ice'},
-//   { value: 'vanilla latte',    label: 'Vanilla Latte'},
-//   { value: 'vanilla Chino',    label: 'Vanilla Chino'},
-//   { value: 'vanilla double',    label: 'Vanilla Double' }
-// ];
-// Note: let's discuss a a different ways to handle values.
-// we can keep it as in our example - but for some cases you'll need to have a function that will convert a label into a value.
-// or we can connect an key-generator and use it similar to read ID values.
-// Both options are ok for me.
 
 // @TODO check if this method will work fine with situation where we have disabled values.
 // @TODO check if this structure can be passed at React-Select module as well and
 // will it generate a working select or not - I assume no, but we should test it
 // we'll use it at recipe-search-react/SearchForm.js
-
-// how to test? getOptionsForSelectFieldV1('diets') or getOptionsForSelectFieldV1('holidays')
-const getOptionsForSelectFieldV1 = function(attribute) {
-  const data = getAttribute(attribute);
-  console.log(data);
-  //....
-}
-
-
 
 // toOpt is a method from react-select plugin
 // @TODO change name later and also buzz me - so we'll replace the name at our other sources....

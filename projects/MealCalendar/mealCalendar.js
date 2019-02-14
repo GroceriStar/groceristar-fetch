@@ -2,6 +2,10 @@ const { mealCalendar, firstVeganGLMC }  = require('./files');
 const _            = require('lodash');
 const { parser }   = require('../../helper');
 
+
+
+
+
 const getMealCalendar = function() {
   return parser(mealCalendar);
 }
@@ -9,6 +13,8 @@ const getMealCalendar = function() {
 const getFVGLMC = () => {
   return parser(firstVeganGLMC);
 }
+
+
 
 
 
