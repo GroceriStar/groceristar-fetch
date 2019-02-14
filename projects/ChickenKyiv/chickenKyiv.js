@@ -4,10 +4,6 @@ const dayjs        = require('dayjs');
 
 const { parser, sliceArray }   = require('../../helper');
 
-
-
-
-
 const getIngredients3 = function() {
   return parser(ingredients3)
 }
