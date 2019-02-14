@@ -229,7 +229,6 @@ module.exports = {
   getIngredients,
   getFormattedIngredients,
 
-  getOptionsForSelectFieldV1,
 
   toOpt,
   toOptAntD
