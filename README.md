@@ -107,6 +107,11 @@ routes
 - https://octokit.github.io/routes/ https://github.com/octokit/routes
 
 
+- install back standard. right now it generates an error
+```
+    "code-fix": "standard --fix"
+    ```
+
 #### Tests
 
 `npm test`
