@@ -4,10 +4,8 @@ const uuidv1       = require('uuid/v1');
 
 const { parser }   = require('../../helper');
 
-const departments  = require('../../data/Departments/departments.json');
-let   groceries    = require('../../data/Grocery/grocery.json');
-const ingredients  = require('../../data/Ingredients/ingredients.json');
-const users        = require('../../data/Users/users.json');
+const { departments, ingredients, users } = require('./files');
+let { groceries } = require('./files');
 
 const getIngredients = function() {
   return parser(ingredients)

@@ -5,13 +5,8 @@ const {
   parser, pathToJson
 }   = require('../../helper');
 
-const allergies     = require('../../data/Allergy/allergies.json');
-const courses       = require('../../data/Course/courses.json');
-const cuisines      = require('../../data/Cuisine/cuisines.json');
-const diets         = require('../../data/Diet/diets.json');
-const holidays      = require('../../data/Holiday/holidays.json');
-const ingredients1  = require('../../data/Ingredients/ingredients1.json');
-const measurements  = require('../../data/Measurement/measurements.json');
+
+const { allergies, courses, cuisines, diets, holidays, ingredients1, measurements } = require('./files');
 
 // @TODO why we name files as plurals but attributes as singular noun?
 // please advice
