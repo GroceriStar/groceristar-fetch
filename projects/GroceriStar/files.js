@@ -4,7 +4,7 @@ const departments =
 let groceries =
   require('@groceristar/sd-wrapper/lib/data/Grocery/grocery.json');
 
-const ingredients3 =
+const ingredients =
   require('@groceristar/sd-wrapper/lib/data/Ingredients/ingredients.json');
 
 const users =

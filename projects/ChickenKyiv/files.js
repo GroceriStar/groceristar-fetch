@@ -1,6 +1,5 @@
 const ingredients3 =
   require('@groceristar/sd-wrapper/lib/data/Ingredients/ingredients3.json');
-// const ingredients  = require('../../data/Ingredients/ingredients.json');
 
 const menus  =
   require('@groceristar/sd-wrapper/lib/data/Menu/menu.json');

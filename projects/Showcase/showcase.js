@@ -3,7 +3,7 @@ const fs           = require('fs');
 const uuidv1       = require('uuid/v1');
 const { parser }   = require('../../helper');
 
-const groceristar = require('./files');
+const { groceristar } = require('./files');
 
 
 const getGroceryShowcase = function() {
