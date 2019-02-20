@@ -27,6 +27,8 @@ Table of Contents
 
 #### Additional information
 [Introduction Article](https://medium.com/groceristar/groceristar-fetch-small-module-that-weve-created-8b4a62bd5d7b)
+[Second Article](https://medium.com/groceristar/food-static-data-plugin-list-of-big-steps-66265919df0f)
+[Third Article](https://medium.com/groceristar/static-food-data-plugin-transition-to-es6-559d0d941ec6)
 
 [Trello board with current tasks](https://trello.com/b/U2Jm8JWX/fetch-plugin)
 
