@@ -4,7 +4,11 @@ const uuidv1       = require('uuid/v1');
 
 const { parser }   = require('../../helper');
 
-const { ultimateGroceryList, groceryListWithUserRelations, dbIngredients} = require('./files');
+const {
+  ultimateGroceryList,
+  groceryListWithUserRelations,
+  dbIngredients
+} = require('./files');
 
 
 const getUltimateGrocery = function() {

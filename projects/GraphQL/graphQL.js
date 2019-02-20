@@ -6,7 +6,7 @@ const dayjs        = require('dayjs');
 const { parser, sliceArray }   = require('../../helper');
 
 
-const { groceristar, favorites, items, userGrocery} = require('./files');
+const { groceristar, favorites, items, userGrocery } = require('./files');
 
 
 //@TODO return measurements

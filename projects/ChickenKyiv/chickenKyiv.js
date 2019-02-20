@@ -4,7 +4,15 @@ const dayjs        = require('dayjs');
 
 const { parser, sliceArray }   = require('../../helper');
 
-const { ingredients3, menus, recipes, nutritions1, nutritions2, departments, users} = require('./files');
+const {
+  ingredients3,
+  menus,
+  recipes,
+  nutritions1,
+  nutritions2,
+  departments,
+  users 
+} = require('./files');
 
 const getIngredients3 = function() {
   return parser(ingredients3)

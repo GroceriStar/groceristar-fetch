@@ -117,10 +117,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@groceristar/sd-wrapper@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.5.tgz#d8361c2e8e77fd93cc09d79b3f8a00a131b9a66e"
-  integrity sha512-hlVKFUaEgc9+FwVAZqALYt9sTjU6K+9fzqiYIwC3I0gFRndAsEf9kb13ZBptSzEdY0KKptorSyJV/mFWiknkJg==
+"@groceristar/sd-wrapper@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.6.tgz#81a78c8b6051a244262a892bc75ddcd39bbf5c75"
+  integrity sha512-Po2VVhHbP43QJnddlcot81TSSq5QaCrRYxuycwEdq3XnO5rExh2+qx9+ei1/wHF+TDDECPlWDEUwEsJlz9L2pQ==
   dependencies:
     fs "^0.0.1-security"
     path "^0.12.7"
