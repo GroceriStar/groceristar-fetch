@@ -1,6 +1,7 @@
 const _            = require('lodash');
 const uuidv1       = require('uuid//v1');
 const dayjs        = require('dayjs');
+const {getAllIngredientsWithId} = require ('../GroceriStar/groceristar')
 
 const { parser, sliceArray }   = require('../../helper');
 
@@ -11,7 +12,7 @@ const {
   nutritions1,
   nutritions2,
   departments,
-  users 
+  users
 } = require('./files');
 
 const getIngredients3 = function() {
@@ -44,8 +45,39 @@ const getUsers = function() {
   return parser(users)
 }
 
+const getIdFiveIngredients = function(ingredients, index){
+  if(index >= ingredients.length){
+    console.log("index >= ingredients length");
+    index = index-15;
+  }
+  let fiveIngredients = ingredients.slice(index, (index+5))
+  // console.log(fiveIngredients);
+  let arrWithIngredientId = _.map(fiveIngredients, (ingredient) =>{
+    return ingredient.key
 
+  })
+  // console.log(arrWithIngredientId);
+  return arrWithIngredientId;
+}
 
+const getAllRecipes = function(){
+  let recipes = getRecipe();
+  let ingredients = getAllIngredientsWithId();
+
+  let result =
+      _.map(recipes, (recipe, index) => {
+        let ingredientsId = getIdFiveIngredients(ingredients, index);
+        // console.log(ingredientsId);
+        return {
+          ...recipe,
+          created_at: Date(),
+          updated_at: Date(),
+          id: uuidv1(),
+          ingredients: ingredientsId
+        }
+      })
+    return result;
+}
 
 //@TODO delete file menu.json from main set of files, but create a note at some place,
 // that Menu file is no longer needed because we replace it with fake data. you can use method ABC in order to generate that data.
@@ -150,5 +182,6 @@ module.exports = {
   getMenuGenerator,
 
   getDepartments,
-  getUsers
+  getUsers,
+  getAllRecipes
 }
