@@ -60,9 +60,16 @@ const getIdFiveIngredients = function(ingredients, index){
   return arrWithIngredientId;
 }
 
+const getFiveRandomId = function(){
+  return [uuidv1(),uuidv1(),
+          uuidv1(),uuidv1(),
+          uuidv1()]
+}
+
 const getAllRecipes = function(){
   let recipes = getRecipe();
   let ingredients = getAllIngredientsWithId();
+  let randomFiveIds = getFiveRandomId()
 
   let result =
       _.map(recipes, (recipe, index) => {
@@ -73,7 +80,12 @@ const getAllRecipes = function(){
           created_at: Date(),
           updated_at: Date(),
           id: uuidv1(),
-          ingredients: ingredientsId
+          ingredients: ingredientsId,
+          diets: randomFiveIds,
+          courses: randomFiveIds,
+          cuisines: randomFiveIds,
+          holidays: randomFiveIds,
+          nutritions:randomFiveIds
         }
       })
     return result;
