@@ -1,7 +1,6 @@
 const _            = require('lodash');
 const uuidv1       = require('uuid//v1');
 const dayjs        = require('dayjs');
-const {getAllIngredientsWithId} = require ('../GroceriStar/groceristar')
 
 const { parser, sliceArray }   = require('../../helper');
 
@@ -45,20 +44,6 @@ const getUsers = function() {
   return parser(users)
 }
 
-const getIdFiveIngredients = function(ingredients, index){
-  if(index >= ingredients.length){
-    console.log("index >= ingredients length");
-    index = index-15;
-  }
-  let fiveIngredients = ingredients.slice(index, (index+5))
-  // console.log(fiveIngredients);
-  let arrWithIngredientId = _.map(fiveIngredients, (ingredient) =>{
-    return ingredient.key
-
-  })
-  // console.log(arrWithIngredientId);
-  return arrWithIngredientId;
-}
 
 const getFiveRandomId = function(){
   return [uuidv1(),uuidv1(),
@@ -66,21 +51,19 @@ const getFiveRandomId = function(){
           uuidv1()]
 }
 
-const getAllRecipes = function(){
+const getRecipes = function(){
   let recipes = getRecipe();
-  let ingredients = getAllIngredientsWithId();
   let randomFiveIds = getFiveRandomId()
 
   let result =
       _.map(recipes, (recipe, index) => {
-        let ingredientsId = getIdFiveIngredients(ingredients, index);
         // console.log(ingredientsId);
         return {
           ...recipe,
           created_at: Date(),
           updated_at: Date(),
           id: uuidv1(),
-          ingredients: ingredientsId,
+          ingredients: randomFiveIds,
           diets: randomFiveIds,
           courses: randomFiveIds,
           cuisines: randomFiveIds,
@@ -195,5 +178,5 @@ module.exports = {
 
   getDepartments,
   getUsers,
-  getAllRecipes
+  getRecipes
 }

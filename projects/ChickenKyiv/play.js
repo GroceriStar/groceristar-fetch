@@ -12,7 +12,7 @@ const chickenKyiv  = require('../ChickenKyiv/chickenKyiv');
 // console.log( count(chickenKyiv.getRecipes()) );
 // console.log( chickenKyiv.getNRecipes(6) );
 
-console.log(chickenKyiv.getAllRecipes());
+console.log(chickenKyiv.getRecipes());
 // console.log(chickenKyiv.getMenuGenerator(5))
 // console.log( chickenKyiv.getRandomRecipe() );
 
