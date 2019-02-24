@@ -27,6 +27,7 @@
     "nodemon": "^1.17.5",
     "path": "^0.12.7",
     "shelljs": "^0.8.3",
+    "shx": "^0.3.2",
     "travis": "^0.1.1"
   },
   "dependencies": {
