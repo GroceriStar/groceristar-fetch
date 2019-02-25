@@ -16,14 +16,12 @@
     "play:l": "nodemon projects/GS-loopback/play.js",
     "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest projects/GroceriStar/staticFiles.test.js",
     "test:big": "jest projects/GroceriStar/getGroceriesWithDepIngKey.test.js",
-    "jsonlint": "node jsonlint.config.js",
     "code-fix": "standard --fix"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
     "jest": "^24.0.0",
     "jest-json-schema": "^2.0.1",
-    "jsonlint": "^1.6.3",
     "nodemon": "^1.17.5",
     "path": "^0.12.7",
     "shelljs": "^0.8.3",
@@ -31,7 +29,7 @@
     "travis": "^0.1.1"
   },
   "dependencies": {
-    "@groceristar/sd-wrapper": "^1.0.6",
+    "@groceristar/sd-wrapper": "^1.0.7",
     "dayjs": "^1.8.0",
     "fs": "0.0.2",
     "lodash": "^4.17.10",
