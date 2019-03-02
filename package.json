@@ -2,29 +2,27 @@
   "name": "@groceristar/groceristar-fetch",
   "version": "1.2.8",
   "description": "npm module required to fetch static data required for recipe search",
-  "main": "index.js",
+  "main": "src/index.js",
   "engines": {
     "node": ">9.0"
   },
   "scripts": {
     "test": "jest",
     "test:prod": "standard && jest",
-    "watch": "nodemon index.js",
-    "play:g": "nodemon projects/GroceriStar/play.js",
-    "play:s": "nodemon projects/Search/play.js",
-    "play:r": "nodemon projects/ChickenKyiv/play.js",
-    "play:l": "nodemon projects/GS-loopback/play.js",
-    "test:gs": "jest projects/GroceriStar/groceristar.test.js && jest projects/GroceriStar/staticFiles.test.js",
-    "test:big": "jest projects/GroceriStar/getGroceriesWithDepIngKey.test.js",
+    "watch": "nodemon src/index.js",
+    "play:g": "nodemon src/projects/GroceriStar/play.js",
+    "play:s": "nodemon src/projects/Search/play.js",
+    "play:r": "nodemon src/projects/ChickenKyiv/play.js",
+    "play:l": "nodemon src/projects/GS-loopback/play.js",
+    "test:gs": "jest src/projects/GroceriStar/groceristar.test.js && jest src/projects/GroceriStar/staticFiles.test.js",
+    "test:big": "jest src/projects/GroceriStar/getGroceriesWithDepIngKey.test.js",
     "code-fix": "standard --fix"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
-    "jest": "^24.0.0",
-    "jest-json-schema": "^2.0.1",
+    "jest": "^24.1.0",
     "nodemon": "^1.17.5",
     "path": "^0.12.7",
-    "shelljs": "^0.8.3",
     "shx": "^0.3.2",
     "travis": "^0.1.1"
   },
@@ -37,13 +35,11 @@
     "uuid": "3.3.2"
   },
   "files": [
-    "/data",
-    "/Import",
-    "/projects",
-    "/helper.js",
-    "/index.js",
-    "/index.test.js",
-    "/jsonlint.config.js"
+    "/src/Import",
+    "/src/projects",
+    "/src/helper.js",
+    "/src/index.js",
+    "/src/index.test.js"
   ],
   "repository": {
     "type": "git",
