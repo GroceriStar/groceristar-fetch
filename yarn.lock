@@ -118,9 +118,9 @@
     to-fast-properties "^2.0.0"
 
 "@groceristar/sd-wrapper@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.7.tgz#7ff4361810f64bbf04504f5608f7db4ccde289ae"
-  integrity sha512-Hpy/wnVfHFpeTvyLXfkgC8UDtpVEooFNvB/C4Jv+MIe9LUkRzTHfJudPw0c0uiZtLCfkuU6iEjos+IXwAmryPw==
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.9.tgz#6ad2531ea6e72d7549dc24a6773ff0e5897eb7dd"
+  integrity sha512-4kJu7s8QHdKZTS28wMD+WCn+aw+WoIYauWQmzcKysGD3L9QfZVznf44pJ5BON4/QfafcBKuDUMDIXRG9NtukSA==
   dependencies:
     fs "^0.0.1-security"
     path "^0.12.7"
