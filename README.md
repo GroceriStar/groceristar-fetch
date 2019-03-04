@@ -89,13 +89,18 @@ More uses for https://github.com/standard/standard
 
 
 Explore tools that community has
-- https://github.com/jdorfman/awesome-json-datasets
-- https://exchangeratesapi.io/
+
+
 - https://github.com/burningtree/awesome-json
 - https://github.com/chrisdone/jl
 - https://github.com/konsultaner/jsonOdm
+
+
+
+- https://github.com/jdorfman/awesome-json-datasets
 - https://github.com/awesomedata/awesome-public-datasets
 - https://fixer.io/
+- https://exchangeratesapi.io/
 
 ---
 
@@ -112,14 +117,19 @@ routes
 
 - install back standard. right now it generates an error
 ```
-    "code-fix": "standard --fix"
-    ```
+  "code-fix": "standard --fix"
+```
+
+---
 
 #### Tests
 
-`npm test`
+```
+npm test
+```
 
 ---
+
 #### Contributors
 
 @vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah
