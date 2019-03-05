@@ -30,6 +30,7 @@ Table of Contents
 - [Second Article](https://medium.com/groceristar/food-static-data-plugin-list-of-big-steps-66265919df0f)
 - [Third Article](https://medium.com/groceristar/static-food-data-plugin-transition-to-es6-559d0d941ec6)
 - [Fourth Article](https://medium.com/groceristar/static-food-data-third-part-structu-615c39dcf328)
+- [Fifth Article](https://medium.com/groceristar/moving-out-static-food-json-files-e27f8cba003)
 
 [Trello board with current tasks](https://trello.com/b/U2Jm8JWX/fetch-plugin)
 
@@ -84,12 +85,11 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 ---
 
 
-
-More uses for https://github.com/standard/standard
+Tasks: 
+- More uses of module https://github.com/standard/standard
 
 
 Explore tools that community has
-
 
 - https://github.com/burningtree/awesome-json
 - https://github.com/chrisdone/jl
@@ -104,7 +104,7 @@ Explore tools that community has
 
 ---
 
-nodejs github automation stuff
+#### nodejs github automation stuff
 - https://github.com/GoogleCloudPlatform/nodejs-repo-tools or https://github.com/GoogleCloudPlatform/nodejs-repo-tools/blob/master/src/build_packs/nodejs.js
 - https://www.npmjs.com/package/download-git-repo !nice
 - https://www.npmjs.com/package/github-download
@@ -135,15 +135,15 @@ npm test
 @vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah
 
 
+List of plugins related to this universe:
+- https://github.com/GroceriStar/static-data
 
-https://github.com/GroceriStar/static-data
+- https://github.com/atherdon/botkit-my-slack/blob/master/data/main_array.js
 
-https://github.com/atherdon/botkit-my-slack/blob/master/data/main_array.js
+- https://github.com/GroceriStar/groceristar-fetch
 
-https://github.com/GroceriStar/groceristar-fetch
-
-https://github.com/GroceriStar/static-data-website
-
+- https://github.com/GroceriStar/static-data-website
+- https://github.com/GroceriStar/sd/
 
 https://github.com/sheerun/babel-plugin-file-loader
 
