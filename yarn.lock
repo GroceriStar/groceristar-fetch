@@ -118,9 +118,9 @@
     to-fast-properties "^2.0.0"
 
 "@groceristar/sd-wrapper@^1.0.7":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.9.tgz#6ad2531ea6e72d7549dc24a6773ff0e5897eb7dd"
-  integrity sha512-4kJu7s8QHdKZTS28wMD+WCn+aw+WoIYauWQmzcKysGD3L9QfZVznf44pJ5BON4/QfafcBKuDUMDIXRG9NtukSA==
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.10.tgz#3ff3198e3ebef5ca079ce32827f68692603d6038"
+  integrity sha512-K9ii7kCZ63Y1uCET3SZItM7iR5J8Rht6YiioEZ/JsRsmncjMieVtWAsts8hS4G9OZ4cl0pVhSCwTARXgS38+LQ==
   dependencies:
     fs "^0.0.1-security"
     path "^0.12.7"
@@ -144,7 +144,7 @@ acorn@^5.0.0, acorn@^5.3.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.1.tgz#f095829297706a7c9776958c0afc8930a9b9d9d8"
 
-ajv@^6.5.2, ajv@^6.5.5:
+ajv@^6.5.5:
   version "6.9.1"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.9.1.tgz#a4d3683d74abc5670e75f0b16520f70a20ea8dc1"
   integrity sha512-XDN92U311aINL77ieWHmqCcNlwjoP5cHXDxIxbf2MaPYuCXOHS7gHH8jktxeK5omgd52XbSTX6a4Piwd1pQmzA==
@@ -438,7 +438,7 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.4.1, chalk@^2.4.2:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   dependencies:
@@ -1707,15 +1707,6 @@ jest-jasmine2@^24.1.0:
     pretty-format "^24.0.0"
     throat "^4.0.0"
 
-jest-json-schema@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/jest-json-schema/-/jest-json-schema-2.0.2.tgz#f829089e0fb42deecaeb1770f4e83a8fb3404a2f"
-  integrity sha512-IixcmM2rsw6AlXtQnJZcQXcShQiCE27XSyjN/HjNrpxTdmjaoiMNGtZ03IeZ3cnBunEl3Gdz9uZM18NdNjyaXA==
-  dependencies:
-    ajv "^6.5.2"
-    chalk "^2.4.1"
-    jest-matcher-utils "^24.0.0"
-
 jest-leak-detector@^24.0.0:
   version "24.0.0"
   resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-24.0.0.tgz#78280119fd05ee98317daee62cddb3aa537a31c6"
@@ -1873,7 +1864,7 @@ jest-worker@^24.0.0:
     merge-stream "^1.0.1"
     supports-color "^6.1.0"
 
-jest@^24.0.0:
+jest@^24.1.0:
   version "24.1.0"
   resolved "https://registry.yarnpkg.com/jest/-/jest-24.1.0.tgz#b1e1135caefcf2397950ecf7f90e395fde866fd2"
   integrity sha512-+q91L65kypqklvlRFfXfdzUKyngQLOcwGhXQaLmVHv+d09LkNXuBuGxlofTFW42XMzu3giIcChchTsCNUjQ78A==
@@ -2897,7 +2888,7 @@ shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
-shelljs@^0.8.1, shelljs@^0.8.3:
+shelljs@^0.8.1:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.8.3.tgz#a7f3319520ebf09ee81275b2368adb286659b097"
   integrity sha512-fc0BKlAWiLpwZljmOvAOTE/gXawtCoNrP5oaY7KIaQbbyHeQVg01pSEuEGvGh3HEdBU4baCD7wQBwADmM/7f7A==
