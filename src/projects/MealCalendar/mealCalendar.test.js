@@ -1,17 +1,15 @@
-const mealCalendarMethods = require('./mealCalendar.js');
+const mealCalendarMethods = require('./mealCalendar.js')
 
-const { mealCalendar }  = require('./files');
+const { mealCalendar } = require('./files')
 
 describe('Meal Calendar. basic methods should work', () => {
-
-
   test('getDishByDay', () => {
     var result = mealCalendarMethods.getDishByDay('Monday')
     expect(result).not.toBe('')
   })
 
   test('getDishByWeek', () => {
-    //@TODO maybe we can remove include from files...
+    // @TODO maybe we can remove include from files...
     mealCalendar.map(meal => {
       var result = mealCalendarMethods.getDishByWeek(meal.id)
       expect(result).not.toBe('')
@@ -24,5 +22,4 @@ describe('Meal Calendar. basic methods should work', () => {
       expect(result).not.toBe('')
     }
   })
-
 })

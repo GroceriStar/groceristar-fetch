@@ -12,24 +12,22 @@
 //   'Recipe'
 // ];
 
-const migrateFunc = ( server, db_name, lbTables ) => {
+const migrateFunc = (server, db_name, lbTables) => {
+  var database = server.datasources[db_name]
 
-  var database = server.datasources[db_name];
+  // creating loopback necessary tables if no exists
+  database.automigrate(lbTables, function (err) {
+    if (err) throw err
 
-  //creating loopback necessary tables if no exists
-  database.automigrate(lbTables, function(err) {
-    if (err) throw err;
-
-    console.log( 'Loopback tables [' + lbTables.toString() + '] created in ' + database.adapter.name );
-    database.disconnect();
+    console.log('Loopback tables [' + lbTables.toString() + '] created in ' + database.adapter.name)
+    database.disconnect()
 
     // @TODO we can add something here - if we need this additional message...
     // process.on('exit', function(code) {
     // 	return console.log(`Automigrate is competed`);
     // });
     // process.exit(22);
-  });
-
+  })
 }
 
 module.exports = {

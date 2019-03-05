@@ -1,17 +1,17 @@
-const _            = require('lodash');
+const _ = require('lodash')
 
-const groceristar  = require('../GroceriStar/groceristar');
-const search       = require('../Search/search');
+const groceristar = require('../GroceriStar/groceristar')
+const search = require('../Search/search')
 
 const options = [
-  { value: 'chocolate',  label: 'Chocolate'},
-  { value: 'strawberry', label: 'Strawberry'},
-  { value: 'vanilla',    label: 'Vanilla'  },
-  { value: 'vanilla-ice',    label: 'Vanilla Ice'},
-  { value: 'vanilla latte',    label: 'Vanilla Latte'},
-  { value: 'vanilla Chino',    label: 'Vanilla Chino'},
-  { value: 'vanilla double',    label: 'Vanilla Double' }
-];
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' },
+  { value: 'vanilla-ice', label: 'Vanilla Ice' },
+  { value: 'vanilla latte', label: 'Vanilla Latte' },
+  { value: 'vanilla Chino', label: 'Vanilla Chino' },
+  { value: 'vanilla double', label: 'Vanilla Double' }
+]
 
 // const options = [
 //   { value: 'chocolate',  label: 'Chocolate', disabled: true},
@@ -23,16 +23,11 @@ const options = [
 //   { value: 'vanilla double',    label: 'Vanilla Double', disabled: false }
 // ];
 
-
 // const data = search.getFormattedIngredients();
 
 // const data = search.getFormattedAttributes('diets');
-const data = search.getFormattedAttributes('allergies');
-console.log(data);
-
-
-
-
+const data = search.getFormattedAttributes('allergies')
+console.log(data)
 
 // console.log(search.toOpt(options));
 // console.log(search.toOpt(data));

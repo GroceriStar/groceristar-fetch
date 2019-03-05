@@ -1,7 +1,6 @@
-const loopback = require("./loopback.js");
+const loopback = require('./loopback.js')
 
-describe("testing static data files returns array", () => {
-
+describe('testing static data files returns array', () => {
   test('getUltimateGrocery method should return some data', () => {
     var result = loopback.getUltimateGrocery()
     expect(result).not.toBe('')
@@ -16,5 +15,4 @@ describe("testing static data files returns array", () => {
     var result = loopback.getIngredientsSampleFromDB()
     expect(result).not.toBe('')
   })
-
 })

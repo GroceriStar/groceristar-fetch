@@ -1,16 +1,15 @@
-const _             = require('lodash');
-const uuidv1        = require('uuid/v1');
-const path          = require('path');
+const _ = require('lodash')
+const uuidv1 = require('uuid/v1')
+const path = require('path')
 const {
   parser, pathToJson
-}   = require('../../helper');
+} = require('../../helper')
 
-
-const { allergies, courses, cuisines, diets, holidays, ingredients1, measurements } = require('./files');
+const { allergies, courses, cuisines, diets, holidays, ingredients1, measurements } = require('./files')
 
 // @TODO why we name files as plurals but attributes as singular noun?
 // please advice
-const getRawFiles = function() {
+const getRawFiles = function () {
   return {
     'allergy': allergies,
     'course': courses,
@@ -26,79 +25,71 @@ const getRawFiles = function() {
 // first of all lodash has _.get method.
 // second - this method is not good, and it should be used only inside the plugin
 // @TODO update/change it later, when we'll separate files with business logic.
-const __get = ( alias ) => {
-  const files  = getRawFiles();
-  const result = files[alias];
-  return parser(result);
+const __get = (alias) => {
+  const files = getRawFiles()
+  const result = files[alias]
+  return parser(result)
 }
-
-
-
-
-
 
 // we got this array [ one, two, three ]
 // return [ { label: one, value:one } ]
 const proceedData = (array) => {
   const result = _.map(array, item => ({
-      label: item,
-      value: _.camelCase(item)
+    label: item,
+    value: _.camelCase(item)
   }))
-  return result;
+  return result
 }
 
 // return data, related to recipe attributes by name of attribute(read category of meal)
 // maybe it's better to name it getAttributeData....
-const getAttribute = function(attribute) {
+const getAttribute = function (attribute) {
   switch (attribute) {
     case 'allergies':
-      return parser(allergies);
-      break;
+      return parser(allergies)
+      break
     case 'cuisines':
-      return parser(cuisines);
-      break;
+      return parser(cuisines)
+      break
     case 'courses':
-      return parser(courses);
-      break;
+      return parser(courses)
+      break
     case 'holidays':
-      return parser(holidays);
-      break;
+      return parser(holidays)
+      break
     case 'diets':
-      return parser(diets);
-      break;
+      return parser(diets)
+      break
 
     default:
-      return "Incorrect attribute or empty argument";
-
+      return 'Incorrect attribute or empty argument'
   }
 }
 
-const getFormattedAttributes = function(attribute) {
-  return proceedData( getAttribute(attribute) );
+const getFormattedAttributes = function (attribute) {
+  return proceedData(getAttribute(attribute))
 }
 
-
-const getPlaceholder = function(attribute, flag = false) {
+const getPlaceholder = function (attribute, flag = false) {
   if (attribute == 'allergy') {
-    return "Allergies";
+    return 'Allergies'
   }
   if (attribute == 'diets') {
-    return "Specific Diets";
+    return 'Specific Diets'
   }
   if (attribute == 'cuisine') {
-    return "Specific Cuisine ";
+    return 'Specific Cuisine '
   }
   if (attribute == 'course') {
-    return "Course";
+    return 'Course'
   }
   if (attribute == 'holidays') {
-    return "Holiday";
+    return 'Holiday'
   }
   // case for ingredients, not for attributes...
   if (attribute == 'ingredient') {
-    return (flag) ? "Ingredients you have" : "Ingredients you don't have";
+    return (flag) ? 'Ingredients you have' : "Ingredients you don't have"
   }
-
 
   // @TODO use this instead of ifs
   // switch (attribute) {
@@ -120,19 +111,16 @@ const getPlaceholder = function(attribute, flag = false) {
   //
   //   default: return "Incorrect attribute or empty argument";
   // }
-
 }
 
 // this method can have a duplicates..... related to another project
-const  getIngredients = function() {
+const getIngredients = function () {
   return parser(ingredients1)
 }
 
-
-const getFormattedIngredients = function() {
-  return proceedData( getIngredients() );
+const getFormattedIngredients = function () {
+  return proceedData(getIngredients())
 }
-
 
 // @TODO check if this method will work fine with situation where we have disabled values.
 // @TODO check if this structure can be passed at React-Select module as well and
@@ -142,13 +130,10 @@ const getFormattedIngredients = function() {
 // toOpt is a method from react-select plugin
 // @TODO change name later and also buzz me - so we'll replace the name at our other sources....
 // i like this name - Prepare Data for Select Field
-const toOpt = function(data) {
-
+const toOpt = function (data) {
   // console.log('react-select case');
 
-
   if (_.isArray(data)) {
-
     const result = _.map(data, ({
       value,
       label,
@@ -157,17 +142,15 @@ const toOpt = function(data) {
       key: uuidv1(),
       value,
       label,
-      disabled: (disabled) ? disabled : false
+      disabled: (disabled) || false
     }))
 
-    return result;
+    return result
   }
 
   // for cases with issues.
-  return [];
+  return []
 }
-
-
 
 // similar to previous method, but we have this structure.
 // i think it's better to split it into 2 methods and don't f**k with brain
@@ -176,9 +159,7 @@ const toOpt = function(data) {
 const toOptAntD = (data) => {
   // console.log('antD case');
 
-
   if (_.isArray(data)) {
-
     // const a = _.map(data, item => {
     //   console.log(item);
     // })
@@ -191,22 +172,20 @@ const toOptAntD = (data) => {
       key: uuidv1(),
       value,
       label,
-      isDisabled: (disabled) ? disabled : false
+      isDisabled: (disabled) || false
     }))
 
-    return result;
+    return result
     // return 0;
   }
 
   // for cases with issues.
-  return [];
+  return []
 }
-
 
 module.exports = {
   getRawFiles,
   __get,
-
 
   pathToJson,
   proceedData,
@@ -215,7 +194,6 @@ module.exports = {
   getPlaceholder,
   getIngredients,
   getFormattedIngredients,
-
 
   toOpt,
   toOptAntD

@@ -1,207 +1,198 @@
-const _            = require('lodash');
-const fs           = require('fs');
-const uuidv1       = require('uuid/v1');
+const _ = require('lodash')
+const fs = require('fs')
+const uuidv1 = require('uuid/v1')
 
-const { parser }   = require('../../helper');
+const { parser } = require('../../helper')
 
-const { departments, ingredients, users } = require('./files');
+const { departments, ingredients, users } = require('./files')
 
-let { groceries } = require('./files');
+let { groceries } = require('./files')
 
-const getIngredients = function() {
+const getIngredients = function () {
   return parser(ingredients)
 }
 
-const getGrocery = function() {
+const getGrocery = function () {
   return parser(groceries)
 }
 
-const getUsers = function() {
+const getUsers = function () {
   return parser(users)
 }
 
-const getDepartments = function() {
+const getDepartments = function () {
   return parser(departments)
 }
 
+const getGroceryById = function (id) {
+  let groceries = getGrocery()
+  return [ _.find(groceries, ['id', id]) ]
+}
 
+const getGroceryByName = function (name) {
+  let groceries = getGrocery()
 
-
-const getGroceryById = function( id ) {
-
-  let groceries = getGrocery();
-  return [ _.find(groceries, ['id', id]) ];
-};
-
-const getGroceryByName = function(name) {
-  let groceries = getGrocery();
-
-  return _.filter(groceries, function(item) {
-    return item.name === name;
+  return _.filter(groceries, function (item) {
+    return item.name === name
   })
 }
 
-const getGroceryByNameWithDepAndIng = function( name ) {
-  let groceries = getGrocery();
+const getGroceryByNameWithDepAndIng = function (name) {
+  let groceries = getGrocery()
 
   let grocery = _.filter(groceries,
     item => {
-      return item.name === name;
-    });
+      return item.name === name
+    })
 
-  let result = [];
-  grocery[0]["departments"].forEach(
-    function(department) {
-
-      //@TODO add let ingredients = const getAllIngredientsByOneDepartment(department)
+  let result = []
+  grocery[0]['departments'].forEach(
+    function (department) {
+      // @TODO add let ingredients = const getAllIngredientsByOneDepartment(department)
 
       result.push({
-        "department" : department,
-        "ingredients": getAllIngredientsByOneDepartment(department)
-      });
-    });
-  return result;
+        'department': department,
+        'ingredients': getAllIngredientsByOneDepartment(department)
+      })
+    })
+  return result
 }
-
-
 
 // Where we're using this methods?
 // -----------------------------------
 
-const getGroceriesWithDepIngKey = function(){
-  let groceries = getGrocery();
+const getGroceriesWithDepIngKey = function () {
+  let groceries = getGrocery()
 
-  let result = _.map(groceries, function(grocery) {
-    //@TODO change variable name
+  let result = _.map(groceries, function (grocery) {
+    // @TODO change variable name
     // grocery.id = uuidv1();
     // grocery.departments = groceryDepIng;
-    return getGroceryByNameWithDepAndIngKey(grocery.name);
-  });
+    return getGroceryByNameWithDepAndIngKey(grocery.name)
+  })
 
-  return result;
+  return result
 }
 
-const getGroceryByNameWithDepAndIngKey = function( name ) {
-
-  let groceries = getGrocery();
-  let groceryId = uuidv1();
+const getGroceryByNameWithDepAndIngKey = function (name) {
+  let groceries = getGrocery()
+  let groceryId = uuidv1()
   let grocery = _.filter(groceries,
     item => {
-      return item.name === name;
-    });
+      return item.name === name
+    })
 
-  let result = [];
+  let result = []
   // @TODO this is not a clean turn around for this method
-  grocery[0]["departments"].forEach(
-    function(department) {
-      let departmentId = uuidv1();
-      let departmentType = "";
+  grocery[0]['departments'].forEach(
+    function (department) {
+      let departmentId = uuidv1()
+      let departmentType = ''
 
-      //@TODO i don't like that we're searching for things by names,
+      // @TODO i don't like that we're searching for things by names,
       // we need to replace it later with separated methods that will assign items between files via id
       let dep = _.find(getDepartments(), (o) => {
         return o.name === department
-      });
+      })
 
-      if(dep != undefined){
+      if (dep != undefined) {
         departmentType = dep.type
       }
 
-      let ingredients = getAllIngredientsByOneDepartmentKey( department, groceryId )
+      let ingredients = getAllIngredientsByOneDepartmentKey(department, groceryId)
       result.push({
-        "id": departmentId,
-        "name": department,
-        "type": departmentType,
-        "ingredients": ingredients
-      });
-    });
+        'id': departmentId,
+        'name': department,
+        'type': departmentType,
+        'ingredients': ingredients
+      })
+    })
 
   return {
-    "name": name,
-    "groceryId": groceryId,
-    "messages": {},
-    "departments": result
-  };
+    'name': name,
+    'groceryId': groceryId,
+    'messages': {},
+    'departments': result
+  }
 }
 
-const getAllIngredientsByOneDepartmentKey = function(department, groceryId) {
-  let ingredients = getIngredients();
+const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
+  let ingredients = getIngredients()
 
   // @TODO it looks like a separated method for me
   var ingredientsList =
-    _.filter(ingredients, function(item) {
-      return item.department === department;
-    });
+    _.filter(ingredients, function (item) {
+      return item.department === department
+    })
 
   return _.map(ingredientsList, item => {
-    let ingredientId = uuidv1();
+    let ingredientId = uuidv1()
 
     return [
       ingredientId,
       item.name,
       `/del/ing/${ingredientId}/${groceryId}`
-    ];
-  });
+    ]
+  })
 }
-
 
 // -----------------------------------
 
 // strange turnaround. @TODO can we
-const getGroceryListsWithCountDepartments = function() {
-  let groceries = getGrocery();
+const getGroceryListsWithCountDepartments = function () {
+  let groceries = getGrocery()
 
   return _.map(groceries, item => {
     const object = {
       id: item.id,
       name: item.name,
       departmentsCount: item.departments.length
-    };
-    delete object.departments; // @TODO ????
-    return object;
-  });
-};
+    }
+    delete object.departments // @TODO ????
+    return object
+  })
+}
 
 // i assume this cannot work, because we don't have groceries variable... @TODO
-const getAllDepartments = function() {
-  const departments = [];
+const getAllDepartments = function () {
+  const departments = []
 
   // @TODO this is an example what should be updated. loooooks so bad and unreadable
   _.forEach(_.range(0, groceries.length), value =>
     departments.push(..._.map(groceries[value]['departments']))
-  );
-  return departments;
-};
-
-const getAllIngredientsByOneDepartment = function(department) {
-  let ingredients = getIngredients();
-
-  var ingredientsList =
-    _.filter(ingredients, function(item) {
-      return item.department === department;
-    });
-  return _.map(ingredientsList, 'name');
+  )
+  return departments
 }
 
-const getCountIngOfDepartment = function(){
-  let departments = getDepartments();
-  let result = _.map(departments, function(department){
-      let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name);
+const getAllIngredientsByOneDepartment = function (department) {
+  let ingredients = getIngredients()
+
+  var ingredientsList =
+    _.filter(ingredients, function (item) {
+      return item.department === department
+    })
+  return _.map(ingredientsList, 'name')
+}
+
+const getCountIngOfDepartment = function () {
+  let departments = getDepartments()
+  let result = _.map(departments, function (department) {
+    let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name)
     return {
       ...department,
       countIngredients: ingredientsByOneDepartment.length
     }
   })
 
-  return result;
+  return result
 }
 
-const getKeyArrayDepAndIng = function(){
-  let keys =[];
+const getKeyArrayDepAndIng = function () {
+  let keys = []
 
-  //@TODO does this functions doing a similar thing or not?
-  let departments = getAllDepartmentsWithId();
-  let ingredients = getAllIngredientsWithId();
+  // @TODO does this functions doing a similar thing or not?
+  let departments = getAllDepartmentsWithId()
+  let ingredients = getAllIngredientsWithId()
 
   // _.map(ingredients, ingredient => {
   //   _.forEach(departments,function(department){
@@ -213,63 +204,61 @@ const getKeyArrayDepAndIng = function(){
   //   })
   //   return;
   // })
-    _.forEach(departments, function(department){
-
-      _.forEach(ingredients, function(ingredient){
-
-        //@TODO can be redo later with lodash methods
-        if(ingredient.department === department.name) {
-          keys.push({
-            [department.key] : ingredient.key,
-          })
-        }
-      })
+  _.forEach(departments, function (department) {
+    _.forEach(ingredients, function (ingredient) {
+      // @TODO can be redo later with lodash methods
+      if (ingredient.department === department.name) {
+        keys.push({
+          [department.key]: ingredient.key
+        })
+      }
     })
+  })
 
-  return keys;
+  return keys
 }
 // --------------------------------------------
 
-const getAllDepartmentList = function() {
-  let departments = getDepartments();
+const getAllDepartmentList = function () {
+  let departments = getDepartments()
 
   return _.map(departments, item => ({
     key: uuidv1(),
     departmentName: item
-  }));
-};
+  }))
+}
 
-const getAllIngredientsWithId = function(){
-  let ingredients = getIngredients();
+const getAllIngredientsWithId = function () {
+  let ingredients = getIngredients()
 
-  let result = _.map(ingredients, function(ingredient){
+  let result = _.map(ingredients, function (ingredient) {
     return {
       key: uuidv1(),
       ...ingredient
     }
   })
 
-  return result;
+  return result
 }
 
 // @TODO we need to figure out why we have this method and getAllDepartmentList
 // i assume we using them in different react projects.
-const getAllDepartmentsWithId = function(){
-  let departments = getDepartments();
+const getAllDepartmentsWithId = function () {
+  let departments = getDepartments()
 
-  let result = _.map(departments, function(department){
+  let result = _.map(departments, function (department) {
     return {
       key: uuidv1(),
       ...department
     }
   })
 
-  return result;
+  return result
 }
-//------------------------------
+// ------------------------------
 
-const getAllIngredientsList = function(department) {
-  const ingredients = this.getAllIngredientsByOneDepartment(department);
+const getAllIngredientsList = function (department) {
+  const ingredients = this.getAllIngredientsByOneDepartment(department)
 
   return ingredients.map(item => ({
     key: uuidv1(),
@@ -277,43 +266,43 @@ const getAllIngredientsList = function(department) {
     isChecked: false,
     departmentID: uuidv1(),
     order: 0
-  }));
-};
+  }))
+}
 
-const getAllGrocery = function() {
-  let groceries = getGrocery();
+const getAllGrocery = function () {
+  let groceries = getGrocery()
   return _.map(groceries, item => ({
     key: uuidv1(),
     ...item
-  }));
-};
+  }))
+}
 
-
-const getAllGroceryDepartment = function( departmentArray ) {
+const getAllGroceryDepartment = function (departmentArray) {
   const departmentArrayObject = departmentArray.map(item => ({
     key: uuidv1(),
     departmentName: item,
     isChecked: false
-  }));
+  }))
 
-  return departmentArrayObject;
-};
+  return departmentArrayObject
+}
 
-const createNewGroceryList = function(newDepartment) {
+const createNewGroceryList = function (newDepartment) {
   const nameExists = _.find(
     groceries,
     item => item.name === newDepartment.name
-  );
-  !nameExists && newGroceryList(newDepartment);
-};
+  )
+  !nameExists && newGroceryList(newDepartment)
+}
 
-//TODO OMG, this method looks so sad...
+// TODO OMG, this method looks so sad...
 const getGroceryListsByDepartment = department => {
-  let parsedGroceries = getGrocery(),
-    groceryList = [];
+  let parsedGroceries = getGrocery()
+
+  let groceryList = []
   if (department) {
     // what we're doing? camelCase? explain
-    capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
+    capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1)
     parsedGroceries.map(grocery => {
       if (grocery.departments.includes(department.toLowerCase()) ||
         grocery.departments.includes(department.toUpperCase()) ||
@@ -322,26 +311,23 @@ const getGroceryListsByDepartment = department => {
         groceryList.push({
           name: grocery.name,
           id: grocery.id
-        });
+        })
       }
-    });
-    return groceryList;
+    })
+    return groceryList
   }
-  return groceryList;
+  return groceryList
 }
 
-//@TODO should work now.
-function newGroceryList( newDepartment ) {
+// @TODO should work now.
+function newGroceryList (newDepartment) {
+  let groceries = getGrocery()
+  const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json')
+  const newGrocery = [ ...groceries, newDepartment ]
 
-  let groceries       = getGrocery();
-  const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json');
-  const newGrocery    = [ ...groceries, newDepartment ];
-
-  groceriesFile.write(JSON.stringify(newGrocery, null, 2));
-  groceries = newGrocery;
+  groceriesFile.write(JSON.stringify(newGrocery, null, 2))
+  groceries = newGrocery
 }
-
-
 
 module.exports = {
   getIngredients,
@@ -368,6 +354,6 @@ module.exports = {
   getAllIngredientsWithId,
   getKeyArrayDepAndIng,
   getAllDepartmentsWithId,
-  getCountIngOfDepartment,
+  getCountIngOfDepartment
 
 }

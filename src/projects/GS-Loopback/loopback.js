@@ -1,17 +1,16 @@
-const _            = require('lodash');
-const fs           = require('fs');
-const uuidv1       = require('uuid/v1');
+const _ = require('lodash')
+const fs = require('fs')
+const uuidv1 = require('uuid/v1')
 
-const { parser }   = require('../../helper');
+const { parser } = require('../../helper')
 
 const {
   ultimateGroceryList,
   groceryListWithUserRelations,
   dbIngredients
-} = require('./files');
+} = require('./files')
 
-
-const getUltimateGrocery = function() {
+const getUltimateGrocery = function () {
   return parser(ultimateGroceryList)
 }
 
@@ -30,13 +29,6 @@ const getIngredientsSampleFromDB = () => {
 // const getDepartments = function() {
 //   return parser(departments)
 // }
-
-
-
-
-
-
-
 
 // const getGroceryById = function( id ) {
 //
@@ -90,7 +82,6 @@ module.exports = {
   getUltimateGrocery,
   getGLwithUserRelations,
 
-  getIngredientsSampleFromDB,
-
+  getIngredientsSampleFromDB
 
 }

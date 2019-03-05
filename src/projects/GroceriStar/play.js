@@ -1,17 +1,16 @@
-const _            = require('lodash');
+const _ = require('lodash')
 // const uuidv1         = require('uuid/v1');
 
-const departments  = require('../../data/Departments/departments.json');
-let groceries      = require('../../data/Grocery/grocery.json');
-const ingredients  = require('../../data/Ingredients/ingredients.json');
-const users        = require('../../data/Users/users.json');
-const fs           = require('fs');
+const departments = require('../../data/Departments/departments.json')
+let groceries = require('../../data/Grocery/grocery.json')
+const ingredients = require('../../data/Ingredients/ingredients.json')
+const users = require('../../data/Users/users.json')
+const fs = require('fs')
 
+const { parser, __l } = require('../../helper')
 
-const { parser, __l }   = require('../../helper');
-
-const groceristar = require('../GroceriStar/groceristar');
-const search      = require('../Search/search');
+const groceristar = require('../GroceriStar/groceristar')
+const search = require('../Search/search')
 
 //
 // const parser = function ( filename ){
@@ -20,8 +19,7 @@ const search      = require('../Search/search');
 //
 // }
 
-
-//can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
+// can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
 // const count = function() {
 //
 
@@ -35,13 +33,7 @@ const search      = require('../Search/search');
 // count();
 // -----
 
-
-
-
 __l(groceristar.getGroceriesWithDepIngKey())
-
-
-
 
 // console.log(groceristar.getAllIngredientsByOneDepartmentKey("Fresh vegetables"));
 // console.log(groceristar.getGroceryByNameWithDepAndIngKey("Ultimate Grocery List"));
@@ -56,7 +48,6 @@ __l(groceristar.getGroceriesWithDepIngKey())
 
 // console.log(groceristar.getAllIngredientsByOneDepartmentKey("Condiments / Sauces", "888383883"));
 // console.log(groceristar.getGroceriesWithDepIngKey());
-
 
 // getGroceryListsByDepartment = department => {
 //   capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);

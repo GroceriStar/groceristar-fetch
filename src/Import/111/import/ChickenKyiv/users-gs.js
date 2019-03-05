@@ -1,25 +1,21 @@
-function attachGroceryToAdmin(admin, grocery){
-	// console.log(grocery);
-    var options = {
-      userId: admin.id,
-      secondArray: [ grocery.id ]
-    };
-    User.addGrocery(options);
-
+function attachGroceryToAdmin (admin, grocery) {
+  // console.log(grocery);
+  var options = {
+    userId: admin.id,
+    secondArray: [ grocery.id ]
+  }
+  User.addGrocery(options)
 };
 
+function getAdminGroceries (User) {
+  // this is a custom method for user model,
+  // which I decided to move from main model definition to this place
 
-
-
-function getAdminGroceries ( User ){
-	// this is a custom method for user model,
-	// which I decided to move from main model definition to this place
-
-	User.withAdmin = function(cb){
-        User.findOne({
+  User.withAdmin = function (cb) {
+    User.findOne({
         	where: {
-				username: 'admin'
-			},
+        username: 'admin'
+      },
 
 	        include: {
 	             relation: 'groceries',
@@ -32,21 +28,15 @@ function getAdminGroceries ( User ){
 	                 // }
 	             }
 	        }
-        }, cb);
-    };
+    }, cb)
+  }
 
-	User.getAdminData = function(){
-
-
-		User.withAdmin(function(err, admin){
-			console.log(admin);
-		});
-
-
-
-	};
-
+  User.getAdminData = function () {
+    User.withAdmin(function (err, admin) {
+      console.log(admin)
+    })
+  }
 };
 
-module.exports.attachGroceryToAdmin     = attachGroceryToAdmin;
-module.exports.getAdminGroceries = getAdminGroceries;
+module.exports.attachGroceryToAdmin = attachGroceryToAdmin
+module.exports.getAdminGroceries = getAdminGroceries

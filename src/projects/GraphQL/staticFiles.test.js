@@ -1,4 +1,4 @@
-const graphQL = require("./graphQL.js");
+const graphQL = require('./graphQL.js')
 
 // @TODO move to beforeIt
 const methodsList = {
@@ -7,22 +7,16 @@ const methodsList = {
   getUserGrocery: graphQL.getUserGrocery()
 }
 
-describe("testing static data files returns array", () => {
+describe('testing static data files returns array', () => {
+  const testFileIsNotEmpty = (method) => {
+    test('method {$method}()', () => {
+      var result = methodsList[method]
 
-  const testFileIsNotEmpty = ( method ) => {
-
-    test("method {$method}()", () => {
-      var result = methodsList[method];
-
-      expect(result).not.toBe("");
+      expect(result).not.toBe('')
     })
   }
 
   testFileIsNotEmpty('getFavorites')
   testFileIsNotEmpty('getItems')
   testFileIsNotEmpty('getUserGrocery')
-
-
-
-
 })

@@ -495,7 +495,7 @@ let ingredients = [
   'pistachios',
   'clarified butter',
   'gruyere cheese' ]
-[ 'tortilla chips',
+  [ 'tortilla chips',
   'cream of mushroom soup',
   'fresh orange juice',
   'yellow bell pepper',
@@ -1584,5 +1584,5 @@ let ingredients = [
   'Cafe Boheme Liqueur',
   'Barritts Ginger Beer',
   'absolut mandrin'
-];
-export default ingredients;
+  ]
+export default ingredients
