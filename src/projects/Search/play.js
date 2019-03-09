@@ -3,6 +3,10 @@ const _ = require('lodash')
 const groceristar = require('../GroceriStar/groceristar')
 const search = require('../Search/search')
 
+const {
+  parser, pathToJson
+} = require('../../helper')
+
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -27,7 +31,9 @@ const options = [
 
 // const data = search.getFormattedAttributes('diets');
 const data = search.getFormattedAttributes('allergies')
-console.log(data)
+// console.log(data)
+console.log(parser(search.file))
+
 
 // console.log(search.toOpt(options));
 // console.log(search.toOpt(data));

@@ -21,6 +21,10 @@ const ingredients1 =
 const measurements =
   require('@groceristar/sd-wrapper/dist/data/Measurement/measurements.json')
 
+// @TODO update sd-wrapepr module. we return an actual file, not it's parsed version.
+// or should we apply parser stuff?
+const { file } = require('@groceristar/sd-wrapper');
+
 module.exports = {
   allergies,
   courses,
@@ -28,5 +32,7 @@ module.exports = {
   diets,
   holidays,
   ingredients1,
-  measurements
+  measurements,
+
+  file
 }
