@@ -21,17 +21,3 @@ module.exports = {
 
   CKImport
 }
-
-// module.exports = {
-//   search: search,
-//   groceristar: groceristar,
-//   chickenKyiv: chickenKyiv,
-//   mealCalendar: mealCalendar,
-//   showcase: showcase,
-//   graphQL: graphQL,
-//
-//
-//
-//
-//   CKImport: CKImport
-// }

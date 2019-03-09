@@ -43,10 +43,15 @@ const getUsers = function () {
   return parser(users)
 }
 
+// @TODO update this method
 const getFiveRandomId = function () {
-  return [uuidv1(), uuidv1(),
-    uuidv1(), uuidv1(),
-    uuidv1()]
+  return [
+    uuidv1(),
+    uuidv1(),
+    uuidv1(),
+    uuidv1(),
+    uuidv1()
+  ]
 }
 
 const getRecipes = function () {
@@ -58,8 +63,8 @@ const getRecipes = function () {
         // console.log(ingredientsId);
         return {
           ...recipe,
-          created_at: Date(),
-          updated_at: Date(),
+          created_at: Date(), //@TODO we have a module day.js use it instead
+          updated_at: Date(), //@TODO we have a module day.js use it instead
           id: uuidv1(),
           ingredients: randomFiveIds,
           diets: randomFiveIds,
@@ -75,6 +80,7 @@ const getRecipes = function () {
 // @TODO delete file menu.json from main set of files, but create a note at some place,
 // that Menu file is no longer needed because we replace it with fake data. you can use method ABC in order to generate that data.
 const getMenuGenerator = (number_of_weeks) => {
+  
   let result
   result = _.times(number_of_weeks, (index) => ({
     id: uuidv1(),
