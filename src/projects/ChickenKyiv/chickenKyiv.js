@@ -111,11 +111,10 @@ const getRecipeByTitle = title => {
  * @return {object} recipe object
  */
 // @TODO i don't like this long stuff....
-const getRandomRecipe = () => {
+const getRandomRecipe = (n=1) => {
   let recipes = getNRecipes(20)
-
-  const randomInt = Math.floor(Math.random() * (recipes.length - 1))
-  return recipes[randomInt]
+  //const randomInt = Math.floor(Math.random() * (recipes.length - 1))
+  return _.sampleSize(recipes, n)
 }
 
 /**
@@ -136,18 +135,20 @@ const getFirstFiveRecipes = () => {
 
 // @TODO there should be another way to do this. less complitated at least
 const getFiveRandomIngredients = () => {
-  let recipes = getRecipe()
+  //let recipes = getRecipe()
+  let recipes = getRandomRecipe(5)
   let result = []
-  let random_key = -1
+  //let random_key = -1
   let countIngredients = 5
 
   // @TODO replace with a map functions
   for (var i = 0; i < countIngredients; i++) {
-    random_key = Math.floor(Math.random() * 101)
+    //random_key = Math.floor(Math.random() * 101)
 
     let ingredient = {
       'id': uuidv1(),
-      'ingredient': recipes[random_key]['ingredients']
+      // 'ingredient': recipes[random_key]['ingredients']
+      'ingredient': recipes[i]['ingredients']
     }
     result.push(ingredient)
   }
