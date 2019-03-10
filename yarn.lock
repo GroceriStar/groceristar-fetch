@@ -139,10 +139,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@groceristar/sd-wrapper@^1.0.13":
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.13.tgz#29dd89ddc3f6108a0f60e50cfc2db122dbc38226"
-  integrity sha512-+Y8qMuRcwOSBtS/7yfs9kvyWkAbRDNCq+s70UeyHS8Wqvy3BMc+ZQOzvGQsQEgHDCAgx6JOwRDxZZiPsSn+TgA==
+"@groceristar/sd-wrapper@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.14.tgz#91c7f694a69d5155a8663369330d53dfb842bdde"
+  integrity sha512-kkd1q2REc8UrVmYDQTYkcY2OZXKYMPIFgyVBjVReUiCIwNDK/c5S58QU5N2U9ynM8Ud7ZIQVOYoJsMVdNQrUhg==
   dependencies:
     fs "^0.0.1-security"
     path "^0.12.7"
