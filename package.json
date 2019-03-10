@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/groceristar-fetch",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "npm module required to fetch static data required for recipe search",
   "main": "src/index.js",
   "engines": {
