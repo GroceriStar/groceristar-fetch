@@ -14,7 +14,9 @@ const {
   users
 } = require('./files')
 
-const getIngredients3 = __get(ingredients3)
+const getIngredients3 = function() {
+  return __get(ingredients3)
+}
 
 const getMenu = function () {
   return parser(menus)
