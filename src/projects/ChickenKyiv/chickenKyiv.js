@@ -2,7 +2,7 @@ const _ = require('lodash')
 const uuidv1 = require('uuid//v1')
 const dayjs = require('dayjs')
 
-const { parser, sliceArray } = require('../../helper')
+const { parser, sliceArray, __get } = require('../../helper')
 
 const {
   ingredients3,
@@ -14,9 +14,7 @@ const {
   users
 } = require('./files')
 
-const getIngredients3 = function () {
-  return parser(ingredients3)
-}
+const getIngredients3 = __get(ingredients3)
 
 const getMenu = function () {
   return parser(menus)
