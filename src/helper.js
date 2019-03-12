@@ -20,9 +20,14 @@ const __l = function (value) {
   return console.log(value)
 }
 
+const __get = (value) => {
+  return parser(value)
+}
+
 module.exports = {
   parser,
   pathToJson,
   sliceArray,
-  __l
+  __l,
+  __get
 }
