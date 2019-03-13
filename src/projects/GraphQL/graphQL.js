@@ -3,22 +3,22 @@ const fs = require('fs')
 const uuidv1 = require('uuid/v1')
 const dayjs = require('dayjs')
 
-const { parser, sliceArray } = require('../../helper')
+const { sliceArray, __get } = require('../../helper')
 
 const { groceristar, favorites, items, userGrocery } = require('./files')
 
 // @TODO return measurements
 
 const getFavorites = function () {
-  return parser(favorites)
+  return __get(favorites)
 }
 
 const getItems = function () {
-  return parser(items)
+  return __get(items)
 }
 
 const getUserGrocery = function () {
-  return parser(userGrocery)
+  return __get(userGrocery)
 }
 
 // ---------

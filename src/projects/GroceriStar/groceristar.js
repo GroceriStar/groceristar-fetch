@@ -2,26 +2,26 @@ const _ = require('lodash')
 const fs = require('fs')
 const uuidv1 = require('uuid/v1')
 
-const { parser } = require('../../helper')
+const { __get } = require('../../helper')
 
 const { departments, ingredients, users } = require('./files')
 
 let { groceries } = require('./files')
 
 const getIngredients = function () {
-  return parser(ingredients)
+  return __get(ingredients)
 }
 
 const getGrocery = function () {
-  return parser(groceries)
+  return __get(groceries)
 }
 
 const getUsers = function () {
-  return parser(users)
+  return __get(users)
 }
 
 const getDepartments = function () {
-  return parser(departments)
+  return __get(departments)
 }
 
 const getGroceryById = function (id) {

@@ -2,7 +2,7 @@ const _ = require('lodash')
 const fs = require('fs')
 const uuidv1 = require('uuid/v1')
 
-const { parser } = require('../../helper')
+const { __get } = require('../../helper')
 
 const {
   ultimateGroceryList,
@@ -11,15 +11,15 @@ const {
 } = require('./files')
 
 const getUltimateGrocery = function () {
-  return parser(ultimateGroceryList)
+  return __get(ultimateGroceryList)
 }
 
 const getGLwithUserRelations = () => {
-  return parser(groceryListWithUserRelations)
+  return __get(groceryListWithUserRelations)
 }
 
 const getIngredientsSampleFromDB = () => {
-  return parser(dbIngredients)
+  return __get(dbIngredients)
 }
 
 // const getIngredients = function() {

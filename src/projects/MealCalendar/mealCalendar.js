@@ -1,13 +1,13 @@
 const { mealCalendar, firstVeganGLMC } = require('./files')
 const _ = require('lodash')
-const { parser } = require('../../helper')
+const { __get, parser } = require('../../helper')
 
 const getMealCalendar = function () {
-  return parser(mealCalendar)
+  return __get(mealCalendar)
 }
 
 const getFVGLMC = () => {
-  return parser(firstVeganGLMC)
+  return __get(firstVeganGLMC)
 }
 
 // module.getDishByDay = function(day, maxDishes = mealCalendar.length) {
