@@ -2,56 +2,46 @@ const _ = require('lodash')
 const uuidv1 = require('uuid//v1')
 const dayjs = require('dayjs')
 
-const { 
-  sliceArray, 
-  getIngredients3, 
-  getMenu, 
-  getRecipe, 
-  getNutritions1, 
-  getNutritions2,
-  getUsers,
-  getDepartments 
-} = require('../../helper')
+const { parser, sliceArray, __get } = require('../../helper')
 
-// const {
-//   ingredients3,
-//   menus,
-//   recipes,
-//   nutritions1,
-//   nutritions2,
-//   departments,
-//   users
-// } = require('./files')
+const {
+  ingredients3,
+  menus,
+  recipes,
+  nutritions1,
+  nutritions2,
+  departments,
+  users
+} = require('./files')
 
+const getIngredients3 = function() {
+  return __get(ingredients3)
+}
 
-// const getIngredients3 = function() {
-//   return parser(ingredients3)
-// }
+const getMenu = function () {
+  return parser(menus)
+}
 
-// const getMenu = function () {
-//   return parser(menus)
-// }
+const getRecipe = function () {
+  return parser(recipes)
+}
 
-// const getRecipe = function () {
-//   return parser(recipes)
-// }
+const getNutritions1 = function () {
+  return parser(nutritions1)
+}
 
-// const getNutritions1 = function () {
-//   return parser(nutritions1)
-// }
-
-// const getNutritions2 = function () {
-//   return parser(nutritions2)
-// }
+const getNutritions2 = function () {
+  return parser(nutritions2)
+}
 
 // duplicates from GS
-// const getDepartments = function () {
-//   return parser(departments)
-// }
+const getDepartments = function () {
+  return parser(departments)
+}
 
-// const getUsers = function () {
-//   return parser(users)
-// }
+const getUsers = function () {
+  return parser(users)
+}
 
 // @TODO update this method
 const getFiveRandomId = function () {
