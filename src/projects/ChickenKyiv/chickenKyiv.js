@@ -19,28 +19,28 @@ const getIngredients3 = function() {
 }
 
 const getMenu = function () {
-  return parser(menus)
+  return __get(menus)
 }
 
 const getRecipe = function () {
-  return parser(recipes)
+  return __get(recipes)
 }
 
 const getNutritions1 = function () {
-  return parser(nutritions1)
+  return __get(nutritions1)
 }
 
 const getNutritions2 = function () {
-  return parser(nutritions2)
+  return __get(nutritions2)
 }
 
 // duplicates from GS
 const getDepartments = function () {
-  return parser(departments)
+  return __get(departments)
 }
 
 const getUsers = function () {
-  return parser(users)
+  return __get(users)
 }
 
 // @TODO update this method
