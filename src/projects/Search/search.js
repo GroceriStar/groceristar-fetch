@@ -5,7 +5,15 @@ const {
   parser, pathToJson
 } = require('../../helper')
 
-const { allergies, courses, cuisines, diets, holidays, ingredients1, measurements } = require('./files')
+const { 
+  allergies, 
+  courses, 
+  cuisines, 
+  diets, 
+  holidays, 
+  ingredients1, 
+  measurements 
+} = require('./files')
 
 // @TODO why we name files as plurals but attributes as singular noun?
 // please advice
