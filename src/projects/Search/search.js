@@ -2,7 +2,7 @@ const _ = require('lodash')
 const uuidv1 = require('uuid/v1')
 const path = require('path')
 const {
-  parser, pathToJson
+  parser, pathToJson, __get
 } = require('../../helper')
 
 // const { 
@@ -15,7 +15,7 @@ const {
 //   measurements 
 // } = require('./files')
 
-const { 
+const files = { 
   allergies, 
   courses, 
   cuisines, 
@@ -39,25 +39,25 @@ const {
 //   }
 // }
 
-const object = {
-  'allergy': allergies,
-  'course': courses,
-  'cuisine': cuisines,
-  'diet': diets,
-  'holiday': holidays,
-  'ingredient': ingredients1,
-  'measurement': measurements
-}
+// const object = {
+//   'allergy': allergies,
+//   'course': courses,
+//   'cuisine': cuisines,
+//   'diet': diets,
+//   'holiday': holidays,
+//   'ingredient': ingredients1,
+//   'measurement': measurements
+// }
 
 // experimental method, like getRawFiles
 // first of all lodash has _.get method.
 // second - this method is not good, and it should be used only inside the plugin
 // @TODO update/change it later, when we'll separate files with business logic.
-const __get = (alias) => {
+const __find = (alias) => {
   // const files = getRawFiles()
   // const result = files[alias]
-  const result = _.get(object, alias)
-  return parser(result)
+  const result = _.get(files, alias)
+  return __get(result);
 }
 
 // we got this array [ one, two, three ]
@@ -75,19 +75,19 @@ const proceedData = (array) => {
 const getAttribute = function (attribute) {
   switch (attribute) {
     case 'allergies':
-      return parser(allergies)
+      return __get(allergies)
       break
     case 'cuisines':
-      return parser(cuisines)
+      return __get(cuisines)
       break
     case 'courses':
-      return parser(courses)
+      return __get(courses)
       break
     case 'holidays':
-      return parser(holidays)
+      return __get(holidays)
       break
     case 'diets':
-      return parser(diets)
+      return __get(diets)
       break
 
     default:
@@ -144,7 +144,7 @@ const getPlaceholder = function (attribute, flag = false) {
 
 // this method can have a duplicates..... related to another project
 const getIngredients = function () {
-  return parser(ingredients1)
+  return __get(ingredients1)
 }
 
 const getFormattedIngredients = function () {
@@ -214,7 +214,7 @@ const toOptAntD = (data) => {
 
 module.exports = {
   // getRawFiles,
-  __get,
+  __find,
 
   pathToJson,
   proceedData,

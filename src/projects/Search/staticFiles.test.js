@@ -2,7 +2,7 @@ const search = require('./search.js')
 
 describe('testing static data files returns array', () => {
   test('checking allergy attribute', () => {
-    var result = search.__get('allergy')
+    var result = search.__find('allergies')
     expect(result).not.toBe('')
   })
 
