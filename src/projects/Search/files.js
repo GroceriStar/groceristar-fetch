@@ -23,7 +23,7 @@ const measurements =
 
 // @TODO update sd-wrapepr module. we return an actual file, not it's parsed version.
 // or should we apply parser stuff?
-const { file } = require('@groceristar/sd-wrapper');
+const { file } = require('@groceristar/sd-wrapper')
 
 module.exports = {
   allergies,

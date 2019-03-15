@@ -5,23 +5,23 @@ const {
   parser, pathToJson, __get
 } = require('../../helper')
 
-// const { 
-//   allergies, 
-//   courses, 
-//   cuisines, 
-//   diets, 
-//   holidays, 
-//   ingredients1, 
-//   measurements 
+// const {
+//   allergies,
+//   courses,
+//   cuisines,
+//   diets,
+//   holidays,
+//   ingredients1,
+//   measurements
 // } = require('./files')
 
-const files = { 
-  allergies, 
-  courses, 
-  cuisines, 
-  diets, 
-  holidays, 
-  ingredients1, 
+const files = {
+  allergies,
+  courses,
+  cuisines,
+  diets,
+  holidays,
+  ingredients1,
   measurements
 } = require('./files')
 
@@ -57,7 +57,7 @@ const __find = (alias) => {
   // const files = getRawFiles()
   // const result = files[alias]
   const result = _.get(files, alias)
-  return __get(result);
+  return __get(result)
 }
 
 // we got this array [ one, two, three ]

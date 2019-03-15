@@ -34,7 +34,6 @@ const data = search.getFormattedAttributes('allergies')
 // console.log(data)
 console.log(parser(search.file))
 
-
 // console.log(search.toOpt(options));
 // console.log(search.toOpt(data));
 // console.log(search.toOptAntD(data));
