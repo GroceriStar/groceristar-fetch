@@ -5,6 +5,16 @@ const {
   parser, pathToJson
 } = require('../../helper')
 
+// const { 
+//   allergies, 
+//   courses, 
+//   cuisines, 
+//   diets, 
+//   holidays, 
+//   ingredients1, 
+//   measurements 
+// } = require('./files')
+
 const { 
   allergies, 
   courses, 
@@ -12,21 +22,31 @@ const {
   diets, 
   holidays, 
   ingredients1, 
-  measurements 
+  measurements
 } = require('./files')
 
 // @TODO why we name files as plurals but attributes as singular noun?
 // please advice
-const getRawFiles = function () {
-  return {
-    'allergy': allergies,
-    'course': courses,
-    'cuisine': cuisines,
-    'diet': diets,
-    'holiday': holidays,
-    'ingredient': ingredients1,
-    'measurement': measurements
-  }
+// const getRawFiles = function () {
+//   return {
+//     'allergy': allergies,
+//     'course': courses,
+//     'cuisine': cuisines,
+//     'diet': diets,
+//     'holiday': holidays,
+//     'ingredient': ingredients1,
+//     'measurement': measurements
+//   }
+// }
+
+const object = {
+  'allergy': allergies,
+  'course': courses,
+  'cuisine': cuisines,
+  'diet': diets,
+  'holiday': holidays,
+  'ingredient': ingredients1,
+  'measurement': measurements
 }
 
 // experimental method, like getRawFiles
@@ -34,8 +54,9 @@ const getRawFiles = function () {
 // second - this method is not good, and it should be used only inside the plugin
 // @TODO update/change it later, when we'll separate files with business logic.
 const __get = (alias) => {
-  const files = getRawFiles()
-  const result = files[alias]
+  // const files = getRawFiles()
+  // const result = files[alias]
+  const result = _.get(object, alias)
   return parser(result)
 }
 
@@ -192,7 +213,7 @@ const toOptAntD = (data) => {
 }
 
 module.exports = {
-  getRawFiles,
+  // getRawFiles,
   __get,
 
   pathToJson,
