@@ -5,25 +5,24 @@ const {
   parser, pathToJson, __get
 } = require('../../helper')
 
-// const { 
-//   allergies, 
-//   courses, 
-//   cuisines, 
-//   diets, 
-//   holidays, 
-//   ingredients1, 
-//   measurements 
+// const {
+//   allergies,
+//   courses,
+//   cuisines,
+//   diets,
+//   holidays,
+//   ingredients1,
+//   measurements
 // } = require('./files')
 
-const files = { 
-  allergies, 
-  courses, 
-  cuisines, 
-  diets, 
-  holidays, 
-  ingredients1, 
-  measurements,
-  file
+const files = {
+  allergies,
+  courses,
+  cuisines,
+  diets,
+  holidays,
+  ingredients1,
+  measurements
 } = require('./files')
 
 // @TODO why we name files as plurals but attributes as singular noun?
@@ -58,8 +57,6 @@ const __find = (alias) => {
   // const files = getRawFiles()
   // const result = files[alias]
   const result = _.get(files, alias)
-  // console.log(alias)
-  console.log(files)
   return __get(result)
 }
 
