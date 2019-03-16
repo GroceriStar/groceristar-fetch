@@ -1,4 +1,4 @@
-const groceristar = require('./groceristar.js')
+const groceristar = require('../groceristar.js')
 
 // @TODO separate methods, related to different datasets.
 // So methods related to ingredients should have a

@@ -1,4 +1,4 @@
-const groceristar = require('./groceristar.js')
+const groceristar = require('../groceristar.js')
 
 describe('testing objects inside our static data files', () => {
   test('testing object that have property name1', () => {
