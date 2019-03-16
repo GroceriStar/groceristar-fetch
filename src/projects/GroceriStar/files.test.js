@@ -5,6 +5,30 @@ const DEPARTMENT_COUNT = 58
 const GROCERY_COUNT = 28
 const USER_COUNT = 3
 
+const methodsList1 = {
+  getIngredients: groceristar.getIngredients(),
+  getGrocery: groceristar.getGrocery(),
+  getDepartments: groceristar.getDepartments(),
+  getUsers: groceristar.getUsers()
+}
+
+describe('testing static data files returns array', () => {
+  const testIsArrayy = (method1) => {
+    test('method {$method}()', () => {
+      var result = methodsList1[method1]
+      expect(Array.isArray(result)).toBe(true)
+    })
+  }
+
+  testIsArrayy('getIngredients')
+  testIsArrayy('getGrocery')
+  testIsArrayy('getDepartments')
+  testIsArrayy('getUsers')
+})
+
+
+
+/*
 describe('testing static data files returns array', () => {
   test('ingredients.json are array', () => {
     var result = groceristar.getIngredients()
@@ -26,7 +50,28 @@ describe('testing static data files returns array', () => {
     expect(Array.isArray(result)).toBe(true)
   })
 })
+*/
+const methodsList2 = {
+  getIngredients: groceristar.getIngredients(),
+  getGrocery: groceristar.getGrocery(),
+  getDepartments: groceristar.getDepartments(),
+  getUsers: groceristar.getUsers()
+}
 
+describe('testing static data files returns array', () => {
+  const testFileIsNotEmpty = (method) => {
+    test('method {$method}()', () => {
+      var result = methodsList2[method]
+      expect(result).not.toBe('')
+    })
+  }
+
+  testFileIsNotEmpty('getIngredients')
+  testFileIsNotEmpty('getGrocery')
+  testFileIsNotEmpty('getDepartments')
+  testFileIsNotEmpty('getUsers')
+})
+/*
 describe('testing static data files are not empty', () => {
   test('ingredients file is not empty', () => {
     var result = groceristar.getIngredients()
@@ -70,7 +115,29 @@ describe('testing static data files are not empty', () => {
     expect(stream).not.toBe('')
   })
 })
+*/
+const methodsList3 = {
+  getIngredients: groceristar.getIngredients(),
+  getGrocery: groceristar.getGrocery(),
+  getDepartments: groceristar.getDepartments(),
+  getUsers: groceristar.getUsers()
+}
 
+describe('comparing length of arrays that we have inside of our static data files. If you receive this error', () => {
+  const testLength = (method,length) => {
+    test('method {$method}()', () => {
+      var result = methodsList3[method]
+      expect(result).toHaveLength(length)
+    })
+  }
+
+  testLength('getIngredients',INGREDIENT_COUNT)
+  testLength('getGrocery',GROCERY_COUNT)
+  testLength('getDepartments',DEPARTMENT_COUNT)
+  testLength('getUsers',USER_COUNT)
+})
+
+/*
 describe('comparing length of arrays that we have inside of our static data files. If you receive this error', () => {
   // this is a place that should be updated in order to fix build issue.
   // in order to get a new count of items from our files, you need to run `playground` script
@@ -96,3 +163,4 @@ describe('comparing length of arrays that we have inside of our static data file
     expect(result).toHaveLength(USER_COUNT)
   })
 })
+*/
