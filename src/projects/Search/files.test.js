@@ -36,6 +36,11 @@ describe('testing static data files returns array', () => {
     expect(result).not.toBe('')
   })
 
+  test('checking sd-wrapper attribute', () => {
+    var result = search.__find('file')
+    expect(result).not.toBe('')
+  })
+
   // @TODO replace this files with new version -  __.get() method
   // test('ingredients1 file is set', () => {
   //   var result = search.getIngredients1()

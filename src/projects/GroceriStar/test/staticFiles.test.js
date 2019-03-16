@@ -1,4 +1,4 @@
-const groceristar = require('./groceristar.js')
+const groceristar = require('../groceristar.js')
 
 const INGREDIENT_COUNT = 13634
 const DEPARTMENT_COUNT = 58

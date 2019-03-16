@@ -22,7 +22,8 @@ const files = {
   diets, 
   holidays, 
   ingredients1, 
-  measurements
+  measurements,
+  file
 } = require('./files')
 
 // @TODO why we name files as plurals but attributes as singular noun?
@@ -57,7 +58,9 @@ const __find = (alias) => {
   // const files = getRawFiles()
   // const result = files[alias]
   const result = _.get(files, alias)
-  return __get(result);
+  // console.log(alias)
+  console.log(files)
+  return __get(result)
 }
 
 // we got this array [ one, two, three ]
