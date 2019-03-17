@@ -5,6 +5,9 @@ const { parser } = require('../../helper')
 
 const { groceristar } = require('./files')
 
+// @TODO can we update our methods - but we'll need to go step by step,
+// because these methods used in our react projects.
+// so I propose do it very carefully
 const getGroceryShowcase = function () {
   // @TODO can we just merge together 2 arrays instead of adding this 2 values?
   // maybe it can be better

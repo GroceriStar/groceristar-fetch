@@ -10,6 +10,9 @@ const {
   dbIngredients
 } = require('./files')
 
+// @TODO can we update our methods - but we'll need to go step by step,
+// because these methods used in our react projects.
+// so I propose do it very carefully
 const getUltimateGrocery = function () {
   return __get(ultimateGroceryList)
 }

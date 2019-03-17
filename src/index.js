@@ -1,3 +1,5 @@
+//@TODO explain about selectors.js logic and discuss current export("build") process
+
 const search = require('./projects/Search/search.js')
 const groceristar = require('./projects/GroceriStar/groceristar.js')
 const chickenKyiv = require('./projects/ChickenKyiv/chickenKyiv.js')

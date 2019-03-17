@@ -9,6 +9,9 @@ const { groceristar, favorites, items, userGrocery } = require('./files')
 
 // @TODO return measurements
 
+// @TODO can we update our methods - but we'll need to go step by step,
+// because these methods used in our react projects.
+// so I propose do it very carefully
 const getFavorites = function () {
   return __get(favorites)
 }

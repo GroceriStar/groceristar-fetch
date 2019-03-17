@@ -108,6 +108,7 @@ const getPlaceholder = function (attribute, flag = false) {
   // }
 }
 
+// @TODO update method too
 // this method can have a duplicates..... related to another project
 const getIngredients = function () {
   return __get(ingredients1)

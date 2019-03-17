@@ -1,7 +1,10 @@
-const { mealCalendar, firstVeganGLMC } = require('./files')
 const _ = require('lodash')
+const { mealCalendar, firstVeganGLMC } = require('./files')
 const { __get, parser } = require('../../helper')
 
+// @TODO can we update our methods - but we'll need to go step by step,
+// because these methods used in our react projects.
+// so I propose do it very carefully
 const getMealCalendar = function () {
   return __get(mealCalendar)
 }

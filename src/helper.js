@@ -1,7 +1,7 @@
 const path = require('path')
 
 // main reason for having this file, because i'm trying to move away repetetive functions
-// @TODO Arthur have at least 3 different modules, that should replace this method
+// @TODO Arthur have at least 3-5 different modules, that should replace this method
 const parser = function (filename) {
   return JSON.parse(JSON.stringify(filename))
 }
