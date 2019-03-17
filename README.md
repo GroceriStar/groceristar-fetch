@@ -32,6 +32,9 @@ Table of Contents
 - [Fourth Article](https://medium.com/groceristar/static-food-data-third-part-structu-615c39dcf328)
 - [Fifth Article](https://medium.com/groceristar/moving-out-static-food-json-files-e27f8cba003)
 
+- [6 Article](xxx)
+
+
 [Trello board with current tasks](https://trello.com/b/U2Jm8JWX/fetch-plugin)
 
 [Documentation Website](https://groceristar.github.io/groceristar-fetch/)
@@ -85,7 +88,7 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 ---
 
 
-Tasks: 
+Tasks:
 - More uses of module https://github.com/standard/standard
 
 
@@ -115,10 +118,6 @@ routes
 - https://octokit.github.io/routes/ https://github.com/octokit/routes
 
 
-- install back standard. right now it generates an error
-```
-  "code-fix": "standard --fix"
-```
 
 ---
 
@@ -132,7 +131,7 @@ npm test
 
 #### Contributors
 
-@vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah
+@vadim9999, @MinkoJ2, @chauhannishith, @atherdon, @GuiFSs, @kraftaa, @aanchirinah, @wahaj-47, @tihaami
 
 
 List of plugins related to this universe:
@@ -153,3 +152,5 @@ Created with help of this articles:
 - https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
 - https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
 - https://medium.com/@jdxcode/for-the-love-of-god-dont-use-npmignore-f93c08909d8d
+
+More details about how to build npm plugin in this collection: https://github.com/ChickenKyiv/awesome-dev-stuff/blob/master/npm-modules.md
