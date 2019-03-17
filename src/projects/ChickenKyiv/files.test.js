@@ -23,13 +23,13 @@ describe('testing static data files are set', () => {
   testFileIsNotEmpty('getNutritions2')
 })
 
-/*  ------------- MY METHOD -------------------------- 
+/*  ------------- MY METHOD --------------------------
 describe('testing static data files are set', () => {
 function testFunction(getAlert){
   test('testElement is set', () => {
     var stream = getAlert()
     expect(stream).not.toBe('')
-  }) 
+  })
 }
   testFunction(chickenKyiv.getIngredients3)
   testFunction(chickenKyiv.getMenu)
@@ -37,7 +37,7 @@ function testFunction(getAlert){
   testFunction(chickenKyiv.getNutritions1)
   testFunction(chickenKyiv.getNutritions2)
 })
-------------------------------------------------------- 
+-------------------------------------------------------
 describe('testing static data files are set', () => {
   test('ingredients3 file is set', () => {
     var stream = chickenKyiv.getIngredients3()

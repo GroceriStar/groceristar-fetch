@@ -5,16 +5,6 @@ const {
   parser, pathToJson, __get
 } = require('../../helper')
 
-// const {
-//   allergies,
-//   courses,
-//   cuisines,
-//   diets,
-//   holidays,
-//   ingredients1,
-//   measurements
-// } = require('./files')
-
 const files = {
   allergies,
   courses,
@@ -24,30 +14,6 @@ const files = {
   ingredients1,
   measurements
 } = require('./files')
-
-// @TODO why we name files as plurals but attributes as singular noun?
-// please advice
-// const getRawFiles = function () {
-//   return {
-//     'allergy': allergies,
-//     'course': courses,
-//     'cuisine': cuisines,
-//     'diet': diets,
-//     'holiday': holidays,
-//     'ingredient': ingredients1,
-//     'measurement': measurements
-//   }
-// }
-
-// const object = {
-//   'allergy': allergies,
-//   'course': courses,
-//   'cuisine': cuisines,
-//   'diet': diets,
-//   'holiday': holidays,
-//   'ingredient': ingredients1,
-//   'measurement': measurements
-// }
 
 // experimental method, like getRawFiles
 // first of all lodash has _.get method.
@@ -227,5 +193,3 @@ module.exports = {
   toOpt,
   toOptAntD
 }
-
-// module.exports = module;

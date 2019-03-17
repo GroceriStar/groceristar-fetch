@@ -3,7 +3,7 @@ const mealCalendarMethods = require('./mealCalendar.js')
 
 const methodsList = {
   getMealCalendar: mealCalendarMethods.getMealCalendar(),
-  getFVGLMC: mealCalendarMethods.getFVGLMC(),
+  getFVGLMC: mealCalendarMethods.getFVGLMC()
 }
 describe('testing static data files returns array', () => {
   const testFileIsNotEmpty = (method) => {

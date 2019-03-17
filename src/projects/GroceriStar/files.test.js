@@ -26,8 +26,6 @@ describe('testing static data files returns array', () => {
   testIsArrayy('getUsers')
 })
 
-
-
 /*
 describe('testing static data files returns array', () => {
   test('ingredients.json are array', () => {
@@ -116,6 +114,7 @@ describe('testing static data files are not empty', () => {
   })
 })
 */
+
 const methodsList3 = {
   getIngredients: groceristar.getIngredients(),
   getGrocery: groceristar.getGrocery(),
@@ -124,43 +123,15 @@ const methodsList3 = {
 }
 
 describe('comparing length of arrays that we have inside of our static data files. If you receive this error', () => {
-  const testLength = (method,length) => {
-    test('method {$method}()', () => {
+  const testLength = (method, length) => {
+    test('method {$method}() array count', () => {
       var result = methodsList3[method]
       expect(result).toHaveLength(length)
     })
   }
 
-  testLength('getIngredients',INGREDIENT_COUNT)
-  testLength('getGrocery',GROCERY_COUNT)
-  testLength('getDepartments',DEPARTMENT_COUNT)
-  testLength('getUsers',USER_COUNT)
+  testLength('getIngredients', INGREDIENT_COUNT)
+  testLength('getGrocery', GROCERY_COUNT)
+  testLength('getDepartments', DEPARTMENT_COUNT)
+  testLength('getUsers', USER_COUNT)
 })
-
-/*
-describe('comparing length of arrays that we have inside of our static data files. If you receive this error', () => {
-  // this is a place that should be updated in order to fix build issue.
-  // in order to get a new count of items from our files, you need to run `playground` script
-
-  test('ingredients array count', () => {
-    var result = groceristar.getIngredients()
-    expect(result).toHaveLength(INGREDIENT_COUNT)
-  })
-
-  test('department array count', () => {
-    var result = groceristar.getDepartments()
-    expect(result).toHaveLength(DEPARTMENT_COUNT)
-  })
-
-  test('grocery array count', () => {
-    var result = groceristar.getGrocery()
-
-    expect(result).toHaveLength(GROCERY_COUNT)
-  })
-
-  test('users array count', () => {
-    var result = groceristar.getUsers()
-    expect(result).toHaveLength(USER_COUNT)
-  })
-})
-*/
