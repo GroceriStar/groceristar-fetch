@@ -1,3 +1,5 @@
+const staticData = require('@groceristar/sd-wrapper')
+
 const ultimateGroceryList =
   require('@groceristar/sd-wrapper/dist/data/Grocery/example/ultimate-gl-from-loopback-server-example.json')
 

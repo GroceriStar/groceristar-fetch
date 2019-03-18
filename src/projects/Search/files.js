@@ -1,25 +1,24 @@
 // yes it's bad, but it works, some sort of...
 // @TODO https://github.com/GroceriStar/sd/issues/3
-const allergies =
-  require('@groceristar/sd-wrapper/dist/data/Allergy/allergies.json')
 
-const courses =
-  require('@groceristar/sd-wrapper/dist/data/Course/courses.json')
+const staticData = require('@groceristar/sd-wrapper')
 
-const cuisines =
-  require('@groceristar/sd-wrapper/dist/data/Cuisine/cuisines.json')
+// @TODO i think from now it can easily improved by exporting into object without these middlenam constants
 
-const diets =
-  require('@groceristar/sd-wrapper/dist/data/Diet/diets.json')
+const allergies = staticData.allergies
 
-const holidays =
-  require('@groceristar/sd-wrapper/dist/data/Holiday/holidays.json')
+const courses = staticData.course
+
+const cuisines = staticData.cuisine
+
+const diets = staticData.diet
+
+const holidays = staticData.holiday
 
 const ingredients1 =
   require('@groceristar/sd-wrapper/dist/data/Ingredients/ingredients1.json')
 
-const measurements =
-  require('@groceristar/sd-wrapper/dist/data/Measurement/measurements.json')
+const measurements = staticData.measurements
 
 // @TODO update sd-wrapepr module. we return an actual file, not it's parsed version.
 // or should we apply parser stuff?
@@ -32,7 +31,7 @@ module.exports = {
   diets,
   holidays,
   ingredients1,
-  measurements,
+  measurements
 
   // file
 }
