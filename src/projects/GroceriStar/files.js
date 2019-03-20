@@ -1,14 +1,12 @@
-const departments =
-  require('@groceristar/sd-wrapper/dist/data/Departments/departments.json')
+const staticData = require('@groceristar/sd-wrapper')
 
-let groceries =
-  require('@groceristar/sd-wrapper/dist/data/Grocery/grocery.json')
+const departments = staticData.departments
 
-const ingredients =
-  require('@groceristar/sd-wrapper/dist/data/Ingredients/ingredients.json')
+let groceries = staticData.grocery
 
-const users =
-  require('@groceristar/sd-wrapper/dist/data/Users/users.json')
+const ingredients = staticData.ingredients
+
+const users = staticData.users
 
 module.exports = {
   departments,

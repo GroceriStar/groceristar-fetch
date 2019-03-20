@@ -1,4 +1,4 @@
-//@TODO we need to have all "projects"
+// @TODO we need to have all "projects"
 const chickenKyiv = require('./projects/ChickenKyiv/chickenKyiv.js')
 const groceristar = require('./projects/GroceriStar/groceristar.js')
 const search = require('./projects/Search/search.js')

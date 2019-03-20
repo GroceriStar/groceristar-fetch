@@ -1,3 +1,4 @@
+const staticData = require('@groceristar/sd-wrapper')
 const groceristar = require('../GroceriStar/groceristar')
 
 const favorites =
