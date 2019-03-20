@@ -15,8 +15,8 @@ function assignAdmin( options, admin_id ){
   let server
   let database
   let raven
-
-  { server, database, raven } = options;
+//@TODO enable it again
+  // { server, database, raven } = options;
 
   // User        = server.models.user;
   let Role        = server.models.Role;

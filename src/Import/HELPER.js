@@ -46,7 +46,7 @@ const create_with_relations = ( options, datazzzz, wrapper, cb ) => {
   if ( !cb )     { raven.captureException('Callback was not specified'); }
   if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
 
-  let server, database, raven, predata
+  // let server, database, raven, predata
   const  {server, database, raven, predata} = options ;
 
   let Model      = server.models[wrapper.table_name];
@@ -83,7 +83,7 @@ const create = (options, wrapper, cb ) => {
 
    // console.log(options.raven)
 
-  let server, database
+  // let server, database
   const  { server, database } = options ;
 
   // let server, database, raven, predata
@@ -134,7 +134,7 @@ const get_imported_data_for_relate_function = async ( options, table_name ) => {
   // I don't like that we're searching all recipes at this method
 
   //@TODO apply this changes to all import model files
-  let server, database, raven
+  // let server, database, raven
   const { server, database, raven } = options ;
 
 
@@ -163,7 +163,7 @@ const find_all_data_copy_of_function_above = async (options, cb) => {
   // I don't like that we're searching all recipes at this method
 
   //@TODO apply this changes to all import model files
-  let server, database, raven
+  // let server, database, raven
   const { server, database, raven } = options ;
 
   let collections

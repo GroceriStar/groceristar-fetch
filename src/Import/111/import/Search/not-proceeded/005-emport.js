@@ -52,7 +52,7 @@ async.parallel({
 
 	var department_id = department_ids[0];
 
-	let ingredients = await h.cReate(options, Ingredients);
+	// let ingredients = await h.cReate(options, Ingredients);
 
 	var ingredients = Ingredient.get(department_id)
 

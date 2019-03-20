@@ -1,7 +1,7 @@
 let pattern = "n1";
 
 
-@TODO convert it into a attributes style.
+// @TODO convert it into a attributes style.
 
 
 let table_name = 'Nutritions'
