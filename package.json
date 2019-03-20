@@ -13,7 +13,11 @@
     "test:big": "jest src/projects/GroceriStar/getGroceriesWithDepIngKey.test.js",
     "code-fix": "standard --fix",
     "build": "babel src -d dist",
-    "lint": "standard"
+    "lint": "standard",
+    "bundle": "rollup -c",
+    "dev": "rollup -c -w",
+    "build:rollup": "npm run clean && npm run bundle",
+    "clean": "shx rm -rf ./coverage && shx rm -rf ./dist"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

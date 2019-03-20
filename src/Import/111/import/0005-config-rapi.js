@@ -18,6 +18,6 @@ var lbTables = [
 ];
 
 module.exports = {
-  db_name: db_name
+  db_name: db_name,
   lbTables: lbTables
 }
