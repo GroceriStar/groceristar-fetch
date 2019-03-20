@@ -2,9 +2,9 @@ const _ = require('lodash')
 const fs = require('fs')
 const uuidv1 = require('uuid/v1')
 
-const { __get } = require('../../helper')
+const { __get, __find } = require('../../helper')
 
-const { departments, ingredients, users } = require('./files')
+const files = { departments, ingredients, users } = require('./files')
 
 let { groceries } = require('./files')
 
@@ -357,6 +357,9 @@ module.exports = {
   getAllIngredientsWithId,
   getKeyArrayDepAndIng,
   getAllDepartmentsWithId,
-  getCountIngOfDepartment
+  getCountIngOfDepartment,
+
+  __find,
+  files
 
 }

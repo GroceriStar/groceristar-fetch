@@ -1,4 +1,5 @@
 const path = require('path')
+const _ = require('lodash')
 
 // main reason for having this file, because i'm trying to move away repetetive functions
 // @TODO Arthur have at least 3-5 different modules, that should replace this method
@@ -24,10 +25,19 @@ const __get = (value) => {
   return parser(value)
 }
 
+const __find = (alias, files) => {
+  // console.log(files);
+  const result = _.get(files, alias)
+  // console.log(alias);
+  // console.log(result);
+  return __get(result)
+}
+
 module.exports = {
   parser,
   pathToJson,
   sliceArray,
   __l,
+  __find,
   __get
 }

@@ -2,7 +2,7 @@ const _ = require('lodash')
 const uuidv1 = require('uuid/v1')
 const path = require('path')
 const {
-  parser, pathToJson, __get
+  pathToJson, __get, __find
 } = require('../../helper')
 
 const files = {
@@ -19,12 +19,12 @@ const files = {
 // first of all lodash has _.get method.
 // second - this method is not good, and it should be used only inside the plugin
 // @TODO update/change it later, when we'll separate files with business logic.
-const __find = (alias) => {
-  // const files = getRawFiles()
-  // const result = files[alias]
-  const result = _.get(files, alias)
-  return __get(result)
-}
+// const __find = (alias) => {
+//   // const files = getRawFiles()
+//   // const result = files[alias]
+//   const result = _.get(files, alias)
+//   return __get(result)
+// }
 
 // we got this array [ one, two, three ]
 // return [ { label: one, value:one } ]
@@ -182,6 +182,7 @@ const toOptAntD = (data) => {
 module.exports = {
   // getRawFiles,
   __find,
+  files,
 
   pathToJson,
   proceedData,

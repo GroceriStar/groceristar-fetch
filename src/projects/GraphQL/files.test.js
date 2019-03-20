@@ -2,9 +2,9 @@ const graphQL = require('./graphQL.js')
 
 // @TODO move to beforeIt
 const methodsList = {
-  getFavorites: graphQL.getFavorites(),
-  getItems: graphQL.getItems(),
-  getUserGrocery: graphQL.getUserGrocery()
+  getFavorites: graphQL.__find("favorites", graphQL.files),
+  getItems: graphQL.__find("items", graphQL.files),
+  getUserGrocery: graphQL.__find("userGrocery", graphQL.files)
 }
 
 describe('testing static data files returns array', () => {

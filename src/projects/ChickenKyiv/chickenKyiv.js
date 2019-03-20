@@ -2,9 +2,9 @@ const _ = require('lodash')
 const uuidv1 = require('uuid//v1')
 const dayjs = require('dayjs')
 
-const { parser, sliceArray, __get } = require('../../helper')
+const { __find, sliceArray, __get } = require('../../helper')
 
-const {
+const files = {
   ingredients3,
   menus,
   recipes,
@@ -179,5 +179,9 @@ module.exports = {
 
   getDepartments,
   getUsers,
-  getRecipes
+  getRecipes,
+
+  files,
+
+  __find
 }

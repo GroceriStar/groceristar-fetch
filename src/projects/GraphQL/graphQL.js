@@ -3,9 +3,9 @@ const fs = require('fs')
 const uuidv1 = require('uuid/v1')
 const dayjs = require('dayjs')
 
-const { sliceArray, __get } = require('../../helper')
+const { sliceArray, __get, __find } = require('../../helper')
 
-const { groceristar, favorites, items, userGrocery } = require('./files')
+const files = { groceristar, favorites, items, userGrocery } = require('./files')
 
 // @TODO return measurements
 
@@ -249,5 +249,9 @@ module.exports = {
   getItemsGraphQL,
   getItemsGraphQLKey,
   getUserGroceryGraphQL,
-  getUserGroceryGraphQLKey
+  getUserGroceryGraphQLKey,
+
+  files,
+
+  __find
 }
