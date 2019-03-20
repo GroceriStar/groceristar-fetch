@@ -1,6 +1,6 @@
 const _ = require('lodash')
-const { mealCalendar, firstVeganGLMC } = require('./files')
-const { __get, parser } = require('../../helper')
+const { __get, parser, __find } = require('../../helper')
+const files =  { mealCalendar, firstVeganGLMC } = require('./files')
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // because these methods used in our react projects.
@@ -55,5 +55,8 @@ module.exports = {
   getDishByMonth,
   getDishByDay,
   getMealCalendar,
-  getFVGLMC
+  getFVGLMC,
+
+  __find,
+  files
 }
