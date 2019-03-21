@@ -1,9 +1,10 @@
+/* global test, describe, it, expect, jest */
 // const files = require("./files.js");
 const mealCalendarMethods = require('./mealCalendar.js')
 
 const methodsList = {
-  getMealCalendar: mealCalendarMethods.__find("mealCalendar", mealCalendarMethods.files),
-  getFVGLMC: mealCalendarMethods.__find("firstVeganGLMC", mealCalendarMethods.files)
+  getMealCalendar: mealCalendarMethods.__find('mealCalendar', mealCalendarMethods.files),
+  getFVGLMC: mealCalendarMethods.__find('firstVeganGLMC', mealCalendarMethods.files)
 }
 describe('testing static data files returns array', () => {
   const testFileIsNotEmpty = (method) => {

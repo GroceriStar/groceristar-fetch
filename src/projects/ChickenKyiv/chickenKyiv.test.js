@@ -1,3 +1,4 @@
+/* global test, describe, it, expect, jest */
 const chickenKyiv = require('./chickenKyiv.js')
 
 describe('testing static data files are set', () => {

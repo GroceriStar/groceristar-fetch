@@ -1,3 +1,4 @@
+/* global test, describe, it, expect, jest */
 const graphQL = require('./graphQL.js')
 
 describe('graphQL methods should return data', () => {

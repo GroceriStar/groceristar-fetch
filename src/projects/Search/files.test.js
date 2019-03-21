@@ -1,3 +1,4 @@
+/* global test, describe, it, expect, jest */
 const search = require('./search.js')
 
 const methodsList = {

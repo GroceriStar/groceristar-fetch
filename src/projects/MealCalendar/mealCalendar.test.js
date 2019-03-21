@@ -1,3 +1,4 @@
+/* global test, describe, it, expect, jest */
 const mealCalendarMethods = require('./mealCalendar.js')
 
 const { mealCalendar } = require('./files')

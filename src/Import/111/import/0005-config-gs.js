@@ -1,23 +1,22 @@
 
-
 /// sample, related to gs api server.
 
-var db_name = 'groceryDS';
+var db_name = 'groceryDS'
 
 var lbTables = [
   // 'User',
-	'accessToken',
-	// 'AccessToken',
-	'ACL', 'RoleMapping',
-	'Role',
+  'accessToken',
+  // 'AccessToken',
+  'ACL', 'RoleMapping',
+  'Role',
 
-	// custom tables
-	'user', 'userCredential', 'userIdentity',
+  // custom tables
+  'user', 'userCredential', 'userIdentity',
 
-	// 'userGrocery', 'userFav',
-	'Ingredient', 'Grocery', 'Department',
+  // 'userGrocery', 'userFav',
+  'Ingredient', 'Grocery', 'Department'
 
-];
+]
 
 module.exports = {
   db_name: db_name,

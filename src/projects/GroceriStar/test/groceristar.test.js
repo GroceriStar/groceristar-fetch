@@ -1,3 +1,4 @@
+/* global test, describe, it, expect, jest */
 const groceristar = require('../groceristar.js')
 
 // @TODO separate methods, related to different datasets.

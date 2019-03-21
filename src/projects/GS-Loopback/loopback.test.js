@@ -1,3 +1,4 @@
+/* global test, describe, it, expect, jest */
 const loopback = require('./loopback.js')
 
 describe('testing static data files returns array', () => {

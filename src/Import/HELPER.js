@@ -1,16 +1,8 @@
-//////////////
+/// ///////////
 // SEARCH FROM
 
-
-
-
-
-
-///////
+/// ////
 // GS FROM
-
-
-
 
 // raven is for exception catcher
 
@@ -20,7 +12,6 @@
 // database is important for creating new
 // model is a model name, that we use fo passing data
 // @TODO and checking is model exist and create a variables from array by easiest way. i saw similar sutff at jQuery libraries.
-
 
 // const create_ingredients = (options, wrapper, cb) => {
 //   if( !options ){ raven.captureException('Options was not specified');  }
@@ -39,174 +30,141 @@
 //
 // };
 
-//@TODO it's a stupid duplicate. as usually - want to speed up development
-const create_with_relations = ( options, datazzzz, wrapper, cb ) => {
-
-  if ( !options ){ raven.captureException('Options was not specified');  }
-  if ( !cb )     { raven.captureException('Callback was not specified'); }
-  if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
+// @TODO it's a stupid duplicate. as usually - want to speed up development
+const create_with_relations = (options, datazzzz, wrapper, cb) => {
+  if (!options) { raven.captureException('Options was not specified') }
+  if (!cb) { raven.captureException('Callback was not specified') }
+  if (!wrapper && !wrapper.table_name) { raven.captureException('Model was not specified') }
 
   // let server, database, raven, predata
-  const  {server, database, raven, predata} = options ;
+  const { server, database, raven, predata } = options
 
-  let Model      = server.models[wrapper.table_name];
-  let table_name = wrapper.table_name;
+  let Model = server.models[wrapper.table_name]
+  let table_name = wrapper.table_name
 
+  let data = datazzzz
 
-  let data       = datazzzz ;
-
-  database.autoupdate(table_name, function(err){
+  database.autoupdate(table_name, function (err) {
     if (err) {
-      raven.captureException(err);
-      return cb(err);
+      raven.captureException(err)
+      return cb(err)
     }
 
-    Model.create(data, cb);
+    Model.create(data, cb)
     // Model.create(data, (err,d) => {
     //   console.log(d)
     // });
-    //@TODO add wrapper for debug options. cause i have to comment it every time
-
-  });
+    // @TODO add wrapper for debug options. cause i have to comment it every time
+  })
 
   // debug('model created!'); // @TODO
+}
 
-};
+const create = (options, wrapper, cb) => {
+  if (!options) { raven.captureException('Options was not specified') }
+  if (!cb) { raven.captureException('Callback was not specified') }
 
+  if (!wrapper && !wrapper.table_name) { raven.captureException('Model was not specified') }
 
-const create = (options, wrapper, cb ) => {
-
-  if ( !options ){ raven.captureException('Options was not specified');  }
-  if ( !cb )     { raven.captureException('Callback was not specified'); }
-
-  if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
-
-   // console.log(options.raven)
+  // console.log(options.raven)
 
   // let server, database
-  const  { server, database } = options ;
+  const { server, database } = options
 
   // let server, database, raven, predata
   //   ( {server, database, raven, predata} = options );
 
-  let Model      = server.models[wrapper.table_name];
-  let table_name = wrapper.table_name;
+  let Model = server.models[wrapper.table_name]
+  let table_name = wrapper.table_name
 
-
-  let data       =
+  let data =
   // ( !predata )
                       // ?
                       wrapper.get()
                       // : wrapper.get(predata) ;
 
-// console.log(data);
+  // console.log(data);
 
-
-  database.autoupdate(table_name, function(err){
+  database.autoupdate(table_name, function (err) {
     if (err) {
-      raven.captureException(err);
-      return cb(err);
+      raven.captureException(err)
+      return cb(err)
     }
 
     // if( debug ){
-      // Model.create(data, (err,d) => {
-      //   console.log(d)
-      // });
-     // } else {
-      Model.create(data, cb);
-     // }
-    //@TODO add wrapper for debug options. cause i have to comment it every time
-
-
-  });
+    // Model.create(data, (err,d) => {
+    //   console.log(d)
+    // });
+    // } else {
+    Model.create(data, cb)
+    // }
+    // @TODO add wrapper for debug options. cause i have to comment it every time
+  })
 
   // debug('model created!'); // @TODO
+}
 
-};
-
-
-
-
-
-const get_imported_data_for_relate_function = async ( options, table_name ) => {
-
+const get_imported_data_for_relate_function = async (options, table_name) => {
   // this is a hardcode. @TODO handle this later.
   // I don't like that we're searching all recipes at this method
 
-  //@TODO apply this changes to all import model files
+  // @TODO apply this changes to all import model files
   // let server, database, raven
-  const { server, database, raven } = options ;
-
+  const { server, database, raven } = options
 
   // let recipes
-  let collection //?? @TODO pick a better name later
+  let collection // ?? @TODO pick a better name later
   try {
-
-    let Model  = server.models[table_name];
-    collection = await Model.find({});
-
-
+    let Model = server.models[table_name]
+    collection = await Model.find({})
   } catch (e) {
-    raven.captureException(e);
-    //this will eventually be handled by your error handling middleware
+    raven.captureException(e)
+    // this will eventually be handled by your error handling middleware
     next(e)
   }
   // end of what i don't like
 
-  return collection;
+  return collection
 }
 
-
 const find_all_data_copy_of_function_above = async (options, cb) => {
-
   // this is a hardcode. @TODO handle this later.
   // I don't like that we're searching all recipes at this method
 
-  //@TODO apply this changes to all import model files
+  // @TODO apply this changes to all import model files
   // let server, database, raven
-  const { server, database, raven } = options ;
+  const { server, database, raven } = options
 
   let collections
   try {
-
-    let modelInstance = server.models[table_name];
-    collections       = await modelInstance.find({});
-
+    let modelInstance = server.models[table_name]
+    collections = await modelInstance.find({})
   } catch (e) {
-    raven.captureException(e);
-    //this will eventually be handled by your error handling middleware
+    raven.captureException(e)
+    // this will eventually be handled by your error handling middleware
     next(e)
   }
   // end of what i don't like
 
-
-  //-------------------------------
-
-
-
+  // -------------------------------
 
   // @TODO NOT SURE HOW I CAN CALL CALLBACK AND ALSO RUN ATTACH FUNCTION.
-  cb(err, collections);
-
-
-};
+  cb(err, collections)
+}
 
 // i think it should return true at some cases...
 // or it's just for just catching an error...
 const is_imported = (results, tables) => {
-
   _.map(tables, (item) => {
-    if( !results.item )
-      raven.captureException("not imported well");
-  });
-
+    if (!results.item) { raven.captureException('not imported well') }
+  })
 }
 //
 // const is_imported = ( results, tables ) => {
 //
-    // if ( _.isEmpty( item ) ) {
-    //      return { error: "not imported well" }
-    // }
+// if ( _.isEmpty( item ) ) {
+//      return { error: "not imported well" }
+// }
 
 //   _.map(tables, (item) => {
 //     if( !results.item ){
@@ -217,15 +175,13 @@ const is_imported = (results, tables) => {
 //
 // }
 
-
-
 module.exports = {
   // da_id    : da_id,
-  create   : create,
+  create: create,
   // cReate:cReate,
   // attach   : attach,
-  get_data : get_imported_data_for_relate_function,
+  get_data: get_imported_data_for_relate_function,
   create_with_relations: create_with_relations,
   is_imported: is_imported
 
-};
+}

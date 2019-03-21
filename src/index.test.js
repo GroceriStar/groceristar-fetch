@@ -1,3 +1,4 @@
+/* global test, describe, it, expect, jest */
 // @TODO we need to have all "projects"
 const chickenKyiv = require('./projects/ChickenKyiv/chickenKyiv.js')
 const groceristar = require('./projects/GroceriStar/groceristar.js')

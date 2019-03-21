@@ -1,3 +1,4 @@
+/* global test, describe, it, expect, jest */
 const groceristar = require('../groceristar.js')
 
 describe('testing objects inside users', () => {

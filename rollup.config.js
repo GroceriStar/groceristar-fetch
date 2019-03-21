@@ -43,7 +43,7 @@ export default {
       include: ['src/*'],
       // include: ['src/**/*'],
       exclude: [
-        'node_modules/**',
+        'node_modules/**'
         // '/src/data/__tests__'
         // '/src/data/json-tests'
       ]
@@ -51,8 +51,6 @@ export default {
       // presets: presets,
       // plugins: plugins
     }),
-
-
 
     // juck fix in order to move json files to npm
     // copy({

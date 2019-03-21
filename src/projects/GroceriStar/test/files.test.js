@@ -1,3 +1,4 @@
+/* global test, describe, it, expect, jest */
 const groceristar = require('../groceristar.js')
 
 const INGREDIENT_COUNT = 13634
@@ -6,10 +7,10 @@ const GROCERY_COUNT = 28
 const USER_COUNT = 3
 
 const methodsList1 = {
-  getIngredients: groceristar.__find("ingredients", groceristar.files),
-  getGrocery: groceristar.__find("groceries", groceristar.files),
-  getDepartments: groceristar.__find("departments", groceristar.files),
-  getUsers: groceristar.__find("users", groceristar.files)
+  getIngredients: groceristar.__find('ingredients', groceristar.files),
+  getGrocery: groceristar.__find('groceries', groceristar.files),
+  getDepartments: groceristar.__find('departments', groceristar.files),
+  getUsers: groceristar.__find('users', groceristar.files)
 }
 
 describe('testing static data files returns array', () => {
@@ -50,10 +51,10 @@ describe('testing static data files returns array', () => {
 })
 */
 const methodsList2 = {
-  getIngredients: groceristar.__find("ingredients", groceristar.files),
-  getGrocery: groceristar.__find("groceries", groceristar.files),
-  getDepartments: groceristar.__find("departments", groceristar.files),
-  getUsers: groceristar.__find("users", groceristar.files)
+  getIngredients: groceristar.__find('ingredients', groceristar.files),
+  getGrocery: groceristar.__find('groceries', groceristar.files),
+  getDepartments: groceristar.__find('departments', groceristar.files),
+  getUsers: groceristar.__find('users', groceristar.files)
 }
 
 describe('testing static data files returns array', () => {
@@ -116,10 +117,10 @@ describe('testing static data files are not empty', () => {
 */
 
 const methodsList3 = {
-  getIngredients: groceristar.__find("ingredients", groceristar.files),
-  getGrocery: groceristar.__find("groceries", groceristar.files),
-  getDepartments: groceristar.__find("departments", groceristar.files),
-  getUsers: groceristar.__find("users", groceristar.files)
+  getIngredients: groceristar.__find('ingredients', groceristar.files),
+  getGrocery: groceristar.__find('groceries', groceristar.files),
+  getDepartments: groceristar.__find('departments', groceristar.files),
+  getUsers: groceristar.__find('users', groceristar.files)
 }
 
 describe('comparing length of arrays that we have inside of our static data files. If you receive this error', () => {
