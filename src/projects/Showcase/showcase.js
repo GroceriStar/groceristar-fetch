@@ -1,9 +1,15 @@
 const _ = require('lodash')
 const fs = require('fs')
 const uuidv1 = require('uuid/v1')
-const { parser } = require('../../helper')
 
-const { groceristar } = require('./files')
+const { parser, __get, __find } = require('../../helper')
+
+const { groceries } = require('./files')
+
+const getGrocery = function () {
+  return __get(groceries)
+}
+
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // because these methods used in our react projects.
@@ -13,10 +19,10 @@ const getGroceryShowcase = function () {
   // maybe it can be better
 
   // @TODO can be replaced later when we'll have __.get methods
-  let groceries = groceristar.getGrocery()
+  let groceriesList = getGrocery()
   // console.log(parsedGroceries);
 
-  let result = groceries.map((item) => {
+  let result = groceriesList.map((item) => {
     item.height = 200
     item.css = 'linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)'
     return item
@@ -27,5 +33,7 @@ const getGroceryShowcase = function () {
 }
 
 module.exports = {
-  getGroceryShowcase
+  getGroceryShowcase,
+
+  __find
 }

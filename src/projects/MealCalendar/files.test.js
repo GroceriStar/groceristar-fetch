@@ -6,6 +6,7 @@ const methodsList = {
   getMealCalendar: mealCalendarMethods.__find('mealCalendar', mealCalendarMethods.files),
   getFVGLMC: mealCalendarMethods.__find('firstVeganGLMC', mealCalendarMethods.files)
 }
+
 describe('testing static data files returns array', () => {
   const testFileIsNotEmpty = (method) => {
     test('method {$method}()', () => {
