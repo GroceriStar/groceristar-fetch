@@ -702,10 +702,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@groceristar/sd-wrapper@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-2.0.1.tgz#7fb420cfc0dec97caf86389424f53c46fb82e780"
-  integrity sha512-UnqXPuZc0GMqfWBK6r8UZnpvHl9LjSW9o9J3UHHFOMmgCaS1t1yB3OHWocj7kvnlBUkgc5CaSy4X21ph1BhNiw==
+"@groceristar/sd-wrapper@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-2.0.2.tgz#0b4ec2f38c5d0e459dc016246e94820f1428f5d4"
+  integrity sha512-qr45p0DR/f2mnFRK9lmB4UPDgZ8pSR1RMDPXaWW/YNbuOyvN6XPShnmEA+LYzdIviSdEeGYdKlLeEl3tNp59Ig==
   dependencies:
     path "^0.12.7"
     uuid "^3.3.2"

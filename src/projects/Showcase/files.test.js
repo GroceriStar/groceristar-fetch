@@ -3,5 +3,5 @@
 const showcase = require('../showcase.js')
 
 const methodsList = {
-  getGrocery: showcase.__find('groceries', showcase.files),
+  getGrocery: showcase.__find('groceries', showcase.files)
 }
