@@ -16,7 +16,6 @@ const diets = staticData.diet
 const holidays = staticData.holiday
 
 const ingredients1 = staticData.ingredients1
-  // require('@groceristar/sd-wrapper/dist/data/Ingredients/ingredients1.json')
 
 const measurements = staticData.measurements
 
