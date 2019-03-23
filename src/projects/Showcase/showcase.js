@@ -4,7 +4,7 @@ const uuidv1 = require('uuid/v1')
 
 const { parser, __get, __find } = require('../../helper')
 
-const { groceries } = require('./files')
+const files = { groceries } = require('./files')
 
 const getGrocery = function () {
   return __get(groceries)
@@ -34,5 +34,6 @@ const getGroceryShowcase = function () {
 module.exports = {
   getGroceryShowcase,
 
-  __find
+  __find,
+  files
 }
