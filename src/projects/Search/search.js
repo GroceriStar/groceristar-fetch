@@ -179,6 +179,21 @@ const toOptAntD = (data) => {
   return []
 }
 
+// @TODO add test coverage
+const getData = (value, type = 'attribute') => {
+  let result
+  if( type == 'attribute' ){
+    result = getAttribute(value);
+  }
+
+  if( type == 'ingredient' ){
+    result = getIngredients();
+  }
+
+  return result;
+
+}
+
 module.exports = {
   // getRawFiles,
   __find,
@@ -193,5 +208,7 @@ module.exports = {
   getFormattedIngredients,
 
   toOpt,
-  toOptAntD
+  toOptAntD,
+
+  getData
 }
