@@ -88,10 +88,6 @@ To Find out about all the functionality use https://groceristar.github.io/grocer
 ---
 
 
-Tasks:
-- More uses of module https://github.com/standard/standard
-
-
 Explore tools that community has
 
 - https://github.com/burningtree/awesome-json
@@ -105,7 +101,7 @@ Explore tools that community has
 - https://fixer.io/
 - https://exchangeratesapi.io/
 
-https://github.com/jprichardson/node-jsonfile
+- https://github.com/jprichardson/node-jsonfile
 
 ---
 
