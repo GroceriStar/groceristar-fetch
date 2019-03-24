@@ -1,5 +1,5 @@
 /* global test, describe, it, expect, jest */
-const graphQL = require('./graphQL.js')
+const graphQL = require('../graphQL.js')
 
 // @TODO move to beforeIt
 const methodsList = {

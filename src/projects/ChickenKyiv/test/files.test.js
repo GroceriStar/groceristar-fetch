@@ -1,5 +1,5 @@
 /* global test, describe, it, expect, jest */
-const chickenKyiv = require('./chickenKyiv.js')
+const chickenKyiv = require('../chickenKyiv.js')
 
 const methodsList = {
   getIngredients3: chickenKyiv.__find('ingredients3', chickenKyiv.files),

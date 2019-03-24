@@ -1,7 +1,7 @@
 /* global test, describe, it, expect, jest */
-const mealCalendarMethods = require('./mealCalendar.js')
+const mealCalendarMethods = require('../mealCalendar.js')
 
-const { mealCalendar } = require('./files')
+const { mealCalendar } = require('../files')
 
 describe('Meal Calendar. basic methods should work', () => {
   test('getDishByDay', () => {

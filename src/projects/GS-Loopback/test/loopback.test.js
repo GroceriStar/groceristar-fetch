@@ -1,5 +1,5 @@
 /* global test, describe, it, expect, jest */
-const loopback = require('./loopback.js')
+const loopback = require('../loopback.js')
 
 describe('testing static data files returns array', () => {
   test('getUltimateGrocery method should return some data', () => {

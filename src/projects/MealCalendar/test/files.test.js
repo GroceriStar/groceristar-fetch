@@ -1,6 +1,6 @@
 /* global test, describe, it, expect, jest */
 // const files = require("./files.js");
-const mealCalendarMethods = require('./mealCalendar.js')
+const mealCalendarMethods = require('../mealCalendar.js')
 
 const methodsList = {
   getMealCalendar: mealCalendarMethods.__find('mealCalendar', mealCalendarMethods.files),

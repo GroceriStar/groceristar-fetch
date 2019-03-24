@@ -1,5 +1,5 @@
 /* global test, describe, it, expect, jest */
-const showcase = require('./showcase.js')
+const showcase = require('../showcase.js')
 
 describe('Showcase project methods should return data', () => {
   test('method getGroceryShowcase()', () => {

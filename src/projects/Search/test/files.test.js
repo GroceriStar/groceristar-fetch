@@ -1,5 +1,5 @@
 /* global test, describe, it, expect, jest */
-const search = require('./search.js')
+const search = require('../search.js')
 
 const methodsList = {
   allergies: search.__find('allergies', search.files),
