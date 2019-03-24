@@ -105,6 +105,8 @@ Explore tools that community has
 - https://fixer.io/
 - https://exchangeratesapi.io/
 
+https://github.com/jprichardson/node-jsonfile
+
 ---
 
 #### nodejs github automation stuff
@@ -148,9 +150,11 @@ https://github.com/sheerun/babel-plugin-file-loader
 
 #### Credits
 
-Created with help of this articles:
+Created with help of this articles(they moved to awesome-dev):
 - https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
 - https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
 - https://medium.com/@jdxcode/for-the-love-of-god-dont-use-npmignore-f93c08909d8d
+
+
 
 More details about how to build npm plugin in this collection: https://github.com/ChickenKyiv/awesome-dev-stuff/blob/master/npm-modules.md

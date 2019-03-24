@@ -29,6 +29,7 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "coveralls": "^3.0.3",
     "jest": "^24.1.0",
+    "jsonfile": "^5.0.0",
     "nodemon": "^1.17.5",
     "path": "^0.12.7",
     "rollup": "^1.6.0",
