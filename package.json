@@ -11,6 +11,7 @@
     "play:l": "nodemon src/projects/GS-loopback/play.js",
     "test:gs": "jest src/projects/GroceriStar/groceristar.test.js && jest src/projects/GroceriStar/staticFiles.test.js",
     "test:big": "jest src/projects/GroceriStar/getGroceriesWithDepIngKey.test.js",
+    "test:index": "jest src/index.test.js",
     "code-fix": "standard --fix",
     "build": "babel src -d dist",
     "lint": "standard",
@@ -54,7 +55,6 @@
   "module": "dist/index.es.js",
   "browser": "dist/index.iife.js",
   "files": [
-    "/src/Import",
     "/src/projects",
     "/src/helper.js",
     "/src/index.js",

@@ -1,6 +1,6 @@
 const _ = require('lodash')
 
-const groceristar = require('../GroceriStar/groceristar')
+
 const search = require('../Search/search')
 
 const {

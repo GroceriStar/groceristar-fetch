@@ -1,16 +1,18 @@
 const _ = require('lodash')
 // const uuidv1         = require('uuid/v1');
 
-const departments = require('../../data/Departments/departments.json')
-let groceries = require('../../data/Grocery/grocery.json')
-const ingredients = require('../../data/Ingredients/ingredients.json')
-const users = require('../../data/Users/users.json')
+// const departments = require('../../data/Departments/departments.json')
+// let groceries = require('../../data/Grocery/grocery.json')
+// const ingredients = require('../../data/Ingredients/ingredients.json')
+// const users = require('../../data/Users/users.json')
+
+const files = { departments, ingredients, users } = require('./files')
 // const fs = require('fs')
 
 const { parser, __l } = require('../../helper')
 
 const groceristar = require('../GroceriStar/groceristar')
-const search = require('../Search/search')
+// const search = require('../Search/search')
 
 //
 // const parser = function ( filename ){
