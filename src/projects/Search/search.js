@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const uuidv1 = require('uuid/v1')
-const path = require('path')
+
 const {
   pathToJson, __get, __find
 } = require('../../helper')

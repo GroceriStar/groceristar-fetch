@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve'
 // import copy from 'rollup-plugin-copy-assets'
 import builtins from 'rollup-plugin-node-builtins'
 import babel from 'rollup-plugin-babel'
+
 import pkg from './package.json'
 
 // import cleanup from 'rollup-plugin-cleanup';
@@ -20,22 +21,17 @@ export default {
 
   // Specify here external modules which you don't want to include in your bundle (for instance: 'lodash', 'moment' etc.)
   // https://rollupjs.org/guide/en#external-e-external
-  external: ['fs', 'path'],
+  external: [
+    'fs',
+    // 'path', 
+    'lodash'
+  ],
+
+
 
   plugins: [
     // Allows node_modules resolution
     resolve({ extensions }),
-
-    // Allow bundling cjs modules. Rollup doesn't understand cjs
-    commonjs({
-      // namedExports: {
-      // //   // left-hand side can be an absolute path, a path
-      // //   // relative to the current directory, or the name
-      // //   // of a module in node_modules
-      // //   'node_modules/my-lib/index.js': [ 'named' ]
-      //   '~/Allergy/allergies.json': [ 'allergies' ]
-      // }
-    }),
 
     // Compile TypeScript/JavaScript files
     babel({
@@ -47,10 +43,19 @@ export default {
         // '/src/data/__tests__'
         // '/src/data/json-tests'
       ]
-      // exclude: 'node_modules/**'
-      // presets: presets,
-      // plugins: plugins
     }),
+
+    // Allow bundling cjs modules. Rollup doesn't understand cjs
+    commonjs({
+      // namedExports: {
+      // //   // left-hand side can be an absolute path, a path
+      // //   // relative to the current directory, or the name
+      // //   // of a module in node_modules
+      // //   'node_modules/my-lib/index.js': [ 'named' ]
+      //   '~/Allergy/allergies.json': [ 'allergies' ]
+      // }
+    })
+
 
     // juck fix in order to move json files to npm
     // copy({

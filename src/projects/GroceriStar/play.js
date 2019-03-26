@@ -5,7 +5,7 @@ const departments = require('../../data/Departments/departments.json')
 let groceries = require('../../data/Grocery/grocery.json')
 const ingredients = require('../../data/Ingredients/ingredients.json')
 const users = require('../../data/Users/users.json')
-const fs = require('fs')
+// const fs = require('fs')
 
 const { parser, __l } = require('../../helper')
 

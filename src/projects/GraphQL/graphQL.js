@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const fs = require('fs')
+
 const uuidv1 = require('uuid/v1')
 const dayjs = require('dayjs')
 
