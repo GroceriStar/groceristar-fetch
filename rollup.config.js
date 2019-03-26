@@ -23,7 +23,7 @@ export default {
   // https://rollupjs.org/guide/en#external-e-external
   external: [
     'fs',
-    // 'path', 
+    'path',
     'lodash'
   ],
 
@@ -54,8 +54,8 @@ export default {
       // //   'node_modules/my-lib/index.js': [ 'named' ]
       //   '~/Allergy/allergies.json': [ 'allergies' ]
       // }
-    })
-
+    }),
+    builtins()
 
     // juck fix in order to move json files to npm
     // copy({
@@ -64,7 +64,7 @@ export default {
     //   ],
     // }),
 
-    builtins()
+
 
   ],
 
@@ -80,6 +80,10 @@ export default {
     name,
 
     // https://rollupjs.org/guide/en#output-globals-g-globals
-    globals: {}
+    globals: {
+      'fs': 'fs',
+      'lodash': 'lodash',
+      'path': 'path'
+    }
   }]
 }
