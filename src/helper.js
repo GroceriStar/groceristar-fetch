@@ -14,10 +14,10 @@ const sliceArray = (array, number) => {
 }
 
 // @TODO Arthur have at least 3 different modules, that should replace this method
-const pathToJson = function () {
-  // path.dirname(__filename)
-  return path.dirname('./data/Allergy/allergies.json')
-}
+// const pathToJson = function () {
+//   // path.dirname(__filename)
+//   return path.dirname('./data/Allergy/allergies.json')
+// }
 
 const __l = function (value) {
   return console.log(value)
@@ -37,7 +37,7 @@ const __find = (alias, files) => {
 
 module.exports = {
   parser,
-  pathToJson,
+  // pathToJson,
   sliceArray,
   __l,
   __find,

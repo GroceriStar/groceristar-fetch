@@ -10,7 +10,7 @@ const files = {
 
 const { parser, __l } = require('../../helper')
 
-console.log(JSON.parse( JSON.stringify(departments) ))
+// console.log(JSON.parse( JSON.stringify(departments) ))
 
 const groceristar = require('../GroceriStar/groceristar')
 // const search = require('../Search/search')
@@ -31,7 +31,7 @@ const groceristar = require('../GroceriStar/groceristar')
 // count();
 // -----
 
-__l(groceristar.getGroceriesWithDepIngKey("Grocery List Essentials"))
+// __l(groceristar.getGroceriesWithDepIngKey("Grocery List Essentials"))
 // __l(groceristar.getGroceriesWithDepIngKey("Ultimate Grocery List"))
 // __l(groceristar.getGroceriesWithDepIngKey("19 Gluten-Free Foods Shopping List"))
 

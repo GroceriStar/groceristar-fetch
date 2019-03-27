@@ -2,7 +2,7 @@ const _ = require('lodash')
 const fs = require('fs')
 const uuidv1 = require('uuid/v1')
 
-const { __get, __find } = require('../../helper')
+const { __get, __find, __l } = require('../../helper')
 
 const files = {
   departments, ingredients, users
@@ -11,6 +11,8 @@ const files = {
 //@TODO this is because we're changing the grocery file.
 // But right now it might not work well, so we need to address that later
 let { groceries } = require('./files')
+
+__l(groceries);
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // because these methods used in our react projects.
@@ -22,6 +24,8 @@ const getIngredients = function () {
 const getGrocery = function () {
   return __get(groceries)
 }
+
+__l(getGrocery());
 
 const getUsers = function () {
   return __get(users)
@@ -46,6 +50,8 @@ const getGroceryByName = function (name) {
 
 const getGroceryByNameWithDepAndIng = function (name) {
   let groceries = getGrocery()
+
+  __l(groceries);
 
   let grocery = _.filter(groceries,
     item => {

@@ -7,15 +7,15 @@ const {
   parser, pathToJson
 } = require('../../helper')
 
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-  { value: 'vanilla-ice', label: 'Vanilla Ice' },
-  { value: 'vanilla latte', label: 'Vanilla Latte' },
-  { value: 'vanilla Chino', label: 'Vanilla Chino' },
-  { value: 'vanilla double', label: 'Vanilla Double' }
-]
+// const options = [
+//   { value: 'chocolate', label: 'Chocolate' },
+//   { value: 'strawberry', label: 'Strawberry' },
+//   { value: 'vanilla', label: 'Vanilla' },
+//   { value: 'vanilla-ice', label: 'Vanilla Ice' },
+//   { value: 'vanilla latte', label: 'Vanilla Latte' },
+//   { value: 'vanilla Chino', label: 'Vanilla Chino' },
+//   { value: 'vanilla double', label: 'Vanilla Double' }
+// ]
 
 // const options = [
 //   { value: 'chocolate',  label: 'Chocolate', disabled: true},
@@ -34,9 +34,6 @@ const data = search.getFormattedAttributes('allergies')
 // console.log(data)
 console.log(parser(search.file))
 
-// console.log(search.toOpt(options));
-// console.log(search.toOpt(data));
-// console.log(search.toOptAntD(data));
 
 // console.log(_.isObject(data));
 // console.log(  search.toOpt(data)  );
