@@ -1,25 +1,21 @@
 const _ = require('lodash')
-// const uuidv1         = require('uuid/v1');
 
-// const departments = require('../../data/Departments/departments.json')
-// let groceries = require('../../data/Grocery/grocery.json')
-// const ingredients = require('../../data/Ingredients/ingredients.json')
-// const users = require('../../data/Users/users.json')
-
-const files = { departments, ingredients, users } = require('./files')
+const files = {
+  departments,
+  groceries,
+  ingredients,
+  users
+} = require('./files')
 // const fs = require('fs')
 
 const { parser, __l } = require('../../helper')
 
+console.log(JSON.parse( JSON.stringify(departments) ))
+
 const groceristar = require('../GroceriStar/groceristar')
 // const search = require('../Search/search')
 
-//
-// const parser = function ( filename ){
-//
-// 	return JSON.parse( JSON.stringify(filename) )
-//
-// }
+
 
 // can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
 // const count = function() {
