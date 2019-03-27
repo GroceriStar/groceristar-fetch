@@ -4,8 +4,12 @@ const uuidv1 = require('uuid/v1')
 
 const { __get, __find } = require('../../helper')
 
-const files = { departments, ingredients, users } = require('./files')
+const files = {
+  departments, ingredients, users
+} = require('./files')
 
+//@TODO this is because we're changing the grocery file.
+// But right now it might not work well, so we need to address that later
 let { groceries } = require('./files')
 
 // @TODO can we update our methods - but we'll need to go step by step,
@@ -49,6 +53,8 @@ const getGroceryByNameWithDepAndIng = function (name) {
     })
 
   let result = []
+  // maybe instead of getting all groceries from getGrocery. because...
+  // it's just a bad turn around @TODO change that.
   grocery[0]['departments'].forEach(
     function (department) {
       // @TODO add let ingredients = const getAllIngredientsByOneDepartment(department)

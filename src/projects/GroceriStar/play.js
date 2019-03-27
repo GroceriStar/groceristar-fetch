@@ -31,7 +31,10 @@ const groceristar = require('../GroceriStar/groceristar')
 // count();
 // -----
 
-__l(groceristar.getGroceriesWithDepIngKey())
+__l(groceristar.getGroceriesWithDepIngKey("Grocery List Essentials"))
+// __l(groceristar.getGroceriesWithDepIngKey("Ultimate Grocery List"))
+// __l(groceristar.getGroceriesWithDepIngKey("19 Gluten-Free Foods Shopping List"))
+
 
 // console.log(groceristar.getAllIngredientsByOneDepartmentKey("Fresh vegetables"));
 // console.log(groceristar.getGroceryByNameWithDepAndIngKey("Ultimate Grocery List"));
