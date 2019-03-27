@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/groceristar-fetch",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "scripts": {
     "test": "jest",
     "test:prod": "standard && jest",
@@ -51,7 +51,7 @@
     "uuid": "3.3.2"
   },
   "description": "npm module required to fetch static data required for recipe search",
-  "xxx":"dist/index.cjs",
+  "xxx": "dist/index.cjs",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "browser": "dist/index.iife.js",
