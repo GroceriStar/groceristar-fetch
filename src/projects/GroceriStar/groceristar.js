@@ -58,24 +58,45 @@ const getGroceryByNameWithDepAndIng = function (name) {
     // let list = getGrocery()
   // __l(grocerieszzz);
 
-  let NEW_grocerieszzz = _.filter(grocerieszzz,
-    item => {
-      return item.name === name
-    })
+  //@TODO maybe we shall move this function away. OR have another method, not getGrocery, that will repack things as we need it here....
+  // we did few times a similar manipulations
+  // for example, first step will be to use this: getGroceryByName
+  // let NEW_grocerieszzz = _.filter(grocerieszzz,
+  //   item => {
+  //     return item.name === name
+  //   })
 
-  let result = []
-  // maybe instead of getting all groceries from getGrocery. because...
-  // it's just a bad turn around @TODO change that.
-  NEW_grocerieszzz[0]['departments'].forEach(
-    function (department) {
-      // @TODO add let ingredients = const getAllIngredientsByOneDepartment(department)
+    let zizua = getGroceryByName(name);
+    let result = []
+    zizua['departments'].forEach(  function (department) {
 
-      result.push({
-        'department': department,
-        'ingredients': getAllIngredientsByOneDepartment(department)
+
+        result.push({
+          'department': department,
+          'ingredients': getAllIngredientsByOneDepartment(department)
+        })
       })
-    })
-  return result
+      return result
+    // return NEW_grocerieszzz;
+  // console.log(NEW_grocerieszzz);
+
+
+
+//-----
+
+  // let result = []
+  // // maybe instead of getting all groceries from getGrocery. because...
+  // // it's just a bad turn around @TODO change that.
+  // NEW_grocerieszzz[0]['departments'].forEach(
+  //   function (department) {
+  //     // @TODO add let ingredients = const getAllIngredientsByOneDepartment(department)
+  //
+  //     result.push({
+  //       'department': department,
+  //       'ingredients': getAllIngredientsByOneDepartment(department)
+  //     })
+  //   })
+  // return result
 }
 
 // Where we're using this methods?
@@ -97,6 +118,7 @@ const getGroceriesWithDepIngKey = function () {
 const getGroceryByNameWithDepAndIngKey = function (name) {
   let groceries = getGrocery()
   let groceryId = uuidv1()
+
   let grocery = _.filter(groceries,
     item => {
       return item.name === name
