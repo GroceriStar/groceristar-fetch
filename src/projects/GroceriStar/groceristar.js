@@ -4,15 +4,17 @@ const uuidv1 = require('uuid/v1')
 
 const { __get, __find, __l } = require('../../helper')
 
-const files = {
-  departments, ingredients, users
-} = require('./files')
+const files = require('./files')
+
+// const files = {
+//   departments, ingredients, users, groceries
+// } = require('./files')
 
 //@TODO this is because we're changing the grocery file.
 // But right now it might not work well, so we need to address that later
-let { groceries } = require('./files')
+// let { groceries } = require('./files')
 
-__l(groceries);
+// __l(groceries);
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // because these methods used in our react projects.
@@ -25,7 +27,7 @@ const getGrocery = function () {
   return __get(groceries)
 }
 
-__l(getGrocery());
+// __l(getGrocery());
 
 const getUsers = function () {
   return __get(users)
@@ -48,12 +50,15 @@ const getGroceryByName = function (name) {
   })
 }
 
+// @TODO we spot the same problem twice. It's a regression error.
+// we need to address that. And i think it's a good candidate for test coverage + adding raven.
+// @TODO second issue - i don't like that. looks not fancy.
 const getGroceryByNameWithDepAndIng = function (name) {
-  let groceries = getGrocery()
+  let grocerieszzz = getGrocery()
+    // let list = getGrocery()
+  // __l(grocerieszzz);
 
-  __l(groceries);
-
-  let grocery = _.filter(groceries,
+  let NEW_grocerieszzz = _.filter(grocerieszzz,
     item => {
       return item.name === name
     })
@@ -61,7 +66,7 @@ const getGroceryByNameWithDepAndIng = function (name) {
   let result = []
   // maybe instead of getting all groceries from getGrocery. because...
   // it's just a bad turn around @TODO change that.
-  grocery[0]['departments'].forEach(
+  NEW_grocerieszzz[0]['departments'].forEach(
     function (department) {
       // @TODO add let ingredients = const getAllIngredientsByOneDepartment(department)
 
