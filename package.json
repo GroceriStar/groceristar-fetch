@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/groceristar-fetch",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "scripts": {
     "test": "jest",
     "test:prod": "standard && jest",
