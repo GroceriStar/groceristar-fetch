@@ -4,11 +4,11 @@ const uuidv1 = require('uuid/v1')
 
 const { __get, __find, __l } = require('../../helper')
 
-const files = require('./files')
+// const files = require('./files')
 
-// const files = {
-//   departments, ingredients, users, groceries
-// } = require('./files')
+const files = {
+  departments, ingredients, users, groceries
+} = require('./files')
 
 //@TODO this is because we're changing the grocery file.
 // But right now it might not work well, so we need to address that later

@@ -14,9 +14,9 @@ const methodsList1 = {
 }
 
 describe('testing static data files returns array', () => {
-  const testIsArrayy = (method1) => {
-    test('method {$method}()', () => {
-      var result = methodsList1[method1]
+  const testIsArrayy = (method) => {
+    test('method '+method+'()', () => {
+      var result = methodsList1[method]
       expect(Array.isArray(result)).toBe(true)
     })
   }
@@ -59,7 +59,7 @@ const methodsList2 = {
 
 describe('testing static data files returns array', () => {
   const testFileIsNotEmpty = (method) => {
-    test('method {$method}()', () => {
+    test('method '+method+'()', () => {
       var result = methodsList2[method]
       expect(result).not.toBe('')
     })
@@ -125,7 +125,7 @@ const methodsList3 = {
 
 describe('comparing length of arrays that we have inside of our static data files. If you receive this error', () => {
   const testLength = (method, length) => {
-    test('method {$method}() array count', () => {
+    test('method '+method+'() array count', () => {
       var result = methodsList3[method]
       expect(result).toHaveLength(length)
     })
