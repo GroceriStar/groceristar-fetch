@@ -5,7 +5,7 @@ const ingredients3 = staticData.ingredients3
 const menus = staticData.menu
 
 const recipes = staticData.recipes
-  // require('@groceristar/sd-wrapper/dist/data/Recipe4/recipe.json')
+// require('@groceristar/sd-wrapper/dist/data/Recipe4/recipe.json')
 
 const nutritions1 = staticData.nutritions
 

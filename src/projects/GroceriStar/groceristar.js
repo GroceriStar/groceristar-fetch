@@ -10,7 +10,7 @@ const files = {
   departments, ingredients, users, groceries
 } = require('./files')
 
-//@TODO this is because we're changing the grocery file.
+// @TODO this is because we're changing the grocery file.
 // But right now it might not work well, so we need to address that later
 // let { groceries } = require('./files')
 
@@ -23,9 +23,9 @@ const getIngredients = function () {
   return __get(ingredients)
 }
 
-const getGrocery = function () {
-  return __get(groceries)
-}
+// const getGrocery = function () {
+//   return __get(groceries)
+// }
 
 // __l(getGrocery());
 
@@ -38,12 +38,12 @@ const getDepartments = function () {
 }
 
 const getGroceryById = function (id) {
-  let groceries = getGrocery()
+  // let groceries = getGrocery()
   return [ _.find(groceries, ['id', id]) ]
 }
 
 const getGroceryByName = function (name) {
-  let groceries = getGrocery()
+  // let groceries = getGrocery()
 
   return _.filter(groceries, function (item) {
     return item.name === name
@@ -54,35 +54,33 @@ const getGroceryByName = function (name) {
 // we need to address that. And i think it's a good candidate for test coverage + adding raven.
 // @TODO second issue - i don't like that. looks not fancy.
 const getGroceryByNameWithDepAndIng = function (name) {
-  let grocerieszzz = getGrocery()
-    // let list = getGrocery()
+  // let grocerieszzz = getGrocery()
+  // let list = getGrocery()
   // __l(grocerieszzz);
 
-  //@TODO maybe we shall move this function away. OR have another method, not getGrocery, that will repack things as we need it here....
+  // @TODO maybe we shall move this function away. OR have another method, not getGrocery, that will repack things as we need it here....
   // we did few times a similar manipulations
   // for example, first step will be to use this: getGroceryByName
-  let NEW_grocerieszzz = _.filter(grocerieszzz,
+  let NEW_grocerieszzz = _.filter(groceries,
     item => {
       return item.name === name
     })
 
-    // let zizua = getGroceryByName(name);
-    // let result = []
-    // zizua['departments'].forEach(  function (department) {
-    //
-    //
-    //     result.push({
-    //       'department': department,
-    //       'ingredients': getAllIngredientsByOneDepartment(department)
-    //     })
-    //   })
-    //   return result
-    // return NEW_grocerieszzz;
+  // let zizua = getGroceryByName(name);
+  // let result = []
+  // zizua['departments'].forEach(  function (department) {
+  //
+  //
+  //     result.push({
+  //       'department': department,
+  //       'ingredients': getAllIngredientsByOneDepartment(department)
+  //     })
+  //   })
+  //   return result
+  // return NEW_grocerieszzz;
   // console.log(NEW_grocerieszzz);
 
-
-
-//-----
+  // -----
 
   let result = []
   // maybe instead of getting all groceries from getGrocery. because...
@@ -103,7 +101,7 @@ const getGroceryByNameWithDepAndIng = function (name) {
 // -----------------------------------
 
 const getGroceriesWithDepIngKey = function () {
-  let groceries = getGrocery()
+  // let groceries = getGrocery()
 
   let result = _.map(groceries, function (grocery) {
     // @TODO change variable name
@@ -116,7 +114,7 @@ const getGroceriesWithDepIngKey = function () {
 }
 
 const getGroceryByNameWithDepAndIngKey = function (name) {
-  let groceries = getGrocery()
+  // let groceries = getGrocery()
   let groceryId = uuidv1()
 
   let grocery = _.filter(groceries,
@@ -182,7 +180,7 @@ const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
 
 // strange turnaround. @TODO can we
 const getGroceryListsWithCountDepartments = function () {
-  let groceries = getGrocery()
+  // let groceries = getGrocery()
 
   return _.map(groceries, item => {
     const object = {
@@ -262,7 +260,7 @@ const getKeyArrayDepAndIng = function () {
 // --------------------------------------------
 
 const getAllDepartmentList = function () {
-  let departments = getDepartments()
+  // let departments = getDepartments()
 
   return _.map(departments, item => ({
     key: uuidv1(),
@@ -271,7 +269,7 @@ const getAllDepartmentList = function () {
 }
 
 const getAllIngredientsWithId = function () {
-  let ingredients = getIngredients()
+  // let ingredients = getIngredients()
 
   let result = _.map(ingredients, function (ingredient) {
     return {
@@ -286,7 +284,7 @@ const getAllIngredientsWithId = function () {
 // @TODO we need to figure out why we have this method and getAllDepartmentList
 // i assume we using them in different react projects.
 const getAllDepartmentsWithId = function () {
-  let departments = getDepartments()
+  // let departments = getDepartments()
 
   let result = _.map(departments, function (department) {
     return {
@@ -312,7 +310,7 @@ const getAllIngredientsList = function (department) {
 }
 
 const getAllGrocery = function () {
-  let groceries = getGrocery()
+  // let groceries = getGrocery()
   return _.map(groceries, item => ({
     key: uuidv1(),
     ...item
@@ -339,13 +337,13 @@ const createNewGroceryList = function (newDepartment) {
 
 // TODO OMG, this method looks so sad...
 const getGroceryListsByDepartment = department => {
-  let parsedGroceries = getGrocery()
+  // let parsedGroceries = getGrocery()
 
   let groceryList = []
   if (department) {
     // what we're doing? camelCase? explain
     capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1)
-    parsedGroceries.map(grocery => {
+    groceries.map(grocery => {
       if (grocery.departments.includes(department.toLowerCase()) ||
         grocery.departments.includes(department.toUpperCase()) ||
         grocery.departments.includes(capitalisedDepartment)
@@ -373,7 +371,7 @@ function newGroceryList (newDepartment) {
 
 module.exports = {
   getIngredients,
-  getGrocery,
+  // getGrocery,
   getUsers,
   getDepartments,
   getGroceryById,

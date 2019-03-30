@@ -13,7 +13,7 @@ const methodsList = {
 
 describe('testing static data files returns array', () => {
   const testFileIsNotEmpty = (method) => {
-    test('method '+method+'()', () => {
+    test('method ' + method + '()', () => {
       var result = methodsList[method]
       expect(result).not.toBe('')
     })

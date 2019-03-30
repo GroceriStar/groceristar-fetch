@@ -1,6 +1,5 @@
 const _ = require('lodash')
 
-
 const search = require('../Search/search')
 
 const {
@@ -33,7 +32,6 @@ const {
 const data = search.getFormattedAttributes('allergies')
 // console.log(data)
 console.log(parser(search.file))
-
 
 // console.log(_.isObject(data));
 // console.log(  search.toOpt(data)  );

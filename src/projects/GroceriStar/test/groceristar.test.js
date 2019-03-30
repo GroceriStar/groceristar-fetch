@@ -1,6 +1,10 @@
 /* global test, describe, it, expect, jest */
 const groceristar = require('../groceristar.js')
 
+const files = {
+  departments, ingredients, users, groceries
+} = require('./files')
+
 // @TODO separate methods, related to different datasets.
 // So methods related to ingredients should have a
 // separated describe, with departments methods
@@ -12,56 +16,64 @@ const USER_COUNT = 3
 
 describe('testing objects inside groceries', () => {
   test("each object have property 'departments'", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(obj).toHaveProperty('departments')
     })
   })
 
   test("each object have property 'id'", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(obj).toHaveProperty('id')
     })
   })
 
   test("each object have property 'name'", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(obj).toHaveProperty('name')
     })
   })
 
   test("each object have property 'img'", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(obj).toHaveProperty('img')
     })
   })
 
   test("each object have property 'desc'", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(obj).toHaveProperty('desc')
     })
   })
 
   test("each object have property 'slug'", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(obj).toHaveProperty('slug')
     })
   })
 
   test("objects propery 'departments' have Array", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(Array.isArray(obj.departments)).toBe(true)
     })
   })
 
   test("objects property 'id' is Number", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(obj).toMatchObject({
         id: expect.any(Number)
@@ -70,7 +82,8 @@ describe('testing objects inside groceries', () => {
   })
 
   test("objects property 'name' is String", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(obj).toMatchObject({
         name: expect.any(String)
@@ -79,7 +92,8 @@ describe('testing objects inside groceries', () => {
   })
 
   test("objects properties 'img' 'desc' 'slug' are boolean", () => {
-    var result = groceristar.getGrocery()
+    // var result = groceristar.getGrocery()
+    var result = groceries
     result.forEach((obj) => {
       expect(obj).toMatchObject({
         img: expect.any(Boolean),

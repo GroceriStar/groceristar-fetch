@@ -6,7 +6,7 @@ const _ = require('lodash')
 // @TODO do we need it? https://github.com/sindresorhus/parse-json
 const parser = function (file) {
   // return JSON.parse(JSON.stringify(file))
-  return file;
+  return file
 }
 
 const sliceArray = (array, number) => {

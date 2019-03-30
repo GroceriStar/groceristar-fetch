@@ -27,8 +27,6 @@ export default {
     'lodash'
   ],
 
-
-
   plugins: [
     // Allows node_modules resolution
     resolve({ extensions }),
@@ -63,8 +61,6 @@ export default {
     //     './src/data/**'
     //   ],
     // }),
-
-
 
   ],
 

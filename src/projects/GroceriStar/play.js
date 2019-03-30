@@ -15,8 +15,6 @@ const { parser, __l } = require('../../helper')
 const groceristar = require('../GroceriStar/groceristar')
 // const search = require('../Search/search')
 
-
-
 // can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
 // const count = function() {
 //
@@ -32,11 +30,9 @@ const groceristar = require('../GroceriStar/groceristar')
 // -----
 // groceristar.getGroceriesWithDepIngKey("Grocery List Essentials")
 
-
-__l(groceristar.getGroceriesWithDepIngKey("Grocery List Essentials"))
+__l(groceristar.getGroceriesWithDepIngKey('Grocery List Essentials'))
 // __l(groceristar.getGroceriesWithDepIngKey("Ultimate Grocery List"))
 // __l(groceristar.getGroceriesWithDepIngKey("19 Gluten-Free Foods Shopping List"))
-
 
 // console.log(groceristar.getAllIngredientsByOneDepartmentKey("Fresh vegetables"));
 // console.log(groceristar.getGroceryByNameWithDepAndIngKey("Ultimate Grocery List"));

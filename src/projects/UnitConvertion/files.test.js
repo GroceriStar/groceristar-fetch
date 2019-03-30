@@ -2,7 +2,6 @@
 
 describe('empty test', () => {
   test.skip('it is not snowing', () => {
-    expect(false).toBe(0);
-  });
-
+    expect(false).toBe(0)
+  })
 })

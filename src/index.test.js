@@ -5,8 +5,8 @@ const groceristar = require('./projects/GroceriStar/groceristar.js')
 const search = require('./projects/Search/search.js')
 const showcase = require('./projects/Showcase/showcase.js')
 
-const ddd = require('./index')
-console.log(ddd)
+// const ddd = require('./index')
+// console.log(ddd)
 
 describe('testing if methods inside the files are accessible from the outside', () => {
   test('[ChickenKyiv] recipe file is set', () => {
