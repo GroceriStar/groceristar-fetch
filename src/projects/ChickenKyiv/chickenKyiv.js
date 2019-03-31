@@ -96,7 +96,7 @@ const getMenuGenerator = (number_of_weeks) => {
 
 // @TODO replace it later. we don't need it after introducing sliceArray method.
 const getNRecipes = (n) => {
-  let recipes = getRecipe()
+  // let recipes = getRecipe()
 
   return sliceArray(recipes, n)
 }
