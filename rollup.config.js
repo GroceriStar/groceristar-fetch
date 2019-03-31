@@ -27,6 +27,12 @@ export default {
     'lodash'
   ],
 
+  globals: {
+    'fs': 'fs',
+    'lodash': 'lodash',
+    'path': 'path'
+  },
+
   plugins: [
     // Allows node_modules resolution
     resolve({ extensions }),
@@ -76,10 +82,10 @@ export default {
     name,
 
     // https://rollupjs.org/guide/en#output-globals-g-globals
-    globals: {
-      'fs': 'fs',
-      'lodash': 'lodash',
-      'path': 'path'
-    }
+    // globals: {
+    //   'fs': 'fs',
+    //   'lodash': 'lodash',
+    //   'path': 'path'
+    // }
   }]
 }
