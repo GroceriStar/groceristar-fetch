@@ -5,34 +5,42 @@
 const groceristar = require('../groceristar.js')
 
 describe('testing getGroceriesWithDepIngKey()', () => {
-  var result = groceristar.getGroceriesWithDepIngKey()
-  test(' Testing method getGroceriesWithDepIngKey() should return data', () => {
+
+  const result = groceristar.getGroceriesWithDepIngKey()
+  const objectKeys = [
+    'name',
+    'groceryId',
+    'messages',
+    'departments'
+  ]
+
+  test('getGroceriesWithDepIngKey() is returning data', () => {
     expect(result).not.toBe('')
   })
 
-  test('Testing grocery has property name', () => {
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('name')
-    })
-  })
-
-  test('Testing grocery has property groceryId', () => {
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('groceryId')
-    })
-  })
-
-  test('Testing grocery has property messages', () => {
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('messages')
-    })
-  })
-
-  test('Testing grocery has property departments', () => {
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('departments')
-    })
-  })
+  // test('Testing grocery has property name', () => {
+  //   result.forEach((obj) => {
+  //     expect(obj).toHaveProperty('name')
+  //   })
+  // })
+  //
+  // test('Testing grocery has property groceryId', () => {
+  //   result.forEach((obj) => {
+  //     expect(obj).toHaveProperty('groceryId')
+  //   })
+  // })
+  //
+  // test('Testing grocery has property messages', () => {
+  //   result.forEach((obj) => {
+  //     expect(obj).toHaveProperty('messages')
+  //   })
+  // })
+  //
+  // test('Testing grocery has property departments', () => {
+  //   result.forEach((obj) => {
+  //     expect(obj).toHaveProperty('departments')
+  //   })
+  // })
 })
 
 describe('testing property departments', () => {
