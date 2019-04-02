@@ -32,7 +32,7 @@ describe('getGroceriesWithDepIngKey method', () => {
   groceryDepartmentHasProperty('type')
   groceryDepartmentHasProperty('ingridients')
 
-  // TODO test ID on match with nested object properties is ugly
+  // @TODO test ID on match with nested object properties is ugly
   test('Main grocery ID is unique among inner object ID\'s', () => {
 
     mainGroceries.forEach( mainGrocery => {

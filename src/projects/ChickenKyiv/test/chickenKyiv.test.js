@@ -12,7 +12,7 @@ describe('testing static data files are set', () => {
   }
 
   methodReturnsArray = method => {
-    test(`chickenKyiv method ${} returns array`, () => {
+    test(`chickenKyiv method ${method} is returning array`, () => {
       const result = methodList[method]
       expect(Array.isArray(result)).toBe(true)
     })
