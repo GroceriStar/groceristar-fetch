@@ -32,7 +32,7 @@ describe('getGroceriesWithDepIngKey method', () => {
   groceryDepartmentHasProperty('type')
   groceryDepartmentHasProperty('ingridients')
 
-  // TODO test ID on match with nested object properties is ugly
+  // @TODO test ID on match with nested object properties is ugly
   test('Main grocery ID is unique among inner object ID\'s', () => {
 
     mainGroceries.forEach( mainGrocery => {
@@ -46,7 +46,7 @@ describe('getGroceriesWithDepIngKey method', () => {
           expect(groceryID).not.toBe(department.id)
 
           // @TODO hmm, i don't like the last expect... so we assuming that ing has groceryid as 0...
-          // it might works, but it's make my шmpression of this `describe` broken
+          // it might works, but it's make my impression of this `describe` broken
           department.ingredients.forEach((ingredient) => {
             expect(groceryID).not.toBe(ingredient[0])
           })
