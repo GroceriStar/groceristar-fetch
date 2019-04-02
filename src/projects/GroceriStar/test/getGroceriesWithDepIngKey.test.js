@@ -4,38 +4,53 @@
 
 const groceristar = require('../groceristar.js')
 
-describe('testing getGroceriesWithDepIngKey()', () => {
+describe('getGroceriesWithDepIngKey method', () => {
 
-  const result = groceristar.getGroceriesWithDepIngKey()
-  const requiredProperties = [
-    'name',
-    'groceryId',
-    'messages',
-    'departments'
-  ]
+  const mainGroceries = groceristar.getGroceriesWithDepIngKey()
 
-  requiredProperties.forEach( requiredProperty => {
-    test(`Grocery has ${requiredProperty} property`, () => {
-      result.forEach( resultProperty => {
-        expect(resultProperty).toHaveProperty(requiredProperty)
-      })
+  const groceryHasProperty = property => {
+    test(`Grocery property ${property}`, () => {
+      const result = mainGroceries[property]
+      expect(Array.isArray(result)).toBe(true)
     })
-  })
-})
+  }
 
-describe('Department property', () => {
-  const result = groceristar.getGroceriesWithDepIngKey()
-  const requiredProperties = [
-    'id',
-    'name',
-    'type',
-    'ingridients'
-  ]
+  groceryHasProperty('name')
+  groceryHasProperty('groceryId')
+  groceryHasProperty('messages')
+  groceryHasProperty('departments')
 
-  requiredProperties.forEach( requiredProperty => {
-    test(`Grocery departments have ${requiredProperty} property`, () => {
-      result.departments.forEach( departmentsProperty => {
-        expect(departmentsProperty).toHaveProperty(requiredProperty)
+  groceryDepartmentHasProperty = property => {
+    test(`Grocery departments has property ${property}`), () => {
+      const result = mainGroceries.departments[]
+      expect(Array.isArray(result).toBe(true))
+    }
+  }
+
+  groceryDepartmentHasProperty('id')
+  groceryDepartmentHasProperty('name')
+  groceryDepartmentHasProperty('type')
+  groceryDepartmentHasProperty('ingridients')
+
+  // @TODO test ID on match with nested object properties is ugly
+  test('Main grocery ID is unique among inner object ID\'s', () => {
+
+    mainGroceries.forEach( mainGrocery => {
+      const mainGroceryId = mainGrocery.groceryId
+
+      mainGrocery.forEach( grocery => {
+        if (grocery.name !== mainGrocery.name)
+          expect(mainGroceryId).not.toBe(grocery.groceryId)
+
+        grocery.departments.forEach((department) => {
+          expect(groceryID).not.toBe(department.id)
+
+          // @TODO hmm, i don't like the last expect... so we assuming that ing has groceryid as 0...
+          // it might works, but it's make my impression of this `describe` broken
+          department.ingredients.forEach((ingredient) => {
+            expect(groceryID).not.toBe(ingredient[0])
+          })
+        })
       })
     })
   })
@@ -50,33 +65,6 @@ describe('Department property', () => {
 //       grocery.departments.forEach((department) => {
 //         department.ingredients.forEach((ingredient) => {
 //           expect(ingredient.length).toBe(3)
-//         })
-//       })
-//     })
-//   })
-// })
-
-// @TODO not clear why ID keys should be tested on same values
-// describe('Deep structure object testing ', () => {
-//   const result = groceristar.getGroceriesWithDepIngKey()
-//
-//   test('testing groceryId is unique among groceryId(among other groceries), department id, ingredient id ', () => {
-//     result.forEach( mainGrocery => {
-//       let groceryID = mainGrocery.groceryId
-//
-//       result.forEach((grocery) => {
-//         if (grocery.name != mainGrocery.name) {
-//           expect(groceryID).not.toBe(grocery.groceryId)
-//         }
-//
-//         grocery.departments.forEach((department) => {
-//           expect(groceryID).not.toBe(department.id)
-//
-//           // @TODO hmm, i don't like the last expect... so we assuming that ing has groceryid as 0...
-//           // it might works, but it's make my шmpression of this `describe` broken
-//           department.ingredients.forEach((ingredient) => {
-//             expect(groceryID).not.toBe(ingredient[0])
-//           })
 //         })
 //       })
 //     })

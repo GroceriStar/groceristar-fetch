@@ -1,29 +1,26 @@
 /* global test, describe, it, expect, jest */
 const chickenKyiv = require('../chickenKyiv.js')
 
+
+// @TODO OK, but i don't like when you put everything in long line inside of your ass @hirdbluebird. Looks not better.
 describe('testing static data files are set', () => {
   test('generate basic Weekly Menu objects', () => {
-    var result = chickenKyiv.getMenuGenerator(1)
-    expect(result).not.toBe('')
+    expect(chickenKyiv.getMenuGenerator(1)).not.toBe('')
   })
 
   test('fetching random recipe method is set', () => {
-    var result = chickenKyiv.getRandomRecipe()
-    expect(result).not.toBe('')
+    expect(chickenKyiv.getRandomRecipe()).not.toBe('')
   })
 
   test('recipe method getting by Title is set', () => {
-    var result = chickenKyiv.getRecipeByTitle('Lemonade')
-    expect(result).not.toBe('')
+    expect(chickenKyiv.getRecipeByTitle('Lemonade')).not.toBe('')
   })
 
   test('getFiveRandomIngredients', () => {
-    var result = chickenKyiv.getFiveRandomIngredients()
-    expect(result).not.toBe('')
+    expect(chickenKyiv.getFiveRandomIngredients()).not.toBe('')
   })
 
   test('getFirstFiveRecipes method', () => {
-    var result = chickenKyiv.getFirstFiveRecipes()
-    expect(result).not.toBe('')
+    expect(chickenKyiv.getFirstFiveRecipes()).not.toBe('')
   })
 })
