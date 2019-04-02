@@ -43,7 +43,7 @@
     "travis": "^0.1.1"
   },
   "dependencies": {
-    "@groceristar/sd-wrapper": "^2.0.7",
+    "@groceristar/sd-wrapper": "^2.0.8",
     "dayjs": "^1.8.0",
     "fs": "0.0.2",
     "lodash": "^4.17.10",

@@ -5,7 +5,7 @@ const dayjs = require('dayjs')
 
 const { sliceArray, __get, __find } = require('../../helper')
 
-const files = { groceristar, favorites, items, userGrocery } = require('./files')
+const files = { groceristar, groceries, favorites, items, userGrocery } = require('./files')
 
 // @TODO return measurements
 
@@ -135,7 +135,7 @@ const getGroceryGraphQL = function () {
 }
 
 const getGroceryGraphQLKey = function () {
-  let results = groceristar.getGrocery()
+  let results = groceries;
   return results.map((item, index) => ({
     grocery_id: uuidv1(),
     name: item.name,
