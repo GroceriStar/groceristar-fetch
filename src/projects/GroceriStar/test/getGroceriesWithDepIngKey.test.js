@@ -4,7 +4,7 @@
 
 const groceristar = require('../groceristar.js')
 
-describe('testing getGroceriesWithDepIngKey()', () => {
+describe('getGroceriesWithDepIngKey method', () => {
 
   const mainGroceries = groceristar.getGroceriesWithDepIngKey()
   const groceryProperties = [
@@ -29,7 +29,7 @@ describe('testing getGroceriesWithDepIngKey()', () => {
   })
 
   departmentsProperties.forEach( departmentProperty => {
-    test(`Grocery departments have ${departmentProperties} property`, () => {
+    test(`Grocery departments have ${departmentProperty} property`, () => {
       mainGroceries.departments.forEach( mainDepartment => {
         expect(mainDepartment).toHaveProperty(departmentProperty)
       })
