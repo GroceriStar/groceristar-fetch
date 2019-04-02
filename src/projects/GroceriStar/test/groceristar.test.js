@@ -15,94 +15,75 @@ const GROCERY_COUNT = 28
 const USER_COUNT = 3
 
 describe('testing objects inside groceries', () => {
-  test("each object have property 'departments'", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('departments')
-    })
-  })
 
-  test("each object have property 'id'", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('id')
-    })
-  })
-
-  test("each object have property 'name'", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('name')
-    })
-  })
-
-  test("each object have property 'img'", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('img')
-    })
-  })
-
-  test("each object have property 'desc'", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('desc')
-    })
-  })
-
-  test("each object have property 'slug'", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(obj).toHaveProperty('slug')
-    })
-  })
-
-  test("objects propery 'departments' have Array", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(Array.isArray(obj.departments)).toBe(true)
-    })
-  })
-
-  test("objects property 'id' is Number", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(obj).toMatchObject({
-        id: expect.any(Number)
+  const groceryHaveProperty = property => {
+    test(`Grocery have property ${property}`, () => {
+      groceries.forEach( obj => {
+        expect(obj).toHaveProperty(property)
       })
     })
-  })
+  }
 
-  test("objects property 'name' is String", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(obj).toMatchObject({
-        name: expect.any(String)
-      })
-    })
-  })
+  groceryHaveProperty('id')
+  groceryHaveProperty('departments')
+  groceryHaveProperty('name')
+  groceryHaveProperty('img')
+  groceryHaveProperty('desc')
+  groceryHaveProperty('slug')
 
-  test("objects properties 'img' 'desc' 'slug' are boolean", () => {
-    // var result = groceristar.getGrocery()
-    var result = groceries
-    result.forEach((obj) => {
-      expect(obj).toMatchObject({
-        img: expect.any(Boolean),
-        desc: expect.any(Boolean),
-        slug: expect.any(Boolean)
-      })
+  const groceryPropertyContain = (property, type) => {
+    test(`Grocery property ${property} contain as data ${type}`, () => {
+        expect(groceries[property]).any(type)
     })
-  })
-})
+  }
+
+  groceryPropertyContain('departments', Array)
+  groceryPropertyContain('id', Number)
+  groceryPropertyContain('name', String)
+  groceryPropertyContain('img', Boolean)
+  groceryPropertyContain('desc', Boolean)
+  groceryPropertyContain('slug', Boolean)
+
+  // test("objects propery  have Array", () => {
+  //   // var result = groceristar.getGrocery()
+  //   var result = groceries
+  //   result.forEach((obj) => {
+  //     expect(Array.isArray(obj.departments)).toBe(true)
+  //   })
+  // })
+
+  // test("objects property 'id' is Number", () => {
+  //   // var result = groceristar.getGrocery()
+  //   var result = groceries
+  //   result.forEach((obj) => {
+  //     expect(obj).toMatchObject({
+  //       id: expect.any(Number)
+  //     })
+  //   })
+  // })
+
+  // test("objects property 'name' is String", () => {
+  //   // var result = groceristar.getGrocery()
+  //   var result = groceries
+  //   result.forEach((obj) => {
+  //     expect(obj).toMatchObject({
+  //       name: expect.any(String)
+  //     })
+  //   })
+  // })
+
+//   test("objects properties 'img' 'desc' 'slug' are boolean", () => {
+//     // var result = groceristar.getGrocery()
+//     var result = groceries
+//     result.forEach((obj) => {
+//       expect(obj).toMatchObject({
+//         img: expect.any(Boolean),
+//         desc: expect.any(Boolean),
+//         slug: expect.any(Boolean)
+//       })
+//     })
+//   })
+// })
 
 describe('testing objects inside ingredients', () => {
   test("each object have propery 'name'", () => {
