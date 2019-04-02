@@ -14,7 +14,7 @@ const methodsList1 = {
 }
 
 describe('testing static data files returns array', () => {
-  const testIsArrayy = (method) => {
+  const testIsArrayy = method => {
     test('method ' + method + '()', () => {
       var result = methodsList1[method]
       expect(Array.isArray(result)).toBe(true)

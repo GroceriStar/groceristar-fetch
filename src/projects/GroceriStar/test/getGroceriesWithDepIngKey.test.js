@@ -7,35 +7,32 @@ const groceristar = require('../groceristar.js')
 describe('getGroceriesWithDepIngKey method', () => {
 
   const mainGroceries = groceristar.getGroceriesWithDepIngKey()
-  const groceryProperties = [
-    'name',
-    'groceryId',
-    'messages',
-    'departments'
-  ]
-  const departmentsProperties = [
-    'id',
-    'name',
-    'type',
-    'ingridients'
-  ]
 
-  groceryProperties.forEach( groceryProperty => {
-    test(`Grocery has ${groceryProperty} property`, () => {
-      mainGroceries.forEach( mainGrocery => {
-        expect(mainGrocery).toHaveProperty(groceryProperty)
-      })
+  const groceryHasProperty = property => {
+    test(`Grocery property ${property}`, () => {
+      const result = mainGroceries[property]
+      expect(Array.isArray(result)).toBe(true)
     })
-  })
+  }
 
-  departmentsProperties.forEach( departmentProperty => {
-    test(`Grocery departments have ${departmentProperty} property`, () => {
-      mainGroceries.departments.forEach( mainDepartment => {
-        expect(mainDepartment).toHaveProperty(departmentProperty)
-      })
-    })
-  })
+  groceryHasProperty('name')
+  groceryHasProperty('groceryId')
+  groceryHasProperty('messages')
+  groceryHasProperty('departments')
 
+  groceryDepartmentHasProperty = property => {
+    test(`Grocery departments has property ${property}`), () => {
+      const result = mainGroceries.departments[]
+      expect(Array.isArray(result).toBe(true))
+    }
+  }
+
+  groceryDepartmentHasProperty('id')
+  groceryDepartmentHasProperty('name')
+  groceryDepartmentHasProperty('type')
+  groceryDepartmentHasProperty('ingridients')
+
+  // TODO test ID on match with nested object properties is ugly
   test('Main grocery ID is unique among inner object ID\'s', () => {
 
     mainGroceries.forEach( mainGrocery => {
