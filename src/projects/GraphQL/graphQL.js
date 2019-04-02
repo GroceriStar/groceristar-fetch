@@ -3,7 +3,7 @@ const _ = require('lodash')
 const uuidv1 = require('uuid/v1')
 const dayjs = require('dayjs')
 
-const { sliceArray, __get, __find } = require('../../helper')
+const { __get, __find } = require('../../helper')
 
 const files = { groceristar, groceries, favorites, items, userGrocery } = require('./files')
 
@@ -152,7 +152,7 @@ const getGroceryGraphQLKey = function () {
 const getIngredientsGraphQL = function (limit = false) {
   let results = groceristar.getIngredients()
   if (limit) {
-    results = sliceArray(results, 100)
+    results =  _.slice(results, 100)
   }
 
   return results.map((item, index) => ({

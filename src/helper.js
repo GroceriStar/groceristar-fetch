@@ -9,9 +9,6 @@ const parser = function (file) {
   return file
 }
 
-const sliceArray = (array, number) => {
-  return array.slice(0, number)
-}
 
 // @TODO Arthur have at least 3 different modules, that should replace this method
 // const pathToJson = function () {

@@ -2,7 +2,7 @@ const _ = require('lodash')
 const uuidv1 = require('uuid//v1')
 const dayjs = require('dayjs')
 
-const { __find, sliceArray, __get } = require('../../helper')
+const { __find, __get } = require('../../helper')
 
 const files = {
   ingredients3,
@@ -98,7 +98,8 @@ const getMenuGenerator = (number_of_weeks) => {
 const getNRecipes = (n) => {
   // let recipes = getRecipe()
 
-  return sliceArray(recipes, n)
+  // return sliceArray(recipes, n)
+  return _.slice(recipes, n)
 }
 
 /**

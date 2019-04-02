@@ -45,7 +45,6 @@ export default {
       exclude: [
         'node_modules/**'
         // '/src/data/__tests__'
-        // '/src/data/json-tests'
       ]
     }),
 
