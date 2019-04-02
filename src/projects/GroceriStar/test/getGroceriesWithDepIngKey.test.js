@@ -46,7 +46,7 @@ describe('getGroceriesWithDepIngKey method', () => {
           expect(groceryID).not.toBe(department.id)
 
           // @TODO hmm, i don't like the last expect... so we assuming that ing has groceryid as 0...
-          // it might works, but it's make my шmpression of this `describe` broken
+          // it might works, but it's make my impression of this `describe` broken
           department.ingredients.forEach((ingredient) => {
             expect(groceryID).not.toBe(ingredient[0])
           })
