@@ -2,8 +2,8 @@
 const search = require('../search.js')
 
 describe('testing search getAttribute method', () => {
-  const testAttributes = (attribute) => {
-    test('getAttribute("${attribute}")', () => {
+  const testAttributes = attribute => {
+    test(`getAttribute ${attribute}`, () => {
       var stream = search.getAttribute(attribute)
       expect(stream).not.toBe('')
     })
@@ -18,8 +18,8 @@ describe('testing search getAttribute method', () => {
 })
 
 describe('testing search getPlaceholder method', () => {
-  const testPlaceholders = (attribute) => {
-    test('getPlaceholder("${attribute}")', () => {
+  const testPlaceholders = attribute => {
+    test(`getPlaceholder ${attribute}`), () => {
       var stream = search.getPlaceholder(attribute)
       expect(stream).not.toBe('')
     })

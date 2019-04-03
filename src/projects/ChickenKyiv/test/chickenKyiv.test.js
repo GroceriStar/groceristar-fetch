@@ -5,27 +5,24 @@ const chickenKyiv = require('../chickenKyiv.js')
 // @TODO OK, but i don't like when you put everything in long line inside of your ass @hirdbluebird. Looks not better.
 describe('testing static data files are set', () => {
 
-  test('getRecipes() returns recepie objects', ()=> {
-    expect(chickenKyiv.getRecipes()).not.toBe('')
-  })
-  
-  test('generate basic Weekly Menu objects', () => {
-    expect(chickenKyiv.getMenuGenerator(1)).not.toBe('')
-  })
+  const methodList = {
+    getMenuGenerator: chickenKyiv.getMenuGenerator(1),
+    getRandomRecipe: chickenKyiv.getRandomRecipe(),
+    getRecipeByTitle: chickenKyiv.getRecipeByTitle('Lemonade'),
+    getFiveRandomIngredients: chickenKyiv.getFiveRandomIngredients(),
+    getFirstFiveRecipes: chickenKyiv.getFirstFiveRecipes(),
+  }
 
-  test('fetching random recipe method is set', () => {
-    expect(chickenKyiv.getRandomRecipe()).not.toBe('')
-  })
+  methodReturnsArray = method => {
+    test(`chickenKyiv method ${method} is returning array`, () => {
+      const result = methodList[method]
+      expect(Array.isArray(result)).toBe(true)
+    })
+  }
 
-  test('recipe method getting by Title is set', () => {
-    expect(chickenKyiv.getRecipeByTitle('Lemonade')).not.toBe('')
-  })
-
-  test('getFiveRandomIngredients', () => {
-    expect(chickenKyiv.getFiveRandomIngredients()).not.toBe('')
-  })
-
-  test('getFirstFiveRecipes method', () => {
-    expect(chickenKyiv.getFirstFiveRecipes()).not.toBe('')
-  })
+  methodReturnsArray('getMenuGenerator')
+  methodReturnsArray('getRandomRecipe')
+  methodReturnsArray('getRecipeByTitle')
+  methodReturnsArray('getFiveRandomIngredients')
+  methodReturnsArray('getFirstFiveRecipes')
 })
