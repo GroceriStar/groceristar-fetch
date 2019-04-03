@@ -4,9 +4,9 @@ const chickenKyiv = require('../chickenKyiv.js')
 
 // @TODO OK, but i don't like when you put everything in long line inside of your ass @hirdbluebird. Looks not better.
 describe('testing static data files are set', () => {
-  test('getRecipes', ()=> {
+
+  test('getRecipes() returns recepie objects', ()=> {
     expect(chickenKyiv.getRecipes()).not.toBe('')
-    // console.log(chickenKyiv.getRecipes())
   })
   
   test('generate basic Weekly Menu objects', () => {

@@ -10,6 +10,12 @@ const showcase = require('./projects/Showcase/showcase.js')
 
 describe('testing if methods inside the files are accessible from the outside', () => {
 
+  //Test not required as getRecepie() is obsolete
+    // test('[ChickenKyiv] recipe file is set', () => {
+    //   var stream = chickenKyiv.getRecipe()
+    //   expect(stream).not.toBe('')
+    // })
+
   test('[ChickenKyiv] get recipe by title file is set', () => {
     var stream = chickenKyiv.getRecipeByTitle('Lemonade')
     expect(stream).not.toBe('')
