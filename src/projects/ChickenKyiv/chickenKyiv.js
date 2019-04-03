@@ -73,7 +73,7 @@ const getNRecipes = (n) => {
  * @return {object}       recipe object
  */
 const getRecipeByTitle = (title) => {
-  let recipe; 
+  let recipe
   let recipes = __get(files.recipes)
   // @TODO yeah it works, but if we'll replace it with lodash it'll be better.
   recipe = recipes.filter(recipe => recipe.title === title)

@@ -48,7 +48,7 @@
     "fs": "0.0.2",
     "lodash": "^4.17.10",
     "underscore": "^1.9.1",
-    "uuid": "3.3.2"
+    "uuid": "^3.3.2"
   },
   "description": "npm module required to fetch static data required for recipe search",
   "main": "dist/index.js",
