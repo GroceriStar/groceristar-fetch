@@ -2,7 +2,7 @@ const _ = require('lodash')
 const uuidv1 = require('uuid//v1')
 const dayjs = require('dayjs')
 
-const { __find, sliceArray, __get } = require('../../helper')
+const { __find, __get } = require('../../helper')
 
 const files = {
   ingredients3,
@@ -13,38 +13,6 @@ const files = {
   departments,
   users
 } = require('./files')
-
-// @TODO can we update our methods - but we'll need to go step by step,
-// because these methods used in our react projects.
-// so I propose do it very carefully
-const getIngredients3 = function () {
-  return __get(ingredients3)
-}
-
-const getMenu = function () {
-  return __get(menus)
-}
-
-const getRecipe = function () {
-  return __get(recipes)
-}
-
-const getNutritions1 = function () {
-  return __get(nutritions1)
-}
-
-const getNutritions2 = function () {
-  return __get(nutritions2)
-}
-
-// duplicates from GS
-const getDepartments = function () {
-  return __get(departments)
-}
-
-const getUsers = function () {
-  return __get(users)
-}
 
 // @TODO update this method
 const getFiveRandomId = function () {
@@ -58,7 +26,7 @@ const getFiveRandomId = function () {
 }
 
 const getRecipes = function () {
-  let recipes = getRecipe()
+  let recipes = __get(files.recipes)
   let randomFiveIds = getFiveRandomId()
 
   let result =
@@ -94,11 +62,9 @@ const getMenuGenerator = (number_of_weeks) => {
   return result
 }
 
-// @TODO replace it later. we don't need it after introducing sliceArray method.
+// @TODO replace it later. may need it at helper.js
 const getNRecipes = (n) => {
-  // let recipes = getRecipe()
-
-  return sliceArray(recipes, n)
+  return _.slice(recipes, n)
 }
 
 /**
@@ -106,9 +72,9 @@ const getNRecipes = (n) => {
  * @param  {string} title title of the recipe
  * @return {object}       recipe object
  */
-const getRecipeByTitle = title => {
-  let recipe; let recipes = getRecipe()
-
+const getRecipeByTitle = (title) => {
+  let recipe; 
+  let recipes = __get(files.recipes)
   // @TODO yeah it works, but if we'll replace it with lodash it'll be better.
   recipe = recipes.filter(recipe => recipe.title === title)
   return recipe[0]
@@ -164,21 +130,12 @@ const getFiveRandomIngredients = () => {
 }
 
 module.exports = {
-  getIngredients3,
-  getMenu,
-  getRecipe,
   getNRecipes,
-
   getRecipeByTitle,
   getRandomRecipe,
   getFirstFiveRecipes,
   getFiveRandomIngredients,
-  getNutritions1,
-  getNutritions2,
   getMenuGenerator,
-
-  getDepartments,
-  getUsers,
   getRecipes,
 
   files,

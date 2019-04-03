@@ -1,6 +1,11 @@
 /* global test, describe, it, expect, jest */
 const graphQL = require('../graphQL.js')
 
+// const files = {
+//   // departments, ingredients, users,
+//   groceries
+// } = require('./files')
+
 describe('graphQL methods should return data', () => {
   test('method getDepartmentsGraphQL()', () => {
     var result = graphQL.getDepartmentsGraphQL()
