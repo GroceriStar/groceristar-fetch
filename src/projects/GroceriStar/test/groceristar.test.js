@@ -15,10 +15,9 @@ const GROCERY_COUNT = 28
 const USER_COUNT = 3
 
 describe('testing objects inside groceries', () => {
-
   const groceryHaveProperty = property => {
     test(`Grocery have property ${property}`, () => {
-      groceries.forEach( obj => {
+      groceries.forEach(obj => {
         expect(obj).toHaveProperty(property)
       })
     })
@@ -33,7 +32,7 @@ describe('testing objects inside groceries', () => {
 
   const groceryPropertyContain = (property, type) => {
     test(`Grocery property ${property} contain as data ${type}`, () => {
-        expect(groceries[property]).any(type)
+      expect(groceries[property]).any(type)
     })
   }
 
@@ -188,4 +187,3 @@ describe('Groceristar project methods should return data', () => {
     expect(result.length).toBeGreaterThan(1)
   })
 })
-
