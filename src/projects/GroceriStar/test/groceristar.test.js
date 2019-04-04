@@ -83,7 +83,7 @@ describe('testing objects inside groceries', () => {
 //       })
 //     })
 //   })
-// })
+})
 
 describe('testing objects inside ingredients', () => {
   test("each object have propery 'name'", () => {
@@ -188,3 +188,4 @@ describe('Groceristar project methods should return data', () => {
     expect(result.length).toBeGreaterThan(1)
   })
 })
+
