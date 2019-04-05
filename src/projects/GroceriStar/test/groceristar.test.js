@@ -35,6 +35,7 @@ describe('testing objects inside groceries', () => {
       grocery.forEach( obj => {
         expect(obj[property]).any(type)
       })
+    })
   }
 
   groceryPropertyContain('departments', Array)
@@ -71,79 +72,43 @@ describe('testing objects inside ingredients', () => {
 })
 
 describe('Groceristar project methods should return data', () => {
-  test('method getGroceryByName("Clean Fatiring")', () => {
-    var result = groceristar.getGroceryByName('Clean Fatiring')
-    expect(result).not.toBe('')
-  })
 
-  test('method getGroceryByNameWithDepAndIng("Clean Fatiring")', () => {
-    var result = groceristar.getGroceryByNameWithDepAndIng('Clean Fatiring')
-    expect(result).not.toBe('')
-  })
+  const notEmptyMethodOutput = (method, value) => {
+    test(`Groceristar ${mathod} with input value \'${value}\' return non empty string`, () => {
+      const result = groceristar[method](value)
+      expect(result).not.toBe('')
+    })
+  }
 
-  test('getAllDepartments()', () => {
-    var result = groceristar.getAllDepartments()
-    expect(result).not.toBe('')
-  })
+  notEmptyMethodOutput('getGroceryByName', 'Clean Fatiring')
+  notEmptyMethodOutput('getGroceryByNameWithDepAndIng', 'Clean Fatiring')
+  notEmptyMethodOutput('getAllDepartments')
+  notEmptyMethodOutput('getAllIngredientsByOneDepartment', 'Fresh vegetables')
+  notEmptyMethodOutput('getGroceryListsWithCountDepartments')
+  notEmptyMethodOutput('getAllDepartmentList')
+  notEmptyMethodOutput('getAllIngredientsList', 'Fresh vegetables')
+  notEmptyMethodOutput('getAllGrocery')
+  notEmptyMethodOutput('getGroceryListsByDepartment')
 
-  test('getAllIngredientsByOneDepartment("Fresh vegetables")', () => {
-    var result = groceristar.getAllIngredientsByOneDepartment(
-      'Fresh vegetables'
-    )
-    expect(result).not.toBe('')
-  })
+  const notCaseSensetiveMethod = (method, parameter) => {
+    test(`Method \'${method}\' is not case sensetive with parameter \'${parameter}\'`, () => {
+      const params = [];
+
+      params.push(parameter.toUpperCase())
+      params.push(parameter.toLowerCase())
+      params.push(parameter.charAt(0).toUpperCase() + string.slice(1).toLowerCase())
+
+      params.forEach( param => {
+        const result = groceristar[method](param)
+        expect(result.length).toBeGreaterThan(1)
+      })
+    })
+  }
 
   test('getGroceryById()', () => {
     for (let i = 1; i <= GROCERY_COUNT; i++) {
       var result = groceristar.getGroceryById(i)
       expect(result).not.toBe('')
     }
-  })
-
-  test('getGroceryListsWithCountDepartments()', () => {
-    var result = groceristar.getGroceryListsWithCountDepartments()
-    expect(result).not.toBe('')
-  })
-
-  test('getAllDepartmentList()', () => {
-    var result = groceristar.getAllDepartmentList()
-    expect(result).not.toBe('')
-  })
-
-  test('getAllIngredientsList()', () => {
-    var result = groceristar.getAllIngredientsList('Fresh vegetables')
-    expect(result).not.toBe('')
-  })
-
-  test('getAllGrocery()', () => {
-    var result = groceristar.getAllGrocery()
-    expect(result).not.toBe('')
-  })
-
-  test('getAllGroceryDepartment()', () => {
-    var result = groceristar.getAllGroceryDepartment(groceristar.getDepartments())
-    expect(result).not.toBe('')
-  })
-
-  test('getGroceryListsByDepartment', () => {
-    var result = groceristar.getGroceryListsByDepartment()
-    expect(result).not.toBe('')
-  })
-
-  // @TODO use this case as sample of how duplicates are stored in our datasets.
-  // we have a task for it https://github.com/GroceriStar/groceristar-fetch/issues/157
-  test('getGroceryListsByDepartment to return a grocery list if string is lower case', () => {
-    var result = groceristar.getGroceryListsByDepartment('protein')
-    expect(result.length).toBeGreaterThan(1)
-  })
-
-  test('getGroceryListsByDepartment to return a grocery list if string is upper case', () => {
-    var result = groceristar.getGroceryListsByDepartment('PROTEIN')
-    expect(result.length).toBeGreaterThan(1)
-  })
-
-  test('getGroceryListsByDepartment to return a grocery list if string is capitalised', () => {
-    var result = groceristar.getGroceryListsByDepartment('Protein')
-    expect(result.length).toBeGreaterThan(1)
   })
 })
