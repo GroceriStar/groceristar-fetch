@@ -97,11 +97,12 @@ describe('Groceristar project methods should return data', () => {
     }
   })
 
-
-  test('getGroceryListsByDepartment is returning valid value on different deparyment letter cases', () => {
-    var result = groceristar.getGroceryListsByDepartment('protein')
-    expect(result.length).toBeGreaterThan(1)
-  })
+  const notCaseSensetiveMethod = (method, parameter) => {
+    test(`Method \'${method}\' is not case sensetive with parameter \'${parameter}\'`, () => {
+      const result = groceristar[method](parameter)
+      expect(result.length).toBeGreaterThan(1)
+    })
+  }
 
   // test('getGroceryListsByDepartment to return a grocery list if string is upper case', () => {
   //   var result = groceristar.getGroceryListsByDepartment('PROTEIN')
