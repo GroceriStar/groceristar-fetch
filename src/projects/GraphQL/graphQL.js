@@ -103,8 +103,7 @@ const getDepartmentsGraphQL = function () {
 
     created_at: dayjs().toDate(),
     updated_at: dayjs().toDate()
-    // created_at: Date.now(),
-    // updated_at: Date.now()
+
   }))
 }
 
@@ -135,7 +134,7 @@ const getGroceryGraphQL = function () {
 }
 
 const getGroceryGraphQLKey = function () {
-  let results = groceries;
+  let results = groceries
   return results.map((item, index) => ({
     grocery_id: uuidv1(),
     name: item.name,
@@ -152,7 +151,7 @@ const getGroceryGraphQLKey = function () {
 const getIngredientsGraphQL = function (limit = false) {
   let results = groceristar.getIngredients()
   if (limit) {
-    results =  _.slice(results, 100)
+    results = _.slice(results, 100)
   }
 
   return results.map((item, index) => ({
@@ -171,7 +170,7 @@ const getIngredientsGraphQL = function (limit = false) {
 const getIngredientsGraphQLKey = function (limit = false) {
   let results = groceristar.getIngredients()
   if (limit) {
-    results = sliceArray(results, 100)
+    results = _.slice(results, 100)
   }
 
   return results.map((item, index) => ({

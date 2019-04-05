@@ -2,17 +2,6 @@ const _ = require('lodash')
 const { __get, parser, __find } = require('../../helper')
 const files = { mealCalendar, firstVeganGLMC } = require('./files')
 
-// @TODO can we update our methods - but we'll need to go step by step,
-// because these methods used in our react projects.
-// so I propose do it very carefully
-const getMealCalendar = function () {
-  return __get(mealCalendar)
-}
-
-const getFVGLMC = () => {
-  return __get(firstVeganGLMC)
-}
-
 // module.getDishByDay = function(day, maxDishes = mealCalendar.length) {
 //   return _.filter(parser(mealCalendar), (meal, index) => {
 //     if (index < maxDishes) {
@@ -54,9 +43,6 @@ module.exports = {
   getDishByWeek,
   getDishByMonth,
   getDishByDay,
-  getMealCalendar,
-  getFVGLMC,
-
   __find,
   files
 }
