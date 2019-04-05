@@ -11,7 +11,7 @@ describe('getGroceriesWithDepIngKey method', () => {
   const groceryHasProperty = property => {
     test(`Grocery property ${property}`, () => {
       const result = mainGroceries[property]
-      expect(Array.isArray(result)).toBe(true)
+      expect(result).is(Array)
     })
   }
 
@@ -21,9 +21,9 @@ describe('getGroceriesWithDepIngKey method', () => {
   groceryHasProperty('departments')
 
   const groceryDepartmentHasProperty = property => {
-    test(`Grocery departments has property ${property}`), () => {
+    test(`Grocery departments has property ${property}`, () => {
       const result = mainGroceries.departments[property]
-      expect(Array.isArray(result).toBe(true))
+      expect(result).is(Array)
     }
   }
 
