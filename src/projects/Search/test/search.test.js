@@ -18,8 +18,9 @@ describe('testing search getAttribute method', () => {
 })
 
 describe('testing search getPlaceholder method', () => {
+
   const testPlaceholders = attribute => {
-    test(`getPlaceholder ${attribute}`), () => {
+    test(`getPlaceholder ${attribute}`, () => {
       var stream = search.getPlaceholder(attribute)
       expect(stream).not.toBe('')
     })

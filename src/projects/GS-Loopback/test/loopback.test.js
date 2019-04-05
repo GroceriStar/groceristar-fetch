@@ -16,4 +16,9 @@ describe('testing static data files returns array', () => {
     var result = loopback.getIngredientsSampleFromDB()
     expect(result).not.toBe('')
   })
+
+  test('getUserObject method should return some data', () => {
+    var result = loopback.getUserObject('John')
+    expect(result).not.toBe('')
+  })
 })

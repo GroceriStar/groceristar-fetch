@@ -38,6 +38,8 @@ const proceedData = (array) => {
 
 // return data, related to recipe attributes by name of attribute(read category of meal)
 // maybe it's better to name it getAttributeData....
+// @TODO do we need this method? let's compare of what we'll have with select field and decide.
+// Looks like right now it's not very necessary, or can be improved
 const getAttribute = function (attribute) {
   switch (attribute) {
     case 'allergies':
@@ -194,7 +196,7 @@ const getData = (value, type = 'attribute') => {
 }
 
 module.exports = {
-  // getRawFiles,
+
   __find,
   files,
 

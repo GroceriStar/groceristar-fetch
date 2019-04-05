@@ -15,10 +15,9 @@ const GROCERY_COUNT = 28
 const USER_COUNT = 3
 
 describe('testing objects inside groceries', () => {
-
   const groceryHaveProperty = property => {
     test(`Grocery have property ${property}`, () => {
-      groceries.forEach( obj => {
+      groceries.forEach(obj => {
         expect(obj).toHaveProperty(property)
       })
     })
@@ -36,7 +35,6 @@ describe('testing objects inside groceries', () => {
       grocery.forEach( obj => {
         expect(obj[property]).any(type)
       })
-    })
   }
 
   groceryPropertyContain('departments', Array)

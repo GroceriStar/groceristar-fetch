@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/groceristar-fetch",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "scripts": {
     "test": "jest",
     "test:prod": "standard && jest",
@@ -25,7 +25,7 @@
     "@babel/core": "^7.4.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.1",
-    "babel-core": "^6.26.3",
+    "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^24.5.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "coveralls": "^3.0.3",
@@ -43,12 +43,12 @@
     "travis": "^0.1.1"
   },
   "dependencies": {
-    "@groceristar/sd-wrapper": "^2.0.8",
+    "@groceristar/sd-wrapper": "^2.0.9",
     "dayjs": "^1.8.0",
     "fs": "0.0.2",
     "lodash": "^4.17.10",
     "underscore": "^1.9.1",
-    "uuid": "3.3.2"
+    "uuid": "^3.3.2"
   },
   "description": "npm module required to fetch static data required for recipe search",
   "main": "dist/index.js",

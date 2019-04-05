@@ -1,4 +1,7 @@
-const path = require('path')
+// const path = require('path')
+// const uuidv1 = require('uuid/v1')
+// const dayjs = require('dayjs')
+
 const _ = require('lodash')
 
 // main reason for having this file, because i'm trying to move away repetetive functions
@@ -23,6 +26,19 @@ const __find = (alias, files) => {
   // console.log(alias);
   // console.log(result);
   return __get(result)
+}
+
+// function that will improve work with uuid id generator
+const __generateId = () => {
+  // uuidv1()
+  // return ''
+}
+
+//@TODO can be one method with different types.
+const __generateDate = () => {
+  // dayjs().toDate()
+  // return ''
+
 }
 
 module.exports = {
