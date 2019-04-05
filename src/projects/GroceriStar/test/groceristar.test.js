@@ -90,27 +90,25 @@ describe('Groceristar project methods should return data', () => {
   notEmptyMethodOutput('getAllGrocery')
   notEmptyMethodOutput('getGroceryListsByDepartment')
 
+  const notCaseSensetiveMethod = (method, parameter) => {
+    test(`Method \'${method}\' is not case sensetive with parameter \'${parameter}\'`, () => {
+      const params = [];
+
+      params.push(parameter.toUpperCase())
+      params.push(parameter.toLowerCase())
+      params.push(parameter.charAt(0).toUpperCase() + string.slice(1).toLowerCase())
+
+      params.forEach( param => {
+        const result = groceristar[method](param)
+        expect(result.length).toBeGreaterThan(1)
+      })
+    })
+  }
+
   test('getGroceryById()', () => {
     for (let i = 1; i <= GROCERY_COUNT; i++) {
       var result = groceristar.getGroceryById(i)
       expect(result).not.toBe('')
     }
   })
-
-  const notCaseSensetiveMethod = (method, parameter) => {
-    test(`Method \'${method}\' is not case sensetive with parameter \'${parameter}\'`, () => {
-      const result = groceristar[method](parameter)
-      expect(result.length).toBeGreaterThan(1)
-    })
-  }
-
-  // test('getGroceryListsByDepartment to return a grocery list if string is upper case', () => {
-  //   var result = groceristar.getGroceryListsByDepartment('PROTEIN')
-  //   expect(result.length).toBeGreaterThan(1)
-  // })
-  //
-  // test('getGroceryListsByDepartment to return a grocery list if string is capitalised', () => {
-  //   var result = groceristar.getGroceryListsByDepartment('Protein')
-  //   expect(result.length).toBeGreaterThan(1)
-  // })
 })
