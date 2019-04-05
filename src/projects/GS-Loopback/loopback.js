@@ -1,6 +1,7 @@
 const _ = require('lodash')
 // const fs = require('fs')
 const uuidv1 = require('uuid/v1')
+const dayjs = require('dayjs')
 
 const { __get } = require('../../helper')
 
@@ -81,10 +82,42 @@ const getIngredientsSampleFromDB = () => {
 //   return result;
 // }
 
+const getUserObject = function(name) {
+  var userObj = {
+    "name": name,
+    "img": "false",
+    "desc": "false",
+    "slug": "false",
+    "created_at": dayjs().format(),
+    "updated_at": dayjs().format(),
+    "id": uuidv1(),
+    "hideThisIds": [],
+    "purchasedIds": [],
+    "ingredientIds": []
+  }
+  const hideIdsCount = Math.floor(Math.random() * 5)
+  const purchasedIdsCount = Math.floor(Math.random() * 10)
+  const ingredientIdsCount = Math.floor(Math.random() * 50)
+
+  for (let i = 0; i < 50; i++) {
+    if (i < hideIdsCount) {
+      userObj.hideThisIds[i] = uuidv1()
+    }
+    if (i < purchasedIdsCount) {
+      userObj.purchasedIds[i] = uuidv1()
+    }
+    if (i < ingredientIdsCount) {
+      userObj.ingredientIds[i] = uuidv1()
+    }
+  }
+  return userObj;
+}
+
 module.exports = {
   getUltimateGrocery,
   getGLwithUserRelations,
 
+  getUserObject,
   getIngredientsSampleFromDB
 
 }
