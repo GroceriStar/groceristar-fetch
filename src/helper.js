@@ -29,13 +29,13 @@ const __find = (alias, files) => {
 }
 
 // function that will improve work with uuid id generator
-const __generateId(){
+const __generateId = () => {
   // uuidv1()
   // return ''
 }
 
 //@TODO can be one method with different types.
-const __generateDate(){
+const __generateDate = () => {
   // dayjs().toDate()
   // return ''
 
