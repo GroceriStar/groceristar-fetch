@@ -66,46 +66,22 @@ const getFormattedAttributes = function (attribute) {
 }
 
 const getPlaceholder = function (attribute, flag = false) {
-  if (attribute == 'allergy') {
-    return 'Allergies'
+  switch (attribute) {
+    case 'allergies':
+      return parser(allergies);
+    case 'cuisines':
+      return parser(cuisines);
+    case 'courses':
+      return parser(courses);
+    case 'holidays':
+      return parser(holidays);
+      break;
+    case 'diets':
+      return parser(diets);
+    case 'ingredient':
+      return (flag) ? 'Ingredients you have' : "Ingredients you don't have"
+    default: return "Incorrect attribute or empty argument"
   }
-  if (attribute == 'diets') {
-    return 'Specific Diets'
-  }
-  if (attribute == 'cuisine') {
-    return 'Specific Cuisine '
-  }
-  if (attribute == 'course') {
-    return 'Course'
-  }
-  if (attribute == 'holidays') {
-    return 'Holiday'
-  }
-  // case for ingredients, not for attributes...
-  if (attribute == 'ingredient') {
-    return (flag) ? 'Ingredients you have' : "Ingredients you don't have"
-  }
-
-  // @TODO use this instead of ifs
-  // switch (attribute) {
-  //   case 'allergies':
-  //     return parser(allergies);
-  //     break;
-  //   case 'cuisines':
-  //     return parser(cuisines);
-  //     break;
-  //   case 'courses':
-  //     return parser(courses);
-  //     break;
-  //   case 'holidays':
-  //     return parser(holidays);
-  //     break;
-  //   case 'diets':
-  //     return parser(diets);
-  //     break;
-  //
-  //   default: return "Incorrect attribute or empty argument";
-  // }
 }
 
 // @TODO update method too
