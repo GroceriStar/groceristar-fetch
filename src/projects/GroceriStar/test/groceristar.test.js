@@ -73,9 +73,9 @@ describe('testing objects inside ingredients', () => {
 
 describe('Groceristar project methods should return data', () => {
 
-  const notEmptyMethodOutput = (method, value) => {
-    test(`Groceristar ${mathod} with input value \'${value}\' return non empty string`, () => {
-      const result = groceristar[method](value)
+  const notEmptyMethodOutput = (method, parameter) => {
+    test(`Groceristar ${method} with input value \'${parameter}\' return non empty string`, () => {
+      const result = groceristar[method](parameter)
       expect(result).not.toBe('')
     })
   }
