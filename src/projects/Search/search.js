@@ -1,9 +1,7 @@
 const _ = require('lodash')
-const uuidv1 = require('uuid/v1')
+// const uuidv1 = require('uuid/v1')
 
-const {
-  pathToJson, __get, __find
-} = require('../../helper')
+const { pathToJson, __get, __find, __generateId } = require('../../helper')
 
 const files = {
   allergies,
@@ -137,7 +135,7 @@ const toOpt = function (data) {
       label,
       disabled
     }) => ({
-      key: uuidv1(),
+      key: __generateId(),
       value,
       label,
       disabled: (disabled) || false
@@ -167,7 +165,7 @@ const toOptAntD = (data) => {
       label,
       disabled
     }) => ({
-      key: uuidv1(),
+      key: __generateId(),
       value,
       label,
       isDisabled: (disabled) || false
