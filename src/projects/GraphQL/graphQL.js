@@ -1,8 +1,5 @@
 const _ = require('lodash')
 
-// const uuidv1 = require('uuid/v1')
-// const dayjs = require('dayjs')
-
 const { __get, __find, __generateId, __generateDate } = require('../../helper')
 
 const files = { groceristar, groceries, favorites, items, userGrocery } = require('./files')
