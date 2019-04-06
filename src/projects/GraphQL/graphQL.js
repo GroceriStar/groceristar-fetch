@@ -1,9 +1,6 @@
 const _ = require('lodash')
 
-const uuidv1 = require('uuid/v1')
-const dayjs = require('dayjs')
-
-const { __get, __find } = require('../../helper')
+const { __get, __find, __generateId, __generateDate } = require('../../helper')
 
 const files = { groceristar, groceries, favorites, items, userGrocery } = require('./files')
 
@@ -44,7 +41,7 @@ const getFavoritesGraphQLKey = function () {
 
   return _.map(favorites, (favorite, index) => {
     return {
-      key: uuidv1(),
+      key: __generateId(),
       ...favorite
     }
   })
@@ -66,7 +63,7 @@ const getItemsGraphQLKey = function () {
 
   return _.map(items, (item, index) => {
     return {
-      key: uuidv1(),
+      key: __generateId(),
       ...item
     }
   })
@@ -88,7 +85,7 @@ const getUserGroceryGraphQLKey = function () {
 
   return _.map(userGroceries, (userGrocery, index) => {
     return {
-      key: uuidv1(),
+      key: __generateId(),
       ...userGrocery
     }
   })
@@ -100,21 +97,19 @@ const getDepartmentsGraphQL = function () {
     department_id: ++index,
     name: item.name,
     desc: 'description for department1',
-
-    created_at: dayjs().toDate(),
-    updated_at: dayjs().toDate()
-
+    created_at: __generateDate(),
+    updated_at: __generateDate()
   }))
 }
 
 const getDepartmentsGraphQLKey = function () {
   let results = groceristar.getDepartments()
   return results.map((item, index) => ({
-    department_id: uuidv1(),
+    department_id: __generateId(),
     name: item.name,
     desc: 'description for department1',
-    created_at: dayjs().toDate(),
-    updated_at: dayjs().toDate()
+    created_at: __generateDate(),
+    updated_at: __generateDate()
   }))
 }
 
@@ -126,8 +121,8 @@ const getGroceryGraphQL = function () {
     img: item.img,
     desc: item.desc,
     slug: item.slug,
-    created_at: dayjs().toDate(),
-    updated_at: dayjs().toDate(),
+    created_at: __generateDate(),
+    updated_at: __generateDate(),
     id_1: 1,
     favs: false
   }))
@@ -136,13 +131,13 @@ const getGroceryGraphQL = function () {
 const getGroceryGraphQLKey = function () {
   let results = groceries
   return results.map((item, index) => ({
-    grocery_id: uuidv1(),
+    grocery_id: __generateId(),
     name: item.name,
     img: item.img,
     desc: item.desc,
     slug: item.slug,
-    created_at: dayjs().toDate(),
-    updated_at: dayjs().toDate(),
+    created_at: __generateDate(),
+    updated_at: __generateDate(),
     id_1: 1,
     favs: false
   }))
@@ -160,8 +155,8 @@ const getIngredientsGraphQL = function (limit = false) {
     name: item.name,
     description: 'description',
     custom: false,
-    created_at: dayjs().toDate(),
-    updated_at: dayjs().toDate(),
+    created_at: __generateDate(),
+    updated_at: __generateDate(),
     id_1: 1,
     department_id: 1
   }))
@@ -174,13 +169,13 @@ const getIngredientsGraphQLKey = function (limit = false) {
   }
 
   return results.map((item, index) => ({
-    ingredient_id: uuidv1(),
+    ingredient_id: __generateId(),
     favs: '',
     name: item.name,
     description: 'description',
     custom: false,
-    created_at: dayjs().toDate(),
-    updated_at: dayjs().toDate(),
+    created_at: __generateDate(),
+    updated_at: __generateDate(),
     id_1: 1,
     department_id: 1
   }))
@@ -199,7 +194,7 @@ const getUsersGraphQL = function () {
 const getUsersGraphQLKey = function () {
   let results = groceristar.getUsers()
   return results.map((item, index) => ({
-    userId: uuidv1(),
+    userId: __generateId(),
     favs: false,
     ingredient_id: 1,
     grocery_id: 1

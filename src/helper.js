@@ -1,6 +1,6 @@
 // const path = require('path')
-// const uuidv1 = require('uuid/v1')
-// const dayjs = require('dayjs')
+const uuidv1 = require('uuid/v1')
+const dayjs = require('dayjs')
 
 const _ = require('lodash')
 
@@ -30,20 +30,19 @@ const __find = (alias, files) => {
 
 // function that will improve work with uuid id generator
 const __generateId = () => {
-  // uuidv1()
-  // return ''
+  return uuidv1();
 }
 
 //@TODO can be one method with different types.
 const __generateDate = () => {
-  // dayjs().toDate()
-  // return ''
-
+  return dayjs().toDate()
 }
 
 module.exports = {
   parser,
   __l,
   __find,
-  __get
+  __get,
+  __generateId,
+  __generateDate,
 }

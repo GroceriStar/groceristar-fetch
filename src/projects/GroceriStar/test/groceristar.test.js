@@ -3,7 +3,7 @@ const groceristar = require('../groceristar.js')
 
 const files = {
   departments, ingredients, users, groceries
-} = require('./files')
+} = require('../files')
 
 // @TODO separate methods, related to different datasets.
 // So methods related to ingredients should have a
