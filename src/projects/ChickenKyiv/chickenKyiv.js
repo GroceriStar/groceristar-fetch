@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const uuidv1 = require('uuid//v1')
-const dayjs = require('dayjs')
+const dayjs = require('dayjs') //@TODO delete both of imports, we use methods from helpers now
 
 const { __find, __get, __generateDate } = require('../../helper')
 
@@ -36,7 +36,7 @@ const getRecipes = function () {
           ...recipe,
           created_at: __generateDate(),
           updated_at: __generateDate(),
-          id: uuidv1(),
+          id: uuidv1(), // @TODO replace with a new method
           ingredients: randomFiveIds,
           diets: randomFiveIds,
           courses: randomFiveIds,
