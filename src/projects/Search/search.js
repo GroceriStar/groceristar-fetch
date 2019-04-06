@@ -1,7 +1,7 @@
 const _ = require('lodash')
 // const uuidv1 = require('uuid/v1')
 
-const { pathToJson, __get, __find, __generateId } = require('../../helper')
+const { __get, __find, __generateId } = require('../../helper')
 
 const files = {
   allergies,
@@ -198,7 +198,6 @@ module.exports = {
   __find,
   files,
 
-  pathToJson,
   proceedData,
   getAttribute,
   getFormattedAttributes,
