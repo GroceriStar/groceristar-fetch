@@ -2,7 +2,7 @@ const _ = require('lodash')
 const uuidv1 = require('uuid//v1')
 const dayjs = require('dayjs')
 
-const { __find, __get } = require('../../helper')
+const { __find, __get, __generateDate } = require('../../helper')
 
 const files = {
   ingredients3,
@@ -34,8 +34,8 @@ const getRecipes = function () {
         // console.log(ingredientsId);
         return {
           ...recipe,
-          created_at: Date(), // @TODO we have a module day.js use it instead
-          updated_at: Date(), // @TODO we have a module day.js use it instead
+          created_at: __generateDate(),
+          updated_at: __generateDate(),
           id: uuidv1(),
           ingredients: randomFiveIds,
           diets: randomFiveIds,
