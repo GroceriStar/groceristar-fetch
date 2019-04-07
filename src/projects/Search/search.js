@@ -68,16 +68,15 @@ const getFormattedAttributes = function (attribute) {
 const getPlaceholder = function (attribute, flag = false) {
   switch (attribute) {
     case 'allergies':
-      return parser(allergies);
+      return 'allergies'
     case 'cuisines':
-      return parser(cuisines);
+      return 'cuisines'
     case 'courses':
-      return parser(courses);
+      return 'courses'
     case 'holidays':
-      return parser(holidays);
-      break;
+      return 'holidays'
     case 'diets':
-      return parser(diets);
+      return 'diets'
     case 'ingredient':
       return (flag) ? 'Ingredients you have' : "Ingredients you don't have"
     default: return "Incorrect attribute or empty argument"
