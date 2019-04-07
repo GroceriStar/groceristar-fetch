@@ -80,12 +80,9 @@ const getRecipeByTitle = (title) => {
  * Fetches random recipe
  * @return {object} recipe object
  */
-// @TODO i don't like this long stuff....
-const getRandomRecipe = (n = 1) => {
-  let recipes = getNRecipes(20)
-  // const randomInt = Math.floor(Math.random() * (recipes.length - 1))
-  return _.sampleSize(recipes, n)
-}
+
+const getRandomRecipe = (n = 1) => _.sampleSize(getNRecipes(20), n)
+
 
 /**
  * Fetches first five recipes
