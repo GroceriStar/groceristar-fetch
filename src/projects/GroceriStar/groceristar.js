@@ -9,6 +9,7 @@ const files = {
 } = require('./files')
 
 // @TODO can we update our methods - but we'll need to go step by step,
+// don't worry, will update @hirdbluebird
 // because these methods used in our react projects.
 // so I propose do it very carefully
 const getIngredients = function () {
