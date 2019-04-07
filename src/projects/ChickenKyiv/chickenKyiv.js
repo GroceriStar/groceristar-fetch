@@ -1,8 +1,8 @@
 const _ = require('lodash')
 const uuidv1 = require('uuid//v1')
-const dayjs = require('dayjs')
+const dayjs = require('dayjs') //@TODO delete both of imports, we use methods from helpers now
 
-const { __find, __get } = require('../../helper')
+const { __find, __get, __generateDate } = require('../../helper')
 
 const files = {
   ingredients3,
@@ -34,9 +34,9 @@ const getRecipes = function () {
         // console.log(ingredientsId);
         return {
           ...recipe,
-          created_at: Date(), // @TODO we have a module day.js use it instead
-          updated_at: Date(), // @TODO we have a module day.js use it instead
-          id: uuidv1(),
+          created_at: __generateDate(),
+          updated_at: __generateDate(),
+          id: uuidv1(), // @TODO replace with a new method
           ingredients: randomFiveIds,
           diets: randomFiveIds,
           courses: randomFiveIds,
@@ -73,11 +73,9 @@ const getNRecipes = (n) => {
  * @return {object}       recipe object
  */
 const getRecipeByTitle = (title) => {
-  let recipe
   let recipes = __get(files.recipes)
-  // @TODO yeah it works, but if we'll replace it with lodash it'll be better.
-  recipe = recipes.filter(recipe => recipe.title === title)
-  return recipe[0]
+
+  return _.filter(recipes, recipe => recipe.title === title)[0]
 }
 
 /**
@@ -107,27 +105,10 @@ const getFirstFiveRecipes = () => {
   return result
 }
 
-// @TODO there should be another way to do this. less complitated at least
-const getFiveRandomIngredients = () => {
-  // let recipes = getRecipe()
-  let recipes = getRandomRecipe(5)
-  let result = []
-  // let random_key = -1
-  let countIngredients = 5
-
-  // @TODO replace with a map functions
-  for (var i = 0; i < countIngredients; i++) {
-    // random_key = Math.floor(Math.random() * 101)
-
-    let ingredient = {
-      'id': uuidv1(),
-      // 'ingredient': recipes[random_key]['ingredients']
-      'ingredient': recipes[i]['ingredients']
-    }
-    result.push(ingredient)
-  }
-  return result
-}
+const getFiveRandomIngredients = () => _.map(getRandomRecipe(5), (recipe)=> ({
+  'id': uuidv1(),
+  'ingredient': recipe['ingredients']
+}));
 
 module.exports = {
   getNRecipes,
