@@ -1,8 +1,7 @@
 const _ = require('lodash')
 const fs = require('fs')
-const uuidv1 = require('uuid/v1')
 
-const { __get, __find, __l } = require('../../helper')
+const { __get, __find, __l, __generateId } = require('../../helper')
 
 const files = {
   departments, ingredients, users, groceries
@@ -94,7 +93,7 @@ const getGroceriesWithDepIngKey = function () {
 
   let result = _.map(groceries, function (grocery) {
     // @TODO change variable name
-    // grocery.id = uuidv1();
+    // grocery.id = __generateId()
     // grocery.departments = groceryDepIng;
     return getGroceryByNameWithDepAndIngKey(grocery.name)
   })
@@ -104,7 +103,7 @@ const getGroceriesWithDepIngKey = function () {
 
 const getGroceryByNameWithDepAndIngKey = function (name) {
 
-  let groceryId = uuidv1()
+  let groceryId = __generateId()
 
   let grocery = _.filter(groceries,
     item => {
@@ -115,7 +114,7 @@ const getGroceryByNameWithDepAndIngKey = function (name) {
   // @TODO this is not a clean turn around for this method
   grocery[0]['departments'].forEach(
     function (department) {
-      let departmentId = uuidv1()
+      let departmentId = __generateId()
       let departmentType = ''
 
       // @TODO i don't like that we're searching for things by names,
@@ -155,7 +154,7 @@ const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
     })
 
   return _.map(ingredientsList, item => {
-    let ingredientId = uuidv1()
+    let ingredientId = __generateId()
 
     return [
       ingredientId,
@@ -250,7 +249,7 @@ const getKeyArrayDepAndIng = function () {
 const getAllDepartmentList = function () {
 
   return _.map(departments, item => ({
-    key: uuidv1(),
+    key: __generateId(),
     departmentName: item
   }))
 }
@@ -260,7 +259,7 @@ const getAllIngredientsWithId = function () {
 
   let result = _.map(ingredients, function (ingredient) {
     return {
-      key: uuidv1(),
+      key: __generateId(),
       ...ingredient
     }
   })
@@ -274,7 +273,7 @@ const getAllDepartmentsWithId = function () {
 
   let result = _.map(departments, function (department) {
     return {
-      key: uuidv1(),
+      key: __generateId(),
       ...department
     }
   })
@@ -287,10 +286,10 @@ const getAllIngredientsList = function (department) {
   const ingredients = this.getAllIngredientsByOneDepartment(department)
 
   return ingredients.map(item => ({
-    key: uuidv1(),
+    key: __generateId(),
     name: item,
     isChecked: false,
-    departmentID: uuidv1(),
+    departmentID: __generateId(),
     order: 0
   }))
 }
@@ -298,14 +297,14 @@ const getAllIngredientsList = function (department) {
 const getAllGrocery = function () {
 
   return _.map(groceries, item => ({
-    key: uuidv1(),
+    key: __generateId(),
     ...item
   }))
 }
 
 const getAllGroceryDepartment = function (departmentArray) {
   const departmentArrayObject = departmentArray.map(item => ({
-    key: uuidv1(),
+    key: __generateId(),
     departmentName: item,
     isChecked: false
   }))
