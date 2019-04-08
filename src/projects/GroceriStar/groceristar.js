@@ -31,12 +31,12 @@ const getUsers = function () {
 const getGroceryById = function (id) {
   return [ _.find(groceries, ['id', id]) ]
 }
-
+const filterGroceriesByName = (groceries, name) => _.filter(groceries, (item) => {
+  return item.name === name
+})
 const getGroceryByName = function (name) {
 
-  return _.filter(groceries, function (item) {
-    return item.name === name
-  })
+  return filterGroceriesByName(groceries, name)
 }
 
 // @TODO we spot the same problem twice. It's a regression error.
@@ -50,10 +50,7 @@ const getGroceryByNameWithDepAndIng = function (name) {
   // @TODO maybe we shall move this function away. OR have another method, not getGrocery, that will repack things as we need it here....
   // we did few times a similar manipulations
   // for example, first step will be to use this: getGroceryByName
-  let NEW_grocerieszzz = _.filter(groceries,
-    item => {
-      return item.name === name
-    })
+  let NEW_grocerieszzz = filterGroceriesByName(groceries, name)
 
   // let zizua = getGroceryByName(name);
   // let result = []
@@ -105,10 +102,7 @@ const getGroceryByNameWithDepAndIngKey = function (name) {
 
   let groceryId = __generateId()
 
-  let grocery = _.filter(groceries,
-    item => {
-      return item.name === name
-    })
+  let grocery = filterGroceriesByName(groceries, name);
 
   let result = []
   // @TODO this is not a clean turn around for this method
@@ -148,10 +142,12 @@ const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
   let ingredients = getIngredients()
 
   // @TODO it looks like a separated method for me
-  var ingredientsList =
-    _.filter(ingredients, function (item) {
-      return item.department === department
-    })
+  // var ingredientsList =
+  //   _.filter(ingredients, function (item) {
+  //     return item.department === department
+  //   })
+
+  let ingredientsList = filterIngrListByDep(ingredients,department)
 
   return _.map(ingredientsList, item => {
     let ingredientId = __generateId()
@@ -165,7 +161,9 @@ const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
 }
 
 // -----------------------------------
-
+const filterIngrListByDep = (ingredients, department)=> _.filter(ingredients,  item => {
+  return item.department === department
+})
 // strange turnaround. @TODO can we
 const getGroceryListsWithCountDepartments = function () {
 
@@ -194,10 +192,8 @@ const getAllDepartments = function () {
 const getAllIngredientsByOneDepartment = function (department) {
   let ingredients = getIngredients()
 
-  var ingredientsList =
-    _.filter(ingredients, function (item) {
-      return item.department === department
-    })
+  let ingredientsList = filterIngrListByDep(ingredients,department)
+
   return _.map(ingredientsList, 'name')
 }
 
