@@ -4,17 +4,9 @@ const uuidv1 = require('uuid/v1')
 
 const { __get, __find, __l } = require('../../helper')
 
-// const files = require('./files')
-
 const files = {
   departments, ingredients, users, groceries
 } = require('./files')
-
-// @TODO this is because we're changing the grocery file.
-// But right now it might not work well, so we need to address that later
-// let { groceries } = require('./files')
-
-// __l(groceries);
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // because these methods used in our react projects.
@@ -33,17 +25,15 @@ const getUsers = function () {
   return __get(users)
 }
 
-const getDepartments = function () {
-  return __get(departments)
-}
+// const getDepartments = function () {
+//   return __get(departments)
+// }
 
 const getGroceryById = function (id) {
-  // let groceries = getGrocery()
   return [ _.find(groceries, ['id', id]) ]
 }
 
 const getGroceryByName = function (name) {
-  // let groceries = getGrocery()
 
   return _.filter(groceries, function (item) {
     return item.name === name
@@ -54,7 +44,7 @@ const getGroceryByName = function (name) {
 // we need to address that. And i think it's a good candidate for test coverage + adding raven.
 // @TODO second issue - i don't like that. looks not fancy.
 const getGroceryByNameWithDepAndIng = function (name) {
-  // let grocerieszzz = getGrocery()
+
   // let list = getGrocery()
   // __l(grocerieszzz);
 
@@ -101,7 +91,6 @@ const getGroceryByNameWithDepAndIng = function (name) {
 // -----------------------------------
 
 const getGroceriesWithDepIngKey = function () {
-  // let groceries = getGrocery()
 
   let result = _.map(groceries, function (grocery) {
     // @TODO change variable name
@@ -114,7 +103,7 @@ const getGroceriesWithDepIngKey = function () {
 }
 
 const getGroceryByNameWithDepAndIngKey = function (name) {
-  // let groceries = getGrocery()
+
   let groceryId = uuidv1()
 
   let grocery = _.filter(groceries,
@@ -131,7 +120,7 @@ const getGroceryByNameWithDepAndIngKey = function (name) {
 
       // @TODO i don't like that we're searching for things by names,
       // we need to replace it later with separated methods that will assign items between files via id
-      let dep = _.find(getDepartments(), (o) => {
+      let dep = _.find(departments, (o) => {
         return o.name === department
       })
 
@@ -180,7 +169,6 @@ const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
 
 // strange turnaround. @TODO can we
 const getGroceryListsWithCountDepartments = function () {
-  // let groceries = getGrocery()
 
   return _.map(groceries, item => {
     const object = {
@@ -215,7 +203,7 @@ const getAllIngredientsByOneDepartment = function (department) {
 }
 
 const getCountIngOfDepartment = function () {
-  let departments = getDepartments()
+  // let departments = getDepartments()
   let result = _.map(departments, function (department) {
     let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name)
     return {
@@ -260,7 +248,6 @@ const getKeyArrayDepAndIng = function () {
 // --------------------------------------------
 
 const getAllDepartmentList = function () {
-  // let departments = getDepartments()
 
   return _.map(departments, item => ({
     key: uuidv1(),
@@ -284,7 +271,6 @@ const getAllIngredientsWithId = function () {
 // @TODO we need to figure out why we have this method and getAllDepartmentList
 // i assume we using them in different react projects.
 const getAllDepartmentsWithId = function () {
-  // let departments = getDepartments()
 
   let result = _.map(departments, function (department) {
     return {
@@ -310,7 +296,7 @@ const getAllIngredientsList = function (department) {
 }
 
 const getAllGrocery = function () {
-  // let groceries = getGrocery()
+
   return _.map(groceries, item => ({
     key: uuidv1(),
     ...item
@@ -337,11 +323,11 @@ const createNewGroceryList = function (newDepartment) {
 
 // TODO OMG, this method looks so sad...
 const getGroceryListsByDepartment = department => {
-  // let parsedGroceries = getGrocery()
+
 
   let groceryList = []
   if (department) {
-    // what we're doing? camelCase? explain
+    // what we're doing? camelCase? explain @TODO
     capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1)
     groceries.map(grocery => {
       if (grocery.departments.includes(department.toLowerCase()) ||
@@ -361,7 +347,7 @@ const getGroceryListsByDepartment = department => {
 
 // @TODO should work now.
 function newGroceryList (newDepartment) {
-  let groceries = getGrocery()
+
   const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json')
   const newGrocery = [ ...groceries, newDepartment ]
 
@@ -373,7 +359,7 @@ module.exports = {
   getIngredients,
   // getGrocery,
   getUsers,
-  getDepartments,
+  // getDepartments,
   getGroceryById,
   getGroceryByName,
   getGroceryByNameWithDepAndIng,

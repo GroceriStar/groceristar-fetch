@@ -14,7 +14,7 @@ const files = {
   users
 } = require('./files')
 
-// @TODO update this method
+// @TODO update this method, use stuff from helper.js
 const getFiveRandomId = function () {
   return [
     uuidv1(),
@@ -53,9 +53,9 @@ const getRecipes = function () {
 const getMenuGenerator = (number_of_weeks) => {
   let result
   result = _.times(number_of_weeks, (index) => ({
-    id: uuidv1(),
+    id: uuidv1(), //@TODO replace!
     title: 'Weekly menu #${index}',
-    date: dayjs().toDate(),
+    date: dayjs().toDate(), //@TODO replace!
     description: 'description for Weekly menu #${index}',
     notes: 'This is a chef notes for wm #${index}'
   }))
@@ -82,10 +82,8 @@ const getRecipeByTitle = (title) => {
  * Fetches random recipe
  * @return {object} recipe object
  */
-// @TODO i don't like this long stuff....
 const getRandomRecipe = (n = 1) => {
   let recipes = getNRecipes(20)
-  // const randomInt = Math.floor(Math.random() * (recipes.length - 1))
   return _.sampleSize(recipes, n)
 }
 
@@ -98,17 +96,20 @@ const getFirstFiveRecipes = () => {
   let recipes = getNRecipes(5)
 
   let result = _.map(recipes, item => ({
-    key: uuidv1(),
+    key: uuidv1(), //@TODO replace!
     recipe: item
   }))
 
   return result
 }
 
-const getFiveRandomIngredients = () => _.map(getRandomRecipe(5), (recipe)=> ({
-  'id': uuidv1(),
+const getFiveRandomIngredients = () => {
+  let result = _.map(getRandomRecipe(5), (recipe)=> ({
+  'id': uuidv1(), //@TODO replace and make look similar. bad style
   'ingredient': recipe['ingredients']
 }));
+return result;
+}
 
 module.exports = {
   getNRecipes,

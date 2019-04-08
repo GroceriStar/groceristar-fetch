@@ -2,31 +2,20 @@ const _ = require('lodash')
 
 const { __get, __find, __generateId, __generateDate } = require('../../helper')
 
-const files = { groceristar, groceries, favorites, items, userGrocery } = require('./files')
+const files = {
+  groceristar, groceries,
+  favorites, items, userGrocery
+} = require('./files')
 
 // @TODO return measurements
 
-// @TODO can we update our methods - but we'll need to go step by step,
-// because these methods used in our react projects.
-// so I propose do it very carefully
-const getFavorites = function () {
-  return __get(favorites)
-}
-
-const getItems = function () {
-  return __get(items)
-}
-
-const getUserGrocery = function () {
-  return __get(userGrocery)
-}
 
 // ---------
 // As we move our methods away we don't need GraphQL in methods name anymore ...
 // @TODO update it
 
 const getFavoritesGraphQL = function () {
-  let favorites = getFavorites()
+  // let favorites = favorites
 
   return _.map(favorites, (favorite, index) => {
     return {
@@ -37,7 +26,7 @@ const getFavoritesGraphQL = function () {
 }
 
 const getFavoritesGraphQLKey = function () {
-  let favorites = getFavorites()
+  // let favorites = getFavorites()
 
   return _.map(favorites, (favorite, index) => {
     return {
@@ -48,7 +37,7 @@ const getFavoritesGraphQLKey = function () {
 }
 
 const getItemsGraphQL = function () {
-  let favorites = getItems()
+  // let favorites = getItems()
 
   return _.map(items, (item, index) => {
     return {
@@ -59,7 +48,7 @@ const getItemsGraphQL = function () {
 }
 
 const getItemsGraphQLKey = function () {
-  let items = getItems()
+  // let items = getItems()
 
   return _.map(items, (item, index) => {
     return {
@@ -70,12 +59,11 @@ const getItemsGraphQLKey = function () {
 }
 
 const getUserGroceryGraphQL = function () {
-  let userGroceries = getUserGrocery()
 
-  return _.map(userGroceries, (userGrocery, index) => {
+  return _.map(userGrocery, (item, index) => {
     return {
       key: ++index,
-      ...userGrocery
+      ...item
     }
   })
 }
@@ -83,16 +71,16 @@ const getUserGroceryGraphQL = function () {
 const getUserGroceryGraphQLKey = function () {
   let userGroceries = getUserGrocery()
 
-  return _.map(userGroceries, (userGrocery, index) => {
+  return _.map(userGrocery, (item, index) => {
     return {
       key: __generateId(),
-      ...userGrocery
+      ...item
     }
   })
 }
 
 const getDepartmentsGraphQL = function () {
-  let results = groceristar.getDepartments()
+  let results = departments
   return results.map((item, index) => ({
     department_id: ++index,
     name: item.name,
@@ -103,7 +91,7 @@ const getDepartmentsGraphQL = function () {
 }
 
 const getDepartmentsGraphQLKey = function () {
-  let results = groceristar.getDepartments()
+  let results = departments
   return results.map((item, index) => ({
     department_id: __generateId(),
     name: item.name,
@@ -114,7 +102,7 @@ const getDepartmentsGraphQLKey = function () {
 }
 
 const getGroceryGraphQL = function () {
-  let results = groceristar.getGrocery()
+  let results = groceries
   return results.map((item, index) => ({
     grocery_id: ++index,
     name: item.name,
@@ -144,7 +132,7 @@ const getGroceryGraphQLKey = function () {
 }
 
 const getIngredientsGraphQL = function (limit = false) {
-  let results = groceristar.getIngredients()
+  let results = ingredients
   if (limit) {
     results = _.slice(results, 100)
   }
@@ -163,7 +151,7 @@ const getIngredientsGraphQL = function (limit = false) {
 }
 
 const getIngredientsGraphQLKey = function (limit = false) {
-  let results = groceristar.getIngredients()
+  let results = ingredients
   if (limit) {
     results = _.slice(results, 100)
   }
@@ -182,7 +170,7 @@ const getIngredientsGraphQLKey = function (limit = false) {
 }
 // add groceryIds, favs are arrays with ids...
 const getUsersGraphQL = function () {
-  let results = groceristar.getUsers()
+  let results = users
   return results.map((item, index) => ({
     userId: ++index,
     favs: false,
@@ -192,7 +180,7 @@ const getUsersGraphQL = function () {
 }
 
 const getUsersGraphQLKey = function () {
-  let results = groceristar.getUsers()
+  let results = users
   return results.map((item, index) => ({
     userId: __generateId(),
     favs: false,
