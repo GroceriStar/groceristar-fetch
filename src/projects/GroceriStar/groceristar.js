@@ -257,12 +257,13 @@ const getAllDepartmentList = function () {
 const getAllIngredientsWithId = function () {
   // let ingredients = getIngredients()
 
-  let result = _.map(ingredients, function (ingredient) {
-    return {
-      key: __generateId(),
-      ...ingredient
-    }
-  })
+  // let result = _.map(ingredients, function (ingredient) {
+  //   return {
+  //     key: __generateId(),
+  //     ...ingredient
+  //   }
+  // })
+  let result = getResult(ingredients)
 
   return result
 }
@@ -271,16 +272,22 @@ const getAllIngredientsWithId = function () {
 // i assume we using them in different react projects.
 const getAllDepartmentsWithId = function () {
 
-  let result = _.map(departments, function (department) {
-    return {
-      key: __generateId(),
-      ...department
-    }
-  })
+  // let result = _.map(departments, function (department) {
+  //   return {
+  //     key: __generateId(),
+  //     ...department
+  //   }
+  // })
+  let result = getResult(departments)
 
   return result
 }
 // ------------------------------
+
+const getResult = (property) => _.map(property, (p) => ({
+    key: __generateId(),
+    ...p
+}))
 
 const getAllIngredientsList = function (department) {
   const ingredients = this.getAllIngredientsByOneDepartment(department)
