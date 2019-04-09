@@ -16,13 +16,13 @@ const files = {
 
 // @TODO This function is
 // what should return same function without 'GraphQL' prefix.
-const getFavorites = () => {
-  return [{
-    name: 'John Doe',
-    email: 'johndoe@mail.com',
-    password: 'password',
-  }];
-}
+//const getFavorites = () => {
+//  return [{
+//    name: 'John Doe',
+//    email: 'johndoe@mail.com',
+//    password: 'password',
+//  }];
+//}
 
 const getFavoritesGraphQL = function () {
   // let favorites = favorites
