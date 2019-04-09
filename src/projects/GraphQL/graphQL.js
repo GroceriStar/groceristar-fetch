@@ -14,6 +14,16 @@ const files = {
 // As we move our methods away we don't need GraphQL in methods name anymore ...
 // @TODO update it
 
+// @TODO This function is
+// what should return same function without 'GraphQL' prefix.
+const getFavorites = () => {
+  return [{
+    name: 'John Doe',
+    email: 'johndoe@mail.com',
+    password: 'password',
+  }];
+}
+
 const getFavoritesGraphQL = function () {
   // let favorites = favorites
 
