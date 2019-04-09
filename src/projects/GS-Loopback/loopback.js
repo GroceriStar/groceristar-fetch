@@ -1,9 +1,7 @@
 const _ = require('lodash')
 // const fs = require('fs')
-const uuidv1 = require('uuid/v1')
-const dayjs = require('dayjs')
 
-const { __get } = require('../../helper')
+const { __get, __generateId, __generateDate } = require('../../helper')
 
 const {
   ultimateGroceryList,
@@ -88,9 +86,9 @@ const getUserObject = function(name) {
     "img": "false",
     "desc": "false",
     "slug": "false",
-    "created_at": dayjs().format(),
-    "updated_at": dayjs().format(),
-    "id": uuidv1(),
+    "created_at": __generateDate(),
+    "updated_at": __generateDate(),
+    "id": __generateId(),
     "hideThisIds": [],
     "purchasedIds": [],
     "ingredientIds": []
@@ -101,13 +99,13 @@ const getUserObject = function(name) {
 
   for (let i = 0; i < 50; i++) {
     if (i < hideIdsCount) {
-      userObj.hideThisIds[i] = uuidv1()
+      userObj.hideThisIds[i] = __generateId()
     }
     if (i < purchasedIdsCount) {
-      userObj.purchasedIds[i] = uuidv1()
+      userObj.purchasedIds[i] = __generateId()
     }
     if (i < ingredientIdsCount) {
-      userObj.ingredientIds[i] = uuidv1()
+      userObj.ingredientIds[i] = __generateId()
     }
   }
   return userObj;

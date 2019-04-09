@@ -1,8 +1,5 @@
 const _ = require('lodash')
-const uuidv1 = require('uuid//v1')
-const dayjs = require('dayjs') //@TODO delete both of imports, we use methods from helpers now
-
-const { __find, __get, __generateDate } = require('../../helper')
+const { __find, __get, __generateDate, __generateId } = require('../../helper')
 
 const files = {
   ingredients3,
@@ -17,11 +14,11 @@ const files = {
 // @TODO update this method, use stuff from helper.js
 const getFiveRandomId = function () {
   return [
-    uuidv1(),
-    uuidv1(),
-    uuidv1(),
-    uuidv1(),
-    uuidv1()
+    __generateId(),
+    __generateId(),
+    __generateId(),
+    __generateId(),
+    __generateId()
   ]
 }
 
@@ -36,7 +33,7 @@ const getRecipes = function () {
           ...recipe,
           created_at: __generateDate(),
           updated_at: __generateDate(),
-          id: uuidv1(), // @TODO replace with a new method
+          id: __generateId(),
           ingredients: randomFiveIds,
           diets: randomFiveIds,
           courses: randomFiveIds,
@@ -53,9 +50,9 @@ const getRecipes = function () {
 const getMenuGenerator = (number_of_weeks) => {
   let result
   result = _.times(number_of_weeks, (index) => ({
-    id: uuidv1(), //@TODO replace!
+    id: __generateId(), 
     title: 'Weekly menu #${index}',
-    date: dayjs().toDate(), //@TODO replace!
+    date: __generateDate(), 
     description: 'description for Weekly menu #${index}',
     notes: 'This is a chef notes for wm #${index}'
   }))
@@ -96,7 +93,7 @@ const getFirstFiveRecipes = () => {
   let recipes = getNRecipes(5)
 
   let result = _.map(recipes, item => ({
-    key: uuidv1(), //@TODO replace!
+    key: __generateId(), 
     recipe: item
   }))
 
@@ -105,7 +102,7 @@ const getFirstFiveRecipes = () => {
 
 const getFiveRandomIngredients = () => {
   let result = _.map(getRandomRecipe(5), (recipe)=> ({
-  'id': uuidv1(), //@TODO replace and make look similar. bad style
+  'id': __generateId(), 
   'ingredient': recipe['ingredients']
 }));
 return result;
