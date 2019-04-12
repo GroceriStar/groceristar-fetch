@@ -33,3 +33,31 @@ describe('testing search getPlaceholder method', () => {
   testPlaceholders('Course')
   testPlaceholders('Holidays')
 })
+
+describe('testing search getData method', ()=>{
+
+ const testGetData = (value, type = 'attribute')=>{
+
+  test(`getData ${value}`, ()=>{
+
+    if (type == 'attribute') {
+      if(typeof value === 'undefined'){
+        expect(search.getData()).toEqual('Incorrect attribute or empty argument')
+      }
+      expect(search.getData(value)).not.toEqual([]);
+    }
+  
+     if (type == 'ingredient') {
+      expect(search.getData()).not.toEqual([]);
+    }
+  
+   })
+ }
+testGetData('allergies')
+testGetData('cuisines')
+testGetData('courses')
+testGetData('holidays')
+testGetData('diets')
+testGetData(null,'ingredient')
+testGetData()
+});
