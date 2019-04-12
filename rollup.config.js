@@ -16,22 +16,28 @@ const extensions = [
 
 const name = 'GroceristarFetchPlugin'
 
+const { external, globals } = {
+  "globals": {
+    'fs': 'fs',
+    'lodash': 'lodash',
+    'path': 'path'
+  },
+  "external": [
+    'fs',
+    'path',
+    'lodash'
+  ]
+};
+
+
 export default {
   input: './src/index.js',
 
   // Specify here external modules which you don't want to include in your bundle (for instance: 'lodash', 'moment' etc.)
   // https://rollupjs.org/guide/en#external-e-external
-  external: [
-    'fs',
-    'path',
-    'lodash'
-  ],
+  external,
 
-  globals: {
-    'fs': 'fs',
-    'lodash': 'lodash',
-    'path': 'path'
-  },
+  globals,
 
   plugins: [
     // Allows node_modules resolution
@@ -78,13 +84,9 @@ export default {
   }, {
     file: pkg.browser,
     format: 'iife',
-    name
-
+    name,
+    globals: {}
     // https://rollupjs.org/guide/en#output-globals-g-globals
-    // globals: {
-    //   'fs': 'fs',
-    //   'lodash': 'lodash',
-    //   'path': 'path'
-    // }
+    
   }]
 }

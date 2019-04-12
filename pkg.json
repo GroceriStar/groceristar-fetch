@@ -52,7 +52,7 @@
   },
   "description": "npm module required to fetch static data required for recipe search",
   "xxx": "dist/index.cjs",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "module": "dist/index.es.js",
   "browser": "dist/index.iife.js",
   "files": [
