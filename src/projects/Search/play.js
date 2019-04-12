@@ -4,7 +4,7 @@ const search = require('../Search/search')
 
 const {
   parser, pathToJson
-} = require('../../helper')
+} = require('../../utils')
 
 // const options = [
 //   { value: 'chocolate', label: 'Chocolate' },
