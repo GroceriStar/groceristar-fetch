@@ -1,6 +1,6 @@
 const _ = require('lodash')
 
-const { __get, __find, __generateId, __generateDate } = require('../../helper')
+const { __get, __find, __generateId, __generateDate } = require('../../utils')
 
 const files = {
   groceristar, groceries,
