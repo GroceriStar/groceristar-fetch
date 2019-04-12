@@ -24,7 +24,7 @@ const files = {
 //  }];
 //}
 
-const getFavoritesGraphQL = function () {
+const getFavorites = function () {
   // let favorites = favorites
 
   return _.map(favorites, (favorite, index) => {
@@ -35,7 +35,7 @@ const getFavoritesGraphQL = function () {
   })
 }
 
-const getFavoritesGraphQLKey = function () {
+const getFavoritesKey = function () {
   // let favorites = getFavorites()
 
   return _.map(favorites, (favorite, index) => {
@@ -46,7 +46,7 @@ const getFavoritesGraphQLKey = function () {
   })
 }
 
-const getItemsGraphQL = function () {
+const getItems = function () {
   // let favorites = getItems()
 
   return _.map(items, (item, index) => {
@@ -57,7 +57,7 @@ const getItemsGraphQL = function () {
   })
 }
 
-const getItemsGraphQLKey = function () {
+const getItemsKey = function () {
   // let items = getItems()
 
   return _.map(items, (item, index) => {
@@ -68,7 +68,7 @@ const getItemsGraphQLKey = function () {
   })
 }
 
-const getUserGroceryGraphQL = function () {
+const getUserGrocery = function () {
 
   return _.map(userGrocery, (item, index) => {
     return {
@@ -78,7 +78,7 @@ const getUserGroceryGraphQL = function () {
   })
 }
 
-const getUserGroceryGraphQLKey = function () {
+const getUserGroceryKey = function () {
   let userGroceries = getUserGrocery()
 
   return _.map(userGrocery, (item, index) => {
@@ -89,7 +89,7 @@ const getUserGroceryGraphQLKey = function () {
   })
 }
 
-const getDepartmentsGraphQL = function () {
+const getDepartments = function () {
   let results = departments
   return results.map((item, index) => ({
     department_id: ++index,
@@ -100,7 +100,7 @@ const getDepartmentsGraphQL = function () {
   }))
 }
 
-const getDepartmentsGraphQLKey = function () {
+const getDepartmentsKey = function () {
   let results = departments
   return results.map((item, index) => ({
     department_id: __generateId(),
@@ -111,7 +111,7 @@ const getDepartmentsGraphQLKey = function () {
   }))
 }
 
-const getGroceryGraphQL = function () {
+const getGrocery = function () {
   let results = groceries
   return results.map((item, index) => ({
     grocery_id: ++index,
@@ -126,7 +126,7 @@ const getGroceryGraphQL = function () {
   }))
 }
 
-const getGroceryGraphQLKey = function () {
+const getGroceryKey = function () {
   let results = groceries
   return results.map((item, index) => ({
     grocery_id: __generateId(),
@@ -141,7 +141,7 @@ const getGroceryGraphQLKey = function () {
   }))
 }
 
-const getIngredientsGraphQL = function (limit = false) {
+const getIngredients = function (limit = false) {
   let results = ingredients
   if (limit) {
     results = _.slice(results, 100)
@@ -160,7 +160,7 @@ const getIngredientsGraphQL = function (limit = false) {
   }))
 }
 
-const getIngredientsGraphQLKey = function (limit = false) {
+const getIngredientsKey = function (limit = false) {
   let results = ingredients
   if (limit) {
     results = _.slice(results, 100)
@@ -179,7 +179,7 @@ const getIngredientsGraphQLKey = function (limit = false) {
   }))
 }
 // add groceryIds, favs are arrays with ids...
-const getUsersGraphQL = function () {
+const getUsers = function () {
   let results = users
   return results.map((item, index) => ({
     userId: ++index,
@@ -189,7 +189,7 @@ const getUsersGraphQL = function () {
   }))
 }
 
-const getUsersGraphQLKey = function () {
+const getUsersKey = function () {
   let results = users
   return results.map((item, index) => ({
     userId: __generateId(),
@@ -220,14 +220,14 @@ const getUsersGraphQLKey = function () {
 // };
 
 module.exports = {
-  getDepartmentsGraphQL,
-  getDepartmentsGraphQLKey,
-  getGroceryGraphQL,
-  getGroceryGraphQLKey,
-  getIngredientsGraphQL,
-  getIngredientsGraphQLKey,
-  getUsersGraphQL,
-  getUsersGraphQLKey,
+  getDepartments,
+  getDepartmentsKey,
+  getGrocery,
+  getGroceryKey,
+  getIngredients,
+  getIngredientsKey,
+  getUsers,
+  getUsersKey,
   //
   // getUsersGrocery,
   // getUsersGroceryKey,
@@ -236,12 +236,12 @@ module.exports = {
   getItems,
   getUserGrocery,
 
-  getFavoritesGraphQL,
-  getFavoritesGraphQLKey,
-  getItemsGraphQL,
-  getItemsGraphQLKey,
-  getUserGroceryGraphQL,
-  getUserGroceryGraphQLKey,
+  getFavorites,
+  getFavoritesKey,
+  getItems,
+  getItemsKey,
+  getUserGrocery,
+  getUserGroceryKey,
 
   files,
 
