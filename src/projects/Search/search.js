@@ -1,7 +1,7 @@
 const _ = require('lodash')
 // const uuidv1 = require('uuid/v1')
 
-const { __get, __find, __generateId } = require('../../helper')
+const { __get, __find, __generateId } = require('../../utils')
 
 const files = {
   allergies,
