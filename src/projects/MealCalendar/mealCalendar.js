@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const { __get, parser, __find } = require('../../helper')
+const { __get, parser, __find } = require('../../utils')
 const files = { mealCalendar, firstVeganGLMC } = require('./files')
 
 // module.getDishByDay = function(day, maxDishes = mealCalendar.length) {
