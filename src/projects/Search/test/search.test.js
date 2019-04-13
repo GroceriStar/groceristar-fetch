@@ -34,11 +34,11 @@ describe('testing search getPlaceholder method', () => {
   testPlaceholders('Holidays')
 })
 
-describe('testing search getData method', ()=>{
+describe('testing search getData method', () => {
 
- const testGetData = (value, type = 'attribute')=>{
+ const testGetData = (value, type = 'attribute') => {
 
-  test(`getData ${value}`, ()=>{
+  test(`getData ${value}`, () => {
 
     if (type == 'attribute') {
       if(typeof value === 'undefined'){
@@ -53,11 +53,13 @@ describe('testing search getData method', ()=>{
   
    })
  }
-testGetData('allergies')
-testGetData('cuisines')
-testGetData('courses')
-testGetData('holidays')
-testGetData('diets')
-testGetData(null,'ingredient')
-testGetData()
+ 
+  testGetData('allergies')
+  testGetData('cuisines')
+  testGetData('courses')
+  testGetData('holidays')
+  testGetData('diets')
+  testGetData(null,'ingredient')
+  testGetData()
+  
 });
