@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const fs = require('fs')
 
-const { __get, __find, __l, __generateId } = require('../../helper')
+const { __get, __find, __l, __generateId } = require('../../utils')
 
 const files = {
   departments, ingredients, users, groceries
