@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const { __find, __get, __generateDate, __generateId } = require('../../helper')
+const { __find, __get, __generateDate, __generateId } = require('../../utils')
 
 const files = {
   ingredients3,
@@ -11,7 +11,7 @@ const files = {
   users
 } = require('./files')
 
-// @TODO update this method, use stuff from helper.js
+// @TODO update this method, use stuff from utils.js
 const getFiveRandomId = function () {
   return [
     __generateId(),
@@ -59,7 +59,7 @@ const getMenuGenerator = (number_of_weeks) => {
   return result
 }
 
-// @TODO replace it later. may need it at helper.js
+// @TODO replace it later. may need it at utils.js
 const getNRecipes = (n) => {
   return _.slice(recipes, n)
 }
