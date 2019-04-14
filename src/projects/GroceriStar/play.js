@@ -8,7 +8,7 @@ const files = {
 } = require('./files')
 // const fs = require('fs')
 
-const { parser, __l } = require('../../helper')
+const { parser, __l } = require('../../utils')
 
 // console.log(JSON.parse( JSON.stringify(departments) ))
 
