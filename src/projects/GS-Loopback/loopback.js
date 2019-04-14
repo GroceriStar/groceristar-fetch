@@ -1,7 +1,7 @@
 const _ = require('lodash')
 // const fs = require('fs')
 
-const { __get, __generateId, __generateDate } = require('../../helper')
+const { __get, __generateId, __generateDate } = require('../../utils')
 
 const {
   ultimateGroceryList,
