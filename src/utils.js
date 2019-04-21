@@ -30,7 +30,7 @@ const __find = (alias, files) => {
 
 // function that will improve work with uuid id generator
 const __generateId = () => {
-  return uuidv1();
+  return _.uniqueId(uuidv1());
 }
 
 //@TODO can be one method with different types.
