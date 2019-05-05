@@ -608,8 +608,8 @@
     minimist "^1.2.0"
 
 "@groceristar/sd-wrapper@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-3.0.2.tgz#9c464cb7ac0fdc88f3ffd1915cb35539077d4fa7"
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-3.0.3.tgz#3339cb18658abef939f97bef71a93bb35f578845"
   dependencies:
     dayjs "^1.8.13"
     lodash "^4.17.11"
