@@ -607,10 +607,12 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@groceristar/sd-wrapper@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-3.0.0.tgz#e75c14a2aca98783898626399058895a815513a0"
+"@groceristar/sd-wrapper@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-3.0.2.tgz#9c464cb7ac0fdc88f3ffd1915cb35539077d4fa7"
   dependencies:
+    dayjs "^1.8.13"
+    lodash "^4.17.11"
     path "^0.12.7"
     uuid "^3.3.2"
 
@@ -1595,9 +1597,9 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-dayjs@^1.8.12:
-  version "1.8.12"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.12.tgz#f9610fb9b115aa2fe2a07e742c130df418cee76a"
+dayjs@^1.8.12, dayjs@^1.8.13:
+  version "1.8.13"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.13.tgz#51b5cdad23ba508bcea939a853b492fefb7fdc47"
 
 debug-log@^1.0.0:
   version "1.0.1"
