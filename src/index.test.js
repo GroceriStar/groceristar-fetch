@@ -1,6 +1,7 @@
 /* global test, describe, it, expect, jest */
 // @TODO we need to have all "projects"
 const chickenKyiv = require('./projects/ChickenKyiv/chickenKyiv.js')
+const loopback=require('./projects/GS-Loopback/loopback.js')
 const groceristar = require('./projects/GroceriStar/groceristar.js')
 const search = require('./projects/Search/search.js')
 const showcase = require('./projects/Showcase/showcase.js')
@@ -24,6 +25,34 @@ describe('testing if methods inside the files are accessible from the outside', 
     var stream = chickenKyiv.getRandomRecipe()
     expect(stream).not.toBe('')
   })
+})
+
+//GS-loopback methods check
+describe('testing if methods inside the files are accessible from the outside', () => {
+  // Test not required as getRecepie() is obsolete
+  // test('[GS-Loopback] recipe file is set', () => {
+  //   var stream = loopback.getRecipe()
+  //   expect(stream).not.toBe('')
+  // })
+  
+    test('GS-Loopback] fetch Ultimate Grocery List', () => {
+    var stream = loopback.getUltimateGrocery()
+    expect(stream).not.toBe('')
+  })
+  
+    test('GS-Loopback] fetch grocery with user relations', () => {
+    var stream = loopback.getGLwithUserRelations()
+    expect(stream).not.toBe('')
+  })
+
+  
+     test('GS-Loopback] get loopback sample data', () => {
+    var stream = loopback.getIngredientsSampleFromDB()
+    expect(stream).not.toBe('')
+  })
+
+
+
 })
 
 describe('Groceristar methods check', () => {
