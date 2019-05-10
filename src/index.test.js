@@ -50,6 +50,11 @@ describe('testing if methods inside the files are accessible from the outside', 
     var stream = loopback.getIngredientsSampleFromDB()
     expect(stream).not.toBe('')
   })
+  
+   test('GS-Loopback] fetch a useronject data with a name argument in loopback ', () => {
+    var stream = loopback.getUserObject('Vadim')
+    expect(stream).not.toBe('')
+  })
 
 
 
