@@ -4,10 +4,20 @@ const measurementSystems = staticData.measurementSystems;
 
 const measurementUnits   = staticData.measurementUnits;
 
+const generatedMeasurementUnits = staticData.generatedMeasurementUnits;
+
+const generatedMeasurementSystem = staticData.generatedMeasurementSystem;
+
 module.exports = {
 
     measurementSystems,
     
-    measurementUnits
+    measurementUnits,
+    
+    generatedMeasurementUnits,
+    
+    generatedMeasurementSystem
+    
+    
   
     }
