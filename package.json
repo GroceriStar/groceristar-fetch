@@ -9,7 +9,7 @@
     "play:s": "nodemon src/projects/Search/play.js",
     "play:r": "nodemon src/projects/ChickenKyiv/play.js",
     "play:l": "nodemon src/projects/GS-loopback/play.js",
-    "test:gs": "jest src/projects/GroceriStar/groceristar.test.js && jest src/projects/GroceriStar/staticFiles.test.js",
+    "test:gs": "jest src/projects/GroceriStar/test/.*.js",
     "test:big": "jest src/projects/GroceriStar/getGroceriesWithDepIngKey.test.js",
     "test:index": "jest src/index.test.js",
     "code-fix": "standard --fix",
