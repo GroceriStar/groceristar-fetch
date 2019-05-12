@@ -150,10 +150,6 @@ describe('testing if methods inside the files are accessible from the outside', 
   
 })
 
-
-
-
-
 describe('Groceristar methods check', () => {
   // @TODO format it later
   test('[Groceristar] departments file is set', () => {
@@ -171,6 +167,17 @@ describe('Search Form methods check', () => {
   // @TODO format it later
   test('[Search Form] getAttribute("allergy")', () => {
     var stream = search.getAttribute('allergy')
+    expect(stream).not.toBe('')
+  })
+})
+
+//ShowCase method check
+describe('ShowCase methods check', () => {
+  // @TODO format it later
+  
+  //testing getGroceryShowcase method isnt empty
+  test('[ShowCase] showcase checking', () => {
+    var stream = showcase.getGroceryShowcase()
     expect(stream).not.toBe('')
   })
 })
