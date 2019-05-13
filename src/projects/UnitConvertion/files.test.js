@@ -32,7 +32,7 @@ objectIsNotEmpty(generatedMeasurementSystem)
 
 describe('testing object returns array',()=> {
   const isArray=(object) => {
-    it('object' + object, () =>{
+    test('object' + object, () =>{
       var result = object
       expect(Array.isArray(result)).toBe(true)
     })
