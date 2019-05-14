@@ -4,6 +4,7 @@ const chickenKyiv = require('./projects/ChickenKyiv/chickenKyiv.js')
 const graphQL=require('./projects/GraphQL/graphQL.js')
 const loopback=require('./projects/GS-Loopback/loopback.js')
 const groceristar = require('./projects/GroceriStar/groceristar.js')
+const mealCalendar = require('./projects/MealCalendar/mealCalendar.js')
 const search = require('./projects/Search/search.js')
 const showcase = require('./projects/Showcase/showcase.js')
 
@@ -159,6 +160,28 @@ describe('Groceristar methods check', () => {
 
   test('[Groceristar] showcase checking', () => {
     var data = showcase.getGroceryShowcase()
+    expect(data).not.toBe('')
+  })
+})
+
+//MealCalendar methods check
+describe('MealCalendar methods check', () => {
+  // @TODO format it later
+   //test for getDishByDay method
+  test('[MealCalendar] gets dish by day', () => {
+    var stream = mealCalendar.getDishByDay('Monday')
+    expect(stream).not.toBe('')
+  })
+
+  //test for getDishByMonth method
+  test('[MealCalendar] gets dish by Month', () => {
+    var data = mealCalendar.getDishByMonth(2)
+    expect(data).not.toBe('')
+  })
+  
+   //test for getDishByWeek method
+  test('[MealCalendar] gets dish by Week', () => {
+    var data = mealCalendar.getDishByWeek(3)
     expect(data).not.toBe('')
   })
 })
