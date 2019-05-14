@@ -8,4 +8,4 @@ const objects = {
 console.log('measurementSystems: '+ measurementSystems)
 console.log('measurementUnits: '+ measurementUnits)
 console.log('generatedMeasurementUnits: '+ generatedMeasurementUnits)
-console.log('generatedMeasurementSystem: + generatedMeasurementSystem)
+console.log('generatedMeasurementSystem: ' + generatedMeasurementSystem)
