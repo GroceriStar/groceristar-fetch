@@ -1,6 +1,11 @@
 const files= require('./files.js');
+
 const measurementUnits = files.measurementUnits;
 const measurementSystems = files.measurementSystems;
+
+const generatedMeasurementUnits = files.generatedMeasurementUnits;
+const generatedMeasurementSystem =files.generatedMeasurementSystem;
+                     
 
 /* global test, describe, it, expect, jest */
 
@@ -17,7 +22,27 @@ describe('testing objects are not empty', () => {
       expect(result).not.toBe('')
     })
   }
-objectIsNotEmpty(measurementUnits)
-objectIsNotEmpty(measurementSystems)
+  
+  objectIsNotEmpty(measurementUnits)
+  objectIsNotEmpty(measurementSystems)
+  objectIsNotEmpty(generatedMeasurementUnits)
+  objectIsNotEmpty(generatedMeasurementSystem)
 
 })
+
+
+describe('testing object returns array',() => {
+  const isArray = (object) => {
+    test('object' + object, () => {
+      var result = object
+      expect(Array.isArray(result)).toBe(true)
+    })
+  }
+  
+  isArray(measurementUnits)
+  isArray(measurementSystems)
+  isArray(generatedMeasurementUnits)
+  isArray(generatedMeasurementSystem)
+
+})
+

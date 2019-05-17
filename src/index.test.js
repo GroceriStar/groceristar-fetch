@@ -4,6 +4,7 @@ const chickenKyiv = require('./projects/ChickenKyiv/chickenKyiv.js')
 const graphQL=require('./projects/GraphQL/graphQL.js')
 const loopback=require('./projects/GS-Loopback/loopback.js')
 const groceristar = require('./projects/GroceriStar/groceristar.js')
+const mealCalendar = require('./projects/MealCalendar/mealCalendar.js')
 const search = require('./projects/Search/search.js')
 const showcase = require('./projects/Showcase/showcase.js')
 
@@ -150,10 +151,6 @@ describe('testing if methods inside the files are accessible from the outside', 
   
 })
 
-
-
-
-
 describe('Groceristar methods check', () => {
   // @TODO format it later
   test('[Groceristar] departments file is set', () => {
@@ -167,10 +164,43 @@ describe('Groceristar methods check', () => {
   })
 })
 
+//MealCalendar methods check
+describe('MealCalendar methods check', () => {
+  // @TODO format it later
+   //test for getDishByDay method
+  test('[MealCalendar] gets dish by day', () => {
+    var stream = mealCalendar.getDishByDay('Monday')
+    expect(stream).not.toBe('')
+  })
+
+  //test for getDishByMonth method
+  test('[MealCalendar] gets dish by Month', () => {
+    var data = mealCalendar.getDishByMonth(2)
+    expect(data).not.toBe('')
+  })
+  
+   //test for getDishByWeek method
+  test('[MealCalendar] gets dish by Week', () => {
+    var data = mealCalendar.getDishByWeek(3)
+    expect(data).not.toBe('')
+  })
+})
+
 describe('Search Form methods check', () => {
   // @TODO format it later
   test('[Search Form] getAttribute("allergy")', () => {
     var stream = search.getAttribute('allergy')
+    expect(stream).not.toBe('')
+  })
+})
+
+//ShowCase method check
+describe('ShowCase methods check', () => {
+  // @TODO format it later
+  
+  //testing getGroceryShowcase method isnt empty
+  test('[ShowCase] showcase checking', () => {
+    var stream = showcase.getGroceryShowcase()
     expect(stream).not.toBe('')
   })
 })
