@@ -1,16 +1,18 @@
 /* global test, describe, it, expect, jest */
-const groceristar = require('../groceristar.js')
+const files = {
+  departments, ingredients, users, groceries
+} = require('../files.js')
 
-const INGREDIENT_COUNT = 13634
-const DEPARTMENT_COUNT = 58
-const GROCERY_COUNT = 28
-const USER_COUNT = 3
+// const INGREDIENT_COUNT = 13634
+// const DEPARTMENT_COUNT = 58
+// const GROCERY_COUNT = 28
+// const USER_COUNT = 3
 
 const methodsList1 = {
-  getIngredients: groceristar.__find('ingredients', groceristar.files),
-  getGrocery: groceristar.__find('groceries', groceristar.files),
-  getDepartments: groceristar.__find('departments', groceristar.files),
-  getUsers: groceristar.__find('users', groceristar.files)
+  ingredients: ingredients,
+  groceries: groceries,
+  departments: departments,
+  users: users,
 }
 
 describe('testing static data files returns array', () => {
@@ -21,10 +23,10 @@ describe('testing static data files returns array', () => {
     })
   }
 
-  testIsArrayy('getIngredients')
-  testIsArrayy('getGrocery')
-  testIsArrayy('getDepartments')
-  testIsArrayy('getUsers')
+  testIsArrayy('ingredients')
+  testIsArrayy('grocery')
+  testIsArrayy('departments')
+  testIsArrayy('users')
 })
 
 /*
