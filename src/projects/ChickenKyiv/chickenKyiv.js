@@ -50,9 +50,9 @@ const getRecipes = function () {
 const getMenuGenerator = (number_of_weeks) => {
   let result
   result = _.times(number_of_weeks, (index) => ({
-    id: __generateId(), 
+    id: __generateId(),
     title: 'Weekly menu #${index}',
-    date: __generateDate(), 
+    date: __generateDate(),
     description: 'description for Weekly menu #${index}',
     notes: 'This is a chef notes for wm #${index}'
   }))
@@ -93,7 +93,7 @@ const getFirstFiveRecipes = () => {
   let recipes = getNRecipes(5)
 
   let result = _.map(recipes, item => ({
-    key: __generateId(), 
+    key: __generateId(),
     recipe: item
   }))
 
@@ -101,11 +101,11 @@ const getFirstFiveRecipes = () => {
 }
 
 const getFiveRandomIngredients = () => {
-  let result = _.map(getRandomRecipe(5), (recipe)=> ({
-  'id': __generateId(), 
-  'ingredient': recipe['ingredients']
-}));
-return result;
+  let result = _.map(getRandomRecipe(5), (recipe) => ({
+    'id': __generateId(),
+    'ingredient': recipe['ingredients']
+  }))
+  return result
 }
 
 module.exports = {

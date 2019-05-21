@@ -79,7 +79,7 @@ const getPlaceholder = function (attribute, flag = false) {
       return 'Holiday'
     case 'ingredient':
       return (flag) ? 'Ingredients you have' : "Ingredients you don't have"
-    default: return "Incorrect attribute or empty argument"
+    default: return 'Incorrect attribute or empty argument'
   }
 }
 

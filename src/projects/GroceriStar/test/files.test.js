@@ -12,7 +12,7 @@ const methodsList1 = {
   ingredients: ingredients,
   groceries: groceries,
   departments: departments,
-  users: users,
+  users: users
 }
 
 describe('testing static data files returns array', () => {

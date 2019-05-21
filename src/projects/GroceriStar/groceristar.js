@@ -36,7 +36,6 @@ const filterGroceriesByName = (groceries, name) => _.filter(groceries, (item) =>
   return item.name === name
 })
 const getGroceryByName = function (name) {
-
   return filterGroceriesByName(groceries, name)
 }
 
@@ -44,7 +43,6 @@ const getGroceryByName = function (name) {
 // we need to address that. And i think it's a good candidate for test coverage + adding raven.
 // @TODO second issue - i don't like that. looks not fancy.
 const getGroceryByNameWithDepAndIng = function (name) {
-
   // let list = getGrocery()
   // __l(grocerieszzz);
 
@@ -88,7 +86,6 @@ const getGroceryByNameWithDepAndIng = function (name) {
 // -----------------------------------
 
 const getGroceriesWithDepIngKey = function () {
-
   let result = _.map(groceries, function (grocery) {
     // @TODO change variable name
     // grocery.id = __generateId()
@@ -100,10 +97,9 @@ const getGroceriesWithDepIngKey = function () {
 }
 
 const getGroceryByNameWithDepAndIngKey = function (name) {
-
   let groceryId = __generateId()
 
-  let grocery = filterGroceriesByName(groceries, name);
+  let grocery = filterGroceriesByName(groceries, name)
 
   let result = []
   // @TODO this is not a clean turn around for this method
@@ -148,7 +144,7 @@ const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
   //     return item.department === department
   //   })
 
-  let ingredientsList = filterIngrListByDep(ingredients,department)
+  let ingredientsList = filterIngrListByDep(ingredients, department)
 
   return _.map(ingredientsList, item => {
     let ingredientId = __generateId()
@@ -162,12 +158,11 @@ const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
 }
 
 // -----------------------------------
-const filterIngrListByDep = (ingredients, department)=> _.filter(ingredients,  item => {
+const filterIngrListByDep = (ingredients, department) => _.filter(ingredients, item => {
   return item.department === department
 })
 // strange turnaround. @TODO can we
 const getGroceryListsWithCountDepartments = function () {
-
   return _.map(groceries, item => {
     const object = {
       id: item.id,
@@ -193,7 +188,7 @@ const getAllDepartments = function () {
 const getAllIngredientsByOneDepartment = function (department) {
   let ingredients = getIngredients()
 
-  let ingredientsList = filterIngrListByDep(ingredients,department)
+  let ingredientsList = filterIngrListByDep(ingredients, department)
 
   return _.map(ingredientsList, 'name')
 }
@@ -244,7 +239,6 @@ const getKeyArrayDepAndIng = function () {
 // --------------------------------------------
 
 const getAllDepartmentList = function () {
-
   return _.map(departments, item => ({
     key: __generateId(),
     departmentName: item
@@ -268,7 +262,6 @@ const getAllIngredientsWithId = function () {
 // @TODO we need to figure out why we have this method and getAllDepartmentList
 // i assume we using them in different react projects.
 const getAllDepartmentsWithId = function () {
-
   // let result = _.map(departments, function (department) {
   //   return {
   //     key: __generateId(),
@@ -282,8 +275,8 @@ const getAllDepartmentsWithId = function () {
 // ------------------------------
 
 const getResult = (property) => _.map(property, (p) => ({
-    key: __generateId(),
-    ...p
+  key: __generateId(),
+  ...p
 }))
 
 const getAllIngredientsList = function (department) {
@@ -299,7 +292,6 @@ const getAllIngredientsList = function (department) {
 }
 
 const getAllGrocery = function () {
-
   return _.map(groceries, item => ({
     key: __generateId(),
     ...item
@@ -326,8 +318,6 @@ const createNewGroceryList = function (newDepartment) {
 
 // TODO OMG, this method looks so sad...
 const getGroceryListsByDepartment = department => {
-
-
   let groceryList = []
   if (department) {
     // what we're doing? camelCase? explain @TODO
@@ -350,7 +340,6 @@ const getGroceryListsByDepartment = department => {
 
 // @TODO should work now.
 function newGroceryList (newDepartment) {
-
   const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json')
   const newGrocery = [ ...groceries, newDepartment ]
 

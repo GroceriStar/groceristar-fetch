@@ -5,7 +5,6 @@
 const groceristar = require('../groceristar.js')
 
 describe('getGroceriesWithDepIngKey method', () => {
-
   const mainGroceries = groceristar.getGroceriesWithDepIngKey()
 
   const groceryHasProperty = property => {
@@ -34,13 +33,11 @@ describe('getGroceriesWithDepIngKey method', () => {
 
   // @TODO test ID on match with nested object properties is ugly
   test('Main grocery ID is unique among inner object ID\'s', () => {
-
-    mainGroceries.forEach( mainGrocery => {
+    mainGroceries.forEach(mainGrocery => {
       const mainGroceryId = mainGrocery.groceryId
 
-      mainGrocery.forEach( grocery => {
-        if (grocery.name !== mainGrocery.name)
-          expect(mainGroceryId).not.toBe(grocery.groceryId)
+      mainGrocery.forEach(grocery => {
+        if (grocery.name !== mainGrocery.name) { expect(mainGroceryId).not.toBe(grocery.groceryId) }
 
         grocery.departments.forEach((department) => {
           expect(groceryID).not.toBe(department.id)

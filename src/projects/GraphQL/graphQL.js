@@ -9,20 +9,19 @@ const files = {
 
 // @TODO return measurements
 
-
 // ---------
 // As we move our methods away we don't need GraphQL in methods name anymore ...
 // @TODO update it
 
 // @TODO This function is
 // what should return same function without 'GraphQL' prefix.
-//const getFavorites = () => {
+// const getFavorites = () => {
 //  return [{
 //    name: 'John Doe',
 //    email: 'johndoe@mail.com',
 //    password: 'password',
 //  }];
-//}
+// }
 
 const getFavorites = function () {
   // let favorites = favorites
@@ -69,7 +68,6 @@ const getItemsKey = function () {
 }
 
 const getUserGrocery = function () {
-
   return _.map(userGrocery, (item, index) => {
     return {
       key: ++index,

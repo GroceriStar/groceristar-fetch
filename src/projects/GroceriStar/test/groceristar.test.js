@@ -32,7 +32,7 @@ describe('testing objects inside groceries', () => {
 
   const groceryPropertyContain = (property, type) => {
     test(`Grocery property ${property} contain as data ${type}`, () => {
-      grocery.forEach( obj => {
+      grocery.forEach(obj => {
         expect(obj[property]).any(type)
       })
     })
@@ -47,10 +47,9 @@ describe('testing objects inside groceries', () => {
 })
 
 describe('testing objects inside ingredients', () => {
-
   const ingridientsHaveProperty = property => {
     test(`Each ingridient have property ${property}`, () => {
-      ingridients.forEach( obj => {
+      ingridients.forEach(obj => {
         expect(obj).toHaveProperty(property)
       })
     })
@@ -61,7 +60,7 @@ describe('testing objects inside ingredients', () => {
 
   const ingridientsPropertyContain = (property, type) => {
     test(`Ingridients property ${property} contain as data ${type}`, () => {
-      ingridients.forEach( obj => {
+      ingridients.forEach(obj => {
         expect(obj[property]).any(type)
       })
     })
@@ -72,7 +71,6 @@ describe('testing objects inside ingredients', () => {
 })
 
 describe('Groceristar project methods should return data', () => {
-
   const notEmptyMethodOutput = (method, parameter) => {
     test(`Groceristar ${method} with input value \'${parameter}\' return non empty string`, () => {
       const result = groceristar[method](parameter)
@@ -92,13 +90,13 @@ describe('Groceristar project methods should return data', () => {
 
   const notCaseSensetiveMethod = (method, parameter) => {
     test(`Method \'${method}\' is not case sensetive with parameter \'${parameter}\'`, () => {
-      const params = [];
+      const params = []
 
       params.push(parameter.toUpperCase())
       params.push(parameter.toLowerCase())
       params.push(parameter.charAt(0).toUpperCase() + string.slice(1).toLowerCase())
 
-      params.forEach( param => {
+      params.forEach(param => {
         const result = groceristar[method](param)
         expect(result.length).toBeGreaterThan(1)
       })

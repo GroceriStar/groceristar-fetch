@@ -30,10 +30,10 @@ const __find = (alias, files) => {
 
 // function that will improve work with uuid id generator
 const __generateId = () => {
-  return _.uniqueId(uuidv1());
+  return _.uniqueId(uuidv1())
 }
 
-//@TODO can be one method with different types.
+// @TODO can be one method with different types.
 const __generateDate = () => {
   return dayjs().toDate()
 }
@@ -44,5 +44,5 @@ module.exports = {
   __find,
   __get,
   __generateId,
-  __generateDate,
+  __generateDate
 }

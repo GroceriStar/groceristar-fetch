@@ -17,18 +17,17 @@ const extensions = [
 const name = 'GroceristarFetchPlugin'
 
 const { external, globals } = {
-  "globals": {
+  'globals': {
     'fs': 'fs',
     'lodash': 'lodash',
     'path': 'path'
   },
-  "external": [
+  'external': [
     'fs',
     'path',
     'lodash'
   ]
-};
-
+}
 
 export default {
   input: './src/index.js',
@@ -87,6 +86,6 @@ export default {
     name,
     globals: {}
     // https://rollupjs.org/guide/en#output-globals-g-globals
-    
+
   }]
 }

@@ -6,19 +6,18 @@ describe('testing statics file are set', () => {
 //     var result = showcase.getGroceryShowcase()
 //     expect(result).not.toBe('')
 //   })
-  
+
   const methodList = {
     getGroceryShowcase: showcase.getGroceryShowcase()
-   
+
   }
-  
-   methodReturnsArray = method => {
+
+  methodReturnsArray = method => {
     test(`showcase  method ${method} is returning array`, () => {
       const result = methodList[method]
       expect(result).is(Array)
     })
   }
-  
-  
+
   methodReturnsArray('getGroceryShowcase')
 })

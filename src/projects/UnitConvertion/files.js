@@ -1,74 +1,73 @@
 const staticData = require('@groceristar/sd-wrapper')
 
-const measurementSystems = staticData.measurementSystems;
+const measurementSystems = staticData.measurementSystems
 
-const measurementUnits   = staticData.measurementUnits;
+const measurementUnits = staticData.measurementUnits
 
-const generatedMeasurementUnits = staticData.generatedMeasurementUnits;
+const generatedMeasurementUnits = staticData.generatedMeasurementUnits
 
-const generatedMeasurementSystem = staticData.generatedMeasurementSystem;
+const generatedMeasurementSystem = staticData.generatedMeasurementSystem
 
-const cooking_times = staticData.cooking_times;
+const cooking_times = staticData.cooking_times
 
-const cup1 = staticData.cup1;
+const cup1 = staticData.cup1
 
-const cup1_2 = staticData.cup1_2;
+const cup1_2 = staticData.cup1_2
 
-const cup1_4 = staticData.cup1_4;
+const cup1_4 = staticData.cup1_4
 
-const cup1_8 = staticData.cup1_8;
+const cup1_8 = staticData.cup1_8
 
-const cup3_4 = staticData.cup3_4;
+const cup3_4 = staticData.cup3_4
 
-const dash = staticData.dash;
+const dash = staticData.dash
 
-const gallon1 = staticData.gallon1;
+const gallon1 = staticData.gallon1
 
-const pinch = staticData.pinch;
+const pinch = staticData.pinch
 
-const pint1 = staticData.pint1;
+const pint1 = staticData.pint1
 
-const quart1 = staticData.quart1;
+const quart1 = staticData.quart1
 
-const tablespoon_1 = staticData.tablespoon_1;
+const tablespoon_1 = staticData.tablespoon_1
 
-const teaspoon_1 = staticData.teaspoon_1;
-
+const teaspoon_1 = staticData.teaspoon_1
 
 module.exports = {
 
-    measurementSystems,
-    
-    measurementUnits,
-    
-    generatedMeasurementUnits,
-    
-    generatedMeasurementSystem,
-    
-    cooking_times,
+  measurementSystems,
 
-    cup1,
+  measurementUnits,
 
-    cup1_2,
+  generatedMeasurementUnits,
 
-    cup1_4,
+  generatedMeasurementSystem,
 
-    cup1_8,
+  cooking_times,
 
-    cup3_4,
+  cup1,
 
-    dash,
+  cup1_2,
 
-    gallon1,
+  cup1_4,
 
-    pinch,
+  cup1_8,
 
-    pint1,
+  cup3_4,
 
-    quart1,
+  dash,
 
-    tablespoon_1,
+  gallon1,
 
-    teaspoon_1
+  pinch,
 
-    }
+  pint1,
+
+  quart1,
+
+  tablespoon_1,
+
+  teaspoon_1
+
+}

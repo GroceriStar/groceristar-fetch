@@ -25,23 +25,21 @@ const mealCalendar = require('../mealCalendar.js')
 //   })
 // })
 
-describe('testing static data files are set',()=>{
+describe('testing static data files are set', () => {
   const methodList = {
     getDishByWeek: mealCalendar.getDishByWeek(40),
     getDishByMonth: mealCalendar.getDishByMonth(3),
     getDishByDay: mealCalendar.getDishByDay('tuesday')
   }
-  
+
   methodReturnsArray = method => {
     test(`MealCalendar method ${method} is returning array`, () => {
       const result = methodList[method]
       expect(result).is(Array)
     })
   }
-  
-  methodReturnsArray('getDishByWeek');
-  methodReturnsArray('getDishByMonth');
-  methodReturnsArray('getDishByDay');
-   
 
+  methodReturnsArray('getDishByWeek')
+  methodReturnsArray('getDishByMonth')
+  methodReturnsArray('getDishByDay')
 })
