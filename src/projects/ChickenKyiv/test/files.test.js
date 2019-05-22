@@ -1,4 +1,4 @@
-/* global test, describe, it, expect, jest */
+/* global describe, it, expect */
 const chickenKyiv = require('../chickenKyiv.js')
 
 const methodsList = {
@@ -11,7 +11,7 @@ const methodsList = {
 
 describe('testing static data files are set', () => {
   const testFileIsNotEmpty = (method) => {
-    test('method ' + method + '()', () => {
+    it('method ' + method + '()', () => {
       var result = methodsList[method]
 
       expect(result).not.toBe('')
