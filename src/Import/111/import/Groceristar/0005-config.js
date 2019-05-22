@@ -1,7 +1,7 @@
 
 /// sample, related to groceristar api server.
 
-var db_name = 'groceryDS'
+var dbName = 'groceryDS'
 
 var lbTables = [
   // 'User',
@@ -19,6 +19,6 @@ var lbTables = [
 ]
 
 module.exports = {
-  db_name: db_name,
+  dbName: dbName,
   lbTables: lbTables
 }
