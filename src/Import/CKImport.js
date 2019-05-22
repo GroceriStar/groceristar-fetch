@@ -1,4 +1,4 @@
-const _ = require('lodash')
+// const _ = require('lodash')
 const chickenKyiv = require('../projects/ChickenKyiv/chickenKyiv.js')
 
 // @TODO change path later, duh?
@@ -7,7 +7,7 @@ const { migrateFunc } = require('./111/import/0002-migrate')
 // const {  } = require('./HELPER.js')
 
 const {
-  get_id_array,
+  getIdArray,
   create,
   attach
 } = require('./hellper.js')
@@ -54,7 +54,7 @@ module.exports = {
   get: get,
   migrateFunc: migrateFunc,
   helper: {
-    get_id_array: get_id_array,
+    get_id_array: getIdArray,
     create: create,
     attach: attach
   }

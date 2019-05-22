@@ -1,7 +1,7 @@
 
 /// sample, related to search api server.
 
-var db_name = 'searchDS'
+var dbName = 'searchDS'
 
 var lbTables = [
   'Attribute',
@@ -12,6 +12,6 @@ var lbTables = [
 ]
 
 module.exports = {
-  db_name: db_name,
+  db_name: dbName,
   lbTables: lbTables
 }
