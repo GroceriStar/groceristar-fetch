@@ -20,7 +20,7 @@ database.automigrate(lbTables, function (err) {
   database.disconnect()
 
   // process.on('exit', function(code) {
-  // 	return console.log(`Automigrate is competed`);
+  //  return console.log(`Automigrate is competed`);
   // });
   // process.exit(22);
 })

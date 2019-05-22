@@ -3,7 +3,7 @@ const path = require('path')
 const async = require('async')
 // const debug   = require('debug');
 const raven = require('raven')
-const _ = require('underscore')
+// const _ = require('underscore')
 
 raven.config('https://c1e3b55e6a1a4723b9cae2eb9ce56f2e:57e853a74f0e4db98e69a9cf034edcdd@sentry.io/265540').install()
 
@@ -18,11 +18,11 @@ let helper = require(path.resolve(__dirname, '003-helper'))
 let Attribute = require(path.resolve(__dirname, 'attributes'))
 
 // @TODO move that to attribute wrapper
-let Allergy = require(path.resolve(__dirname, 'allergy'))
-let Course = require(path.resolve(__dirname, 'courses'))
-let Cuisine = require(path.resolve(__dirname, 'cuisines'))
-let Diet = require(path.resolve(__dirname, 'diets'))
-let Holiday = require(path.resolve(__dirname, 'holidays'))
+// let Allergy = require(path.resolve(__dirname, 'allergy'))
+// let Course = require(path.resolve(__dirname, 'courses'))
+// let Cuisine = require(path.resolve(__dirname, 'cuisines'))
+// let Diet = require(path.resolve(__dirname, 'diets'))
+// let Holiday = require(path.resolve(__dirname, 'holidays'))
 // let Nutritions = require(path.resolve(__dirname, 'nutritions'));
 // console.log(Holiday);
 
@@ -44,7 +44,7 @@ let options = {
 async.parallel({
 
   recipes: async.apply(helper.create, options, Recipe),
-    	attributes: async.apply(helper.create, options, Attribute),
+  attributes: async.apply(helper.create, options, Attribute),
   departments: async.apply(helper.create, options, Departments)
 
 }, function (err, results) {
@@ -53,10 +53,11 @@ async.parallel({
     throw err
   }
 
-  if (!results ||
-			!results.recipes || !results.attributes ||
-			!results.departments
-
+  if (
+    !results ||
+    !results.recipes ||
+    !results.attributes ||
+    !results.departments
   ) {
     raven.captureException('not imported well')
   }
@@ -69,7 +70,7 @@ async.parallel({
   let idi = results.departments[0].id.toString()
   let ingredeieienetsData = Ingredient.get(idi)
 
-  helper.create_with_relations(options, ingredeieienetsData, Ingredient, (err, data) => {
+  helper.create_with_relations(options, ingredeieienetsData, Ingredient, (data) => {
     // console.log(data)//
     Recipe.relate2(options, data, helper)
   })
@@ -85,7 +86,7 @@ async.parallel({
   console.log('import finished')
   //
   // process.on('exit', function(code) {
-  // 	return console.log(`About to exit with code ${code}`);
+  //  return console.log(`About to exit with code ${code}`);
   // });
   // process.exit(22);
 }
