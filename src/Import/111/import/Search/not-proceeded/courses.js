@@ -1,6 +1,6 @@
-let pattern = 'co1'
+// let pattern = 'co1'
 
-let table_name = 'Course'
+let tableName = 'Course'
 
 const get = () => {
   var courses = [
@@ -114,4 +114,4 @@ const get = () => {
 }
 
 module.exports.get = get
-module.exports.table_name = table_name
+module.exports.tableName = tableName

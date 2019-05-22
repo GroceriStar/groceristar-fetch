@@ -1,8 +1,8 @@
-let pattern = 'n1'
+// let pattern = 'n1'
 
 // @TODO convert it into a attributes style.
 
-let table_name = 'Nutritions'
+let tableName = 'Nutritions'
 
 const get = () => {
   var data = [{
@@ -69,4 +69,4 @@ const get = () => {
 }
 
 module.exports.get = get
-module.exports.table_name = table_name
+module.exports.tableName = tableName
