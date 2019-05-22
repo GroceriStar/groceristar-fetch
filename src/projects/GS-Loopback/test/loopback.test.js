@@ -1,4 +1,4 @@
-/* global test, describe, it, expect, jest */
+/* global describe, it, expect */
 const loopback = require('../loopback.js')
 
 describe('testing static data files returns array', () => {
@@ -9,8 +9,8 @@ describe('testing static data files returns array', () => {
     getIngredientsSampleFromDB: loopback.getIngredientsSampleFromDB()
   }
 
-  methodReturnsArray = method => {
-    test(`loopback method ${method} is returning array`, () => {
+  const methodReturnsArray = method => {
+    it(`loopback method ${method} is returning array`, () => {
       const result = methodList[method]
       expect(result).is(Array)
     })

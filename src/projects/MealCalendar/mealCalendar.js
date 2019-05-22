@@ -1,6 +1,10 @@
 const _ = require('lodash')
-const { __get, parser, __find } = require('../../utils')
-const files = { mealCalendar, firstVeganGLMC } = require('./files')
+const {
+  // __get,
+  // parser,
+  __find
+} = require('../../utils')
+// const files = { mealCalendar, firstVeganGLMC } = require('./files')
 
 // module.getDishByDay = function(day, maxDishes = mealCalendar.length) {
 //   return _.filter(parser(mealCalendar), (meal, index) => {
@@ -15,14 +19,14 @@ const files = { mealCalendar, firstVeganGLMC } = require('./files')
 
 const getDishByDay = function (day) {
   let result = []
-  _.map(mealCalendar, function (item) {
-    return _.filter(item['recipes'], function (arr) {
-      if (arr[0].day === day) {
-        arr[0].id = item.id
-        result.push(arr[0])
-      }
-    })
-  })
+  // _.map(mealCalendar, function (item) {
+  //   return _.filter(item['recipes'], function (arr) {
+  //     if (arr[0].day === day) {
+  //       arr[0].id = item.id
+  //       result.push(arr[0])
+  //     }
+  //   })
+  // })
   return result
 }
 
@@ -34,15 +38,15 @@ const getDishByMonth = function (monthNumb) {
 }
 
 const getDishByWeek = function (week) {
-  return _.filter(parser(mealCalendar), {
-    id: week
-  })
+  // return _.filter(parser(mealCalendar), {
+  //   id: week
+  // })
 }
 
 module.exports = {
   getDishByWeek,
   getDishByMonth,
   getDishByDay,
-  __find,
-  files
+  __find
+  // files
 }

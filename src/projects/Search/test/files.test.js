@@ -1,4 +1,4 @@
-/* global test, describe, it, expect, jest */
+/* global describe, it, expect */
 const search = require('../search.js')
 
 const methodsList = {
@@ -13,7 +13,7 @@ const methodsList = {
 
 describe('testing static data files returns array', () => {
   const testFileIsNotEmpty = (method) => {
-    test('method ' + method + '()', () => {
+    it('method ' + method + '()', () => {
       var result = methodsList[method]
       expect(result).not.toBe('')
     })
