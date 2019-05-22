@@ -1,14 +1,17 @@
-const _ = require('lodash')
+// const _ = require('lodash')
 
-const files = {
-  departments,
-  groceries,
-  ingredients,
-  users
-} = require('./files')
+// const files = {
+//   departments,
+//   groceries,
+//   ingredients,
+//   users
+// } = require('./files')
 // const fs = require('fs')
 
-const { parser, __l } = require('../../utils')
+const {
+  // parser,
+  __l
+} = require('../../utils')
 
 // console.log(JSON.parse( JSON.stringify(departments) ))
 
@@ -19,10 +22,10 @@ const groceristar = require('../GroceriStar/groceristar')
 // const count = function() {
 //
 
-// 	console.log('department ' +  _.size(departments) )
-// 	console.log('grocery '    +  _.size(groceries) )
-// 	console.log('users '      +  _.size(users) )
-// 	console.log('ingredient ' +  _.size(ingredients) )
+//  console.log('department ' +  _.size(departments) )
+//  console.log('grocery '    +  _.size(groceries) )
+//  console.log('users '      +  _.size(users) )
+//  console.log('ingredient ' +  _.size(ingredients) )
 //
 //
 // };
@@ -49,17 +52,17 @@ __l(groceristar.getGroceriesWithDepIngKey('Grocery List Essentials'))
 // console.log(groceristar.getGroceriesWithDepIngKey());
 
 // getGroceryListsByDepartment = department => {
-//   capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
-// 	let parsedGroceries = parser(groceries),groceryList = [];
-// 	parsedGroceries.map(grocery => {
-// 		if(grocery.departments.includes(department.toLowerCase()) ||
+//  capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
+//  let parsedGroceries = parser(groceries),groceryList = [];
+//  parsedGroceries.map(grocery => {
+//  if(grocery.departments.includes(department.toLowerCase()) ||
 //         grocery.departments.includes(department.toUpperCase()) ||
 //         grocery.departments.includes(capitalisedDepartment)
 //       ) {
 //         groceryList.push({name: grocery.name, id: grocery.id});
 //       }
 //
-// 	})
+//  })
 //   return groceryList;
 // }
 //
