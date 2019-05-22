@@ -2,7 +2,7 @@
 
 const path = require('path')
 const async = require('async')
-const debug = require('debug')
+// const debug = require('debug')
 const raven = require('raven')
 
 raven.config('https://c1e3b55e6a1a4723b9cae2eb9ce56f2e:57e853a74f0e4db98e69a9cf034edcdd@sentry.io/265540').install()
@@ -50,8 +50,15 @@ async.parallel({
     throw err
   }
 
-  if (!results || !results.allergies || !results.courses ||
-				!results.cuisines || !results.diets || !results.holidays || !results.nutritions) {
+  if (
+    !results ||
+    !results.allergies ||
+    !results.courses ||
+    !results.cuisines ||
+    !results.diets ||
+    !results.holidays ||
+    !results.nutritions
+  ) {
     raven.captureException('not imported well')
   }
 
@@ -72,7 +79,7 @@ async.parallel({
   console.log('import finished')
   //
   // process.on('exit', function(code) {
-  // 	return console.log(`About to exit with code ${code}`);
+  //  return console.log(`About to exit with code ${code}`);
   // });
   // process.exit(22);
 }

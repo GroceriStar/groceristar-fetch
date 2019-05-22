@@ -1,12 +1,12 @@
 'use strict'
 
-const debug = require('debug')
-const async = require('async')
+// const debug = require('debug')
+// const async = require('async')
 
 // let Model
 // let database
-let table_name = 'Recipe'
-let raven
+let tableName = 'Recipe'
+// let raven
 
 // @TODO not clear, how we can know which attribute to use?
 let attributes = [
@@ -26,18 +26,22 @@ const relate = async (options, results, helper) => {
   // let raven  = options[2];
   // @TODO apply this changes to all import model files
   let server
-  let database
+  // let database
   let raven
-  ({ server, database, raven } = options)
+  ({
+    server,
+    // database,
+    raven
+  } = options)
 
   let recipes
   try {
-    let Recipe = server.models[table_name]
+    let Recipe = server.models[tableName]
     recipes = await Recipe.find({})
   } catch (e) {
     raven.captureException(e)
     // this will eventually be handled by your error handling middleware
-    next(e)
+    // next(e)
   }
   // end of what i don't like
 
@@ -59,6 +63,6 @@ const relate = async (options, results, helper) => {
 
 module.exports = {
   // get: get,
-  table_name: table_name,
+  tableName: tableName,
   relate: relate
 }

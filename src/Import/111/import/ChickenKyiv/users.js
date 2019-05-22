@@ -2,14 +2,14 @@
 
 const debug = require('debug')
 
-let table_name = 'user'
+let tableName = 'user'
 
-let attributes = [
-  'userId'
-]
+// let attributes = [
+//   'userId'
+// ]
 
 // @TODO this is a duplicate
-function assignAdmin (options, admin_id) {
+function assignAdmin (options, adminId) {
   let server
   let database
   let raven
@@ -22,14 +22,14 @@ function assignAdmin (options, admin_id) {
   // database    = server.datasources.recipeDS;
 
   database.automigrate('Role', function (err) {
-    if (err) return cb(err)
+    if (err) return err
 
     Role.create({ name: 'admin' })
       .then(function (role) {
         role.principals.create({
           principalType: RoleMapping.USER,
-          principalId: admin_id
-        }, function (err, principal) {
+          principalId: adminId
+        }, function (principal) {
           console.log('Principal', principal)
         })
       }).catch(function (err) {
@@ -41,19 +41,19 @@ function assignAdmin (options, admin_id) {
 };
 
 const attachRecipesToUsers = () => {
-  // 	recipes.forEach(function(recipe){
-  // 		recipe.updateAttribute('userId', users[2].id);
+  // recipes.forEach(function(recipe){
+  // recipe.updateAttribute('userId', users[2].id);
 
-  // 	});
+  // });
 }
 
 const attachMenusToUsers = (users, menus) => {
-  helper.attach(users, menus, attributes[0])
+  // helper.attach(users, menus, attributes[0])
 }
 
 module.exports = {
   // get: get,
-  table_name: table_name,
+  tableName: tableName,
   assignAdmin: assignAdmin,
   attachRecipesToUsers: attachRecipesToUsers,
   attachMenusToUsers: attachMenusToUsers
