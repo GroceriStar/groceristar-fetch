@@ -1,4 +1,4 @@
-/* global test, describe, it, expect, jest */
+/* global test, describe, it, expect */
 const search = require('../search.js')
 
 describe('testing search getAttribute method', () => {
@@ -18,9 +18,8 @@ describe('testing search getAttribute method', () => {
 })
 
 describe('testing search getPlaceholder method', () => {
-
   const testPlaceholders = attribute => {
-    test(`getPlaceholder ${attribute}`, () => {
+    it(`getPlaceholder ${attribute}`, () => {
       var stream = search.getPlaceholder(attribute)
       expect(stream).not.toBe('')
     })
@@ -35,31 +34,26 @@ describe('testing search getPlaceholder method', () => {
 })
 
 describe('testing search getData method', () => {
-
- const testGetData = (value, type = 'attribute') => {
-
-  test(`getData ${value}`, () => {
-
-    if (type == 'attribute') {
-      if(typeof value === 'undefined'){
-        expect(search.getData()).toEqual('Incorrect attribute or empty argument')
+  const testGetData = (value, type = 'attribute') => {
+    it(`getData ${value}`, () => {
+      if (type === 'attribute') {
+        if (typeof value === 'undefined') {
+          expect(search.getData()).toEqual('Incorrect attribute or empty argument')
+        }
+        expect(search.getData(value)).not.toEqual([])
       }
-      expect(search.getData(value)).not.toEqual([]);
-    }
-  
-     if (type == 'ingredient') {
-      expect(search.getData()).not.toEqual([]);
-    }
-  
-   })
- }
- 
+
+      if (type === 'ingredient') {
+        expect(search.getData()).not.toEqual([])
+      }
+    })
+  }
+
   testGetData('allergies')
   testGetData('cuisines')
   testGetData('courses')
   testGetData('holidays')
   testGetData('diets')
-  testGetData(null,'ingredient')
+  testGetData(null, 'ingredient')
   testGetData()
-  
-});
+})

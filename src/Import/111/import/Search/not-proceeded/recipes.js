@@ -1,11 +1,11 @@
 
 // const debug = require('debug');
-const async = require('async')
+// const async = require('async')
 const _ = require('underscore')
 
 // let Model
 // let database
-let table_name = 'Recipe'
+// let tableName = 'Recipe'
 // let raven
 
 // @TODO not clear, how we can know which attribute to use?
@@ -90,7 +90,7 @@ const get = () => {
     }
   ]
 
-  	return data
+  return data
 }
 
 const relate2 = async (options, results, helper) => {
@@ -98,19 +98,22 @@ const relate2 = async (options, results, helper) => {
   // I don't like that we're searching all recipes at this method
 
   // @TODO apply this changes to all import model files
-  let server
-  let database
-  let raven
-  ({ server, database, raven } = options)
+  let tableName = ''
+  // let database
+  let server = {}
+  let raven = {
+    server
+    // database,
+  } = options
 
   let recipes
   try {
-    let Recipe = server.models[table_name]
+    let Recipe = server.models[tableName]
     recipes = await Recipe.find({})
   } catch (e) {
     raven.captureException(e)
     // this will eventually be handled by your error handling middleware
-    next(e)
+    // next(e)
   }
   // end of what i don't like
 
@@ -138,19 +141,21 @@ const relate3 = async (options, results, helper) => {
   // I don't like that we're searching all recipes at this method
 
   // @TODO apply this changes to all import model files
-  let server
-  let database
-  let raven
-  ({ server, database, raven } = options)
+  // const server = []
+  // const tableName = ''
+  const raven = {}
+  // let recipes
+  // let database
+  // let raven
+  // ({ server, database, raven } = options)
 
-  let recipes
   try {
-    let Recipe = server.models[table_name]
-    recipes = await Recipe.find({})
+    // let Recipe = server.models[tableName]
+    // recipes = await Recipe.find({})
   } catch (e) {
     raven.captureException(e)
     // this will eventually be handled by your error handling middleware
-    next(e)
+    // next(e)
   }
   // end of what i don't like
 
@@ -165,21 +170,17 @@ const relate3 = async (options, results, helper) => {
 
   console.log(_.pick(results.attributes, 'id', 'type'))
   // @TODO so shitty way.....
-  let created_allergies = _.where(results.attributes, { type: 'allergy' })
+  let createdAllergies = _.where(results.attributes, { type: 'allergy' })
+  let createdCourses = _.where(results.attributes, { type: 'course' })
+  let createdCuisines = _.where(results.attributes, { type: 'cuisine' })
+  let createdDiets = _.where(results.attributes, { type: 'diet' })
+  let createdHolidays = _.where(results.attributes, { type: 'holiday' })
 
-  let created_courses = _.where(results.attributes, { type: 'course' })
-
-  let created_cuisines = _.where(results.attributes, { type: 'cuisine' })
-
-  let created_diets = _.where(results.attributes, { type: 'diet' })
-
-  let created_holidays = _.where(results.attributes, { type: 'holiday' })
-
-  console.log(created_allergies)
-  console.log(created_courses)
-  console.log(created_cuisines)
-  console.log(created_diets)
-  console.log(created_holidays)
+  console.log(createdAllergies)
+  console.log(createdCourses)
+  console.log(createdCuisines)
+  console.log(createdDiets)
+  console.log(createdHolidays)
 
   // @TODO change that. so bad and stupid. but fast
   // let attributes_for_recipe1,
@@ -223,37 +224,36 @@ const relate3 = async (options, results, helper) => {
   // helper.attach( results.ingredients,    recipes, attributes[1]);
 }
 
-const relate_brand_new = async (results, helper) => {
-  if (!results ||
-      !results.recipes ||
-      !results.attributes
-  ) {
-    raven.captureException('cannot attach additional data to recipes')
-  }
-
-  let collections
-  try {
-    collections = await helper.find_all_data_copy_of_function_above(options, (err, collection) => {
-      helper.attach(results.attributes, collection, attributes[0])
-    })
-
-    helper.find_all_data_copy_of_function_above(options)
-      .then((err, collection) => {
-        helper.attach(results.attributes, collection, attributes[0])
-      })
-  } catch (e) {
-    raven.captureException(e)
-    // this will eventually be handled by your error handling middleware
-    next(e)
-  }
-
-  // @TODO create a method with foreach for each attribute in order to attach data to recipe
-  helper.attach(results.attributes, collection, attributes[0])
-
-  // @TODO work not very best, because when we creating models,
-  // that cannot be async apply - we must to add that array into results array/object
-  // helper.attach( results.ingredients,    recipes, attributes[1]);
-}
+// const relateBrandNew = async (results, helper) => {
+//   let raven
+//   let collections
+//   let options
+//   let err
+//   if (!results ||
+//       !results.recipes ||
+//       !results.attributes
+//   ) {
+//     raven.captureException('cannot attach additional data to recipes')
+//   }
+//   try {
+//     collections = await helper.findAllDataCopyOfFunctionAbove(options, collection => {
+//       helper.attach(results.attributes, collection, attributes[0])
+//     })
+//     helper.findAllDataCopyOfFunctionAbove(options)
+//       .then((collection) => {
+//         helper.attach(results.attributes, collection, attributes[0])
+//       })
+//   } catch (e) {
+//     raven.captureException(e)
+//     // this will eventually be handled by your error handling middleware
+//     // next(e)
+//   }
+//   // @TODO create a method with foreach for each attribute in order to attach data to recipe
+//   helper.attach(results.attributes, collections, attributes[0])
+//   // @TODO work not very best, because when we creating models,
+//   // that cannot be async apply - we must to add that array into results array/object
+//   // helper.attach( results.ingredients,    recipes, attributes[1]);
+// }
 
 const relate = async (options, results, helper) => {
   // this is a hardcode. @TODO handle this later.
@@ -261,18 +261,19 @@ const relate = async (options, results, helper) => {
 
   // @TODO apply this changes to all import model files
   let server
-  let database
+  // let database
   let raven
-  ({ server, database, raven } = options)
+  let tableName
+  // ({ server, database, raven } = options)
 
   let recipes
   try {
-    let Recipe = server.models[table_name]
+    let Recipe = server.models[tableName]
     recipes = await Recipe.find({})
   } catch (e) {
     raven.captureException(e)
     // this will eventually be handled by your error handling middleware
-    next(e)
+    // next(e)
   }
   // end of what i don't like
 
@@ -298,8 +299,7 @@ const relate = async (options, results, helper) => {
 }
 
 module.exports.get = get
-module.exports.table_name = table_name
+// module.exports.table_name = tableName
 module.exports.relate = relate
 module.exports.relate2 = relate2
-
 module.exports.relate3 = relate3

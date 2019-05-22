@@ -1,4 +1,4 @@
-/* global test, describe, it, expect, jest */
+/* global describe, it, expect */
 const showcase = require('../showcase.js')
 
 describe('testing statics file are set', () => {
@@ -6,19 +6,17 @@ describe('testing statics file are set', () => {
 //     var result = showcase.getGroceryShowcase()
 //     expect(result).not.toBe('')
 //   })
-  
+
   const methodList = {
     getGroceryShowcase: showcase.getGroceryShowcase()
-   
   }
-  
-   methodReturnsArray = method => {
-    test(`showcase  method ${method} is returning array`, () => {
+
+  methodList.getGroceryShowcase = method => {
+    it(`showcase  method ${method} is returning array`, () => {
       const result = methodList[method]
       expect(result).is(Array)
     })
   }
-  
-  
-  methodReturnsArray('getGroceryShowcase')
+
+  methodList.getGroceryShowcase('getGroceryShowcase')
 })

@@ -7,13 +7,12 @@
 // var lbTables = [
 //   'Attribute',
 //   'Department',
-// 	'Ingredient',
-//
+//   'Ingredient',
 //   'Recipe'
 // ];
 
-const migrateFunc = (server, db_name, lbTables) => {
-  var database = server.datasources[db_name]
+const migrateFunc = (server, dbName, lbTables) => {
+  var database = server.datasources[dbName]
 
   // creating loopback necessary tables if no exists
   database.automigrate(lbTables, function (err) {
@@ -24,7 +23,7 @@ const migrateFunc = (server, db_name, lbTables) => {
 
     // @TODO we can add something here - if we need this additional message...
     // process.on('exit', function(code) {
-    // 	return console.log(`Automigrate is competed`);
+    //   return console.log(`Automigrate is competed`);
     // });
     // process.exit(22);
   })

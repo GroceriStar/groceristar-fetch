@@ -1,7 +1,7 @@
 
 /// sample, related to recipe api server.
 
-var db_name = 'recipeDS'
+var dbName = 'recipeDS'
 
 var lbTables = [
   'user',
@@ -10,6 +10,6 @@ var lbTables = [
 ]
 
 module.exports = {
-  db_name: db_name,
+  dbName: dbName,
   lbTables: lbTables
 }

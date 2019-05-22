@@ -9,7 +9,7 @@ const _ = require('lodash')
 // Raven.config('https://c1e3b55e6a1a4723b9cae2eb9ce56f2e:57e853a74f0e4db98e69a9cf034edcdd@sentry.io/265540').install();
 // let raven
 
-const get_id_array = (array) => {
+const getIdArray = (array) => {
   if (!array) {
     return { error: 'Cannot attach an empty array of ids' }
     // raven.captureException();
@@ -38,7 +38,12 @@ const create = (options, wrapper, cb) => {
   // let raven
   // let predata
 
-  const { server, database, raven, predata } = options
+  const {
+    server,
+    database,
+    // raven,
+    predata
+  } = options
 
   if (!options) { return { error: 'Options was not specified' } }
   if (!cb) { return { error: 'Callback was not specified' } }
@@ -51,13 +56,13 @@ const create = (options, wrapper, cb) => {
   console.log('strong debug process - create')
 
   let Model = server.models[wrapper.table_name]
-  let table_name = wrapper.table_name
+  let tableName = wrapper.table_name
 
   let data = (!predata) ? wrapper.get() : wrapper.get(predata)
 
   console.log('strong debug process - before')
 
-  database.autoupdate(table_name, function (err) {
+  database.autoupdate(tableName, function (err) {
     console.log('strong debug process - inside1')
     if (err) {
       // raven.captureException(err);
@@ -81,8 +86,8 @@ const create = (options, wrapper, cb) => {
 // array_ids - where we get data from
 // collection - where we put our data
 // attribute - key at collection
-const attach = (array_ids, collection, attribute) => {
-  var arrayWithIds = get_id_array(array_ids)
+const attach = (arrayIds, collection, attribute) => {
+  var arrayWithIds = getIdArray(arrayIds)
 
   // if attribute is string then use it. if attribute is array with count 1 - use it
   // if attribute have more elements - we need to pick stuff. @TODO
@@ -98,7 +103,7 @@ const attach = (array_ids, collection, attribute) => {
 }
 
 module.exports = {
-  get_id_array,
+  getIdArray,
   create,
   attach
 }

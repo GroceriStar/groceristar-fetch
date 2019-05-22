@@ -1,4 +1,4 @@
-const _ = require('lodash')
+// const _ = require('lodash')
 // const fs = require('fs')
 
 const { __get, __generateId, __generateDate } = require('../../utils')
@@ -80,18 +80,18 @@ const getIngredientsSampleFromDB = () => {
 //   return result;
 // }
 
-const getUserObject = function(name) {
+const getUserObject = function (name) {
   var userObj = {
-    "name": name,
-    "img": "false",
-    "desc": "false",
-    "slug": "false",
-    "created_at": __generateDate(),
-    "updated_at": __generateDate(),
-    "id": __generateId(),
-    "hideThisIds": [],
-    "purchasedIds": [],
-    "ingredientIds": []
+    'name': name,
+    'img': 'false',
+    'desc': 'false',
+    'slug': 'false',
+    'created_at': __generateDate(),
+    'updated_at': __generateDate(),
+    'id': __generateId(),
+    'hideThisIds': [],
+    'purchasedIds': [],
+    'ingredientIds': []
   }
   const hideIdsCount = Math.floor(Math.random() * 5)
   const purchasedIdsCount = Math.floor(Math.random() * 10)
@@ -108,7 +108,7 @@ const getUserObject = function(name) {
       userObj.ingredientIds[i] = __generateId()
     }
   }
-  return userObj;
+  return userObj
 }
 
 module.exports = {

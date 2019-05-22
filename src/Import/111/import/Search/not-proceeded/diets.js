@@ -1,5 +1,4 @@
-
-let table_name = 'Diet'
+// let tableName = 'Diet'
 let pattern = 'd1'
 const get = () => {
   let diet = [
@@ -32,10 +31,10 @@ const get = () => {
   return diet
 }
 
-const patternify = (pattern) => {
-  var index = 0
-  return _.map(get(), (item) => item.id = pattern + index.toString())
-}
+// const patternify = (pattern) => {
+//   var index = 0
+//   return _.map(get(), (item) => item.id = pattern + index.toString())
+// }
 
 module.exports.get = get
 module.exports.pattern = pattern

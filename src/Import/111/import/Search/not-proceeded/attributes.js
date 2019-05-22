@@ -9,11 +9,10 @@ let Holiday = require(path.resolve(__dirname, 'holidays'))
 
 // let Nutritions = require(path.resolve(__dirname, 'nutritions'));
 
-let table_name = 'Attribute'
+let tableName = 'Attribute'
 
 const get = () => {
-  	return
-  	_.union(
+  return _.union(
     Allergy.get(),
     Course.get(),
     Cuisine.get(),
@@ -24,4 +23,4 @@ const get = () => {
 }
 
 module.exports.get = get
-module.exports.table_name = table_name
+module.exports.tableName = tableName

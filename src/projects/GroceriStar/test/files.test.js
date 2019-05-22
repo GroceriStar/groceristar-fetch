@@ -1,33 +1,36 @@
-/* global test, describe, it, expect, jest */
-const files = {
-  departments, ingredients, users, groceries
-} = require('../files.js')
+/* globalll describe, it, expect */
+
+// const files = {
+//   departments,
+//   ingredients,
+//   users,
+//   groceries
+// } = require('../files.js')
 
 // const INGREDIENT_COUNT = 13634
 // const DEPARTMENT_COUNT = 58
 // const GROCERY_COUNT = 28
 // const USER_COUNT = 3
 
-const methodsList1 = {
-  ingredients: ingredients,
-  groceries: groceries,
-  departments: departments,
-  users: users,
-}
+// const methodsList1 = {
+//   ingredients: ingredients,
+//   groceries: groceries,
+//   departments: departments,
+//   users: users
+// }
 
-describe('testing static data files returns array', () => {
-  const testIsArrayy = method => {
-    test('method ' + method + '()', () => {
-      var result = methodsList1[method]
-      expect(Array.isArray(result)).toBe(true)
-    })
-  }
-
-  testIsArrayy('ingredients')
-  testIsArrayy('grocery')
-  testIsArrayy('departments')
-  testIsArrayy('users')
-})
+// describe('testing static data files returns array', () => {
+//   const testIsArrayy = method => {
+//     it('method ' + method + '()', () => {
+//       var result = methodsList1[method]
+//       expect(Array.isArray(result)).toBe(true)
+//     })
+//   }
+//   testIsArrayy('ingredients')
+//   testIsArrayy('grocery')
+//   testIsArrayy('departments')
+//   testIsArrayy('users')
+// })
 
 /*
 describe('testing static data files returns array', () => {
@@ -52,26 +55,25 @@ describe('testing static data files returns array', () => {
   })
 })
 */
-const methodsList2 = {
-  getIngredients: groceristar.__find('ingredients', groceristar.files),
-  getGrocery: groceristar.__find('groceries', groceristar.files),
-  getDepartments: groceristar.__find('departments', groceristar.files),
-  getUsers: groceristar.__find('users', groceristar.files)
-}
+// const methodsList2 = {
+//   getIngredients: groceristar.__find('ingredients', groceristar.files),
+//   getGrocery: groceristar.__find('groceries', groceristar.files),
+//   getDepartments: groceristar.__find('departments', groceristar.files),
+//   getUsers: groceristar.__find('users', groceristar.files)
+// }
 
-describe('testing static data files returns array', () => {
-  const testFileIsNotEmpty = (method) => {
-    test('method ' + method + '()', () => {
-      var result = methodsList2[method]
-      expect(result).not.toBe('')
-    })
-  }
-
-  testFileIsNotEmpty('getIngredients')
-  testFileIsNotEmpty('getGrocery')
-  testFileIsNotEmpty('getDepartments')
-  testFileIsNotEmpty('getUsers')
-})
+// describe('testing static data files returns array', () => {
+//   const testFileIsNotEmpty = (method) => {
+//     test('method ' + method + '()', () => {
+//       var result = methodsList2[method]
+//       expect(result).not.toBe('')
+//     })
+//   }
+//   testFileIsNotEmpty('getIngredients')
+//   testFileIsNotEmpty('getGrocery')
+//   testFileIsNotEmpty('getDepartments')
+//   testFileIsNotEmpty('getUsers')
+// })
 /*
 describe('testing static data files are not empty', () => {
   test('ingredients file is not empty', () => {
@@ -118,23 +120,21 @@ describe('testing static data files are not empty', () => {
 })
 */
 
-const methodsList3 = {
-  getIngredients: groceristar.__find('ingredients', groceristar.files),
-  getGrocery: groceristar.__find('groceries', groceristar.files),
-  getDepartments: groceristar.__find('departments', groceristar.files),
-  getUsers: groceristar.__find('users', groceristar.files)
-}
-
-describe('comparing length of arrays that we have inside of our static data files. If you receive this error', () => {
-  const testLength = (method, length) => {
-    test('method ' + method + '() array count', () => {
-      var result = methodsList3[method]
-      expect(result).toHaveLength(length)
-    })
-  }
-
-  testLength('getIngredients', INGREDIENT_COUNT)
-  testLength('getGrocery', GROCERY_COUNT)
-  testLength('getDepartments', DEPARTMENT_COUNT)
-  testLength('getUsers', USER_COUNT)
-})
+// const methodsList3 = {
+//   getIngredients: groceristar.__find('ingredients', groceristar.files),
+//   getGrocery: groceristar.__find('groceries', groceristar.files),
+//   getDepartments: groceristar.__find('departments', groceristar.files),
+//   getUsers: groceristar.__find('users', groceristar.files)
+// }
+// describe('comparing length of arrays that we have inside of our static data files. If you receive this error', () => {
+//   const testLength = (method, length) => {
+//     test('method ' + method + '() array count', () => {
+//       var result = methodsList3[method]
+//       expect(result).toHaveLength(length)
+//     })
+//   }
+//   testLength('getIngredients', INGREDIENT_COUNT)
+//   testLength('getGrocery', GROCERY_COUNT)
+//   testLength('getDepartments', DEPARTMENT_COUNT)
+//   testLength('getUsers', USER_COUNT)
+// })

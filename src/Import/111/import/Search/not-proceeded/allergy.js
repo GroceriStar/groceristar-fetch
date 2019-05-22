@@ -1,8 +1,8 @@
-let pattern = 'al1'
+// let pattern = 'al1'
 
-const debug = require('debug')
+// const debug = require('debug')
 
-let table_name = 'Allergy'
+let tableName = 'Allergy'
 
 const get = () => {
   var data = [
@@ -48,8 +48,8 @@ const get = () => {
     }
   ]
 
-  	return data
+  return data
 }
 
 module.exports.get = get
-module.exports.table_name = table_name
+module.exports.tableName = tableName

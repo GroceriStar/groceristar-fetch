@@ -1,8 +1,8 @@
 'use strict'
 
-const debug = require('debug')
+// const debug = require('debug')
 
-let table_name = 'Menu'
+let tableName = 'Menu'
 
 let attributes = [
   'recipes', // #0
@@ -11,10 +11,14 @@ let attributes = [
 
 // @TODO same function at other place are async and more advanced.
 const relate = async (options, results, helper) => {
-  let server
-  let database
+  // let server
+  // let database
   let raven
-  ({ server, database, raven } = options)
+  ({
+    // server,
+    // database,
+    raven
+  } = options)
 
   if (!results || !results.recipes || !results.menus) {
     raven.captureException('cannot attach additional data to recipes')
@@ -31,6 +35,6 @@ const relate = async (options, results, helper) => {
 
 module.exports = {
   // get: get,
-  table_name: table_name,
+  tableName: tableName,
   relate: relate
 }

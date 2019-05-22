@@ -1,17 +1,21 @@
 const _ = require('lodash')
 // const uuidv1 = require('uuid/v1')
 
-const { __get, __find, __generateId } = require('../../utils')
+const {
+  // __get,
+  __find,
+  __generateId
+} = require('../../utils')
 
-const files = {
-  allergies,
-  courses,
-  cuisines,
-  diets,
-  holidays,
-  ingredients1,
-  measurements
-} = require('./files')
+// const files = {
+//   allergies,
+//   courses,
+//   cuisines,
+//   diets,
+//   holidays,
+//   ingredients1,
+//   measurements
+// } = require('./files')
 
 // experimental method, like getRawFiles
 // first of all lodash has _.get method.
@@ -41,19 +45,19 @@ const proceedData = (array) => {
 const getAttribute = function (attribute) {
   switch (attribute) {
     case 'allergies':
-      return __get(allergies)
+      // return __get(allergies)
       break
     case 'cuisines':
-      return __get(cuisines)
+      // return __get(cuisines)
       break
     case 'courses':
-      return __get(courses)
+      // return __get(courses)
       break
     case 'holidays':
-      return __get(holidays)
+      // return __get(holidays)
       break
     case 'diets':
-      return __get(diets)
+      // return __get(diets)
       break
 
     default:
@@ -79,14 +83,14 @@ const getPlaceholder = function (attribute, flag = false) {
       return 'Holiday'
     case 'ingredient':
       return (flag) ? 'Ingredients you have' : "Ingredients you don't have"
-    default: return "Incorrect attribute or empty argument"
+    default: return 'Incorrect attribute or empty argument'
   }
 }
 
 // @TODO update method too
 // this method can have a duplicates..... related to another project
 const getIngredients = function () {
-  return __get(ingredients1)
+  // return __get(ingredients1)
 }
 
 const getFormattedIngredients = function () {
@@ -157,31 +161,27 @@ const toOptAntD = (data) => {
 // @TODO add test coverage
 const getData = (value, type = 'attribute') => {
   let result
-  if (type == 'attribute') {
-    result = getAttribute(value)
-  }
+  // if (type == 'attribute') {
+  //   result = getAttribute(value)
+  // }
 
-  if (type == 'ingredient') {
-    result = getIngredients()
-  }
+  // if (type == 'ingredient') {
+  //   result = getIngredients()
+  // }
 
   return result
 }
 
 module.exports = {
-
   __find,
-  files,
-
+  // files,
   proceedData,
   getAttribute,
   getFormattedAttributes,
   getPlaceholder,
   getIngredients,
   getFormattedIngredients,
-
   toOpt,
   toOptAntD,
-
   getData
 }

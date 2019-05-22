@@ -1,4 +1,4 @@
-/* global test, describe, it, expect, jest */
+/* global describe, it, expect, */
 const chickenKyiv = require('../chickenKyiv.js')
 
 // @TODO OK, but i don't like when you put everything in long line inside of your ass @hirdbluebird. Looks not better.
@@ -11,8 +11,8 @@ describe('testing static data files are set', () => {
     getFirstFiveRecipes: chickenKyiv.getFirstFiveRecipes()
   }
 
-  methodReturnsArray = method => {
-    test(`chickenKyiv method ${method} is returning array`, () => {
+  const methodReturnsArray = method => {
+    it(`chickenKyiv method ${method} is returning array`, () => {
       const result = methodList[method]
       expect(result).is(Array)
     })

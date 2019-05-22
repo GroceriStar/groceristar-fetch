@@ -1,9 +1,10 @@
-const _ = require('lodash')
+// const _ = require('lodash')
 
 const search = require('../Search/search')
 
 const {
-  parser, pathToJson
+  parser
+  // pathToJson
 } = require('../../utils')
 
 // const options = [
@@ -29,7 +30,7 @@ const {
 // const data = search.getFormattedIngredients();
 
 // const data = search.getFormattedAttributes('diets');
-const data = search.getFormattedAttributes('allergies')
+// const data = search.getFormattedAttributes('allergies')
 // console.log(data)
 console.log(parser(search.file))
 

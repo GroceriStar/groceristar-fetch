@@ -1,10 +1,10 @@
 function attachGroceryToAdmin (admin, grocery) {
   // console.log(grocery);
-  var options = {
-    userId: admin.id,
-    secondArray: [ grocery.id ]
-  }
-  User.addGrocery(options)
+  // var options = {
+  //   userId: admin.id,
+  //   secondArray: [ grocery.id ]
+  // }
+  // User.addGrocery(options)
 };
 
 function getAdminGroceries (User) {
@@ -13,26 +13,25 @@ function getAdminGroceries (User) {
 
   User.withAdmin = function (cb) {
     User.findOne({
-        	where: {
+      where: {
         username: 'admin'
       },
-
-	        include: {
-	             relation: 'groceries',
-	             scope: {
-	                 // where: {
-	                 //     id: groceryId
-	                 // },
-	                 // include: {
-	                 //     relation: 'departmentsList',
-	                 // }
-	             }
-	        }
+      include: {
+        relation: 'groceries',
+        scope: {
+        // where: {
+        //     id: groceryId
+        // },
+        // include: {
+        //     relation: 'departmentsList',
+        // }
+        }
+      }
     }, cb)
   }
 
   User.getAdminData = function () {
-    User.withAdmin(function (err, admin) {
+    User.withAdmin(function (admin) {
       console.log(admin)
     })
   }

@@ -1,5 +1,5 @@
 const _ = require('underscore')
-const async = require('async')
+// const async = require('async')
 const raven = require('raven')
 
 // @TODO move id to config file. or we use it in a lot of places.
@@ -7,7 +7,7 @@ raven.config('https://c1e3b55e6a1a4723b9cae2eb9ce56f2e:57e853a74f0e4db98e69a9cf0
 
 // let raven
 // @TODO change this name
-const da_id = (array) => {
+const daId = (array) => {
   // console.log(array)
   if (!array) {
     raven.captureException('Cannot attach an empty array of ids')
@@ -28,7 +28,7 @@ const da_id = (array) => {
 // const create_ingredients = (options, wrapper, cb) => {
 //   if( !options ){ raven.captureException('Options was not specified');  }
 //   if ( !cb ) {    raven.captureException('Callback was not specified'); }
-//   if ( !wrapper && !wrapper.table_name ) { raven.captureException('Model was not specified'); }
+//   if ( !wrapper && !wrapper.tableName ) { raven.captureException('Model was not specified'); }
 //   let server
 //   let database
 //   let raven
@@ -36,28 +36,32 @@ const da_id = (array) => {
 //   ( {server, database, raven, predata} = options );
 //
 //
-//     let Model      = server.models[wrapper.table_name];
-//     let table_name = wrapper.table_name;
+//     let Model      = server.models[wrapper.tableName];
+//     let tableName = wrapper.tableName;
 //
 //
 // };
 
 // @TODO it's a stupid duplicate. as usually - want to speed up development
-const create_with_relations = (options, datazzzz, wrapper, cb) => {
+const createWithRelations = (options, datazzzz, wrapper, cb) => {
+  let server, database, raven
+  ({
+    server,
+    database,
+    raven
+    // predata
+  } = options)
   if (!options) { raven.captureException('Options was not specified') }
   if (!cb) { raven.captureException('Callback was not specified') }
-  if (!wrapper && !wrapper.table_name) { raven.captureException('Model was not specified') }
+  if (!wrapper && !wrapper.tableName) { raven.captureException('Model was not specified') }
 
-  let server, database, raven, predata
-  ({ server, database, raven, predata } = options)
-
-  let Model = server.models[wrapper.table_name]
-  let table_name = wrapper.table_name
+  let Model = server.models[wrapper.tableName]
+  let tableName = wrapper.tableName
 
   // @TODO change this name.
   let data = datazzzz
 
-  database.autoupdate(table_name, function (err) {
+  database.autoupdate(tableName, function (err) {
     if (err) {
       raven.captureException(err)
       return cb(err)
@@ -77,7 +81,7 @@ const create = (options, wrapper, cb) => {
   if (!options) { raven.captureException('Options was not specified') }
   if (!cb) { raven.captureException('Callback was not specified') }
 
-  if (!wrapper && !wrapper.table_name) { raven.captureException('Model was not specified') }
+  if (!wrapper && !wrapper.tableName) { raven.captureException('Model was not specified') }
 
   // console.log(options.raven)
 
@@ -87,8 +91,8 @@ const create = (options, wrapper, cb) => {
   // let server, database, raven, predata
   //   ( {server, database, raven, predata} = options );
 
-  let Model = server.models[wrapper.table_name]
-  let table_name = wrapper.table_name
+  let Model = server.models[wrapper.tableName]
+  let tableName = wrapper.tableName
 
   // @TODO change this make it work backwards.
   let data =
@@ -99,7 +103,7 @@ const create = (options, wrapper, cb) => {
 
   console.log(data)
 
-  database.autoupdate(table_name, function (err) {
+  database.autoupdate(tableName, function (err) {
     if (err) {
       raven.captureException(err)
       return cb(err)
@@ -122,8 +126,9 @@ const create = (options, wrapper, cb) => {
 // array_ids - where we get data from
 // collection - where we put our data
 // attribute - key at collection
-const attach = (array_ids, collection, attribute) => {
-  var arrayWithIds = get_id_array(array_ids)
+const attach = (arrayIds, collection, attribute) => {
+  const getIdArray = (array) => {}
+  var arrayWithIds = getIdArray(arrayIds)
 
   // if attribute is string then use it. if attribute is array with count 1 - use it
   // if attribute have more elements - we need to pick stuff. @TODO
@@ -135,67 +140,76 @@ const attach = (array_ids, collection, attribute) => {
   // debug('attach attached!'); // @TODO
 }
 
-const get_imported_data_for_relate_function = async (options, table_name) => {
+const getImportedDataForRelateFunction = async (options, tableName) => {
   // this is a hardcode. @TODO handle this later.
   // I don't like that we're searching all recipes at this method
 
   // @TODO apply this changes to all import model files
-  let server, database, raven
-  ({ server, database, raven } = options)
+  let server, raven
+  ({
+    server,
+    // database,
+    raven
+  } = options)
 
   // let recipes
   let collection // ?? @TODO pick a better name later
   try {
-    let Model = server.models[table_name]
+    let Model = server.models[tableName]
     collection = await Model.find({})
   } catch (e) {
     raven.captureException(e)
     // this will eventually be handled by your error handling middleware
-    next(e)
+    // next(e)
   }
   // end of what i don't like
 
   return collection
 }
 
-const find_all_data_copy_of_function_above = async (options, cb) => {
+const findAllDataCopyOfFunctionAbove = async (options, cb) => {
   // this is a hardcode. @TODO handle this later.
   // I don't like that we're searching all recipes at this method
 
   // @TODO apply this changes to all import model files
-  let server, database, raven
-  ({ server, database, raven } = options)
+  let tableName
+  let server, raven
+  ({
+    server,
+    // database,
+    raven
+  } = options)
 
   let collections
   try {
-    let modelInstance = server.models[table_name]
+    let modelInstance = server.models[tableName]
     collections = await modelInstance.find({})
   } catch (e) {
     raven.captureException(e)
     // this will eventually be handled by your error handling middleware
-    next(e)
+    // next(e)
   }
   // end of what i don't like
 
   // -------------------------------
 
   // @TODO NOT SURE HOW I CAN CALL CALLBACK AND ALSO RUN ATTACH FUNCTION.
-  cb(err, collections)
+  cb(collections)
 }
 
-const is_imported = (results, tables) => {
+const isImported = (results, tables) => {
   _.map(tables, (item) => {
     if (!results.item) { raven.captureException('not imported well') }
   })
 }
 
 module.exports = {
-  da_id: da_id,
+  da_id: daId,
   create: create,
   // cReate:cReate,
   attach: attach,
-  get_data: get_imported_data_for_relate_function,
-  create_with_relations: create_with_relations,
-  is_imported: is_imported
-
+  get_data: getImportedDataForRelateFunction,
+  createWithRelations: createWithRelations,
+  isImported: isImported,
+  findAllDataCopyOfFunctionAbove: findAllDataCopyOfFunctionAbove
 }
