@@ -2,18 +2,18 @@ const _ = require('lodash')
 // const fs = require('fs')
 
 const {
-  // __get,
+  __get,
   __find,
   // __l,
   __generateId
 } = require('../../utils')
 
-// const files = {
-//   departments,
-//   ingredients,
-//   users,
-//   groceries
-// } = require('./files')
+const {
+  departments
+  // ingredients,
+  // users,
+  // groceries
+} = require('./files')
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // don't worry, will update @hirdbluebird
@@ -33,9 +33,9 @@ const getUsers = function () {
   // return __get(users)
 }
 
-// const getDepartments = function () {
-//   return __get(departments)
-// }
+const getDepartments = () => {
+  return __get(departments)
+}
 
 const getGroceryById = function (id) {
   // return [ _.find(groceries, ['id', id]) ]
@@ -359,7 +359,7 @@ module.exports = {
   getIngredients,
   // getGrocery,
   getUsers,
-  // getDepartments,
+  getDepartments,
   getGroceryById,
   getGroceryByName,
   getGroceryByNameWithDepAndIng,
