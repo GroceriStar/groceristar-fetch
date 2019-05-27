@@ -1,3 +1,4 @@
+//@TODO we actually can import not as object, but as `destroyed` object. and it will simplify this first part of this file
 const files = require('./files.js')
 
 const measurementUnits = files.measurementUnits
@@ -6,6 +7,7 @@ const measurementSystems = files.measurementSystems
 const generatedMeasurementUnits = files.generatedMeasurementUnits
 const generatedMeasurementSystem = files.generatedMeasurementSystem
 
+//@TODO be ready that with latest changes variables below will be crashed
 const cookingTimes = files.cookingTimes
 const cup1 = files.cup1
 const cup12 = files.cup12
