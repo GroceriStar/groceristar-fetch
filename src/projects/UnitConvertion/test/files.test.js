@@ -1,4 +1,4 @@
-const files = require('./files.js')
+const files = require('../files.js')
 
 const measurementUnits = files.measurementUnits
 const measurementSystems = files.measurementSystems
@@ -10,17 +10,17 @@ const generatedMeasurementSystem = files.generatedMeasurementSystem
 // be ready for that
 const cookingTimes = files.cookingTimes
 const cup1 = files.cup1
-const cup12 = files.cup12
-const cup14 = files.cup14
+const halfCup = files.halfCup
+const quaterCup = files.quaterCup
 const cup18 = files.cup18
 const cup34 = files.cup34
 const dash = files.dash
-const gallon1 = files.gallon1
+const gallon = files.gallon
 const pinch = files.pinch
-const pint1 = files.pint1
-const quart1 = files.quart1
-const tablespoon1 = files.tablespoon1
-const teaspoon1 = files.teaspoon1
+const pint = files.pint
+const quart = files.quart
+const tablespoon = files.tablespoon
+const teaspoon = files.teaspoon
 
 /* global test, describe, it, expect, */
 
@@ -44,17 +44,17 @@ describe('testing objects are not empty', () => {
   objectIsNotEmpty(generatedMeasurementSystem)
   objectIsNotEmpty(cookingTimes)
   objectIsNotEmpty(cup1)
-  objectIsNotEmpty(cup12)
-  objectIsNotEmpty(cup14)
+  objectIsNotEmpty(halfCup)
+  objectIsNotEmpty(quaterCup)
   objectIsNotEmpty(cup18)
   objectIsNotEmpty(cup34)
   objectIsNotEmpty(dash)
-  objectIsNotEmpty(gallon1)
+  objectIsNotEmpty(gallon)
   objectIsNotEmpty(pinch)
-  objectIsNotEmpty(pint1)
-  objectIsNotEmpty(quart1)
-  objectIsNotEmpty(tablespoon1)
-  objectIsNotEmpty(teaspoon1)
+  objectIsNotEmpty(pint)
+  objectIsNotEmpty(quart)
+  objectIsNotEmpty(tablespoon)
+  objectIsNotEmpty(teaspoon)
 })
 
 describe('testing object returns array', () => {
@@ -71,15 +71,15 @@ describe('testing object returns array', () => {
   isArray(generatedMeasurementSystem)
   isArray(cookingTimes)
   isArray(cup1)
-  isArray(cup12)
-  isArray(cup14)
+  isArray(halfCup)
+  isArray(quaterCup)
   isArray(cup18)
   isArray(cup34)
   isArray(dash)
-  isArray(gallon1)
+  isArray(gallon)
   isArray(pinch)
-  isArray(pint1)
-  isArray(quart1)
-  isArray(tablespoon1)
-  isArray(teaspoon1)
+  isArray(pint)
+  isArray(quart)
+  isArray(tablespoon)
+  isArray(teaspoon)
 })
