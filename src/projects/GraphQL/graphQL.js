@@ -9,10 +9,10 @@ const {
 
 const {
   favorites,
-  items
+  items,
+  userGrocery
   // groceristar,
   // groceries,
-  // userGrocery
 } = require('./files')
 
 // @TODO return measurements
@@ -59,34 +59,34 @@ const getItems = function () {
 }
 
 const getItemsKey = function () {
-  // let items = getItems()
+  let items = getItems()
 
-  // return _.map(items, (item, index) => {
-  //   return {
-  //     key: __generateId(),
-  //     ...item
-  //   }
-  // })
+  return _.map(items, (item, index) => {
+    return {
+      key: __generateId(),
+      ...item
+    }
+  })
 }
 
 const getUserGrocery = function () {
-  // return _.map(userGrocery, (item, index) => {
-  //   return {
-  //     key: ++index,
-  //     ...item
-  //   }
-  // })
+  return _.map(userGrocery, (item, index) => {
+    return {
+      key: ++index,
+      ...item
+    }
+  })
 }
 
 const getUserGroceryKey = function () {
   // let userGroceries = getUserGrocery()
 
-  // return _.map(userGrocery, (item, index) => {
-  //   return {
-  //     key: __generateId(),
-  //     ...item
-  //   }
-  // })
+  return _.map(userGrocery, (item, index) => {
+    return {
+      key: __generateId(),
+      ...item
+    }
+  })
 }
 
 const getDepartments = function () {
