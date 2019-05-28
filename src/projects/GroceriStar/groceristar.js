@@ -100,14 +100,17 @@ const getGroceriesWithDepIngKey = () => {
   //   // grocery.departments = groceryDepIng;
   //   return getGroceryByNameWithDepAndIngKey(grocery.name)
   // })
-
+  let departmentId = __generateId()
   // return result
   return {
     'name': 'name',
     'groceryId': 'groceryId',
     'messages': {},
     'departments': {
-      'name': ''
+      'id': departmentId,
+      'name': '',
+      'type': '',
+      'ingridients': {}
     }
   }
 }
