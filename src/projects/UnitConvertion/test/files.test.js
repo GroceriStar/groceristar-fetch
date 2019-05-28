@@ -1,4 +1,5 @@
-const files = require('../files.js')
+// @TODO we actually can import not as object, but as `destroyed` object. and it will simplify this first part of this file
+const files = require('./files.js')
 
 const measurementUnits = files.measurementUnits
 const measurementSystems = files.measurementSystems
@@ -8,6 +9,7 @@ const generatedMeasurementSystem = files.generatedMeasurementSystem
 
 // @TODO it will be a place where all went broken because of our latest changes in sd-wrapper module.
 // be ready for that
+
 const cookingTimes = files.cookingTimes
 const cup1 = files.cup1
 const halfCup = files.halfCup
