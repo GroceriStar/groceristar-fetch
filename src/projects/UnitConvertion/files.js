@@ -7,19 +7,19 @@ const generatedMeasurementSystem = staticData.generatedMeasurementSystem
 //@TODO it will be a place where all went broken because of our latest changes in sd-wrapper module.
 // be ready for that
 
-const cookingTimes = staticData.cooking_times
+const cookingTimes = staticData.cookingTimes
 const cup1 = staticData.cup1
-const cup12 = staticData.cup1_2
-const cup14 = staticData.cup1_4
+const halfCup = staticData.halfCup
+const quaterCup = staticData.quaterCup
 const cup18 = staticData.cup1_8
 const cup34 = staticData.cup3_4
 const dash = staticData.dash
-const gallon1 = staticData.gallon1
+const gallon = staticData.gallon
 const pinch = staticData.pinch
-const pint1 = staticData.pint1
-const quart1 = staticData.quart1
-const tablespoon1 = staticData.tablespoon_1
-const teaspoon1 = staticData.teaspoon_1
+const pint = staticData.pint
+const quart = staticData.quart
+const tablespoon = staticData.tablespoon
+const teaspoon = staticData.teaspoon
 
 module.exports = {
   measurementSystems,
@@ -29,15 +29,15 @@ module.exports = {
   
   cookingTimes,
   cup1,
-  cup12,
-  cup14,
+  halfCup,
+  quaterCup,
   cup18,
   cup34,
   dash,
-  gallon1,
+  gallon,
   pinch,
-  pint1,
-  quart1,
-  tablespoon1,
-  teaspoon1
+  pint,
+  quart,
+  tablespoon,
+  teaspoon
 }
