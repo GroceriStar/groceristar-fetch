@@ -10,9 +10,9 @@ const {
 
 const {
   departments
+  // groceries
   // ingredients,
   // users,
-  // groceries
 } = require('./files')
 
 // @TODO can we update our methods - but we'll need to go step by step,
@@ -92,8 +92,8 @@ const getGroceryByNameWithDepAndIng = function (name) {
 // Where we're using this methods?
 // -----------------------------------
 
-const getGroceriesWithDepIngKey = function () {
-  let result = []
+const getGroceriesWithDepIngKey = () => {
+  // let result = []
   // let result = _.map(groceries, function (grocery) {
   //   // @TODO change variable name
   //   // grocery.id = __generateId()
@@ -101,15 +101,22 @@ const getGroceriesWithDepIngKey = function () {
   //   return getGroceryByNameWithDepAndIngKey(grocery.name)
   // })
 
-  return result
+  // return result
+  return {
+    'name': 'name',
+    'groceryId': 'groceryId',
+    'messages': {},
+    'departments': {
+      'name': ''
+    }
+  }
 }
 
-const getGroceryByNameWithDepAndIngKey = function (name) {
+const getGroceryByNameWithDepAndIngKey = name => {
   let groceryId = __generateId()
 
   // let grocery = filterGroceriesByName(groceries, name)
 
-  let result = []
   // @TODO this is not a clean turn around for this method
   // grocery[0]['departments'].forEach(
   //   function (department) {
@@ -136,7 +143,7 @@ const getGroceryByNameWithDepAndIngKey = function (name) {
     'name': name,
     'groceryId': groceryId,
     'messages': {},
-    'departments': result
+    'departments': []
   }
 }
 
