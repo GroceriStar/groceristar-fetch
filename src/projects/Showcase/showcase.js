@@ -15,14 +15,14 @@ const getGroceryShowcase = function () {
   // @TODO can we just merge together 2 arrays instead of adding this 2 values?
   // maybe it can be better
 
-  let result = files.groceries.map((item) => {
-    item.height = 200
-    item.css = 'linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)'
-    return item
-  })
+  // let result = files.groceries.map((item) => {
+  //   item.height = 200
+  //   item.css = 'linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)'
+  //   return item
+  // })
   // console.log(result);
 
-  return result
+  return []
 }
 
 module.exports = {

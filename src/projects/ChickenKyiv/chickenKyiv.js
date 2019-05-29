@@ -77,9 +77,8 @@ const getNRecipes = (n) => {
  */
 const getRecipeByTitle = (title) => {
   // let recipes = __get(files.recipes)
-  let recipes = []
-
-  return _.filter(recipes, recipe => recipe.title === title)[0]
+  // return _.filter(recipes, recipe => recipe.title === title)[0]
+  return []
 }
 
 /**

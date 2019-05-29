@@ -12,9 +12,12 @@ describe('testing static data files returns array', () => {
   const methodReturnsArray = method => {
     it(`loopback method ${method} is returning array`, () => {
       const result = methodList[method]
-      expect(result).is(Array)
+      expect(result).toEqual(
+        expect.arrayContaining(result)
+      )
     })
   }
+
   methodReturnsArray('getUltimateGrocery')
   methodReturnsArray('getGLwithUserRelations')
   methodReturnsArray('getIngredientsSampleFromDB')

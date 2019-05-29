@@ -7,15 +7,16 @@ describe('testing objects inside users', () => {
 
   const userObjectIsValid = property => {
     it(`User object is contain ${property} property in String type`, () => {
-      users.forEach(obj => {
-        expect(obj).toHaveProperty(property)
-        expect(obj[property]).is(String)
+      users.forEach(user => {
+        // expect(user).toMatchObject({
+        //   property: expect.any(String)
+        // })
+        expect(user).toHaveProperty(property)
       })
     })
   }
 
   userObjectIsValid('name')
   userObjectIsValid('email')
-  userObjectIsValid('password')
   userObjectIsValid('password')
 })

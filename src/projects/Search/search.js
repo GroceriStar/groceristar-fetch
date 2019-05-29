@@ -160,7 +160,7 @@ const toOptAntD = (data) => {
 
 // @TODO add test coverage
 const getData = (value, type = 'attribute') => {
-  let result
+  // let result
   // if (type == 'attribute') {
   //   result = getAttribute(value)
   // }
@@ -169,7 +169,7 @@ const getData = (value, type = 'attribute') => {
   //   result = getIngredients()
   // }
 
-  return result
+  return {}
 }
 
 module.exports = {

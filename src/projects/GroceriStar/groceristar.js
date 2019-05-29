@@ -1,19 +1,24 @@
 const _ = require('lodash')
+
+// const { users } = require('@groceristar/sd-wrapper')
+// const staticData = require('@groceristar/sd-wrapper')
+// const users = staticData.users
+
 // const fs = require('fs')
 
 const {
-  // __get,
+  __get,
   __find,
   // __l,
   __generateId
 } = require('../../utils')
 
-// const files = {
-//   departments,
-//   ingredients,
-//   users,
-//   groceries
-// } = require('./files')
+const {
+  departments
+  // groceries
+  // ingredients,
+  // users,
+} = require('./files')
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // don't worry, will update @hirdbluebird
@@ -31,11 +36,23 @@ const getIngredients = function () {
 
 const getUsers = function () {
   // return __get(users)
+  return [
+    {
+      name: 'john doe',
+      email: 'johndoe@mail.com',
+      password: ' '
+    },
+    {
+      name: 'miss doe',
+      email: 'missdoe@mail.com',
+      password: ' '
+    }
+  ]
 }
 
-// const getDepartments = function () {
-//   return __get(departments)
-// }
+const getDepartments = () => {
+  return __get(departments)
+}
 
 const getGroceryById = function (id) {
   // return [ _.find(groceries, ['id', id]) ]
@@ -92,24 +109,34 @@ const getGroceryByNameWithDepAndIng = function (name) {
 // Where we're using this methods?
 // -----------------------------------
 
-const getGroceriesWithDepIngKey = function () {
-  let result = []
+const getGroceriesWithDepIngKey = () => {
+  // let result = []
   // let result = _.map(groceries, function (grocery) {
   //   // @TODO change variable name
   //   // grocery.id = __generateId()
   //   // grocery.departments = groceryDepIng;
   //   return getGroceryByNameWithDepAndIngKey(grocery.name)
   // })
-
-  return result
+  let departmentId = __generateId()
+  // return result
+  return {
+    'name': 'name',
+    'groceryId': 'groceryId',
+    'messages': {},
+    'departments': {
+      'id': departmentId,
+      'name': '',
+      'type': '',
+      'ingridients': {}
+    }
+  }
 }
 
-const getGroceryByNameWithDepAndIngKey = function (name) {
+const getGroceryByNameWithDepAndIngKey = name => {
   let groceryId = __generateId()
 
   // let grocery = filterGroceriesByName(groceries, name)
 
-  let result = []
   // @TODO this is not a clean turn around for this method
   // grocery[0]['departments'].forEach(
   //   function (department) {
@@ -136,7 +163,7 @@ const getGroceryByNameWithDepAndIngKey = function (name) {
     'name': name,
     'groceryId': groceryId,
     'messages': {},
-    'departments': result
+    'departments': []
   }
 }
 
@@ -359,7 +386,7 @@ module.exports = {
   getIngredients,
   // getGrocery,
   getUsers,
-  // getDepartments,
+  getDepartments,
   getGroceryById,
   getGroceryByName,
   getGroceryByNameWithDepAndIng,

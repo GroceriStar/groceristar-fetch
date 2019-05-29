@@ -7,13 +7,13 @@ const {
   __generateDate
 } = require('../../utils')
 
-// const files = {
-//   groceristar,
-//   groceries,
-//   favorites,
-//   items,
-//   userGrocery
-// } = require('./files')
+const {
+  favorites,
+  items,
+  userGrocery
+  // groceristar,
+  // groceries,
+} = require('./files')
 
 // @TODO return measurements
 
@@ -32,67 +32,61 @@ const {
 // }
 
 const getFavorites = function () {
-  // let favorites = favorites
-
-  // return _.map(favorites, (favorite, index) => {
-  //   return {
-  //     key: ++index,
-  //     ...favorite
-  //   }
-  // })
+  return _.map(favorites, (favorite, index) => {
+    return {
+      key: ++index,
+      ...favorite
+    }
+  })
 }
 
 const getFavoritesKey = function () {
-  // let favorites = getFavorites()
-
-  // return _.map(favorites, (favorite, index) => {
-  //   return {
-  //     key: __generateId(),
-  //     ...favorite
-  //   }
-  // })
+  return _.map(favorites, (favorite, index) => {
+    return {
+      key: __generateId(),
+      ...favorite
+    }
+  })
 }
 
 const getItems = function () {
-  // let favorites = getItems()
-
-  // return _.map(items, (item, index) => {
-  //   return {
-  //     key: ++index,
-  //     ...item
-  //   }
-  // })
+  return _.map(items, (item, index) => {
+    return {
+      key: ++index,
+      ...item
+    }
+  })
 }
 
 const getItemsKey = function () {
-  // let items = getItems()
+  let items = getItems()
 
-  // return _.map(items, (item, index) => {
-  //   return {
-  //     key: __generateId(),
-  //     ...item
-  //   }
-  // })
+  return _.map(items, (item, index) => {
+    return {
+      key: __generateId(),
+      ...item
+    }
+  })
 }
 
 const getUserGrocery = function () {
-  // return _.map(userGrocery, (item, index) => {
-  //   return {
-  //     key: ++index,
-  //     ...item
-  //   }
-  // })
+  return _.map(userGrocery, (item, index) => {
+    return {
+      key: ++index,
+      ...item
+    }
+  })
 }
 
 const getUserGroceryKey = function () {
   // let userGroceries = getUserGrocery()
 
-  // return _.map(userGrocery, (item, index) => {
-  //   return {
-  //     key: __generateId(),
-  //     ...item
-  //   }
-  // })
+  return _.map(userGrocery, (item, index) => {
+    return {
+      key: __generateId(),
+      ...item
+    }
+  })
 }
 
 const getDepartments = function () {
