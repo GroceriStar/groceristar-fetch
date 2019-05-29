@@ -84,7 +84,9 @@ describe('empty test', () => {
 describe('testing objects are not empty', () => {
   const objectIsNotEmpty = (object) => {
     it('object ' + object, () => {
-      expect(object).toEqual({})
+      expect(object).toEqual({
+        'xxx': ''
+      })
     })
   }
 
