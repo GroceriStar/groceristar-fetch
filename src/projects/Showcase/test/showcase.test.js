@@ -12,7 +12,7 @@ describe('testing statics file are set', () => {
   }
 
   methodList.getGroceryShowcase = method => {
-    it(`showcase  method ${method} is returning array`, () => {
+    it(`showcase  method ${method}() is returning array`, () => {
       const result = methodList[method]
       expect(result).toEqual(
         expect.arrayContaining(result)

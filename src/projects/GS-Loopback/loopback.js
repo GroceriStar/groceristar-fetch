@@ -7,7 +7,7 @@ const {
   __generateDate
 } = require('../../utils')
 
-//@TODO this files we'll redo soon. link: https://github.com/GroceriStar/sd/issues/76
+// @TODO this files we'll redo soon. link: https://github.com/GroceriStar/sd/issues/76
 // we don't need them at this moment, but later - it'll be part of our graphql-server functionality
 // const {
 //   ultimateGroceryList,

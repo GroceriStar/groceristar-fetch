@@ -7,7 +7,7 @@ const methodsList = {
 }
 
 describe('testing static data files returns array', () => {
-  const testFileIsNotEmpty = (method) => {
+  const testFileIsNotEmpty = method => {
     it(`method ${method}()`, () => {
       var result = methodsList[method]
       expect(result).not.toBe('')
