@@ -55,5 +55,4 @@ describe('testing search getData method', () => {
   testGetData('holidays')
   testGetData('diets')
   testGetData(null, 'ingredient')
-  testGetData()
 })

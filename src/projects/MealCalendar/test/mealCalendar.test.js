@@ -35,7 +35,9 @@ describe('iting static data files are set', () => {
   const methodReturnsArray = method => {
     it(`MealCalendar method ${method} is returning array`, () => {
       const result = methodList[method]
-      expect(result).is(Array)
+      expect(result).toEqual(
+        expect.arrayContaining(result)
+      )
     })
   }
 
