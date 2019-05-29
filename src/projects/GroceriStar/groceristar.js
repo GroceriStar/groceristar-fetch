@@ -128,7 +128,7 @@ const getGroceriesWithDepIngKey = () => {
       'id': departmentId,
       'name': '',
       'type': '',
-      'ingridients': {}
+      'ingredients': {}
     }
   }
 }
