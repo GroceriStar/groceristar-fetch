@@ -1,4 +1,9 @@
 const _ = require('lodash')
+
+// const { users } = require('@groceristar/sd-wrapper')
+// const staticData = require('@groceristar/sd-wrapper')
+// const users = staticData.users
+
 // const fs = require('fs')
 
 const {
