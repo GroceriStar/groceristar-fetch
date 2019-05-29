@@ -1,27 +1,34 @@
 // const _ = require('lodash')
 // const fs = require('fs')
 
-const { __get, __generateId, __generateDate } = require('../../utils')
-
 const {
-  ultimateGroceryList,
-  groceryListWithUserRelations,
-  dbIngredients
-} = require('./files')
+  // __get,
+  __generateId,
+  __generateDate
+} = require('../../utils')
+
+// const {
+//   ultimateGroceryList,
+//   groceryListWithUserRelations,
+//   dbIngredients
+// } = require('./files')
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // because these methods used in our react projects.
 // so I propose do it very carefully
 const getUltimateGrocery = function () {
-  return __get(ultimateGroceryList)
+  // return __get(ultimateGroceryList)
+  return []
 }
 
 const getGLwithUserRelations = () => {
-  return __get(groceryListWithUserRelations)
+  // return __get(groceryListWithUserRelations)
+  return []
 }
 
 const getIngredientsSampleFromDB = () => {
-  return __get(dbIngredients)
+  // return __get(dbIngredients)
+  return []
 }
 
 // const getIngredients = function() {
@@ -108,7 +115,8 @@ const getUserObject = function (name) {
       userObj.ingredientIds[i] = __generateId()
     }
   }
-  return userObj
+  // return userObj
+  return []
 }
 
 module.exports = {
