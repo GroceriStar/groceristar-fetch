@@ -31,6 +31,18 @@ const getIngredients = function () {
 
 const getUsers = function () {
   // return __get(users)
+  return [
+    {
+      name: 'john doe',
+      email: 'johndoe@mail.com',
+      password: ' '
+    },
+    {
+      name: 'miss doe',
+      email: 'missdoe@mail.com',
+      password: ' '
+    }
+  ]
 }
 
 const getDepartments = () => {
