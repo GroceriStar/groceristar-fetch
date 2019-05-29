@@ -123,6 +123,7 @@ const getGroceriesWithDepIngKey = () => {
     'name': 'name',
     'groceryId': 'groceryId',
     'messages': {},
+    'ingridients': {},
     'departments': {
       'id': departmentId,
       'name': '',

@@ -27,7 +27,7 @@ describe('getGroceriesWithDepIngKey method', () => {
   groceryDepartmentHasProperty('id')
   groceryDepartmentHasProperty('name')
   groceryDepartmentHasProperty('type')
-  groceryDepartmentHasProperty('ingridients')
+  groceryDepartmentHasProperty('ingredients')
 
   // @TODO it ID on match with nested object properties is ugly
   // it('Main grocery ID is unique among inner object ID\'s', () => {
