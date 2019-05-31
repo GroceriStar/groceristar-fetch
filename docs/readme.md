@@ -67,7 +67,7 @@ Created with help of this articles(they moved to awesome-dev):
 - https://medium.com/@adrianli/the-idiot-s-guide-to-publishing-a-react-component-to-npm-2b66b1ac03e0
 - https://medium.com/@jdxcode/for-the-love-of-god-dont-use-npmignore-f93c08909d8d
 
-More details about how to build npm plugin in this collection: https://github.com/ChickenKyiv/awesome-dev-stuff/blob/master/npm-modules.md
+More details about how to build npm plugin in this collection: https://github.com/ChickenKyiv/awesome-dev-stuff/tree/master/docs/create-npm-module
 
 Explore tools that community has
 
