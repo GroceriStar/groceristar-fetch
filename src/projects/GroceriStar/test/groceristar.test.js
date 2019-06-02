@@ -17,7 +17,7 @@ const groceristar = require('../groceristar.js')
 const GROCERY_COUNT = 28
 // const USER_COUNT = 3
 
-describe('iting objects inside groceries', () => {
+describe('checking objects inside groceries', () => {
   const groceryHaveProperty = property => {
     // it(`Grocery have property ${property}`, () => {
     //   groceries.forEach(obj => {
@@ -50,7 +50,7 @@ describe('iting objects inside groceries', () => {
 })
 
 describe('iting objects inside ingredients', () => {
-  const ingridientsHaveProperty = property => {
+  const ingredientsHaveProperty = property => {
     // it(`Each ingridient have property ${property}`, () => {
     //   ingridients.forEach(obj => {
     //     expect(obj).toHaveProperty(property)
@@ -58,10 +58,10 @@ describe('iting objects inside ingredients', () => {
     // })
   }
 
-  ingridientsHaveProperty('name')
-  ingridientsHaveProperty('department')
+  ingredientsHaveProperty('name')
+  ingredientsHaveProperty('department')
 
-  const ingridientsPropertyContain = (property, type) => {
+  const ingredientsPropertyContain = (property, type) => {
     // it(`Ingridients property ${property} contain as data ${type}`, () => {
     //   ingridients.forEach(obj => {
     //     expect(obj[property]).any(type)
@@ -69,8 +69,8 @@ describe('iting objects inside ingredients', () => {
     // })
   }
 
-  ingridientsPropertyContain('name', String)
-  ingridientsPropertyContain('department', String)
+  ingredientsPropertyContain('name', String)
+  ingredientsPropertyContain('department', String)
 })
 
 describe('Groceristar project methods should return data', () => {
