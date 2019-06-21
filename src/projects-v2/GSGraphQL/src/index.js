@@ -1,21 +1,19 @@
-import files from './files'
+import _  from 'lodash'
 
-const _ = require('lodash')
-
-const {
+import {
   // __get,
   __find,
   __generateId,
   __generateDate
-} = require('../../utils')
+} from '../../utils'
 
-const {
+import {
   favorites,
   items,
   userGrocery
   // groceristar,
   // groceries,
-} = require('./files')
+} from './files'
 
 // @TODO return measurements
 
@@ -33,7 +31,7 @@ const {
 //  }];
 // }
 
-const getFavorites = function () {
+const getFavorites = () => {
   return _.map(favorites, (favorite, index) => {
     return {
       key: ++index,
@@ -42,7 +40,7 @@ const getFavorites = function () {
   })
 }
 
-const getFavoritesKey = function () {
+const getFavoritesKey = () => {
   return _.map(favorites, (favorite, index) => {
     return {
       key: __generateId(),
@@ -51,7 +49,7 @@ const getFavoritesKey = function () {
   })
 }
 
-const getItems = function () {
+const getItems = () => {
   return _.map(items, (item, index) => {
     return {
       key: ++index,
@@ -60,7 +58,7 @@ const getItems = function () {
   })
 }
 
-const getItemsKey = function () {
+const getItemsKey = () => {
   let items = getItems()
 
   return _.map(items, (item, index) => {
@@ -71,7 +69,7 @@ const getItemsKey = function () {
   })
 }
 
-const getUserGrocery = function () {
+const getUserGrocery = () => {
   return _.map(userGrocery, (item, index) => {
     return {
       key: ++index,
@@ -80,7 +78,7 @@ const getUserGrocery = function () {
   })
 }
 
-const getUserGroceryKey = function () {
+const getUserGroceryKey = () => {
   // let userGroceries = getUserGrocery()
 
   return _.map(userGrocery, (item, index) => {
@@ -91,7 +89,7 @@ const getUserGroceryKey = function () {
   })
 }
 
-const getDepartments = function () {
+const getDepartments = () => {
   // let results = departments
   let results = []
   return results.map((item, index) => ({
@@ -103,7 +101,7 @@ const getDepartments = function () {
   }))
 }
 
-const getDepartmentsKey = function () {
+const getDepartmentsKey = () => {
   // let results = departments
   let results = []
   return results.map((item, index) => ({
@@ -115,7 +113,7 @@ const getDepartmentsKey = function () {
   }))
 }
 
-const getGrocery = function () {
+const getGrocery = () => {
   // let results = groceries
   let results = []
   return results.map((item, index) => ({
@@ -131,7 +129,7 @@ const getGrocery = function () {
   }))
 }
 
-const getGroceryKey = function () {
+const getGroceryKey = () => {
   // let results = groceries
   let results = []
   return results.map((item, index) => ({
@@ -147,7 +145,7 @@ const getGroceryKey = function () {
   }))
 }
 
-const getIngredients = function (limit = false) {
+const getIngredients = (limit = false) => {
   // let results = ingredients
   let results = []
   if (limit) {
@@ -167,7 +165,7 @@ const getIngredients = function (limit = false) {
   }))
 }
 
-const getIngredientsKey = function (limit = false) {
+const getIngredientsKey = (limit = false) => {
   // let results = ingredients
   let results = []
   if (limit) {
@@ -187,7 +185,7 @@ const getIngredientsKey = function (limit = false) {
   }))
 }
 // add groceryIds, favs are arrays with ids...
-const getUsers = function () {
+const getUsers = () => {
   // let results = users
   let results = []
   return results.map((item, index) => ({
@@ -198,7 +196,7 @@ const getUsers = function () {
   }))
 }
 
-const getUsersKey = function () {
+const getUsersKey = () => {
   // let results = users
   let results = []
   return results.map((item, index) => ({

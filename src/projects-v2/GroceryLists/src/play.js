@@ -8,14 +8,14 @@
 // } = require('./files')
 // const fs = require('fs')
 
-const {
+import {
   // parser,
   __l
-} = require('../../utils')
+} from '../../utils'
 
 // console.log(JSON.parse( JSON.stringify(departments) ))
 
-const groceristar = require('../GroceriStar/groceristar')
+import groceristar from '../GroceriStar/groceristar'
 
 import methods from './index'
 // const search = require('../Search/search')
