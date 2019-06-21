@@ -1,15 +1,15 @@
-import files from './files'
 
 
-const _ = require('lodash')
-const {
+
+import _ from 'lodash'
+import {
   __find,
   // __get,
   __generateDate,
   __generateId
-} = require('../../utils')
+} from '../../utils'
 
-// const files = {
+// import {
 //   ingredients3,
 //   menus,
 //   recipes,
@@ -17,7 +17,8 @@ const {
 //   nutritions2,
 //   departments,
 //   users
-// } = require('./files')
+// } from './files'
+
 
 // @TODO update this method, use stuff from utils.js
 const getFiveRandomId = function () {

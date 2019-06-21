@@ -1,16 +1,13 @@
-import files from './files'
-
-
-const _ = require('lodash')
+import _ from 'lodash'
 // const uuidv1 = require('uuid/v1')
 
-const {
+import {
   // __get,
   __find,
   __generateId
-} = require('../../utils')
+} from '../../utils'
 
-// const files = {
+// import {
 //   allergies,
 //   courses,
 //   cuisines,
@@ -18,7 +15,7 @@ const {
 //   holidays,
 //   ingredients1,
 //   measurements
-// } = require('./files')
+// } from './files'
 
 // experimental method, like getRawFiles
 // first of all lodash has _.get method.
@@ -45,7 +42,7 @@ const proceedData = (array) => {
 // maybe it's better to name it getAttributeData....
 // @TODO do we need this method? let's compare of what we'll have with select field and decide.
 // Looks like right now it's not very necessary, or can be improved
-const getAttribute = function (attribute) {
+const getAttribute = (attribute) => {
   switch (attribute) {
     case 'allergies':
       // return __get(allergies)
@@ -68,11 +65,11 @@ const getAttribute = function (attribute) {
   }
 }
 
-const getFormattedAttributes = function (attribute) {
+const getFormattedAttributes = (attribute) => {
   return proceedData(getAttribute(attribute))
 }
 
-const getPlaceholder = function (attribute, flag = false) {
+const getPlaceholder = (attribute, flag = false) => {
   switch (attribute) {
     case 'allergy':
       return 'Allergies'
@@ -92,11 +89,11 @@ const getPlaceholder = function (attribute, flag = false) {
 
 // @TODO update method too
 // this method can have a duplicates..... related to another project
-const getIngredients = function () {
+const getIngredients = () => {
   // return __get(ingredients1)
 }
 
-const getFormattedIngredients = function () {
+const getFormattedIngredients = () => {
   return proceedData(getIngredients())
 }
 
@@ -108,7 +105,7 @@ const getFormattedIngredients = function () {
 // toOpt is a method from react-select plugin
 // @TODO change name later and also buzz me - so we'll replace the name at our other sources....
 // i like this name - Prepare Data for Select Field
-const toOpt = function (data) {
+const toOpt = (data) => {
   // console.log('react-select case');
 
   if (_.isArray(data)) {
@@ -175,7 +172,7 @@ const getData = (value, type = 'attribute') => {
   return {}
 }
 
-module.exports = {
+export {
   __find,
   // files,
   proceedData,
