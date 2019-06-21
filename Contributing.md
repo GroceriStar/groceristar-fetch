@@ -21,5 +21,11 @@ Contributing to `Groceristar Fetch` is easy. In a few simple steps:
 ## Requirements
 [todo] requirements
 
+# Development Setup
+
+1. Clone the Repo using
+ git@github.com:GroceriStar/groceristar-fetch.git
+[Todo] Finish 
+
 ## Testing
 [Todo] Need to fill in for testing.
