@@ -1,23 +1,33 @@
 // const _ = require('lodash')
 
-const chickenKyiv = require('../ChickenKyiv/chickenKyiv')
+import {
+  getRecipes,
+  getShowcaseFiveRecipes,
+  getNRecipes,
+  getMenuGenerator,
+  getRandomRecipe,
+  getFirstFiveRecipes,
+  getFiveRandomIngredients,
+  getDepartments,
+  getUsers
+} from '../ChickenKyiv/chickenKyiv'
 
-// console.log( chickenKyiv.getShowcaseFiveRecipes() );
+// console.log( getShowcaseFiveRecipes() );
 
-// chickenKyiv.
-// console.log( chickenKyiv. );
 
-// console.log( count(chickenKyiv.getRecipes()) );
-// console.log( chickenKyiv.getNRecipes(6) );
 
-console.log(chickenKyiv.getRecipes())
-// console.log(chickenKyiv.getMenuGenerator(5))
-// console.log( chickenKyiv.getRandomRecipe() );
 
-// console.log( chickenKyiv.getFirstFiveRecipes() );
+// console.log( count(getRecipes()) );
+// console.log( getNRecipes(6) );
 
-// console.log( chickenKyiv.getFiveRandomIngredients() );
+console.log(getRecipes())
+// console.log(getMenuGenerator(5))
+// console.log(getRandomRecipe() );
 
-// console.log( chickenKyiv.getDepartments() );
+// console.log(getFirstFiveRecipes() );
 
-// console.log( chickenKyiv.getUsers() );
+// console.log(getFiveRandomIngredients() );
+
+// console.log(getDepartments() );
+
+// console.log(getUsers() );
