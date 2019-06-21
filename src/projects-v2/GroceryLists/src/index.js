@@ -10,25 +10,25 @@ import _ from 'lodash'
 
 // const fs = require('fs')
 
-const {
+import {
   __get,
   __find,
   // __l,
   __generateId
-} = require('../../utils')
+} from '../../utils'
 
-const {
+import {
   departments
   // groceries
   // ingredients,
   // users,
-} = require('./files')
+} from './files'
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // don't worry, will update @hirdbluebird
 // because these methods used in our react projects.
 // so I propose do it very carefully
-const getIngredients = function () {
+const getIngredients = () => {
   // return __get(ingredients)
 }
 
@@ -38,7 +38,7 @@ const getIngredients = function () {
 
 // __l(getGrocery());
 
-const getUsers = function () {
+const getUsers = () => {
   // return __get(users)
   return [
     {
@@ -58,20 +58,20 @@ const getDepartments = () => {
   return __get(departments)
 }
 
-const getGroceryById = function (id) {
+const getGroceryById = (id) => {
   // return [ _.find(groceries, ['id', id]) ]
 }
 // const filterGroceriesByName = (groceries, name) => _.filter(groceries, (item) => {
 //   return item.name === name
 // })
-const getGroceryByName = function (name) {
+const getGroceryByName = (name) => {
   // return filterGroceriesByName(groceries, name)
 }
 
 // @TODO we spot the same problem twice. It's a regression error.
 // we need to address that. And i think it's a good candidate for test coverage + adding raven.
 // @TODO second issue - i don't like that. looks not fancy.
-const getGroceryByNameWithDepAndIng = function (name) {
+const getGroceryByNameWithDepAndIng = (name) => {
   // let list = getGrocery()
   // __l(grocerieszzz);
 
@@ -137,7 +137,7 @@ const getGroceriesWithDepIngKey = () => {
   }
 }
 
-const getGroceryByNameWithDepAndIngKey = name => {
+const getGroceryByNameWithDepAndIngKey = (name) => {
   let groceryId = __generateId()
 
   // let grocery = filterGroceriesByName(groceries, name)
@@ -172,7 +172,7 @@ const getGroceryByNameWithDepAndIngKey = name => {
   }
 }
 
-const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
+const getAllIngredientsByOneDepartmentKey = (department, groceryId) => {
   let ingredients = getIngredients()
 
   // @TODO it looks like a separated method for me
@@ -195,11 +195,13 @@ const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
 }
 
 // -----------------------------------
+// @TODO WTF. Looks so unclear. shitcode. but yeah - with all features from ES6
 const filterIngrListByDep = (ingredients, department) => _.filter(ingredients, item => {
   return item.department === department
 })
+
 // strange turnaround. @TODO can we
-const getGroceryListsWithCountDepartments = function () {
+const getGroceryListsWithCountDepartments = () => {
   // return _.map(groceries, item => {
   //   const object = {
   //     id: item.id,
@@ -212,7 +214,7 @@ const getGroceryListsWithCountDepartments = function () {
 }
 
 // i assume this cannot work, because we don't have groceries variable... @TODO
-const getAllDepartments = function () {
+const getAllDepartments = () => {
   const departments = []
 
   // @TODO this is an example what should be updated. loooooks so bad and unreadable
@@ -222,7 +224,7 @@ const getAllDepartments = function () {
   return departments
 }
 
-const getAllIngredientsByOneDepartment = function (department) {
+const getAllIngredientsByOneDepartment = (department) => {
   let ingredients = getIngredients()
 
   let ingredientsList = filterIngrListByDep(ingredients, department)
@@ -230,7 +232,7 @@ const getAllIngredientsByOneDepartment = function (department) {
   return _.map(ingredientsList, 'name')
 }
 
-const getCountIngOfDepartment = function () {
+const getCountIngOfDepartment = () => {
   let result = []
   // let departments = getDepartments()
   // let result = _.map(departments, function (department) {
@@ -244,7 +246,7 @@ const getCountIngOfDepartment = function () {
   return result
 }
 
-const getKeyArrayDepAndIng = function () {
+const getKeyArrayDepAndIng = () => {
   let keys = []
 
   // @TODO does this functions doing a similar thing or not?
@@ -276,14 +278,14 @@ const getKeyArrayDepAndIng = function () {
 }
 // --------------------------------------------
 
-const getAllDepartmentList = function () {
+const getAllDepartmentList = () => {
   // return _.map(departments, item => ({
   //   key: __generateId(),
   //   departmentName: item
   // }))
 }
 
-const getAllIngredientsWithId = function () {
+const getAllIngredientsWithId = () => {
   let result = []
   // let ingredients = getIngredients()
 
@@ -300,7 +302,7 @@ const getAllIngredientsWithId = function () {
 
 // @TODO we need to figure out why we have this method and getAllDepartmentList
 // i assume we using them in different react projects.
-const getAllDepartmentsWithId = function () {
+const getAllDepartmentsWithId = () => {
   let result = []
   // let result = _.map(departments, function (department) {
   //   return {
@@ -314,12 +316,13 @@ const getAllDepartmentsWithId = function () {
 }
 // ------------------------------
 
+// @TODO update this version. I don't like it. For me this line is shit
 const getResult = (property) => _.map(property, (p) => ({
   key: __generateId(),
   ...p
 }))
 
-const getAllIngredientsList = function (department) {
+const getAllIngredientsList = (department) => {
   const ingredients = this.getAllIngredientsByOneDepartment(department)
 
   return ingredients.map(item => ({
@@ -331,14 +334,14 @@ const getAllIngredientsList = function (department) {
   }))
 }
 
-const getAllGrocery = function () {
+const getAllGrocery = () => {
   // return _.map(groceries, item => ({
   //   key: __generateId(),
   //   ...item
   // }))
 }
 
-const getAllGroceryDepartment = function (departmentArray) {
+const getAllGroceryDepartment = (departmentArray) => {
   const departmentArrayObject = departmentArray.map(item => ({
     key: __generateId(),
     departmentName: item,
@@ -348,7 +351,7 @@ const getAllGroceryDepartment = function (departmentArray) {
   return departmentArrayObject
 }
 
-const createNewGroceryList = function (newDepartment) {
+const createNewGroceryList = (newDepartment) => {
   // const nameExists = _.find(
   //   groceries,
   //   item => item.name === newDepartment.name
@@ -357,7 +360,7 @@ const createNewGroceryList = function (newDepartment) {
 }
 
 // TODO OMG, this method looks so sad...
-const getGroceryListsByDepartment = department => {
+const getGroceryListsByDepartment = (department) => {
   let groceryList = []
   if (department) {
     // what we're doing? camelCase? explain @TODO
@@ -379,7 +382,7 @@ const getGroceryListsByDepartment = department => {
 }
 
 // @TODO should work now.
-function newGroceryList (newDepartment) {
+const newGroceryList = (newDepartment) => {
   // const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json')
   // const newGrocery = [ ...groceries, newDepartment ]
 
