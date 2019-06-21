@@ -1,15 +1,12 @@
-const staticData = require('@groceristar/sd-wrapper')
+import {
+  ultimateGroceryList,
+  groceryListWithUserRelations,
+  dbIngredients
+} from '@groceristar/sd-wrapper'
 
-const ultimateGroceryList = staticData.ultimateGroceryList
-// require('@groceristar/sd-wrapper/dist/data/Grocery/example/ultimate-gl-from-loopback-server-example.json')
+import groceristar from '../GroceriStar/groceristar'
 
-const groceryListWithUserRelations = staticData.groceryListWithUserRelations
-// require('@groceristar/sd-wrapper/dist/data/Grocery/example/grocery-with-user-relations.json')
-
-const dbIngredients = staticData.dbIngredients
-// require('@groceristar/sd-wrapper/dist/data/Ingredients/example/gs-loopback-sample.json')
-
-module.exports = {
+export {
   ultimateGroceryList,
   groceryListWithUserRelations,
   dbIngredients

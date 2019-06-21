@@ -16,6 +16,8 @@ const {
 // console.log(JSON.parse( JSON.stringify(departments) ))
 
 const groceristar = require('../GroceriStar/groceristar')
+
+import methods from './index'
 // const search = require('../Search/search')
 
 // can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js

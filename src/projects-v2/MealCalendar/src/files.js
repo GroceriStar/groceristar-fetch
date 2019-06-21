@@ -1,10 +1,10 @@
-const staticData = require('@groceristar/sd-wrapper')
+import {
+  mealCalendar,
+  firstVeganGLMC
 
-const mealCalendar = staticData.mealCalendar
+} from '@groceristar/sd-wrapper'
 
-const firstVeganGLMC = staticData.firstVeganGLMC
-
-module.exports = {
+export {
   mealCalendar,
   firstVeganGLMC
 }

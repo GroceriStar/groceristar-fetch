@@ -1,11 +1,11 @@
-const staticData = require('@groceristar/sd-wrapper')
+import {
+  departments,
+  groceries,
+  ingredients,
+  users
+} from '@groceristar/sd-wrapper'
 
-const departments = staticData.departments
-const groceries = staticData.grocery
-const ingredients = staticData.ingredients
-const users = staticData.users
-
-module.exports = {
+export {
   departments,
   groceries,
   ingredients,
