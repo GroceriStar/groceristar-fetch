@@ -390,7 +390,7 @@ const newGroceryList = (newDepartment) => {
   // groceries = newGrocery
 }
 
-module.exports = {
+export {
   getIngredients,
   // getGrocery,
   getUsers,

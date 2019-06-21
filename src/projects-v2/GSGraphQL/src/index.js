@@ -227,7 +227,7 @@ const getUsersKey = () => {
 //   }))
 // };
 
-module.exports = {
+export {
   getDepartments,
   getDepartmentsKey,
   getGrocery,

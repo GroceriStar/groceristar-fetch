@@ -4,7 +4,7 @@ import {
   userGrocery
 } from '@groceristar/sd-wrapper'
 
-import groceristar from '../GroceriStar/groceristar'
+import groceristar from './index'
 
 export {
   favorites,

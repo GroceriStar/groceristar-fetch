@@ -1,6 +1,3 @@
-
-
-
 import _ from 'lodash'
 import {
   __find,
@@ -118,7 +115,7 @@ const getFiveRandomIngredients = () => {
   return result
 }
 
-module.exports = {
+export {
   getNRecipes,
   getRecipeByTitle,
   getRandomRecipe,

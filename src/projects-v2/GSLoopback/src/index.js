@@ -124,7 +124,7 @@ const getUserObject =  (name) => {
   return []
 }
 
-module.exports = {
+export {
   getUltimateGrocery,
   getGLwithUserRelations,
 

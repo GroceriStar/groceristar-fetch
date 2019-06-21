@@ -1,6 +1,3 @@
-import files from './files'
-
-
 import _ from 'lodash'
 import {
   // __get,
@@ -47,7 +44,7 @@ const getDishByWeek =  (week) => {
   return []
 }
 
-module.exports = {
+export {
   getDishByWeek,
   getDishByMonth,
   getDishByDay,

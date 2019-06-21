@@ -28,7 +28,7 @@ const getGroceryShowcase = function () {
   return []
 }
 
-module.exports = {
+export {
   getGroceryShowcase,
   __find,
   files
