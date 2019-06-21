@@ -1,7 +1,11 @@
-const loopback = require('./loopback.js')
+import {
+  getUltimateGrocery,
+  getGLwithUserRelations,
+  getIngredientsSampleFromDB
+} from './index'
 
-console.log(loopback.getUltimateGrocery())
+console.log(getUltimateGrocery())
 
-console.log(loopback.getGLwithUserRelations())
+console.log(getGLwithUserRelations())
 
-console.log(loopback.getIngredientsSampleFromDB())
+console.log(getIngredientsSampleFromDB())
