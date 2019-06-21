@@ -1,1 +1,1 @@
-import files from './../files.js'
+import files from './files'

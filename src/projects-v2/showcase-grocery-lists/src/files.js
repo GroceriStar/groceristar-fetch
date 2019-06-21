@@ -1,7 +1,7 @@
-const staticData = require('@groceristar/sd-wrapper')
+import {
+  groceries
+} from '@groceristar/sd-wrapper'
 
-let groceries = staticData.grocery
-
-module.exports = {
+export {
   groceries
 }

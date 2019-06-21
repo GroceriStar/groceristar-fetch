@@ -1,3 +1,6 @@
+import files from './files'
+
+
 import _ from 'lodash'
 
 
