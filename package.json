@@ -34,7 +34,7 @@
     "jsonfile": "5.0.0",
     "nodemon": "1.19.1",
     "path": "0.12.7",
-    "rollup": "1.15.6",
+    "rollup": "1.16.2",
     "rollup-plugin-babel": "4.3.2",
     "rollup-plugin-commonjs": "10.0.0",
     "rollup-plugin-node-builtins": "2.1.2",
