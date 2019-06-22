@@ -4,11 +4,12 @@ Thank you for your interest in `Groceristar Fetch `, an open source project
 administered by groceristar.
 
 
-This project's main aim is to provide an API for getting food data.
 
+This project's main aim is to provide an API for getting food data.
 # Requirements
 1. npm
 2. node 
+
 Install the above two package using your package manager.
 
 # Development Process
@@ -27,6 +28,7 @@ npm install
 git checkout -b fix-#ISSUENUMBER
 ```
 Replace ISSUENUMBER with the number of the issue you are working on. You can use other branch names too. But it is advised to use this format especially when fixing bugs. 
+
 5. Add the changes and commit them
 ```
 git add [FILE1] [FILE2]
