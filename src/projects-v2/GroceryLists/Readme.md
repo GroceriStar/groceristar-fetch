@@ -1,4 +1,7 @@
 
+In order to test how this module working or now
+it's better to use npm run build:rollup
+
 <!-- Table of Contents
 =================
 
@@ -24,14 +27,6 @@ Within the download you'll find the following directories and files, logically g
 └── src               
     ├── projects            # Tests for self-titled projects
     │   ├── ChickenKyiv
-    │   ├── GraphQL
-    │   ├── GroceriStar
-    │   ├── GS-Loopback
-    │   ├── MealCalendar
-    │   ├── Search
-    │   ├── Showcase
-    │   └── UnitConvertion
-    ├── import
     ├── index.js    
     ├── index.test.js     
     └── utils.js    

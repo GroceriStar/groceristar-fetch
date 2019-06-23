@@ -5,14 +5,7 @@
     "test": "jest",
     "test:prod": "standard && jest",
     "watch": "nodemon src/index.js",
-    "play:g": "nodemon src/projects/GroceriStar/play.js",
-    "play:s": "nodemon src/projects/Search/play.js",
-    "play:r": "nodemon src/projects/ChickenKyiv/play.js",
-    "play:l": "nodemon src/projects/GS-loopback/play.js",
-    "play:u": "nodemon src/projects/UnitConvertion/play.js",
-    "test:gs": "jest src/projects/GroceriStar/groceristar.test.js && jest src/projects/GroceriStar/staticFiles.test.js",
-    "test:big": "jest src/projects/GroceriStar/getGroceriesWithDepIngKey.test.js",
-    "test:index": "jest src/index.test.js",
+    "play": "nodemon src/projects/GroceriStar/play.js",
     "code-fix": "standard --fix",
     "build": "babel src -d dist",
     "lint": "standard",
@@ -31,7 +24,6 @@
     "babel-plugin-module-resolver": "3.2.0",
     "coveralls": "3.0.4",
     "jest": "24.8.0",
-    "jsonfile": "5.0.0",
     "nodemon": "1.19.1",
     "path": "0.12.7",
     "rollup": "1.15.6",
@@ -49,7 +41,6 @@
     "fs": "0.0.2",
     "lodash": "^4.17.10",
     "raven-js": "^3.27.1",
-    "underscore": "^1.9.1",
     "uuid": "^3.3.2"
   },
   "description": "npm module required to fetch static data required for recipe search",
@@ -57,10 +48,6 @@
   "module": "dist/index.es.js",
   "browser": "dist/index.iife.js",
   "files": [
-    "/src/projects",
-    "/src/helper.js",
-    "/src/index.js",
-    "/src/index.test.js",
     "dist"
   ],
   "repository": {
