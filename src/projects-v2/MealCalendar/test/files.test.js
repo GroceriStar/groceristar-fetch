@@ -1,6 +1,6 @@
 /* global describe, it, expect */
-// const files = require("./files.js");
-const mealCalendarMethods = require('../mealCalendar.js')
+const files = require("../src/files.js");
+const mealCalendarMethods = require('../src/mealCalendar.js')
 
 const methodsList = {
   getMealCalendar: mealCalendarMethods.__find('mealCalendar', mealCalendarMethods.files),
@@ -18,7 +18,7 @@ describe('testing static data files returns array', () => {
   testFileIsNotEmpty('getFVGLMC')
 })
 
-/*
+
 describe('testing static data files returns array', () => {
   test('getMealCalendar should return some data', () => {
     var result = mealCalendarMethods.getMealCalendar()
@@ -31,4 +31,3 @@ describe('testing static data files returns array', () => {
     expect(result).not.toBe('')
   })
 })
-*/
