@@ -1,7 +1,7 @@
 /* global describe, it, expect */
 //change require to imports
-import * as files from "../src/files.js";
-import * as mealCalendarMethods from '../src/mealCalendar.js';
+import * as files from "../src/files";
+import * as mealCalendarMethods from '../src/index';
 
 const methodsList = {
   getMealCalendar: mealCalendarMethods.__find('mealCalendar', mealCalendarMethods.files),
