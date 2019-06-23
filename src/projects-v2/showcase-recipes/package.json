@@ -49,10 +49,7 @@
   "module": "dist/index.es.js",
   "browser": "dist/index.iife.js",
   "files": [
-    "/src/projects",
-    "/src/helper.js",
-    "/src/index.js",
-    "/src/index.test.js",
+
     "dist"
   ],
   "repository": {
@@ -70,7 +67,7 @@
     "grocery list",
     "measurements"
   ],
-  "author": "Nishith Chauhan",
+  "author": "Arthur Tkachenko",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/GroceriStar/groceristar-fetch/issues"
