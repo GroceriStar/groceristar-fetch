@@ -123,6 +123,5 @@ export {
   getFiveRandomIngredients,
   getMenuGenerator,
   getRecipes,
-  // files,
   __find
 }

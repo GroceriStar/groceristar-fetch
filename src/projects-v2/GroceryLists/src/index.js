@@ -417,5 +417,4 @@ export {
   getAllDepartmentsWithId,
   getCountIngOfDepartment,
   __find
-  // files
 }

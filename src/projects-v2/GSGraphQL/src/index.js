@@ -244,6 +244,5 @@ export {
   getFavoritesKey,
   getItemsKey,
   getUserGroceryKey,
-  // files,
   __find
 }

@@ -49,5 +49,4 @@ export {
   getDishByMonth,
   getDishByDay,
   __find
-  // files
 }

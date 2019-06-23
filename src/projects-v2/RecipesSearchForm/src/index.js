@@ -174,7 +174,6 @@ const getData = (value, type = 'attribute') => {
 
 export {
   __find,
-  // files,
   proceedData,
   getAttribute,
   getFormattedAttributes,

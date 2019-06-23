@@ -30,6 +30,5 @@ const getGroceryShowcase = function () {
 
 export {
   getGroceryShowcase,
-  __find,
-  files
+  __find
 }
