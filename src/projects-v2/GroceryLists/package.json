@@ -1,11 +1,11 @@
 {
   "name": "@groceristar/groceristar-fetch",
-  "version": "2.2.0",
+  "version": "0.0.1",
   "scripts": {
     "test": "jest",
     "test:prod": "standard && jest",
     "watch": "nodemon src/index.js",
-    "play": "nodemon src/projects/GroceriStar/play.js",
+    "play": "nodemon src/play.js",
     "code-fix": "standard --fix",
     "build": "babel src -d dist",
     "lint": "standard",
@@ -49,7 +49,7 @@
   "module": "dist/index.es.js",
   "browser": "dist/index.iife.js",
   "files": [
-  
+
     "dist"
   ],
   "repository": {
