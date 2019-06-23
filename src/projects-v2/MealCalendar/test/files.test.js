@@ -1,6 +1,7 @@
 /* global describe, it, expect */
-const files = require("../src/files.js");
-const mealCalendarMethods = require('../src/mealCalendar.js')
+//change require to imports
+import * as files from "../src/files.js";
+import * as mealCalendarMethods from '../src/mealCalendar.js';
 
 const methodsList = {
   getMealCalendar: mealCalendarMethods.__find('mealCalendar', mealCalendarMethods.files),
