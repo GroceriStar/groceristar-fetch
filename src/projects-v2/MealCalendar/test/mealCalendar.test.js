@@ -1,6 +1,6 @@
 /* global describe, it, expect */
 //change require to import
-import * as mealCalendar from ('../src/mealCalendar.js')
+import * as mealCalendar from '../src/mealCalendar';
 
 // const { mealCalendar } = require('../files')
 
