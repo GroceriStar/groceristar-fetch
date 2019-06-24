@@ -1,5 +1,5 @@
 /* global describe, it, expect */
-const {getKeyArrayDepAndIng} = require('../index.js')
+const {getKeyArrayDepAndIng} = require('../src/index.js')
 
 describe('getKeyArrayDepending method', () => {
   const result = getKeyArrayDepAndIng()

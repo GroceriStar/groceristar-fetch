@@ -5,7 +5,7 @@ const files = {
   ingredients,
   users,
   groceries
-} = require('../files.js')
+} = require('../src/files.js')
 
 // const INGREDIENT_COUNT = 13634
 // const DEPARTMENT_COUNT = 58

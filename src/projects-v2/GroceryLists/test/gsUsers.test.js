@@ -1,5 +1,5 @@
 /* global describe, it, expect */
-const {getUsers} = require('../index.js')
+const {getUsers} = require('../src/index.js')
 
 describe('testing objects inside users', () => {
   // @TODO make users variable export in groceristar.js file

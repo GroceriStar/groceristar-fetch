@@ -1,12 +1,12 @@
 /* global describe, it, expect */
-const groceristar = require('../index')
+const groceristar = require('../src/index')
 
 const {
 //   departments,
 //   ingredients,
 //   users,
   groceries
-} = require('../files')
+} = require('../src/files')
 
 // @TODO separate methods, related to different datasets.
 // So methods related to ingredients should have a

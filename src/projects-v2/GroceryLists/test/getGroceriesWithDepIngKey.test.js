@@ -2,7 +2,7 @@
 // This will be our separated file with its, related to this method
 // main it file are huuuge, so let's keep new its here
 
-const { getGroceriesWithDepIngKey } = require('../index.js')
+const { getGroceriesWithDepIngKey } = require('../src/index.js')
 
 describe('getGroceriesWithDepIngKey method', () => {
   const mainGroceries = getGroceriesWithDepIngKey()
