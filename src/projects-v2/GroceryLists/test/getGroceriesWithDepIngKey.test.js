@@ -2,10 +2,10 @@
 // This will be our separated file with its, related to this method
 // main it file are huuuge, so let's keep new its here
 
-const groceristar = require('../groceristar.js')
+const { getGroceriesWithDepIngKey } = require('../index.js')
 
 describe('getGroceriesWithDepIngKey method', () => {
-  const mainGroceries = groceristar.getGroceriesWithDepIngKey()
+  const mainGroceries = getGroceriesWithDepIngKey()
 
   const groceryHasProperty = property => {
     it(`Grocery property ${property}`, () => {

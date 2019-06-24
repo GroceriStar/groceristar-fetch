@@ -1,8 +1,8 @@
 /* global describe, it, expect */
-const groceristar = require('../groceristar.js')
+const {getKeyArrayDepAndIng} = require('../index.js')
 
 describe('getKeyArrayDepending method', () => {
-  const result = groceristar.getKeyArrayDepAndIng()
+  const result = getKeyArrayDepAndIng()
   it('testing the method returns an array', () => {
     expect(Array.isArray(result)).toBe(true)
   })

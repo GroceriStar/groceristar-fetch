@@ -1,6 +1,6 @@
 import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
-// import copy from 'rollup-plugin-copy-assets'
+
 import builtins from 'rollup-plugin-node-builtins'
 import babel from 'rollup-plugin-babel'
 
@@ -11,7 +11,7 @@ import pkg from './package.json'
 // https://gitlab.com/IvanSanchez/rollup-plugin-file-as-blob
 
 const extensions = [
-  '.js', '.json'
+  '.js'
 ]
 
 const name = 'GroceristarFetchPlugin'
@@ -20,12 +20,16 @@ const { external, globals } = {
   'globals': {
     'fs': 'fs',
     'lodash': 'lodash',
-    'path': 'path'
+    'path': 'path',
+    'dayjs':'dayjs',
+    'uuid': 'uuid'
   },
   'external': [
     'fs',
     'path',
-    'lodash'
+    'lodash',
+    'uuid',
+    'dayjs'
   ]
 }
 
@@ -60,7 +64,7 @@ export default {
       // //   // relative to the current directory, or the name
       // //   // of a module in node_modules
       // //   'node_modules/my-lib/index.js': [ 'named' ]
-      //   '~/Allergy/allergies.json': [ 'allergies' ]
+
       // }
     }),
     builtins()

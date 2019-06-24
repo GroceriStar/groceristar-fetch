@@ -20,7 +20,7 @@ import {
   __find,
   // __l,
   __generateId
-} from '../../utils'
+} from 'utils'
 
 
 
@@ -101,7 +101,7 @@ const getGroceryByNameWithDepAndIng = (name) => {
 // -----------------------------------
 
 const getGroceriesWithDepIngKey = () => {
-  let result = []
+  // let result = []
   let result = _.map(groceries, function (grocery) {
     // @TODO change variable name
     // grocery.id = __generateId()
@@ -165,10 +165,10 @@ const getAllIngredientsByOneDepartmentKey = (department, groceryId) => {
   let ingredients = getIngredients()
 
   // @TODO it looks like a separated method for me
-  var ingredientsList =
-    _.filter(ingredients, function (item) {
-      return item.department === department
-    })
+  // var ingredientsList =
+  //   _.filter(ingredients, function (item) {
+  //     return item.department === department
+  //   })
 
   let ingredientsList = filterIngrListByDep(ingredients, department)
 
@@ -222,7 +222,7 @@ const getAllIngredientsByOneDepartment = (department) => {
 }
 
 const getCountIngOfDepartment = () => {
-  let result = []
+  // let result = []
   let departments = getDepartments()
   let result = _.map(departments, function (department) {
     let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name)
@@ -275,7 +275,7 @@ const getAllDepartmentList = () => {
 }
 
 const getAllIngredientsWithId = () => {
-  let result = []
+  // let result = []
   // let ingredients = getIngredients()
 
 
@@ -287,15 +287,13 @@ const getAllIngredientsWithId = () => {
 // @TODO we need to figure out why we have this method and getAllDepartmentList
 // i assume we using them in different react projects.
 const getAllDepartmentsWithId = () => {
-  let result = []
-
-  let result = getResult(departments)
-
-  return result
+  return getResult(departments)
 }
 // ------------------------------
 
-// @TODO update this version. I don't like it. For me this line is shit
+// @TODO update this version.
+// I don't like it. For me this line is shit
+// and i don;t like this name as well
 const getResult = (property) => _.map(property, (p) => ({
   key: __generateId(),
   ...p
@@ -372,7 +370,7 @@ const getGroceryListsByDepartment = (department) => {
 export {
   getIngredients,
   // getGrocery,
-  getUsers,
+  // getUsers,
   getDepartments,
   getGroceryById,
   getGroceryByName,
