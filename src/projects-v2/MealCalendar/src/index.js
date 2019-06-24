@@ -28,14 +28,14 @@ const getDishByDay = (day) => {
   return result
 }
 
-const getDishByMonth =  (monthNumb) => {
+const getDishByMonth = (monthNumb) => {
   if (monthNumb < 1 || monthNumb > 5) return []
   const totalWeeks = monthNumb * 4 + 1
   const weeks = _.range(totalWeeks - 4, totalWeeks)
   return _.map(weeks, week => this.getDishByWeek(`week ${week}`)[0])
 }
 
-const getDishByWeek =  (week) => {
+const getDishByWeek = (week) => {
   // return _.filter(parser(mealCalendar), {
   //   id: week
   // })

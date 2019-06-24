@@ -2,7 +2,7 @@
   "name": "@groceristar/gs-fetch-meal-calendar",
   "version": "0.0.1",
   "scripts": {
-    "test": "jest",
+    "test": "jest dist",
     "test:prod": "standard && jest",
     "watch": "nodemon src/index.js",
     "play": "nodemon src/play.js",
