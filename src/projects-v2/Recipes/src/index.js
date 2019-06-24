@@ -6,15 +6,15 @@ import {
   __generateId
 } from '../../utils'
 
-// import {
-//   ingredients3,
-//   menus,
-//   recipes,
-//   nutritions1,
-//   nutritions2,
-//   departments,
-//   users
-// } from './files'
+import {
+  ingredients3,
+  menus,
+  recipes,
+  nutritions1,
+  nutritions2,
+  departments,
+  users
+} from '@files'
 
 
 // @TODO update this method, use stuff from utils.js

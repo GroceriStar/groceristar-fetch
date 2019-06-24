@@ -1,22 +1,24 @@
-import files from './files'
 
 
-// const _ = require('lodash')
+
+import _ from 'lodash'
 // const fs = require('fs')
 
 import {
-  // __get,
+
   __generateId,
   __generateDate
 } from '../../utils'
 
 // @TODO this files we'll redo soon. link: https://github.com/GroceriStar/sd/issues/76
 // we don't need them at this moment, but later - it'll be part of our graphql-server functionality
-// const {
-//   ultimateGroceryList,
-//   groceryListWithUserRelations,
-//   dbIngredients
-// } = require('./files')
+import {
+  ultimateGroceryList,
+  groceryListWithUserRelations,
+  dbIngredients
+} from '@files'
+
+
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // because these methods used in our react projects.

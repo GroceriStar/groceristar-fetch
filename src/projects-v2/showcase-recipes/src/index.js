@@ -1,6 +1,10 @@
-import files from './files'
+import {
+  ingredients3,
+  recipes,
+  departments
+} from './files'
 
 
 export {
-  
+
 }

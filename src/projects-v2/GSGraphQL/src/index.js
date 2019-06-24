@@ -1,7 +1,6 @@
 import _  from 'lodash'
 
 import {
-  // __get,
   __find,
   __generateId,
   __generateDate
@@ -13,23 +12,13 @@ import {
   userGrocery
   // groceristar,
   // groceries,
-} from './files'
+} from '@files'
 
 // @TODO return measurements
 
 // ---------
 // As we move our methods away we don't need GraphQL in methods name anymore ...
 // @TODO update it
-
-// @TODO This function is
-// what should return same function without 'GraphQL' prefix.
-// const getFavorites = () => {
-//  return [{
-//    name: 'John Doe',
-//    email: 'johndoe@mail.com',
-//    password: 'password',
-//  }];
-// }
 
 const getFavorites = () => {
   return _.map(favorites, (favorite, index) => {

@@ -15,7 +15,7 @@ import {
 
 // console.log(JSON.parse( JSON.stringify(departments) ))
 
-import index from './index'
+// import index from './index'
 
 import methods from './index'
 // const search = require('../Search/search')

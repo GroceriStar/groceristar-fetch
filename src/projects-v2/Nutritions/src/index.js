@@ -1,6 +1,9 @@
-import files from './files'
+import {
+  nutritions1,
+  nutritions2
+} from './files'
 
 
 export {
-  
+
 }

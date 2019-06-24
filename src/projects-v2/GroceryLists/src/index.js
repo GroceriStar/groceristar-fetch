@@ -1,4 +1,9 @@
-import files from './files'
+import {
+  departments,
+  groceries,
+  ingredients,
+  users
+} from '@files'
 
 
 import _ from 'lodash'
@@ -11,18 +16,13 @@ import _ from 'lodash'
 // const fs = require('fs')
 
 import {
-  __get,
+  // __get,
   __find,
   // __l,
   __generateId
 } from '../../utils'
 
-import {
-  departments
-  // groceries
-  // ingredients,
-  // users,
-} from './files'
+
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // don't worry, will update @hirdbluebird
@@ -36,26 +36,10 @@ const getIngredients = () => {
 //   return __get(groceries)
 // }
 
-// __l(getGrocery());
 
-const getUsers = () => {
-  // return __get(users)
-  return [
-    {
-      name: 'john doe',
-      email: 'johndoe@mail.com',
-      password: ' '
-    },
-    {
-      name: 'miss doe',
-      email: 'missdoe@mail.com',
-      password: ' '
-    }
-  ]
-}
 
 const getDepartments = () => {
-  return __get(departments)
+  return departments
 }
 
 const getGroceryById = (id) => {

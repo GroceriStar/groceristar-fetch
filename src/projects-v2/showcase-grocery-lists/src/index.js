@@ -1,15 +1,12 @@
-import files from './files'
-
-
-// const _ = require('lodash')
+import _ from 'lodash'
 
 const {
-  // parser,
-  // __get,
   __find
 } = require('../../utils')
 
-const files = require('./files')
+const {
+  groceries
+} = require('./files')
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // because these methods used in our react projects.
