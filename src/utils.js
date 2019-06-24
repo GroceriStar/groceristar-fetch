@@ -7,10 +7,10 @@ const _ = require('lodash')
 // main reason for having this file, because i'm trying to move away repetetive functions
 // @TODO Arthur have at least 3-5 different modules, that should replace this method
 // @TODO do we need it? https://github.com/sindresorhus/parse-json
-const parser = function (file) {
-  // return JSON.parse(JSON.stringify(file))
-  return file
-}
+// const parser = function (file) {
+//   // return JSON.parse(JSON.stringify(file))
+//   return file
+// }
 
 const __l = function (value) {
   return console.log(value)
@@ -39,7 +39,7 @@ const __generateDate = () => {
 }
 
 module.exports = {
-  parser,
+  // parser,
   __l,
   __find,
   __get,
