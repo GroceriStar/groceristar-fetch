@@ -1,11 +1,13 @@
 /* global describe, it, test, expect */
 // change require to imports
-import * as files from '../src/files'
-import * as mealCalendarMethods from '../src/index'
+// import * as files from '../src/files'
+const { mealCalendar, firstVeganGLMC } = require('../dist/files')
+// import * as mealCalendarMethods from '../src/index'
 
+//@TODO delete it later?
 const methodsList = {
-  getMealCalendar: mealCalendarMethods.__find('mealCalendar', mealCalendarMethods.files),
-  getFVGLMC: mealCalendarMethods.__find('firstVeganGLMC', mealCalendarMethods.files)
+  getMealCalendar: mealCalendar,
+  getFVGLMC: firstVeganGLMC
 }
 
 describe('testing static data files returns array', () => {

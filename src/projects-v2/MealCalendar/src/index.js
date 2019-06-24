@@ -2,7 +2,7 @@ import _ from 'lodash'
 import {
   __find
 } from '../../utils'
-// const files = { mealCalendar, firstVeganGLMC } = require('./files')
+const { mealCalendar, firstVeganGLMC } = require('./files')
 
 // module.getDishByDay = function(day, maxDishes = mealCalendar.length) {
 //   return _.filter(parser(mealCalendar), (meal, index) => {

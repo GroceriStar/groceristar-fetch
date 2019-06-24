@@ -2,17 +2,17 @@
   "name": "@groceristar/gs-fetch-meal-calendar",
   "version": "0.0.1",
   "scripts": {
-    "test": "jest dist",
+    "test": "jest",
     "test:prod": "standard && jest",
     "watch": "nodemon src/index.js",
     "play": "nodemon src/play.js",
-    "code-fix": "standard --fix",
-    "build": "babel src -d dist",
     "lint": "standard",
     "bundle": "rollup -c",
-    "dev": "rollup -c -w",
+    "build": "npm run clean && babel src -d dist",
     "build:rollup": "npm run clean && npm run bundle",
-    "clean": "shx rm -rf ./coverage && shx rm -rf ./dist"
+    "dev": "rollup -c -w",
+    "clean": "shx rm -rf ./coverage && shx rm -rf ./dist",
+    "code-fix": "standard --fix"
   },
   "devDependencies": {
     "@babel/cli": "7.4.4",
