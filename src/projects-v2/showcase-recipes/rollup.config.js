@@ -11,7 +11,7 @@ import pkg from './package.json'
 // https://gitlab.com/IvanSanchez/rollup-plugin-file-as-blob
 
 const extensions = [
-  '.js', '.json'
+  '.js'
 ]
 
 const name = 'GroceristarFetchPlugin'
@@ -20,12 +20,16 @@ const { external, globals } = {
   'globals': {
     'fs': 'fs',
     'lodash': 'lodash',
-    'path': 'path'
+    'path': 'path',
+    'dayjs':'dayjs',
+    'uuid': 'uuid'
   },
   'external': [
     'fs',
     'path',
-    'lodash'
+    'lodash',
+    'uuid',
+    'dayjs'
   ]
 }
 
