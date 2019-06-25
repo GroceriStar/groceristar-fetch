@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/recipes-methods",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "scripts": {
     "test": "jest",
     "test:prod": "standard && jest",

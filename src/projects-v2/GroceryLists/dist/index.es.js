@@ -1,5 +1,5 @@
+import ___default, { find, filter, map, forEach, range } from 'lodash';
 import { ingredients, departments, groceries } from '@files';
-import _ from 'lodash';
 import 'dayjs';
 
 function _defineProperty(obj, key, value) {
@@ -205,7 +205,7 @@ var __get = function __get(value) {
 
 var __find = function __find(alias, files) {
   // console.log(files);
-  var result = _.get(files, alias); // console.log(alias);
+  var result = ___default.get(files, alias); // console.log(alias);
   // console.log(result);
 
 
@@ -214,7 +214,7 @@ var __find = function __find(alias, files) {
 
 
 var __generateId = function __generateId() {
-  return _.uniqueId(v1_1());
+  return ___default.uniqueId(v1_1());
 }; // @TODO can be one method with different types.
 
 var _this = undefined;
@@ -231,12 +231,12 @@ var getDepartments = function getDepartments() {
 };
 
 var getGroceryById = function getGroceryById(id) {
-  return [_.find(groceries, ['id', id])];
+  return [find(groceries, ['id', id])];
 }; // @TODO do we need it?
 
 
 var filterGroceriesByName = function filterGroceriesByName(groceries, name) {
-  return _.filter(groceries, function (item) {
+  return filter(groceries, function (item) {
     return item.name === name;
   });
 };
@@ -285,7 +285,7 @@ var getGroceryByNameWithDepAndIng = function getGroceryByNameWithDepAndIng(name)
 
 var getGroceriesWithDepIngKey = function getGroceriesWithDepIngKey() {
   // let result = []
-  var result = _.map(groceries, function (grocery) {
+  var result = map(groceries, function (grocery) {
     // @TODO change variable name
     // grocery.id = __generateId()
     // grocery.departments = groceryDepIng;
@@ -319,7 +319,7 @@ var getGroceryByNameWithDepAndIngKey = function getGroceryByNameWithDepAndIngKey
     var departmentType = ''; // @TODO i don't like that we're searching for things by names,
     // we need to replace it later with separated methods that will assign items between files via id
 
-    var dep = _.find(departments, function (o) {
+    var dep = find(departments, function (o) {
       return o.name === department;
     });
 
@@ -350,7 +350,7 @@ var getAllIngredientsByOneDepartmentKey = function getAllIngredientsByOneDepartm
   //   })
 
   var ingredientsList = filterIngrListByDep(ingredients, department);
-  return _.map(ingredientsList, function (item) {
+  return map(ingredientsList, function (item) {
     var ingredientId = __generateId();
 
     return [ingredientId, item.name, "/del/ing/".concat(ingredientId, "/").concat(groceryId)];
@@ -360,14 +360,14 @@ var getAllIngredientsByOneDepartmentKey = function getAllIngredientsByOneDepartm
 
 
 var filterIngrListByDep = function filterIngrListByDep(ingredients, department) {
-  return _.filter(ingredients, function (item) {
+  return filter(ingredients, function (item) {
     return item.department === department;
   });
 }; // strange turnaround. @TODO can we
 
 
 var getGroceryListsWithCountDepartments = function getGroceryListsWithCountDepartments() {
-  return _.map(groceries, function (item) {
+  return map(groceries, function (item) {
     var object = {
       id: item.id,
       name: item.name,
@@ -383,8 +383,8 @@ var getGroceryListsWithCountDepartments = function getGroceryListsWithCountDepar
 var getAllDepartments = function getAllDepartments() {
   var departments = []; // @TODO this is an example what should be updated. loooooks so bad and unreadable
 
-  _.forEach(_.range(0, groceries.length), function (value) {
-    return departments.push.apply(departments, _toConsumableArray(_.map(groceries[value]['departments'])));
+  forEach(range(0, groceries.length), function (value) {
+    return departments.push.apply(departments, _toConsumableArray(map(groceries[value]['departments'])));
   });
 
   return departments;
@@ -393,14 +393,14 @@ var getAllDepartments = function getAllDepartments() {
 var getAllIngredientsByOneDepartment = function getAllIngredientsByOneDepartment(department) {
   var ingredients = getIngredients();
   var ingredientsList = filterIngrListByDep(ingredients, department);
-  return _.map(ingredientsList, 'name');
+  return map(ingredientsList, 'name');
 };
 
 var getCountIngOfDepartment = function getCountIngOfDepartment() {
   // let result = []
   var departments = getDepartments();
 
-  var result = _.map(departments, function (department) {
+  var result = map(departments, function (department) {
     var ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name);
     return _objectSpread({}, department, {
       countIngredients: ingredientsByOneDepartment.length
@@ -425,8 +425,8 @@ var getKeyArrayDepAndIng = function getKeyArrayDepAndIng() {
   //   return;
   // })
 
-  _.forEach(departments, function (department) {
-    _.forEach(ingredients, function (ingredient) {
+  forEach(departments, function (department) {
+    forEach(ingredients, function (ingredient) {
       // @TODO can be redo later with lodash methods
       if (ingredient.department === department.name) {
         keys.push(_defineProperty({}, department.key, ingredient.key));
@@ -439,7 +439,7 @@ var getKeyArrayDepAndIng = function getKeyArrayDepAndIng() {
 
 
 var getAllDepartmentList = function getAllDepartmentList() {
-  return _.map(departments, function (item) {
+  return map(departments, function (item) {
     return {
       key: __generateId(),
       departmentName: item
@@ -465,7 +465,7 @@ var getAllDepartmentsWithId = function getAllDepartmentsWithId() {
 
 
 var getResult = function getResult(property) {
-  return _.map(property, function (p) {
+  return map(property, function (p) {
     return _objectSpread({
       key: __generateId()
     }, p);
@@ -487,7 +487,7 @@ var getAllIngredientsList = function getAllIngredientsList(department) {
 };
 
 var getAllGrocery = function getAllGrocery() {
-  return _.map(groceries, function (item) {
+  return map(groceries, function (item) {
     return _objectSpread({
       key: __generateId()
     }, item);
@@ -506,7 +506,7 @@ var getAllGroceryDepartment = function getAllGroceryDepartment(departmentArray) 
 };
 
 var createNewGroceryList = function createNewGroceryList(newDepartment) {
-  var nameExists = _.find(groceries, function (item) {
+  var nameExists = find(groceries, function (item) {
     return item.name === newDepartment.name;
   });
 

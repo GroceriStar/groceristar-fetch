@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import ___default, { map, times, slice, filter, sampleSize } from 'lodash';
 import dayjs from 'dayjs';
 import { recipes } from '@files';
 
@@ -185,7 +185,7 @@ var __get = function __get(value) {
 
 var __find = function __find(alias, files) {
   // console.log(files);
-  var result = _.get(files, alias); // console.log(alias);
+  var result = ___default.get(files, alias); // console.log(alias);
   // console.log(result);
 
 
@@ -194,7 +194,7 @@ var __find = function __find(alias, files) {
 
 
 var __generateId = function __generateId() {
-  return _.uniqueId(v1_1());
+  return ___default.uniqueId(v1_1());
 }; // @TODO can be one method with different types.
 
 
@@ -209,7 +209,7 @@ var getFiveRandomId = function getFiveRandomId() {
 var getRecipes = function getRecipes() {
   var randomFiveIds = getFiveRandomId();
 
-  var result = _.map(recipes, function (recipe, index) {
+  var result = map(recipes, function (recipe, index) {
     // console.log(ingredientsId);
     return _objectSpread({}, recipe, {
       created_at: __generateDate(),
@@ -231,7 +231,7 @@ var getRecipes = function getRecipes() {
 
 var getMenuGenerator = function getMenuGenerator(numberOfWeeks) {
   var result;
-  result = _.times(numberOfWeeks, function (index) {
+  result = times(numberOfWeeks, function (index) {
     return {
       id: __generateId(),
       title: "Weekly menu ".concat(index),
@@ -245,7 +245,7 @@ var getMenuGenerator = function getMenuGenerator(numberOfWeeks) {
 
 
 var getNRecipes = function getNRecipes(n) {
-  return _.slice(recipes, n);
+  return slice(recipes, n);
 };
 /**
  * Fetches one recipe by title
@@ -255,7 +255,7 @@ var getNRecipes = function getNRecipes(n) {
 
 
 var getRecipeByTitle = function getRecipeByTitle(title) {
-  return _.filter(recipes, function (recipe) {
+  return filter(recipes, function (recipe) {
     return recipe.title === title;
   })[0];
 };
@@ -268,7 +268,7 @@ var getRecipeByTitle = function getRecipeByTitle(title) {
 var getRandomRecipe = function getRandomRecipe() {
   var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
   var recipes = getNRecipes(20);
-  return _.sampleSize(recipes, n);
+  return sampleSize(recipes, n);
 };
 /**
  * Fetches first five recipes
@@ -280,7 +280,7 @@ var getRandomRecipe = function getRandomRecipe() {
 var getFirstFiveRecipes = function getFirstFiveRecipes() {
   var recipes = getNRecipes(5);
 
-  var result = _.map(recipes, function (item) {
+  var result = map(recipes, function (item) {
     return {
       key: __generateId(),
       recipe: item
@@ -291,7 +291,7 @@ var getFirstFiveRecipes = function getFirstFiveRecipes() {
 };
 
 var getFiveRandomIngredients = function getFiveRandomIngredients() {
-  var result = _.map(getRandomRecipe(5), function (recipe) {
+  var result = map(getRandomRecipe(5), function (recipe) {
     return {
       'id': __generateId(),
       'ingredient': recipe['ingredients']

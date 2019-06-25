@@ -1,7 +1,7 @@
 var GroceristarFetchPlugin = (function (exports, _, dayjs, _files) {
   'use strict';
 
-  _ = _ && _.hasOwnProperty('default') ? _['default'] : _;
+  var ___default = 'default' in _ ? _['default'] : _;
   dayjs = dayjs && dayjs.hasOwnProperty('default') ? dayjs['default'] : dayjs;
 
   function _defineProperty(obj, key, value) {
@@ -187,7 +187,7 @@ var GroceristarFetchPlugin = (function (exports, _, dayjs, _files) {
 
   var __find = function __find(alias, files) {
     // console.log(files);
-    var result = _.get(files, alias); // console.log(alias);
+    var result = ___default.get(files, alias); // console.log(alias);
     // console.log(result);
 
 
@@ -196,7 +196,7 @@ var GroceristarFetchPlugin = (function (exports, _, dayjs, _files) {
 
 
   var __generateId = function __generateId() {
-    return _.uniqueId(v1_1());
+    return ___default.uniqueId(v1_1());
   }; // @TODO can be one method with different types.
 
 

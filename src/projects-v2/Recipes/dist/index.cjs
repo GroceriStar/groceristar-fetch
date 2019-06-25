@@ -4,7 +4,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var _ = _interopDefault(require('lodash'));
+var _ = require('lodash');
+var ___default = _interopDefault(_);
 var dayjs = _interopDefault(require('dayjs'));
 var _files = require('@files');
 
@@ -191,7 +192,7 @@ var __get = function __get(value) {
 
 var __find = function __find(alias, files) {
   // console.log(files);
-  var result = _.get(files, alias); // console.log(alias);
+  var result = ___default.get(files, alias); // console.log(alias);
   // console.log(result);
 
 
@@ -200,7 +201,7 @@ var __find = function __find(alias, files) {
 
 
 var __generateId = function __generateId() {
-  return _.uniqueId(v1_1());
+  return ___default.uniqueId(v1_1());
 }; // @TODO can be one method with different types.
 
 

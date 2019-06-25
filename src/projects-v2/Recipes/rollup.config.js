@@ -19,7 +19,7 @@ const name = 'GroceristarFetchPlugin'
 const { external, globals } = {
   'globals': {
     'fs': 'fs',
-    'lodash': '_',
+    'lodash': 'lodash',
     'path': 'path',
     'dayjs':'dayjs',
     'uuid': 'uuid'
