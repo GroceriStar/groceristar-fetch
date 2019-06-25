@@ -1,7 +1,7 @@
-import _ from 'lodash'
+import * as _ from 'lodash'
 import {
   __find
-} from '../../utils'
+} from './utils'
 import { mealCalendar, firstVeganGLMC } from '@files'
 
 // module.getDishByDay = function(day, maxDishes = mealCalendar.length) {

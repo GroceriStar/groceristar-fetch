@@ -1,3 +1,5 @@
+import * as _ from 'lodash'
+
 import {
   departments,
   groceries,
@@ -5,18 +7,9 @@ import {
   users
 } from '@files'
 
-
-import _ from 'lodash'
-
-
-// const { users } = require('@groceristar/sd-wrapper')
-// const staticData = require('@groceristar/sd-wrapper')
-// const users = staticData.users
-
 // const fs = require('fs')
 
 import {
-  // __get,
   __find,
   // __l,
   __generateId

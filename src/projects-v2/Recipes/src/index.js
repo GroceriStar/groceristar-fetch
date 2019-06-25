@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import * as _ from 'lodash'
 import {
   __find,
 
@@ -76,7 +76,7 @@ const getNRecipes = (n) => {
  * @return {object}       recipe object
  */
 const getRecipeByTitle = (title) => {
-  
+
   return _.filter(recipes, recipe => recipe.title === title)[0]
 
 }

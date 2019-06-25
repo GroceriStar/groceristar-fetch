@@ -1,3 +1,5 @@
+import * as _ from 'lodash'
+
 import {
   ingredients3,
   recipes,

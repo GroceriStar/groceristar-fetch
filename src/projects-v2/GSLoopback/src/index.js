@@ -1,11 +1,5 @@
-
-
-
-import _ from 'lodash'
-// const fs = require('fs')
-
+import * as _ from 'lodash'
 import {
-
   __generateId,
   __generateDate
 } from '../../utils'
