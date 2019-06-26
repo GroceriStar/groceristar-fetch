@@ -19,7 +19,7 @@ import {
   quart,
   tablespoon,
   teaspoon
-} from './files'
+} from '@files'
 
 export {
 

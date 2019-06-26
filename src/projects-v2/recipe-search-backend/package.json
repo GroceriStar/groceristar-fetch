@@ -1,5 +1,5 @@
 {
-  "name": "@groceristar/groceristar-fetch",
+  "name": "@groceristar/f-recipe-search",
   "version": "0.0.1",
   "scripts": {
     "test": "jest",
@@ -12,7 +12,8 @@
     "bundle": "rollup -c",
     "dev": "rollup -c -w",
     "build:rollup": "npm run clean && npm run bundle",
-    "clean": "shx rm -rf ./coverage && shx rm -rf ./dist"
+    "clean": "shx rm -rf ./coverage && shx rm -rf ./dist",
+    "code-fix":"echo 'code-fix me'"
   },
   "devDependencies": {
     "@babel/cli": "7.4.4",
