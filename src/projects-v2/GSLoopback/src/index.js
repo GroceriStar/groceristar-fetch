@@ -2,14 +2,18 @@ import * as _ from 'lodash'
 import {
   __generateId,
   __generateDate
-} from '../../utils'
+} from 'utils'
 
 // @TODO this files we'll redo soon. link: https://github.com/GroceriStar/sd/issues/76
 // we don't need them at this moment, but later - it'll be part of our graphql-server functionality
 import {
   ultimateGroceryList,
   groceryListWithUserRelations,
-  dbIngredients
+  dbIngredients,
+
+  ingredients,
+  departments,
+  groceries
 } from '@files'
 
 
@@ -18,75 +22,69 @@ import {
 // because these methods used in our react projects.
 // so I propose do it very carefully
 const getUltimateGrocery = () => {
-  // return __get(ultimateGroceryList)
-  return []
+  return ultimateGroceryList
 }
 
 const getGLwithUserRelations = () => {
-  // return __get(groceryListWithUserRelations)
-  return []
+  return groceryListWithUserRelations
 }
 
 const getIngredientsSampleFromDB = () => {
-  // return __get(dbIngredients)
-  return []
+  return dbIngredients
 }
 
-// const getIngredients = () => {
-//   return parser(ingredients)
-// }
+const getIngredients = () => {
+  return ingredients
+}
 
-// const getDepartments = () => {
-//   return parser(departments)
-// }
+const getDepartments = () => {
+  return departments
+}
 
-// const getGroceryById = ( id ) => {
-//
-//   let groceries = getGrocery();
-//   return [ _.find(groceries, ['id', id]) ];
-// };
-//
-// const getGroceryByName = (name) => {
-//   let groceries = getGrocery();
-//
-//   return _.filter(groceries, function(item) {
-//     return item.name === name;
-//   })
-// }
+const getGroceryById = ( id ) => {
 
-// const getCountIngOfDepartment = () => {
-//   let departments = getDepartments();
-//   let result = _.map(departments, function(department){
-//       let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name);
-//     return {
-//       ...department,
-//       countIngredients: ingredientsByOneDepartment.length
-//     }
-//   })
+  return [ _.find(groceries, ['id', id]) ];
+};
 //
-//   return result;
-// }
+const getGroceryByName = (name) => {
 
-// const getAllDepartmentList = () => {
-//   let departments = getDepartments();
-//   return _.map(departments, item => ({
-//     key: uuidv1(),
-//     departmentName: item
-//   }));
-// };
+  return _.filter(groceries, function(item) {
+    return item.name === name;
+  })
+}
 
-// const getAllIngredientsWithId = () => {
-//   let ingredients = getIngredients();
-//
-//   let result = _.map(ingredients, function(ingredient){
-//     return {
-//       key: uuidv1(),
-//       ...ingredient
-//     }
-//   })
-//
-//   return result;
-// }
+const getCountIngOfDepartment = () => {
+  let result = _.map(departments, function(department){
+      let ingredientsByOneDepartment =
+        getAllIngredientsByOneDepartment(department.name);
+    return {
+      ...department,
+      countIngredients: ingredientsByOneDepartment.length
+    }
+  })
+
+  return result;
+}
+
+const getAllDepartmentList = () => {
+  return _.map(departments, item => ({
+    key: uuidv1(),
+    departmentName: item
+  }));
+};
+
+const getAllIngredientsWithId = () => {
+  let ingredients = getIngredients();
+
+  let result = _.map(ingredients, function(ingredient){
+    return {
+      key: uuidv1(),
+      ...ingredient
+    }
+  })
+
+  return result;
+}
 
 const getUserObject =  (name) => {
   var userObj = {
@@ -116,8 +114,8 @@ const getUserObject =  (name) => {
       userObj.ingredientIds[i] = __generateId()
     }
   }
-  // return userObj
-  return []
+  return userObj
+  // return []
 }
 
 export {
