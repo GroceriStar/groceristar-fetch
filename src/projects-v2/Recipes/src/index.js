@@ -16,7 +16,6 @@ import {
   users
 } from '@files'
 
-
 // @TODO update this method, use stuff from utils.js
 const getFiveRandomId = function () {
   return [
@@ -29,7 +28,6 @@ const getFiveRandomId = function () {
 }
 
 const getRecipes = function () {
-
   let randomFiveIds = getFiveRandomId()
 
   let result =
@@ -76,9 +74,7 @@ const getNRecipes = (n) => {
  * @return {object}       recipe object
  */
 const getRecipeByTitle = (title) => {
-
   return _.filter(recipes, recipe => recipe.title === title)[0]
-
 }
 
 /**

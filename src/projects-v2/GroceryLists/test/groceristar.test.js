@@ -49,7 +49,6 @@ describe('checking objects inside groceries', () => {
   groceryPropertyContain('slug', Boolean)
 })
 
-
 describe('checking objects inside ingredients', () => {
   const ingredientsHaveProperty = property => {
     // it(`Each ingridient have property ${property}`, () => {

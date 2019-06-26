@@ -2,7 +2,7 @@
 
 const { mealCalendar, firstVeganGLMC } = require('../dist/files')
 
-//@TODO delete it later?
+// @TODO delete it later?
 const methodsList = {
   getMealCalendar: mealCalendar,
   getFVGLMC: firstVeganGLMC

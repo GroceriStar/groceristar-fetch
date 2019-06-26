@@ -1,2 +1,2 @@
-import { mealCalendar, firstVeganGLMC } from '@groceristar/sd-wrapper';
-export { mealCalendar, firstVeganGLMC };
+import { mealCalendar, firstVeganGLMC } from '@groceristar/sd-wrapper'
+export { mealCalendar, firstVeganGLMC }

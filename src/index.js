@@ -15,7 +15,6 @@ const graphQL = require('./projects/GraphQL/dist/index.js')
 
 const gsLoopback = require('./projects/GS-Loopback/dist/index.js')
 
-
 // const search = require('./projects/Search/search.js')
 //
 // const groceristar = require('./projects/GroceriStar/groceristar.js')
@@ -30,8 +29,6 @@ const gsLoopback = require('./projects/GS-Loopback/dist/index.js')
 //
 // const gsLoopback = require('./projects/GS-Loopback/loopback.js')
 
-
-
 // i'm separating this file because it's not fit to logic of this module very well.
 // const CKImport = require('./Import/CKImport')
 
@@ -42,7 +39,7 @@ module.exports = {
   mealCalendar,
   showcase,
   graphQL,
-  gsLoopback,
+  gsLoopback
 
   // CKImport
 }

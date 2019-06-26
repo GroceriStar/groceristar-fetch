@@ -68,7 +68,6 @@ const getUserGrocery = () => {
 }
 
 const getUserGroceryKey = () => {
-
   return _.map(userGrocery, (item, index) => {
     return {
       key: __generateId(),
@@ -186,7 +185,7 @@ const getUsers = () => {
 
 const getUsersKey = () => {
   let results = users
-  
+
   return results.map((item, index) => ({
     userId: __generateId(),
     favs: false,

@@ -15,8 +15,6 @@ import {
   __generateId
 } from 'utils'
 
-
-
 // @TODO can we update our methods - but we'll need to go step by step,
 // don't worry, will update @hirdbluebird
 // because these methods used in our react projects.
@@ -28,8 +26,6 @@ const getIngredients = () => {
 const getGrocery = function () {
   return groceries
 }
-
-
 
 const getDepartments = () => {
   return departments
@@ -60,17 +56,17 @@ const getGroceryByNameWithDepAndIng = (name) => {
   // for example, first step will be to use this: getGroceryByName
   // let newGrocerieszzz = filterGroceriesByName(groceries, name)
 
-  let zizua = getGroceryByName(name);
+  let zizua = getGroceryByName(name)
   let result = []
-  zizua['departments'].forEach(  function (department) {
+  zizua['departments'].forEach(function (department) {
   //
   //
-      result.push({
-        'department': department,
-        'ingredients': getAllIngredientsByOneDepartment(department)
-      })
+    result.push({
+      'department': department,
+      'ingredients': getAllIngredientsByOneDepartment(department)
     })
-    return result
+  })
+  return result
   // return NEW_grocerieszzz;
   // console.log(NEW_grocerieszzz);
 
@@ -271,7 +267,6 @@ const getAllIngredientsWithId = () => {
   // let result = []
   // let ingredients = getIngredients()
 
-
   let result = getResult(ingredients)
 
   return result
@@ -353,11 +348,11 @@ const getGroceryListsByDepartment = (department) => {
 
 // @TODO should work now.
 // const newGroceryList = (newDepartment) => {
-  // const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json')
-  // const newGrocery = [ ...groceries, newDepartment ]
+// const groceriesFile = fs.createWriteStream('./data/Grocery/grocery.json')
+// const newGrocery = [ ...groceries, newDepartment ]
 
-  // groceriesFile.write(JSON.stringify(newGrocery, null, 2))
-  // groceries = newGrocery
+// groceriesFile.write(JSON.stringify(newGrocery, null, 2))
+// groceries = newGrocery
 // }
 
 export {

@@ -6,7 +6,6 @@ import {
   departments
 } from './files'
 
-
 export {
 
 }

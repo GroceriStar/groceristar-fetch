@@ -14,8 +14,7 @@ import {
 export {
   favorites,
   items,
-  userGrocery,
-
+  userGrocery
 
   // groceristar
 }

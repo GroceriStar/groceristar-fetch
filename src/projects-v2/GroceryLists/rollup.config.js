@@ -21,7 +21,7 @@ const { external, globals } = {
     'fs': 'fs',
     'lodash': 'lodash',
     'path': 'path',
-    'dayjs':'dayjs',
+    'dayjs': 'dayjs',
     'uuid': 'uuid'
   },
   'external': [

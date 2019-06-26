@@ -1,6 +1,6 @@
 
-import uuidv1 from'uuid/v1'
-import dayjs from'dayjs'
+import uuidv1 from 'uuid/v1'
+import dayjs from 'dayjs'
 
 import _ from 'lodash'
 

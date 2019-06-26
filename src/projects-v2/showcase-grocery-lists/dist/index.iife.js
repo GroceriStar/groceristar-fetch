@@ -1,16 +1,17 @@
 var GroceristarFetchPlugin = (function (exports) {
-  'use strict';
+  'use strict'
 
-  var _require = require("./utils"),
-      __find = _require.__find;
+  var _require = require('./utils')
 
-  var _require2 = require('@files'),
-      groceries = _require2.groceries; // @TODO can we update our methods - but we'll need to go step by step,
+  var __find = _require.__find
+
+  var _require2 = require('@files')
+
+  var groceries = _require2.groceries // @TODO can we update our methods - but we'll need to go step by step,
   // because these methods used in our react projects.
   // so I propose do it very carefully
 
-
-  var getGroceryShowcase = function getGroceryShowcase() {
+  var getGroceryShowcase = function getGroceryShowcase () {
     // @TODO can we just merge together 2 arrays instead of adding this 2 values?
     // maybe it can be better
     // let result = files.groceries.map((item) => {
@@ -19,12 +20,11 @@ var GroceristarFetchPlugin = (function (exports) {
     //   return item
     // })
     // console.log(result);
-    return groceries;
-  };
+    return groceries
+  }
 
-  exports.__find = __find;
-  exports.getGroceryShowcase = getGroceryShowcase;
+  exports.__find = __find
+  exports.getGroceryShowcase = getGroceryShowcase
 
-  return exports;
-
-}({}));
+  return exports
+}({}))
