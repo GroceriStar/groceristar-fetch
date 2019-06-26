@@ -1,7 +1,5 @@
 'use strict'
 
-// const path = require('path')
-
 const presets = [
   ['@babel/preset-env', {
     'modules': false

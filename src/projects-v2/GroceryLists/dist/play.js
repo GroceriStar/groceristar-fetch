@@ -1,19 +1,11 @@
-import {
-  ingredients
-} from '@groceristar/sd-wrapper'
+import { ingredients } from '@groceristar/sd-wrapper';
+import { __l } from "./utils";
 
-import {
-  __l
-} from './utils'
-
-__l(ingredients)
-// import methods from './index'
+__l(ingredients); // import methods from './index'
 // const search = require('../Search/search')
-
 // can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
 // const count = function() {
 //
-
 //  console.log('department ' +  _.size(departments) )
 //  console.log('grocery '    +  _.size(groceries) )
 //  console.log('users '      +  _.size(users) )
@@ -24,25 +16,18 @@ __l(ingredients)
 // count();
 // -----
 // groceristar.getGroceriesWithDepIngKey("Grocery List Essentials")
-
 // __l(groceristar.getGroceriesWithDepIngKey('Grocery List Essentials'))
 // __l(groceristar.getGroceriesWithDepIngKey("Ultimate Grocery List"))
 // __l(groceristar.getGroceriesWithDepIngKey("19 Gluten-Free Foods Shopping List"))
-
 // console.log(groceristar.getAllIngredientsByOneDepartmentKey("Fresh vegetables"));
 // console.log(groceristar.getGroceryByNameWithDepAndIngKey("Ultimate Grocery List"));
 // console.log(groceristar.getGroceriesWithDepIngKey());
-
 // console.log(groceristar.getAllIngredientsWithId());
 // console.log(groceristar.getAllDepartmentsWithId());
-
 // console.log(groceristar.getAllIngredientsList("Fresh vegetables"));
-
 // console.log(groceristar.getGroceriesWithDepIngKey());
-
 // console.log(groceristar.getAllIngredientsByOneDepartmentKey("Condiments / Sauces", "888383883"));
 // console.log(groceristar.getGroceriesWithDepIngKey());
-
 // getGroceryListsByDepartment = department => {
 //  capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1);
 //  let parsedGroceries = parser(groceries),groceryList = [];
