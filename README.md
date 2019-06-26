@@ -5,6 +5,8 @@
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch) [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch) [![Coverage Status](https://coveralls.io/repos/github/GroceriStar/groceristar-fetch/badge.svg?branch=master)](https://coveralls.io/github/GroceriStar/groceristar-fetch?branch=master) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
+OLD MASTER VERSION FOR SAKE OF OLD VERSIONS
+
 Table of Contents
 =================
 
@@ -28,7 +30,7 @@ Within the download you'll find the following directories and files, logically g
 .
 ├── docs
 │   └── readme.md           # Secondary information about project
-└── src               
+└── src
     ├── projects            # Tests for self-titled projects
     │   ├── ChickenKyiv
     │   ├── GraphQL
@@ -39,9 +41,9 @@ Within the download you'll find the following directories and files, logically g
     │   ├── Showcase
     │   └── UnitConvertion
     ├── import
-    ├── index.js    
-    ├── index.test.js     
-    └── utils.js    
+    ├── index.js
+    ├── index.test.js
+    └── utils.js
 .gitignore
 README.md
 package.json
