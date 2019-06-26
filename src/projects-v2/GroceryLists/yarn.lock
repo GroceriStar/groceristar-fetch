@@ -650,6 +650,18 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@groceristar/mini-sd@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@groceristar/mini-sd/-/mini-sd-0.1.1.tgz#bbea762cf9c2268b4d3685a20db094ec083160c9"
+  integrity sha512-u1rXjh/AtViMyoqy4pikbbBEYKMkA62KEKgUIPsg+LR4QXb8STwJXFog2Cg5+t3Sk5UYlI6+kJWvosZEZP6low==
+  dependencies:
+    csv-parser "^2.3.0"
+    dayjs "^1.8.14"
+    lodash "^4.17.11"
+    path "^0.12.7"
+    uuid "^3.3.2"
+    yarn "^1.16.0"
+
 "@groceristar/sd-wrapper@^4.11.3":
   version "4.11.3"
   resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.11.3.tgz#fafa3c713d4d84e945408745974b7a515a9011a2"
