@@ -2,8 +2,8 @@ import * as _ from 'lodash'
 
 import {
   departments,
-  groceries,
-  ingredients,
+  grocery,
+  ingredients1,
   users
 } from '@files'
 

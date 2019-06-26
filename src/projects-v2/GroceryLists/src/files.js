@@ -1,13 +1,14 @@
 import {
   departments,
-  groceries,
-  ingredients,
+  grocery,
+  ingredients1,
   users
-} from '@groceristar/sd-wrapper'
+// } from '@groceristar/sd-wrapper'
+} from '@groceristar/mini-sd'
 
 export {
   departments,
-  groceries,
-  ingredients,
+  grocery,
+  ingredients1,
   users
 }
