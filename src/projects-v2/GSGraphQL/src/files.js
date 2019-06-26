@@ -9,7 +9,7 @@ import {
 // inside of this projects right now
 // deal with it later.
 
-import groceristar from './index'
+// import groceristar from './index'
 
 export {
   favorites,
@@ -17,5 +17,5 @@ export {
   userGrocery,
 
 
-  groceristar
+  // groceristar
 }
