@@ -1,5 +1,10 @@
-import * as _ from 'lodash'
-
+import {
+  find,
+  filter,
+  map,
+  forEach,
+  range
+} from 'lodash'
 import {
   departments,
   grocery,
@@ -31,11 +36,12 @@ const getDepartments = () => {
 }
 
 const getGroceryById = (id) => {
-  return [ _.find(groceries, ['id', id]) ]
+  return [ find(groceries, ['id', id]) ]
 }
 
 // @TODO do we need it?
-const filterGroceriesByName = (groceries, name) => _.filter(groceries, (item) => {
+const filterGroceriesByName = (groceries, name) =>
+  filter(groceries, (item) => {
   return item.name === name
 })
 
@@ -90,7 +96,7 @@ const getGroceryByNameWithDepAndIng = (name) => {
 
 const getGroceriesWithDepIngKey = () => {
   // let result = []
-  let result = _.map(groceries, function (grocery) {
+  let result = map(groceries, function (grocery) {
     // @TODO change variable name
     // grocery.id = __generateId()
     // grocery.departments = groceryDepIng;
@@ -126,7 +132,7 @@ const getGroceryByNameWithDepAndIngKey = (name) => {
       let departmentType = ''
       // @TODO i don't like that we're searching for things by names,
       // we need to replace it later with separated methods that will assign items between files via id
-      let dep = _.find(departments, (o) => {
+      let dep = find(departments, (o) => {
         return o.name === department
       })
       if (dep != undefined) {
@@ -154,13 +160,13 @@ const getAllIngredientsByOneDepartmentKey = (department, groceryId) => {
 
   // @TODO it looks like a separated method for me
   // var ingredientsList =
-  //   _.filter(ingredients, function (item) {
+  //   filter(ingredients, function (item) {
   //     return item.department === department
   //   })
 
   let ingredientsList = filterIngrListByDep(ingredients, department)
 
-  return _.map(ingredientsList, item => {
+  return map(ingredientsList, item => {
     let ingredientId = __generateId()
 
     return [
@@ -173,13 +179,14 @@ const getAllIngredientsByOneDepartmentKey = (department, groceryId) => {
 
 // -----------------------------------
 // @TODO WTF. Looks so unclear. shitcode. but yeah - with all features from ES6
-const filterIngrListByDep = (ingredients, department) => _.filter(ingredients, item => {
-  return item.department === department
+const filterIngrListByDep = (ingredients, department) =>
+  filter(ingredients, item => {
+    return item.department === department
 })
 
 // strange turnaround. @TODO can we
 const getGroceryListsWithCountDepartments = () => {
-  return _.map(groceries, item => {
+  return map(groceries, item => {
     const object = {
       id: item.id,
       name: item.name,
@@ -195,8 +202,8 @@ const getAllDepartments = () => {
   const departments = []
 
   // @TODO this is an example what should be updated. loooooks so bad and unreadable
-  _.forEach(_.range(0, groceries.length), value =>
-    departments.push(..._.map(groceries[value]['departments']))
+  forEach(range(0, groceries.length), value =>
+    departments.push(...map(groceries[value]['departments']))
   )
   return departments
 }
@@ -204,15 +211,18 @@ const getAllDepartments = () => {
 const getAllIngredientsByOneDepartment = (department) => {
   let ingredients = getIngredients()
 
-  let ingredientsList = filterIngrListByDep(ingredients, department)
+  let ingredientsList = filterIngrListByDep(
+    ingredients,
+    department
+  )
 
-  return _.map(ingredientsList, 'name')
+  return map(ingredientsList, 'name')
 }
 
 const getCountIngOfDepartment = () => {
   // let result = []
   let departments = getDepartments()
-  let result = _.map(departments, function (department) {
+  let result = map(departments, function (department) {
     let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name)
     return {
       ...department,
@@ -230,8 +240,8 @@ const getKeyArrayDepAndIng = () => {
   let departments = getAllDepartmentsWithId()
   let ingredients = getAllIngredientsWithId()
 
-  // _.map(ingredients, ingredient => {
-  //   _.forEach(departments,function(department){
+  // map(ingredients, ingredient => {
+  //   forEach(departments,function(department){
   //     if(ingredient.department === department.name) {
   //       keys.push({
   //       [department.key] : ingredient.key,
@@ -240,8 +250,8 @@ const getKeyArrayDepAndIng = () => {
   //   })
   //   return;
   // })
-  _.forEach(departments, function (department) {
-    _.forEach(ingredients, function (ingredient) {
+  forEach(departments, function (department) {
+    forEach(ingredients, function (ingredient) {
       // @TODO can be redo later with lodash methods
       if (ingredient.department === department.name) {
         keys.push({
@@ -256,7 +266,7 @@ const getKeyArrayDepAndIng = () => {
 // --------------------------------------------
 
 const getAllDepartmentList = () => {
-  return _.map(departments, item => ({
+  return map(departments, item => ({
     key: __generateId(),
     departmentName: item
   }))
@@ -281,7 +291,8 @@ const getAllDepartmentsWithId = () => {
 // @TODO update this version.
 // I don't like it. For me this line is shit
 // and i don;t like this name as well
-const getResult = (property) => _.map(property, (p) => ({
+const getResult = (property) =>
+  map(property, (p) => ({
   key: __generateId(),
   ...p
 }))
@@ -299,7 +310,7 @@ const getAllIngredientsList = (department) => {
 }
 
 const getAllGrocery = () => {
-  return _.map(groceries, item => ({
+  return map(groceries, item => ({
     key: __generateId(),
     ...item
   }))
@@ -316,7 +327,7 @@ const getAllGroceryDepartment = (departmentArray) => {
 }
 
 const createNewGroceryList = (newDepartment) => {
-  const nameExists = _.find(
+  const nameExists = find(
     groceries,
     item => item.name === newDepartment.name
   )
@@ -328,7 +339,8 @@ const getGroceryListsByDepartment = (department) => {
   let groceryList = []
   if (department) {
     // what we're doing? camelCase? explain @TODO
-    const capitalisedDepartment = department[0].toUpperCase() + department.toLowerCase().substr(1)
+    const capitalisedDepartment = department[0].toUpperCase()
+    + department.toLowerCase().substr(1)
     groceries.map(grocery => {
       if (grocery.departments.includes(department.toLowerCase()) ||
         grocery.departments.includes(department.toUpperCase()) ||

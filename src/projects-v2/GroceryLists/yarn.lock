@@ -650,10 +650,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@groceristar/mini-sd@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@groceristar/mini-sd/-/mini-sd-0.1.1.tgz#bbea762cf9c2268b4d3685a20db094ec083160c9"
-  integrity sha512-u1rXjh/AtViMyoqy4pikbbBEYKMkA62KEKgUIPsg+LR4QXb8STwJXFog2Cg5+t3Sk5UYlI6+kJWvosZEZP6low==
+"@groceristar/mini-sd@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@groceristar/mini-sd/-/mini-sd-0.1.2.tgz#25274cd2de4bd2997df864f42d8560d85be2a395"
+  integrity sha512-psg5HXm0FNIF5K+vTlgxmVZIsehYb/OnMAYC7ixcXzNs2CrFWUycBEEw1cw39tJygueKGt48nkji8pb20xz/yQ==
   dependencies:
     csv-parser "^2.3.0"
     dayjs "^1.8.14"

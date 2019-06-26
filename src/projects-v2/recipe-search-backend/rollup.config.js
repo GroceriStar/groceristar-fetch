@@ -16,22 +16,13 @@ const extensions = [
 
 const name = 'GroceristarFetchPlugin'
 
-const { external, globals } = {
-  'globals': {
-    'fs': 'fs',
-    'lodash': 'lodash',
-    'path': 'path',
-    'dayjs': 'dayjs',
-    'uuid': 'uuid'
-  },
-  'external': [
+const external =  [
     'fs',
     'path',
     'lodash',
     'uuid',
     'dayjs'
-  ]
-}
+]
 
 export default {
   input: './src/index.js',
@@ -40,7 +31,7 @@ export default {
   // https://rollupjs.org/guide/en#external-e-external
   external,
 
-  globals,
+  // globals,
 
   plugins: [
     // Allows node_modules resolution
