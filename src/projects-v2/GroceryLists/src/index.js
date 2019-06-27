@@ -6,7 +6,15 @@
 //   range
 // } from 'lodash'
 
-import _ from 'lodash'
+
+import {  find,
+  filter,
+  map,
+  forEach,
+  range
+} from 'lodash-es/lodash'
+// const  = _;
+
 // import lodash from 'lodash'
 // import { default as _map }  from 'lodash-es/map'
 // import { template as _template } from './libs/lodash-es/lodash';
@@ -26,12 +34,6 @@ import {
   __generateId
 } from 'utils'
 
-const {  find,
-  filter,
-  map,
-  forEach,
-  range
-} = lodash;
 
 
 // @TODO can we update our methods - but we'll need to go step by step,
