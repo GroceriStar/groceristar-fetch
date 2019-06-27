@@ -1,14 +1,17 @@
-import {
-  find,
-  filter,
-  map,
-  forEach,
-  range
-} from 'lodash'
+// import {
+//   find,
+//   filter,
+//   map,
+//   forEach,
+//   range
+// } from 'lodash'
+
+import lodash from 'lodash'
+
 import {
   departments,
   grocery,
-  ingredients,
+  ingredients
   // users
 } from '@files'
 
@@ -18,6 +21,14 @@ import {
   __find,
   __generateId
 } from 'utils'
+
+const {  find,
+  filter,
+  map,
+  forEach,
+  range
+} = lodash;
+
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // don't worry, will update @hirdbluebird

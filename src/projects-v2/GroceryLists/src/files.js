@@ -3,8 +3,8 @@ import {
   grocery,
   ingredients
   // users
-} from '@groceristar/sd-wrapper'
-// } from '@groceristar/mini-sd'
+} from '@groceristar/mini-sd'
+
 // import {
 //   departments,
 //   grocery,
