@@ -662,7 +662,7 @@
     uuid "^3.3.2"
     yarn "^1.16.0"
 
-"@groceristar/sd-wrapper@^4.11.3":
+"@groceristar/sd-wrapper@^4.5.0":
   version "4.11.3"
   resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.11.3.tgz#fafa3c713d4d84e945408745974b7a515a9011a2"
   integrity sha512-jwEmg9ELXiHSzlSbR7GBlhoglB06i4iZucgFZI8bMte2lF+S5w3/MES1noKyzyNcMIHTT8HpYvn7AQCbao47mg==

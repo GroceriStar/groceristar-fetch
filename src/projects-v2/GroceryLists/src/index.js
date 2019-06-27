@@ -8,7 +8,7 @@ import {
 import {
   departments,
   grocery,
-  ingredients1,
+  ingredients,
   // users
 } from '@files'
 
