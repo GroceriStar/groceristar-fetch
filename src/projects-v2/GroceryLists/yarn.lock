@@ -662,18 +662,15 @@
     uuid "^3.3.2"
     yarn "^1.16.0"
 
-"@groceristar/sd-wrapper@^4.5.0":
-  version "4.11.3"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.11.3.tgz#fafa3c713d4d84e945408745974b7a515a9011a2"
-  integrity sha512-jwEmg9ELXiHSzlSbR7GBlhoglB06i4iZucgFZI8bMte2lF+S5w3/MES1noKyzyNcMIHTT8HpYvn7AQCbao47mg==
+"@groceristar/sd-wrapper@^3.0.0":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-3.0.3.tgz#3339cb18658abef939f97bef71a93bb35f578845"
+  integrity sha512-rZpYLODGXXREouy8EKTLih9hP+5nbXDxhXYGULICq8ATUGRiftuWGiFuVldfC+8gexxvsyFHF6/Djyhht7vJhg==
   dependencies:
-    csv-parser "^2.3.0"
-    dayjs "^1.8.14"
+    dayjs "^1.8.13"
     lodash "^4.17.11"
     path "^0.12.7"
-    path-exists "^4.0.0"
     uuid "^3.3.2"
-    yarn "^1.16.0"
 
 "@jest/console@^24.7.1":
   version "24.7.1"
@@ -1820,7 +1817,7 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-dayjs@^1.8.12, dayjs@^1.8.14:
+dayjs@^1.8.12, dayjs@^1.8.13, dayjs@^1.8.14:
   version "1.8.14"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.14.tgz#43e4f62830c2c3342c3fcd25934dc9162dbe6f38"
   integrity sha512-AVhDmRTe541iWirnoeFSSDDGvCT6HWaNQ4z2WmmzXMGZj6ph6ydao2teKq/eUtR43GPJXlYFD+C/SotG1P9wUQ==
@@ -4625,11 +4622,6 @@ path-exists@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
   integrity sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
-
-path-exists@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"
-  integrity sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
 
 path-is-absolute@^1.0.0:
   version "1.0.1"
