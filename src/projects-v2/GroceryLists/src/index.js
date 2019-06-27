@@ -6,7 +6,11 @@
 //   range
 // } from 'lodash'
 
-import lodash from 'lodash'
+import _ from 'lodash'
+// import lodash from 'lodash'
+// import { default as _map }  from 'lodash-es/map'
+// import { template as _template } from './libs/lodash-es/lodash';
+
 
 import {
   departments,

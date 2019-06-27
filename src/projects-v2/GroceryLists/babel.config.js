@@ -4,9 +4,6 @@ const presets = [
   ['@babel/preset-env', {
     'modules': false
   }]
-  // {
-  //
-  // }
 ]
 
 const plugins = [
@@ -22,6 +19,13 @@ const plugins = [
   ],
   [
     '@babel/plugin-syntax-dynamic-import'
+  ],
+  [
+    require.resolve('babel-plugin-lodash')
+    // ,
+    // {
+    //   id: []
+    // }
   ]
   // ["@babel/proposal-object-rest-spread"]
 ]
