@@ -36,7 +36,7 @@
     "travis": "0.1.1"
   },
   "dependencies": {
-    "@groceristar/mini-sd": "^0.1.1",
+    "@groceristar/mini-sd": "^0.1.3",
     "@groceristar/sd-wrapper": "^4.9.2",
     "dayjs": "^1.8.12",
     "fs": "0.0.2",
