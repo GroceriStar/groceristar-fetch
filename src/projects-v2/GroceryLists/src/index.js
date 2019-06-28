@@ -18,7 +18,7 @@ import {  find,
 // import lodash from 'lodash'
 // import { default as _map }  from 'lodash-es/map'
 // import { template as _template } from './libs/lodash-es/lodash';
-
+//https://github.com/rollup/rollup/issues/691
 
 import {
   departments,
