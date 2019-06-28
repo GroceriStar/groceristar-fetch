@@ -1,8 +1,8 @@
-// const path = require('path')
-const uuidv1 = require('uuid/v1')
-const dayjs = require('dayjs')
 
-const _ = require('lodash')
+import uuidv1 from 'uuid/v1'
+import dayjs from 'dayjs'
+
+import _ from 'lodash'
 
 // main reason for having this file, because i'm trying to move away repetetive functions
 // @TODO Arthur have at least 3-5 different modules, that should replace this method
@@ -38,8 +38,7 @@ const __generateDate = () => {
   return dayjs().toDate()
 }
 
-module.exports = {
-  // parser,
+export {
   __l,
   __find,
   __get,

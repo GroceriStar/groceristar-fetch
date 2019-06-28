@@ -5,6 +5,10 @@
 [![Build Status](https://travis-ci.org/GroceriStar/groceristar-fetch.svg?branch=master)](https://travis-ci.org/GroceriStar/groceristar-fetch) [![npm version](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch.svg)](https://badge.fury.io/js/%40groceristar%2Fgroceristar-fetch) [![Coverage Status](https://coveralls.io/repos/github/GroceriStar/groceristar-fetch/badge.svg?branch=master)](https://coveralls.io/github/GroceriStar/groceristar-fetch?branch=master) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/0f2ff678e81ef4dee43a/maintainability)](https://codeclimate.com/github/GroceriStar/groceristar-fetch/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0f2ff678e81ef4dee43a/test_coverage)](https://codeclimate.com/github/GroceriStar/groceristar-fetch/test_coverage)
+
 Table of Contents
 =================
 
