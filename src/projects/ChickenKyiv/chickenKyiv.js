@@ -6,15 +6,15 @@ const {
   __generateId
 } = require('../../utils')
 
-// const files = {
-//   ingredients3,
-//   menus,
-//   recipes,
-//   nutritions1,
-//   nutritions2,
-//   departments,
-//   users
-// } = require('./files')
+const files = {
+  ingredients3,
+  menus,
+  recipes,
+  nutritions1,
+  nutritions2,
+  departments,
+  users
+} = require('./files')
 
 // @TODO update this method, use stuff from utils.js
 const getFiveRandomId = function () {
@@ -122,6 +122,6 @@ module.exports = {
   getFiveRandomIngredients,
   getMenuGenerator,
   getRecipes,
-  // files,
+  files,
   __find
 }

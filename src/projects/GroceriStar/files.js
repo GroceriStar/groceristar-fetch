@@ -5,6 +5,9 @@ const groceries = staticData.grocery
 const ingredients = staticData.ingredients
 const users = staticData.users
 
+console.log(departments)
+console.log(groceries)
+
 module.exports = {
   departments,
   groceries,

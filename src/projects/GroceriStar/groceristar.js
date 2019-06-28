@@ -14,10 +14,10 @@ const {
 } = require('../../utils')
 
 const {
-  departments
-  // groceries
-  // ingredients,
-  // users,
+  departments,
+  groceries,
+  ingredients,
+  users
 } = require('./files')
 
 // @TODO can we update our methods - but we'll need to go step by step,
@@ -409,6 +409,6 @@ module.exports = {
   getKeyArrayDepAndIng,
   getAllDepartmentsWithId,
   getCountIngOfDepartment,
-  __find
-  // files
+  __find,
+  files
 }
