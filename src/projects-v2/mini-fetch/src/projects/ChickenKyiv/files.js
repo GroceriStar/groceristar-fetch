@@ -1,5 +1,5 @@
 const staticData = require('@groceristar/sd-wrapper')
-const ingredients = staticData.ingredients
+const ingredients = staticData.ingredients3
 const menus = staticData.menu
 const recipes = staticData.recipes
 const nutritions1 = staticData.nutritions

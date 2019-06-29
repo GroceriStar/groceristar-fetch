@@ -77343,7 +77343,7 @@ var groceristar = {
   __find: __find$1
 };
 
-const ingredients$4 = files.ingredients;
+const ingredients$4 = files.ingredients3;
 const menus$1 = files.menu;
 const recipes$2 = files.recipes;
 const nutritions1$1 = files.nutritions;
