@@ -404,6 +404,5 @@ module.exports = {
   getKeyArrayDepAndIng,
   getAllDepartmentsWithId,
   getCountIngOfDepartment,
-  __find,
-  files
+  __find
 }

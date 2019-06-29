@@ -122,6 +122,6 @@ module.exports = {
   getFiveRandomIngredients,
   getMenuGenerator,
   getRecipes,
-  files,
+  // files,
   __find
 }

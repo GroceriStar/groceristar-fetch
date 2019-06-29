@@ -76880,7 +76880,7 @@ var GroceristarFetchPlugin = (function (exports, lodash) {
   ];
 
   // @TODO maybe later we'll just have an index file, in order to simplify import logic?
-  var files$1 = {
+  var files = {
     allergies: allergies,
     course: course,
     cuisine: cuisine,
@@ -76924,15 +76924,15 @@ var GroceristarFetchPlugin = (function (exports, lodash) {
     teaspoon: teaspoon
   };
 
-  const departments$2 = files$1.departments;
-  const groceries = files$1.grocery;
-  const ingredients$1 = files$1.ingredients;
-  const users$2 = files$1.users;
+  const departments$2 = files.departments;
+  const groceries = files.grocery;
+  const ingredients$1 = files.ingredients;
+  const users$2 = files.users;
 
   console.log(departments$2);
   console.log(groceries);
 
-  var files$2 = {
+  var files$1 = {
     departments: departments$2,
     groceries,
     ingredients: ingredients$1,
@@ -76951,7 +76951,7 @@ var GroceristarFetchPlugin = (function (exports, lodash) {
     groceries: groceries$1,
     ingredients: ingredients$2,
     users: users$3
-  } = files$2;
+  } = files$1;
 
   // @TODO can we update our methods - but we'll need to go step by step,
   // don't worry, will update @hirdbluebird
@@ -77337,20 +77337,19 @@ var GroceristarFetchPlugin = (function (exports, lodash) {
     getKeyArrayDepAndIng,
     getAllDepartmentsWithId,
     getCountIngOfDepartment,
-    __find: __find$1,
-    files
+    __find: __find$1
   };
 
-  const ingredients3$2 = files$1.ingredients3;
-  const menus$1 = files$1.menu;
-  const recipes$2 = files$1.recipes;
-  const nutritions1$1 = files$1.nutritions;
-  const nutritions2$2 = files$1.nutritions2;
-  const departments$4 = files$1.departments;
-  const users$4 = files$1.users;
+  const ingredients3$2 = files.ingredients3;
+  const menus$1 = files.menu;
+  const recipes$2 = files.recipes;
+  const nutritions1$1 = files.nutritions;
+  const nutritions2$2 = files.nutritions2;
+  const departments$4 = files.departments;
+  const users$4 = files.users;
   // require('@groceristar/sd-wrapper/dist/data/Recipe4/recipe.json')
 
-  var files$3 = {
+  var files$2 = {
     ingredients3: ingredients3$2,
     menus: menus$1,
     recipes: recipes$2,
@@ -77367,7 +77366,7 @@ var GroceristarFetchPlugin = (function (exports, lodash) {
     __generateId: __generateId$2
   } = utils;
 
-  const files$4 = {
+  const files$3 = {
     ingredients3,
     menus,
     recipes,
@@ -77375,7 +77374,7 @@ var GroceristarFetchPlugin = (function (exports, lodash) {
     nutritions2,
     departments,
     users
-  } = files$3;
+  } = files$2;
 
   // @TODO update this method, use stuff from utils.js
   const getFiveRandomId = function () {
@@ -77389,7 +77388,7 @@ var GroceristarFetchPlugin = (function (exports, lodash) {
   };
 
   const getRecipes = function () {
-    let recipes = __get(files$4.recipes);
+    let recipes = __get(files$3.recipes);
     // let recipes = []
     let randomFiveIds = getFiveRandomId();
 
@@ -77437,7 +77436,7 @@ var GroceristarFetchPlugin = (function (exports, lodash) {
    * @return {object}       recipe object
    */
   const getRecipeByTitle = (title) => {
-    let recipes = __get(files$4.recipes);
+    let recipes = __get(files$3.recipes);
     return lodash.filter(recipes, recipe => recipe.title === title)[0]
     // return []
   };
@@ -77483,7 +77482,7 @@ var GroceristarFetchPlugin = (function (exports, lodash) {
     getFiveRandomIngredients,
     getMenuGenerator,
     getRecipes,
-    files: files$4,
+    // files,
     __find: __find$2
   };
 
