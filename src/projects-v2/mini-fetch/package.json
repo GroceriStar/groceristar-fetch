@@ -1,5 +1,5 @@
 {
-  "name": "@groceristar/groceristar-fetch",
+  "name": "@groceristar/mini-fetch",
   "version": "2.2.0",
   "scripts": {
     "test": "jest",
