@@ -1,11 +1,5 @@
 const _ = require('lodash')
 
-// const { users } = require('@groceristar/sd-wrapper')
-// const staticData = require('@groceristar/sd-wrapper')
-// const users = staticData.users
-
-// const fs = require('fs')
-
 const {
   __get,
   __find,
@@ -25,50 +19,41 @@ const {
 // because these methods used in our react projects.
 // so I propose do it very carefully
 const getIngredients = function () {
-  // return __get(ingredients)
+  return ingredients
 }
 
-// const getGrocery = function () {
-//   return __get(groceries)
-// }
+const getGrocery = function () {
+  return groceries
+}
 
 // __l(getGrocery());
 
 const getUsers = function () {
-  // return __get(users)
-  return [
-    {
-      name: 'john doe',
-      email: 'johndoe@mail.com',
-      password: ' '
-    },
-    {
-      name: 'miss doe',
-      email: 'missdoe@mail.com',
-      password: ' '
-    }
-  ]
+  return users
+
 }
 
 const getDepartments = () => {
-  return __get(departments)
+  return departments
 }
 
 const getGroceryById = function (id) {
-  // return [ _.find(groceries, ['id', id]) ]
+  return [ _.find(groceries, ['id', id]) ]
 }
-// const filterGroceriesByName = (groceries, name) => _.filter(groceries, (item) => {
-//   return item.name === name
-// })
+
+const filterGroceriesByName = (groceries, name) => _.filter(groceries, (item) => {
+  return item.name === name
+})
+
 const getGroceryByName = function (name) {
-  // return filterGroceriesByName(groceries, name)
+  return filterGroceriesByName(groceries, name)
 }
 
 // @TODO we spot the same problem twice. It's a regression error.
 // we need to address that. And i think it's a good candidate for test coverage + adding raven.
 // @TODO second issue - i don't like that. looks not fancy.
 const getGroceryByNameWithDepAndIng = function (name) {
-  // let list = getGrocery()
+  let list = getGrocery()
   // __l(grocerieszzz);
 
   // @TODO maybe we shall move this function away. OR have another method, not getGrocery, that will repack things as we need it here....
@@ -119,6 +104,8 @@ const getGroceriesWithDepIngKey = () => {
   // })
   let departmentId = __generateId()
   // return result
+
+
   return {
     'name': 'name',
     'groceryId': 'groceryId',
@@ -131,12 +118,14 @@ const getGroceriesWithDepIngKey = () => {
       'ingredients': {}
     }
   }
+
+
 }
 
 const getGroceryByNameWithDepAndIngKey = name => {
   let groceryId = __generateId()
 
-  // let grocery = filterGroceriesByName(groceries, name)
+  let grocery = filterGroceriesByName(groceries, name)
 
   // @TODO this is not a clean turn around for this method
   // grocery[0]['departments'].forEach(
@@ -160,12 +149,16 @@ const getGroceryByNameWithDepAndIngKey = name => {
   //     })
   //   })
 
-  return {
-    'name': name,
-    'groceryId': groceryId,
-    'messages': {},
-    'departments': []
-  }
+
+  // return {
+  //   'name': name,
+  //   'groceryId': groceryId,
+  //   'messages': {},
+  //   'departments': []
+  // }
+
+
+
 }
 
 const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
@@ -205,6 +198,7 @@ const getGroceryListsWithCountDepartments = function () {
   //   delete object.departments // @TODO ????
   //   return object
   // })
+
 }
 
 // i assume this cannot work, because we don't have groceries variable... @TODO
@@ -212,9 +206,9 @@ const getAllDepartments = function () {
   const departments = []
 
   // @TODO this is an example what should be updated. loooooks so bad and unreadable
-  // _.forEach(_.range(0, groceries.length), value =>
-  //   departments.push(..._.map(groceries[value]['departments']))
-  // )
+  _.forEach(_.range(0, groceries.length), value =>
+    departments.push(..._.map(groceries[value]['departments']))
+  )
   return departments
 }
 
@@ -227,15 +221,16 @@ const getAllIngredientsByOneDepartment = function (department) {
 }
 
 const getCountIngOfDepartment = function () {
-  let result = []
-  // let departments = getDepartments()
-  // let result = _.map(departments, function (department) {
-  //   let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name)
-  //   return {
-  //     ...department,
-  //     countIngredients: ingredientsByOneDepartment.length
-  //   }
-  // })
+  // let result = []
+  let departments = getDepartments()
+
+  let result = _.map(departments, function (department) {
+    let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name)
+    return {
+      ...department,
+      countIngredients: ingredientsByOneDepartment.length
+    }
+  })
 
   return result
 }
@@ -273,15 +268,15 @@ const getKeyArrayDepAndIng = function () {
 // --------------------------------------------
 
 const getAllDepartmentList = function () {
-  // return _.map(departments, item => ({
-  //   key: __generateId(),
-  //   departmentName: item
-  // }))
+  return _.map(departments, item => ({
+    key: __generateId(),
+    departmentName: item
+  }))
 }
 
 const getAllIngredientsWithId = function () {
-  let result = []
-  // let ingredients = getIngredients()
+  // let result = []
+  let ingredients = getIngredients()
 
   // let result = _.map(ingredients, function (ingredient) {
   //   return {
@@ -289,7 +284,7 @@ const getAllIngredientsWithId = function () {
   //     ...ingredient
   //   }
   // })
-  // let result = getResult(ingredients)
+  let result = getResult(ingredients)
 
   return result
 }
@@ -297,14 +292,14 @@ const getAllIngredientsWithId = function () {
 // @TODO we need to figure out why we have this method and getAllDepartmentList
 // i assume we using them in different react projects.
 const getAllDepartmentsWithId = function () {
-  let result = []
+  // let result = []
   // let result = _.map(departments, function (department) {
   //   return {
   //     key: __generateId(),
   //     ...department
   //   }
   // })
-  // let result = getResult(departments)
+  let result = getResult(departments)
 
   return result
 }
@@ -328,10 +323,10 @@ const getAllIngredientsList = function (department) {
 }
 
 const getAllGrocery = function () {
-  // return _.map(groceries, item => ({
-  //   key: __generateId(),
-  //   ...item
-  // }))
+  return _.map(groceries, item => ({
+    key: __generateId(),
+    ...item
+  }))
 }
 
 const getAllGroceryDepartment = function (departmentArray) {
@@ -345,11 +340,11 @@ const getAllGroceryDepartment = function (departmentArray) {
 }
 
 const createNewGroceryList = function (newDepartment) {
-  // const nameExists = _.find(
-  //   groceries,
-  //   item => item.name === newDepartment.name
-  // )
-  // !nameExists && newGroceryList(newDepartment)
+  const nameExists = _.find(
+    groceries,
+    item => item.name === newDepartment.name
+  )
+  !nameExists && newGroceryList(newDepartment)
 }
 
 // TODO OMG, this method looks so sad...

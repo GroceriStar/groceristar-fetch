@@ -28,8 +28,8 @@ const getFiveRandomId = function () {
 }
 
 const getRecipes = function () {
-  // let recipes = __get(files.recipes)
-  let recipes = []
+  let recipes = __get(files.recipes)
+  // let recipes = []
   let randomFiveIds = getFiveRandomId()
 
   let result =
@@ -67,7 +67,7 @@ const getMenuGenerator = (numberOfWeeks) => {
 
 // @TODO replace it later. may need it at utils.js
 const getNRecipes = (n) => {
-  // return _.slice(recipes, n)
+  return _.slice(recipes, n)
 }
 
 /**
@@ -76,9 +76,9 @@ const getNRecipes = (n) => {
  * @return {object}       recipe object
  */
 const getRecipeByTitle = (title) => {
-  // let recipes = __get(files.recipes)
-  // return _.filter(recipes, recipe => recipe.title === title)[0]
-  return []
+  let recipes = __get(files.recipes)
+  return _.filter(recipes, recipe => recipe.title === title)[0]
+  // return []
 }
 
 /**
