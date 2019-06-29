@@ -1,6 +1,6 @@
 import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
-
+// import copy from 'rollup-plugin-copy-assets'
 import builtins from 'rollup-plugin-node-builtins'
 import babel from 'rollup-plugin-babel'
 
@@ -11,31 +11,32 @@ import pkg from './package.json'
 // https://gitlab.com/IvanSanchez/rollup-plugin-file-as-blob
 
 const extensions = [
-  '.js'
+  '.js', '.json'
 ]
 
 const name = 'GroceristarFetchPlugin'
 
-const external =  [
+const { external, globals } = {
+  'globals': {
+    'fs': 'fs',
+    'lodash': 'lodash',
+    'path': 'path'
+  },
+  'external': [
     'fs',
     'path',
-    'lodash',
-    'uuid',
-    'dayjs'
-]
-
-const bundleOutput = [
-  {
-
-  }
-]
+    'lodash'
+  ]
+}
 
 export default {
   input: './src/index.js',
 
   // Specify here external modules which you don't want to include in your bundle (for instance: 'lodash', 'moment' etc.)
   // https://rollupjs.org/guide/en#external-e-external
-  external: external,
+  external,
+
+  globals,
 
   plugins: [
     // Allows node_modules resolution
@@ -53,8 +54,23 @@ export default {
     }),
 
     // Allow bundling cjs modules. Rollup doesn't understand cjs
-    commonjs({}),
+    commonjs({
+      // namedExports: {
+      // //   // left-hand side can be an absolute path, a path
+      // //   // relative to the current directory, or the name
+      // //   // of a module in node_modules
+      // //   'node_modules/my-lib/index.js': [ 'named' ]
+      //   '~/Allergy/allergies.json': [ 'allergies' ]
+      // }
+    }),
     builtins()
+
+    // juck fix in order to move json files to npm
+    // copy({
+    //   assets: [
+    //     './src/data/**'
+    //   ],
+    // }),
 
   ],
 
