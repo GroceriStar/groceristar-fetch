@@ -935,7 +935,7 @@ var holiday = [
 	"4th of July"
 ];
 
-var ingredients$1 = [
+var ingredients = [
 	{
 		name: "Asparagus",
 		department: "Fresh vegetables"
@@ -55736,7 +55736,7 @@ var ingredients1 = [
 	"Random impulse buy"
 ];
 
-var ingredients3 = [
+var ingredients3$1 = [
 	{
 		name: "medium russet potatoes, sliced into sticks",
 		departmentId: "department_id"
@@ -76891,9 +76891,9 @@ var files = {
   diet: diet,
   grocery: grocery,
   holiday: holiday,
-  ingredients: ingredients$1,
+  ingredients: ingredients,
   ingredients1: ingredients1,
-  ingredients3: ingredients3,
+  ingredients3: ingredients3$1,
   favorites: favorites,
   items: items,
   mealCalendar: mealCalendar,
@@ -76929,7 +76929,7 @@ var files = {
 
 const departments$2 = files.departments;
 const groceries = files.grocery;
-const ingredients$2 = files.ingredients;
+const ingredients$1 = files.ingredients;
 const users$2 = files.users;
 
 console.log(departments$2);
@@ -76938,7 +76938,7 @@ console.log(groceries);
 var files$1 = {
   departments: departments$2,
   groceries,
-  ingredients: ingredients$2,
+  ingredients: ingredients$1,
   users: users$2
 };
 
@@ -76952,7 +76952,7 @@ const {
 const {
   departments: departments$3,
   groceries: groceries$1,
-  ingredients: ingredients$3,
+  ingredients: ingredients$2,
   users: users$3
 } = files$1;
 
@@ -76961,7 +76961,7 @@ const {
 // because these methods used in our react projects.
 // so I propose do it very carefully
 const getIngredients = function () {
-  return ingredients$3
+  return ingredients$2
 };
 
 // __l(getGrocery());
@@ -77343,7 +77343,7 @@ var groceristar = {
   __find: __find$1
 };
 
-const ingredients$4 = files.ingredients3;
+const ingredients3$2 = files.ingredients3;
 const menus$1 = files.menu;
 const recipes$2 = files.recipes;
 const nutritions1$1 = files.nutritions;
@@ -77353,7 +77353,7 @@ const users$4 = files.users;
 // require('@groceristar/sd-wrapper/dist/data/Recipe4/recipe.json')
 
 var files$2 = {
-  ingredients: ingredients$4,
+  ingredients3: ingredients3$2,
   menus: menus$1,
   recipes: recipes$2,
   nutritions1: nutritions1$1,
@@ -77370,7 +77370,7 @@ const {
 } = utils;
 
 const files$3 = {
-  ingredients,
+  ingredients3,
   menus,
   recipes,
   nutritions1,

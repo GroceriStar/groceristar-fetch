@@ -1,5 +1,5 @@
 const staticData = require('@groceristar/sd-wrapper')
-const ingredients = staticData.ingredients3
+const ingredients3 = staticData.ingredients3
 const menus = staticData.menu
 const recipes = staticData.recipes
 const nutritions1 = staticData.nutritions
@@ -9,7 +9,7 @@ const users = staticData.users
 // require('@groceristar/sd-wrapper/dist/data/Recipe4/recipe.json')
 
 module.exports = {
-  ingredients,
+  ingredients3,
   menus,
   recipes,
   nutritions1,

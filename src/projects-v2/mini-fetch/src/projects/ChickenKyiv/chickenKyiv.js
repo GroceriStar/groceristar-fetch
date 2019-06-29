@@ -7,7 +7,7 @@ const {
 } = require('../../utils')
 
 const files = {
-  ingredients,
+  ingredients3,
   menus,
   recipes,
   nutritions1,
