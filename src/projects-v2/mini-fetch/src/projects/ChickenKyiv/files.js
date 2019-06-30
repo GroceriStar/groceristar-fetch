@@ -1,6 +1,7 @@
 const staticData = require('@groceristar/mini-sd')
 // const staticData = require('@groceristar/sd-wrapper')
-const ingredients3 = staticData.ingredients3
+// const ingredients3 = staticData.ingredients3
+
 const menus = staticData.menu
 const recipes = staticData.recipes
 const nutritions1 = staticData.nutritions

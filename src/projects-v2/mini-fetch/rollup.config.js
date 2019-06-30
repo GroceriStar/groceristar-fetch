@@ -32,7 +32,7 @@ export default {
   // https://rollupjs.org/guide/en#external-e-external
   external:external,
 
-  
+
 
   plugins: [
     // Allows node_modules resolution
@@ -80,7 +80,10 @@ export default {
     file: pkg.browser,
     format: 'iife',
     name,
-    globals: {}
+    globals: {
+      '@grpceristar/mini-sd':'@grpceristar/mini-sd',
+      'lodash':'lodash'
+    }
     // https://rollupjs.org/guide/en#output-globals-g-globals
 
   }]

@@ -215,7 +215,7 @@ var utils = {
 
 const departments$1 = miniSd.departments;
 const groceries = miniSd.grocery;
-const ingredients = miniSd.ingredients;
+// const ingredients = staticData.ingredients
 const users$1 = miniSd.users;
 
 console.log(departments$1);
@@ -224,7 +224,7 @@ console.log(groceries);
 var files = {
   departments: departments$1,
   groceries,
-  ingredients,
+  // ingredients,
   users: users$1
 };
 
@@ -238,7 +238,7 @@ const {
 const {
   departments: departments$2,
   groceries: groceries$1,
-  ingredients: ingredients$1,
+  // ingredients,
   users: users$2
 } = files;
 
@@ -247,7 +247,7 @@ const {
 // because these methods used in our react projects.
 // so I propose do it very carefully
 const getIngredients = function () {
-  return ingredients$1
+  return ingredients
 };
 
 // __l(getGrocery());
@@ -630,7 +630,8 @@ var groceristar = {
 };
 
 // const staticData = require('@groceristar/sd-wrapper')
-const ingredients3$1 = miniSd.ingredients3;
+// const ingredients3 = staticData.ingredients3
+
 const menus$1 = miniSd.menu;
 const recipes$1 = miniSd.recipes;
 const nutritions1$1 = miniSd.nutritions;
@@ -640,7 +641,7 @@ const users$3 = miniSd.users;
 // require('@groceristar/sd-wrapper/dist/data/Recipe4/recipe.json')
 
 var files$1 = {
-  ingredients3: ingredients3$1,
+  ingredients3,
   menus: menus$1,
   recipes: recipes$1,
   nutritions1: nutritions1$1,
@@ -657,7 +658,7 @@ const {
 } = utils;
 
 const files$2 = {
-  ingredients3,
+  // ingredients3,
   menus,
   recipes,
   nutritions1,

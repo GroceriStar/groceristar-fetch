@@ -10,7 +10,7 @@ const {
 const {
   departments,
   groceries,
-  ingredients,
+  // ingredients,
   users
 } = require('./files')
 
