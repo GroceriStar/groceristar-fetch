@@ -1,4 +1,5 @@
-const staticData = require('@groceristar/sd-wrapper')
+// const staticData = require('@groceristar/sd-wrapper')
+const staticData = require('@groceristar/mini-sd')
 
 const departments = staticData.departments
 const groceries = staticData.grocery
