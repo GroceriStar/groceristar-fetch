@@ -16,27 +16,23 @@ const extensions = [
 
 const name = 'GroceristarFetchPlugin'
 
-const { external, globals } = {
-  'globals': {
-    'fs': 'fs',
-    'lodash': 'lodash',
-    'path': 'path'
-  },
-  'external': [
+const external = [
     'fs',
     'path',
-    'lodash'
+    'lodash',
+    '@groceristar/mini-sd',
+    '@groceristar/sd-wrapper'
   ]
-}
+
 
 export default {
   input: './src/index.js',
 
   // Specify here external modules which you don't want to include in your bundle (for instance: 'lodash', 'moment' etc.)
   // https://rollupjs.org/guide/en#external-e-external
-  external,
+  external:external,
 
-  globals,
+  
 
   plugins: [
     // Allows node_modules resolution
