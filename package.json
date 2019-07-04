@@ -19,7 +19,9 @@
     "bundle": "rollup -c",
     "dev": "rollup -c -w",
     "build:rollup": "npm run clean && npm run bundle",
-    "clean": "shx rm -rf ./coverage && shx rm -rf ./dist"
+    "clean": "shx rm -rf ./coverage && shx rm -rf ./dist",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@babel/cli": "7.4.4",
@@ -50,7 +52,8 @@
     "lodash": "^4.17.10",
     "raven-js": "^3.27.1",
     "underscore": "^1.9.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "snyk": "^1.189.0"
   },
   "description": "npm module required to fetch static data required for recipe search",
   "main": "dist/index.cjs",
@@ -90,5 +93,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
