@@ -1,23 +1,13 @@
-// const _ = require('lodash')
-
-// const files = {
-//   departments,
-//   groceries,
-//   ingredients,
-//   users
-// } = require('./files')
-// const fs = require('fs')
+import {
+  ingredients
+} from '@groceristar/sd-wrapper'
 
 import {
-  // parser,
   __l
-} from '../../utils'
+} from './utils'
 
-// console.log(JSON.parse( JSON.stringify(departments) ))
-
-import index from './index'
-
-import methods from './index'
+__l(ingredients)
+// import methods from './index'
 // const search = require('../Search/search')
 
 // can be used in order to count stuff and adjust tests, that we have at StaticFiles.test.js
@@ -35,7 +25,7 @@ import methods from './index'
 // -----
 // groceristar.getGroceriesWithDepIngKey("Grocery List Essentials")
 
-__l(groceristar.getGroceriesWithDepIngKey('Grocery List Essentials'))
+// __l(groceristar.getGroceriesWithDepIngKey('Grocery List Essentials'))
 // __l(groceristar.getGroceriesWithDepIngKey("Ultimate Grocery List"))
 // __l(groceristar.getGroceriesWithDepIngKey("19 Gluten-Free Foods Shopping List"))
 

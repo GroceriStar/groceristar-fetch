@@ -1,12 +1,12 @@
 /* global describe, it, expect */
-const groceristar = require('../groceristar.js')
+const groceristar = require('../src/index')
 
-// const files = {
+const {
 //   departments,
 //   ingredients,
 //   users,
-//   groceries
-// } = require('../files')
+  groceries
+} = require('../src/files')
 
 // @TODO separate methods, related to different datasets.
 // So methods related to ingredients should have a
@@ -19,11 +19,11 @@ const GROCERY_COUNT = 28
 
 describe('checking objects inside groceries', () => {
   const groceryHaveProperty = property => {
-    // it(`Grocery have property ${property}`, () => {
-    //   groceries.forEach(obj => {
-    //     expect(obj).toHaveProperty(property)
-    //   })
-    // })
+    it(`Grocery have property ${property}`, () => {
+      groceries.forEach(obj => {
+        expect(obj).toHaveProperty(property)
+      })
+    })
   }
 
   groceryHaveProperty('id')
@@ -49,7 +49,7 @@ describe('checking objects inside groceries', () => {
   groceryPropertyContain('slug', Boolean)
 })
 
-describe('iting objects inside ingredients', () => {
+describe('checking objects inside ingredients', () => {
   const ingredientsHaveProperty = property => {
     // it(`Each ingridient have property ${property}`, () => {
     //   ingridients.forEach(obj => {

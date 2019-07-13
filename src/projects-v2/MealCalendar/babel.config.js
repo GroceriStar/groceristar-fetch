@@ -17,7 +17,8 @@ const plugins = [
     {
       root: ['./src/'],
       alias: {
-        '~': './src/data'
+        '~': './src/',
+        '@files': './src/files'
       }
     }
   ],

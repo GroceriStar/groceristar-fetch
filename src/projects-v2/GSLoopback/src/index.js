@@ -1,98 +1,88 @@
-import files from './files'
-
-
-// const _ = require('lodash')
-// const fs = require('fs')
-
+import * as _ from 'lodash'
 import {
-  // __get,
   __generateId,
   __generateDate
-} from '../../utils'
+} from 'utils'
 
 // @TODO this files we'll redo soon. link: https://github.com/GroceriStar/sd/issues/76
 // we don't need them at this moment, but later - it'll be part of our graphql-server functionality
-// const {
-//   ultimateGroceryList,
-//   groceryListWithUserRelations,
-//   dbIngredients
-// } = require('./files')
+import {
+  ultimateGroceryList,
+  groceryListWithUserRelations,
+  dbIngredients,
+
+  ingredients,
+  departments,
+  groceries
+} from '@files'
 
 // @TODO can we update our methods - but we'll need to go step by step,
 // because these methods used in our react projects.
 // so I propose do it very carefully
 const getUltimateGrocery = () => {
-  // return __get(ultimateGroceryList)
-  return []
+  return ultimateGroceryList
 }
 
 const getGLwithUserRelations = () => {
-  // return __get(groceryListWithUserRelations)
-  return []
+  return groceryListWithUserRelations
 }
 
 const getIngredientsSampleFromDB = () => {
-  // return __get(dbIngredients)
-  return []
+  return dbIngredients
 }
 
-// const getIngredients = () => {
-//   return parser(ingredients)
-// }
+const getIngredients = () => {
+  return ingredients
+}
 
-// const getDepartments = () => {
-//   return parser(departments)
-// }
+const getDepartments = () => {
+  return departments
+}
 
-// const getGroceryById = ( id ) => {
+const getGroceryById = (id) => {
+  return [ _.find(groceries, ['id', id]) ]
+}
 //
-//   let groceries = getGrocery();
-//   return [ _.find(groceries, ['id', id]) ];
-// };
-//
-// const getGroceryByName = (name) => {
-//   let groceries = getGrocery();
-//
-//   return _.filter(groceries, function(item) {
-//     return item.name === name;
-//   })
-// }
+const getGroceryByName = (name) => {
+  return _.filter(groceries, function (item) {
+    return item.name === name
+  })
+}
 
-// const getCountIngOfDepartment = () => {
-//   let departments = getDepartments();
-//   let result = _.map(departments, function(department){
-//       let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name);
-//     return {
-//       ...department,
-//       countIngredients: ingredientsByOneDepartment.length
-//     }
-//   })
-//
-//   return result;
-// }
+const getCountIngOfDepartment = () => {
+  let result = _.map(departments, function (department) {
+    let ingredientsByOneDepartment =
+        getAllIngredientsByOneDepartment(department.name)
+    return {
+      ...department,
+      countIngredients: ingredientsByOneDepartment.length
+    }
+  })
 
-// const getAllDepartmentList = () => {
-//   let departments = getDepartments();
-//   return _.map(departments, item => ({
-//     key: uuidv1(),
-//     departmentName: item
-//   }));
-// };
+  return result
+}
 
-// const getAllIngredientsWithId = () => {
-//   let ingredients = getIngredients();
-//
-//   let result = _.map(ingredients, function(ingredient){
-//     return {
-//       key: uuidv1(),
-//       ...ingredient
-//     }
-//   })
-//
-//   return result;
-// }
+const getAllDepartmentList = () => {
+  return _.map(departments, item => ({
+    key: uuidv1(),
+    departmentName: item
+  }))
+}
 
-const getUserObject =  (name) => {
+const getAllIngredientsWithId = () => {
+  let ingredients = getIngredients()
+
+  let result = _.map(ingredients, function (ingredient) {
+    return {
+      key: uuidv1(),
+      ...ingredient
+    }
+  })
+
+  return result
+}
+
+const getUserObject = (name) => {
   var userObj = {
     'name': name,
     'img': 'false',
@@ -120,8 +110,8 @@ const getUserObject =  (name) => {
       userObj.ingredientIds[i] = __generateId()
     }
   }
-  // return userObj
-  return []
+  return userObj
+  // return []
 }
 
 export {

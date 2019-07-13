@@ -1,14 +1,9 @@
 'use strict'
 
-// const path = require('path')
-
 const presets = [
   ['@babel/preset-env', {
     'modules': false
   }]
-  // {
-  //
-  // }
 ]
 
 const plugins = [
@@ -17,12 +12,20 @@ const plugins = [
     {
       root: ['./src/'],
       alias: {
-        '~': './src/data'
+        '~': './src/data',
+        '@files': './src/files'
       }
     }
   ],
   [
     '@babel/plugin-syntax-dynamic-import'
+  ],
+  [
+    require.resolve('babel-plugin-lodash')
+    // ,
+    // {
+    //   id: []
+    // }
   ]
   // ["@babel/proposal-object-rest-spread"]
 ]

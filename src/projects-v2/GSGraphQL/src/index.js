@@ -1,11 +1,10 @@
-import _  from 'lodash'
+import * as _ from 'lodash'
 
 import {
-  // __get,
   __find,
   __generateId,
   __generateDate
-} from '../../utils'
+} from './utils'
 
 import {
   favorites,
@@ -13,23 +12,13 @@ import {
   userGrocery
   // groceristar,
   // groceries,
-} from './files'
+} from '@files'
 
 // @TODO return measurements
 
 // ---------
 // As we move our methods away we don't need GraphQL in methods name anymore ...
 // @TODO update it
-
-// @TODO This function is
-// what should return same function without 'GraphQL' prefix.
-// const getFavorites = () => {
-//  return [{
-//    name: 'John Doe',
-//    email: 'johndoe@mail.com',
-//    password: 'password',
-//  }];
-// }
 
 const getFavorites = () => {
   return _.map(favorites, (favorite, index) => {
@@ -79,8 +68,6 @@ const getUserGrocery = () => {
 }
 
 const getUserGroceryKey = () => {
-  // let userGroceries = getUserGrocery()
-
   return _.map(userGrocery, (item, index) => {
     return {
       key: __generateId(),
@@ -90,8 +77,8 @@ const getUserGroceryKey = () => {
 }
 
 const getDepartments = () => {
-  // let results = departments
-  let results = []
+  let results = departments
+
   return results.map((item, index) => ({
     department_id: ++index,
     name: item.name,
@@ -102,8 +89,8 @@ const getDepartments = () => {
 }
 
 const getDepartmentsKey = () => {
-  // let results = departments
-  let results = []
+  let results = departments
+
   return results.map((item, index) => ({
     department_id: __generateId(),
     name: item.name,
@@ -114,8 +101,8 @@ const getDepartmentsKey = () => {
 }
 
 const getGrocery = () => {
-  // let results = groceries
-  let results = []
+  let results = groceries
+
   return results.map((item, index) => ({
     grocery_id: ++index,
     name: item.name,
@@ -130,8 +117,8 @@ const getGrocery = () => {
 }
 
 const getGroceryKey = () => {
-  // let results = groceries
-  let results = []
+  let results = groceries
+
   return results.map((item, index) => ({
     grocery_id: __generateId(),
     name: item.name,
@@ -146,8 +133,8 @@ const getGroceryKey = () => {
 }
 
 const getIngredients = (limit = false) => {
-  // let results = ingredients
-  let results = []
+  let results = ingredients
+
   if (limit) {
     results = _.slice(results, 100)
   }
@@ -166,8 +153,8 @@ const getIngredients = (limit = false) => {
 }
 
 const getIngredientsKey = (limit = false) => {
-  // let results = ingredients
-  let results = []
+  let results = ingredients
+
   if (limit) {
     results = _.slice(results, 100)
   }
@@ -186,8 +173,8 @@ const getIngredientsKey = (limit = false) => {
 }
 // add groceryIds, favs are arrays with ids...
 const getUsers = () => {
-  // let results = users
-  let results = []
+  let results = users
+
   return results.map((item, index) => ({
     userId: ++index,
     favs: false,
@@ -197,8 +184,8 @@ const getUsers = () => {
 }
 
 const getUsersKey = () => {
-  // let results = users
-  let results = []
+  let results = users
+
   return results.map((item, index) => ({
     userId: __generateId(),
     favs: false,

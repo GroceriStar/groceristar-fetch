@@ -1,5 +1,5 @@
 // /* global test, describe, it, expect, jest */
-// const groceristar = require('../groceristar.js')
+// const {getIngredients} = require('../src/index.js')
 //
 // describe('testing objects inside our static data files', () => {
 //   test('testing object that have property name1', () => {

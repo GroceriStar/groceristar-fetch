@@ -1,10 +1,8 @@
-import _ from 'lodash'
+import * as _ from 'lodash'
 import {
-  // __get,
-  // parser,
   __find
-} from '../../utils'
-// const files = { mealCalendar, firstVeganGLMC } = require('./files')
+} from './utils'
+import { mealCalendar, firstVeganGLMC } from '@files'
 
 // module.getDishByDay = function(day, maxDishes = mealCalendar.length) {
 //   return _.filter(parser(mealCalendar), (meal, index) => {
@@ -30,14 +28,14 @@ const getDishByDay = (day) => {
   return result
 }
 
-const getDishByMonth =  (monthNumb) => {
+const getDishByMonth = (monthNumb) => {
   if (monthNumb < 1 || monthNumb > 5) return []
   const totalWeeks = monthNumb * 4 + 1
   const weeks = _.range(totalWeeks - 4, totalWeeks)
   return _.map(weeks, week => this.getDishByWeek(`week ${week}`)[0])
 }
 
-const getDishByWeek =  (week) => {
+const getDishByWeek = (week) => {
   // return _.filter(parser(mealCalendar), {
   //   id: week
   // })

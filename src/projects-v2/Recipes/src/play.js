@@ -10,12 +10,9 @@ import {
   getFiveRandomIngredients,
   getDepartments,
   getUsers
-} from '../ChickenKyiv/chickenKyiv'
+} from './index'
 
 // console.log( getShowcaseFiveRecipes() );
-
-
-
 
 // console.log( count(getRecipes()) );
 // console.log( getNRecipes(6) );

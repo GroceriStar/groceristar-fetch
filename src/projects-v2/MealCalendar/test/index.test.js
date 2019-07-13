@@ -1,8 +1,8 @@
-/* global describe, it, expect */
-//change require to import
-import * as mealCalendar from '../src/index';
+/* global describe, it, test, expect */
+// change require to import
+// import * as mealCalendar from '../src/index'
 
-// const { mealCalendar } = require('../files')
+const { mealCalendar } = require('../dist/files')
 
 // describe('Meal Calendar. basic methods should work', () => {
 //   it('getDishByDay', () => {

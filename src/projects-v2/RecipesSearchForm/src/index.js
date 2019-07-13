@@ -1,21 +1,20 @@
-import _ from 'lodash'
-// const uuidv1 = require('uuid/v1')
+import * as _ from 'lodash'
 
 import {
-  // __get,
+
   __find,
   __generateId
 } from '../../utils'
 
-// import {
-//   allergies,
-//   courses,
-//   cuisines,
-//   diets,
-//   holidays,
-//   ingredients1,
-//   measurements
-// } from './files'
+import {
+  allergies,
+  courses,
+  cuisines,
+  diets,
+  holidays,
+  ingredients1,
+  measurements
+} from '@files'
 
 // experimental method, like getRawFiles
 // first of all lodash has _.get method.

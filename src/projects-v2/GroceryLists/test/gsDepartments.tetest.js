@@ -1,5 +1,5 @@
 // /* global test, describe, it, expect, jest */
-// const groceristar = require('../groceristar.js')
+// const {getDepartments, } = require('../src/index.js')
 //
 // describe('testing objects inside departments', () => {
 //

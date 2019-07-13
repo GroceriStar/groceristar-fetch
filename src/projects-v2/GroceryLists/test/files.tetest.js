@@ -1,11 +1,11 @@
 /* globalll describe, it, expect */
 
-// const files = {
-//   departments,
-//   ingredients,
-//   users,
-//   groceries
-// } = require('../files.js')
+const files = {
+  departments,
+  ingredients,
+  users,
+  groceries
+} = require('../src/files.js')
 
 // const INGREDIENT_COUNT = 13634
 // const DEPARTMENT_COUNT = 58
