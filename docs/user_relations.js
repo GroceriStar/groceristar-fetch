@@ -1,0 +1,3 @@
+export const USER_MENU_LIST = 'USER_MENU_LIST';
+
+export const USER_GROCERIES = 'USER_GROCERIES';
