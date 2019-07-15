@@ -6,7 +6,12 @@ import {
 var getMealCalendar=()=>{
   return mealCalendar;
 }
+
+var getFVGLMC = () => {
+  return getFVGLMC;
+}
+
 export {
   getMealCalendar,
-  firstVeganGLMC
+  getFVGLMC
 }

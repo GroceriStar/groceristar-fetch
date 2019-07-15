@@ -1,11 +1,11 @@
 /* global describe, it, test, expect */
 
-const { mealCalendar, firstVeganGLMC } = require('../dist/files')
+const { getMealCalendar, getFVGLMC } = require('../src/files')
 
 // @TODO delete it later?
 const methodsList = {
-  getMealCalendar: mealCalendar,
-  getFVGLMC: firstVeganGLMC
+  getMealCalendar: getMealCalendar,
+  getFVGLMC: getFVGLMC
 }
 
 describe('testing static data files returns array', () => {
@@ -21,13 +21,13 @@ describe('testing static data files returns array', () => {
 
 describe('testing static data files returns array', () => {
   test('getMealCalendar should return some data', () => {
-    var result = mealCalendarMethods.getMealCalendar()
+    var result = methodsList.getMealCalendar()
     expect(result).not.toBe('')
   })
 
   // @TODO yes, it's a bad name
   test('getFVGLMC should return data from second file', () => {
-    var result = mealCalendarMethods.getFVGLMC()
+    var result = methodsList.getFVGLMC()
     expect(result).not.toBe('')
   })
 })
