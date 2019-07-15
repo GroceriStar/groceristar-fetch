@@ -1,10 +1,12 @@
 import {
   mealCalendar,
   firstVeganGLMC
-
 } from '@groceristar/sd-wrapper'
 
+var getMealCalendar=()=>{
+  return mealCalendar;
+}
 export {
-  mealCalendar,
+  getMealCalendar,
   firstVeganGLMC
 }
