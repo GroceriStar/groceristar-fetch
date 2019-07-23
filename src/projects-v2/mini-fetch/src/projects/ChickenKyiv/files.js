@@ -11,7 +11,7 @@ const users = staticData.users
 // require('@groceristar/sd-wrapper/dist/data/Recipe4/recipe.json')
 
 module.exports = {
-  ingredients3,
+  // ingredients3,
   menus,
   recipes,
   nutritions1,
