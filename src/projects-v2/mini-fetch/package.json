@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/mini-fetch",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "scripts": {
     "test": "jest",
     "test:prod": "standard && jest",
@@ -40,8 +40,8 @@
     "travis": "0.1.1"
   },
   "dependencies": {
-    "@groceristar/mini-sd": "^0.1.5",
-    "@groceristar/sd-wrapper": "^4.11.3",
+    "@groceristar/mini-sd": "^0.1.6",
+    "@groceristar/sd-wrapper": "^4.14.0",
     "dayjs": "^1.8.12",
     "fs": "0.0.2",
     "lodash": "^4.17.10",
