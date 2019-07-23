@@ -172,7 +172,7 @@ var __l = function __l(value) {
   return console.log(value);
 };
 
-var __get$1 = function __get(value) {
+var __get = function __get(value) {
   return parser(value);
 };
 
@@ -182,7 +182,7 @@ var __find = function __find(alias, files) {
   // console.log(result);
 
 
-  return __get$1(result);
+  return __get(result);
 }; // function that will improve work with uuid id generator
 
 
@@ -199,7 +199,7 @@ var utils = {
   // parser,
   __l: __l,
   __find: __find,
-  __get: __get$1,
+  __get: __get,
   __generateId: __generateId,
   __generateDate: __generateDate
 };
@@ -207,44 +207,44 @@ var utils = {
 // const staticData = require('@groceristar/sd-wrapper')
 
 
-const departments$1 = miniSd.departments;
+const departments = miniSd.departments;
 const groceries = miniSd.grocery;
 // const ingredients = staticData.ingredients
-const users$1 = miniSd.users;
+const users = miniSd.users;
 
-console.log(departments$1);
+console.log(departments);
 console.log(groceries);
 
 var files = {
-  departments: departments$1,
+  departments,
   groceries,
   // ingredients,
-  users: users$1
+  users
 };
 
 const {
-  __get: __get$2,
+  __get: __get$1,
   __find: __find$1,
   // __l,
   __generateId: __generateId$1
 } = utils;
 
 const {
-  departments: departments$2,
+  departments: departments$1,
   groceries: groceries$1,
   // ingredients,
-  users: users$2
+  users: users$1
 } = files;
 
 // __l(getGrocery());
 
 const getUsers = function () {
-  return users$2
+  return users$1
 
 };
 
 const getDepartments = () => {
-  return departments$2
+  return departments$1
 };
 
 const getGroceryById = function (id) {
@@ -450,7 +450,7 @@ const getAllDepartments = function () {
 // --------------------------------------------
 
 const getAllDepartmentList = function () {
-  return lodash.map(departments$2, item => ({
+  return lodash.map(departments$1, item => ({
     key: __generateId$1(),
     departmentName: item
   }))
@@ -481,7 +481,7 @@ const getAllDepartmentsWithId = function () {
   //     ...department
   //   }
   // })
-  let result = getResult(departments$2);
+  let result = getResult(departments$1);
 
   return result
 };
@@ -588,160 +588,14 @@ var groceristar = {
   __find: __find$1
 };
 
-// const staticData = require('@groceristar/sd-wrapper')
-// const ingredients3 = staticData.ingredients3
+// const chickenKyiv = require('./projects/ChickenKyiv/chickenKyiv.js')
 
-// const menus = staticData.menu
-const recipes$1 = miniSd.recipes;
-const nutritions1$1 = miniSd.nutritions;
-const nutritions2$1 = miniSd.nutritions2;
-const departments$3 = miniSd.departments;
-const users$3 = miniSd.users;
-// require('@groceristar/sd-wrapper/dist/data/Recipe4/recipe.json')
-
-var files$1 = {
-  // ingredients3,
-  // menus,
-  recipes: recipes$1,
-  nutritions1: nutritions1$1,
-  nutritions2: nutritions2$1,
-  departments: departments$3,
-  users: users$3
-};
-
-const {
-  __find: __find$2,
-  // __get,
-  __generateDate: __generateDate$1,
-  __generateId: __generateId$2
-} = utils;
-
-const files$2 = {
-  // ingredients3,
-  // menus,
-  recipes,
-  nutritions1,
-  nutritions2,
-  departments,
-  users
-} = files$1;
-
-// @TODO update this method, use stuff from utils.js
-const getFiveRandomId = function () {
-  return [
-    __generateId$2(),
-    __generateId$2(),
-    __generateId$2(),
-    __generateId$2(),
-    __generateId$2()
-  ]
-};
-
-const getRecipes = function () {
-  let recipes = __get(files$2.recipes);
-  // let recipes = []
-  let randomFiveIds = getFiveRandomId();
-
-  let result =
-      lodash.map(recipes, (recipe, index) => {
-        // console.log(ingredientsId);
-        return {
-          ...recipe,
-          created_at: __generateDate$1(),
-          updated_at: __generateDate$1(),
-          id: __generateId$2(),
-          ingredients: randomFiveIds,
-          diets: randomFiveIds,
-          courses: randomFiveIds,
-          cuisines: randomFiveIds,
-          holidays: randomFiveIds,
-          nutritions: randomFiveIds
-        }
-      });
-  return result
-};
-
-// @TODO delete file menu.json from main set of files, but create a note at some place,
-// that Menu file is no longer needed because we replace it with fake data. you can use method ABC in order to generate that data.
-// const getMenuGenerator = (numberOfWeeks) => {
-//   let result
-//   result = _.times(numberOfWeeks, (index) => ({
-//     id: __generateId(),
-//     title: `Weekly menu ${index}`,
-//     date: __generateDate(),
-//     description: `description for Weekly menu ${index}`,
-//     notes: `This is a chef notes for wm ${index}`
-//   }))
-//   return result
-// }
-
-// @TODO replace it later. may need it at utils.js
-const getNRecipes = (n) => {
-  return lodash.slice(recipes, n)
-};
-
-/**
- * Fetches one recipe by title
- * @param  {string} title title of the recipe
- * @return {object}       recipe object
- */
-const getRecipeByTitle = (title) => {
-  let recipes = __get(files$2.recipes);
-  return lodash.filter(recipes, recipe => recipe.title === title)[0]
-  // return []
-};
-
-/**
- * Fetches random recipe
- * @return {object} recipe object
- */
-const getRandomRecipe = (n = 1) => {
-  let recipes = getNRecipes(20);
-  return lodash.sampleSize(recipes, n)
-};
-
-/**
- * Fetches first five recipes
- * @return {array} recipe objects
- */
-// @TODO can be updated in order to change the number of recipes that we can return
-const getFirstFiveRecipes = () => {
-  let recipes = getNRecipes(5);
-
-  let result = lodash.map(recipes, item => ({
-    key: __generateId$2(),
-    recipe: item
-  }));
-
-  return result
-};
-
-const getFiveRandomIngredients = () => {
-  let result = lodash.map(getRandomRecipe(5), (recipe) => ({
-    'id': __generateId$2(),
-    'ingredient': recipe['ingredients']
-  }));
-  return result
-};
-
-var chickenKyiv = {
-  getNRecipes,
-  getRecipeByTitle,
-  getRandomRecipe,
-  getFirstFiveRecipes,
-  getFiveRandomIngredients,
-  // getMenuGenerator,
-  getRecipes,
-  // files,
-  __find: __find$2
-};
 
 var src = {
-  groceristar: groceristar,
-  chickenKyiv: chickenKyiv
+  groceristar: groceristar // chickenKyiv,
+
 };
 var src_1 = src.groceristar;
-var src_2 = src.chickenKyiv;
 
 export default src;
-export { src_2 as chickenKyiv, src_1 as groceristar };
+export { src_1 as groceristar };
