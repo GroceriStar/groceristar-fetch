@@ -18,9 +18,9 @@ const {
 // don't worry, will update @hirdbluebird
 // because these methods used in our react projects.
 // so I propose do it very carefully
-const getIngredients = function () {
-  return ingredients
-}
+// const getIngredients = function () {
+//   return ingredients
+// }
 
 const getGrocery = function () {
   return groceries
@@ -161,27 +161,29 @@ const getGroceryByNameWithDepAndIngKey = name => {
 
 }
 
-const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
-  let ingredients = getIngredients()
-
-  // @TODO it looks like a separated method for me
-  // var ingredientsList =
-  //   _.filter(ingredients, function (item) {
-  //     return item.department === department
-  //   })
-
-  let ingredientsList = filterIngrListByDep(ingredients, department)
-
-  return _.map(ingredientsList, item => {
-    let ingredientId = __generateId()
-
-    return [
-      ingredientId,
-      item.name,
-      `/del/ing/${ingredientId}/${groceryId}`
-    ]
-  })
-}
+//
+//
+// const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
+//   let ingredients = getIngredients()
+//
+//   // @TODO it looks like a separated method for me
+//   // var ingredientsList =
+//   //   _.filter(ingredients, function (item) {
+//   //     return item.department === department
+//   //   })
+//
+//   let ingredientsList = filterIngrListByDep(ingredients, department)
+//
+//   return _.map(ingredientsList, item => {
+//     let ingredientId = __generateId()
+//
+//     return [
+//       ingredientId,
+//       item.name,
+//       `/del/ing/${ingredientId}/${groceryId}`
+//     ]
+//   })
+// }
 
 // -----------------------------------
 const filterIngrListByDep = (ingredients, department) => _.filter(ingredients, item => {
@@ -212,59 +214,59 @@ const getAllDepartments = function () {
   return departments
 }
 
-const getAllIngredientsByOneDepartment = function (department) {
-  let ingredients = getIngredients()
+// const getAllIngredientsByOneDepartment = function (department) {
+//   let ingredients = getIngredients()
+//
+//   let ingredientsList = filterIngrListByDep(ingredients, department)
+//
+//   return _.map(ingredientsList, 'name')
+// }
 
-  let ingredientsList = filterIngrListByDep(ingredients, department)
+// const getCountIngOfDepartment = function () {
+//   // let result = []
+//   let departments = getDepartments()
+//
+//   let result = _.map(departments, function (department) {
+//     let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name)
+//     return {
+//       ...department,
+//       countIngredients: ingredientsByOneDepartment.length
+//     }
+//   })
+//
+//   return result
+// }
 
-  return _.map(ingredientsList, 'name')
-}
-
-const getCountIngOfDepartment = function () {
-  // let result = []
-  let departments = getDepartments()
-
-  let result = _.map(departments, function (department) {
-    let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name)
-    return {
-      ...department,
-      countIngredients: ingredientsByOneDepartment.length
-    }
-  })
-
-  return result
-}
-
-const getKeyArrayDepAndIng = function () {
-  let keys = []
-
-  // @TODO does this functions doing a similar thing or not?
-  let departments = getAllDepartmentsWithId()
-  let ingredients = getAllIngredientsWithId()
-
-  // _.map(ingredients, ingredient => {
-  //   _.forEach(departments,function(department){
-  //     if(ingredient.department === department.name) {
-  //       keys.push({
-  //       [department.key] : ingredient.key,
-  //       })
-  //     }
-  //   })
-  //   return;
-  // })
-  _.forEach(departments, function (department) {
-    _.forEach(ingredients, function (ingredient) {
-      // @TODO can be redo later with lodash methods
-      if (ingredient.department === department.name) {
-        keys.push({
-          [department.key]: ingredient.key
-        })
-      }
-    })
-  })
-
-  return keys
-}
+// const getKeyArrayDepAndIng = function () {
+//   let keys = []
+//
+//   // @TODO does this functions doing a similar thing or not?
+//   let departments = getAllDepartmentsWithId()
+//   let ingredients = getAllIngredientsWithId()
+//
+//   // _.map(ingredients, ingredient => {
+//   //   _.forEach(departments,function(department){
+//   //     if(ingredient.department === department.name) {
+//   //       keys.push({
+//   //       [department.key] : ingredient.key,
+//   //       })
+//   //     }
+//   //   })
+//   //   return;
+//   // })
+//   _.forEach(departments, function (department) {
+//     _.forEach(ingredients, function (ingredient) {
+//       // @TODO can be redo later with lodash methods
+//       if (ingredient.department === department.name) {
+//         keys.push({
+//           [department.key]: ingredient.key
+//         })
+//       }
+//     })
+//   })
+//
+//   return keys
+// }
 // --------------------------------------------
 
 const getAllDepartmentList = function () {
@@ -274,20 +276,20 @@ const getAllDepartmentList = function () {
   }))
 }
 
-const getAllIngredientsWithId = function () {
-  // let result = []
-  let ingredients = getIngredients()
-
-  // let result = _.map(ingredients, function (ingredient) {
-  //   return {
-  //     key: __generateId(),
-  //     ...ingredient
-  //   }
-  // })
-  let result = getResult(ingredients)
-
-  return result
-}
+// const getAllIngredientsWithId = function () {
+//   // let result = []
+//   let ingredients = getIngredients()
+//
+//   // let result = _.map(ingredients, function (ingredient) {
+//   //   return {
+//   //     key: __generateId(),
+//   //     ...ingredient
+//   //   }
+//   // })
+//   let result = getResult(ingredients)
+//
+//   return result
+// }
 
 // @TODO we need to figure out why we have this method and getAllDepartmentList
 // i assume we using them in different react projects.
@@ -310,17 +312,17 @@ const getResult = (property) => _.map(property, (p) => ({
   ...p
 }))
 
-const getAllIngredientsList = function (department) {
-  const ingredients = this.getAllIngredientsByOneDepartment(department)
-
-  return ingredients.map(item => ({
-    key: __generateId(),
-    name: item,
-    isChecked: false,
-    departmentID: __generateId(),
-    order: 0
-  }))
-}
+// const getAllIngredientsList = function (department) {
+//   const ingredients = this.getAllIngredientsByOneDepartment(department)
+//
+//   return ingredients.map(item => ({
+//     key: __generateId(),
+//     name: item,
+//     isChecked: false,
+//     departmentID: __generateId(),
+//     order: 0
+//   }))
+// }
 
 const getAllGrocery = function () {
   return _.map(groceries, item => ({
@@ -379,7 +381,7 @@ function newGroceryList (newDepartment) {
 }
 
 module.exports = {
-  getIngredients,
+  // getIngredients,
   // getGrocery,
   getUsers,
   getDepartments,
@@ -388,21 +390,21 @@ module.exports = {
   getGroceryByNameWithDepAndIng,
   getGroceryListsWithCountDepartments,
   getAllDepartments,
-  getAllIngredientsByOneDepartment,
+  // getAllIngredientsByOneDepartment,
   getAllDepartmentList,
-  getAllIngredientsList,
+  // getAllIngredientsList,
   getAllGrocery,
   getAllGroceryDepartment,
   createNewGroceryList,
   getGroceryListsByDepartment,
   newGroceryList,
   getResult,
-  getAllIngredientsByOneDepartmentKey,
+  // getAllIngredientsByOneDepartmentKey,
   getGroceryByNameWithDepAndIngKey,
   getGroceriesWithDepIngKey,
-  getAllIngredientsWithId,
-  getKeyArrayDepAndIng,
+  // getAllIngredientsWithId,
+  // getKeyArrayDepAndIng,
   getAllDepartmentsWithId,
-  getCountIngOfDepartment,
+  // getCountIngOfDepartment,
   __find
 }

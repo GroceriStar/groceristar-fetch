@@ -24,11 +24,10 @@ var _require2 = require("./files"),
 // don't worry, will update @hirdbluebird
 // because these methods used in our react projects.
 // so I propose do it very carefully
+// const getIngredients = function () {
+//   return ingredients
+// }
 
-
-var getIngredients = function getIngredients() {
-  return ingredients;
-};
 
 var getGrocery = function getGrocery() {
   return groceries;
@@ -152,22 +151,30 @@ var getGroceryByNameWithDepAndIngKey = function getGroceryByNameWithDepAndIngKey
   //   'messages': {},
   //   'departments': []
   // }
-};
-
-var getAllIngredientsByOneDepartmentKey = function getAllIngredientsByOneDepartmentKey(department, groceryId) {
-  var ingredients = getIngredients(); // @TODO it looks like a separated method for me
-  // var ingredientsList =
-  //   _.filter(ingredients, function (item) {
-  //     return item.department === department
-  //   })
-
-  var ingredientsList = filterIngrListByDep(ingredients, department);
-  return _.map(ingredientsList, function (item) {
-    var ingredientId = __generateId();
-
-    return [ingredientId, item.name, "/del/ing/".concat(ingredientId, "/").concat(groceryId)];
-  });
-}; // -----------------------------------
+}; //
+//
+// const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
+//   let ingredients = getIngredients()
+//
+//   // @TODO it looks like a separated method for me
+//   // var ingredientsList =
+//   //   _.filter(ingredients, function (item) {
+//   //     return item.department === department
+//   //   })
+//
+//   let ingredientsList = filterIngrListByDep(ingredients, department)
+//
+//   return _.map(ingredientsList, item => {
+//     let ingredientId = __generateId()
+//
+//     return [
+//       ingredientId,
+//       item.name,
+//       `/del/ing/${ingredientId}/${groceryId}`
+//     ]
+//   })
+// }
+// -----------------------------------
 
 
 var filterIngrListByDep = function filterIngrListByDep(ingredients, department) {
@@ -197,54 +204,58 @@ var getAllDepartments = function getAllDepartments() {
   });
 
   return departments;
-};
-
-var getAllIngredientsByOneDepartment = function getAllIngredientsByOneDepartment(department) {
-  var ingredients = getIngredients();
-  var ingredientsList = filterIngrListByDep(ingredients, department);
-  return _.map(ingredientsList, 'name');
-};
-
-var getCountIngOfDepartment = function getCountIngOfDepartment() {
-  // let result = []
-  var departments = getDepartments();
-
-  var result = _.map(departments, function (department) {
-    var ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name);
-    return _objectSpread({}, department, {
-      countIngredients: ingredientsByOneDepartment.length
-    });
-  });
-
-  return result;
-};
-
-var getKeyArrayDepAndIng = function getKeyArrayDepAndIng() {
-  var keys = []; // @TODO does this functions doing a similar thing or not?
-
-  var departments = getAllDepartmentsWithId();
-  var ingredients = getAllIngredientsWithId(); // _.map(ingredients, ingredient => {
-  //   _.forEach(departments,function(department){
-  //     if(ingredient.department === department.name) {
-  //       keys.push({
-  //       [department.key] : ingredient.key,
-  //       })
-  //     }
-  //   })
-  //   return;
-  // })
-
-  _.forEach(departments, function (department) {
-    _.forEach(ingredients, function (ingredient) {
-      // @TODO can be redo later with lodash methods
-      if (ingredient.department === department.name) {
-        keys.push(_defineProperty({}, department.key, ingredient.key));
-      }
-    });
-  });
-
-  return keys;
-}; // --------------------------------------------
+}; // const getAllIngredientsByOneDepartment = function (department) {
+//   let ingredients = getIngredients()
+//
+//   let ingredientsList = filterIngrListByDep(ingredients, department)
+//
+//   return _.map(ingredientsList, 'name')
+// }
+// const getCountIngOfDepartment = function () {
+//   // let result = []
+//   let departments = getDepartments()
+//
+//   let result = _.map(departments, function (department) {
+//     let ingredientsByOneDepartment = getAllIngredientsByOneDepartment(department.name)
+//     return {
+//       ...department,
+//       countIngredients: ingredientsByOneDepartment.length
+//     }
+//   })
+//
+//   return result
+// }
+// const getKeyArrayDepAndIng = function () {
+//   let keys = []
+//
+//   // @TODO does this functions doing a similar thing or not?
+//   let departments = getAllDepartmentsWithId()
+//   let ingredients = getAllIngredientsWithId()
+//
+//   // _.map(ingredients, ingredient => {
+//   //   _.forEach(departments,function(department){
+//   //     if(ingredient.department === department.name) {
+//   //       keys.push({
+//   //       [department.key] : ingredient.key,
+//   //       })
+//   //     }
+//   //   })
+//   //   return;
+//   // })
+//   _.forEach(departments, function (department) {
+//     _.forEach(ingredients, function (ingredient) {
+//       // @TODO can be redo later with lodash methods
+//       if (ingredient.department === department.name) {
+//         keys.push({
+//           [department.key]: ingredient.key
+//         })
+//       }
+//     })
+//   })
+//
+//   return keys
+// }
+// --------------------------------------------
 
 
 var getAllDepartmentList = function getAllDepartmentList() {
@@ -254,20 +265,21 @@ var getAllDepartmentList = function getAllDepartmentList() {
       departmentName: item
     };
   });
-};
-
-var getAllIngredientsWithId = function getAllIngredientsWithId() {
-  // let result = []
-  var ingredients = getIngredients(); // let result = _.map(ingredients, function (ingredient) {
-  //   return {
-  //     key: __generateId(),
-  //     ...ingredient
-  //   }
-  // })
-
-  var result = getResult(ingredients);
-  return result;
-}; // @TODO we need to figure out why we have this method and getAllDepartmentList
+}; // const getAllIngredientsWithId = function () {
+//   // let result = []
+//   let ingredients = getIngredients()
+//
+//   // let result = _.map(ingredients, function (ingredient) {
+//   //   return {
+//   //     key: __generateId(),
+//   //     ...ingredient
+//   //   }
+//   // })
+//   let result = getResult(ingredients)
+//
+//   return result
+// }
+// @TODO we need to figure out why we have this method and getAllDepartmentList
 // i assume we using them in different react projects.
 
 
@@ -290,20 +302,18 @@ var getResult = function getResult(property) {
       key: __generateId()
     }, p);
   });
-};
+}; // const getAllIngredientsList = function (department) {
+//   const ingredients = this.getAllIngredientsByOneDepartment(department)
+//
+//   return ingredients.map(item => ({
+//     key: __generateId(),
+//     name: item,
+//     isChecked: false,
+//     departmentID: __generateId(),
+//     order: 0
+//   }))
+// }
 
-var getAllIngredientsList = function getAllIngredientsList(department) {
-  var ingredients = this.getAllIngredientsByOneDepartment(department);
-  return ingredients.map(function (item) {
-    return {
-      key: __generateId(),
-      name: item,
-      isChecked: false,
-      departmentID: __generateId(),
-      order: 0
-    };
-  });
-};
 
 var getAllGrocery = function getAllGrocery() {
   return _.map(groceries, function (item) {
@@ -364,7 +374,7 @@ function newGroceryList(newDepartment) {// const groceriesFile = fs.createWriteS
 }
 
 module.exports = {
-  getIngredients: getIngredients,
+  // getIngredients,
   // getGrocery,
   getUsers: getUsers,
   getDepartments: getDepartments,
@@ -373,21 +383,21 @@ module.exports = {
   getGroceryByNameWithDepAndIng: getGroceryByNameWithDepAndIng,
   getGroceryListsWithCountDepartments: getGroceryListsWithCountDepartments,
   getAllDepartments: getAllDepartments,
-  getAllIngredientsByOneDepartment: getAllIngredientsByOneDepartment,
+  // getAllIngredientsByOneDepartment,
   getAllDepartmentList: getAllDepartmentList,
-  getAllIngredientsList: getAllIngredientsList,
+  // getAllIngredientsList,
   getAllGrocery: getAllGrocery,
   getAllGroceryDepartment: getAllGroceryDepartment,
   createNewGroceryList: createNewGroceryList,
   getGroceryListsByDepartment: getGroceryListsByDepartment,
   newGroceryList: newGroceryList,
   getResult: getResult,
-  getAllIngredientsByOneDepartmentKey: getAllIngredientsByOneDepartmentKey,
+  // getAllIngredientsByOneDepartmentKey,
   getGroceryByNameWithDepAndIngKey: getGroceryByNameWithDepAndIngKey,
   getGroceriesWithDepIngKey: getGroceriesWithDepIngKey,
-  getAllIngredientsWithId: getAllIngredientsWithId,
-  getKeyArrayDepAndIng: getKeyArrayDepAndIng,
+  // getAllIngredientsWithId,
+  // getKeyArrayDepAndIng,
   getAllDepartmentsWithId: getAllDepartmentsWithId,
-  getCountIngOfDepartment: getCountIngOfDepartment,
+  // getCountIngOfDepartment,
   __find: __find
 };
