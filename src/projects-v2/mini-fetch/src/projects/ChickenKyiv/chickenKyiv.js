@@ -53,17 +53,17 @@ const getRecipes = function () {
 
 // @TODO delete file menu.json from main set of files, but create a note at some place,
 // that Menu file is no longer needed because we replace it with fake data. you can use method ABC in order to generate that data.
-const getMenuGenerator = (numberOfWeeks) => {
-  let result
-  result = _.times(numberOfWeeks, (index) => ({
-    id: __generateId(),
-    title: `Weekly menu ${index}`,
-    date: __generateDate(),
-    description: `description for Weekly menu ${index}`,
-    notes: `This is a chef notes for wm ${index}`
-  }))
-  return result
-}
+// const getMenuGenerator = (numberOfWeeks) => {
+//   let result
+//   result = _.times(numberOfWeeks, (index) => ({
+//     id: __generateId(),
+//     title: `Weekly menu ${index}`,
+//     date: __generateDate(),
+//     description: `description for Weekly menu ${index}`,
+//     notes: `This is a chef notes for wm ${index}`
+//   }))
+//   return result
+// }
 
 // @TODO replace it later. may need it at utils.js
 const getNRecipes = (n) => {
@@ -120,7 +120,7 @@ module.exports = {
   getRandomRecipe,
   getFirstFiveRecipes,
   getFiveRandomIngredients,
-  getMenuGenerator,
+  // getMenuGenerator,
   getRecipes,
   // files,
   __find
