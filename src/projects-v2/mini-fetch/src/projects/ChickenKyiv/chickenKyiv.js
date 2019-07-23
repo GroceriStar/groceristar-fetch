@@ -8,7 +8,7 @@ const {
 
 const files = {
   // ingredients3,
-  menus,
+  // menus,
   recipes,
   nutritions1,
   nutritions2,
