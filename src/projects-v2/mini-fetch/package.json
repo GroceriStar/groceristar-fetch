@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/mini-fetch",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "scripts": {
     "test": "jest",
     "test:prod": "standard && jest",
@@ -8,11 +8,11 @@
     "play:g": "nodemon src/projects/GroceriStar/play.js",
     "play:r": "nodemon src/projects/ChickenKyiv/play.js",
     "test:index": "jest src/index.test.js",
-    "build": "babel src -d dist",
+    "build:babel": "babel src -d dist",
     "lint": "standard",
     "bundle": "rollup -c",
     "dev": "rollup -c -w",
-    "build:rollup": "npm run clean && npm run bundle",
+    "build": "npm run clean && npm run bundle",
     "clean": "shx rm -rf ./coverage && shx rm -rf ./dist"
   },
   "devDependencies": {
