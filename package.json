@@ -10,6 +10,7 @@
     "play:r": "nodemon src/projects/ChickenKyiv/play.js",
     "play:l": "nodemon src/projects/GS-loopback/play.js",
     "play:u": "nodemon src/projects/UnitConvertion/play.js",
+    "play:sh": "nodemon src/projects/Showcase/play.js",
     "test:gs": "jest src/projects/GroceriStar/groceristar.test.js && jest src/projects/GroceriStar/staticFiles.test.js",
     "test:big": "jest src/projects/GroceriStar/getGroceriesWithDepIngKey.test.js",
     "test:index": "jest src/index.test.js",
@@ -47,13 +48,13 @@
   },
   "dependencies": {
     "@groceristar/sd-wrapper": "^4.11.3",
-    "dayjs": "^1.8.12",
+    "dayjs": "^1.8.15",
     "fs": "0.0.2",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.15",
     "raven-js": "^3.27.1",
+    "snyk": "^1.192.0",
     "underscore": "^1.9.1",
-    "uuid": "^3.3.2",
-    "snyk": "^1.192.0"
+    "uuid": "^3.3.2"
   },
   "description": "npm module required to fetch static data required for recipe search",
   "main": "dist/index.cjs",
