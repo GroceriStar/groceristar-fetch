@@ -1,6 +1,6 @@
 {
   "name": "@groceristar/mini-fetch",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "scripts": {
     "test": "jest",
     "test:prod": "standard && jest",

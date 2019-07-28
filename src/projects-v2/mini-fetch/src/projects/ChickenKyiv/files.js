@@ -3,7 +3,7 @@ const staticData = require('@groceristar/mini-sd')
 // const ingredients3 = staticData.ingredients3
 
 // const menus = staticData.menu
-const recipes = staticData.recipes
+// const recipes = staticData.recipes
 const nutritions1 = staticData.nutritions
 const nutritions2 = staticData.nutritions2
 const departments = staticData.departments
@@ -13,7 +13,7 @@ const users = staticData.users
 module.exports = {
   // ingredients3,
   // menus,
-  recipes,
+  // recipes,
   nutritions1,
   nutritions2,
   departments,
