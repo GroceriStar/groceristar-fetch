@@ -6,7 +6,8 @@ const {
   __generateId
 } = require('../../utils')
 
-const files = {
+// const files = { It's es6, but now we are using es5 and it doesn't work
+const {
   ingredients3,
   menus,
   recipes,
@@ -122,6 +123,6 @@ module.exports = {
   getFiveRandomIngredients,
   getMenuGenerator,
   getRecipes,
-  files,
+  // files,
   __find
 }
