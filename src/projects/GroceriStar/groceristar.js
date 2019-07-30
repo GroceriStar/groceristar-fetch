@@ -14,6 +14,7 @@ const {
 } = require('../../utils')
 
 const {
+  // departments = undefined
   departments,
   groceries,
   ingredients,
@@ -51,6 +52,7 @@ const getUsers = function () {
 }
 
 const getDepartments = () => {
+  
   return __get(departments)
 }
 
@@ -410,5 +412,5 @@ module.exports = {
   getAllDepartmentsWithId,
   getCountIngOfDepartment,
   __find,
-  files
+  // files
 }

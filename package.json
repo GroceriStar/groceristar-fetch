@@ -22,7 +22,8 @@
     "build:rollup": "npm run clean && npm run bundle",
     "clean": "shx rm -rf ./coverage && shx rm -rf ./dist",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "debug:s": "rollup -c && node ./debug/debugShowcase.js"
   },
   "devDependencies": {
     "@babel/cli": "7.5.5",
