@@ -26,7 +26,8 @@ const {
 // because these methods used in our react projects.
 // so I propose do it very carefully
 const getIngredients = function () {
-  // return __get(ingredients)
+  
+  return __get(ingredients)
 }
 
 // const getGrocery = function () {
@@ -59,11 +60,11 @@ const getDepartments = () => {
 const getGroceryById = function (id) {
   // return [ _.find(groceries, ['id', id]) ]
 }
-// const filterGroceriesByName = (groceries, name) => _.filter(groceries, (item) => {
-//   return item.name === name
-// })
+const filterGroceriesByName = (groceries, name) => _.filter(groceries, (item) => {
+  return item.name === name
+})
 const getGroceryByName = function (name) {
-  // return filterGroceriesByName(groceries, name)
+  return filterGroceriesByName(groceries, name)
 }
 
 // @TODO we spot the same problem twice. It's a regression error.
@@ -77,35 +78,33 @@ const getGroceryByNameWithDepAndIng = function (name) {
   // we did few times a similar manipulations
   // for example, first step will be to use this: getGroceryByName
   // let newGrocerieszzz = filterGroceriesByName(groceries, name)
-
-  // let zizua = getGroceryByName(name);
-  // let result = []
-  // zizua['departments'].forEach(  function (department) {
-  //
-  //
-  //     result.push({
-  //       'department': department,
-  //       'ingredients': getAllIngredientsByOneDepartment(department)
-  //     })
-  //   })
-  //   return result
-  // return NEW_grocerieszzz;
-  // console.log(NEW_grocerieszzz);
-
+  let result = [];
+  let grocery = getGroceryByName(name);
+  let grocer = grocery[0];
+  let grocerysDepartments = grocer["departments"];
+  
+  _.forEach(grocerysDepartments, function (department) {
+      result.push({
+        'department': department,
+        'ingredients': getAllIngredientsByOneDepartment(department)
+      });
+    });
+    
+    return result
   // -----
 
-  let result = []
-  // maybe instead of getting all groceries from getGrocery. because...
-  // it's just a bad turn around @TODO change that.
-  // NEW_grocerieszzz[0]['departments'].forEach(
-  //   function (department) {
-  //     // @TODO add let ingredients = const getAllIngredientsByOneDepartment(department)
-  //     result.push({
-  //       'department': department,
-  //       'ingredients': getAllIngredientsByOneDepartment(department)
-  //     })
-  //   })
-  return result
+  // let result = []
+  // // maybe instead of getting all groceries from getGrocery. because...
+  // // it's just a bad turn around @TODO change that.
+  // // NEW_grocerieszzz[0]['departments'].forEach(
+  // //   function (department) {
+  // //     // @TODO add let ingredients = const getAllIngredientsByOneDepartment(department)
+  // //     result.push({
+  // //       'department': department,
+  // //       'ingredients': getAllIngredientsByOneDepartment(department)
+  // //     })
+  // //   })
+  // return result
 }
 
 // Where we're using this methods?
@@ -172,7 +171,8 @@ const getGroceryByNameWithDepAndIngKey = name => {
 
 const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
   let ingredients = getIngredients()
-
+  // console.log(ingredients);
+  
   // @TODO it looks like a separated method for me
   // var ingredientsList =
   //   _.filter(ingredients, function (item) {

@@ -21,8 +21,7 @@ const getGroceryShowcase = function () {
     item.css = 'linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)'
     return item
   })
-  console.log(result);
-
+  
   return result;
 }
 
