@@ -1,3 +1,4 @@
-const { showcase } = require('../dist/index.cjs')
+const { showcase, groceristar } = require('../dist/index.cjs')
 
-console.log(showcase.getGroceryShowcase());
+// console.log(showcase.getGroceryShowcase());
+console.log(groceristar.getGroceryByNameWithDepAndIng("Ultimate Grocery List"));

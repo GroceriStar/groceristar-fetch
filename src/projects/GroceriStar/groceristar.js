@@ -79,8 +79,9 @@ const getGroceryByNameWithDepAndIng = function (name) {
   // for example, first step will be to use this: getGroceryByName
   // let newGrocerieszzz = filterGroceriesByName(groceries, name)
   let result = [];
-  const grocery = getGroceryByName(name);
-  const grocerysDepartments = grocery[0]['departments'];
+  let grocery = getGroceryByName(name);
+  let grocer = grocery[0];
+  let grocerysDepartments = grocer["departments"];
   
   _.forEach(grocerysDepartments, function (department) {
       result.push({
@@ -170,7 +171,7 @@ const getGroceryByNameWithDepAndIngKey = name => {
 
 const getAllIngredientsByOneDepartmentKey = function (department, groceryId) {
   let ingredients = getIngredients()
-  console.log(ingredients);
+  // console.log(ingredients);
   
   // @TODO it looks like a separated method for me
   // var ingredientsList =

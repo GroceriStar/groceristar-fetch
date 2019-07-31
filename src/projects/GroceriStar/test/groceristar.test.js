@@ -75,10 +75,10 @@ describe('iting objects inside ingredients', () => {
 
 describe('Groceristar project methods should return data', () => {
   const notEmptyMethodOutput = (method, parameter) => {
-    // it(`Groceristar ${method} with input value \'${parameter}\' return non empty string`, () => {
-    //   const result = groceristar[method](parameter)
-    //   expect(result).not.toBe('')
-    // })
+    it(`Groceristar ${method} with input value \'${parameter}\' return non empty string`, () => {
+      const result = groceristar[method](parameter)
+      expect(result).not.toBe('')
+    })
   }
 
   notEmptyMethodOutput('getGroceryByName', 'Clean Fatiring')
