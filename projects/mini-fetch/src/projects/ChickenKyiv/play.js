@@ -11,8 +11,8 @@ const files = {
 } = require('./files')
 
 console.log(nutritions1)
-console.log(nutritions2)
-console.log(departments)
+// console.log(nutritions2)
+// console.log(departments)
 // console.log(users)
 
 

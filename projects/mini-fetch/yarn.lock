@@ -786,10 +786,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@groceristar/mini-sd@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@groceristar/mini-sd/-/mini-sd-0.1.6.tgz#c26b37b056af3aeb47527375a18a54bc765a5c7c"
-  integrity sha512-JdbYZcoRiTeQj7Jeu34U/03Z8ZCy5Wd6WuOsSMVaN5X/ZA1zQ355y6Hm+ByW4lu9nfwPk5qVh5QhT61LawiqHg==
+"@groceristar/mini-sd@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@groceristar/mini-sd/-/mini-sd-0.1.7.tgz#8dfe3630f761335674e51ee1584de9a234c89511"
+  integrity sha512-qBpK5rkXhndkl0H/HNXxYVCqHx3hHyxeY810zIItNAZaddBuJIPEape9oHX4SvPQ8lDbBaVXZwXaePIgu6uevA==
   dependencies:
     dayjs "^1.8.14"
     lodash "^4.17.11"
