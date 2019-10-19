@@ -6,8 +6,9 @@ const {
   __generateId
 } = require('../../utils')
 
-const files = {
-  // ingredients3,
+// const files = { It's es6, but now we are using es5 and it doesn't work
+const {
+  ingredients3,
   menus,
   recipes,
   nutritions1,
