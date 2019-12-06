@@ -26,10 +26,10 @@
     "debug:s": "rollup -c && node ./debug/debugShowcase.js"
   },
   "devDependencies": {
-    "@babel/cli": "7.7.4",
-    "@babel/core": "7.7.4",
+    "@babel/cli": "7.7.5",
+    "@babel/core": "7.7.5",
     "@babel/plugin-syntax-dynamic-import": "7.7.4",
-    "@babel/preset-env": "7.7.4",
+    "@babel/preset-env": "7.7.5",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.9.0",
     "babel-plugin-module-resolver": "3.2.0",
