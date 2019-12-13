@@ -22,7 +22,7 @@
     "build:rollup": "npm run clean && npm run bundle",
     "clean": "shx rm -rf ./coverage && shx rm -rf ./dist",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect",
+    "prepublish": "yarn run snyk-protect",
     "debug:s": "rollup -c && node ./debug/debugShowcase.js"
   },
   "devDependencies": {
@@ -53,7 +53,7 @@
     "fs": "0.0.2",
     "lodash": "^4.17.15",
     "raven-js": "^3.27.1",
-    "snyk": "^1.231.0",
+    "snyk": "^1.258.2",
     "underscore": "^1.9.1",
     "uuid": "^3.3.2"
   },
