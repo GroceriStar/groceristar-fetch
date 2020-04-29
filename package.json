@@ -55,7 +55,7 @@
     "raven-js": "^3.27.1",
     "snyk": "^1.258.2",
     "underscore": "^1.9.1",
-    "uuid": "^3.3.2"
+    "uuid": "^8.0.0"
   },
   "description": "npm module required to fetch static data required for recipe search",
   "main": "dist/index.cjs.js",
