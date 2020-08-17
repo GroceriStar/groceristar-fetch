@@ -51,7 +51,7 @@
     "@groceristar/sd-wrapper": "^4.11.3",
     "dayjs": "^1.8.15",
     "fs": "0.0.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "raven-js": "^3.27.1",
     "snyk": "^1.258.2",
     "underscore": "^1.9.1",
