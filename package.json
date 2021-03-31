@@ -54,7 +54,7 @@
     "lodash": "^4.17.15",
     "raven-js": "^3.27.1",
     "snyk": "^1.258.2",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "uuid": "^3.3.2"
   },
   "description": "npm module required to fetch static data required for recipe search",
