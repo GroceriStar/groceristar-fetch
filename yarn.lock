@@ -5397,9 +5397,9 @@ slice-ansi@^4.0.0:
     is-fullwidth-code-point "^3.0.0"
 
 snyk@^1.290.1:
-  version "1.957.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.957.0.tgz#05cea892b245ca09f1513deec4df8fa761bf5420"
-  integrity sha512-laZtU0I45nT5ANj0LdV4IMEa1dciy84qmbZGnfc3RHHkwF5JSpooOAdZP54Dp+o2R1OysTQurMJudd5r5q8AEQ==
+  version "1.996.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.996.0.tgz#0369ca9e6a3a148751294c1320f59a79d5eb3c88"
+  integrity sha512-nq//Ely0bSt50LzX9Er5lCQNqTpaKn7I7xkhUB3Z+8rs8Jqha360HeQwhbVzsuQS3xT/1+36zt6CcgyLPM1QbA==
 
 source-map-support@0.5.13:
   version "0.5.13"
